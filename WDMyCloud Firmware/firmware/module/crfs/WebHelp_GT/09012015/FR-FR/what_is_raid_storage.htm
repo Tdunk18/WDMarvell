@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="MS-HAID" content="What is RAID Storage?" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Qu'est-ce que le stockage RAID&#160;?</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Stockage\nStockage RAID\nQu'est-ce que le stockage RAID ?");
+addButton("show",BTN_TEXT,"Afficher","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("index.htm", "", ">", "Accueil", "welcome.htm");
+document.write("<a href=\"what_is_raid_storage.htm\">Stockage<\/a> > <a href=\"what_is_raid_storage.htm\">Stockage RAID<\/a> > Qu'est-ce que le stockage RAID&#160;?<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1 style="background-color: Transparent;">Qu'est-ce que le stockage RAID</h1>
+<p class="Body">La technologie RAID (Regroupement redondant de disques 
+ indépendants) <span style="mso-bidi-font-family: Arial;">vous permet de 
+ stocker les mêmes données à des endroits différents, sur plusieurs disques 
+ durs, en offrant suffisamment de redondance, de meilleures performances 
+ et l'intégrité des données.</span> Il existe différents niveaux d'architecture 
+ RAID, chacun proposant une méthode différente de partage et de distribution 
+ des données parmi les lecteurs. Votre dispositif My Cloud Mirror 
+ vous permet de sélectionner l’un des modes de stockage suivants&#160;:</p>
+<ol style="list-style: square;">
+	<li style="list-style: none; display: inline;"><ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold; mso-bidi-font-weight: normal;">JBOD</b>&#160;: 
+		 <span style="font-size: 10.0pt; font-family: Arial, sans-serif; 
+				 mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+				 mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">&#160;l'utilisation 
+		 d'un ou plusieurs lecteurs n'étant pas en configuration RAID, 
+		 mais gérés en tant que volumes logiques séparés.</font></span></li>
+		<li class="b1"><b style="font-weight: bold; mso-bidi-font-weight: normal;">Fractionnement&#160;</b>: 
+		 combinaison de lecteurs en ligne pour créer un grand volume logique.</li>
+		<li class="b1"><b style="font-weight: bold; mso-bidi-font-weight: normal;">RAID&#160;0&#160;</b>: 
+		 Le mode RAID 0 permet l'entrelacement entre tous les lecteurs 
+		 du groupe RAID. RAID 0 ne permet pas la redondance de données 
+		 mais offre les meilleures performances par rapport aux autres 
+		 niveaux RAID. RAID 0 divise les données en de plus petits segments 
+		 et entrelace les segments de données sur tous les lecteurs du 
+		 groupe.</li>
+		<li class="b1"><b style="font-weight: bold; mso-bidi-font-weight: normal;">RAID 
+		 1</b>&#160;: En mode RAID 1, le contrôleur RAID duplique toutes 
+		 les données d'un lecteur vers un second lecteur du groupe. RAID 
+		 1 offre une redondance complète des données, mais double la capacité 
+		 de stockage requise.</li>
+	</ul></li>
+</ol>
+<br />
+
+<a href="javascript:void(0);" onclick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) &gt;=2 &amp;&amp; typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','Affichage du mode RAID actuel','Viewing_the_Current_RAID_Mode.htm','Auto-restauration de la configuration RAID','Auto_Rebuilding_your_RAID.htm','Modification du mode RAID','Changing_the_RAID_Mode.htm');return false;" title="Voir aussi"><img src="ss_btn_voir_aussi.gif" border="0" height="17" width="55" alt="Voir aussi" /></a>
+
+ 
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt;">© 2015 Western Digital Technologies, Inc. 
+	 Tous droits réservés.</p>
+</div>
+<script type="text/javascript" language="JavaScript">//<![CDATA[
+if (parseInt(navigator.appVersion) >= 3 && typeof (WritePopupMenuLayer) == "function")
+  WritePopupMenuLayer();
+//]]></script><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>
+

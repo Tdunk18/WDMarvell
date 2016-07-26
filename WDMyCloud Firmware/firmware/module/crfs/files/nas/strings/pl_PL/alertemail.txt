@@ -1,0 +1,8 @@
+0001 = Komunikat alertu od urządzenia %1
+0002 = Na urządzeniu %2 %1 są generowane następujące zdarzenia
+0003 = Opis zdarzenia
+0004 = Istotność
+0005 = Kod zdarzenia
+0006 = Czas zdarzenia
+0007 = Tytuł zdarzenia
+0008 = Wersja oprogramowania układowego

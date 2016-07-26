@@ -1,0 +1,302 @@
+0001 = Túl magas a rendszerhőmérséklet
+0001D = A rendszerhőmérséklet a normál üzemi hőmérséklet fölött van. Helyezze át a rendszert egy hűvösebb helyre. Ha nem tesz lépéseket, a rendszer le fog állni, amikor a hőmérséklet eléri a kritikus szintet.
+
+0002 = Túl alacsony a rendszerhőmérséklet
+0002D = A rendszerhőmérséklet a minimális hőmérséklet alatt van. Helyezze át a rendszert egy melegebb helyre.
+
+0003 = Hiba a SMART meghajtóval
+0003D = A %1 meghajtó önteszt sikertelen volt. Forduljon a WD támogatáshoz.
+
+0004 = Hiba a kötettel
+0004D = A meghajtón lévő %1 adatkötet nem érhető el. Forduljon a WD támogatáshoz.
+
+0005 = Függőben a hőmérsékleti körülmények miatti leállítás
+0005D = A rendszer túlmelegedik, ezért hamarosan automatikusan leáll, ha nem tesz lépéseket.
+
+0006 = Azonnali leállítás a hőmérsékleti körülmények miatt
+0006D = A rendszer kritikus módon túlmelegedett, ezért azonnal leáll a károsodás elkerülése érdekében.
+
+2020 = Kikapcsolódik a rendszer
+2020D = Kikapcsolódik a rendszer.
+
+1020 = Kikapcsolódik a rendszer
+1020D = Kikapcsolódik a rendszer.
+
+0020 = Kikapcsolódik a rendszer
+0020D = Kikapcsolódik a rendszer.
+
+0029 = Nem működik a ventilátor
+0029D = Nem működik a rendszer ventilátora Forduljon a WD támogatáshoz.
+
+0031 = UPS-ről működik
+0031D = A rendszer UPS tápról működik. %1% töltés maradt.
+
+0201 = Hiba lépett fel a meghajtóval
+0201D = Hiba lépett fel a meghajtóval itt: %1. Cserélje ki a meghibásodott meghajtót. Forduljon a WD támogatáshoz.
+
+0207 = A meghajtó meg fog hibásodni
+0207D = A(z) %1 meghajtó meg fog hibásodni. Cserélje ki a meghibásodott meghajtót. Forduljon a WD támogatáshoz.
+
+0208 = A kötet rossz állapotú
+0208D = A %1 kötet rossz állapotú. Ellenőrizze a meghajtó állapotát a Lemezteszt futtatásával a Beállítások >> Segédprogramok menüpontból.
+
+0209 = A kötet átköltöztetésének állapota
+0209D = A %1 kötet átköltöztetésének állapota – %2%
+
+2209 = A kötet átköltöztetésének állapota
+2209D = A %1 kötet átköltöztetésének állapota: %2 %
+
+0210 = Kötet visszaállítása
+0210D = %1 kötet visszaállítása – folyamat ideje: %2 perc
+
+2210 = Kötet visszaállítása
+2210D = %1 kötet visszaállítása – folyamat ideje: %2 perc
+
+0212 = Nem sikerült a kötet visszaállítása
+0212D = Nem sikerült a(z) %1 kötet visszaállítása. Ellenőrizze a meghajtók állapotát a Lemezteszt futtatásával a Beállítások >> Segédprogramok menüpontból.
+
+0213 = Nem sikerült a kötet kibővítése
+0213D = Nem sikerült a(z) %1 kötet kibővítése. Ellenőrizze a meghajtók állapotát a Lemezteszt futtatásával a Beállítások >> Segédprogramok menüpontból.
+
+0216 = RAID-roaming engedélyezve
+0216D = RAID-roaming engedélyezve.
+
+2216 = RAID-roaming engedélyezve
+2216D = RAID-roaming engedélyezve.
+
+0224 = Cserélni kell a meghajtót, ha a piros lámpa
+0224D = Cserélni kell a meghajtót, ha a piros LED.
+
+2041 = Ethernet port %1 csatlakoztatva 10/100 sebességen
+2041D = A kapcsolat sebessége 10/100 Mb/s sebességre korlátozódik.
+
+0042 = Fennmaradó UPS táp: 50%
+0042D = A rendszer UPS tápról működik, 50% töltöttség maradt. A lehető leghamarabb csatlakoztassa új tápforráshoz a rendszert.
+
+0043 = Fennmaradó UPS táp: 15%
+0043D = A rendszer UPS tápról működik, 15% töltöttség maradt. Azonnal csatlakoztassa új tápforráshoz a rendszert.  Ha nem tesz lépéseket, a rendszer le fog állni, amikor az UPS táp lemerül.
+
+0044 = UPS lemerült.
+0044D = Az UPS tápban nem maradt töltöttség. A rendszer azonnal leáll a károsodás elkerülése érdekében.
+
+1001 = A kötet felhasználása 95% fölött van
+1001D = A %1 meghajtó megközelítette a maximális kapacitását, ezért előfordulhat, hogy problémák fognak fellépni a teljesítménnyel. Gondoskodjon a fájlok biztonsági mentéséről, majd a terület felszabadítása érdekében helyezze át a fájlokat a meghajtóról. Ha be van kapcsolva a Lomtár, ürítse ki azt, hogy helyet szabadítson fel.
+
+1002 = Nem működik a hálózati hivatkozás
+1002D = A %1 hálózati kapcsolat nem működik vagy szakadozott. Ellenőrizze a hálózati kapcsolatot.
+
+1010 = Nem működik a hálózati hivatkozás
+1010D = A %1 hálózati kapcsolat nem működik vagy szakadozott. Ellenőrizze a hálózati kapcsolatot.
+
+1003 = A belső vezérlőprogram frissítése sikertelen
+1003D = A belső vezérlőprogram frissítése sikertelen. Kérjük, próbálkozzon újra. Amennyiben a hiba továbbra is fennáll, kérjük, lépjen kapcsolatba a WD támogatással.
+
+1004 = Magas a rendszer hőmérséklete
+1004D = Az eszköze túlmelegedett. Gondoskodjon az eszköz megfelelő szellőzéséről.
+
+1021 = Nem sikerült a konfiguráció visszaállítása
+1021D = Nem sikerült a konfiguráció visszaállítása.
+
+0022 = Hiba lépett fel a tápegységgel
+0022D = Hiba lépett fel a(z) %1 tápegységgel.
+
+1022 = Hiba lépett fel a tápegységgel
+1022D = Hiba lépett fel a(z) %1 tápegységgel. Ellenőrizze a tápegységet.
+
+1030 = A tárhely a határérték alatt van
+1030D = A tárhely a határérték alatt van.
+
+1035 = Termékfejlesztési program
+1035D = Szeretne részt venni termékeink tökéletesítésében? Ismerje meg a részleteket %1
+
+0036 = Nem sikerült a fájlrendszer ellenőrzése
+0036D = A fájlrendszer ellenőrzés hibákat észlelt a konfigurációban. A hibák megoldása érdekében készítsen biztonsági másolatot a merevlemez-konfigurációról, majd hozza létre újra a konfigurációt. Ha a probléma továbbra is fennáll, forduljon a WD támogatáshoz.
+
+1036 = Nem sikerült a fájlrendszer ellenőrzése
+1036D = A fájlrendszer ellenőrzés hibákat észlelt a konfigurációban. A hibák megoldása érdekében készítsen biztonsági másolatot a merevlemez-konfigurációról, majd hozza létre újra a konfigurációt. Ha a probléma továbbra is fennáll, forduljon a WD támogatáshoz.
+
+1045 = Fájlrendszer hiba kijavítva
+1045D = A fájlrendszer ellenőrzés hibákat észlelt a konfigurációban és kijavította azokat.
+
+1037 = A rendszer nem áll készen
+1037D = A rendszer foglalt. Csak akkor helyezzen be egy másik meghajtót, amikor az energiajelző LED már folyamatos kék fénnyel világít.
+
+1120 = Nem támogatott USB-eszköz
+1120D = Nem támogatott USB-eszköz észlelve (gyártó: %1, típus: %2, sorozatszám: %3). Kérjük, távolítsa el az USB-eszközt.
+
+1121 = Nem támogatott fájlrendszer
+1121D = Nem támogatott fájlrendszer észlelve az egyik USB-eszközön (gyártó: %1, típus: %2, sorozatszám: %3, fájlrendszer: %4, címke: %5). Kérjük, távolítsa el az USB-eszközt.
+
+1122 = Nem lehet létrehozni a megosztást
+1122D = Nem sikerült létrehozni egy megosztást az egyik USB-eszközön (gyártó: %1, típus: %2, sorozatszám: %3, fájlrendszer: %4, címke: %5, megosztási név: %6)
+
+1123 = Nem biztonságos eszközeltávolítás
+1123D = Eltávolított egy USB-eszközt (gyártó: %1, típus: %2, sorozatszám: %3) eltávolításra került a kiadása nélkül, ami lehet, hogy érinti a(z) %2 által tárolt adatokat.
+
+1124 = Nem lehet csatlakoztatni az USB-meghajtót
+1124D = Nem lehet csatlakoztatni az USB-meghajtót (gyártó: %1, típus: %2, sorozatszám: %3). Kérjük, ellenőrizze az USB-eszközt.
+
+1127 = Nem készíthető biztonsági fájlmentés az USB-eszközről
+1127D = Nem készíthető biztonsági fájlmentés az USB-eszközről. Kérjük, ellenőrizze az USB-eszköz csatlakozását.
+
+1130 = USB-s biztonsági mentés várólistán
+1130D = Egy korábbi biztonsági mentési feladat van folyamatban. Az USB biztonsági mentés automatikusan elindul, amikor az előző befejeződik.
+
+1400 = Hiba lépett fel a távoli biztonsági mentés során
+1400D = Hiba lépett fel e távoli biztonsági mentési munka során: %1. Ellenőrizze a rendszerbeállításokat.
+
+1401 = Hiba lépett fel a távoli biztonsági mentés visszaállítása során
+1401D = Hiba lépett fel a(z) %1, nevű távoli visszaállítási munka során. Ellenőrizze a rendszerbeállításokat.
+
+2402 = Sikerült a távoli biztonsági mentés
+2402D = A távoli biztonsági mentési munka: %1, sikeresen befejeződött ezen az eszközön: %2, erre a megosztásra: %3
+
+1402 = Sikerült a távoli biztonsági mentés
+1402D = A távoli biztonsági mentési munka: %1, sikeresen befejeződött ezen az eszközön: %2, erre a megosztásra: %3
+
+2403 = Sikerült a távoli biztonsági másolat visszaállítása
+2403D = A távoli visszaállítási munka: %1, sikeresen befejeződött ezen az eszközön: %2, erre a megosztásra: %3
+
+1403 = Sikerült a távoli biztonsági másolat visszaállítása
+1403D = A távoli visszaállítási munka: %1, sikeresen befejeződött ezen az eszközön: %2, erre a megosztásra: %3
+
+2001 = Újraindul a rendszer
+2001D = Újraindult a rendszer.
+
+1011 = Már elérhető az új belső vezérlőprogram!
+1011D = Megjelent a belső vezérlőprogram új verziója. Frissítse a rendszert.
+
+2002 = Már elérhető az új belső vezérlőprogram!
+2002D = Megjelent a belső vezérlőprogram új verziója. Frissítse a rendszert.
+
+2003 = Megfelelő a hőmérséklet
+2003D = A rendszerhőmérséklet a normál hőmérséklet-tartományon belül van.
+
+2004 = Sikerült a belső vezérlőprogram frissítése
+2004D = A belső vezérlőprogram frissítése sikeresen megtörtént erre: %1.
+
+2005 = Sikerült a gyári beállítások visszaállítása
+2005D = A rendszer a gyári beállításokra áll vissza.
+
+2006 = Jogosult egy új szoftverfrissítésre!
+2006D = További információkért nyissa meg a WD My Cloud eszköz irányítópultját.
+
+2024 = Belső vezérlőprogram frissítésének letöltése
+2024D = Belső vezérlőprogram frissítésének letöltése.
+
+2026 = Belső vezérlőprogram frissítésének telepítése
+2026D = Belső vezérlőprogram frissítésének telepítése.
+
+1028 = Újraindításra van szükség
+1028D = Újraindításra van szükség.
+
+2028 = Újraindításra van szükség
+2028D = Újraindításra van szükség.
+
+2032 = A rendszer készenléti üzemmódban van
+2032D = A rendszer készenléti üzemmódban van.
+
+1033 = A rendszer újraindul
+1033D = A rendszer újraindul.
+
+2033 = A rendszer újraindul
+2033D = A rendszer újraindul.
+
+1038 = A tárhely majdnem megtelt
+1038D = A [%1] tárhelye majdnem megtelt Gondoskodjon a fájlok biztonsági mentéséről, majd a terület felszabadítása érdekében helyezzen át fájlokat a meghajtóról.
+
+2038 = A tárhely majdnem megtelt
+2038D = A [%1] tárhelye majdnem megtelt Gondoskodjon a fájlok biztonsági mentéséről, majd a terület felszabadítása érdekében helyezzen át fájlokat a meghajtóról.
+
+1039 = A tárhely megtelt
+1039D = A [%1] tárhelye elérte a korlátot. Gondoskodjon a fájlok biztonsági mentéséről, majd a terület felszabadítása érdekében helyezzen át fájlokat a meghajtóról.
+
+2039 = A tárhely megtelt
+2039D = A [%1] tárhelye elérte a korlátot. Gondoskodjon a fájlok biztonsági mentéséről, majd a terület felszabadítása érdekében helyezzen át fájlokat a meghajtóról.
+
+2040 = Nem támogatott UPS eszköz
+2040D = Nem támogatott UPS eszköz
+
+2121 = Zárolt USB-eszköz
+2121D = Zárolt USB-eszköz észlelve (gyártó: %1, típus: %2, sorozatszám: %3).
+
+2126 = Sikerült a fájlok átmásolása az USB-eszközről
+2126D = Sikerült a fájlok átmásolása innen: <%1> ide: <%2>.
+
+2128 = Fájlok másolása
+2128D = Fájlok másolása USB-eszközről.
+
+2129 = Sikerült a fájlok áthelyezése az USB-eszközről
+2129D = Sikerült a fájlok áthelyezése innen: <%1> ide: <%2>.
+
+2131 = Fájlok áthelyezése
+2131D = Fájlok áthelyezése USB-eszközről.
+
+1200 = Nem támogatott meghajtó
+1200D = Nem támogatott meghajtó itt: %1. Cserélje le a behelyezett meghajtót egy jóváhagyott meghajtóra. A jóváhagyott meghajtók listája itt található: www.wd.com
+
+2200 = Nem támogatott meghajtó
+2200D = Nem támogatott meghajtó itt: %1. Cserélje le a behelyezett meghajtót egy jóváhagyott meghajtóra. A jóváhagyott meghajtók listája itt található: www.wd.com
+
+2202 = Túl kicsi a meghajtó
+2202D = Túl kicsi a meghajtó itt: %1
+
+2203 = Folyamatban a meghajtó inicializálása
+2203D = Folyamatban a meghajtó inicializálása itt: %1
+
+2211 = Tárhely integritásának ellenőrzése
+2211D = Tárhely integritásának ellenőrzése.
+
+2214 = Meghajtó behelyezve
+2214D = Egy új meghajtó van behelyezve ide: %1. Ahhoz, hogy a meghajtó a rendszer RAID-készletéhez legyen adható, lépjen a Tárhely > RAID menüpontba, majd kattintson a RAID-üzemmód módosítása gombra.
+
+0215 = Meghajtó eltávolítva
+0215D = Meghajtó eltávolítva innen: %1
+
+2215 = Meghajtó eltávolítva
+2215D = Meghajtó eltávolítva innen: %1. Ellenőrizze a rendszert.
+
+2217 = Nincsenek telepítve meghajtók
+2217D = Nincsenek telepítve meghajtók. Adjon hozzá meghajtókat a rendszer használatának megkezdéséhez. Új meghajtót itt vásárolhat: www.wd.com
+
+2218 = Késztartalék-meghajtó hozzáadva a RAID-köteghez
+2218D = Késztartalék-meghajtó hozzáadva a RAID-köteghez
+
+2219 = Befejeződött a RAID-átköltöztetés
+2219D = Befejeződött a RAID-átköltöztetés.
+
+2220 = Befejeződött a RAID-visszaállítás
+2220D = Befejeződött a RAID-visszaállítás.
+
+2221 = Behelyezve a nem WD RED NAS meghajtó
+2221D = Behelyezve a nem WD RED NAS meghajtó. Vegye figyelembe, hogy a WD My Cloud eszköz optimálisan WD Red NAS merevlemezekkel használható.
+
+2222 = Kötet formázása
+2222D = %1 kötet formázása.
+
+2223 = Folyamatban van a kötet kibővítése
+2223D = A %1 kötet kibővítésének állapota: %2%
+
+2300 = Leállt a média vizsgálata
+2300D = Az eszköz leállt a média vizsgálatával. Ennek következtében néhány miniatűr nem fog megjelenni, amikor távolról éri el őket. A vizsgálat folytatásához indítsa újra a WD My Cloud rendszert.
+
+1501 = Alkalmazásfrissítés rendelkezésre áll
+1501D = %1 alkalmazás frissítése rendelkezésre áll. Kérjük, frissítsen.
+
+1502 = Vírus észlelve
+1502D = Antivírus alapok: A vírusellenőrzés befejeződött és vírust talált. A részleteket lásd a vírusellenőrzés jelentésében.
+
+2503 = Vírusellenőrzés befejezve
+2503D = Antivírus alapok: Vírusellenőrzés befejezve. Nem talált vírust.
+
+2504 = Ütemezett vírusellenőrzés elindult
+2504D = Antivírus alapok: Ütemezett vírusellenőrzés elindult.
+
+2505 = Ütemezett vírusellenőrzés leállt
+2505D = Antivírus alapok: Az ütemezett vírusellenőrzés leállt mert elérte a leállítási időt. Az ellenőrzés nem fejeződött be. 
+
+1103 = Hiba történt az adatok biztonsági pontból történő visszaállítása során
+1103D = %4 - Hiba történt az adatok a(z) %1 biztonsági pontból történő visszaállítása során a(z) %2 megosztáson a(z) %3 meghajtón.
+
+2103 = Az adatok sikeresen visszaállítva a biztonsági pontból
+2103D = Az adatok sikeresen visszaállítva a(z) %1 biztonsági pontból a(z) %2 megosztáson a(z) %3 meghajtón.

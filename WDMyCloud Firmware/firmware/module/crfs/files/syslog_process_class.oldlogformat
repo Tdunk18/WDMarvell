@@ -1,0 +1,11 @@
+7,DISK:,DISK:
+7,FAN:,FAN:
+7,FTP:,FTP:
+7,MTP:,MTP:
+7,NFS:,NFS:,NFS[*]:
+7,RTC:,RTC:
+7,SAMBA:,SAMBA:
+7,SYSTEM:,SYSTEM:
+7,USB:,USB:
+#7,WD:,WD none:,root:,wdphotodbmerger:
+7,OTHER:,*:

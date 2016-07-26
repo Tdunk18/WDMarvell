@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="PRAGMA" content="no-cache"> 
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+</head>	
+
+<link rel="stylesheet" type="text/css" href="/web/css/cloud_backups.css?r=3">
+
+<script type="text/javascript">
+function go_cloud_page(_go_url, id_class)
+{
+	if (typeof(page_unload) == "function")
+		page_unload();
+
+	$("#tab_buttons button").removeClass("sel");
+	$("#tab_buttons ." + id_class).addClass("sel");
+
+	wd_ajax({
+		type: "GET",
+		url: _go_url,
+		dataType: "html",
+		cache: false,
+		async: false,
+		success: function(_html) {
+			$('#mainbody').html(_html);
+			page_load();
+			language();
+		} 
+	});
+
+	return false;
+}
+
+function page_load()
+{
+	$("#tab_buttons").html($("#cloud_btns").html());
+	$("#cloud_btns").remove();
+
+	$(".b_elephantdrive").click(function() {
+		go_cloud_page("/web/backups/ElephantDrive.php", 'b_elephantdrive');
+	});
+
+	$(".b_s3").click(function() {
+		go_cloud_page("/web/backups/s3.html", 'b_s3');
+	});
+	
+	/*if(VOLUME_NUM!=4 )
+	{
+		$("#cloud_graphic").attr('src','/web/images/GraphicBumperCLoudBackup.png');
+	}
+	else
+	{
+		$("#cloud_graphic").attr('src','/web/images/GraphicBumperShares.png');
+	}*/
+}
+
+function page_unload()
+{
+
+}
+</script>
+
+<body>
+	<div id="share_desc" class="field_top">
+	<div class="h1_content header_2"><span class="_text" lang="_cloud_backup" datafld="title_note"></span></div>
+	<div class="tdfield_padding">
+		<span class="_text" lang="_cloud_backup" datafld="description"></span>
+	</div>
+	<div class="tdfield_padding">
+		<img id="cloud_graphic" src="/web/images/GraphicBumperSafepoints.png?r=WD1.01">
+	</div>
+</div>
+
+<div id="cloud_btns" style="display: none;">
+	<button type="button" class="b_elephantdrive left_button">
+		<span class="icon"></span>
+		<span class="_text" lang="_elephant_drive" datafld="title"></span>
+	</button>
+	<button type="button" class="b_s3 right_button">
+		<span class="icon"></span>
+		<span class="_text" lang="_s3" datafld="amazon"></span>
+	</button>
+</div>
+
+<!-- banner 2nd layout -->
+</body>
+</html>	

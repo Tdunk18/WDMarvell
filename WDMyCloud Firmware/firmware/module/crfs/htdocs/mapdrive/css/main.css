@@ -1,0 +1,748 @@
+/*
+ body
+{
+	border:0px;
+	margin:0px;
+	padding:0px;
+	background-color:yellow;
+	font-family: Arial, regular;
+	font-size: 14px;
+	color: #CCCCCC;
+}
+*/
+
+body {
+    background: none repeat scroll 0 0 #EAEAEA;
+    color: #282828;
+     font-family: Arial,regular;
+     font-size: 14px;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+
+*.contentTables
+{
+	margin-top: 30px;
+	margin-left:100px;
+	margin-bottom: 80px;
+	color:#282828;
+	width: 680px;
+        padding:20px 0px;	
+		
+}
+
+
+*.contentTablesAuth
+{
+	margin-top: 55px;
+	margin-left:100px;
+	margin-bottom: 80px;
+	color:#282828;
+	width: 680px;
+        padding:20px 0px;	
+		
+}
+
+
+
+
+*.titleSeperatorSpacing
+{
+	border:0px;
+	margin:0px;
+	padding:0px;
+	padding-top:17px;	
+}
+
+*.titleSeperator
+{
+
+	background-image:url(../images/BackgroundHRulePrimary.png);
+	border:0px;
+	margin:-10px;
+	margin-top:0px;
+	padding:0px;
+	width:655px;
+	height:2px;
+	/*background-color:#cccccc;*/
+	background-repeat: top;
+}
+
+*.title
+{
+	
+	font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 18px;
+	/*color: #CCCCCC;*/
+	color: #282828;
+}
+
+
+
+*.topGrad {
+    margin: 10px 0px 0px 0px;
+    padding: 0px;
+    width: 900px;
+    background-image: url("../images/BackgroundHRulePrimary.png");
+    background-position: center top;
+    background-repeat: repeat-x;
+    border:0px;
+    height: 2px;
+   
+}
+
+
+
+*.textInput
+{
+	
+	border:0px;
+}
+
+*.bottomGlow
+{
+	left:0; 
+	position:fixed; 
+	text-align:center; 
+	bottom:0; 
+	width:100%;
+	/*z-index: -5;*/
+	
+}
+*.footerBackground
+{
+	
+	left:0; 
+	position:fixed; 
+	text-align:center; 
+	bottom:0; 
+	width:20%;
+	z-index: 0;
+	margin-left:80%;
+	
+}
+
+#siteFooterBottomContainer {
+	background: url("../images/BackgroundGradientBottom.png") repeat-x scroll center top #EAEAEA;
+	font-family: Verdana, Geneva, sans-serif; 
+	font-size: 9px; 
+	position: fixed;
+	color: #CCCCCC; 
+	bottom: 0; 
+	width:100%; 
+	text-align:center;
+	margin-bottom: 8px; 
+	line-height: 20px;
+	height:50px;
+	padding:10px 0px 10px 60px;
+}
+
+#siteFooterBottomContainer img {
+	vertical-align:middle;
+}
+
+#siteFooterBottomContainer span{
+	vertical-align:middle;
+}
+
+
+*.linkTitle
+{
+	font-size: 14px;
+	color:#282828;
+}
+
+*.normalTitle
+{
+	font-size: 14px;
+}
+
+*.fieldTitle
+{
+	font-size: 14px;
+}	
+
+*.errorAlert
+{
+	font-size: 11px;
+	color:#ff0000;
+	margin-left: 5px;
+}
+
+*.fieldSpacer
+{
+	padding:0px;
+	padding-left:10px;	
+}
+
+
+.roundBox {
+	background-image: url(/images/roundBoxStrip.png); 
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: left  top;
+	height: 42px;  
+	margin:0px;
+	padding:0px;
+}
+
+.roundBoxRight {
+	background-image: url('/images/roundBoxRight.png'); 
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: right top;
+	float: left;
+	font: 12px arial, sans-serif;
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;	
+	text-decoration: none;
+}
+		
+			
+.roundBox input.textInput {
+	color: #444444;
+	height: 27px;  
+	font-family: Arial, regular;
+	font-size: 14px;	
+	margin-top:8px;
+	margin-right: 0px;
+	margin-bottom: 8px;
+	margin-left: 10px;
+	padding-top: 0px;
+	padding-right: 5px;
+	padding-bottom: 0px;
+	padding-left: 5px;
+    line-height: 25px;  /* required for IE to fix vertical alignment issue*/
+	outline: none;
+}
+
+.roundBox input.textInput:focus {
+	outline:dotted;
+	outline-width:1px;
+	outline-color: #FF921A;
+}
+
+.roundBox input.textInput:hover {
+	outline:dotted;
+	outline-width:1px;
+	outline-color: #FF921A;
+}
+
+
+a.button {
+    
+    /*background: transparent url('/images/WD2go_ButtonRightUp.png') no-repeat scroll top right;
+   background: transparent url('/images/ButtonSecondaryRightUp.png') no-repeat scroll top right; */
+   /* color: #CCCCCC;
+    display: block;
+    float: left;
+    font: normal 12px arial, sans-serif;
+    height: 36px;
+    margin-right: 6px;
+    padding-right: 5px; /* sliding doors padding 
+    text-decoration: none;
+    */
+   
+
+    background: transparent url('../images/WD2go_ButtonRightUp.png') no-repeat scroll top right;
+   /* background: transparent url('/images/ButtonSecondaryRightUp.png') no-repeat scroll top right; */
+    color: #CCCCCC;
+    display: block;
+    float: left;
+    font: normal 12px arial, sans-serif;
+    height: 36px;
+   //margin-right: 6px;
+    margin-top: 30px;
+    margin-right: 189px;
+    padding-right: 5px; /* sliding doors padding */
+    text-decoration: none;
+
+   
+   
+   
+   
+}
+
+
+
+
+a:focus {
+    outline-color: #FF921A;	
+	outline-width: 1px;
+	outline-style: dotted;		
+}
+
+			
+a.button > span {
+	color: #282828;
+    background: transparent url('../images/WD2go_ButtonLeftUp.png') no-repeat; 
+  /* background: transparent url('/images/ButtonSecondaryLeftUp.png') no-repeat; */
+   
+    display: block;
+    line-height: 28px;
+    vertical-align: middle;
+    /*padding: 5px 0 5px 18px;*/
+    padding: 0px 5px 50px 12px;
+    
+}
+
+a.button > span > span {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+a.button:hover {
+    background: transparent url('../images/WD2go_ButtonRightRollover.png') no-repeat scroll top right;	
+    background-position: top right;
+    color: #CCCCCC;
+    outline: none; /* hide dotted outline in Firefox */
+}
+
+a.button:hover span {
+    background: transparent url('../images/WD2go_ButtonLeftRollover.png') no-repeat scroll top right;	
+    background-position: top left;
+    /* padding: 6px 0 4px 18px; */ /* push text down 1px */
+    padding: 0px 5px 5px 12px;
+} 
+
+a.button:active {
+    background: transparent url('../images/WD2go_ButtonRightPressed.png') no-repeat scroll top right;	
+    background-position: top right;
+    color: #000;
+    outline: none; /* hide dotted outline in Firefox */
+}
+
+a.button:active span {
+	color: #000;
+    background: transparent url('../images/WD2go_ButtonLeftPressed.png') no-repeat scroll top right;	
+    background-position: top left;
+    /* padding: 6px 0 4px 18px; */ /* push text down 1px */
+    padding: 1px 5px 4px 12px;
+} 
+
+.checkbox_unchecked {
+	width: 20px;
+	height: 20px;
+	padding: 0 5px 0 0;
+	background: url('/images/WD2go_CheckboxUp.png') no-repeat;
+	display: block;
+	clear: left;
+	float: left;
+}
+
+.checkbox_unchecked:hover {
+	width: 20px;
+	height: 20px;
+	padding: 0 5px 0 0;
+	background: url('/images/WD2go_CheckboxRollover.png') no-repeat;
+	display: block;
+	clear: left;
+	float: left;
+}
+
+
+.checkbox_checked {
+	width: 20px;
+	height: 20px;
+	padding: 0 5px 0 0;
+	background: url('/images/WD2go_CheckboxDown.png') no-repeat;
+	display: block;
+	clear: left;
+	float: left;
+}
+
+.checkbox_checked:hover {
+	width: 20px;
+	height: 20px;
+	padding: 0 5px 0 0;
+	background: url('/images/WD2go_CheckboxCheckedRollover.png') no-repeat;
+	display: block;
+	clear: left;
+	float: left;
+}
+
+.confirmIcon {
+	margin-right: 10px;	
+	background: url('/images/WD2go_Checkmark.png') no-repeat;
+	width: 26px;
+	height: 19px;
+	display: inline-block;
+}
+
+.warningIcon {
+
+	background-image: url('/images/warning.png');
+	width: 28px;
+	height: 24px;
+	float: left;
+	margin:10px 7px 0px 0;
+	
+}
+
+.hexWarningIcon {
+	margin-right: 10px;	
+	background: url('/images/WD2go_Icon_Error.png') no-repeat;
+	width: 28px;
+	height: 26px;
+	display: inline-block;
+		
+}
+	
+	
+	
+.tableSpacer {
+	height: 41px;
+}
+
+.formTable {
+	margin-left: 0px;
+	margin-top: 15px;
+	
+}
+
+.formTable tr {
+	height:12px;
+}
+
+.formText {
+	text-decoration:none !important;	
+	padding-right:28px;
+	padding-left:0px;
+	color:#282828;
+	
+}
+
+
+
+
+.deviceImage {
+	width:244px;
+	height:265px;	
+	display: block;
+	vertical-align: bottom;
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	
+}
+
+.deviceImage:hover {
+	width:244px;
+	height:265px;	
+	display: block
+	vertical-align: bottom;
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	
+}
+
+.deviceImage:active {
+	width:244px;
+	height:265px;	
+	display: block
+	vertical-align: bottom;
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	
+}
+
+.deviceImage.offline {
+	width:244px;
+	height:265px;	
+	display: block
+	vertical-align: bottom;
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	opacity:0.3;
+	-moz-opacity: 0.3;
+	filter:alpha(opacity=30);
+	
+}
+
+
+
+
+.deviceImage > img {
+	display:block;
+	margin: auto;	
+	border: none;	
+}
+
+div.deviceNameWrapper {
+	width: 237px;
+}
+
+.deviceName {
+	position: absolute;
+	bottom: 15px; 
+	width: 100%;
+	display:block; 
+	text-align:center;
+	
+}
+
+.deviceName.offline {
+	opacity:0.3;
+	-moz-opacity: 0.3;
+	filter:alpha(opacity=30);
+}
+
+
+.deviceName a {
+	text-decoration: none;
+	color:#282828;	
+	font-family: Arial, regular;
+	font-size: 14px;
+}
+
+.deviceName a:hover {
+	color:#282828;	
+}
+
+
+a {
+	color:#282828;
+
+}
+
+a:hover {
+	color: #ff9215;
+
+}
+
+img {
+	border: none;
+	
+}
+
+a.headerLinks {
+	padding-left:10px;
+	padding-right:10px;
+	float:right;
+	color:#CCCCCC	
+}
+
+
+
+div.header {
+	width:100%;
+	color:#282828;
+	background-color:#000000;
+	margin:0px;
+	padding:0px;
+	padding: 0 30px;
+	border:0px;
+	float:left;
+	clear:both;
+}
+
+/*from olc*/
+div.header { 
+    background: url("../images/BackgroundGradientTop.png") repeat-x scroll center top #EAEAEA;
+    height: 100%;
+    width: 100%;
+}
+
+
+div.header a {
+	font-size: 14px;
+	color:#282828;	
+	line-height: 30px;
+	padding:100px;
+}
+
+div.header a:hover{
+	font-size: 14px;
+	color:#ff9215;	
+	line-height: 30px;
+}
+
+
+.header .separator {
+	padding-left:10px;
+	padding-right:10px;
+	color:#282828;	
+}
+
+
+table.headerMenu {
+	float: right; 
+	color:#282828; 
+	text-align: right; 
+	width: 650px;
+}
+
+img.wdcLogo {
+	float: left;  
+	/*margin:0 22px 0 0;*/
+	margin:8px 60px 0 0;
+	padding:0px; 
+	border:0px;	
+}
+
+img.cloudLogo {
+	margin-top: 8px;	
+}
+
+/* Tooltips */
+
+span.tooltip {
+	width: 18px;
+	height: 18px;
+	padding: 0 0 0 0;
+	background: url('/images/WD2go_Image_Tooltip_Inactive.png') no-repeat;
+	display: block;
+	clear: left;
+	float: left;
+	
+}
+
+span.tooltip:hover {
+	width: 18px;
+	height: 18px;
+	padding: 0 0 0 0;
+	background: url('/images/WD2go_Image_Tooltip_Active.png') no-repeat;
+	display: block;
+	clear: left;
+	float: left;
+}
+
+
+.wordwrap { 
+   white-space: pre-wrap;      /* CSS3 */   
+   white-space: -moz-pre-wrap; /* Firefox */    
+   white-space: -pre-wrap;     /* Opera <7 */   
+   white-space: -o-pre-wrap;   /* Opera 7 */    
+   word-wrap: break-word;      /* IE */
+}
+
+#tooltip {
+	position: absolute;
+	padding-top: 8px;
+	padding-bottom:10px;
+	padding-left:10px;
+	padding-right:10px;
+	color: #FFF;
+	font-size: 11px;
+	display: none;
+	text-align: left;
+	background-color: #000;
+	border-width: 2px;
+	border-color: #CCCCCC;
+	border-style:solid;
+	border-radius: 10px;
+	-moz-border-radius: 10px; 
+	-webkit-border-radius: 10px; 
+	opacity: 1.0;
+	-moz-opacity: 1.0;
+	filter: alpha(opacity=100);
+	z-index: 1001;
+
+}
+ 
+.tooltipTitle {
+	font-weight: bold;
+	color: #CEE1EF;
+}
+
+
+/* for instruction text below a page title */
+.subtitle
+{
+	padding-top:27px;
+	padding-bottom:12px;
+	display:block;
+}
+
+
+/* the below style is needed to hide the focus box*/
+a.button-no-focus:focus { outline: 0; }
+
+
+
+/* captcha */
+
+.captchabox {
+	width: 312px;
+	border-radius: 10px;
+	-moz-border-radius: 10px; 
+	-webkit-border-radius: 10px; 
+	border-radius: 10px;
+	border-color: grey;
+	border-style: solid;
+	border-width:1px;
+	padding: 10px;
+	margin-left: 5px;
+	color:#282828;
+}
+
+.captchabox img {
+	margin-left: 6px;
+}
+
+	
+.captchabox span {
+	display: block;
+	margin: 6px 0 0 6px;
+}
+
+/* For Testing */  
+.spanBgr {
+    background: url("../images/ButtonSecondaryCenterUp.png") repeat-x center center transparent;
+    height: 30px;
+    padding: 2 0 0 0px;
+    padding-top:16px;
+    display: inline-block;
+    
+}
+
+.btnLeft {
+    background: url("../images/ButtonSecondaryLeftUp.png") no-repeat scroll 0 0 transparent;
+    height: 30px;
+    width: 18px;
+    padding-top:8px;
+    display: inline-block;
+    
+}
+
+.btnRight {
+    background: url("../images/ButtonSecondaryRightUp.png") no-repeat scroll 0 0 transparent;
+    height: 30px;
+    width: 20px;
+    padding-top:8px;
+    display: inline-block;
+    
+}
+
+#container {
+    margin: 0 auto;
+    width:968px;
+}
+
+
+.backgroundTopGradient {
+    background: url("../images/LearningCenterGradientHeader.png") repeat-x scroll center top #E8E8E8;
+    height: 100%;
+    width: 100%;
+}
+
+#main span {
+      display:inline-block;
+      border:solid thin black;
+}
+
+.separator {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+

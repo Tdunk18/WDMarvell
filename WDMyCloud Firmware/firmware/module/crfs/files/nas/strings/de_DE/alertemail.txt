@@ -1,0 +1,8 @@
+0001 = Warnhinweis von Ihrem %1
+0002 = Die folgenden Ereignisse werden auf Ihrem %2 %1 generiert.
+0003 = Ereignisbeschreibung
+0004 = Schweregrad
+0005 = Ereigniscode
+0006 = Ereigniszeitpunkt
+0007 = Ereignistitel
+0008 = Firmware-Version

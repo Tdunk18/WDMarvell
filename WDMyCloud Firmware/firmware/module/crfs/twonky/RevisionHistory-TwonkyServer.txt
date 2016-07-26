@@ -1,0 +1,1068 @@
+Twonky Server v7.2.9-11
+----------------------
+
+Bug fixes
+ - fixed AVC MP4 video protocolInfos (CTT 7.3.28.1, 7.3.29.3, 7.3.29.4)
+
+Twonky Server v7.2.9-10
+----------------------
+
+Improvements
+ - apply enable/disable flag also to all other clients running on same IP
+ - improve navigation from WMP - implement CDS:Search using a CDS:Browse for WMP client
+ - fixed that the aggregation servers' permissions were lost after a restart of the remote server
+
+Twonky Server v7.2.9-9
+----------------------
+
+Improvements
+ - use flat navigation to speed up CDS:Browse for WMP 12
+
+Twonky Server v7.2.9-8
+----------------------
+
+Bug fixes
+ - fixed a security issue in NMC rpc API "/nmc/rpc/upload"
+ - fixed a security issue in NMC rpc API "/nmc/rpc/download"
+ - discontinued rpc call “rpc/backup_metadata” that had a security flaw
+
+Twonky Server v7.2.9-7
+---------------------
+
+Improvements
+- add package for the korra product
+
+
+Twonky Server v7.2.9-6
+----------------------
+
+Bug fixes
+- do not add inotify watcher in subfolders if parent is in ignoredir
+
+Twonky Server v7.2.9-5
+----------------------
+
+Bug fixes
+- RPC info_status uses less critical sections
+
+Twonky Server v7.2.9-4
+----------------------
+
+Bug fixes
+- Fix removable devices's share locations disabled following a TS restart
+
+Twonky Server v7.2.9-3
+----------------------
+
+Bug fixes
+- Fix measurement of the initial scan time
+
+Twonky Server v7.2.9-2
+----------------------
+
+Improved
+- Add twonkyserver-version.txt file containing the package version string
+
+
+Twonky Server v7.2.9-1
+----------------------
+
+Bug fixes
+- Remove the mediafusion server URL from the license file - suppress any http request to the online server
+
+Twonky Server v7.2.9
+----------------------
+
+Improved
+- Adapted to newest test tools (CTT 2.0.3.3, MCVT 3.0.3 and UCTT 2.0.57)
+- Interop with latest generation WDTV client
+
+Bug fixes
+- Fixed a bug for Unauthenticated Files Access (CVE-2014-3748)
+- Fixed a bug for subtitles that couldn't be played by recent LG TV sets
+
+
+Twonky Server v7.2.8
+----------------------
+
+New feature
+- iOS: Added rotation of scaled images to enable correct orientation for clients that do not analyze the rotation flags in images.
+- iOS: Added PNG to JPEG transcoder
+- Add subtitle support for LG TVsets
+
+Improvements
+- Improved the FUN-interface: FUN-files created at server downtime will be read when the server is back - lexicographical order
+- Improved the DSD filescanner; scanning broken files no longer crash the server
+- Improved the embedded jpeg-scaler. The rotation flag is now set correctly
+- Linux: Performance improvement when processing inotify events
+- MacOS: Improved performance for Twonky Server on MacOS
+- iOS: Improved the file scanners - mov-files are now checked for being mpg4 or a QuickTime inside.
+- Clarified log messages for device database status. Too many messages have been logged, some of them with the wrong severity.
+- Support now BIG5 encoding for WAV files. Requires the correct codepage parameter being set.
+- Add subtitle (closed caption) support for newest LG and Samsung TV sets.
+- Extract frequency from FLAC and DFF files
+- Display frequency as KHz or MHz in the tree view
+
+Bug fixes
+- Fixed that the Update event notification at the end of a copying process wasn't sent properly
+- Fixed device based licensing
+- Fixed a bug that could lead to  UPnP certification tool to fail
+- Fixed a bug where changes in nested folders were sometimes ignored by Twonky Server
+- Fixed a bug where servers named with -- (double minus) were not correctly handled for aggregation
+- Fixed a bug that led to CTT failures on some platforms.
+- Fixed a bug for audio 3GPP that were wrongly detected and served as video 3GPP
+- Fixed a bug where M-SEARCHes weren't correctly handled when two or more network interfaces are active.
+- Fixed that toggling mute in the Beam UI of Twonky Server no longer sets the volume to 100%.
+- Fixed a crash when the DCTP enabled server was stopped.
+- Fixed LPTT issues
+- Fixed a bug in the webUI that went unresponsice when the navigation trees were changed 
+- Fixed a bug for DSD files where the duration was always shown as zero
+- iOS: fixed a bug for the cover art handling
+- Fixed problems in airplay module during shutdown
+- Fixed:  Non-Ascii metadata in the WAV files is not handled properly
+
+Twonky Server v7.2.7
+----------------------
+
+New feature
+- Added support for DSD file format
+- Added new ini-properties: 
+	- limit_devdesc_responses_ua: Use this to set a comma separated list of allowed user agent strings. 
+	  If this is set, then only clients that use an allowed user agent will be able to get the device description from Twonky Server.
+	- ini-property: limit_devdesc_responses_ip: Use this to set a comma separated list of allowed IP addresses. 
+	  If this is set, only clients connecting from an allowed IP address will be able to get the device description from Twonky Server.
+	- New ini-property disablealbumart_fallback to define album art behavior:
+	  If a content item does not contain embedded album art, Twonky Server can use album art from other media items within corresponding album.
+	  Default value is 0, i.e. album art fall-back enabled for music and videos.
+	  disablealbumart_fallback=0
+	  If set to 1, album art fall-back for music will be disabled i.e. the embedded album art for one music title isn't used for all music items in the view.
+	  If set to 2, album art fall-back for videos will be disabled i.e. the embedded album art for one video item isn't used for all video items in the view.
+	  If set to 3, album art fall-back for both music and videos will be disabled.
+
+Improvement
+- Added device detection for Samsung TV F series (2013)
+- Improved the Samsung TV device adaptation for better handling of full HD pictures
+- Default settings change! Per default time seek generation is disabled for Twonky Server. This means that initial scan will be a lot faster but some clients won't any longer be able to time seek on the media. The time seek generation can be turn on again by setting disabletimeseek=0 in the ini-file
+- Added 8Player to Twonky’s device DB
+- rpc/stream_info now contains information on device's online state
+
+Bug fixes
+- Fixed a bug when removable drive (e.g. USB-Stick) was plugged or unplugged.
+- Fixed a bug in the webUI when changing the default-navigation tree. When changed repeatedly the page went unresponsive
+- Fixed a bug for embedded JPEG images that weren't rotated
+- Fixed a crash that occurred when a DTCP-IP Twonky Server was stopped.
+- Fixed a bug for SSDP messages. The SSDP handling is robuster now.
+- Fixed a bug for Samsung TV F-series which caused that thumbnails for videos and pictures weren't shown
+- Fixed rare CTT failures caused by the time seek generator
+- Fixed memory leaks in the DTCP-IP module
+- Fixed a bug for WAV-files with high sampling rates that couldn't be played at WindowsMediaPlayer
+- Fixed the wrong album art when navigating through Genre/Artist/Album
+- Fixed some long existing Online Services issues regarding Facebook linking
+- Fixed a bug for Twonky Server on Linux that crashed when scanning time seek information from .wma files.
+- Fixed a bug where Twonky Server sometimes stopped responding when scanning mp4-files
+	- Fixed a bug in the watchdog cause by the former bug.
+- Fixed a crash when removable media drives with shares were removed without shutting down the server (power-off instead of shut-down)
+- Fixed a problem that sometimes occurred when Twonky Server was set up to prohibit being aggregated. Some clients received an 'access denied' thereafter.
+- Further fixes for the Online Services for Linking and Unlinking issues
+- Fixed a bug for Twonky Server UI that didn't properly work on IE8
+- Fixed a bug that sometimes lead to Twonky Server getting unresponsive during shut-down when AirPlay (Apple TV) or Roku are in the network.
+- Fixed default shares on MacOS. Previously the entries for music and photo folders were incorrectly set.
+- Fixed that a remote browser accessing the WebUI of Twonky Server was identified as Twonky Server in the media receiver list.
+- Fixed a bug where sometimes the default gateway was not set.
+- Fixed a crash when reading malformed PDB XML file
+- Fixed LPTT certification issues
+- Fixed interoperability problems with CyberLink DMP when downloading JP_T files
+
+
+TSDK general
+- TExample applications removed; will be replaced by best-practice reference implementation
+
+Android
+- New Feature: Added JPEG scaler to support scaled JPEG images including album art.
+- Improvement: Added video thumbnail support
+- Fixed a bug for occasionally failing playback issues on the DCTCP-IP version
+- Fixed a server crash due to missing unregisterReceiver in PVWifiManager
+- Fixed: iNotify for Android enabled
+- Fixed a bug where the server didn't provide thumbnails
+- Fixed a bug for pushing thumbnails to a Samsung TV
+
+iOS
+- New Feature: iOS: Added PNG to JPEG transcoder
+- New Feature: iOS: Added rotation of scaled images to enable correct orientation for clients that do not analyze the rotation flags in images.
+- Improvement: If Twonky Server shares are configured to only share music, then iOS no longer brings up the user dialog to query permission to access photos.
+- Improvement: Drastically reduced memory usage required for picture scaling.
+- Improvement: QuickTime files are now properly flagged on the iOS server, allowing clients that don't support this codec format to filter for those formats.
+- Fixed streaming video and images from server.
+- Fixed crash when retrieving scaled images from server on iOS.
+- Fixed possible crash in AirPlay module on iOS 7.
+- Fixed a crash that happened due not renamed Reachability class
+- Fixed a bug where the server didn't provide thumbnails
+- Fixed a bug for pushing thumbnails to a Samsung TV
+- Fixed:Re-enabled JPEG scaler in server.
+- Fix a bug for the unravelling that was always failing initially
+
+Known issues
+- Same named albums and sorting behavior of Twonky Server: When you have same named albums from different artists in your media collection and you chose the "Album" navigation the titles from both albums will end up together in one view. We checked how to improve this behavior but each fix we found would have caused tremendous performance problems so we decided not to offer a fix. In case you have this problem we can only suggest that you manually change the metadata of the album(s) that cause this behavior.
+
+QA information
+CTT 2.0.0.05 passed
+MCVT 2.0.0.3 passed
+UPnP CTT 2.0.51 passed
+LPTT 1.22.4 passed 
+LPTT CVP 2.0.16 passed
+
+
+Twonky Server v7.2.6-3
+----------------------
+
+Bug fixes
+- Fixed an interop issue with XBMC by allowing “Range: bytes=0-“ for content that does not support range requests
+- Fixed an interop issue between the Twonky Server UI and IE8
+
+Twonky Server v7.2.6-2
+----------------------
+
+Improvement
+- Twonky creates a backup copy of db.info during shutdown (to allow applications to know the size of the database during the initial scan)
+
+Bug fixes
+- Fixed an issue with pictures disappearing from Twonky after they have been rotated using the Windows 8 file Explorer.
+
+
+Twonky Server v7.2.6-1
+----------------------
+
+Bug fixes
+- Fixed a crash in the JPEG scaler when scaling corrupted JPEG image
+- Fixed several problems in the WAV->LPCM transcoding module
+- Fixed a possible dead lock when shutting down the log module of Twonky Server
+
+
+Twonky Server v7.2.6
+----------------------
+
+**************
+***
+*** Important: If you use one of the non-UPnP access APIs "JSON" or "RSS", please
+***            look at the section "deprecated and removed" below and look
+***            for the new configuration option 'enabledeprecatedjsonandrssfeed'!
+***
+**************
+
+New features
+- New rpc-call: online-servies_have_changed: with optional parameter list id=xxx. This internal function informs server that online services have changed, i.e. user has added or removed some feeds.
+
+This function has 0 or more parameters: id=<id of container that has changed>.
+- Added support for new DLNA-profiles which are defined and required for RUI ("Remote User Interface") (e.g. AVC_MP4_MP_SD)
+- FriendlyInfoUpdate service is now available: INI parameter enablefriendlyinfoupdate=1 enables FriendlyInfoUpdate service. In this case, control points (eg. DeviceSpy or UPnPInspector) expose this additional service.
+- New ini-option for monitoring memory functions: rpc/get_stats to get content of /proc/<PID>/status and /proc/<PID>/smaps
+and rpc/drop_caches to drop file caches
+- New ini-option: enabledeprecatedjsonandrssfeed (see "deprecated and removed" for information)
+
+Improvements
+- Improved WebUI behavior when the "ignored directories" were changed.
+- Improved the installation behavior. If upload or aggregation is disabled for Twonky Server neither the upload nor the mirror folders get created. This is only visible at initial installation - if the upload or mirror folders are present from a former installation of Twonky Server they won't get removed.
+- The upload and mirrored folders are configurable now. The new properties can be set in the ini-file and are named: 
+	- uploadmusicdir
+	- uploadpicturedir
+	- uploadvideodir
+	- mirroredmusicdir
+	- mirroredpicturedir
+	- mirroredvideodir   
+  If upload and mirroring is disabled no respective folder will be created by Twonky Server.
+- We cleaned up the navigation tree. Therefore we eradicated some categories which were duplicates. No functionality was lost with the changes but Twonky Server got faster and uses less memory now.
+- Updated the scaler for MacOS
+- Improvement the ituneslib default value for Linux. It has been changed to blank.
+- Added a clientadaptation for DLNA's "Golden DMC" for certification purposes.
+- Improved the reporting of Twonky Server. The reports include codec information.
+- Improved Twonky Server’s subtitle support. The server is now able to add subtitle files after the content has already been scanned. Previously, subtitle files had to be placed there prior to the content and if the file system notification events would come in the wrong order Twonky Server could miss the subtitle file. 
+  This improvement works only for systems that support file system event notifications.
+
+
+Bug fixes
+- 
+- Fixed inconsistencies in the SystemUpdateIDs generated by Twonky Server
+- Fixed a bug where the rpc-call "stop" didn't stop the server
+- Fixed a bug at browsing the online videos which sometimes led to long response times
+- Fixed a bug at the WebUI which always indicated that Twonky Server is streaming although the streaming was stopped. Note: This behavior can still be seen on devices with huge buffers.
+- Fixed the Windows Start menu entry that pointed to twonkyforum instead of community.twonky.com
+- Fixed the bug for Twonky Server on Linux system where the configuration files were written into two different folders
+- Fixed several bugs related to the Online Services
+- Fixed some problems for the persistent device database. The device types are better recognized now and the client expiration time was fixed. Also problems when switching networks or having more than on network adapter accessible were addressed.
+- Fixed that a remote browser accessing the WebUI of Twonky Server was identified as Twonky Server in the media receiver list.
+- Fixed the ini-property 'disablemytwonky'. If it is set to 1 the link to the OnlineServices is removed.
+- Fixed the 'enablereporting' ini-property. It is no longer checked when enablereporting=0
+- Fixed: Sometimes events were hanging in the event queue for a longer time.
+- Fixed a bug where the quotes at  Content-Type and Content-Length header fields were removed according to W3C
+- Fixed the handling for the new WMVHIGH-PRO files updated by DLNA
+- Fixed the LPCM content handling: When transcoded from WAV it contains the correct Mime-type now.
+- Fixed: If DLNA pre-scaled content was set up for play speed test, then server did not provide all play speeds for which pre-scaled content was available.
+- Fixed: Sometimes the default gateway was not set.
+- Fixed default shares on Mac. Previously the entries for music and photo folders were incorrectly set.
+- Fixed a problem with the tray app on MacOS where the server wasn’t terminated correctly so that the server couldn’t be started and stopped from the tray app properly.
+
+Deprecated and removed
+- get_timeout_period rpc-call removed
+- RSS and JSON feeds are marked as deprecated - they will be no longer available in one of the following TwonkyServer versions.
+  In order to still be able to use these feeds the INI-parameter has to be set:
+  enabledeprecatedjsonandrssfeed=1
+
+Known issues
+- Some online services problems aren't fixed:
+	- Occasionally seen problems with facebook feeds
+- For Genre/Artist/Album and Playlists the server offers wrong albumart: Instead of the first valid albumart for thumbnail the default albumart is used.
+- We have seen occasional hangs in the web UI when the navigation tree view was changed repeatedly.
+
+QA information
+- MCVT 2.0.0.3 (DMS) passed
+- CTT 1.5.58.02 (DMS) passed
+- UCTT 2.0.48 (DMS) passed
+- LPTT failed
+
+
+Twonky Server v7.2.5-2
+----------------------
+
+Bug fixes
+- Fixed two memory leaks
+- Fixed a bug in the LPCM res generation. Removed CI=1 and added missing OP flag
+- Fixed the mime type setting for LPCM res that is generated for WAV files
+- Fixed a bug that caused the client detection to identify a browser accessing the web UI as "Twonky Server"
+- Updated client detection to prevent multiple entries of the same type for one client
+- Updated the file scanner to correctly identify DLNA profiles for new WMVHIGH_PRO DLNA reference content
+
+Improvements
+- When running aggregation in "Auto-copy" mode the copy process is now stopped when the according setting is changed from 'mirror' to 'ignore'
+
+QA information
+- MCVT 2.0.0.3 (DMS) passed
+- CTT 1.5.58.02 (DMS) passed
+- UCTT 2.0.47 (DMS) passed
+- LPTT 1.22.4 passed 
+- LPTT CVP 2.0.13 passed
+
+Twonky Server v7.2.5-1
+----------------------
+
+Bug fixes
+- Fixed a bug where Twonky Server triggered frequent debug output to the system console on certain arm-marvell based systems
+- Fixed a bug where Linux systems with a Kernel version >=3.10 suffered from heavy CPU-load
+
+
+Twonky Server v7.2.5
+---------------------
+
+Improvements
+- Scan time performance and memory usage improvements
+- Increased number of network interfaces seen by Twonky Server from 5 to 20.
+
+Bug fixes
+- Fixed a bug in the web browse pages that led to missing folder thumbnails and slow performance.
+- Fixed the MimeTypeSuppress-Quirk in the client adaptations
+- Fixed a bug where playlist still were visible although the content was not shared any longer. Please note: If you unshare content that also is part of a playlist you have to manually trigger a rescan inorder to find this change again in your playlists.
+- Fixed video playlists. Playlists (either iTunes or WMP) are recognized as video playlists now. In case of mixed playlists the lists will be available at music-playlists.
+- Fixed a bug where the picture orientation wasn't taken into consideration of the thumbnails.
+
+API-changes
+- Deprecated http_rss
+- Deprecated Http_mediarss
+- Deprecated http_json
+- Deprecated http_wii
+
+QA information
+- MCVT 2.0.0.3 (DMS) passed
+- CTT 1.5.58.02 (DMS) passed
+- UCTT 2.0.46 (DMS) passed
+- LPTT 1.22.4 passed 
+- LPTT CVP 2.0.13 passed
+
+Twonky Server v7.2.4
+---------------------
+
+New feature
+- Added support for IO-Nice on Linux systems. Linux allows an application to set the priority for its IO operations on a per thread level - this feature can only be enabled on build-level.Please note: This feature is kernel specific and therefore may require adaptations for any specific platform.
+
+Improvements
+- When installing on a Windows system it's possible to choose that Twonky Server isn't launched directly after installation. Settings option can be found in "custom installation".
+- Improved the standby mode of TwonkyServer:
+	To enter Standby Mode invoke RPC rpc/enter_standby_mode. On entering Standby Mode TwonkyServer will send byebye messages to the network to indicate to clients it is no longer available
+	To exit Standby Mode send signal SIG_USR1 to TwonkyServer for example by calling kill:
+	kill –USR1 <process-id>
+	On exit from Standby Mode TwonkyServer will re-announce itself to the network. The key advantage of using Standby Mode over simple stopping and restarting: Twonky becomes available almost instantly after exiting standby mode
+	NOTE: Standby Mode is only available for Linux versions of TwonkyServer
+- Added aiff metadata support
+
+QA information
+- MCVT 2.0.0.3 (DMS) passed
+- CTT 1.5.58.02 (DMS) passed
+- UCTT 2.0.45 (DMS) passed
+- LPTT 1.22.3 passed 
+- LPTT CVP 2.0.13 passed
+
+Bug fix
+- Fixed: Album art extracted by Twonky Server is no longer added to the shared locations.
+
+QA information
+- MCVT 2.0.0.3 (DMS) passed
+- CTT 1.5.58.02 (DMS) passed
+- UCTT 2.0.45 (DMS) passed
+- LPTT 1.22.3 passed 
+- LPTT CVP 2.0.13 passed
+
+Twonky Server v7.2.3
+---------------------
+
+Improvements
+- Changed the client adaptation for Panasonic VIERA TVs: Added the VIERA_DIVXPROFILE per default setting
+- Improved the performance
+- It's possible to disable the airplay support in the embedded NMC of Twonky Server. Adding "-disableDmrPlugins" to the command line of Twonky Server will disable airplay and roku ldmr support.
+
+Bug fixes
+- File system eventing default settings now depend on target platform: iOS/Android - eventing disabled; Win/Linux/MacOS eventing enabled
+- Fixed the PlayStation recognition in the client list
+- Fixed a problem for the .mov files that were not always discovered with the correct DLNA-profile
+- Fixed a bug for album art. Twonky no longer creates AlbumArt_{}_Samll.jpg files inside the shared locations. These files are moved to the cache instead.
+- Fixed a bug for uploading .mp4-files to Twonky Server where the uploaded files were added to Video and to Music
+
+QA information
+- MCVT 2.0.0.3 (DMS) passed
+- CTT 1.5.58.02 (DMS) passed
+- UCTT 2.0.45 (DMS) passed
+- LPTT 1.22.3 passed 
+- LPTT CVP 2.0.13 passed
+
+Twonky Server v7.2.2
+---------------------
+
+Bug fixes
+- Fixed remote access feature
+- Fixed the video thumbnail generation. Please note that tool included with Twonky Server only supports the following codecs: .mp4, .3gp files with MPEG4 part 2 Simple Profile, H.263 Base Profile and Annex IJKT, or H.264/AVC Restricted Baseline Profile/Main Profile/High Profile (non-interlace)
+- Fixed a bug for Samsung TVs and UPC STBs where some .mp4 files couldn't be paused and resumed or played
+- Fixed a problem for Mac builds. Twonky Server now restarts after reboot
+- Fixed the Linux installer script
+- Performance and Memory usage improvements
+
+QA information
+- MCVT 2.0.0.3 (DMS) passed
+- CTT 1.5.58.02 (DMS) failed (7.3.26.6 fails because of a media mapper issue acknowledged by DLNA. The media mapper was updated in June 2013)
+- UCTT 2.0.44 (DMS) passed
+
+Twonky Server v7.2.1
+---------------------
+
+- New version because packaging problems with Windows-PC build.
+
+Twonky Server v7.2
+-------------------
+
+General
+- New branding
+- Twonky Server 7.2 is compliant with Windows 8 certification
+- Twonky Server free abandoned
+- TwonkyServer Special renamed to Twonky Server
+- mytwonky nodes are renamed to online services
+    - my.twonky.com abandoned as back-end. New back-end available to configure online feeds
+- TwonkyWebDAV server abandoned
+
+New Features
+
+- New accounting module
+    - Each OEM build needs two license files (twonky.dat and twonky.license) now. These files are generated for the exact OEM version and will be provided with the binaries we deliver. Please note that the license files will be bound to each target binary AND version and must be exchanged with each new version!
+- New device database behavior. The device database is persistent now. Devices that are found in the same network as the server will stay in the database even if they are turned off. After two weeks unseen by Twonky Server they will vanish from the list per default. This behavior can be changed via ini-setting:
+    - pdbexpiretime=
+  - The following rpc_calls are related to using the persistent device database:
+    - persist_device:
+      http://127.0.0.1:9000/rpc/persist_device?device=uuid:xxx&persist=1
+      http://127.0.0.1:9000/rpc/persist_device?key=[GatewayMac::DeviceIndex]&persist=[BOOLEAN]
+      Sets or Resets device to persist unless explicitly removed.
+    - get_persistent_db_list
+      http://127.0.0.1:9000/rpc/get_persistent_db_list
+      Returns persistent db list in xml format.
+    - reset_specific
+      http://127.0.0.1:9000/rpc/reset_specific?gateway=[GatewayMAC]
+      Clears persistent db for specific gateway.
+      GatewayMAC is mac address of the gateway in XX:XX:XX:XX:XX:XX format.
+- New ini-setting memsharinglimit
+    - Default value 0 means no limit
+    - Value is in megabytes (taking 1 megabyte to be 1000000 bytes)
+    - The limit is not a hard limit. Twonky will continue to allocate memory past the limit for its normal operation e.g. streaming, device discovery etc.
+    - low values will be rounded up to a sensible value (<3MB)
+    - After the limit is hit, if any content is unshared (either a location is unshared or some contents are deleted) then Twonky allows sharing of new content (provided the used memory goes below the threshold)
+    - RPC info_status reports if the memory limit has been hit
+- New rpc-call "rpc/client_change"
+    - This rpc-call substitutes "rpc_client_add", "rpc_client_enable" and "rpc/client_disable"
+      http://127.0.0.1:9000/rpc/client_change?key=KEY&id=CLIENTID&enabled=BOOLEAN&view=VIEWNAME
+      Updates a client in the servers client list.
+      Parameter:
+        KEY = GatewayMAC::DeviceIndex (GatewayMAC in format xx:xx:xx:xx:xx:xx)
+        CLIENTID= client id (""Generic Media Receiver"" = -2 ,""Generic Music Only Receiver"" = -1, ""CTT DLNA 1.5"" = 2, ""Generic DLNA 1.0"" = 1)
+        BOOLEAN = 0|1 enable (1) or disable (0) this client
+        VIEWNAME = navigation tree view to be used with this client 
+      Provide one or more of above parameters to update client identified by KEY
+- Added support for beaming to Roku box (Roku 2 XS)
+- Added reset possibility to playlists
+- iOS: Native playlists can be imported by Twonky Server
+- Added beaming support for audio from iOS to AppleTV
+
+Improvements
+- Instead of IP address and network also the use of network interface name for network related configuration is allowed
+    - new ini-setting 
+	- iface
+      The iface option can be used to specify a single network interface or a list of network interfaces to bind to.
+    
+	- ignoreiface
+      The ignoreiface option can be used to specify a network interface or a list of network interfaces which Twonky should not bind to.
+- The following ini-settings do no longer require a restart of the server when they are changed while the server is running:
+	- friendlyname
+	- ip
+    
+	- vlevel
+	- language
+	- httpport
+	- ssdpttl
+	- ssdpheartbeattimeout
+	- enabletls
+	- enablenmc
+	- mediafusionserverurl
+	- enablenmcwebapi
+	- followlinks
+	- ssdpheartbeatport
+	- ignoreip
+	- cachemaxsize
+	- codepage
+	- compilationsdir
+	- httpremoteport
+	- ignoredir
+    	- scantime
+    	- uploadenable
+    	- rmautoshare
+    	- maxitems
+    	- remoteaccess
+	- dtcpsessionlimit
+    	- dtcpsessioncount
+    	- uploadrestrictedprofiles
+    	- rmadditunes
+    	- rmupload
+	- scannerwatchdogtimeout
+	- scannernotifychecktimeout
+    	- dbnotifychecktimeout
+    	- shutdownchecktimeout
+    	- albumartdir
+- We added a blacklist of options to prevent setting of certain options that if set incorrectly may result in Twonky becoming unstable or may have potential security risks. The default blacklist contains a minimal set of options to block. It is also possible to
+  configure a morse comprehensive blacklist via an external configuration file.
+- New ini-setting delaynetwork. 
+    - If set to 1 Twonky Server will work only on localhost until the file scanner is ready
+- New ini-file option dontscandrm. 
+    - By setting this option to 1 WM DRM protected content will not be scanned by Twonky Server
+- Improved handling of video/ogg and audio/ogg MIME types
+- Improved file scanners. Media items that cannot be opened for reading will be ignored by the scanners. The log-file is updated with the warning "ignoring file without read permissions"
+- Improved rpc/stream-active. Upload, move and download sessions are shown
+- The configuration options for the configuration pages and for web browsing are divided in two separate folders now.
+- Improved support for AcePlayer
+- Improved the MP4 profile recognition support
+- Improve detection of non-ASCII Asian character encodings
+- Improved FLV audio-only support
+- Improved OGG video-only support
+- Improved handling of album and album artist tags for music items
+    - if an album artist is given in addition to the artist then Twonky Server now shows the album artist on album level and the artist on file level.
+    - it is possible to enable up to three different genres per item in single tags instead of a comma separated list. The device profie needs to be modified: add <Quirk>TAG_PER_GENRE</Quirk> to the client adaptation which can handle more than one genre tag.
+- The directory lists when browsing Twonky Server on a Linux-system is alphabetical now.
+
+Bug fixes
+- Fixed a problem for DLNA profiles:  WMV files with WMV9 video / WMA audio combination are correctly identified now.
+- Fixed a bug for ini-setting enabletls: Changing the value does report a restart request now
+- Fixed a bug for new settings of the ini-option mediatypefilter. Update event is triggered.
+- Fixed a problem where the secure folder location status was overwritten by the status of normal share
+- Fixed a crash during database rebuild (DTCP enabled version)
+- Fixed a bug for fseventingtest. The rescanning of e.g. USB-sticks is working again.
+- Fixed a bug for the rpc-call share_local_file. It now works properly with container formats like .mp
+- Fixed a bug for DTCP session limits
+- Fixed a problem for metadata scanning of .png-files
+- Fixed a problem fo the return number of scanned items that sometimes gave wrong results
+- Extended the blacklisted directories for MacOS 
+- Fixed a bug for .isma files that were scanned as video instead of audio.
+- Changing navigation tree settings does not have an effect towards the webUI pages any longer. webUI will always show the advanced navigation tree view whereas view settings will only be available for the connected devices.
+- Fixed a bug for .avi files that couldn't be pushed to XBOX 360
+- Fixed a bug for files that were autocopied with wrong file-extension when non-Twonkys are aggregated.
+- Fixed a bug for wrongly scanned .tp video files
+- Fixed a problem for servers that were connected to my.twonky.com. There were problems when the network was changed in between.
+- Fixed the embedded album art problem for WDTV Live Plus HD
+- Fixed a bug for Beaming a Radio Station on Apple TV with Twonky Server running on  MacOS
+- Fixed the password-protection of the configuration pages.Either delete the settings on the .ini-file or via rpc/set_option?accesspwd= In this case an authentication with the old password is needed
+- Fixed a problem where the sharing page was inaccessible when no clients were detected.
+- Fixed a bug for .mov videos where the resolution wasn't extracted correctly
+- Fixed a bug when music items with multipe genres were removed
+- Fixed a bug which caused problems with pictures on WD players
+- Fixed a problem when multiple Twonky Servers were in the same network. My.twonky.com had problems displaying the servers
+- Fixed: Blackberry AMR files get  indexed now
+- Fixed some smaller issues on the webUI pages
+- Fixed a problem for files that have no date set in the metadata
+- Fixed handling for OGG-files w/o metadata. Default date is now system creation date 
+- Fixed  a bug where the friendlyname of an aggregated server sometimes was empty
+- iOS: fixed problems for mp4-audio files
+- iOS: Fixed a bug where TwonkyServer didn't return the correct image names
+- iOS: Fixed a bug for playlists. The deletion wasn't properly handled.
+- Android: Fixed a bug for the server where not all of the content items were found during initial scan
+
+QA information
+- MCVT 2.0.0.3 (DMS) passed
+- CTT 1.5.58.02 (DMS) failed (7.3.26.6 fails because of a media mapper issue acknowledged by DLNA. The media mapper was updated in June 2013)
+- UCTT 2.0.39 (DMS) passed
+
+Twonky Server v7.1.3
+---------------------
+
+Improvement
+- Added video .ogg support
+
+Bug fixes
+- Fixed a bug when client entries were duplicated in the client list
+- Fixed the DLNA profile for WMV9 video/WMA
+- Fixed a bug when the embedded album art in mp3 files is png
+- Fixed a bug on aggregated items. The thumbnails had invalid URLs in JSON and RSS feeds
+- Add support for a new url parameter to suppress sending the default album art picture. Now the standard 404 error message is sent
+
+QA information
+- MCVT 2.0.0.2 (DMS) passed
+- CTT 1.5.58.02 (DMS) passed
+- UCTT 2.0.39 (DMS) passed
+
+Twonky Server v7.1.2
+---------------------
+
+Improvement
+- New ini-parameter: enablecvp=1 - For DTCP-enabled TwonkyServers the CVP profiles can be enabled on the fly. After enableing a database rebuild is needed once.
+-  *.flv or *.f4v container with MP3 content are now correctly recognized as audio.
+
+Bug fixes
+- Fixed a problem for .mov videos where sometimes the resolution was wrong
+- MacOS versions are signed now
+
+QA information
+- MCVT 2.0.0.2 (DMS) passed
+- CTT 1.5.58.02 (DMS) passed
+- UCTT 2.0.38 (DMS) passed
+
+Twonky Server v7.1.1
+---------------------
+
+New feature
+- Added PIFF support: .isma and .ismv file extensions 
+
+Improvement
+- Improved add_metadata. Now a creator tag is added as well.
+- TwonkyServer provides URL-parameter to return content as attachments: "download=1"
+- Added .ini-file option: disableunsupportedmarker. If set to 1, the .unsupported files are not created if a transcoding process fails
+- Improved subtitle support (.srt) for mpg,mkv,avi,wmv files.
+Please note that you have to make a database rebuild if you add subtitle files after content file
+- Wildcard mechanism to import files with customer defined file extensions into database
+
+
+Bug fixes
+- Fixed a problem with .mp4 videos that caused high CPU-usage
+- Fixed a problem for ignoredir-option, folders with a dot (.) now are handled properly
+- Fixed: Aggregation module
+- Fixed high resolution icon support for TwonkyServer
+- Fixed a problem with saving username & password on the webUI
+- Fixed a bug for mytwonky's myFavoritePhotos; through JSON and RSS only the thumbnail were shown
+- Fixed a bug for beaming audio via Airplay
+
+QA information
+- MCVT 2.0.0.2 (DMS) passed
+- CTT 1.5.57.03 (DMS) passed
+- UCTT 2.0.34 (DMS) passed
+
+Twonky Server v7.1
+-------------------
+
+New Feature
+- Added Airplay support for Beaming (Airplay support not available on Linux)
+- Added auto-update for TwonkyServer
+- Added auto-update for device-database
+- Added Bookmarks / Crosslinks
+
+Improvements
+- Improved speed for browse and search requests for scaled images
+- Added ability to upload playlists from files
+- Improved support for "Netgear EVA91x0"
+- Improved support for "Naim Audio Streamer"
+- Improved aggregation performance
+- Improved handling of embedded album art and of embedded thumbnails
+- Improved mpeg handling for some Sony devices
+- Improved YouTube handling
+- Improved interoperability with some Samsung TVs
+- Improved sharing options for mobile apps
+- Improved settings pages
+
+Bug fixes
+- Fixed a problem when trying to create a new user for “sync”
+- Fixed a problem with the duration display for videos from myTwonky.com
+- Fixed a problem when MP3 files were tagged with ID3 v.2.3.0
+- Fixed a problem with default album art
+- Fixed thumbnail display for .mp4 files on Sony PS3
+- Fixed a server restart issue when changing the language settings 
+- Fixed Most Viewed and Last Viewed playlist and slideshow misbehavior
+- Fixed a problem when more than one external drive is attached and the server is restarted
+- Fixed a problem for Mac OS that disabled automated server restart after changing myTwonky.com username 
+- Fixed a problem that made the advanced menu inaccessible after changing the language settings 
+- Fixed a problem with the Twonky shortcut and myTwonky.com where TwonkyServer did not start and myTwonky.com page did not open after installation
+- Fixed language setting problems for Netherlands. 
+- Fixed some wakeup problems when the system running TwonkyServer was on hibernate or sleep 
+- Added some missing translations (CHS,CHT,KO,FI) 
+- Fixed a problem with embedded album art for WD TV Live.
+- Fixed a problem where the last shared folder couldn't be removed via web settings page
+- Fixed a problem when there were more than 20 nested folders
+- Fixed a problem for Philips TVs (e.g. Models 7605, 8605) with streaming divx/xvid
+- Fixed a problem where the initial childcount was displayed incorrectly
+
+Other chances
+- New terms of service (TOS)
+
+Known issues
+- Aggregation feature is not working as intended. The fixed feature will be available for 7.1.1
+
+QA information
+- MCVT 1.15 (DMS) passed
+- CTT 1.5.57.03 (DMS) failed
+- UCTT 2.0.32 (DMS) passed
+
+
+Twonky Server v7.0.11
+----------------------
+
+Improvement
+- Improved file scanner: 3g2 and 3gp2 file extensions are recognized correctly
+- Improved interoperability with WD TV Live
+- Improved DTCP module; now on-the-fly transcoded videos are supported
+
+Bug fixes
+- Fixed an installing problem for Twonky on MacOS 10.8 (Mountain Lion)
+- Fixed a problem with m1v file extensions
+- Fixed a problem for shared folder options that were set to “Video” only. MP4-videos (and maybe other container formats) were not detected and therefore not shown in the shared media items.
+- Fixed the whitelisted directories for MacOS
+- Fixed problems for non-jpeg images that couldn't be displayed on Xbox
+- Fixed a problem with the sort order in the JSON module
+- /rpc/nicchange now causes a restart of the server threads within 1 second
+- Fixed a problem for music detection, when part of the media items was protected (iOS)
+
+QA information
+- MCVT 2.0.0.2 (DMS) passed
+- CTT 1.5.57.03 (DMS) passed; CTT 1.5.58 (DMS) QoS test cases failed
+- UCTT 2.0.34 and 2.0.37 (DMS) passed 
+
+Note: CTT 1.5.57.03 is valid for certification purposes till November 30, 2012
+
+
+Twonky Server v7.0.10
+----------------------
+
+Bug fixes
+- Aggregation fixed
+- Fixed a bug for .f4v files which contained audio only but where recognized as video
+- Fixed a bug for streaming .mp4 videos which caused high CPU usage.
+- Fixed a problem for constant CPU load when not-existing folders were shared.
+- File size and year are no longer visible for content intems in the mytwonky-folders
+
+
+Twonky Server v7.0.9
+---------------------
+
+New Features
+- Added MIDI file support (.mid)
+- Added .webm file support
+- Added Quicktime support (.qt)
+- Added support for .f4v files
+- iOS: serving .wav files is supported now
+- iOS SDK: Added a function to remove TwonkyServer files and folders that are no longer needed
+- Added new .ini setting "ignoredirsbeginningwith" 
+
+Improvements
+- Terms of data collection (Improve my experience) added
+- Added an Exit option to the Twonky menu on MacOS
+- Extended transcoding API to support transrating use cases
+- Improved startup behavior of TwonkyServer - no initial restart is required any longer
+
+Bug fixes
+- Fixed a problem where thumbnails from my.twonky.com weren't forwarded to CDS
+- Fixed a bug for background transcoding: The transcoding wasn't initialized but could only be started via RPC-call
+- Fixed a problem for uploaded contents where the title begins with a dot (.) 
+- Fixed the ‘Autostart’ option for TwonkyServer
+- Fixed a problem where Web UI of the server stops responding when attempting to load photo thumbnails
+- Fixed a bug for broken web-browse when using Firefox
+- Fixed a saving problem when the settings page is secured by user
+- Fixed a problem where the Advanced menu was not accessible after a change of the language
+- Fixed a problem where the language wasn't reset after doing a "Reset to Defaults"
+- Fixed a problem for the "Recently Played" list that didn't show the correct information
+- Fixed a bug where "Featured Photos" couldn't be accessed on Linux & MacOS using default web browser
+- Fixed a thumbnail problem for music content on WDTV
+- Fixed a problem for images with a resolution higer then 3165x4747 for Samsung TVs and WD TV
+- Fixed a problem for MacOS where an additional server was started when a new network connection was established (NIC change)
+- MacOS: Fixed some problems for hibernation and sleep    
+- iOS: fixed a bug where photos and videos weren't indexed on iOS 4.x
+- iOS: fixed a bug where photos synced with iTunes weren't added to the TwonkyServer library
+- iOS: Fixed a server crash that occured because music-videos where recognized as music-only
+- iOS: Fixed a server crash when a music track was longer than one hour
+- iOS: Added logging to file
+
+
+Twonky Server v7.0.8
+---------------------
+
+New Features
+- iOS SDK:  iOS: test app is available
+- The server config pages adapt to the chosen features
+- Reporting possibility for usage of "Beam" added
+- New ini-file parameter: “DISABLESHAREOFCONTENTTYPE”
+- Preserve settings when installing a newer TwonkyServer version is now possible
+
+Improvements
+- DTCP-client works with one buffer
+- DTCP test utility works with aligned byte seek responses
+- Transcoding: Add support for video/all and audio/all syntax in .desc file
+- Transcoding: Limited simultaneous transcoding processes per IP address
+- Reduced database access after initial scan
+- Significantly improved performance by limiting the number of file system access operations during browsing
+- Improved RPC-call info_status which now gives numduplicates
+- Redirect to external transcoding servers allowed supported protocols: RTSP, HLS
+- Added a notification for updates from Twonky 6 to Twonky 7 where to find the license key
+- Improved interoperability with Netgear EVA91x0
+- Improved response time for internal and external IP addresses.
+- New implementation for playlists can be used now. (The old API had problems with large playlists)
+- Thumbnails in web-browse are links to the media item now.
+- Improved handling of the friendly name which is now visible on the web config pages.
+- iOS: HLS URL support added
+
+Bug fixes
+- Fixed a problem when too many playspeed values or values between -1 and 1 occurred
+- DTCP: Fixed a playspeed issue
+- DTCP: Exceeding DTCP-IP session limit is properly reported (enhanced error reporting)
+- Fixed the cause for a proxy crash
+- Fixed maxitems settings
+- Fixed the "ip"-config option: When an IP-address is set TwonkyServer only is available on the specified network
+- Fixed %HOSTNAME% handling: When using %HOSTNAME%-macro in the setup the name of the computer TwonkyServer is running on is automatically used. 
+- Fixed a bug for MP3 files that were tagged with ID3 v.2.3.0
+- Fixed a bug where no new user for sync (WebDAV) could be created
+- Fixed time seek on images. This is not done any longer.
+- Fixed path traversal issue that was also present in the WebDAV server (DDIVRT-2012-40: PacketVideo TwonkyServer and TwonkyMedia Directory Traversal)
+- Fixed a bug where 'undefined' nodes appeared when one or two content types (e.g. Music and Photos) are missing
+- Fixed a bug for language setting changes in the trayapp
+- Fixed a bug when part of the settings pages weren't accessible when Adblock-plus plugin was installed on Firefox
+- Fixed a bug where thumbnails for containers were missing
+- Fixed a problem for embedded album art in FLAC files
+- Fixed a problem for default album art
+- Fixed problems for special characters in friendly name. Apostrophe (') should be avoided even from the users.
+- Fixed a bug for username/password that wasn't shown on the settings pages
+- Fixed a problem for Safari where pop-up windows were blocked when the user tried to register the server.
+- Fixed a problem for thumbnail display
+- Added C:\Program files (x86) to the blacklisted directories
+- Fixed a problem with the default friendly name of the server.
+- Unified album art usage and display for locale my library view and for my.twonky.com view
+- Translation updates for the Sync-Setting page
+- Fixed a problem where license keys couldn't be correctly pasted (MAC/Safari)
+- iOS: Fixed a bug for HLS streams pausing didn't work
+- iOS: Fixed permission rights
+- iOS: Fixed a bug for browsing on the local server. Now the videos can be seen again.
+- iOS: Fixed a bug for the database scanner thus preventing a crash
+- iOS: MAC-address retrieval
+- iOS: Fixed a problem with loading the devicedb
+- Mac: Fixed a problem for playlist. They no longer get corrupted when edited by the user
+- PS3: Fixed a problem for album art
+- Fixed a bug where the Sync pages weren't displayed correctly when using Firefox on a Linux system
+
+
+Twonky Server v7.0.7
+---------------------
+
+Bug fixes
+- Extended the accounting module to support new type of license keys
+
+
+Twonky Server v7.0.6
+---------------------
+
+New Feature
+- New RPC-call to enable/disable shared directory: server_managed_dir
+- New feature to access restricted contents from NMC Web. This allows users to perform DTCP-Upload (MOVE-SOURCE) which moves content from one NAS to another NAS
+- Extended JSON interface:
+    + Added function to fetch metadata of a single item
+    + Added additional properties
+    + Added res elements array
+     + Added pagination support
+
+Improvements
+- maxitems' is taken into consideration when a removable storage device is attached
+- Improved drive_added API call which now adds the drive also to the contentdir
+- Twonky provides URL parameter or alternate ports to return content as attachment
+- ‘listaggregatedservers' provides the time when the server was aggregated
+- Improved memory handling for devices with limited memory
+- Extended the transcoding architecture to allow redirection to external transcoding servers
+- Improved the handling when two or more TwonkyServers are in one network (visibility for DMPs)
+- Added support for downloading media items
+- Extended 3rd party database import API
+
+Bug fixes
+- Fixed 'maxitems'settings: When maxitems is reached file modifications are no longer ignored
+- Fixed directory traversal vulnerability and thus closing a security gap (DDIVRT-2012-40: PacketVideo TwonkyServer and TwonkyMedia Directory Traversal)
+- Fixed problems with maxitems when a new location is added
+- Fixed a bug with user authentication
+- Fixed a problem caused by case-sensitivity (.PCM-files)
+- Fixed a problem when two or more additional drives are attached and TwonkyServer is restarted
+- Fixed a problem when removing the friendly-name of TwonkyServer
+- Fixed Linux installer script; now the “Register server”-button is working
+
+
+Twonky Server v7.0.5
+---------------------
+
+New Feature
+- Adding .nomedia to a folder or a file name prevents TwonkyServer from sharing the content
+
+Improvements
+- New RPC call to upload playlists from file "rpc/upload_playlist"
+
+Bug fixes
+- Support improved playlist management by Twonky client
+
+
+Twonky Server v7.0.4
+---------------------
+
+Bug fixes
+- Fixed automated update check for TwonkyServer
+
+
+Twonky Server v7.0.3
+---------------------
+
+Improvements
+- TLS implemented
+- Filter certain Unicode characters for WMP12; prevents WMP12 from crashing
+- Add support for .mpeg4 file extension
+- Convert PNG album art now to JPEG on Windows and MAC (only available on platforms that support ‘convert’)
+
+Bug fixes
+- DTCP: Fixed a crash when the server is shut down while streaming protected content
+- Fixed the output format of pv:custom field in BrowseMetadata response
+- Embedded album art which is PNG gets converted to JPEG for Windows & Mac TwonkyServer
+- Several problems related to installing TwonkyServer on MacOS have been resolved
+- Displaying of thumbnails works again on PS3
+- Resolved a number of issues around sleep and hibernate modes. TwonkyServer and associated processes should now continue to work after wakeup
+- Fixed few minor memory leaks
+
+Other Changes
+- New terms of service (TOS)
+
+
+Twonky Server v7.0.2
+---------------------
+
+New Features
+- Client DB change notifications callback
+- Added option to client database to control access to online items based on client
+
+Improvements
+- Improved logging for SSDP
+- New ini parameter to enable/disabel report device call
+- New parameter ignoreip
+- Mobile SDK: Callback added to get the status of the initial-scan progress
+- WebDAV port number configurable
+- Support for the file extension .mpeg4
+- Improved performance when 'disableduplicateremoval' is set
+
+Bug fixes
+- sharing of /tmp is allowed now
+- Remove the "moved" content item from the source CDS
+- DTCP-IP item formatting improved
+- Wakeup of TwonkyServer after sleep or hibernate fixed
+- Playlist issue after exit and restart of the server fixed
+- iOS 5 cover art problems fixed
+- WMP-created playlists (.wpl) are now handled correctly
+- Album art problems for music files fixed
+- WebDAV/Sync-folder permissions fixed
+
+Other Changes
+- New terms of service (TOS)
+
+
+Twonky Server 7.0
+------------------
+
+New Features
+- Added a way to remove directories from TwonkyServer's scanner (ignoredirwithfile)
+- Playspeed implemented
+- Integration with myTwonky.com to access, manage and enjoy online services through TwonkyServer (optional feature)
+- Included Twonky WebDAV server for content sync
+- TwonkyProxy for beaming online content became a stand-alone module
+- Added DLNA CVP-EU media profile support [AVC_TS_EU_ISO]
+- Compliance to UPnP CTT v2.0
+- DTCP-IP move support (optional feature)
+- URL unraveling in proxy module can be updated over-the-air independently from server installation
+- Privacy settings for content aggregation
+- Video thumbnail support (embedded and external files)
+- Video thumbnail generation with ffmpeg (if available)
+- Support for upload resume
+- Sort support for upnp:seriesTitle and upnp:seriesID
+- Search support for pv:custom
+- Automatically re-create missing time seek files on restart
+- TLS/SSL encryption for settings pages and browser-based content access (remote access)
+
+Improvements
+- Add support for redirection in ShoutCast play lists
+- Added new ini-function (clearclientsonnicchange) that allows TwonkyServer to clean the list of connected clients on each NIC-change.
+- Added RPC-call to retrieve the TLS-port: get_tls_port
+- disableduplicateremoval INI property added
+- TwonkyProxy supports Flash
+- Modified DTCP source export (explain)
+- Improved security when accessing DTCP secured properties
+- UI shows which servers are aggregated
+- Added  'contentsdiscoverymode' option to allow switching on and off the ways TwonkyServer discovers new content
+- New configuration UI and myLibrary screens (formerly known as webbrowse)
+- Configuration UI is IE 9 compliant
+- Updated jpeg scaler (reduced memory footprint by 90%)
+- Updated cache manager for faster cleanup
+- Time seek support is now configurable
+    + can be disabled
+    + if enabled, a faster, but less accurate method for generating the time seek tables can be selected
+- Improved time seek accuracy
+- Extended 3rd party database import API
+    + Added support for online resources through standard API
+    + Added support for a feedback channel to allow the exporting application to get the import results
+- Improved redirect handling in proxy module
+    + The proxy supports a wider range of redirect mechanisms when fetching content from the internet
+- Improved duplicates detection algorithm for aggregated content based on mime types
+- New RSS and JSON generator modules
+    + RSS and JSON feeds are now generated though the same backend module as the UPnP navigation tree. This ensures a uniform user experience independent of the mechanism the user accesses the content
+- Enhanced transcoding API based on ffmpeg
+    + New parameters like frame rate
+    + Selection of best target format based on client db
+- Enhancement of various file scanners, e.g. to obtain additional metadata
+    + OGG, MP4, FLAC, MP3, JPG, MPEG
+- Startup sanity-checks preventing startup if critical resources like views, device description, language file, folders to store db and cache or application data are not accessible
+- WPL playlists may now contain online (http) resources: <media src="http://stream" title="my favorite" mimetype="type" />
+- Added sample web UI code for embedded control points
+- Removed dependency from external ping tool (Linux-only)
+- Removed redundancy in picture and video navigation tree
+    + “By Year” was removed because this is also part of “By Date”
+- MacOS version
+    + Added new tray icon to control server status and open settings UI
+    + TwonkyServer is now re-locatable
+    + New installer
+    + Support for file system events
+
+Bug fixes
+General bug fixes
+- TS fails to share folders that contain a comma in their name
+- Parsing XML goes into an endless loop if the xml contains a res with an unsupported mime type
+- Support for file extension in upper case for Linux platforms
+- Roku SoundBridge cannot stream AAC/M4A
+- On-the-fly transcoder is started on HEAD requests
+- Dates earlier than 1970 shown as 1970-01-01
+- FLAC files without embedded album art shown under the year 0000
+DTCP-IP related fixes
+- Duration is  wrong for long content after moving from REGZA
+- Secure content re-scan is being done at every TMS restart
+
+Other Changes
+- Renamed binaries
+    + twonkymedia ? twonkystarter
+    + twonkymediaserver ? twonkyserver

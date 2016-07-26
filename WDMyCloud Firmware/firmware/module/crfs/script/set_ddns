@@ -1,0 +1,25 @@
+#!/bin/sh
+
+prefix=/etc
+CONFIG_FILE=${prefix}/ez-ipupdate.conf
+CONFIG_BAK=${prefix}/ez-ipupdate.conf.bak
+
+cp $CONFIG_FILE $CONFIG_BAK
+
+#echo $1 $2 $3 $4
+sed -e 's/^user=.*/user='$1':'$2'/g' \
+		-e	 's/^host=.*/host='$3'/g'  \
+		-e	 's/^interface=.*/interface='$4'/g' \
+		-e	 's/^interval=.*/interval='$5'/g'  \
+		-e	 's/^service-type=.*/service-type='$6'/g'  \
+				< $CONFIG_BAK > $CONFIG_FILE
+
+#sed -e "s&^user=.*&user="$1":"$2"" \
+#    -e "s&^host=.*&host="$3"" \
+#    -e "s&^interface=.*&interface="$4"" \
+#    -e "s&^max-interval=.*&max-interval="$5"" \
+#    -e "s&^service-type=.*&service-type="$6"" \
+#    < $CONFIG_BAK > $CONFIG_FILE
+
+rm $CONFIG_BAK
+

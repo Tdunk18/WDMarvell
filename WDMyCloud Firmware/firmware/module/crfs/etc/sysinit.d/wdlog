@@ -1,0 +1,73 @@
+#!/bin/bash
+#
+# Copyright (c) [2015] Western Digital Technologies, Inc. All rights reserved.
+#
+#
+### BEGIN INIT INFO
+# Provides:          wdlog_init
+# Short-Description: generate and store unique device id
+# Description:
+### END INIT INFO
+
+PATH=/sbin:/bin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
+. /etc/system.conf
+
+is_valid=false
+mycl_id_file="/usr/local/config/mycl_id"
+sq_saved_settings_file="/etc/wdcomp.d/wdlog/saved_settings/etc/nas/mycl_id"
+
+validate_id()
+{
+    my_id_string=$1
+    if [ "${#my_id_string}" == 10 ] && ! [[ "${my_id_string}" =~ [^a-zA-Z0-9] ]]; then
+        return 0
+    else
+        return 1
+    fi
+}
+
+set_mycloud_device_id()
+{
+    mycl_id=$(< /dev/urandom tr -cd A-Za-z0-9 | head -c10)
+    if [ -z ${mycl_id} ]; then
+        logger -s -t "$logtag" "Failed to generate mycl_id"
+        return
+    else
+        if validate_id ${mycl_id}; then
+            echo "${mycl_id}" > ${mycl_id_file}
+            [ $? == 0 ] && sync && is_valid=true
+            # save the id to persist through factory restore
+            # for now Sequoia only
+            [ -f ${sq_saved_settings_file} ] && cp -f ${mycl_id_file} ${sq_saved_settings_file}
+        else
+            logger -s -t "$logtag" "Invalid mycl_id is generated"
+        fi
+    fi
+}
+
+check_mycloud_device_id()
+{
+    [ -f ${mycl_id_file} ] && mycl_id=$(cat ${mycl_id_file})
+    if [ -n ${mycl_id} ]; then
+        if validate_id ${mycl_id}; then
+            if [ -f ${sq_saved_settings_file} ]; then
+                diff ${mycl_id_file} ${sq_saved_settings_file}
+                [ $? != 0 ] &&  cp -f ${mycl_id_file} ${sq_saved_settings_file}
+            fi
+            is_valid=true
+        else
+            logger -s -t "$logtag" "saved mycl_id is not valid, will generate new one"
+        fi
+    fi
+}
+
+
+###### MAIN
+check_mycloud_device_id
+
+if [ "${is_valid}" == "false" ]; then
+    set_mycloud_device_id
+fi
+
+#[ -f /usr/local/default/wdlog.conf ] && cp -n /usr/local/default/wdlog.conf /usr/local/config
+# DONE

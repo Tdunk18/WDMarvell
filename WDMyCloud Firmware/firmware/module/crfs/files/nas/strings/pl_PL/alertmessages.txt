@@ -1,0 +1,302 @@
+0001 = Zbyt duża temperatura systemu
+0001D = Temperatura systemu przekracza normalną temperaturę pracy. Przenieś system do chłodniejszego miejsca. Jeśli nie podejmiesz żadnego działania i temperatura osiągnie wartość krytyczną, system zostanie wyłączony.
+
+0002 = Zbyt mała temperatura systemu
+0002D = Temperatura systemu jest niższa od wartości minimalnej. Przenieś system do cieplejszego miejsca.
+
+0003 = Błąd w teście SMART dysku
+0003D = Autokontrola dysku %1 zakończyła się niepowodzeniem. Skontaktuj się z działem pomocy technicznej WD.
+
+0004 = Awaria woluminu
+0004D = Wolumin danych %1 na dysku jest niedostępny. Skontaktuj się z działem pomocy technicznej WD.
+
+0005 = Zaplanowano wyłączenie z powodu nieprawidłowej temperatury
+0005D = System przegrzewa się i wkrótce zostanie automatycznie wyłączony, jeśli nie zostanie podjęte żadne działanie.
+
+0006 = Niezwłoczne wyłączenie z powodu zbyt wysokiej temperatury
+0006D = System jest poważnie przegrzany. Aby zapobiec uszkodzeniu, urządzenie zostanie natychmiast wyłączone.
+
+2020 = Wyłączanie systemu
+2020D = Trwa wyłączanie systemu.
+
+1020 = Wyłączanie systemu
+1020D = Trwa wyłączanie systemu.
+
+0020 = Wyłączanie systemu
+0020D = Trwa wyłączanie systemu.
+
+0029 = Wentylator nie działa
+0029D = Wentylator systemu nie działa. Skontaktuj się z działem pomocy technicznej WD.
+
+0031 = Zasilanie UPS
+0031D = System działa na zasilaczu UPS. %1Pozostało % energii.
+
+0201 = Awaria dysku
+0201D = Wystąpiła awaria dysku we wnęce %1. Wymień uszkodzony dysk. Skontaktuj się z działem pomocy technicznej WD.
+
+0207 = Dysk wkrótce ulegnie awarii
+0207D = Dysk %1 wkrótce ulegnie awarii. Wymień uszkodzony dysk. Skontaktuj się z działem pomocy technicznej WD.
+
+0208 = Wolumin zdegradowany
+0208D = Wolumin %1 zdegradowany. Sprawdź stan dysku, uruchamiając Test dysku w obszarze Ustawienia >> Narzędzia.
+
+0209 = Postęp migracji woluminu
+0209D = Postęp migracji woluminu %1: %2%
+
+2209 = Postęp migracji woluminu
+2209D = Postęp migracji woluminu %1: %2 %
+
+0210 = Przywracanie woluminu
+0210D = Czas przywracania woluminu %1: %2 min
+
+2210 = Przywracanie woluminu
+2210D = Czas przywracania woluminu %1: %2 min
+
+0212 = Przywrócenie woluminu nie powiodło się
+0212D = Przywrócenie woluminu %1 nie powiodło się. Sprawdź stan dysków, uruchamiając Test dysku w obszarze Ustawienia >> Narzędzia.
+
+0213 = Rozszerzenie woluminu nie powiodło się
+0213D = Rozszerzenie woluminu %1 nie powiodło się. Sprawdź stan dysków, uruchamiając Test dysku w obszarze Ustawienia >> Narzędzia.
+
+0216 = Włączono roaming macierzy RAID
+0216D = Został włączony roaming macierzy RAID.
+
+2216 = Włączono roaming macierzy RAID
+2216D = Został włączony roaming macierzy RAID.
+
+0224 = Wymień płytę z czerwoną diodą LED
+0224D = Wymień płytę z czerwoną diodą LED.
+
+2041 = Połączono port sieci Ethernet %1 z szybkością 10/100
+2041D = Szybkość połączenia jest ograniczona do 10/100 Mbit/s.
+
+0042 = Pozostały poziom energii UPS: 50%
+0042D = System działa na zasilaczu UPS, w którym pozostało 50% energii. Podłącz system do nowego źródła zasilania jak najszybciej.
+
+0043 = Pozostały poziom energii UPS: 15%
+0043D = System działa na zasilaczu UPS, w którym pozostało 15% energii. Podłącz system do nowego źródła zasilania niezwłocznie.  Jeśli nie podejmiesz żadnego działania, system zostanie wyłączony, gdy zasilacz UPS się rozładuje.
+
+0044 = Zasilacz UPS rozładowany
+0044D = Wyczerpała się energia zasilacza UPS. Aby zapobiec uszkodzeniu, system zostanie natychmiast wyłączony.
+
+1001 = Wykorzystanie woluminu przekracza 95%
+1001D = Wykorzystana jest niemal cała pojemność woluminu %1 i mogą zacząć występować problemy z wydajnością. Upewnij się, że masz kopię zapasową plików, a następnie przenieś pliki z dysku, aby zwolnić miejsce. Jeśli funkcja Kosz jest włączona, opróżnij go, aby zwolnić miejsce.
+
+1002 = Łącze sieciowe nie działa
+1002D = Łącze sieciowe %1 nie działa lub często się zrywa. Sprawdź połączenie z siecią.
+
+1010 = Łącze sieciowe nie działa
+1010D = Łącze sieciowe %1 nie działa lub często się zrywa. Sprawdź połączenie z siecią.
+
+1003 = Aktualizacja oprogramowania układowego nie powiodła się
+1003D = Aktualizacja oprogramowania układowego nie powiodła się. Ponów. Jeśli błąd będzie się powtarzał, skontaktuj się z działem pomocy technicznej WD.
+
+1004 = Wysoka temperatura systemu
+1004D = Urządzenie jest przegrzane. Dopilnuj, aby urządzenie miało odpowiednią wentylację.
+
+1021 = Przywrócenie konfiguracji nie powiodło się
+1021D = Przywrócenie konfiguracji nie powiodło się.
+
+0022 = Awaria zasilania
+0022D = Wystąpiła awaria zasilacza %1.
+
+1022 = Awaria zasilania
+1022D = Wystąpiła awaria zasilacza %1. Sprawdź zasilacz.
+
+1030 = Pamięć masowa poniżej wartości progowej
+1030D = Pamięć masowa poniżej wartości progowej.
+
+1035 = Program udoskonalania produktów
+1035D = Masz ochotę przyczynić się do udoskonalania naszych produktów? Dodatkowe informacje %1
+
+0036 = Kontrola systemu plików zakończyła się niepowodzeniem
+0036D = Funkcja kontroli systemu plików wykryła błędy w konfiguracji. Aby je usunąć, utwórz kopię zapasową danych i ponownie utwórz konfigurację dysku. Jeśli problem będzie występował nadal, skontaktuj się z działem pomocy technicznej WD.
+
+1036 = Kontrola systemu plików zakończyła się niepowodzeniem
+1036D = Funkcja kontroli systemu plików wykryła błędy w konfiguracji. Aby je usunąć, utwórz kopię zapasową danych i ponownie utwórz konfigurację dysku. Jeśli problem będzie występował nadal, skontaktuj się z działem pomocy technicznej WD.
+
+1045 = Poprawiono błąd systemu plików
+1045D = Funkcja kontroli systemu plików wykryła błędy w konfiguracji i poprawiła je.
+
+1037 = System nie jest gotowy
+1037D = System jest zajęty. Przed włożeniem kolejnego dysku zaczekaj, aż dioda LED zasilania zacznie świecić jednostajnym niebieskim światłem.
+
+1120 = Nieobsługiwane urządzenie USB
+1120D = Wykryto nieobsługiwane urządzenie USB (producent: %1, model: %2, numer seryjny: %3). Odłącz urządzenie USB.
+
+1121 = Nieobsługiwany system plików
+1121D = Wykryto nieobsługiwany system plików na urządzeniu USB (producent: %1, model: %2, numer seryjny: %3, system plików: %4, etykieta: %5). Odłącz urządzenie USB.
+
+1122 = Nie można utworzyć udziału
+1122D = Nie można utworzyć udziału na urządzeniu USB (producent: %1, model: %2, numer seryjny: %3, system plików: %4, etykieta: %5, nazwa udziału: %6).
+
+1123 = Niebezpieczne wyjęcie urządzenia
+1123D = Urządzenie USB (producent: %1, model: %2, numer seryjny: %3) zostało wyjęte bez odłączenia, co może źle wpłynąć na dane przechowywane na urządzeniu %2.
+
+1124 = Nie można podłączyć urządzenia USB
+1124D = Nie można podłączyć urządzenia USB (producent: %1, model: %2, numer seryjny: %3). Sprawdź urządzenie USB.
+
+1127 = Nie można utworzyć kopii zapasowej plików z urządzenia USB
+1127D = Nie można utworzyć kopii zapasowej plików z urządzenia USB. Sprawdź, czy urządzenie jest podłączone prawidłowo.
+
+1130 = Zadanie tworzenia kopii zapasowej USB dodano do kolejki
+1130D = Trwa wykonywanie poprzedniego zadania tworzenia kopii zapasowej. Tworzenie kopii zapasowej USB zostanie automatycznie rozpoczęte po zakończeniu poprzedniego zadania.
+
+1400 = Błąd zdalnej kopii zapasowej
+1400D = Wystąpił błąd zadania zdalnej kopii zapasowej (nazwa zadania: %1). Sprawdź ustawienia systemowe.
+
+1401 = Błąd przywracania zdalnej kopii zapasowej
+1401D = Wystąpił błąd zadania przywracania zdalnej kopii zapasowej (nazwa zadania: %1). Sprawdź ustawienia systemowe.
+
+2402 = Powodzenie tworzenia zdalnej kopii zapasowej
+2402D = Pomyślnie ukończono zadanie zdalnej kopii zapasowej (nazwa zadania: %1, urządzenie: %2, udział: %3
+
+1402 = Powodzenie tworzenia zdalnej kopii zapasowej
+1402D = Pomyślnie ukończono zadanie zdalnej kopii zapasowej (nazwa zadania: %1, urządzenie: %2, udział: %3
+
+2403 = Powodzenie przywrócenia zdalnej kopii zapasowej
+2403D = Pomyślnie ukończono zadanie przywrócenia zdalnej kopii zapasowej (nazwa zadania: %1, urządzenie: %2, udział: %3
+
+1403 = Powodzenie przywrócenia zdalnej kopii zapasowej
+1403D = Pomyślnie ukończono zadanie przywrócenia zdalnej kopii zapasowej (nazwa zadania: %1, urządzenie: %2, udział: %3
+
+2001 = Ponowne uruchomienie systemu
+2001D = System został ponownie uruchomiony.
+
+1011 = Jest dostępne nowe oprogramowanie układowe
+1011D = Została wydana nowa wersja oprogramowania układowego. Zaktualizuj system.
+
+2002 = Jest dostępne nowe oprogramowanie układowe
+2002D = Została wydana nowa wersja oprogramowania układowego. Zaktualizuj system.
+
+2003 = Temperatura normalna
+2003D = Temperatura systemu mieści się w zakresie wartości temperatury normalnej.
+
+2004 = Aktualizacja oprogramowania układowego powiodła się
+2004D = Pomyślnie zaktualizowano oprogramowanie układowe do wersji %1.
+
+2005 = Przywrócenie ustawień fabrycznych powiodło się
+2005D = Przywrócono domyślne ustawienia fabryczne systemu.
+
+2006 = Masz prawo do nowego uaktualnienia oprogramowania.
+2006D = Aby uzyskać więcej informacji, otwórz panel kontrolny urządzenia WD My Cloud.
+
+2024 = Pobieranie aktualizacji oprogramowania układowego
+2024D = Trwa pobieranie aktualizacji oprogramowania układowego.
+
+2026 = Instalacja aktualizacji oprogramowania układowego
+2026D = Trwa instalacja aktualizacji oprogramowania układowego.
+
+1028 = Wymagany jest ponowny rozruch
+1028D = Wymagany jest ponowny rozruch.
+
+2028 = Wymagany jest ponowny rozruch
+2028D = Wymagany jest ponowny rozruch.
+
+2032 = System jest w trybie gotowości
+2032D = System jest w trybie gotowości.
+
+1033 = Ponowne uruchamianie systemu
+1033D = Trwa ponowne uruchamianie systemu.
+
+2033 = Ponowne uruchamianie systemu
+2033D = Trwa ponowne uruchamianie systemu.
+
+1038 = Przydział pamięci niemal w pełni wykorzystany
+1038D = Przydział pamięci [%1] jest niemal w pełni wykorzystany. Upewnij się, że masz kopię zapasową plików, a następnie przenieś pliki z dysku, aby zwolnić miejsce.
+
+2038 = Przydział pamięci niemal w pełni wykorzystany
+2038D = Przydział pamięci [%1] jest niemal w pełni wykorzystany. Upewnij się, że masz kopię zapasową plików, a następnie przenieś pliki z dysku, aby zwolnić miejsce.
+
+1039 = Przydział pamięci w pełni wykorzystany
+1039D = Przydział pamięci [%1] jest w pełni wykorzystany. Upewnij się, że masz kopię zapasową plików, a następnie przenieś pliki z dysku, aby zwolnić miejsce.
+
+2039 = Przydział pamięci w pełni wykorzystany
+2039D = Przydział pamięci [%1] jest w pełni wykorzystany. Upewnij się, że masz kopię zapasową plików, a następnie przenieś pliki z dysku, aby zwolnić miejsce.
+
+2040 = Nieobsługiwane urządzenie UPS
+2040D = Nieobsługiwane urządzenie UPS
+
+2121 = Zablokowane urządzenie USB
+2121D = Wykryto zablokowane urządzenie USB (producent: %1, model: %2, numer seryjny: %3).
+
+2126 = Pliki skopiowane z urządzenia USB
+2126D = Pliki skopiowano z <%1> do <%2>.
+
+2128 = Kopiowanie plików
+2128D = Kopiowanie plików z urządzenia USB.
+
+2129 = Pliki przeniesione z urządzenia USB
+2129D = Pliki przeniesiono z <%1> do <%2>.
+
+2131 = Przenoszenie plików
+2131D = Przenoszenie plików z urządzenia USB.
+
+1200 = Nieobsługiwany dysk
+1200D = Nieobsługiwany dysk we wnęce %1. Wymień zainstalowany dysk na zatwierdzone urządzenie. Listę zatwierdzonych dysków można znaleźć w witrynie www.wd.com
+
+2200 = Nieobsługiwany dysk
+2200D = Nieobsługiwany dysk we wnęce %1. Wymień zainstalowany dysk na zatwierdzone urządzenie. Listę zatwierdzonych dysków można znaleźć w witrynie www.wd.com
+
+2202 = Zbyt mały dysk
+2202D = Zbyt mały dysk w lokalizacji %1
+
+2203 = Trwa inicjowanie dysku
+2203D = Trwa inicjowanie dysku w lokalizacji %1
+
+2211 = Sprawdzanie integralności pamięci masowej
+2211D = Trwa sprawdzanie integralności pamięci masowej.
+
+2214 = Zainstalowano dysk
+2214D = We wnęce %1 zainstalowano nowy dysk. Aby dodać ten dysk do zestawu RAID systemu, przejdź do obszaru Pamięć masowa >> RAID i kliknij przycisk Zmień tryb RAID.
+
+0215 = Usunięto dysk
+0215D = Usunięto dysk z wnęki %1
+
+2215 = Usunięto dysk
+2215D = Usunięto dysk z wnęki %1. Sprawdź system.
+
+2217 = Nie zainstalowano dysków
+2217D = Nie zainstalowano żadnych dysków. Zainstaluj dyski, aby rozpocząć używanie systemu. Nowy dysk można nabyć w witrynie www.wd.com
+
+2218 = Do macierzy RAID dodano zapasowy dysk dołączany dynamicznie
+2218D = Do macierzy RAID dodano zapasowy dysk dołączany dynamicznie.
+
+2219 = Ukończono migrację macierzy RAID
+2219D = Ukończono migrację macierzy RAID.
+
+2220 = Ukończono przywracanie macierzy RAID
+2220D = Ukończono przywracanie macierzy RAID.
+
+2221 = Zainstalowano dysk inny niż NAS WD Red
+2221D = Zainstalowano dysk inny niż NAS WD Red. Uwaga: urządzenie WD My Cloud zostało zaprojektowane do optymalnego działania z dyskami twardymi NAS z serii WD Red.
+
+2222 = Wolumin jest sformatowany
+2222D = Wolumin %1 jest sformatowany.
+
+2223 = Postęp rozszerzania woluminu
+2223D = Postęp rozszerzania woluminu %1: %2%
+
+2300 = Zatrzymano skanowanie nośnika
+2300D = Urządzenie przestało skanować multimedia. W rezultacie niektóre miniatury nie będą wyświetlane przy dostępie zdalnym. Aby wznowić skanowanie, ponownie uruchom system WD My Cloud.
+
+1501 = Jest dostępna aktualizacja aplikacji
+1501D = %1 : dostępna aktualizacja Zaktualizuj aplikację.
+
+1502 = Wykryto wirusa
+1502D = Podstawowy program antywirusowy: Ukończono skanowanie w poszukiwaniu wirusów i wykryto wirusa. Więcej informacji można znaleźć w raporcie skanowania.
+
+2503 = Skanowanie w poszukiwaniu wirusów ukończone
+2503D = Podstawowy program antywirusowy: Ukończono skanowanie w poszukiwaniu wirusów. Nie wykryto wirusów.
+
+2504 = Zaplanowane skanowanie w poszukiwaniu wirusów rozpoczęte
+2504D = Podstawowy program antywirusowy: Rozpoczęto zaplanowane skanowanie w poszukiwaniu wirusów.
+
+2505 = Zaplanowane skanowanie w poszukiwaniu wirusów zatrzymane
+2505D = Podstawowy program antywirusowy: Zatrzymano skanowanie w poszukiwaniu wirusów ze względu na osiągnięcie czasu zatrzymania. Skanowanie nie zostało ukończone. 
+
+1103 = Wystąpił błąd podczas przywracania danych z punktu przywracania
+1103D = %4 - Podczas przywracania danych z punktu przywracania %1 w udziale %2 na dysku %3 wystąpił błąd.
+
+2103 = Pomyślnie przywrócono dane z punktu przywracania
+2103D = Dane zostały pomyślnie przywrócono dane z punktu %1 w udziale %2 na dysku %3.

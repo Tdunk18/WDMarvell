@@ -1,0 +1,727 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="PRAGMA" content="no-cache"> 
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+
+<style>
+a {FONT-SIZE: 15px; FONT-FAMILY: Helvetica, Geneva, Arial, sans-serif;}
+
+.calendar,
+.calendar:active{
+	padding:0px 0px 0px 0px;
+	margin:0px 0px 0px 0px;
+	width:32px;
+	height:32px;
+	background: url('/web/images/icon/Icon_Calendar_DrkGray_32x32.png') no-repeat;
+	background-size:32px 32px;
+	cursor:pointer;
+	border:0px solid red;
+}
+.calendar:hover{
+	padding:0px 0px 0px 0px;
+	margin:0px 0px 0px 0px;
+	width:32px;
+	height:32px;
+	background: url('/web/images/icon/Icon_Calendar_blue_32x32.png') no-repeat;
+	background-size:32px 32px;
+	cursor:pointer;
+	border:0px solid red;
+}
+</style>
+</head>
+<script type="text/javascript" src="/web/function/http_downloads.js"></script>
+<script type="text/javascript" src="/web/function/http_downloadsDiag.js"></script>
+
+<script type="text/javascript">
+var timeoutId = 0;
+var _SELECT_ITEMS  = new Array(
+"apps_httpdownloadsPeriodHour_select",
+"apps_httpdownloadsPeriodMins_select",
+"apps_httpdownloadsPeriodWeek_select",
+"apps_httpdownloadsPeriodMonth_select",
+"apps_httpdownloadsTimeHour_select","apps_httpdownloadsTimeMins_select");  
+
+function page_init()
+{
+	if (timeoutId = !0) clearTimeout(timeoutId);
+	
+	$("#mainbody").find(":text,textarea,password").each(function() {
+          $(this).val("");
+  });
+	
+	HDownloads_login_method(1); 
+  HDownloads_active_period("none");
+ 
+	HDownloads_html_hour('#f_period_hour_li');
+	HDownloads_html_hour('#f_hour_li');
+	$(".ul_obj ul").css('width','90px');
+	$(".scrollbar_time li").css('width','80px');
+	$("#f_period_hour").html(HDownloads_hour_show('0'));
+	
+	setSwitch('#apps_httpdownloadsPeriod_switch', 0);
+	
+	//show date
+	HDownloads_show_now();
+  $('#apps_httpdownloadsDatepicker_text').datepicker({
+		changeMonth: false,
+		changeYear: false,
+		dateFormat:	HDownloads_datepicker_date_format()
+	});
+	
+	//clean create array
+	HTTP_Downloads = new Array(
+	"0",					//HTTP_Downloads[0]:Category,ex:0->HTTP Downloads, 1->FTP Downloads
+	"1",					//HTTP_Downloads[1]:Login Method,ex:0->Account,1->Anonymous
+	getCookie("username"),	//HTTP_Downloads[2]:Login User
+	"",						//HTTP_Downloads[3]:User
+	"",						//HTTP_Downloads[4]:PWD
+	"0",					//HTTP_Downloads[5]:Type, 0->File,1->Folder
+	"",						//HTTP_Downloads[6]:URL
+	"",						//HTTP_Downloads[7]:Save To
+	"",						//HTTP_Downloads[8]:Date
+	"none",					//HTTP_Downloads[9]:f_period:$("#f_period").attr('rel'),
+	"",						//HTTP_Downloads[10]:f_period_week:$("#f_period_week").attr('rel'),
+	"",						//HTTP_Downloads[11]:f_period_month:$("#f_period_month").attr('rel'),
+	"",						//HTTP_Downloads[12]:Incremental Backup
+	"",						//HTTP_Downloads[13]:Rename
+	""						//HTTP_Downloads[14]:CodePage
+	)
+	
+	//clean modify arrary
+	HDownload_Modify_init();
+	
+	$("#tr_create_button").show();
+	$("#tr_modify_button").hide();
+}
+
+function page_load()
+{	
+	var sys_time = (new Date()).getTime();
+	initDiag("/web/addons/http_downloadsDiag.html?r="+sys_time);
+	
+	$("#tip_rename").attr('title',_T('_http_downloads','desc2'));
+	
+	page_init();
+	
+	init_tooltip();
+	$("input:text").inputReset();
+	init_switch();
+	
+	HD_Status(0,function(MyVolumeState){
+		
+	if ( parseInt(MyVolumeState,10) == 0 )	//no volume
+	{
+		if (!$("#apps_httpdownloadsBrowse_button").hasClass('gray_out')) $("#apps_httpdownloadsBrowse_button").addClass('gray_out');
+		if (!$("#apps_httpdownloadsCreate_button").hasClass('gray_out')) $("#apps_httpdownloadsCreate_button").addClass('gray_out');
+		return;
+	}
+	
+	http_download_list();
+	
+	$("#apps_httpdownloadsPeriod_switch").click(function(){	
+		
+    	var my_switch = getSwitch('#apps_httpdownloadsPeriod_switch');
+    	if (parseInt(my_switch, 10) == 0)
+    	{
+    		HDownloads_active_period('none');
+    		
+    		if (HTTP_Modify[15] == "")
+				HTTP_Downloads[9] = "none";
+			else
+				HTTP_Modify[9] = "none";	
+    	}	
+    	else
+    	{
+    		HDownloads_active_period('day');
+    		
+    		if (HTTP_Modify[15] == "")
+				HTTP_Downloads[9] = "day";
+			else
+				HTTP_Modify[9] = "day";	
+    	}	
+    });	
+    
+	$("#apps_httpdownloadsTest_button").click(function(){
+		if (!$("#apps_httpdownloadsTest_button").hasClass("gray_out")){
+			var my_src="",my_name="",my_pwd="";
+			
+			my_src = $.trim($("#apps_httpdownloadsURL_text").val());
+			if (HDownloads_format_URL(my_src) == 0) return;
+			
+			if( parseInt(HTTP_Downloads[1],10) == 0)
+			{
+				my_name = $("#apps_httpdownloadsUser_text").val();
+				if (HDownloads_format_user(my_name) == 0) return;
+				
+				my_pwd	=	$("#apps_httpdownloadsPWD_password").val();
+				if (HDownloads_format_pwd(my_pwd) == 0) return;
+			}
+			else
+			{
+				HTTP_Downloads[3] = "";
+				HTTP_Downloads[4] = "";
+			}	
+			
+			//update array
+			if ( HTTP_Modify[15].length == 0) //create
+			{
+				HTTP_Downloads[3] = my_name;
+				HTTP_Downloads[4] = my_pwd;
+				HTTP_Downloads[6] = my_src;
+			}	
+			else	//modify
+			{
+				HTTP_Modify[3] = my_name;
+				HTTP_Modify[4] = my_pwd;
+				HTTP_Modify[6] = my_src;
+			}	
+			
+			HDownload_test_diag();
+		}
+	});
+	
+	$("#apps_httpdownloadsBrowse_button").click(function(){
+		if (!$("#apps_httpdownloadsBrowse_button").hasClass("gray_out")){
+			HDownload_saveto();
+		}
+	});
+	
+	$("#apps_httpdownloadsCreate_button").click(function(){
+		/*
+		var HTTP_Downloads = new Array(
+		"0",					//HTTP_Downloads[0]:Category,ex:0->HTTP Downloads, 1->FTP Downloads
+		"1",					//HTTP_Downloads[1]:Login Method,ex:0->Account,1->Anonymous
+		getCookie("username"),	//HTTP_Downloads[2]:Login User
+		"",						//HTTP_Downloads[3]:User
+		"",						//HTTP_Downloads[4]:PWD
+		"0",					//HTTP_Downloads[5]:Type, 0->File,1->Folder
+		"",						//HTTP_Downloads[6]:URL
+		"",						//HTTP_Downloads[7]:Save To
+		"",						//HTTP_Downloads[8]:f_at,Date
+		"",						//HTTP_Downloads[9]:f_period:$("#f_period").attr('rel'),
+		"",						//HTTP_Downloads[10]:f_period_week:$("#f_period_week").attr('rel'),
+		"",						//HTTP_Downloads[11]:f_period_month:$("#f_period_month").attr('rel'),
+		"",						//HTTP_Downloads[12]:Incremental Backup
+		"",						//HTTP_Downloads[13]:Rename
+		""						//HTTP_Downloads[14]:CodePage
+		)
+		*/
+		if (!$("#apps_httpdownloadsCreate_button").hasClass("gray_out")){
+			//User Name and PWD
+			if( parseInt(HTTP_Downloads[1],10) == 0)
+			{
+				if (HDownloads_format_user($("#apps_httpdownloadsUser_text").val()) == 0) return;
+				if (HDownloads_format_pwd($("#apps_httpdownloadsPWD_password").val()) == 0) return;
+				
+				HTTP_Downloads[3] = $("#apps_httpdownloadsUser_text").val();
+				HTTP_Downloads[4] = $("#apps_httpdownloadsPWD_password").val();
+			}
+			else
+			{
+				HTTP_Downloads[3] = "";
+				HTTP_Downloads[4] = "";
+			}	
+			if (HDownloads_format_URL($("#apps_httpdownloadsURL_text").val()) == 0) return;
+			if (HDownloads_format_saveto($("#apps_httpdownloadsSaveTo_text").val()) == 0) return;
+			if ($("#apps_httpdownloadsRename_text").val() != "") {
+				
+				if ( HDownloads_format_rename($("#apps_httpdownloadsSaveTo_text").val(),$("#apps_httpdownloadsRename_text").val()) == 0) return;
+				
+				HTTP_Downloads[13] = $("#apps_httpdownloadsRename_text").val();
+			}
+			HTTP_Downloads[6] = $.trim($("#apps_httpdownloadsURL_text").val());
+			HTTP_Downloads[7] = translate_path_to_really($("#apps_httpdownloadsSaveTo_text").val());
+			HTTP_Downloads[8] = HDownloads_at_and_period();
+
+			if (HTTP_Downloads[9] != "none")
+			{
+				HTTP_Downloads[10] = $("#f_period_week").attr('rel');
+				HTTP_Downloads[11] = $("#f_period_month").attr('rel');
+			}
+			else
+			{
+				HTTP_Downloads[10] = "";
+				HTTP_Downloads[11] = "";
+			}	
+			
+			HDownloads_create();
+		}
+	});
+	
+	$("#apps_httpdownloadsModify_button").click(function(){
+		
+		if (timeoutId != 0) clearTimeout(timeoutId);
+		
+		var grid = $("#downloads_status");
+		var selected_count =$('.trSelected',grid).length;
+		if(selected_count==0)
+		{
+			jAlert( _T('_user','msg2'), "warning");	//Text:Please select one item.
+			return;
+		}
+		
+		var idx = $('.trSelected td:nth-child(6) div',grid).text();
+		downloads_modify(idx);	
+	});
+	
+	$("#apps_httpdownloadsDel_button").click(function(){
+		
+		if (!$("#apps_httpdownloadsDel_button").hasClass("gray_out")){
+			var grid = $("#downloads_status");
+			var selected_count =$('.trSelected',grid).length;
+			if(selected_count==0)
+			{
+				jAlert( _T('_user','msg2'), "warning");	//Text:Please select one item.
+				return;
+			}
+			var idx = $('.trSelected td:nth-child(6) div',grid).text();
+			downloads_del(idx);
+		}
+	});
+	
+	$("#apps_httpdownloadsSave_button").click(function(){
+		//User Name and PWD
+		if( parseInt(HTTP_Modify[1],10) == 0)
+		{
+				if (HDownloads_format_user($("#apps_httpdownloadsUser_text").val()) == 0) return;
+				if (HDownloads_format_pwd($("#apps_httpdownloadsPWD_password").val()) == 0) return;
+				
+				HTTP_Modify[3] = $("#apps_httpdownloadsUser_text").val();
+				HTTP_Modify[4] = $("#apps_httpdownloadsPWD_password").val();
+		}
+		else
+		{
+				HTTP_Modify[3] = "";
+				HTTP_Modify[4] = "";
+		}	
+		if (HDownloads_format_URL($("#apps_httpdownloadsURL_text").val()) == 0) return;
+		if (HDownloads_format_saveto($("#apps_httpdownloadsSaveTo_text").val()) == 0) return;
+		if ($("#apps_httpdownloadsRename_text").val() != "") {
+			
+			if ( HDownloads_format_rename($("#apps_httpdownloadsSaveTo_text").val(),$("#apps_httpdownloadsRename_text").val()) == 0) return;
+			
+			HTTP_Modify[13] = $("#apps_httpdownloadsRename_text").val();
+		}
+		HTTP_Modify[6] = $.trim($("#apps_httpdownloadsURL_text").val());
+		HTTP_Modify[7] = translate_path_to_really($("#apps_httpdownloadsSaveTo_text").val());
+		HTTP_Modify[8] = HDownloads_at_and_period();
+		if (HTTP_Modify[9] != "none")
+		{
+			HTTP_Modify[10] = $("#f_period_week").attr('rel');
+			HTTP_Modify[11] = $("#f_period_month").attr('rel');
+		}
+		else
+		{
+			HTTP_Modify[10] = "";
+			HTTP_Modify[11] = "";
+		}	
+		
+		HDownloads_renew();
+	});	
+	
+	$("#apps_httpdownloadsCancel_button").click(function(){
+			page_init();
+	});
+	
+	})//end of HD_Status(1,function(hd_status){	 	
+}
+
+function page_unload()
+{
+	clearTimeout(timeoutId);
+}
+
+
+</script>
+<body>
+<div class="h1_content header_2"><span class="_text" lang="_http_downloads" datafld="title1"></span></div>
+<div>
+	 <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" height="100">
+		 		<tr id="tr_login_method">
+        	<td class="tdfield"><span class="_text" lang="_ftp_downloads" datafld="login_method">Login Method</span></td>
+            <td class="tdfield_padding" colspan="3">
+            	<button class="left_button _text" lang="_mail" datafld="account" onclick="HDownloads_login_method(0);" id="apps_httpdownloadsLoginMethodAccount_button"></button><button class="buttonSel right_button _text" lang="_mail" datafld="anonymous" onclick="HDownloads_login_method(1);" id="apps_httpdownloadsLoginMethodAnonymous_button"></button>	
+            </td>
+        </tr>
+         <tr id="tr_user_name" style="display:none;">
+            	<td class="tdfield"><span class="_text" lang="_mail" datafld="user_name">User Name</span></td>
+                <td class="tdfield_padding" colspan="3">
+                	<input type="text" name="apps_httpdownloadsUser_text" id="apps_httpdownloadsUser_text" size="16" >
+                </td>
+         </tr>
+           <tr id="tr_pwd" style="display:none;">
+            	<td class="tdfield"><span class="_text" lang="_mail" datafld="password">Password</span></td>
+                <td class="tdfield_padding" colspan="3"><input type="password" name="apps_httpdownloadsPWD_password" id="apps_httpdownloadsPWD_password" class="input_x5"></td>
+         </tr>
+		 <tr>
+            	<td class="tdfield"><span class="_text" lang="_backup" datafld="url">URL</span></td>
+                <td class="tdfield_padding" width="350px"><input type="text" name="apps_httpdownloadsURL_text" id="apps_httpdownloadsURL_text" size="40" class="input_x5"></td>
+                <td class="tdfield_padding"><button type="button" id="apps_httpdownloadsTest_button"><span class="_text" lang="_button" datafld="test"></span></button></td>
+         </tr>
+         <tr>
+            	<td class="tdfield"><span class="_text" lang="_download" datafld="save_to">Save To</span></td>
+                <td class="tdfield_padding"><input type="text" class="input_x5" readOnly size="40" name="apps_httpdownloadsSaveTo_text" id="apps_httpdownloadsSaveTo_text"></td>
+                <td class="tdfield_padding"><button type="button" id="apps_httpdownloadsBrowse_button"><span class="_text" lang="_button" datafld="browse"></span></button></td>
+         </tr>
+         <tr id="tr_rename">
+            	<td class="tdfield"><span class="_text" lang="_backup" datafld="rename">Rename</span></td>
+                <td class="tdfield_padding">
+                	 <input type="text" class="input_x5" name="apps_httpdownloadsRename_text" id="apps_httpdownloadsRename_text" size="37">
+                </td>
+                <td class="tdfield_padding"><div class="TooltipIcon" id="tip_rename"></div></td>
+         </tr>
+         <tr>
+            	<td class="tdfield"><span class="_text" lang="_backup" datafld="recurring_backup">Recurring Backup</span></td>
+                <td class="tdfield_padding" colspan="2">
+                	<input id="apps_httpdownloadsPeriod_switch" name="apps_httpdownloadsPeriod_switch" class="onoffswitch" type="checkbox" value="true" style="position: absolute; z-index: -1; visibility: hidden;">
+                </td>
+         </tr>
+         <tr id="tr_period_but" style="display:none">
+         	<td class="tdfield"></td>
+         	<td colspan="2" class="tdfield_padding">
+         		<button id="apps_httpdownloadsPeriodDay_button" class="left_button" value="3" onclick="HDownloads_active_period('day');"><span class="_text" lang="_mail" datafld="daily">Daily</span></button><button id="apps_httpdownloadsPeriodWeek_button" class="middle_button" value="2" onclick="HDownloads_active_period('week');"><span class="_text" lang="_mail" datafld="weekly">Weekly</span></button><button id="apps_httpdownloadsPeriodMonth_button" class="right_button" value="2" onclick="HDownloads_active_period('month');"><span class="_text" lang="_mail" datafld="monthly">Monthly</span></button>
+         	</td>
+         </tr>
+          <tr id="tr_period_detail"  style="display:none">
+            	<td class="tdfield"></td>
+                <td class="tdfield_padding" colspan="2">
+                	<table cellspacing="0" cellpadding="0" border="0">
+                	<tr>
+                		<td>
+                		<div class="select_menu" style="display:none;" id="DIV_Period_Hour">
+									<ul>
+						        		<li class="option_list">          
+						            		<div id="apps_httpdownloadsPeriodHour_select" class="wd_select option_selected">
+													<div class="sLeft wd_select_l"></div>
+													<div class="sBody text wd_select_m" id="f_period_hour" rel="00">12<span class="_text" lang="_backup" datafld="desc10"></span></div>
+													<div class="sRight wd_select_r"></div>	
+											</div>		
+														
+											<ul class="ul_obj" id="f_period_hour_li" style="width:90px;"></ul>
+						     	   		</li>
+						     		 </ul>
+								</div>
+                		</td>
+                		<td><div id="DIV_Period_Separator" style="display:none;">:</div></td>
+                		<td class="tdfield_padding_left_10">
+                			<div class="select_menu" style="height:25px;display:none;" id="DIV_Period_MIN">
+							<ul>
+				        		<li class="option_list">          
+				            		<div id="apps_httpdownloadsPeriodMins_select" class="wd_select option_selected">
+											<div class="sLeft wd_select_l"></div>
+											<div class="sBody text wd_select_m" id="f_period_min" rel="00">00</div>
+											<div class="sRight wd_select_r"></div>	
+									</div>		
+												
+									<ul class="ul_obj" id="f_period_min_li" style="width:90px;">
+										<div class='scrollbar_time'>           														            	
+						                <li rel="00"><a href="#" onclick="">00</a></li>
+						                <li rel="01"><a href="#" onclick="">01</a></li>
+						                <li rel="02"><a href="#" onclick="">02</a></li>
+						                <li rel="03"><a href="#" onclick="">03</a></li>
+						                <li rel="04"><a href="#" onclick="">04</a></li>
+						                <li rel="05"><a href="#" onclick="">05</a></li>
+						                <li rel="06"><a href="#" onclick="">06</a></li>
+						                <li rel="07"><a href="#" onclick="">07</a></li>
+						                <li rel="08"><a href="#" onclick="">08</a></li>
+						                <li rel="09"><a href="#" onclick="">09</a></li>
+						                <li rel="10"><a href="#" onclick="">10</a></li>
+						                <li rel="11"><a href="#" onclick="">11</a></li>
+						                <li rel="12"><a href="#" onclick="">12</a></li>
+						                <li rel="13"><a href="#" onclick="">13</a></li>
+						                <li rel="14"><a href="#" onclick="">14</a></li>
+						                <li rel="15"><a href="#" onclick="">15</a></li>
+						                <li rel="16"><a href="#" onclick="">16</a></li>
+						                <li rel="17"><a href="#" onclick="">17</a></li>
+						                <li rel="18"><a href="#" onclick="">18</a></li>
+						                <li rel="19"><a href="#" onclick="">19</a></li>
+						                <li rel="20"><a href="#" onclick="">20</a></li>
+						                <li rel="21"><a href="#" onclick="">21</a></li>
+						                <li rel="22"><a href="#" onclick="">22</a></li>
+						                <li rel="23"><a href="#" onclick="">23</a></li>
+						                <li rel="24"><a href="#" onclick="">24</a></li>
+						                <li rel="25"><a href="#" onclick="">25</a></li>
+						                <li rel="26"><a href="#" onclick="">26</a></li>
+						                <li rel="27"><a href="#" onclick="">27</a></li>
+						                <li rel="28"><a href="#" onclick="">28</a></li>
+						                <li rel="29"><a href="#" onclick="">29</a></li>
+						                <li rel="30"><a href="#" onclick="">30</a></li>
+						                <li rel="31"><a href="#" onclick="">31</a></li>
+						                <li rel="32"><a href="#" onclick="">32</a></li>
+						                <li rel="33"><a href="#" onclick="">33</a></li>
+						                <li rel="34"><a href="#" onclick="">34</a></li>
+						                <li rel="35"><a href="#" onclick="">35</a></li>
+						                <li rel="36"><a href="#" onclick="">36</a></li>
+						                <li rel="37"><a href="#" onclick="">37</a></li>
+						                <li rel="38"><a href="#" onclick="">38</a></li>
+						                <li rel="39"><a href="#" onclick="">39</a></li>
+						                <li rel="40"><a href="#" onclick="">40</a></li>
+						                <li rel="41"><a href="#" onclick="">41</a></li>
+						                <li rel="42"><a href="#" onclick="">42</a></li>
+						                <li rel="43"><a href="#" onclick="">43</a></li>
+						                <li rel="44"><a href="#" onclick="">44</a></li>
+						                <li rel="45"><a href="#" onclick="">45</a></li>
+						                <li rel="46"><a href="#" onclick="">46</a></li>
+						                <li rel="47"><a href="#" onclick="">47</a></li>
+						                <li rel="48"><a href="#" onclick="">48</a></li>
+						                <li rel="49"><a href="#" onclick="">49</a></li>
+						                <li rel="50"><a href="#" onclick="">50</a></li>
+						                <li rel="51"><a href="#" onclick="">51</a></li>
+						                <li rel="52"><a href="#" onclick="">52</a></li>
+						                <li rel="53"><a href="#" onclick="">53</a></li>
+						                <li rel="54"><a href="#" onclick="">54</a></li>
+						                <li rel="55"><a href="#" onclick="">55</a></li>
+						                <li rel="56"><a href="#" onclick="">56</a></li>
+						                <li rel="57"><a href="#" onclick="">57</a></li>
+						                <li rel="58"><a href="#" onclick="">58</a></li>
+						                <li rel="59"><a href="#" onclick="">59</a></li>
+						            	</div>
+						            </ul>
+				     	   		</li>
+				     		 </ul>
+						</div>
+                		</td>
+                		<td class="tdfield_padding_left_10">
+                			<div class="select_menu" style="height:25px;display:none;" id="DIV_Period_Week">
+									<ul>
+						        		<li class="option_list">          
+						            		<div id="apps_httpdownloadsPeriodWeek_select" class="wd_select option_selected">
+													<div class="sLeft wd_select_l"></div>
+													<div class="sBody text wd_select_m" id="f_period_week" rel="1"><span class="_text" lang="_p2p" datafld="mon"></span></div>
+													<div class="sRight wd_select_r"></div>	
+											</div>		
+														
+											<ul class="ul_obj" id="f_period_week_li" style="width:90px;">
+												<div class='scrollbar_time'> 
+								                <li rel="1"><a href="#" onclick=""><span class="_text" lang="_p2p" datafld="mon"></span></a></li>
+								                <li rel="2"><a href="#" onclick=""><span class="_text" lang="_p2p" datafld="tue"></span></a></li>
+								                <li rel="3"><a href="#" onclick=""><span class="_text" lang="_p2p" datafld="wed"></span></a></li>
+								                <li rel="4"><a href="#" onclick=""><span class="_text" lang="_p2p" datafld="thu"></span></a></li>
+								                <li rel="5"><a href="#" onclick=""><span class="_text" lang="_p2p" datafld="fri"></span></a></li>
+								                <li rel="6"><a href="#" onclick=""><span class="_text" lang="_p2p" datafld="sat"></span></a></li>
+								                <li rel="0"><a href="#" onclick=""><span class="_text" lang="_p2p" datafld="sun"></span></a></li>
+								            	</div>
+								            </ul>
+						     	   		</li>
+						     		 </ul>
+								</div>
+                		</td>
+                		<td>
+                			<div class="select_menu" style="height:25px;display:none;" id="DIV_Period_Month">
+								<ul>
+					        		<li class="option_list">          
+					            		<div id="apps_httpdownloadsPeriodMonth_select" class="wd_select option_selected">
+												<div class="sLeft wd_select_l"></div>
+												<div class="sBody text wd_select_m" id="f_period_month" rel="1">01</div>
+												<div class="sRight wd_select_r"></div>	
+										</div>		
+													
+										<ul class="ul_obj" id="f_period_month_li" style="width:90px;">
+											<div class='scrollbar_time'>          														            	
+							                <li rel="1"><a href="#" onclick="">01</a></li>
+							                <li rel="2"><a href="#" onclick="">02</a></li>
+							                <li rel="3"><a href="#" onclick="">03</a></li>
+							                <li rel="4"><a href="#" onclick="">04</a></li>
+							                <li rel="5"><a href="#" onclick="">05</a></li>
+							                <li rel="6"><a href="#" onclick="">06</a></li>
+							                <li rel="7"><a href="#" onclick="">07</a></li>
+							                <li rel="8"><a href="#" onclick="">08</a></li>
+							                <li rel="9"><a href="#" onclick="">09</a></li>
+							                <li rel="10"><a href="#" onclick="">10</a></li>
+							                <li rel="11"><a href="#" onclick="">11</a></li>
+							                <li rel="12"><a href="#" onclick="">12</a></li>
+							                <li rel="13"><a href="#" onclick="">13</a></li>
+							                <li rel="14"><a href="#" onclick="">14</a></li>
+							                <li rel="15"><a href="#" onclick="">15</a></li>
+							                <li rel="16"><a href="#" onclick="">16</a></li>
+							                <li rel="17"><a href="#" onclick="">17</a></li>
+							                <li rel="18"><a href="#" onclick="">18</a></li>
+							                <li rel="19"><a href="#" onclick="">19</a></li>
+							                <li rel="20"><a href="#" onclick="">20</a></li>
+							                <li rel="21"><a href="#" onclick="">21</a></li>
+							                <li rel="22"><a href="#" onclick="">22</a></li>
+							                <li rel="23"><a href="#" onclick="">23</a></li>
+							                <li rel="24"><a href="#" onclick="">24</a></li>
+							                <li rel="25"><a href="#" onclick="">25</a></li>
+							                <li rel="26"><a href="#" onclick="">26</a></li>
+							                <li rel="27"><a href="#" onclick="">27</a></li>
+							                <li rel="28"><a href="#" onclick="">28</a></li>
+							                <!--<li rel="29"><a href="#" onclick="">29</a></li>
+							                <li rel="30"><a href="#" onclick="">30</a></li>
+							                <li rel="31"><a href="#" onclick="">31</a></li>-->
+							           	 </div>
+							            </ul>
+					     	   		</li>
+					     		 </ul>
+							</div>
+                		</td>		
+                	</tr>
+                	
+                	</table>	
+                </td>
+         </tr>						         
+          <tr id="HDownloads_tr_when_date">
+            	<td class="tdfield"><span class="_text" lang="_backup" datafld="when">When</span></td>
+                <td class="tdfield_padding" colspan="2">
+                	<table style="border-collapse: separate; border-spacing: 5px;position: relative; left: -8px;">
+               			<tr>
+               			<td><span class="_text" lang="_time" datafld="date">Date</span></td>
+               			<td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+               			<td><input type="text" id="apps_httpdownloadsDatepicker_text" name="apps_httpdownloadsDatepicker_text"></td>
+               			<td style="display:">
+               				<div class="calendar" onclick="HDownloads_open_date();"></div>
+               			</td>
+               			</tr>
+               		</table>	
+                </td>
+         </tr>
+          <tr id="HDownloads_tr_when_time">
+            	<td class="tdfield"></td>
+                <td colspan="2"  class="tdfield_padding">
+                	<table style="position:relative;left:-5px;">
+                		<tr>
+               			<td><span class="_text" lang="_time" datafld="time">Time</span></td>
+               			<td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+               			<td>
+               				<div class="select_menu">
+									<ul>
+						        		<li class="option_list">          
+						            		<div id="apps_httpdownloadsTimeHour_select" class="wd_select option_selected">
+													<div class="sLeft wd_select_l"></div>
+													<div class="sBody text wd_select_m" id="f_hour" rel="00">00</div>
+													<div class="sRight wd_select_r"></div>	
+											</div>		
+														
+											<ul class="ul_obj" id="f_hour_li" style="width:90px;"></ul>
+						     	   		</li>
+						     		 </ul>
+								</div>
+               			</td>
+               			<td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+               			<td>
+               				<div class="select_menu">
+									<ul>
+						        		<li class="option_list">          
+						            		<div id="apps_httpdownloadsTimeMins_select" class="edit_select wd_select option_selected" tabindex='1'>
+													<div class="sLeft wd_select_l"></div>
+													<div class="sBody text wd_select_m" id="f_min" rel="00">00</div>
+													<div class="sRight wd_select_r"></div>	
+											</div>		
+														
+											<ul class="ul_obj" id="f_min_li" style="width:90px;"> 
+												<div class='scrollbar_time'>           														            	
+								                <li rel="00"><a href="#" onclick="">00</a></li>
+								                <li rel="01"><a href="#" onclick="">01</a></li>
+								                <li rel="02"><a href="#" onclick="">02</a></li>
+								                <li rel="03"><a href="#" onclick="">03</a></li>
+								                <li rel="04"><a href="#" onclick="">04</a></li>
+								                <li rel="05"><a href="#" onclick="">05</a></li>
+								                <li rel="06"><a href="#" onclick="">06</a></li>
+								                <li rel="07"><a href="#" onclick="">07</a></li>
+								                <li rel="08"><a href="#" onclick="">08</a></li>
+								                <li rel="09"><a href="#" onclick="">09</a></li>
+								                <li rel="10"><a href="#" onclick="">10</a></li>
+								                <li rel="11"><a href="#" onclick="">11</a></li>
+								                <li rel="12"><a href="#" onclick="">12</a></li>
+								                <li rel="13"><a href="#" onclick="">13</a></li>
+								                <li rel="14"><a href="#" onclick="">14</a></li>
+								                <li rel="15"><a href="#" onclick="">15</a></li>
+								                <li rel="16"><a href="#" onclick="">16</a></li>
+								                <li rel="17"><a href="#" onclick="">17</a></li>
+								                <li rel="18"><a href="#" onclick="">18</a></li>
+								                <li rel="19"><a href="#" onclick="">19</a></li>
+								                <li rel="20"><a href="#" onclick="">20</a></li>
+								                <li rel="21"><a href="#" onclick="">21</a></li>
+								                <li rel="22"><a href="#" onclick="">22</a></li>
+								                <li rel="23"><a href="#" onclick="">23</a></li>
+								                <li rel="24"><a href="#" onclick="">24</a></li>
+								                <li rel="25"><a href="#" onclick="">25</a></li>
+								                <li rel="26"><a href="#" onclick="">26</a></li>
+								                <li rel="27"><a href="#" onclick="">27</a></li>
+								                <li rel="28"><a href="#" onclick="">28</a></li>
+								                <li rel="29"><a href="#" onclick="">29</a></li>
+								                <li rel="30"><a href="#" onclick="">30</a></li>
+								                <li rel="31"><a href="#" onclick="">31</a></li>
+								                <li rel="32"><a href="#" onclick="">32</a></li>
+								                <li rel="33"><a href="#" onclick="">33</a></li>
+								                <li rel="34"><a href="#" onclick="">34</a></li>
+								                <li rel="35"><a href="#" onclick="">35</a></li>
+								                <li rel="36"><a href="#" onclick="">36</a></li>
+								                <li rel="37"><a href="#" onclick="">37</a></li>
+								                <li rel="38"><a href="#" onclick="">38</a></li>
+								                <li rel="39"><a href="#" onclick="">39</a></li>
+								                <li rel="40"><a href="#" onclick="">40</a></li>
+								                <li rel="41"><a href="#" onclick="">41</a></li>
+								                <li rel="42"><a href="#" onclick="">42</a></li>
+								                <li rel="43"><a href="#" onclick="">43</a></li>
+								                <li rel="44"><a href="#" onclick="">44</a></li>
+								                <li rel="45"><a href="#" onclick="">45</a></li>
+								                <li rel="46"><a href="#" onclick="">46</a></li>
+								                <li rel="47"><a href="#" onclick="">47</a></li>
+								                <li rel="48"><a href="#" onclick="">48</a></li>
+								                <li rel="49"><a href="#" onclick="">49</a></li>
+								                <li rel="50"><a href="#" onclick="">50</a></li>
+								                <li rel="51"><a href="#" onclick="">51</a></li>
+								                <li rel="52"><a href="#" onclick="">52</a></li>
+								                <li rel="53"><a href="#" onclick="">53</a></li>
+								                <li rel="54"><a href="#" onclick="">54</a></li>
+								                <li rel="55"><a href="#" onclick="">55</a></li>
+								                <li rel="56"><a href="#" onclick="">56</a></li>
+								                <li rel="57"><a href="#" onclick="">57</a></li>
+								                <li rel="58"><a href="#" onclick="">58</a></li>
+								                <li rel="59"><a href="#" onclick="">59</a></li>
+								            	</div>
+								            </ul>
+						     	   		</li>
+						     		 </ul>
+								</div>
+               			</td>
+               			</tr>
+               		</table>	
+                </td>
+         </tr>
+      
+		<tr id="tr_create_button">
+			<!-- button : Create -->
+			<td class="tdfield" colspan="3"><button type="button" id="apps_httpdownloadsCreate_button"><span class="_text" lang="_button" datafld="create"></span></button></td>
+			<!-- button : Create  end-->
+		</tr>
+		<tr id="tr_modify_button" style="display:none;">
+			<!-- Mofidy Button : Save -->
+			<td class="tdfield"><button type="button" id="apps_httpdownloadsSave_button"><span class="_text" lang="_button" datafld="apply"></span></button></td>
+			<!-- Mofidy Button : Save  end-->
+			
+			<!-- Mofidy Button : Cancel -->
+			<td class="tdfield"  colspan="2"><button type="button" id="apps_httpdownloadsCancel_button"><span class="_text" lang="_button" datafld="Cancel"></span></button></td>
+			<!-- Mofidy Button : Cancel  end-->
+		</tr>
+		
+	</table>
+</div>
+
+<!-- Block 2 : -->
+<div class="hr_0_content"><div class="hr_1"></div></div>
+<div class="h1_content header_2"><span class="_text" lang="_http_downloads" datafld="title2"></span></div>
+<div class="field_top">
+	<table id="downloads_status"></table>
+</div>	
+<div class="field_top" id="downloads_status_button" style="display:none">	
+	<table>
+		<tr>
+			<!-- button : Modify -->
+			<td><button type="button" id="apps_httpdownloadsModify_button"><span class="_text" lang="_common" datafld="modify"></span></button></td>
+			<!-- button : Modify  end-->
+			
+			<!-- button : Delete -->
+			<td><button type="button" id="apps_httpdownloadsDel_button"><span class="_text" lang="_common" datafld="del"></span></button></td>
+			<!-- button : Delete  end-->
+		</tr>
+	</table>
+</div>
+
+<div class="field_top" style="border:0px solid red;height:10px"></div>	
+</body>
+</html>	

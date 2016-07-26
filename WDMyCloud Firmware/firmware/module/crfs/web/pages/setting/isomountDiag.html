@@ -1,0 +1,213 @@
+<!-- iso mount dialog-->
+<div id="isoDiag" class="WDLabelDiag" style="display:none">
+	<div class="WDLabelHeaderDialogue WDLabelHeaderDialogueISOMountIcon" id="isoDiag_title"></div>
+	<div align="center"><div class="hr"><hr/></div></div>
+		
+	<!-- iDiag_tree-->
+	<div id="iDiag_tree">	
+		<div class="WDLabelBodyDialogue">
+				<div id="iso_tree_container"></div>
+		</div>
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonMarginLeft_40px close" id="settings_utilitiesISOShareCancel_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" id="settings_utilitiesISOShareNext_button" ><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div> <!-- iDiag_tree end -->
+
+	<div id="iDiag_share_list" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<table border='0' cellspacing="0" cellpadding="0" id="iso_table" width="550">
+				<tr>
+					<td class='tdfield'><span class="_text" lang="_network_access" datafld="share_name"></span></td>
+					<td class='tdfield_padding' style="word-break: break-all;"><span id="iso_sharename"></span></td>
+				</tr>
+				<tr>
+					<td class='tdfield'><span class="_text" lang="_device" datafld="sdesc"></span></td>
+					<td class='tdfield_padding'><input type="text" name="settings_utilitiesISOShareDesc_text" id="settings_utilitiesISOShareDesc_text"  maxLength="128"></td>
+				</tr>
+			</table>
+			<div id="iso_list"></div>
+			<br><br>
+			<div id="iso_note" style="color:red"></div>
+		</div>
+		<div class="hrBottom2"><hr/></div>
+		<div id="create_div_button" style="display:none" >
+			<button type="button" class="ButtonMarginLeft_40px" id="settings_utilitiesISOShareBack1_button"><span class="_text" lang="_button" datafld="back"></span></button>
+			<button type="button" class="ButtonMarginLeft_20px close" id="settings_utilitiesISOShareCancel1_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		</div>
+		<div id="edit_div_button" style="display:none">
+			<button type="button" class="ButtonMarginLeft_40px close" ><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		</div>
+		
+		<button type="button" class="ButtonRightPos2" id="settings_utilitiesISOShareNext1_button"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div>
+	
+	<!-- iDiag_apply_to-->
+	<div id="iDiag_apply_to">	
+		<div class="WDLabelBodyDialogue">
+			<table border="0" cellspacing="0" cellpadding="0" height="0">
+				<tr>
+					<td class="tdfield"><div class="_text field" lang="_user" datafld="media"></div></td>
+					<td class="tdfield_padding">
+						<input id="settings_utilitiesISOShareMedia_switch" name="settings_utilitiesISOShareMedia_switch" class="onoffswitch" type="checkbox" value="true" >
+					</td>
+					<td class="tdfield_padding"></td>
+					<td class="tdfield_padding"></td>
+				</tr>
+				<tr>
+					<td class="tdfield"><div class="_text" lang="_user" datafld="ftp"></div></td>
+					<td class="tdfield_padding">
+						<input id="settings_utilitiesISOShareFTP_switch" name="settings_utilitiesISOShareFTP_switch" class="onoffswitch" type="checkbox" value="true" >
+					</td>
+					<td class="tdfield_padding" style="padding-left:10px;" style="display:none">
+						<div class="TooltipIcon" id="tip_ftp2" ></div>
+					</td>
+					<td class="tdfield_padding" style="padding-left:10px;">
+						<div id="ftp_anonymous2" class="select_menu" style="display:none"></div>
+					</td>
+				</tr>
+				<tr>
+					<td class="tdfield"><div class="_text" lang="_user" datafld="webdav"></div></td>
+					<td class="tdfield_padding">
+						<input id="settings_utilitiesISOShareWebDAV_switch" name="settings_utilitiesISOShareWebDAV_switch" class="onoffswitch" type="checkbox" value="true" >
+					</td>
+					<td class="tdfield_padding" style="padding-left:10px;">
+						<div class="TooltipIcon" id="tip_webdav"></div>
+					</td>
+					<td class="tdfield_padding"></td>
+				</tr>
+				<tr style="display:none">
+					<td class="tdfield"><div class="_text" lang="_shares" datafld="remote_access"></div></td>
+					<td class="tdfield_padding"> 
+						<input id="settings_utilitiesISOShareRemote_switch" name="settings_utilitiesISOShareRemote_switch" class="onoffswitch" type="checkbox" value="true" >
+					</td>
+					<td class="tdfield_padding"></td>
+					<td class="tdfield_padding"></td>
+				</tr>
+				<tr id="iso_public_tr" style="display:none">
+					<td class="tdfield"><div class="_text" lang="_network_access" datafld="public"></div></td>
+					<td class="tdfield_padding">
+						<input id="settings_utilitiesISOSharePublic_switch" name="settings_utilitiesISOSharePublic_switch" class="onoffswitch" type="checkbox" value="true" >
+					</td>
+					<td class="tdfield_padding" style="padding-left:10px;">
+						<div class="TooltipIcon" id="tip_public"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonMarginLeft_40px" id="settings_utilitiesISOShareBack2_button"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" class="ButtonMarginLeft_20px close" id="settings_utilitiesISOShareCancel2_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" id="settings_utilitiesISOShareNext2_button"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div> <!-- iDiag_apply_to end -->
+	
+	<!-- iDiag_apply_to2 -->
+	<div id="iDiag_apply_to2" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<table border="0" cellspacing="0" cellpadding="0" height="0">
+				<tr>
+					<td class="tdfield"><div class="_text" lang="_user" datafld="nfs"></div></td>
+					<td class="tdfield_padding">
+						<input id="settings_utilitiesISOShareNFS_switch" name="settings_utilitiesISOShareNFS_switch" class="onoffswitch" type="checkbox" value="true" >
+					</td>
+					<td class="tdfield_padding" style="padding-left:10px;">
+						<div class="TooltipIcon" id="tip_nfs"></div>
+					</td>
+				</tr>
+			</table>
+			<table id="nfs_conf_tb" border="0" cellspacing="0" cellpadding="0" height="0" style="display:none">
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_nfs" datafld="host"></span></td>
+					<td class="tdfield_padding">
+						<input type="text" id="settings_utilitiesISOShareNFSHost_text" name="settings_utilitiesISOShareNFSHost_text">
+					</td>
+					<td class="tdfield_padding" style="padding-left:10px;">
+						<div class="TooltipIcon" id="tip_host2"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonMarginLeft_40px" id="settings_utilitiesISOShareBack3_button"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" class="ButtonMarginLeft_20px close" id="settings_utilitiesISOShareCancel3_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" id="settings_utilitiesISOShareSave_button" onclick="apply_iso_share()"><span class="_text" lang="_button" datafld="apply"></span></button>
+		<button type="button" class="ButtonRightPos2" id="settings_utilitiesISOShareNext3_button"><span class="_text" lang="_button" datafld="save"></span></button>
+		
+	</div> <!-- iDiag_apply_to2 end -->
+	
+	<!-- iDiag_access -->
+	<div id="iDiag_access" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="iso_user_scroll">
+				<div class="iso_access_list" id="iso_userlist" style="margin-left:-40px">
+					<ul class="ListDiv" id="iso_userlist_ul"></ul>
+				</div>
+			</div>
+		</div>
+		<div class="hrBottom2"><hr/></div>
+		
+		<button type="button" class="ButtonMarginLeft_40px" id="settings_utilitiesISOShareBack4_button"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" class="ButtonMarginLeft_20px close" id="settings_utilitiesISOShareCancel4_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" id="settings_utilitiesISOShareSave2_button" onclick="apply_iso_share()"><span class="_text" lang="_button" datafld="apply"></span></button>
+		
+	</div>
+	
+</div> <!-- isoDiag end -->
+
+<div id="isoDetailDiag" class="WDLabelDiag" style="display:none">
+	<div class="WDLabelHeaderDialogue WDLabelHeaderDialogueISOMountIcon" id="isoDetailDiag_title"></div>
+	<div align="center"><div class="hr"><hr/></div></div>
+	
+	<!--detailDiag-->
+	<div id="detailDiag">
+		<div class="WDLabelBodyDialogue" style="overflow:hidden">
+			<table id="iso_detail_tb" border="0" cellspacing="0" cellpadding="0" height="0">
+				<tr>
+					<td><span class="_text field" lang="_network_access" datafld="share_name"></span></td>
+					<td><div id="settings_utilitiesISOShareName_value" style="width:400px;word-wrap : break-word;"></div></td>
+				</tr>
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_device" datafld="sdesc"></span></td>
+					<td class="tdfield_padding"><div id="settings_utilitiesISOShareDesc_value" style="width:400px;word-wrap : break-word;"></div></td>
+				</tr>
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_module" datafld="file_path"></span></td>
+					<td class="tdfield_padding"><div id="settings_utilitiesISOSharePath_value" style="width:400px;word-wrap : break-word;"></div></td>
+				</tr>
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_user" datafld="media"></span></td>
+					<td class="tdfield_padding"><div id="settings_utilitiesISOShareMedia_value"></div></td>
+				</tr>
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_user" datafld="ftp"></span></td>
+					<td class="tdfield_padding"><div id="settings_utilitiesISOShareFTP_value"></div></td>
+				</tr>
+				<tr id="iso_nfs_tr">
+					<td class="tdfield"><span class="_text" lang="_user" datafld="nfs"></span></td>
+					<td class="tdfield_padding"><div id="settings_utilitiesISOShareNFS_value"></div></td>
+				</tr>
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_user" datafld="webdav"></span></td>
+					<td class="tdfield_padding"><div id="settings_utilitiesISOShareWebDAV_value"></div></td>
+				</tr>
+				<tr style="display:none">
+					<td class="tdfield"><span class="_text" lang="_shares" datafld="remote_access"></span></td>
+					<td class="tdfield_padding"><div id="settings_utilitiesISOShareRemote_value"></div></td>
+				</tr>
+				<tr id="iso_detail_public_tr" style="display:none">
+					<td class="tdfield"><span class="_text" lang="_network_access" datafld="public"></span></td>
+					<td class="tdfield_padding"><div id="settings_utilitiesISOSharePublic_value"></div></td>
+				</tr>
+				<tr id="iso_ro_tr" style="display:none">
+					<td class="tdfield"><span class="_text" lang="_network_access" datafld="read_only"></span></td>
+					<td class="tdfield_padding"><div id="settings_utilitiesISOShareRO_value"></div></td>
+				</tr>
+				<tr id="iso_deny_tr" style="display:none">
+					<td class="tdfield"><span class="_text" lang="_network_access" datafld="decline"></span></td>
+					<td class="tdfield_padding"><div id="settings_utilitiesISOShareDeny_value"></div></td>
+				</tr>
+			</table>	
+		</div><!-- body end -->
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonRightPos2 close" id="settings_utilitiesISODetailCancel_button"><span class="_text" lang="_button" datafld="close"></span></button>
+	</div><!--nfsDiag end-->
+</div>

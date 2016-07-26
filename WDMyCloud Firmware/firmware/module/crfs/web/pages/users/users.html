@@ -1,0 +1,374 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<style>
+#show_group_div{
+	/*border:1px solid red;*/
+	min-width:0px;
+	max-width:103px;
+}
+
+#form_import .file_input_div{
+	position: relative;
+	width:auto;
+	height:auto;
+}
+#form_import .file_input_hidden{
+	cursor: pointer;
+	font-size: 50px; 
+	position: absolute; 
+	right: 0px; 
+	top: 0px; 
+	width:1px;
+	opacity: 0; 
+	filter: alpha(opacity=0); 
+	-ms-filter: "alpha(opacity=0)"; 
+	-khtml-opacity: 0; 
+	-moz-opacity: 0;
+}
+
+#users_user_button , #users_group_button {
+	width:103px;
+}
+
+.user_desc2 ol li{
+	FONT-SIZE: 15px; FONT-FAMILY: Helvetica, Geneva, Arial, sans-serif;
+	margin-bottom:10px;
+}
+</style>
+
+<script language="javascript" src="/web/function/batch_user.js?v=1.1"></script>
+
+<script type="text/javascript">
+function page_load()
+{
+	help_link();
+	var sys_time = (new Date()).getTime();
+	
+	initDiag("/web/users/usersDiag.html?r=" + sys_time, null, function() {
+		var remote_access = _REST_Get_Cloud_Info();
+		if(remote_access=="false")
+		{
+			$("#edit_user_tb input[name='users_editMail_text']").addClass("gray_out").attr("readonly","true");
+			$("#create_user_tb input[name='users_mail_text']").addClass("gray_out").attr("readonly","true");
+		}
+
+		$("#users_addUserExpires_switch").unbind("click");
+	    $("#users_addUserExpires_switch").click(function(){
+			var v = getSwitch('#users_addUserExpires_switch');
+			display_expires(v);
+		});
+		
+		init_datepicker();
+	});
+			
+	$("#users_group_button").click(function(){
+		go_page('/web/users/groups.html', 'nav_users');
+	});	
+	
+	Get_SMB_Info();
+	Get_User_Info();
+	get_account_xml('Loading',function(){
+	get_user_list("");
+	});
+	Get_Quota_Info();
+	
+	$("input:text").inputReset();
+	$("input:password").inputReset();
+	$("input:checkbox").checkboxStyle();
+	
+	init_button();
+
+	$("#users_editPW_link").click(function() {			
+		init_modify_pw_dialog();
+	});
+	
+	$("#ad_quota_conf_div").click(function() {			
+		init_modify_quota_dialog('ad');
+	});
+		
+	$("#ad_quota_conf_div").keypress(function(e) {			
+		if (e.keyCode=='13')
+			$("#ad_quota_conf_div").click();
+	});
+			
+    $("#users_createUser_link").click(function(){
+    	if($(this).hasClass('gray_out')) return;
+    
+    	var create_status = api_do_query_create_status2("iUser");
+		if(create_status==-1)
+		{
+			jAlert(_T('_user','msg45'),'warning2');
+			return;
+		}
+		
+		init_create_user_dialog('users');
+	});
+    	
+    $("#users_createUser_link").keypress(function(e){
+    	if (e.keyCode=='13')
+			$("#users_createUser_link").click();
+	});
+			
+    $("#users_removeUser_link").click(function(){
+    	if($(this).hasClass('gray_out')) return;
+		
+		if(_LOCAL_LOGIN==0)
+		{
+			jAlert(_T('_cloud','not_allow_desc'), "not_allowed_title");
+			return;
+		}
+		
+    	var create_status = api_do_query_create_status2("iUser");
+		if(create_status==-1)
+		{
+			jAlert(_T('_user','msg45'),'warning2');
+			return;
+		}
+		
+		Delete_User();
+	});
+			
+    $("#users_removeUser_link").keypress(function(e){
+    	if (e.keyCode=='13')
+			$("#users_removeUser_link").click();
+	});
+				
+	currentIndex=1;
+	$(".ButtonArrowTop").addClass('gray_out');
+	$(".ButtonArrowBottom").removeClass('gray_out');
+	scrollDivTop_User('SubMenuDiv');
+	
+	_U_INIT_FLAG = 0;
+	
+	if(QUOTA_FUNCTION==1)
+	{
+		$("#quota_tr").show();
+	}
+	
+	if(MULTI_USER_FUNCTION==1)
+	{
+		$("#users_addMultiUser_link").show();
+	}
+	
+	if(GROUP_FUNCTION==1)
+	{
+		$("#group_tr").show();
+		$("#uers_usersGroups_div").show();
+	}
+	else
+	{
+		$("#uers_usersGroups_div").hide();
+		$("#share_name_td").css('padding-top', '0px');
+	}
+}
+function open_uimport_dialog()
+{
+	$("#users_impUsersFile_text").click();
+}
+function page_unload()
+{
+}
+
+</script>
+
+<body>
+<table cellspacing="0" cellpadding="0" border="0">
+	<tr valign="bottom">
+		<td align="left">
+			<div class="header_1" style="width: auto;"><span class="_text" lang="_user" datafld="setup_user"></span></div>
+		</td>
+	</tr>
+</table>
+<div class="hr_0"><div class="hr_1"></div></div>
+
+<table cellspacing="0" cellpadding="0" border="0">
+<tr>
+	<td valign="top" id="share_name_td" class="unselect">
+		<div style="margin-top:20px;margin-bottom:-10px;display:none;" id="uers_usersGroups_div">
+            <button id="users_user_button" class="left_button buttonSel" value="0"><span class="_text" lang="_menu_title" datafld="users">Users</span></button>
+            <button id="users_group_button" class="right_button" value="1" style="position: relative;left: -2px;"><span class="_text" lang="_user" datafld="groups">Groups</span></button>
+        </div>
+		
+		<ul id="users_userUp_link" class="ButtonArrowTop disable" onmousedown="scrollDivDown('SubMenuDiv')" style="padding-top:10px;">
+			<li class="ButtonArrowUpListUp"></li>
+		</ul>
+		<div id="SubMenuDiv" class="no_top_btns">
+			<div class="LightningSubMenubg">
+				<ul class="LightningSubMenu userMenu userMenuList"></ul>
+			</div>
+		</div>
+		<ul id="users_userDown_link" class="ButtonArrowBottom disable" onmousedown="scrollDivUp('SubMenuDiv')">
+			<li class="ButtonArrowDownListUp"></li>
+		</ul>
+		<div>
+			<table id="create_tb" border="0" height="50" cellspacing="0" cellpadding="0" height="0" align="right" style="position: relative;left: -4px;">
+				<tr>
+					<td width="90" align="right" style="padding-top:10px">
+						<div tabindex="0" id="users_removeUser_link" class="VericalListButton2 LightningLabelButtonVericalListRemoveUser"></div>
+					</td>
+					<td width="90" align="right" style="padding-top:10px">
+						<div tabindex="0" id="users_createUser_link" class="VericalListButton2 LightningLabelButtonVericalListAddUser"></div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="right" style="padding-top:10px">
+						<a href="javascript:init_import_user_dialog();" id="users_addMultiUser_link" class="edit_detail _text" lang="_user" datafld="multiple" style="display:none"></a>
+						<br>
+					</td>	
+				</tr>
+			</table>
+		</div>
+	</td>
+	<td valign="top">
+		<div class="r_content mainbody" id="mainbody">		
+			<div id="user_desc" class="field_top">
+				<table border="0" cellspacing="0" cellpadding="0" height="0" width="695">
+					<tr>
+						<td valign="top">
+				<div class="h1_content header_2"><span class="_text" lang="_user" datafld="about_user"></span></div>
+				<div class="_text tdfield_padding_top_14" lang="_user" datafld="user_desc"></div>
+							<div id="users_help">
+							<div class="h1_content header_2 field_top"><span class="_text" lang="_top" datafld="help"></span></div>
+							<div class="bumper_link_container"><a class="bumper_help_link about_users" href="#"><span class="_text" lang="_help" datafld="musers"></span></a></div>
+							<div class="bumper_link_container"><a class="bumper_help_link adding_users" href="#"><span class="_text" lang="_help" datafld="cuser"></span></a></div>
+							<div class="bumper_link_container"><a class="bumper_help_link user_change_access" href="#"><span class="_text" lang="_help" datafld="caccess"></span></a></div>
+							</div>
+						</td>
+						<td><div id="users_img"></div></td>
+					</tr>
+				</table>
+			</div>
+			<div id="user_detail" class="field_top" style="display:none;">
+			 	<div class="h1_content header_2"><span class="_text" lang="_user" datafld="user_profile"></span></div>
+			 	<table border="0" cellspacing="0" cellpadding="0" height="0" id="edit_ads_user_tb" style="display:none">
+			 		<tr>
+			 			<td class="tdfield"><span class="_text" lang="_user" datafld="user_name"></span></td>
+			 			<td class="tdfield_padding"><div id="ads_name"></div></td>
+			 		</tr>
+					<tr id="ad_quota_tr" style="display:none">
+						<td class="tdfield"><span class="_text" lang="_menu" datafld="quota"></span></td>
+						<td class="tdfield_padding">
+							<span tabindex="0" class="edit_detail" id="ad_quota_conf_div"><span class="_text" lang="_lan" datafld="ftp_config"></span> >></span>
+						</td>
+					</tr>
+			 	</table>
+				<table border="0" cellspacing="0" cellpadding="0" height="0" id="edit_user_tb" style="display:none">
+					<tr>
+						<td colspan="2">
+							<table border="0" cellspacing="0" cellpadding="0" height="0">
+								<tr>
+									<td class="tdfield"><span class="_text" lang="_user" datafld="user_name"></span></td>
+									<td id="edit_name_td" class="tdfield_padding">
+										<input type="text" id="users_editUserName_text" name="users_editUserName_text" onkeyup="show_save_button(event,'users_editNameSave_button');" class="lower">
+									</td>
+									<td id="show_name_td" class="tdfield_padding" style="display:none">
+										<!--<span id="f_username"></span>-->
+									</td>
+									<td class="tdfield_padding" style="padding-left:10px">
+										<button id="users_editNameSave_button" type="button" onclick="modify_user('name')" class="SaveButton"><span class="_text" lang="_button" datafld="apply"></span></button>
+									</td>								
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<table border="0" cellspacing="0" cellpadding="0" height="0">
+								<tr>
+									<td class="tdfield"><span class="_text" lang="getting_start" datafld="first_name"></span></td>
+									<td class="tdfield_padding">
+										<input type="text" id="users_editFirstName_text" name="users_editFirstName_text" onkeyup="show_save_button(event,'users_editFirstNameSave_button');">
+									</td>
+									<td class="tdfield_padding" style="padding-left:10px">
+										<button id="users_editFirstNameSave_button" type="button" onclick="modify_user('first_name')" class="SaveButton"><span class="_text" lang="_button" datafld="apply"></span></button>
+									</td>										
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<table border="0" cellspacing="0" cellpadding="0" height="0">
+								<tr>
+									<td class="tdfield"><span class="_text" lang="getting_start" datafld="last_name"></span></td>
+									<td class="tdfield_padding">
+										<input type="text" id="users_editLastName_text" name="users_editLastName_text" onkeyup="show_save_button(event,'users_editLastNameSave_button');">
+									</td>
+									<td class="tdfield_padding" style="padding-left:10px">
+										<button id="users_editLastNameSave_button" type="button" onclick="modify_user('last_name')" class="SaveButton"><span class="_text" lang="_button" datafld="apply"></span></button>
+									</td>										
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<table border="0" cellspacing="0" cellpadding="0" height="0">
+								<tr>
+									<td class="tdfield"><span class="_text" lang="_user" datafld="mail_addr"></span></td>
+									<td class="tdfield_padding">
+										<input type="text" id="users_editMail_text" name="users_editMail_text" onKeyPress="show_save_button(event,'users_editMailSave_button',this);">
+									</td>
+									<td class="tdfield_padding" style="padding-left:10px">
+										<button id="users_editMailSave_button" type="button" onclick="modify_user('mail')" class="SaveButton"><span class="_text" lang="_button" datafld="apply"></span></button>
+									</td>										
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<table border="0" cellspacing="0" cellpadding="0" height="0">
+								<tr>
+									<td class="tdfield"><span class="_text" lang="_user" datafld="pw"></span></td>
+									<td class="tdfield_padding">
+										<input id="users_editPW_switch" name="users_editPW_switch" class="onoffswitch" type="checkbox" value="true" style="position: absolute; z-index: -1; visibility: hidden;">
+									</td>
+									<td class="tdfield_padding" style="padding-left:10px">
+										<div tabindex="0" class="edit_detail" id="users_editPW_link" style="display:none"><span class="_text" lang="_lan" datafld="ftp_config"></span> >></div>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr id="group_tr" style="display:none">
+						<td class="tdfield"><span class="_text" lang="_user" datafld="group_member"></span></td>
+						<td class="tdfield_padding">
+							<span id="show_group_div"></span>
+							<a id="users_editGroupMember_link" class="edit_detail" tabindex="0" style="margin-left: 10px;" href="javascript:init_modify_group_dialog();">
+								<span class="_text" lang="_p2p" datafld="config"></span> >>
+							</a>
+						</td>
+					</tr>							
+					<tr id="quota_tr" style="display:none">
+						<td class="tdfield"><span class="_text" lang="_menu" datafld="quota"></span></td>
+						<td class="tdfield_padding">
+							<a id="users_editUserQuota_link" class="edit_detail" tabindex="0" href="javascript:init_modify_quota_dialog('local');">
+								<span class="_text" lang="_p2p" datafld="config"></span> >>
+							</a>
+							<!--<span tabindex="0" class="edit_detail" id="quota_conf_div"><span class="_text" lang="_lan" datafld="ftp_config"></span> >></span>-->
+						</td>
+					</tr>
+				</table>
+				
+				<div id="ushare_div">
+					<div class="hr_0_content" style="margin-top:30px;margin-bottom:30px;"><div class="hr_1"></div></div>
+					<div class="h1_content header_2"><span class="_text" lang="_user" datafld="share_access"></span></div>	
+					<div id="share_mask_id" class="accessListMarginTop">	
+					<div id="user_sharelist" style="margin-left:-40px"></div>
+				</div>
+				</div>
+				<br><br><br><br><br>
+			</div>
+		</div>  <!-- mainbody end -->
+	</td>
+</tr>	
+</table>
+</body>
+</html>

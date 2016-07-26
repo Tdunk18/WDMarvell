@@ -1,0 +1,121 @@
+#! /bin/sh
+UPS_MODE=$(xmldbc -g "/system_mgr/ups_management/ups_Mode")
+UPS_PLUG=$(xmldbc -g "/system_mgr/ups_management/ups_PlugMode")
+
+case "$1" in
+online)
+		#==========================
+		#	UPS is back online
+		#==========================
+		# logger -t upssched-cmd "The UPS has been On Line."
+		if [ -e /tmp/UPS_OB ]; then
+			rm /tmp/UPS_OB
+		fi
+		if [ -e /tmp/UPS_LB ]; then
+			rm /tmp/UPS_LB
+			if [ -e /tmp/UPS_LB_READY ]; then
+				# logger -t upssched-cmd "On Line and system reboot now."
+				rm /tmp/UPS_LB_READY
+				#/usr/sbin/Network_UPS -R
+				
+				if [ -e /etc/ups_master.dat ]; then
+					sleep 20
+				fi
+
+				/usr/sbin/do_reboot
+			fi
+		fi
+		touch /tmp/UPS_OL
+		;;
+onbattery)
+		#==========================
+		#	UPS is on battery
+		#==========================
+		# logger -t upssched-cmd "The UPS has been On Battery."
+		# send_mail_event_at_cron  --ups_status OnBattery
+
+		if [ -e /tmp/UPS_OL ]; then
+			rm /tmp/UPS_OL
+		fi
+		if [ -e /tmp/UPS_LB ]; then
+			rm /tmp/UPS_LB
+		fi
+		if [ -e /tmp/UPS_LB_READY ]; then
+			rm /tmp/UPS_LB_READY
+		fi
+		touch /tmp/UPS_OB
+		;;
+lowbatt)
+		#==========================
+		#	UPS has a low battery
+		#==========================
+		# logger -t upssched-cmd "The UPS has been On LowBattery."
+		# send_mail_event_at_cron  --ups_status BatteryLow
+		
+		# send alert
+		fireAlert -a 0044 -f
+		sleep 5 
+
+		if [ -e /tmp/UPS_OL ]; then
+			rm /tmp/UPS_OL
+		fi
+		if [ -e /tmp/UPS_OB ]; then
+			rm /tmp/UPS_OB
+		fi
+		if [ -e /tmp/UPS_LB_READY ]; then
+			rm /tmp/UPS_LB_READY
+		fi
+		#========================
+		#	shutdown procedure
+		#========================
+		#/usr/sbin/Network_UPS -P
+		touch /tmp/UPS_LB
+		# logger -t upssched-cmd "LowBattery and run shutdown procedure."
+		/bin/sync
+		kill_running_process
+		rm /usr/local/upload
+		/bin/sync
+		/usr/sbin/diskmgr -p
+		/usr/sbin/sataumount
+		/usr/sbin/hiddenumount
+		touch /tmp/UPS_LB_READY
+		# logger -t upssched-cmd "LowBattery and wait for running out of power or reboot."
+		if [ -e /etc/ups_master.dat ]; then
+			sleep 3
+		fi
+		
+		touch /tmp/want_to_shutdown
+		echo "****************************************" > /dev/console
+	    echo "*                                      *"	> /dev/console
+		echo "*        UPS report LOW Battery        *" > /dev/console
+		echo "*    LT4A perform shutdown process     *" > /dev/console
+	    if [ -e /etc/ups_master.dat ]; then
+		echo "*             In MASTER MODE           *" > /dev/console
+		else
+		echo "*             In SLAVE  MODE           *" > /dev/console
+		fi
+		echo "*                                      *"	> /dev/console
+		echo "****************************************" > /dev/console	
+		;;
+nocomm)
+		#==========================
+		#	A UPS is unavailable
+		#==========================
+		if [ $UPS_PLUG == "1" ] ; then
+			if [ $UPS_MODE == "1" ] || [ $UPS_MODE == "2" ] ; then
+				# logger -t upssched-cmd "The UPS...nocomm command UPS(restart)."
+				/usr/sbin/ups_action.sh remove
+				/usr/sbin/ups_action.sh add
+				# logger -t upssched-cmd "The UPS...nocomm command UPS(finished)."
+			fi
+		fi
+		;;
+forcedshutdown)
+		#=========================================
+		#	UPS is being shutdown by the master
+		#=========================================
+		# logger -t upssched-cmd "The UPS has been shutdown by the master."
+		;;
+esac
+
+

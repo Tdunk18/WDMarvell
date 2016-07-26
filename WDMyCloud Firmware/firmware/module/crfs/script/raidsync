@@ -1,0 +1,19 @@
+#!/bin/sh
+
+#Description : Raid Sync
+#Author : Wilson Chan
+#History : 	1)1.00 05/03/2006
+#Variables Declaration and Definition
+
+rm -f /tmp/raidsync
+
+#Check whether raid is sync now
+SYNC=$(grep resync /proc/mdstat)
+RAID5_SYNC=$(grep recovery /proc/mdstat)
+
+if [ -n "$SYNC" ]; then
+	touch /tmp/raidsync
+elif [ -n "$RAID5_SYNC" ]; then
+	touch /tmp/raidsync
+fi
+exit 0

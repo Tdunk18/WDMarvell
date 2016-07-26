@@ -1,0 +1,302 @@
+0001 = Överstigen systemtemperatur
+0001D = Systemtemperaturen överstiger den normala driftstemperaturen. Flytta systemet till en svalare plats. Om ingen åtgärd vidtas kommer systemet att stängas av när temperaturen når en kritisk nivå.
+
+0002 = Understigen systemtemperatur
+0002D = Systemtemperaturen understiger den angivna lägsta temperaturen. Flytta systemet till en varmare plats.
+
+0003 = SMART-fel för enheten
+0003D = Självkontrollen för enhet %1 misslyckades. Kontakta WD Support.
+
+0004 = Volymfel
+0004D = Det går inte att komma åt datavolymen %1 på enheten. Kontakta WD Support.
+
+0005 = Väntande systemavstängning pga hög temperatur
+0005D = Systemet är överhettat och kommer automatiskt att stängas av snart om ingen åtgärd vidtas.
+
+0006 = Omedelbar systemavstängning pga hög temperatur
+0006D = Systemet är kritiskt överhettat och stängs omedelbart av för att förhindra skador.
+
+2020 = Systemavstängning
+2020D = Systemet stängs av.
+
+1020 = Systemavstängning
+1020D = Systemet stängs av.
+
+0020 = Systemavstängning
+0020D = Systemet stängs av.
+
+0029 = Fläkten fungerar inte
+0029D = Systemets fläkt fungerar inte. Kontakta WD Support.
+
+0031 = UPS-ström på
+0031D = Systemet drivs med UPS-ström. %1% ström kvar.
+
+0201 = Enhetsfel
+0201D = Det har uppstått ett fel på en enhet i ingång %1. Ersätt den felaktiga enheten. Kontakta WD Support.
+
+0207 = Enhetsfel uppstår snart
+0207D = Ett fel är nära att uppstå i enheten %1. Ersätt den felaktiga enheten. Kontakta WD Support.
+
+0208 = Volym degraderad
+0208D = Volymen %1 har degraderats. Kontrollera enhetens status genom att köra disktest i Inställningar >> Verktyg.
+
+0209 = Migreringsförlopp för volym
+0209D = Migreringsförlopp för volym %1 – %2 %
+
+2209 = Migreringsförlopp för volym
+2209D = Migreringsförlopp för volym %1:  %2%
+
+0210 = Återskapar volym
+0210D = Tid för återskapande av volym %1 pågår:  %2minuter
+
+2210 = Återskapar volym
+2210D = Tid för återskapande av volym %1 pågår:  %2minuter
+
+0212 = Det gick inte att återskapa volym
+0212D = Återskapandet av volym %1 misslyckades. Kontrollera enheternas status genom att köra disktest i Inställningar >> Verktyg.
+
+0213 = Utökning av volymen misslyckades
+0213D = Utökning av volym %1 misslyckades. Kontrollera enheternas status genom att köra disktest i Inställningar >> Verktyg.
+
+0216 = RAID-växling aktiverad
+0216D = RAID-växling är aktiverad.
+
+2216 = RAID-växling aktiverad
+2216D = RAID-växling är aktiverad.
+
+0224 = Ersätt enhet med rött ljus
+0224D = Ersätt enhet med röd LED-lampa.
+
+2041 = Ethernetportsanslutning %1 med 10/100
+2041D = Anslutningshastighet begränsad till 10/100 Mbit/s.
+
+0042 = 50 % UPS-ström kvar
+0042D = Systemet drivs med UPS-ström med 50 % ström kvar. Anslut snarast systemet till en annan strömkälla.
+
+0043 = 15% UPS-ström kvar
+0043D = Systemet drivs med UPS-ström med 15 % ström kvar. Anslut systemet till en annan strömkälla omedelbart.  Om ingen åtgärd vidtas kommer systemet att stängas av när strömmen i UPS-enheten tar slut.
+
+0044 = UPS-strömmen slut
+0044D = UPS-strömmen har ingen ström kvar. Systemet kommer omedelbart att stängas av för att förhindra skador.
+
+1001 = Volymanvändning över 95 %
+1001D = Din volymanvändning %1 ligger nära full kapacitet och du kan börja uppleva prestandaproblem. Se till att dina filer säkerhetskopieras. Flytta sedan filerna från enheten för att skapa ledigt utrymme. Papperskorgen är aktiverad. Prova att rensa den för att skapa mer ledigt utrymme.
+
+1002 = Nätverkslänk nere
+1002D = Nätverkslänken %1 är nere eller fungerar bristfälligt. Kontrollera din nätverksanslutning.
+
+1010 = Nätverkslänk nere
+1010D = Nätverkslänken %1 är nere eller fungerar bristfälligt. Kontrollera din nätverksanslutning.
+
+1003 = Uppdatering av fast programvara misslyckades
+1003D = Uppdateringen av den fasta programvaran misslyckades. Försök igen. Kontakta WD Support om felet kvarstår.
+
+1004 = Hög systemtemperatur
+1004D = Din enhet är för närvarande överhettad. Se till att din enhet är tillräckligt ventilerad.
+
+1021 = Konfigurationsåterställning misslyckades
+1021D = Återställningen av konfigurationen misslyckades.
+
+0022 = Fel i strömkälla
+0022D = Det har uppstått ett fel i strömkällan %1.
+
+1022 = Fel i strömkälla
+1022D = Det har uppstått ett fel i strömkällan %1. Kontrollera strömkällan.
+
+1030 = Lagring under tröskel
+1030D = Lagringen understiger tröskelvärdet.
+
+1035 = Produktförbättringsprogram
+1035D = Vill du vara med och förbättra vår produkt? Mer information %1
+
+0036 = Filsystemkontroll misslyckades
+0036D = Filsystemkontrollen har upptäckt fel i konfigureringen. Säkerhetskopiera dina data och återskapa enhetskonfigurationen för att korrigera dessa fel. Kontakta WD Support om felet kvarstår.
+
+1036 = Filsystemkontroll misslyckades
+1036D = Filsystemkontrollen har upptäckt fel i konfigureringen. Säkerhetskopiera dina data och återskapa enhetskonfigurationen för att korrigera dessa fel. Kontakta WD Support om felet kvarstår.
+
+1045 = Fel i filsystem korrigerat
+1045D = Filsystemkontrollen har upptäckt och korrigerat fel i konfigureringen.
+
+1037 = Systemet inte redo
+1037D = Systemet är upptaget. Vänta tills systemets lysdioder lyser med fast blått sken innan du sätter in en annan enhet.
+
+1120 = USB-enhet stöds inte
+1120D = En USB-enhet som inte stöds har upptäckts (leverantör: %1, modell: %2, serienummer: %3). Ta bort USB-enheten.
+
+1121 = Filsystem stöds inte
+1121D = Ett filsystem som inte stöds har upptäckts i en USB-enhet (leverantör %1, modell: %2, serienummer: %3, filsystem: %4, etikett: %5). Ta bort USB-enheten.
+
+1122 = Det går inte att skapa resurs
+1122D = Det gick inte att skapa en resurs på en USB-enhet (leverantör: %1, modell: %2, serienummer: %3, filsystem: %4, etikett: %5, resursnamn %6)
+
+1123 = Osäker borttagning av enhet
+1123D = En USB-enhet (leverantör: %1, modell: %2, serienummer: %3) har tagits ut utan att matas ut vilket kan ha skadat data på %2.
+
+1124 = Det gick inte att montera USB-enheten
+1124D = Det gick inte att montera USB-enheten (leverantör: %1, modell: %2, serienummer: %3). Kontrollera USB-enheten.
+
+1127 = Det går inte att säkerhetskopiera filer från USB-enheten
+1127D = Det går inte att säkerhetskopiera filer från USB-enheten. Kontrollera anslutningsmöjligheter för enheten.
+
+1130 = Säkerhetskopieringen av USB-enheten har placerats i kö
+1130D = Ett tidigare säkerhetskopieringsjobb pågår fortfarande. USB-säkerhetskopieringen startar automatiskt när det tidigare jobbet har avslutats.
+
+1400 = Fel i fjärrsäkerhetskopiering
+1400D = Det uppstod ett fel i din fjärrsäkerhetskopiering med namn: %1. Kontrollera dina systeminställningar.
+
+1401 = Fel i återställning av fjärrsäkerhetskopia
+1401D = Det uppstod ett fel i din återställning av fjärrsäkerhetskopian med namn: %1. Kontrollera dina systeminställningar.
+
+2402 = Fjärrsäkerhetskopiering klar
+2402D = Din fjärrsäkerhetskopiering med namn: %1, har slutförts på enheten: %2, till resursen: %3
+
+1402 = Fjärrsäkerhetskopiering klar
+1402D = Din fjärrsäkerhetskopiering med namn: %1, har slutförts på enheten: %2, till resursen: %3
+
+2403 = Återställning av fjärrsäkerhetskopia klar
+2403D = Din återställning av fjärrsäkerhetskopian med namn: %1, har slutförts på enheten: %2, till resursen: %3
+
+1403 = Återställning av fjärrsäkerhetskopia klar
+1403D = Din återställning av fjärrsäkerhetskopian med namn: %1, har slutförts på enheten: %2, till resursen: %3
+
+2001 = Systemomstart
+2001D = Systemet har startats om.
+
+1011 = Ny fast programvara tillgänglig
+1011D = En ny version av den fasta programvaran har getts ut. Uppdatera systemet
+
+2002 = Ny fast programvara tillgänglig
+2002D = En ny version av den fasta programvaran har getts ut. Uppdatera systemet
+
+2003 = Temperatur normal
+2003D = Systemtemperaturen ligger inom det angivna normala temperaturintervallet.
+
+2004 = Uppdatering av fast programvara klar
+2004D = Den fasta programvaran har uppdaterats till %1.
+
+2005 = Fabriksåterställning klar
+2005D = Ditt system har återställts till fabriksinställningarna.
+
+2006 = Du kan nu få en ny uppgradering av programvaran!
+2006D = Öppna instrumentpanelen till WD My Cloud-enheten för mer information.
+
+2024 = Hämtar uppdatering av fast programvara
+2024D = Hämtar uppdatering av fast programvara.
+
+2026 = Installerar uppdatering av fast programvara
+2026D = Installerar uppdatering av fast programvara.
+
+1028 = Omstart krävs
+1028D = Omstart krävs.
+
+2028 = Omstart krävs
+2028D = Omstart krävs.
+
+2032 = Systemet är i vänteläge
+2032D = Systemet är i vänteläge.
+
+1033 = Systemet startas om
+1033D = Systemet startas om.
+
+2033 = Systemet startas om
+2033D = Systemet startas om.
+
+1038 = Lagringskvoten är nästan full
+1038D = Lagringskvoten för [%1] är nästan full. Se till att filerna säkerhetskopieras. Flytta dem sedan från enheten för att skapa ledigt utrymme.
+
+2038 = Lagringskvoten är nästan full
+2038D = Lagringskvoten för [%1] är nästan full. Se till att filerna säkerhetskopieras. Flytta dem sedan från enheten för att skapa ledigt utrymme.
+
+1039 = Lagringskvoten är full
+1039D = Lagringskvoten för [%1] är uppnådd. Se till att filerna säkerhetskopieras. Flytta dem sedan från enheten för att skapa ledigt utrymme.
+
+2039 = Lagringskvoten är full
+2039D = Lagringskvoten för [%1] är uppnådd. Se till att filerna säkerhetskopieras. Flytta dem sedan från enheten för att skapa ledigt utrymme.
+
+2040 = UPS-enhet som inte stöds
+2040D = UPS-enhet som inte stöds
+
+2121 = Låst USB-enhet
+2121D = En låst USB-enhet har upptäckts (leverantör: %1, modell: %2, serienummer: %3).
+
+2126 = Filer har kopierats från USB-enhet
+2126D = Filer har kopierats från <%1> till <%2>.
+
+2128 = Kopierar filer
+2128D = Kopierar filer från USB-enhet.
+
+2129 = Filer har flyttats från USB-enhet
+2129D = Filer har flyttats från <%1> till <%2>.
+
+2131 = Flyttar filer
+2131D = Flyttar filer från USB-enhet.
+
+1200 = Enheten stöds inte
+1200D = Enhet som inte stöds i ingång %1. Ersätt den insatta enheten med en godkänd enhet. En lista med godkända enheter hittar du på: www.wd.com
+
+2200 = Enheten stöds inte
+2200D = Enhet som inte stöds i ingång %1. Ersätt den insatta enheten med en godkänd enhet. En lista med godkända enheter hittar du på: www.wd.com
+
+2202 = För liten enhet
+2202D = För liten enhet i plats %1
+
+2203 = Enhet initieras
+2203D = En enhet initieras i plats %1
+
+2211 = Kontrollerar lagringsintegritet
+2211D = Kontrollerar lagringsintegritet.
+
+2214 = Enhet insatt
+2214D = En ny enhet har satts in i ingång %1. Du kan lägga till den här enheten till systemets RAID-uppsättning under Lagring >> RAID genom att klicka på Ändra RAID-läge.
+
+0215 = Enhet borttagen
+0215D = En enhet har tagits bort från ingång %1
+
+2215 = Enhet borttagen
+2215D = En enhet har tagits bort från ingång %1. Kontrollera systemet.
+
+2217 = Inga installerade enheter
+2217D = Inga enheter har installerats. Lägg till enheter om du vill börja använda systemet. Du kan köpa en ny enhet på: www.wd.com
+
+2218 = En reservenhet lades till i RAID-matrisen
+2218D = En reservenhet lades till i RAID-matrisen.
+
+2219 = RAID-migreringen är klar
+2219D = RAID-migreringen är klar.
+
+2220 = RAID-återställningen är klar
+2220D = RAID-återställningen är klar.
+
+2221 = Icke-WD Red NAS-enhet insatt
+2221D = Icke-WD Red NAS-enhet insatt. Observera att WD My Cloud-enheten är utformad för att fungera optimalt med WD Red NAS-hårddiskar.
+
+2222 = Volymen har formaterats
+2222D = Volymen %1 har formaterats.
+
+2223 = Expansionsförlopp för volym
+2223D = Expansionsförlopp för volym %1: %2%
+
+2300 = Mediegenomsökningen har stoppats
+2300D = Enhetsgenomsökningen av mediet stoppades. Vissa miniatyrbilder visas kanske inte vid fjärråtkomst. Om du vill återuppta genomsökningen startar du om ditt WD My Cloud-system.
+
+1501 = Uppdatering för app tillgänglig
+1501D = %1 -appen har en uppdatering tillgänglig. Uppdatera.
+
+1502 = Virus hittades
+1502D = Grundläggande åtgärder för antivirus: Virusgenomsökningen slutförd – virus hittades. Kontrollera rapporten för virusgenomsökning för att visa detaljer.
+
+2503 = Virusgenomsökningen slutförd
+2503D = Grundläggande åtgärder för antivirus: Virusgenomsökningen slutförd. Inga virus hittades.
+
+2504 = Schemalagd virusgenomsökning startad
+2504D = Grundläggande åtgärder för antivirus: Schemalagd virusgenomsökning startad.
+
+2505 = Schemalagd virusgenomsökning stoppad.
+2505D = Grundläggande åtgärder för antivirus: Schemalagd virusgenomsökning stoppad p.g.a. att stopptid uppnåddes. Genomsökningen slutfördes inte. 
+
+1103 = Fel inträffade vid återställning av data från din safepoint
+1103D = %4 - Det uppstod ett fel vid återställning av data från din safepoint %1 på resursen %2 på %3.
+
+2103 = Din data har återställts från din safepoint
+2103D = Din data har återställts från din safepoint %1 på resursen %2 på %3.

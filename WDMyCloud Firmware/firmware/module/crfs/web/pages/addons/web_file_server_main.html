@@ -1,0 +1,386 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+	<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+	<META HTTP-EQUIV="Expires" CONTENT="-1">
+</head>
+
+<!-- jQuery Lib -->
+<script type="text/javascript" src="/web/jquery/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/web/jquery/js/jquery-migrate-1.1.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/web/jquery/css/redmond/jquery-ui-1.10.3.min.css">
+<link rel="stylesheet" type="text/css" href="/web/jquery/css/jquery-ui.custom.css">
+<script type="text/javascript" src="/web/jquery/js/jquery-ui-1.10.3.min.js"></script>
+<script type="text/javascript" src="/web/jquery/js/jquery.tools-1.2.7.min.js"></script>
+<script type="text/javascript" src="/web/jquery/js/jquery.tools.expose-1.2.7.min.js"></script>
+
+<!-- Flexigrid -->	
+<link rel="STYLESHEET" type="text/css" href="/web/jquery/flexigrid/css/flexigrid_wfs.css?v2.0">
+<script language="javascript" src="/web/jquery/flexigrid/js/flexigrid_webfile.js?v2.1"></script>
+
+<!-- styles needed by jScrollPane -->
+<link type="text/css" href="/web/jquery/jScrollPane/style/jquery.jscrollpane.css?v2.0" rel="stylesheet" media="all" />
+<!-- the mousewheel plugin - optional to provide mousewheel support -->
+<script type="text/javascript" src="/web/jquery/jScrollPane/script/jquery.mousewheel.min.js"></script>
+<!-- the jScrollPane script -->
+<script type="text/javascript" src="/web/jquery/jScrollPane/script/jquery.jscrollpane.min.js"></script>
+
+<!-- Context Menu -->
+<link href="/web/jquery/jquery.contextMenu-1.01/jquery.contextMenu.css?v2.0" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/web/jquery/jquery.contextMenu-1.01/jquery.contextMenu.js?v2.0"></script>
+<script type="text/javascript" src="/web/jquery/jquery.contextMenu-1.01/jquery.contextMenu_webfile.js?v2.0"></script>
+
+<!-- cookie Lib -->
+<script type="text/javascript" src="/web/jquery/jquery.cookie/jquery.cookie.js"></script>
+<script type="text/javascript" src="/web/jquery/jquery.cookie/jquery.cookie.pack.js"></script>
+
+<script type="text/javascript" src="/web/function/wd_ajax.js"></script>
+
+<script type="text/javascript" src="/web/function/input.js"></script>
+
+<script type="text/javascript" src="/web/function/web_file_server.js?v2.3"></script>
+<script type="text/javascript" src="/web/function/html5_upload.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/web/css/style.css?v20">
+<link rel="stylesheet" type="text/css" href="/web/css/button.css?v20">
+<link rel="stylesheet" type="text/css" href="/web/css/general.css?v20">
+
+<style>
+body {
+	background-color: transparent;
+	background-image: none;
+}
+
+.file{	
+	text-indent:20px;
+	background-image: url("/web/jquery/jqueryFileTree/images/file.png?v2.0");
+	background-repeat: no-repeat;
+	line-height:7px;
+}
+.folder{	
+	text-indent:15px;													
+	background-image: url("/web/jquery/jqueryFileTree/images/directory.png?v2.0");
+	background-repeat: no-repeat;
+	line-height:6px;
+}
+
+.trSelected {
+    background: #1EABFF;
+    color: #F0F0F0;
+}
+
+.upload-drop-area-hidden{
+	visibility:hidden;	
+}
+.upload-drop-area {   	
+    padding:20px;
+    background:#FF9797;    
+}
+.upload-drop-text{
+    text-align:center; 
+    font-size:16px;  
+    display:none; 
+}
+
+.max_menu{
+    white-space: nowrap;   
+    overflow: hidden;      
+    text-overflow: ellipsis;
+    width:70px; 
+    float:left;
+}
+
+
+.menu_left{
+	float:left;
+}
+
+.flexigrid div.bDiv tr:hover td, 
+.flexigrid div.bDiv tr:hover td.sorted,
+.flexigrid div.bDiv tr.trOver td.sorted, 
+.flexigrid div.bDiv tr.trOver td
+{				
+	color: #15ABFF;    
+
+}
+
+.flexigrid input
+{
+	width:20px;
+}
+
+.gray_icon
+{
+	filter:alpha(opacity=30);opacity:0.3; top:0;left:0;cursor: text;
+}
+
+
+.table_file ,
+div.bDiv .flexigrid tr:hover .table_file
+{
+    background-image: url("/web/images/icon/NAS_icn_row_document_up.png?v2.0");
+    background-size: 30px 30px;	
+    background-repeat: no-repeat;
+    margin-top: 0;
+    padding-left: 40px;
+    line-height: 35px;
+    text-decoration: none;
+    outline: none;	
+    white-space: nowrap;   
+    overflow: hidden;      
+    text-overflow: ellipsis; 
+    float:left;
+}
+.trSelected .table_file
+{
+    background-image: url("/web/images/icon/NAS_icn_row_document_down.png?v2.0");
+}
+.table_folder
+{
+	background-image: url("/web/images/icon/NAS_icn_row_folder_up.png?v2.0");
+	background-size: 30px 30px;
+	background-repeat: no-repeat;
+    margin-top: 0;
+    padding: 0 5px;
+	padding-left: 40px;
+    line-height: 35px;	
+	text-decoration: none;
+	outline: none;	
+	white-space: nowrap;   
+    overflow: hidden;      
+    text-overflow: ellipsis; 
+    float:left;
+}
+.trSelected .table_folder
+{
+    background-image: url("/web/images/icon/NAS_icn_row_folder_down.png?v2.0");
+}
+#id_path
+{
+	width:500px;
+	border: 0px solid #ffffff;
+	
+	white-space: nowrap;   
+  overflow: hidden;      
+  text-overflow: ellipsis; 
+  max-width:500px;
+}
+
+
+.table_folder > span {
+    width: 240px;
+    max-width: 240px;
+    font-size: 14px;
+    white-space: nowrap;   
+    overflow: hidden;      
+    text-overflow: ellipsis; 
+    float:left;
+}
+.table_file > span
+{
+	white-space: nowrap;   
+  overflow: hidden;      
+  text-overflow: ellipsis; 
+  float:left;  
+  width:240px;
+  max-width:240px;
+}
+#admin_tb img {
+    margin-left: 9px;
+}
+</style>
+
+<script>
+function chg_path_web(path)
+{
+	var new_path="";
+
+	for(k=0;k<HDD_INFO_ARRAY.length;k++)
+	{
+		var str=HDD_INFO_ARRAY[k].split(":");	//Volume_1:/mnt/HD/HD_a2d
+
+		if(path.indexOf(str[1])!=-1)
+		{
+			if(path==str[1])
+				new_path = str[0];
+			else
+			{
+				if(path.indexOf("/mnt/USB/")!=-1)  //fish20120727+ for usb
+					new_path=str[0]+ path.substring(16,path.length);
+				else
+				new_path=str[0]+ path.substring(13,path.length);
+			}
+		}
+	}
+
+	new_path=new_path.replace(/\s/g,'&nbsp;');
+	return new_path;
+}
+function page_load()
+{
+	ready_web_file_server();
+	parent.set_iframe_width();
+	//html5 drop file upload function
+	var oBrowser = new parent.detectBrowser();
+	var browser;
+
+	if (oBrowser.isIE)
+	{
+		browser = "ie"
+	}	
+	else
+	{
+		//$(document).ready(dnd.ready);
+	}	
+	$(document).click(function(e) { 
+		var cursor = $(e.target).css("cursor");
+		if (cursor == "pointer" && !parent.disable_click_event)
+			parent.restart_web_timeout();
+	});		
+}
+</script>
+
+<script type="text/javascript">
+
+/***********************************************
+* Disable select-text script- © Dynamic Drive (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+//form tags to omit in NS6+:
+var omitformtags=["input", "textarea", "select"]
+
+omitformtags=omitformtags.join("|")
+
+function disableselect(e){
+if (omitformtags.indexOf(e.target.tagName.toLowerCase())==-1)
+return false
+}
+
+function reEnable(){
+return true
+}
+
+if (typeof document.onselectstart!="undefined")
+document.onselectstart=new Function ("return false")
+else{
+document.onmousedown=disableselect
+document.onmouseup=reEnable
+}
+
+</script>
+
+<body onload="page_load();">
+	<div class="overlay" id="overlay">
+	<div id="id_result" style="display:none">
+		<div id="id_percentage">0%</div>	
+	</div>
+</div>	
+	
+<div class="osX">
+	<div id="my_scroll_main" style="display:none;">
+		<table cellspacing="0" cellpadding="0" border="0">
+			<tr>
+				<td valign="top">
+					<div class="h1_content header_2 _text" lang="_menu" datafld="web_file_server"></div>
+    
+					<!-- Action Icon -->
+					<table cellspacing=0 cellpadding=0 border=0 width="100%">
+						<tr>
+							<td align='right'>		
+								<div class="main_action" id="admin_tb">
+                                    <img class="icon" id="Apps_webfileviewerCopy_link" src="/web/images/wfs/copy_n.png?v2.0" rel="Copy" />
+                                    <img class="icon" id="Apps_webfileviewerMove_link" src="/web/images/wfs/move_n.png?v2.0" rel="Move" />												
+                                    <img class="icon" id="Apps_webfileviewerUpload_link" src="/web/images/wfs/icon_webfileviewer_upload_n.png?v2.0" rel="Upload" />
+                                    <img class="icon" id="Apps_webfileviewerDownload_link" src="/web/images/wfs/download_n.png?v2.0" rel="Download" />
+                                    <img class="icon" id="Apps_webfileviewerRename_link" src="/web/images/wfs/edit_n.png?v2.0" rel="Rename" />	
+                                    <img class="icon" id="Apps_webfileviewerDelete_link" src="/web/images/wfs/del_n.png?v2.0" rel="Delete" />	
+                                    <img class="icon" id="Apps_webfileviewerRefresh_link" src="/web/images/wfs/icon_webfileviewer_refresh_n.png?v2.0" rel="Refresh" />		
+                                    <img class="icon" id="Apps_webfileviewerCreate_link" src="/web/images/wfs/icon_webfileviewer_create_n.png?v2.0" rel="Create" />
+								</div>
+							</td>
+						</tr>
+					</table>
+				
+					<!-- Title -->
+					<div id="main_title" class="main_title">
+						<div class="main_title_left"></div>
+						<div class="main_title_right"></div>
+					</div>
+					<script>
+					function open_win()
+					{
+						parent.$("#html5_upload").dialog('open');			
+					}
+					</script>
+				
+					<div style="padding-top:10px;">
+						<table cellspacing=0 cellpadding=0 border=0>
+							<tr>
+								<td><div style="margin-left:5px;margin-bottom:0px;height:20px;font-weight:800"><span class="_text"  lang="_network_access" datafld="path" ><!-- Path --></span>:&nbsp;&nbsp;</div></td>
+								<td>
+									<div id="id_now_path" style="margin-left:5px;margin-bottom:-5px;height:20px;color:white;display:none"></div>
+				
+									<div id="id_path" style='margin-top:-3px'><span style='font-size:15px;'>Shares</span></div>																		
+								</td>
+							</tr>
+						</table>
+					</div>
+								
+					<div id="id_main" >
+						<div id="uploadProgress"></div>
+						<div id="uploadComplete"></div>
+						<div id="uploadTarget">
+							<span class="upload-drop-text _text" lang="_wfs" datafld="msg14"></span>
+							<span id="uploadHidden">
+								<div id="scrollbar_wfs">	
+								<div id="id_test" style="display:inline;width:'auto';"></div>
+									<table id="flex1" class="flexigrid"></table>
+								</div>
+								<table id="id_wfs_page_location" style="margin-left:650px">
+									<tr>
+										<td><span id="id_wfs_now"></span></td>
+										<td>/</td>
+										<td><span id="id_wfs_total"></span></td>
+									</tr>	
+								</table>							
+							</span>
+						</div>
+					</div>
+				
+					<ul id="myMenu" class="contextMenu">
+						<li class="download"><a href="#Download"><span class="_text" lang="_wfs" datafld="download">Download</span></a></li>        
+						<li class="copy"><a href="#Copy"><span class="_text" lang="_wfs" datafld="copy">Copy</span></a></li>                    
+						<li class="import"><a href="#Move"><span class="_text" lang="_wfs" datafld="move">Move</span></a></li>
+					
+						<li class="delete"><a href="#Delete"><span class="_text" lang="_common" datafld="del">Delete</span></a></li>
+						<li class="edit"><a href="#Rename"><span class="_text" lang="_wfs" datafld="rename">Rename</span></a></li>
+						<li class="list"><a href="#Properties"><span class="_text" lang="_wfs" datafld="properties">Properties</span></a></li>
+						<li class="zip"><a href="#Create_Zip"><div class="menu_left _text" lang="_button" datafld="create" style='font-size:12px'>Create</div><div class="menu_left">&nbsp;&nbsp;</div><div id="id_add_zip" class="max_menu"></div><span id="id_zip" style="display:none">.zip</span></a></li>
+						<li class="zip"><a href="#Add_Zip"><span class="_text" lang="_wfs" datafld="add_to_zip">Add To Zip</span> </a></li>				    
+						<li class="archive_extract"><a href="#Unzip"><span class="_text" lang="_wfs" datafld="unzip">Unzip</span></a></li>
+						<li class="untar"><a href="#Untar"><span class="_text" lang="_wfs" datafld="untar">Untar</span></a></li>
+						<li class="open"><a href="#Open"><span class="_text" lang="_wfs" datafld="open">Open</span></a></li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<form action="/cgi-bin/webfile_mgr.cgi" method="post" name="form_download">
+	<input type="hidden" name="cmd" value="cgi_download">
+	<input type="hidden" name="path">
+	<input type="hidden" name="path1">
+	<input type="hidden" name="name">
+	<input type="hidden" name="type">
+	<input type="hidden" name="browser">
+	<input type="hidden" name="os">
+</form>	
+
+</body>
+</html>
+	

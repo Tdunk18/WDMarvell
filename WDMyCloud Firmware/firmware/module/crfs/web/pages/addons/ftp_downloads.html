@@ -1,0 +1,480 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="PRAGMA" content="no-cache"> 
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+</head>
+<script type="text/javascript" src="/web/function/codepage.js"></script>
+<script type="text/javascript" src="/web/function/schedule_select.js"></script>
+<script type="text/javascript" src="/web/function/ftp_downloads.js"></script>
+<script type="text/javascript">
+var jobs_list = new Array();
+var timeoutId = -1;
+var now_idx = -1;
+var JOBS_AMOUNT = 25;
+var modify_id = -1;
+var last_jobs_list = new Object();
+var action_type = "";
+function page_load()
+{
+	$("#jobs_list_div").hide();
+
+	$("input:text").inputReset();
+	init_switch();
+
+	$("#apps_ftpdownloadsSourcepath_button").click(function(){		
+		
+	if ($("#apps_ftpdownloadsHost_text").val() == "")
+	{
+		jAlert( _T('_ddns', 'msg11'), "warning","",function(){$("#apps_ftpdownloadsHost_text").focus()});
+		return false;
+	}	
+	else
+	{			
+			$("#FTPDownloadDiag").overlay().close();		
+			var _tpl =	"<div id='spinner_div' style='display:inline-block;height:20px;'>"+
+										"<img src='/web/images/SpinnerSun.gif' border='0' width='18' height='18' style='float:left'>"+
+										"<div style='display:inline-block;height:20px;float:left;padding-left:5px;'>{0}</div>"+
+									"</div>";
+			var my_html = String.format(_tpl, _T('_common','loading'));
+			$("#folder_selector").empty().before(my_html);
+			
+			var res = $("#apps_ftpdownloadsLoginMethod_Div").find(".buttonSel").attr("value");
+			var my_user = (parseInt(res,10) == 0)?$("#apps_ftpdownloadsUsername_text").val():"";
+			var my_pwd = (parseInt(res,10) == 0)?$("#apps_ftpdownloadsPassword_text").val():"";
+			var my_host = ($("#apps_ftpdownloadsHost_text").val() == "")?$("#apps_ftpdownloadsHost_text").val():$("#apps_ftpdownloadsHost_text").val()+":"+$("#apps_ftpdownloadsHostPort_text").val();
+			var my_lang = $("#apps_ftpdownloadsLang").attr('rel');
+			
+			open_folder_selecter({
+				title: _T('_usb_backups', 'select_source_dir'),
+				device: "HDD", //HDD, USB, ..., ALL
+				root: '',
+				host: my_host,
+				user: my_user,
+				pwd: my_pwd,
+				cmd: 'cgi_read_open_tree',
+				lang: my_lang,
+				function_id:'FDownload',
+				script: '/web/addons/jqueryFileTree.php',
+				effect: 'no_son',
+				formname: 'generic',
+				textname: null,
+				filetype: 'all',
+				checkbox_all: 2,
+				showfile: 1,
+				chkflag: 1, //for show check box, 1:show, 0:not
+				chk:1,
+				callback: function(r){				
+					$("#spinner_div").remove();		
+				},	
+				multi_select: true,
+				max_select: 25,
+				over_select_msg: _T("_usb_backups", "over_select_msg"),
+				afterOK: function() {
+					var sel_source_ele = $("#folder_selector input:checkbox:checked[name=folder_name]");
+	
+					var table_ele = $("#Ftp_Download_Create .source_listDiv ul");
+					table_ele.empty();
+					var sel_source_ele_count = 0;
+					sel_source_ele.each(function(){
+						if (!$(this).prop('disabled'))
+						{
+							var t = "<li>";			
+							var _path = $(this).val();
+						
+							if ($(this).parent().parent().hasClass('directory'))
+							{
+								_path += "/"
+							}
+							
+							t += String.format('<div class="select_text TooltipIcon" title="{0}">{1}</div>', _path, _path);
+							t += String.format('<span style="display:none">{0}</span>', _path);
+							t += "</li>";
+							
+							sel_source_ele_count ++;
+							table_ele.append(t);
+						}	
+					});
+	
+					var list_height = sel_source_ele_count * 32;
+					$("#Ftp_Download_Create .source_listDiv").height((list_height <= 96) ? list_height : 96);
+	
+					if (sel_source_ele.length > 0)
+						$(".source_listDiv_empty").hide();
+					else
+						$(".source_listDiv_empty").show();
+	
+					if (sel_source_ele.length > 1)
+						$("#Ftp_Download_Create .source_listDiv").jScrollPane({contentWidth:260, autoReinitialise: true});
+	
+					init_select();	
+					$("#FTPDownloadDiag").overlay().load();
+					$("#FTPDownloadDiag").center();
+				},
+				afterCancel: function() {				
+					$("#spinner_div").remove();
+					$("#folder_selector").empty();
+					$("#FTPDownloadDiag").overlay().load();
+					$("#FTPDownloadDiag").center();
+				}
+			});
+	}	
+	});
+	
+	$("#apps_ftpdownloadsDestpath_button").click(function(){
+		$("#FTPDownloadDiag").overlay().close();		
+		open_folder_selecter({
+			title: _T('_usb_backups', 'select_dest_dir'),
+			device: "HDD", //HDD, USB, ..., ALL
+			root: '/mnt/HD',
+			cmd: 'cgi_read_open_tree',
+			script: '/cgi-bin/folder_tree.cgi',
+			effect: 'no_son',
+			formname: 'generic',
+			textname: null,
+			filetype: 'all',
+			checkbox_all: 2,
+			showfile: 0,
+			chkflag: 1, //for show check box, 1:show, 0:not
+			chk:1,
+			callback: null,
+			single_select: true,
+			afterOK: function() {
+				var sel_ele = $("#folder_selector input:checkbox:checked[name=folder_name]");
+				var table_ele = $("#Ftp_Download_Create .dest_listDiv ul");
+				table_ele.empty();
+				sel_ele.each(function(){
+					var t = "<li>";
+					var _path = translate_path_to_display($(this).val());
+					t += String.format('<div class="select_text TooltipIcon" title="{0}">{1}</div>', _path, _path);
+					t += String.format('<span style="display:none">{0}</span>', _path);
+					t += "</li>";
+					table_ele.append(t);
+				});
+
+				if (sel_ele.length > 0)
+					$(".dest_listDiv_empty").hide();
+				else
+					$(".dest_listDiv_empty").show();
+
+				init_select();
+				$("#FTPDownloadDiag").overlay().load();
+				$("#FTPDownloadDiag").center();
+			},
+			afterCancel: function() {			
+				$("#FTPDownloadDiag").overlay().load();
+				$("#FTPDownloadDiag").center();
+			}
+		});
+	});
+
+	$("#apps_ftpdownloadsCreate_button").click(function(){
+			if (jobs_list.length >= JOBS_AMOUNT)
+			{
+				jAlert( _T('_ftp_downloads', 'msg1'), "warning");//Text:The maximum number of download jobs has been reached.
+				return false;
+			}
+		
+			jobs_create();
+	});	
+		
+	$("#apps_ftpdownloadsRecurring_switch").click(function(){			
+		var v = getSwitch('#apps_ftpdownloadsRecurring_switch');
+		if( v == 0  )
+		{
+			$(".backup_schedule_tr").hide();
+		}
+		else
+		{
+			$(".backup_schedule_tr").show();
+		}
+	});	
+	create_init();
+	load_jobs_list();			
+}
+function page_unload()
+{
+	$('.Tooltip').remove();
+	unbind_dialog_buttons();
+	
+	clearTimeout(timeoutId);
+}
+
+</script>
+
+<body>
+<div class="h1_content header_2"><span class="_text" lang="_menu" datafld="ftp_downloads"></span></div>
+<div class="field_top"><span class="_text" lang="_ftp_downloads" datafld="desc2"></span></div>
+<div class="hr_0_content"><div class="hr_1"></div></div>
+<button type="button" class="field_top" id="apps_ftpdownloadsCreate_button"><span class="_text" lang="_usb_backups" datafld="create_usb_backups"></span></button>
+
+<div class="field_top">
+	<!-- List -->
+	<div id="jobs_list_div">
+		<div class="hr_0_content"><div class="hr_1"></div></div>
+		<div class="h1_content header_2"><span class="_text" lang="_download" datafld="title2"></span></div>
+		<div class="field_top">
+			<table id="jobs_list"></table>
+		</div>
+		<br>
+	</div>
+	
+</div>
+
+<div id="FTPDownloadDiag" class="WDLabelDiag" style="display:none;">
+	<div id="FTPDownloadDiag_title" class="WDLabelHeaderDialogue WDLabelHeaderDialogueFolderIcon">
+		<span class="_text" lang="_ftp_downloads" datafld="detail"></span>
+	</div>
+
+	<div align="center"><div class="hr"><hr></div></div>
+	<!-- Detail -->	
+	<div id="Ftp_Download_Detail" style="display:none;">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<table border="0" width="580" cellpadding="0" cellspacing="0" style='table-layout:fixed'>
+					<tr>
+						<td class="tdfield">
+							<span class="_text" lang="_usb_backups" datafld="job_name"></span>
+						</td>
+						<td class="tdfield_padding">
+							<span id="ftp_task_name"></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="tdfield">
+							<span class="_text" lang="_nfs" datafld="host"></span>
+						</td>
+						<td class="tdfield_padding">
+							<span id="ftp_host"></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="tdfield" style="vertical-align: top; padding-top: 25px;">
+							<span class="_text" lang="_usb_backups" datafld="source_dir"></span>
+						</td>
+						<td class="tdfield_padding">
+							<div class="source_listDiv">
+								<ul></ul>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="tdfield">
+							<span class="_text" lang="_usb_backups" datafld="dest_dir"></span>
+						</td>
+						<td class="tdfield_padding">
+							<div class="dest_listDiv">
+								<ul></ul>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="tdfield">
+							<span class="_text" lang="_usb_backups" datafld="status"></span>
+						</td>
+						<td class="tdfield_padding">
+							<span id="internal_status"></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="tdfield">
+							<span class="_text" lang="_download" datafld="codepage"></span>
+						</td>
+						<td class="tdfield_padding">
+							<span id="ftp_codepage"></span>
+						</td>
+					</tr>
+
+					<tr>
+						<td class="tdfield"><span class="_text" lang="_backup" datafld="recurring_backup"></span></td>
+						<td class="tdfield_padding">
+								<span id="ftp_download_sch_status"></span>
+						</td>
+					</tr>		
+				</table>
+			</div>	
+		</div>
+		
+		<div class="hrBottom2"><hr></div>
+		<button type="button" id="apps_ftpdownloadsClose1_button" class="ButtonRightPos1 close"><span class="_text" lang="_button" datafld="close"></span></button>
+	</div>
+	<!-- end of Detail -->	
+	
+		<!-- Create -->
+	<div id="Ftp_Download_Create" style="display:;none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<table border="0" cellpadding="0" cellspacing="0" width="100%">				
+					<tr>
+						<td class="tdfield"><span class="_text" lang="_usb_backups" datafld="job_name"></span></td>
+						<td class="tdfield_padding" colspan="2">
+							<div id="apps_ftpdownloadsTaskName_Div">
+							<input type="hidden" name="f_task_id" id="f_task_id">
+							<input type="hidden" name="old_taskname" id="old_taskname">
+							<input type="text" name="apps_ftpdownloadsTaskName_text" id="apps_ftpdownloadsTaskName_text" style="width: 200px;" maxLength="16">
+							</div>
+							<div id="apps_ftpdownloadsModifyTaskName_text" style="display:;none"></div>
+						</td>
+					</tr>
+					<tr>
+						<td class="tdfield"><span class="_text" lang="_nfs" datafld="host"></span></td>
+						<td class="tdfield_padding" colspan="2">
+							<div id="apps_ftpdownloadsHost_Div">
+							<input type="text" name="apps_ftpdownloadsHost_text" id="apps_ftpdownloadsHost_text" style="width: 200px;" maxLength="32"> :
+							<input type="text" name="apps_ftpdownloadsHostPort_text" id="apps_ftpdownloadsHostPort_text" value="21" style="width: 50px;" maxLength="12">
+							</div>
+							<div id="apps_ftpdownloadsModifyHost_text" style="display:;none"></div>
+						</td>	
+					</tr>		
+					<tr>
+						<td class="tdfield"><span class="_text" lang="_ftp_downloads" datafld="login_method"></span></td>
+						<td class="tdfield_padding" colspan="2">
+							<div id="apps_ftpdownloadsLoginMethod_Div">	
+								<button class="left_button _text" lang="_mail" datafld="account" id="apps_ftpdownlaodsAccount_button" value="0"></button><button class="buttonSel right_button _text" lang="_mail" datafld="anonymous" id="apps_ftpdownlaodsAnonymous_button" value="1"></button>	
+							</div>
+							<div id="apps_ftpdownloadsModifyLoginMethod_text" style="display:;none"></div>
+						</td>
+					</tr>		
+					<tr id="apps_ftpdownloadsLoginMethodUserName_tr" style="display:;none">
+						<td class="tdfield"><span class="_text" lang="_mail" datafld="user_name"></span></td>
+						<td class="tdfield_padding" colspan="2">
+							<div id="apps_ftpdownloadsLoginMethodUserName_Div">
+							<input type="text" name="apps_ftpdownloadsUsername_text" id="apps_ftpdownloadsUsername_text" class="input_x5" maxLength="32">
+							</div>
+							<div id="apps_ftpdownloadsModifyLoginMethodUserName_text" style="display:;none"></div>
+						</td>	
+					</tr>
+					<tr id="apps_ftpdownloadsLoginMethodPWD_tr" style="display:;none">
+						<td class="tdfield"><span class="_text" lang="_mail" datafld="password"></span></td>
+						<td class="tdfield_padding" colspan="2">
+							<div id="apps_ftpdownloadsLoginMethodPWD_Div">
+							<input type="password" name="apps_ftpdownloadsPassword_text" id="apps_ftpdownloadsPassword_text" class="input_x5" maxLength="32">	
+							</div>
+							<div id="apps_ftpdownloadsModifyLoginMethodPWD_text" style="display:;none"></div>
+						</td>	
+					</tr>				
+					<tr>
+						<td class="tdfield" style="vertical-align: top; padding-top: 25px;"><span class="_text" lang="_usb_backups" datafld="source_dir"></span></td>
+						<td class="tdfield_padding" width="270">
+							<div class="source_listDiv">
+								<ul></ul>
+							</div>
+							<div class="source_listDiv_empty">
+								<ul><li></li></ul>
+							</div>
+						</td>
+						<td class="tdfield_padding" style="padding-left: 5px;">
+							<button type="button" id="apps_ftpdownloadsSourcepath_button"><span class="_text" lang="_button" datafld="browse"></span></button>
+						</td>
+					</tr>
+					<tr>
+						<td class="tdfield"><span class="_text" lang="_usb_backups" datafld="dest_dir"></span></td>
+						<td class="tdfield_padding" width="270">
+							<div class="dest_listDiv">
+								<ul></ul>
+							</div>
+							<div class="dest_listDiv_empty">
+								<ul><li></li></ul>
+							</div>
+						</td>
+						<td class="tdfield_padding" style="padding-left: 5px;">
+							<button type="button" id="apps_ftpdownloadsDestpath_button"><span class="_text" lang="_button" datafld="browse"></span></button>
+						</td>
+					</tr>					
+					<tr>
+						<td class="tdfield"><span class="_text" lang="_download" datafld="codepage"></span></td>
+						<td class="tdfield_padding" colspan="3">
+								<table cellspacing="0" cellpadding="0" border="0" width="auto">
+            		<tr>	
+            			<!--<td><input type="text" size="16" name="apps_ftpdownloadsLang_text" id="apps_ftpdownloadsLang_text" value="UTF-8" onkeyup="FDownloads_codepage(0);" class="input_x6"></td>
+									<td>&nbsp;<<&nbsp;</td>-->
+                	<td><div class="select_menu" id="Selector_AllCodepage_Create"></div></td>
+									<!--<td style="width:25px;"><div class="TooltipIcon" id="tip_FDownload_lang"></div></td>-->
+                	</tr>
+                </table>	
+						</td>	
+					</tr>				
+					<tr style="display:none">
+						<td class="tdfield"><span class="_text" lang="_usb_backups" datafld="backup_type"></span></td>
+						<td class="tdfield_padding" colspan="2">
+							<div class="select_menu" style="height:25px" id="f_type_select">
+								<ul>
+									<li class="option_list">
+										<div id="apps_ftpdownloadsType_select" class="wd_select option_selected">
+											<div class="sLeft wd_select_l"></div>
+											<div class="sBody text wd_select_m" id="f_type" rel="1"><span class="_text" lang="_usb_backups" datafld="copy"></span></div>
+											<div class="sRight wd_select_r"></div>
+										</div>
+
+										<ul class="ul_obj" id="f_type_li" style="height:120px">
+											<li rel="1" class="li_start"><a href="#""><span class="_text" lang="_usb_backups" datafld="copy"></span></a></li>
+											<li rel="2" class="li_end"><a href="#""><span class="_text" lang="_usb_backups" datafld="sync"></span></a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div id="f_type_text"></div>
+						</td>
+					</tr>			
+					<tr>
+						<td class="tdfield"><span class="_text" lang="_backup" datafld="recurring_backup"></span></td>
+						<td class="tdfield_padding" colspan="2">
+							<input id="apps_ftpdownloadsRecurring_switch" name="apps_ftpdownloadsRecurring_switch" class="onoffswitch" type="checkbox" value="true">
+						</td>
+					</tr>	
+					<tr class="backup_schedule_tr" style="display:none">
+						<td class="tdfield"></td>
+						<td class="tdfield_padding" colspan="2">
+							<div id="s_type">
+								<button id="backups_InternalBackupDaily_button" class="left_button" value="3"><span class="_text" lang="_mail" datafld="daily">Daily</span></button><button id="backups_InternalBackupWeekly_button" class="middle_button" value="2"><span class="_text" lang="_mail" datafld="weekly">Weekly</span></button><button id="backups_InternalBackup Monthly _button" class="right_button" value="1"><span class="_text" lang="_mail" datafld="monthly">Monthly</span></button>																
+							</div>
+						</td>
+					</tr>				
+					<tr class="backup_schedule_tr" style="display:none">
+						<td class="tdfield"></td>
+						<td class="tdfield_padding" colspan="2">
+						
+						<table border="0" cellspacing="0" cellpadding="0" height="0">
+						<tr>							
+							<td>
+										<div id="id_week_div" style="width:170px;display:none">
+										<div class="select_menu" id="id_sch_week_top_main"></div>
+										</div>
+							</td>
+							<td>			
+										<div id="id_month_div" style="width:170px;display:none">
+											<div class="select_menu" id="id_sch_day_top_main"></div>
+										</div>	
+							</td>
+							<td>			
+										<div id="id_hour_div" style="width:170px;display:none">
+										<div class="select_menu" id="id_sch_hour_top_main"></div>
+										</div>
+							</td>
+							<td>			
+										<div id="id_pm_div" style="width:170px;display:none">
+										<div class="select_menu" id="id_pm_top_main"></div>
+										</div>
+							</td>
+						</tr>
+					</table>		
+							
+						</td>
+					</tr>		
+					<tr><td colspan="3" height="50px"></td></tr>					
+				</table>		
+			</div>
+		</div>		
+		
+		<div class="hrBottom2"><hr></div>
+		<button type="button" id="apps_ftpdownloadsCreate3_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="create"></span></button>
+		<button type="button" id="apps_ftpdownloadsSave3_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="apply"></span></button>
+		<button type="button" id="apps_ftpdownloadsCancel3_button" class="ButtonLeftPos"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+	</div>
+<!-- end of Create -->
+</div>
+
+</body>
+</html>	

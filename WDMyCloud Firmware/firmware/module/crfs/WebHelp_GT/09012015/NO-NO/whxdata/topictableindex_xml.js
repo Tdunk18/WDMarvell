@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><cki><ck fm=\"Om administrasjon av din personlige nettsky\" to=\"Modifisere en FTP-nedlasting\" num=\"52\"/><ck fm=\"Modifisere en FTP-nedlasting\" to=\"Hva er sikkerhetskopiering til nettskyen?\" num=\"54\"/><ck fm=\"Hva er RAID-lagring?\" to=\"Hva er RAID-lagring?\" num=\"1\"/></cki>";

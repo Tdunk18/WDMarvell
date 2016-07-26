@@ -1,0 +1,8 @@
+0001 = 	%1 konumundan uyarı iletisi
+0002 = 	%2 %1 konumunda aşağıdaki olaylar oluşturuldu
+0003 = 	Olay açıklaması
+0004 = 	Önem düzeyi
+0005 = 	Olay kodu
+0006 = 	Olay saati
+0007 = 	Olay başlığı
+0008 = 	Bellenim sürümü

@@ -1,0 +1,256 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<style>
+#show_group_div{
+	/*border:1px solid red;*/
+	min-width:0px;
+	max-width:103px;
+}
+#form_import_group .file_input_div{
+	position: relative;
+	width:auto;
+	height:auto;
+}
+#form_import_group .file_input_hidden{
+	cursor: pointer;
+	font-size: 50px; 
+	position: absolute; 
+	right: 0px; 
+	top: 0px; 
+	width:1px;
+	opacity: 0; 
+	filter: alpha(opacity=0); 
+	-ms-filter: "alpha(opacity=0)"; 
+	-khtml-opacity: 0; 
+	-moz-opacity: 0;
+}
+#users_user_button , #users_group_button {
+	width:103px;
+}
+</style>
+
+<script language="javascript" src="/web/function/groups.js?v=1.00"></script>
+
+<script type="text/javascript">
+function page_load()
+{
+	help_link();
+	var sys_time = (new Date()).getTime();
+	initDiag("/web/users/groupDiag.html?r=" + sys_time);
+
+	$("#users_user_button").click(function(){
+		go_page('/web/users/users.html', 'nav_users');
+	});	
+		
+	get_group_list("","");
+	
+	$("#users_editGroupMember2_link").click(function() {			
+		init_modify_group_member_dialog();
+	});
+
+	$("#users_editGroupMember2_link").keypress(function(e) {			
+		if (e.keyCode=='13')
+			$("#users_editGroupMember2_link").click();
+	});
+	
+	$("#users_editGroupQuota_link , #ad_g_quota_conf_div").click(function() {			
+		init_modify_group_quota_dialog('local');
+	});
+		
+	$("#ad_g_quota_conf_div").click(function() {	
+		init_modify_group_quota_dialog('ad');
+	});
+		
+	$("#users_editGroupQuota_link , #ad_g_quota_conf_div").keypress(function(e) {			
+		if (e.keyCode=='13')
+			$("#users_editGroupQuota_link , #ad_g_quota_conf_div").click();
+	});
+			
+    $("#users_createGroup_button").click(function(){
+		var create_status = api_do_query_create_status2("iGroup");
+		if(create_status==-1)
+		{
+			jAlert(_T('_user','msg46'), 'warning2');
+			return;
+		}
+		init_create_group_dialog();
+	});
+    	
+    $("#users_createGroup_button").keypress(function(e){
+		if (e.keyCode=='13')
+			$("#users_createGroup_button").click();
+	});
+			
+    $("#users_removeGroup_button").click(function(){
+    	if($(this).hasClass("gray_out")) return;
+		var create_status = api_do_query_create_status2("iGroup");
+		if(create_status==-1)
+		{
+			jAlert(_T('_user','msg46'), 'warning2');
+			return;
+		}
+		Delete_Group();
+	});
+	
+    $("#users_removeGroup_button").keypress(function(e){
+		if (e.keyCode=='13')
+			$("#users_removeGroup_button").click();
+	});
+		
+	currentIndex=1;
+	$(".ButtonArrowTop").addClass('gray_out');
+	$(".ButtonArrowBottom").removeClass('gray_out');
+	scrollDivTop_User('SubMenuDiv');
+	
+	$("input:text").inputReset();
+	
+	if(QUOTA_FUNCTION==1)
+	{
+		$("#quota_tr").show();
+	}
+}
+function open_gimport_dialog()
+{
+	$("#users_impGroupsFile_text").click();
+}
+function page_unload()
+{
+}
+</script>
+
+<body>
+
+<table cellspacing="0" cellpadding="0" border="0">
+	<tr valign="bottom">
+		<td align="left">
+			<div class="u_header_1"><span class="_text" lang="_user" datafld="setup_group"></span></div>
+		</td>
+	</tr>
+</table>
+<div class="hr_0"><div class="hr_1"></div></div>
+
+        
+
+
+<table cellspacing="0" cellpadding="0" border="0" >
+<tr>
+	<td valign="top" id="share_name_td" class="unselect">
+		<div style="margin-top:20px;margin-bottom:-10px;"><button id="users_user_button" class="left_button" value="0"><span class="_text" lang="_menu_title" datafld="users">Users</span></button><button id="users_group_button" class="right_button buttonSel" value="1"><span class="_text" lang="_user" datafld="groups">Groups</span></button></div>
+		<ul id="users_groupUp_link" class="ButtonArrowTop disable" onmousedown="scrollDivDown('SubMenuDiv')" style="padding-top:10px;">
+			<li class="ButtonArrowUpListUp"></li>
+		</ul>
+		<div id="SubMenuDiv" class="no_top_btns">
+			<div class="LightningSubMenubg">
+				<ul class="LightningSubMenu userMenu groupMenuList"></ul>
+			</div>
+		</div>
+		<ul id="users_groupDown_link" class="ButtonArrowBottom disable" onmousedown="scrollDivUp('SubMenuDiv')">
+			<li class="ButtonArrowDownListUp"></li>
+		</ul>
+		<div style="margin-top:10px;">
+			<table id="create_tb" border="0" width="180" height="50" cellspacing="0" cellpadding="0" height="0" align="right">
+				<tr>			
+					<td width="90" align="right">
+						<div tabindex="0" id="users_removeGroup_button" class="VericalListButton2 LightningLabelButtonVericalListRemoveGroup"></div>
+					</td>
+					<td width="90" align="right">
+						<div tabindex="0" id="users_createGroup_button" class="VericalListButton2 LightningLabelButtonVericalListAddGroup"></div>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="right" style="padding-top:10px">
+						<a href="javascript:init_import_group_dialog();" id="users_impGroups_link" class="edit_detail _text" lang="_user" datafld="import_group"></a>
+						<br>
+					</td>	
+				</tr>
+			</table>
+		</div>
+	</td>
+	<td valign="top">
+		<div class="r_content mainbody" id="mainbody">		
+			<div id="group_desc" class="field_top">
+				<table border="0" cellspacing="0" cellpadding="0" height="0" width="695">
+					<tr>
+						<td valign="top">
+				<div class="h1_content header_2"><span class="_text" lang="_user" datafld="about_group"></span></div>
+				<div class="_text tdfield_padding_top_14" lang="_user" datafld="group_desc"></div>
+							<div id="groups_help">
+							<div class="h1_content header_2 field_top"><span class="_text" lang="_top" datafld="help"></span></div>
+							<div class="bumper_link_container"><a class="bumper_help_link about_groups" href="#"><span class="_text" lang="_help" datafld="mgroups"></span></a></div>
+							<div class="bumper_link_container"><a class="bumper_help_link adding_groups" href="#"><span class="_text" lang="_help" datafld="cgroup"></span></a></div>
+							<div class="bumper_link_container"><a class="bumper_help_link group_change_access" href="#"><span class="_text" lang="_help" datafld="caccess"></span></a></div>
+							</div>
+						</td>
+						<td><div id="groups_img"></div></td>
+					</tr>
+				</table>
+			</div>
+			
+			<div id="group_detail" class="field_top" style="display:none">
+					 	<div class="h1_content header_2"><span class="_text" lang="_user" datafld="group_profile"></span></div>
+					 	<table id="edit_ads_group_tb" border="0" cellspacing="0" cellpadding="0" height="0" width="650" style="display:none">
+					 		<tr>
+					 			<td class="tdfield"><span class="_text" lang="_user" datafld="group_name"></span></td>
+					 			<td class="tdfield_padding">
+					 				<div id="ads_groupname"></div>
+					 			</td>
+					 		</tr>
+							<tr id="ad_g_quota_tr" style="display:none">
+								<td class="tdfield"><span class="_text" lang="_menu" datafld="quota"></span></td>
+								<td class="tdfield_padding">
+									<span class="edit_detail" id="ad_g_quota_conf_div" tabindex="0"><span class="_text" lang="_lan" datafld="ftp_config"></span> >></span>
+								</td>
+							</tr>
+					 	</table>
+						<table id="edit_group_tb" border="0" cellspacing="0" cellpadding="0" height="0" width="650" style="display:none">
+							<tr >
+								<td colspan="2">
+									<table border="0" cellspacing="0" cellpadding="0" height="0">
+										<tr>
+											<td class="tdfield"><span class="_text" lang="_user" datafld="group_name"></span></td>
+											<td class="tdfield_padding">
+												<!--<div id="groupname"></div>-->
+												<input tabindex="0" type="text" id="users_editGroupName_text" name="users_editGroupName_text" maxlength="16" onkeyup="show_save_button(event,'users_editGroupSave_button');">
+											</td>
+											<td class="tdfield_padding" style="padding-left:10px">
+												<button type="button" id="users_editGroupSave_button" class="SaveButton" onclick="modify_group('gname')"><span class="_text" lang="_button" datafld="apply"></span></button>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>						
+							<tr id="quota_tr" style="display:none">
+								<td class="tdfield"><span class="_text" lang="_menu" datafld="quota"></span></td>
+								<td class="tdfield_padding">
+									<span class="edit_detail" id="users_editGroupQuota_link" tabindex="0"><span class="_text" lang="_lan" datafld="ftp_config"></span> >></span>
+								</td>
+							</tr>
+							<tr>
+								<td class="tdfield"><span class="_text" lang="_user" datafld="group_member"></span></td>
+								<td class="tdfield_padding">
+									<div style="float:left" id="show_group_div"></div>
+									<span class="edit_detail" id="users_editGroupMember2_link" tabindex="0" style="margin-left: 10px;"><span class="_text" lang="_lan" datafld="ftp_config"></span> >></span>
+								</td>
+							</tr>
+						</table>
+					
+				<div id="share_div">
+						<div class="hr_0_content" style="margin-top:30px;margin-bottom:30px;"><div class="hr_1"></div></div>
+						<div class="h1_content header_2"><span class="_text" lang="_user" datafld="share_access"></span></div>	
+						<div id="group_sharelist" style="margin-left:-40px" class="accessListMarginTop"></div>
+				</div>
+						<br><br><br><br><br>
+				</div>
+		</div>  <!-- mainbody end -->
+	</td>
+</tr>	
+</table>
+
+</body>
+</html>

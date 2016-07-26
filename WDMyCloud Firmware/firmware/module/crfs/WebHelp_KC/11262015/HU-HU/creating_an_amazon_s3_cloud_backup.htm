@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="MS-HAID" content="Creating an Amazon S3 Cloud Backup" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+ <title>Amazon S3 felhőalapú biztonsági másolat létrehozása</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+ <meta http-equiv="Content-Language" content="hu-HU" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Biztonsági másolat készítése a személyes felhőjéről\nFelhőbeli biztonsági másolatok\nAmazon S3 felhőalapú biztonsági másolat létrehozása");
+addButton("show",BTN_TEXT,"Megjelenítés","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left; background: #fafafa\"> ");
+AddMasterBreadcrumbs("index.htm", "", "&gt;", "Home", "welcome.htm");
+document.write("<a href=\"creating_a_usb_backup.htm\">Biztonsági másolat készítése a személyes felhőjéről<\/a> &gt; <a href=\"updates_about.htm\">Felhőbeli biztonsági másolatok<\/a> &gt; Amazon S3 felhőalapú biztonsági másolat létrehozása<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(0);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Amazon S3 felhőalap&uacute; biztons&aacute;gi m&aacute;solat l&eacute;trehoz&aacute;sa</h1>
+<p class="Body"><span style="font-weight: bold;">Megjegyz&eacute;s</span>: Mielőtt l&eacute;trehozn&aacute; a felhőalap&uacute; biztons&aacute;gi ment&eacute;st, regisztr&aacute;ljon az Amazon S3 szolg&aacute;ltat&aacute;sra a k&ouml;vetkező weboldalon: <a href="http://aws.amazon.com/" 
+	 target="_blank">http://aws.amazon.com/</a>.</p>
+<p class="Body">Az Amazon S3-fi&oacute;k be&aacute;ll&iacute;t&aacute;sa ut&aacute;n az al&aacute;bbi l&eacute;p&eacute;sek k&ouml;vet&eacute;s&eacute;vel hozhat l&eacute;tre felhőalap&uacute; biztons&aacute;gi ment&eacute;st.</p>
+<ol style="list-style: square;">
+	<li style="list-style: none; display: inline;"><ol style="list-style: decimal;">
+		<li class="n1">Kattintson a <b>Biztons&aacute;gi m&aacute;solatok</b> elemre.</li>
+		<li class="n1">Kattintson a <span style="font-weight: bold;"><b>Felhőbeli biztons&aacute;gi m&aacute;solatok</b></span> elemre.</li>
+		<li class="n1">Kattintson a k&eacute;pernyő tetej&eacute;n tal&aacute;lhat&oacute; <b>Amazon S3</b> gombra.</li>
+		<li class="n1">Kattintson a <b>L&eacute;trehoz&aacute;s</b> elemre.</li>
+		<li class="n1">Adjon munkanevet a felhőalap&uacute; biztons&aacute;gi m&aacute;solatnak.</li>
+		<li class="n1">Kattintson a <b><b>Tov&aacute;bb</b></b> gombra.</li>
+		<li class="n1">Adja meg az Amazon S3 &aacute;ltal biztos&iacute;tott adatokat:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b>R&eacute;gi&oacute;:</b> V&aacute;lassza ki a felhőh&ouml;z haszn&aacute;lt r&eacute;gi&oacute;t a leg&ouml;rd&uuml;lő men&uuml;ből.</li>
+		<li class="b1"><b>Hozz&aacute;f&eacute;r&eacute;si kulcs:</b> Adja meg az Amazon S3 &aacute;ltal biztos&iacute;tott hozz&aacute;f&eacute;r&eacute;si kulcsot.</li>
+		<li class="b1"><b>Mag&aacute;nkulcs:</b> Adja meg az Amazon S3 &aacute;ltal biztos&iacute;tott mag&aacute;nkulcsot.</li>
+		<li class="b1"><b>T&aacute;voli &uacute;tvonal:</b> Adja meg a felhő t&aacute;voli &uacute;tvonal&aacute;t. Ez a gyűjtőn&eacute;v &aacute;ltal&aacute;ban.</li>
+	</ul>
+	<ol start="8" style="list-style: decimal;">
+		<li class="n1">Kattintson a <b><b>Tov&aacute;bb</b></b> gombra.</li>
+		<li class="n1">A T&iacute;pus mezőben v&aacute;lassza ki a k&ouml;vetkezők egyik&eacute;t:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b>Felt&ouml;lt&eacute;s:</b> Biztons&aacute;gi m&aacute;solat k&eacute;sz&iacute;t&eacute;se a My Cloud eszk&ouml;z&ouml;n t&aacute;rolt adatokr&oacute;l az Amazon S3 gyűjtőbe.</li>
+		<li class="b1"><b>Let&ouml;lt&eacute;s:</b> Biztons&aacute;gi m&aacute;solat k&eacute;sz&iacute;t&eacute;se az Amazon S3 gyűjtőről a My Cloud kiszolg&aacute;l&oacute;ra.</li>
+	</ul>
+	<ol start="10" style="list-style: decimal;">
+		<li class="n1">A Biztons&aacute;gi ment&eacute;s t&iacute;pusa mezőben, a leg&ouml;rd&uuml;lő men&uuml;ből v&aacute;lassza ki azt a biztons&aacute;gi ment&eacute;si t&iacute;pust, amelyet v&eacute;gre k&iacute;v&aacute;n hajtani. A k&ouml;vetkező lehetős&eacute;gek &aacute;llnak rendelkez&eacute;s&eacute;re:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold;">Megl&eacute;vő f&aacute;jlok fel&uuml;l&iacute;r&aacute;sa</b>: A c&eacute;lmapp&aacute;ban azoknak a f&aacute;jloknak a fel&uuml;l&iacute;r&aacute;sa, amelyek a forr&aacute;sf&aacute;jlokkal megegyező n&eacute;vvel rendelkeznek.</li>
+		<li class="b1"><b>Teljes biztons&aacute;gi ment&eacute;s:</b> A biztons&aacute;gi ment&eacute;s v&eacute;grehajt&aacute;sakor mindig l&eacute;trej&ouml;n egy k&uuml;l&ouml;n mappa, amely tartalmazza az &ouml;sszes biztons&aacute;gi ment&eacute;si adatot.</li>
+		<li class="b1"><b>N&ouml;vekm&eacute;nyes biztons&aacute;gi ment&eacute;s:</b> Azoknak a f&aacute;jloknak a fel&uuml;l&iacute;r&aacute;sa a forr&aacute;sf&aacute;jlokkal, amelyek &uacute;jabbak a c&eacute;lf&aacute;jlokn&aacute;l.</li>
+	</ul>
+	<ol start="11" style="list-style: decimal;">
+		<li class="n1">Kattintson a <span style="font-weight: bold;"><b>Tov&aacute;bb</b></span> gombra.</li>
+		<li class="n1">A Helyi &uacute;tvonal mezőben adja meg az &uacute;tvonalat a biztons&aacute;gi m&aacute;solathoz a My Cloud eszk&ouml;z&ouml;n.</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">A <span style="font-weight: bold;">B&ouml;ng&eacute;sz&eacute;s</span> gombra kattintva keresse meg az eszk&ouml;z&ouml;n a biztons&aacute;gi m&aacute;solat hely&eacute;t.<br />(P&eacute;ld&aacute;ul: Volume_1/backup)</li>
+	</ul>
+	<ol start="13" style="list-style: decimal;">
+		<li class="n1">A <img src="graphics/toggle_button.png" alt="" width="20" height="15" border="0" /> gombra kattintva aktiv&aacute;lja az Automatikus friss&iacute;t&eacute;s funkci&oacute;t. Ezzel automatikusan friss&uuml;lni fog a biztons&aacute;gi m&aacute;solat a l&eacute;trehozott &uuml;temez&eacute;s alapj&aacute;n.</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">Ha aktiv&aacute;lta az Automatikus friss&iacute;t&eacute;s funkci&oacute;t:</li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: circle;">
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">V&aacute;lassza ki az Automatikus friss&iacute;t&eacute;s &uuml;temez&eacute;se elemet: Naponta, Hetente vagy Havonta</p></li>
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">V&aacute;lassza ki az automatikus friss&iacute;t&eacute;s időpontj&aacute;t a leg&ouml;rd&uuml;lő men&uuml;ben (Naponta).</p></li>
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">V&aacute;lassza ki az automatikus friss&iacute;t&eacute;s d&aacute;tum&aacute;t &eacute;s időpontj&aacute;t a leg&ouml;rd&uuml;lő men&uuml;kben (Hetente vagy Havonta).</p></li>
+		</ul></li>
+	</ul>
+	<ol start="14" style="list-style: decimal;">
+		<li class="n1">Amennyiben nem v&aacute;lasztja ki az Automatikus friss&uuml;l&eacute;s lehetős&eacute;get, a Biztons&aacute;gi ment&eacute;s most r&eacute;szben jelezze, hogy szeretn&eacute;-e most elind&iacute;tani a biztons&aacute;gi ment&eacute;s k&eacute;sz&iacute;t&eacute;s&eacute;t.</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">A biztons&aacute;gi ment&eacute;s elind&iacute;t&aacute;s&aacute;hoz v&aacute;lassza az Igen lehetős&eacute;get.</li>
+	</ul>
+	<ol start="15" style="list-style: decimal;">
+		<li class="n1">Kattintson a <b><b>Tov&aacute;bb</b></b> gombra.</li>
+		<li class="n1">Tekintse &aacute;t a be&aacute;ll&iacute;t&aacute;sokat, majd kattintson a <b>Befejez&eacute;s</b> gombra. Ekkor l&eacute;trej&ouml;n az Amazon S3 felhőalap&uacute; biztons&aacute;gi m&aacute;solat. Az &uacute;j munka az Amazon S3 biztons&aacute;gi ment&eacute;s oldal Amazon S3 v&aacute;r&oacute;lista r&eacute;sz&eacute;ben jelenik meg.</li>
+	</ol>
+	<p class="Body" style="margin-left: 60px;"><span style="font-weight: bold;">Megjegyz&eacute;s</span>: L&eacute;pjen az Amazon S3 felhőalap&uacute; biztons&aacute;gi m&aacute;solat gyűjtőj&eacute;be az eszk&ouml;z biztons&aacute;gi m&aacute;solatainak megtekint&eacute;s&eacute;hez.</p>
+	<p class="ListContinue2CxSpLast">&#160;</p></li>
+</ol>
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt;">© 2015 Western Digital Technologies, Inc. 
+	 <span style="color: rgb(75, 90, 104); font-size: 10.6666669845581px; 
+			 line-height: 21.3333339691162px; orphans: auto; widows: 1; 
+			 -webkit-text-stroke-width: 0px; display: inline	 ! important ; 
+			 float: none; background-color: rgb(250, 250, 250);">Minden 
+	 jog fenntartva.</span> </p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>

@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+# (c) 2014 Western Digital Technologies, Inc. All rights reserved.
+#
+#
+#---------------------
+
+[ ! -d /usr/local/wdmcserver ] && mkdir -p /usr/local/wdmcserver
+ln -s /usr/local/modules/localwdmcserver/lib /usr/local/wdmcserver/
+cp -a /usr/local/modules/localwdmcserver/bin /usr/local/wdmcserver/
+chown -R root:share /usr/local/wdmcserver/bin
+chmod -R 775 /usr/local/wdmcserver
+
+[ ! -d /etc/init.d ] && mkdir -p /etc/init.d
+cp -a /usr/local/modules/localwdmcserver/etc/init.d/wdmcserverd /etc/init.d/
+cp -a /usr/local/modules/localwdmcserver/etc/init.d/wdphotodbmergerd /etc/init.d/
+
+[ ! -d /etc/nas ] && mkdir -p /etc/nas
+cp -a /usr/local/modules/localwdmcserver/etc/nas/notify.d /etc/nas/

@@ -1,0 +1,9 @@
+#!/bin/sh
+#echo $TR_TORRENT_NAME
+#echo $TR_TIME_LOCALTIME
+#echo $TR_TORRENT_DIR
+#echo $TR_TORRENT_HASH
+#echo $TR_TORRENT_ID
+
+p2p_send_mail "$TR_TORRENT_NAME"
+chmod 777 -R $TR_TORRENT_DIR

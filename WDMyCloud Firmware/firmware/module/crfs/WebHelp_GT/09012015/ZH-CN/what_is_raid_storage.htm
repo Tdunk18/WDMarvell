@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="MS-HAID" content="What is RAID Storage?" />
+<meta http-equiv="Content-Language" content="zh-CN" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>什么是 RAID 存储？</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("存储\nRAID 存储\n什么是 RAID 存储？");
+addButton("show",BTN_TEXT,"显示","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("index.htm", "", ">", "首页", "welcome.htm");
+document.write("<a href=\"what_is_raid_storage.htm\">存储<\/a> > <a href=\"what_is_raid_storage.htm\">RAID 存储<\/a> > 什么是 RAID 存储？<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1 style="background-color: Transparent;">什么是 RAID 存储</h1>
+<p class="Body">RAID（独立磁盘冗余阵列）<span style="mso-bidi-font-family: Arial;">允许将相同的数据存储在多个硬盘驱动器上的不同位置，从而提供必要的冗余、更强的性能和数据完整性。</span>RAID 
+ 有多种不同的级别，每个级别提供在驱动器之间共享或分布数据的不同方法。My Cloud Mirror 
+ 设备允许从以下存储模式中进行选择：</p>
+<ol style="list-style: square;">
+	<li style="list-style: none; display: inline;"><ul style="list-style: square;">
+		<li class="b1"><b>JBOD：</b><span style="font-size: 10.0pt; font-family: Arial, sans-serif; 
+										 mso-fareast-font-family: 'Times New Roman'; 
+										 mso-ansi-language: EN-US; mso-fareast-language: EN-US; 
+										 mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">一个或多个驱动器不在 
+		 RAID 配置中使用，但作为单独的逻辑卷来管理。</font></span></li>
+		<li class="b1"><b>跨区：</b>线性方式的驱动器组合，用于创建一个大逻辑卷。</li>
+		<li class="b1"><b>RAID 0：</b>RAID 0 模式提供跨 RAID 驱动器组中所有驱动器的磁盘带区。RAID 
+		 0 不提供数据冗余，但在所有 RAID 级别中性能最佳。RAID 0 将数据分成更小的段，并将这些数据段分布到驱动器组的每个驱动器上。</li>
+		<li class="b1"><b>RAID 1：</b>在 RAID 1 模式下，RAID 控制器将一个驱动器上的所有数据复制到同驱动器组中的另一个驱动器上。RAID 
+		 1 提供完全数据冗余，但也让所需的数据存储容量翻倍。</li>
+	</ul></li>
+</ol>
+<br />
+
+<a href="javascript:void(0);" onclick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) &gt;=2 &amp;&amp; typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','更改 RAID 模式','Changing_the_RAID_Mode.htm','查看当前 RAID 模式','Viewing_the_Current_RAID_Mode.htm','自动重建 RAID','Auto_Rebuilding_your_RAID.htm');return false;" title="另请参阅"><img src="ss_btn_另请参阅.gif" border="0" height="17" width="50" alt="另请参阅" /></a>
+
+
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt;">© 2015 Western Digital Technologies, Inc. 
+	 保留所有权利。</p>
+</div>
+<script type="text/javascript" language="JavaScript">//<![CDATA[
+if (parseInt(navigator.appVersion) >= 3 && typeof (WritePopupMenuLayer) == "function")
+  WritePopupMenuLayer();
+//]]></script><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>
+

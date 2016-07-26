@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><cki><ck fm=\"개인 클라우드 관리 정보\" to=\"네트워크에 WD My Cloud Mirror 장치 연결\" num=\"57\"/><ck fm=\"FTP 액세스 사용\" to=\"RAID 스토리지란?\" num=\"50\"/></cki>";

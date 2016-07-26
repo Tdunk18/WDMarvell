@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><ck><di ky=\"106\" rd=\"what_is_raid_storage.htm|Hva er RAID-lagring?\" ct=\"RAID (redundant matrise av uavhengige disker, eng. Redundant  Array of Independent Disks)  gjør  det ...\" bc=\"\"/></ck>";

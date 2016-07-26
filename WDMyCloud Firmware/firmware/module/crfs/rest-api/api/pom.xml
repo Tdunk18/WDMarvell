@@ -1,0 +1,179 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>wd.wdc.branded</groupId>
+    <artifactId>REST-API</artifactId>
+    <packaging>pom</packaging>
+    <version>2.1.1-SNAPSHOT</version>
+    <name>REST-API</name>
+    
+     <repositories>
+        <repository>
+            <id>wdc</id>
+            <name>Western Digital Maven Repository</name>
+            <url>http://10.101.50.203:9999/nexus/content/repositories/releases</url>
+            <snapshots>
+                <enabled>false</enabled>
+                <updatePolicy>daily</updatePolicy>
+            </snapshots>
+        </repository>
+     </repositories>
+
+     <pluginRepositories>
+     	<pluginRepository>
+      		<id>central</id>
+      		<name>Maven Plugin Repository</name>
+      		<url>http://repo1.maven.org/maven2</url>
+      		<layout>default</layout>
+	        <snapshots>
+	           <enabled>false</enabled>
+	        </snapshots>
+	        <releases>
+	            <updatePolicy>never</updatePolicy>
+	         </releases>
+    	</pluginRepository>
+        <pluginRepository>
+        	<id>jfrog-plugins</id>
+                <name>jfrog-plugins-dist</name>
+               	<url>http://repo.jfrog.org/artifactory/plugins-releases</url>
+        </pluginRepository>
+        
+	<!--<pluginRepository>
+            <id>wdc-plugin</id>
+            <name>WDC Plugin Repository</name>
+            <url>http://10.101.50.203:9999/nexus/content/repositories/releases</url>
+            <layout>default</layout>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+        </pluginRepository> -->
+     </pluginRepositories>
+
+     <distributionManagement>
+	  	<repository>
+            <id>wdc</id>
+            <name>Western Digital Maven Repository</name>
+            <url>http://10.101.50.203:9999/nexus/content/repositories/releases</url>
+        </repository>
+		<snapshotRepository>
+	    	<id>wdc-snapshot</id>
+	    	<name>Western Digital Maven Snapshot Repository</name>
+            	<url>http://10.101.50.203:9999/nexus/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+	
+	<profiles>
+	    <profile>
+			 	<id>seqouia</id>
+				<properties>
+					<zip-assembly>${basedir}/sequoia-package.xml</zip-assembly>
+				</properties>
+		</profile>
+	    <profile>
+			 	<id>seqouia-wifi</id>
+				<properties>
+					<zip-assembly>${basedir}/sequoia-wifi-package.xml</zip-assembly>
+				</properties>
+		</profile>
+	    <profile>
+			 	<id>lightning</id>
+				<properties>
+					<zip-assembly>${basedir}/lightning-package.xml</zip-assembly>
+				</properties>
+		</profile>
+	</profiles>
+	
+	<build>
+	    <directory>${project.basedir}/target</directory>
+	    <outputDirectory>${project.build.directory}/output</outputDirectory>
+	    <finalName>${project.artifactId}-${project.version}</finalName>
+	    <testOutputDirectory>${project.build.directory}/testoutput</testOutputDirectory>
+	    <sourceDirectory>${project.basedir}/src</sourceDirectory>
+	    <testSourceDirectory>${project.basedir}/tests</testSourceDirectory>
+	    <resources>
+	      <resource>
+	        <directory>${project.basedir}/src/main/resources</directory>
+	      </resource>
+	    </resources>
+	    <testResources>
+	      <testResource>
+	        <directory>${project.basedir}/src/test/resources</directory>
+	      </testResource>
+	    </testResources>
+	  
+	    <plugins>
+	    <!-- Compile Phase - compile PHP code with high error checking -->
+        	
+        	<!-- Code check phase - run  -->
+        	
+        
+          	<!-- Test Phase - run PHPUnit tests and format output for surefire -->
+         	<plugin>
+		      <dependencies>
+		        <dependency>
+		          <groupId>org.apache.ant</groupId>
+		          <artifactId>ant-trax</artifactId>
+		          <version>1.7.0</version>
+		        </dependency>
+		      </dependencies>
+		      <groupId>org.apache.maven.plugins</groupId>
+		      <artifactId>maven-antrun-plugin</artifactId>
+		      <executions>
+		        <execution>
+		          <id>run-phpunit</id>
+		          <phase>test</phase>
+		          <goals>
+		            <goal>run</goal>
+		          </goals>
+		          <configuration>
+		            <tasks>
+		              <property name="phpunit.codecoverage"
+		                        location="${project.build.directory}/phpunit/codecoverage" />
+		              <property name="surefire.reports"
+		                        location="${project.build.directory}/surefire" />
+		
+		              <mkdir dir="${phpunit.codecoverage}"/>
+		              <mkdir dir="${surefire.reports}"/>
+		
+		              <exec executable="phpunit" dir="${project.build.testSourceDirectory}" failonerror="true">
+		                <arg line="--stderr -c ${project.build.testSourceDirectory}/phpunit.xml 
+		                		   --log-junit ${surefire.reports}/${project.name}-phpunit.xml 	
+		                           --coverage-clover ${phpunit.codecoverage}/${project.name}-phpunit-coverage.xml" />
+		              </exec>
+		            </tasks>
+		          </configuration>
+		        </execution>
+		      </executions>
+      		</plugin>
+      		<!-- Package Phase - create bundle zip file -->
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.2-beta-5</version>
+                <configuration>
+                    <descriptors>
+                        <descriptor>${zip-assembly}</descriptor>
+                    </descriptors>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id> <!-- this is used for inheritance merges -->
+                        <phase>package</phase> <!-- append to the packaging phase. -->
+                        <goals>
+                            <goal>single</goal> <!-- goals == mojos -->
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+      		
+	    </plugins>
+	</build>    
+	
+	 
+
+</project>

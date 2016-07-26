@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="MS-HAID" content="Creating an Amazon S3 Cloud Backup" />
+<meta http-equiv="Content-Language" content="pl-PL" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Tworzenie kopii zapasowej w chmurze Amazon S3</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Tworzenie kopii zapasowej chmury osobistej\nKopie zapasowe w chmurze\nTworzenie kopii zapasowej w chmurze Amazon S3");
+addButton("show",BTN_TEXT,"Pokaż","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left; background: #fafafa\"> ");
+AddMasterBreadcrumbs("index.htm", "", "&gt;", "Home", "welcome.htm");
+document.write("<a href=\"creating_a_usb_backup.htm\">Tworzenie kopii zapasowej chmury osobistej<\/a> &gt; <a href=\"updates_about.htm\">Kopie zapasowe w chmurze<\/a> &gt; Tworzenie kopii zapasowej w chmurze Amazon S3<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(0);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Tworzenie kopii zapasowej w chmurze Amazon S3</h1>
+<p class="Body"><span style="font-weight: bold;">Uwaga</span>: przed utworzeniem 
+ kopii zapasowej w chmurze należy się zarejestrować w usłudze Amazon S3 
+ pod adresem <a href="http://aws.amazon.com/" target="_blank">http://aws.amazon.com/</a>.</p>
+<p class="Body">Po założeniu konta w usłudze Amazon S3 utwórz kopię zapasową 
+ w chmurze. W tym celu zrób tak:</p>
+<ol style="list-style: square;">
+	<li style="list-style: none; display: inline;"><ol style="list-style: decimal;">
+		<li class="n1">Kliknij pozycję <b>Kopie zapasowe</b>.</li>
+		<li class="n1">Kliknij pozycję <span style="font-weight: bold;">Kopie 
+		 zapasowe w chmurze</span>.</li>
+		<li class="n1">Kliknij przycisk <b>Amazon S3</b> u góry ekranu.</li>
+		<li class="n1">Kliknij przycisk <b>Utwórz</b>.</li>
+		<li class="n1">Wprowadź nazwę zadania kopii zapasowej w chmurze.</li>
+		<li class="n1">Kliknij przycisk <b><b>Dalej</b></b>.</li>
+		<li class="n1">Wprowadź następujące informacje dostarczone przez 
+		 obsługę techniczną usługi Amazon S3:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold;">Region</b>: wybierz 
+		 z menu rozwijanego region używany w chmurze.</li>
+		<li class="b1"><b>Klucz dostępu</b>: wprowadź klucz dostępu dostarczony 
+		 przez obsługę techniczną usługi Amazon S3.</li>
+		<li class="b1"><b style="font-weight: bold;">Klucz prywatny</b>: 
+		 wprowadź klucz prywatny dostarczony przez obsługę techniczną usługi 
+		 Amazon S3.</li>
+		<li class="b1"><b style="font-weight: bold;">Ścieżka zdalna</b>: 
+		 wprowadź ścieżkę zdalną chmury. Zwykle jest to nazwa komory.</li>
+	</ul>
+	<ol start="8" style="list-style: decimal;">
+		<li class="n1">Kliknij przycisk <b><b>Dalej</b></b>.</li>
+		<li class="n1">W polu Typ wybierz jedną z następujących opcji:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b>Prześlij:</b> powoduje utworzenie kopii zapasowej 
+		 danych z urządzenia My Cloud w 
+		 komorze w usłudze Amazon S3.</li>
+		<li class="b1"><b>Pobierz:</b> powoduje utworzenie kopii zapasowej 
+		 danych z komory w usłudze Amazon S3 na urządzeniu My Cloud.</li>
+	</ul>
+	<ol start="10" style="list-style: decimal;">
+		<li class="n1">W polu Typ kopii zapasowej wybierz z menu rozwijanego 
+		 typ kopii zapasowej, którą chcesz wykonać. Dostępne opcje:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold;">Nadpisz istniejące 
+		 pliki</b>: powoduje nadpisanie w folderze docelowym plików o takich 
+		 samych nazwach jak pliki z folderu źródłowego.</li>
+		<li class="b1"><b>Pełna kopia zapasowa</b>: sprawia, że przy każdym 
+		 tworzeniu kopii zapasowej jest tworzony osobny folder zawierający 
+		 wszystkie dane kopii zapasowej.</li>
+		<li class="b1"><b>Przyrostowa kopia zapasowa</b>: powoduje nadpisanie 
+		 plików docelowych, jeśli pliki źródłowe są nowsze.</li>
+	</ul>
+	<ol start="11" style="list-style: decimal;">
+		<li class="n1">Kliknij przycisk <span style="font-weight: bold;"><b>Dalej</b></span>.</li>
+		<li class="n1">W polu Ścieżka lokalna wprowadź ścieżkę kopii zapasowej 
+		 na urządzeniu My Cloud.</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">Kliknij przycisk <span style="font-weight: bold;">Przeglądaj</span>, 
+		 aby przejść do lokalizacji kopii zapasowej na urządzeniu.<br />
+		(Na przykład do folderu Volume_1/kopia).</li>
+	</ul>
+	<ol start="13" style="list-style: decimal;">
+		<li class="n1">Kliknij przycisk <img src="graphics/toggle_button.png" alt="" width="20" height="15" border="0" />, aby uaktywnić 
+		 funkcję Aktualizuj automatycznie. Spowoduje to automatyczne aktualizowanie 
+		 kopii zapasowej według utworzonego harmonogramu.</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">Jeśli uaktywnisz funkcję Aktualizuj automatycznie:</li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: circle;">
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">Wybierz 
+			 harmonogram aktualizacji automatycznych: Codziennie, Co tydzień 
+			 lub Co miesiąc.</p></li>
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">W 
+			 przypadku wybrania opcji Codziennie wybierz godzinę z menu 
+			 rozwijanego Godzina automatycznej aktualizacji.</p></li>
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">W 
+			 przypadku wybrania opcji Co tydzień lub Co miesiąc wybierz 
+			 datę i godzinę z menu rozwijanego Data i godzina automatycznej 
+			 aktualizacji.</p></li>
+		</ul></li>
+	</ul>
+	<ol start="14" style="list-style: decimal;">
+		<li class="n1">Jeśli funkcja Aktualizuj automatycznie nie zostanie 
+		 włączona, w&#160;polu Utwórz kopię zapasową określ, czy chcesz 
+		 uruchomić tworzenie kopii zapasowej w&#160;tej chwili.</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">Kliknij przycisk Tak, aby uruchomić tworzenie kopii 
+		 zapasowej teraz.</li>
+	</ul>
+	<ol start="15" style="list-style: decimal;">
+		<li class="n1">Kliknij przycisk <b>Dalej</b>.</li>
+		<li class="n1">Sprawdź ustawienia i kliknij przycisk <b>Zakończ</b>. 
+		 Zostanie utworzona kopia zapasowa w chmurze Amazon S3. Nowe zadanie 
+		 zostanie wyświetlone w&#160;obszarze Kolejka Amazon S3 na stronie 
+		 Kopia zapasowa w&#160;chmurze Amazon S3.</li>
+	</ol>
+	<p class="Body" style="margin-left: 60px;"><span style="font-weight: bold;">Uwaga</span>: 
+	 aby przejrzeć kopie zapasowe urządzenia, należy uzyskać dostęp do 
+	 komory kopii zapasowych w chmurze Amazon S3.</p>
+	<p class="ListContinue2CxSpLast">&#160;</p></li>
+</ol>
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt;"><span style="font-size: 8pt;"><font size="1" style="font-size:8pt;">© 2015 Western 
+	 Digital Technologies, Inc. <span style="color: rgb(75, 90, 104); font-size: 10.6666669845581px; 
+										 line-height: 21.3333339691162px; 
+										 orphans: auto; widows: 1; -webkit-text-stroke-width: 0px; 
+										 display: inline	 ! important ; 
+										 float: none; background-color: rgb(250, 250, 250);">Wszelkie 
+	 prawa zastrzeżone.</span> </font></span></p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>

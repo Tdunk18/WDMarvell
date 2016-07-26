@@ -1,0 +1,14 @@
+hd_info.xml
+volume_encrypt.xml
+adjustTime
+version.update
+version_info
+record_burn_in_fw_time
+write_mac_time
+mac_addr
+alpha_ga_server
+system_restore
+wd_serial.txt
+raid_audit.xml
+tmp_wd_serial.txt
+rescue_fw_info.txt

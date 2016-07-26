@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="fr-FR">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="/errordocs/main.css" rel="stylesheet" type="text/css" />
+    <LINK type="image/x-icon" REL="SHORTCUT ICON" HREF="/errordocs/images/favicon.png">
+    <title>WD Venue 404</title>
+  </head>
+
+  <script type="text/javascript" src="/errordocs/main.js"></script>
+  
+  <body>
+    <div id="backgroundDIV" class="backgroundDIV"><img onload="backgroundImageLoaded=true;doneLoading()" width="100%" height="100%" src="/errordocs/images/BaliImageBackgroundHTTPServerErrorMessages.jpg"/></div>
+    <div id="centerDIV" class="centerDIV">
+      <table class="contentTable">
+        <tr>
+          <td><img onload="statusImageLoaded=true;doneLoading()" src="/errordocs/images/BaliImage404.png"/></td>
+          <td class="centerSpacerColumn"></td>
+          <td>
+            <p class="bigOops">Oups</p>
+            <p>La page ou l'URL que vous avez demandé ne peut pas être trouvé. Pour vous aider à remettre sur les rails, voici quelques solutions possibles:</p>
+            <ul>
+              <li>Emmenez-moi au <a href="/UI">WD Venue</a></li>
+              <li>Emmenez-moi au <a href="/UI/help/fr_FR/index.htm">WD Venue Aide</a></li>
+              <li>J'ai besoin d'aide; me prendre pour <a href="http://products.wdc.com/?id=wdfvenue&type=support">soutenir les options</a></li>
+            </ul>
+          </td>
+        </tr>
+		<tr class="bottomPadding"><td></td></tr>
+    </div>
+  </body>
+<!--<meta itemprop="image" content="/images/favicon.ico">-->
+</html>
+

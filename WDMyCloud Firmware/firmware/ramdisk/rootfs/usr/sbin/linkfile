@@ -1,0 +1,29 @@
+#!/bin/sh
+
+do_list()
+{
+ local dir file dir_name
+ dir="$1"
+ 
+ for fn in ${dir}/*; do
+  if [ -f "$fn" ]; then
+   file=`basename "$fn"`
+   #dir_name=`dirname "$fn"`
+   #echo "$file --- file"
+   ln -s $1$file $2$file
+#   echo "$dir_name --- dir_name"
+#  elif [ -d "$fn" ]; then
+#   file=`basename "$fn"`
+#   if [ "$file" != "CVS" ]; then
+#    dir_name=`dirname "$fn"`
+#    echo "$file ###### dir"
+#    do_list "$fn"
+#   fi
+#  else
+#   echo "$fn others"
+  fi
+ done
+ 
+}
+ 
+do_list $1 $2

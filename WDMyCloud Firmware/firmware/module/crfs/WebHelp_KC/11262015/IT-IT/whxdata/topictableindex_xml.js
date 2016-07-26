@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><cki><ck fm=\"Informazioni sullo Stato Disco\" to=\"Accensione del LED sistema lampeggiante\" num=\"54\"/><ck fm=\"Formattazione del disco del dispositivo My Cloud in corso\" to=\"Impostazione del formato ora\" num=\"55\"/><ck fm=\"Impostazione Quote Utenti\" to=\"Cos&apos;è lo storage RAID?\" num=\"43\"/></cki>";

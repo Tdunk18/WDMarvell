@@ -1,0 +1,3516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<text>
+  <_menu_title>
+    <home len="16">首页</home>
+    <users len="16">用户</users>
+    <shares len="16">共享</shares>
+    <cloud_access len="16">云访问</cloud_access>
+    <backups len="16">备份</backups>
+    <storage len="16">存储</storage>
+    <app len="16">应用</app>
+    <settings len="16">设置</settings>
+  </_menu_title>
+  <_menu>
+    <lan len="22">LAN 设置</lan>
+    <time len="22">时间和日期</time>
+    <device len="22">设备</device>
+    <network len="22">网络</network>
+    <quota len="22">配额</quota>
+    <itunes len="22">iTunes 服务器</itunes>
+    <addon len="22">应用</addon>
+    <system len="22">系统设置</system>
+    <firmware len="22">固件升级</firmware>
+    <email len="22">通知</email>
+    <power len="22">电源管理</power>
+    <ddns len="22">动态 DNS</ddns>
+    <disk len="22">扫描磁盘</disk>
+    <system_info len="22">系统信息</system_info>
+    <logs len="22">日志</logs>
+    <p2p_downloads len="22">P2P 下载</p2p_downloads>
+    <p2p_downloads_queue len="22">P2P 下载队列</p2p_downloads_queue>
+    <time_machine len="22">Time Machine</time_machine>
+    <logout len="22">注销</logout>
+    <network_services len="22">网络服务</network_services>
+    <afp len="22">AFP 服务</afp>
+    <nfs len="22">NFS 服务</nfs>
+    <remote_backups len="22">远程备份</remote_backups>
+    <web_file_server len="22">Web 文件查看器</web_file_server>
+    <language len="22">语言</language>
+    <resource_monitor_estimated len="26">资源监视器估计</resource_monitor_estimated>
+    <ads len="22">Active Directory</ads>
+    <forwarding len="22">端口转发</forwarding>
+    <resource_monitor len="22">资源监视器</resource_monitor>
+    <snmp len="22">SNMP</snmp>
+    <dfs len="23">共享聚集</dfs>
+    <usb_backups len="22">USB 备份</usb_backups>
+    <ipv6 len="22">IPv6 设置</ipv6>
+    <volume_encryption len="22">卷加密</volume_encryption>
+    <usb_device len="22">USB 设备</usb_device>
+    <my_file len="15">Web 文件查看器</my_file>
+    <ftp_downloads len="22">FTP 下载</ftp_downloads>
+    <http_downloads len="22">HTTP 下载</http_downloads>
+    <RAID len="22">RAID</RAID>
+    <general>常规</general>
+    <iso_mount>ISO 挂载</iso_mount>
+    <media>媒体</media>
+    <utilities>实用工具</utilities>
+    <firmware_update>固件更新</firmware_update>
+    <no_usb>没有找到 USB 设备。</no_usb>
+    <unmount_success>取消挂载成功</unmount_success>
+    <service>服务</service>
+  <safepoints>还原点迁移</safepoints></_menu>
+  <_button>
+    <Skip len="11">跳过</Skip>
+    <Ok len="11">确定</Ok>
+    <Next len="11">下一步</Next>
+    <Cancel len="999">取消</Cancel>
+    <Previous len="11">上一步</Previous>
+    <Exit len="11">退出</Exit>
+    <Restart len="11">重新启动</Restart>
+    <Completed len="11">已完成</Completed>
+    <save_settings len="20">保存设置</save_settings>
+    <set_time len="25">设置我计算机的时间</set_time>
+    <restore len="16">还原</restore>
+    <shutdown len="16">关闭</shutdown>
+    <save len="10">保存</save>
+    <load len="10">加载</load>
+    <apply len="10">应用</apply>
+    <test_mail len="10">测试电子邮件</test_mail>
+    <normal len="999">正常</normal>
+    <refresh len="10">刷新</refresh>
+    <refresh_all len="10">全部刷新</refresh_all>
+    <browse len="10">浏览</browse>
+    <finished len="999">完成</finished>
+    <configuration len="999">配置</configuration>
+    <applications len="999">应用程序</applications>
+    <confirm len="11">确认</confirm>
+    <scan_disk len="10">扫描磁盘</scan_disk>
+    <create len="10">创建</create>
+    <finish len="11">完成</finish>
+    <abnormal len="999">异常</abnormal>
+    <local len="10">本地</local>
+    <test len="10">测试</test>
+    <add_torrent len="11">添加 Torrent</add_torrent>
+    <close len="16">关闭</close>
+    <format len="11">格式化</format>
+    <unmount len="10">取消挂载</unmount>
+    <clear len="10">清除</clear>
+    <cfg_link len="10">配置链接</cfg_link>
+    <yes len="10">是</yes>
+    <no len="10">否</no>
+    <add len="10">添加</add>
+    <back len="10">返回</back>
+    <search len="10">搜索</search>
+    <install len="20">安装然后重新启动</install>
+    <remove>移除</remove>
+    <continue>继续吗？</continue>
+    <dismiss_all>全部解除</dismiss_all>
+  <switch_to_quick>切换到“快速”</switch_to_quick></_button>
+  <_common>
+    <enable len="26">启用</enable>
+    <disable len="26">禁用</disable>
+    <product len="999">产品页</product>
+    <firmware len="999">固件版本</firmware>
+    <update_success len="167">设置已保存</update_success>
+    <set_success len="167">设置保存成功！</set_success>
+    <success len="999">成功</success>
+    <error len="999">错误</error>
+    <wait len="999">请等待...</wait>
+    <add len="10">添加</add>
+    <modify len="10">修改</modify>
+    <del len="10">删除</del>
+    <page len="10">页</page>
+    <of len="999">/</of>
+    <display len="999">显示</display>
+    <to len="999">到</to>
+    <item len="999">项</item>
+    <completed len="999">已完成</completed>
+    <message len="999">消息</message>
+    <start len="999">开始</start>
+    <stop len="999">停止</stop>
+    <loading len="999">正在载入...</loading>
+    <saving len="999">正在保存</saving>
+    <connection_error len="45">连接错误</connection_error>
+    <no_items len="45">没有项</no_items>
+    <new len="10">新建</new>
+    <wait_msg len="68">WD My Cloud Mirror 系统正在重新启动。请等待此过程完成。</wait_msg>
+    <shutdown_msg len="68">WD My Cloud Mirror 系统已关闭。</shutdown_msg>
+    <warning len="7">警告</warning>
+    <save_msg len="167">是否保存新设置？</save_msg>
+    <unlimited len="10">无限</unlimited>
+    <none len="999">无</none>
+    <quick_search len="26">快速搜索</quick_search>
+    <pagestat len="36">
+      <![CDATA[显示 {from} 到 {to}/{total} 项]]>
+    </pagestat>
+    <processing len="45">正在处理，请稍等...</processing>
+    <batch_create len="80">创建多个用户</batch_create>
+    <import_users len="16">导入用户</import_users>
+    <info len="999">信息</info>
+    <set>设置...</set>
+    <agree>同意</agree>
+    <download>正在下载...</download>
+    <filename>文件名</filename>
+    <retrieving>正在获取</retrieving>
+    <updating>正在更新</updating>
+    <on>开</on>
+    <off>关</off>
+    <list>列表</list>
+    <jan>一月</jan>
+    <feb>二月</feb>
+    <mar>三月</mar>
+    <apr>四月</apr>
+    <may>五月</may>
+    <jun>六月</jun>
+    <jul>七月</jul>
+    <aug>八月</aug>
+    <sep>九月</sep>
+    <oct>十月</oct>
+    <nov>十一月</nov>
+    <dec>十二月</dec>
+    <january>一月</january>
+    <february>二月</february>
+    <march>三月</march>
+    <april>四月</april>
+    <june>六月</june>
+    <july>七月</july>
+    <august>八月</august>
+    <september>九月</september>
+    <october>十月</october>
+    <november>十一月</november>
+    <december>十二月</december>
+    <date_format1>dddd, mmmm dd, yyyy, h:MM:ss TT</date_format1>
+    <code>代码</code>
+    <day>天</day>
+    <hours>小时</hours>
+    <minutes>分钟</minutes>
+  <hour>小时</hour>
+    <minute>分钟</minute>
+    <days>天</days>
+  <installed>已安装</installed><checking>正在检查...</checking></_common>
+  <_login>
+    <user>用户</user>
+    <sel len="26">请选择您的账户</sel>
+    <admin len="31">系统管理员 (admin)</admin>
+    <others len="6">其他</others>
+    <pw len="11">密码</pw>
+    <remember len="30">记住我</remember>
+    <ssl len="30">SSL 登录</ssl>
+    <login len="16">登录</login>
+    <more len="4">更多</more>
+    <msg1 len="999">只有管理员才能访问“配置”页。</msg1>
+    <msg2 len="999">WD My Cloud Mirror 系统正在重新启动。请等待此过程完成。</msg2>
+    <msg3 len="115">输入的用户名或密码不正确。&lt;br&gt;请重新输入。</msg3>
+    <msg4 len="115">输入的用户账户当前正在使用。&lt;br&gt;请联系管理员或稍后再试。</msg4>
+    <msg5 len="167">登录超时。请重新登录。</msg5>
+    <msg6 len="115"><![CDATA[您输入的用户名或密码不正确。请访问<a href="%s" target="_blank">此处</a>以便获得帮助。]]></msg6>
+    <msg_booting len="167">系统正在启动，请稍等。</msg_booting>
+  <msg7>未创建密码</msg7>
+  <msg_system_restore>系统正在格式化，请稍等。</msg_system_restore><msg8>输入的密码已到期。请联系您的域管理员以设置新的密码。</msg8><msg_scandisk_power_failure>系统电源曾中断。正执行文件系统一致性检查。请稍等。</msg_scandisk_power_failure><msg9>浏览器不受支持</msg9><msg10>&lt;p&gt;此版本 Internet Explorer 不受支持。&lt;/p&gt;
+&lt;p&gt;请更新至最新版的 Microsoft Internet Explorer 或试用其他兼容的浏览器（如 Google Chrome 或 Mozilla Firefox）以查看此网页界面。&lt;/p&gt;</msg10><msg11>仅允许管理员用户使用。</msg11><account_locked>您的域帐户已被锁定。请联系您的域管理员寻求帮助。</account_locked></_login>
+  <_home>
+    <storage len="23">存储状态</storage>
+    <shutdown len="13">关闭</shutdown>
+    <restart len="13">重新启动</restart>
+    <welcome len="32">欢迎使用</welcome>
+    <capacity len="10">容量</capacity>
+    <available len="10">可用</available>
+    <system_log len="24">近期活动</system_log>
+    <temperature>温度</temperature>
+    <normal>正常</normal>
+    <elevated>升高</elevated>
+    <critical>严重</critical>
+    <healthy>健康</healthy>
+    <RPM>RPM</RPM>
+    <imminent_failure>紧急故障</imminent_failure>
+    <fault>故障</fault>
+    <diagnostics>诊断</diagnostics>
+    <firmware len="22">固件</firmware>
+    <free len="999">可用</free>
+    <desc1 len="999">容量使用</desc1>
+    <desc2 len="999">My Cloud Mirror 系统容量目前的使用情况。</desc2>
+    <desc3 len="999">显示系统组件的快照，指出 WD My Cloud Mirror 系统的总体运行状况。</desc3>
+    <desc4 len="999">温度状态</desc4>
+    <desc5 len="999">驱动器 SMART 状态</desc5>
+    <desc6 len="999">风扇速度状态</desc6>
+    <desc7 len="999">风扇速度</desc7>
+    <desc8 len="999">驱动器状态</desc8>
+    <desc9 len="999">RAID 状态</desc9>
+    <desc10 len="999">小心</desc10>
+    <desc11 len="999">可用</desc11>
+    <desc12 len="999">影片</desc12>
+    <desc13 len="999">音乐</desc13>
+    <desc14 len="999">照片</desc14>
+    <desc15 len="999">其他</desc15>
+    <msg1 len="999">系统将关闭。要继续吗？</msg1>
+    <msg2 len="999">没有找到 USB 设备。</msg2>
+    <usb_details>USB 设备详细信息</usb_details>
+    <usb_device_name>USB 设备名称</usb_device_name>
+    <usb_manufacturer>制造商</usb_manufacturer>
+    <usb_model>型号</usb_model>
+    <usb_serial_number>序列号</usb_serial_number>
+    <usb_firmware_version>固件版本</usb_firmware_version>
+    <usb_Size>大小</usb_Size>
+    <usb_unlock_device>解锁 USB 设备</usb_unlock_device>
+    <usb_password>密码</usb_password>
+    <usb_password_hint>密码提示</usb_password_hint>
+    <usb_save_password>保存密码</usb_save_password>
+    <usb_eject_title>弹出 USB 设备吗？</usb_eject_title>
+    <usb_eject_msg>
+  &lt;b&gt;您确定要弹出 USB 设备？&lt;/b&gt;
+  &lt;ul&gt;
+   &lt;li&gt;弹出此 USB 设备将删除 My Cloud Mirror 系统所有相关共享。&lt;/li&gt;
+   &lt;li&gt;正在进行的所有备份任务将中断。&lt;/li&gt;
+   &lt;li&gt;如果您是远程登录，您将无法访问此 USB 设备，直至设备插回。&lt;/li&gt;
+  &lt;/ul&gt;
+  </usb_eject_msg>
+    <umount_usb_drive>弹出 USB 驱动器</umount_usb_drive>
+    <usb_size>{0} 没有 {1}</usb_size>
+    <usb_unlock_password_error>USB 密码不正确。请重试。</usb_unlock_password_error>
+    <usb_unlock>解锁</usb_unlock>
+
+    <ups_details>UPS 设备详细信息</ups_details>
+    <ups_barrery_charge_bar>电池充电 : {0}{1}</ups_barrery_charge_bar>
+    <ups_barrery_charge>电池充电</ups_barrery_charge>
+    <ups_barrery_charge_OL>使用市电</ups_barrery_charge_OL>
+    <ups_barrery_charge_OB>使用电池</ups_barrery_charge_OB>
+    <ups_barrery_charge_LB>电池电量低</ups_barrery_charge_LB>
+    <ups_status>状态</ups_status>
+  <usb_unlock_exceeded>
+  密码恢复尝试次数过多。&lt;br&gt;
+  如要重试，请执行以下操作:&lt;br&gt;
+  1.从My Cloud Mirror系统中安全移除 USB 驱动&lt;br&gt;
+  2.将 USB 驱动重新连接至My Cloud Mirror系统&lt;br&gt;
+  </usb_unlock_exceeded><usb_unlock_exceeded_title>密码尝试次数过多</usb_unlock_exceeded_title><desc16>S.M.A.R.T.温度</desc16><desc17>驱动器X温度</desc17><usb_port_num>所连 USB 端口 {0}</usb_port_num><usb_port_front>所连 USB 端口前面板</usb_port_front></_home>
+  <_user_login_home>
+    <quick_status>快速状态</quick_status>
+    <last_time_login>上次登录：</last_time_login>
+    <total_ftp_downloads>FTP 总下载</total_ftp_downloads>
+    <total_http_downloads>HTTP 总下载</total_http_downloads>
+    <total_p2p_downloads>P2P 总下载</total_p2p_downloads>
+    <download_wd_apps>下载 WD 应用</download_wd_apps>
+    <wd_my_cloud_desktop>My Cloud Desktop</wd_my_cloud_desktop>
+    <wd_2go_photos>My Cloud 和 WD Photos。</wd_2go_photos>
+  </_user_login_home>
+  <_lan>
+    <title len="61">LAN 设置</title>
+    <title2 len="61">IPv6 设置</title2>
+    <title3>网络配置文件</title3>
+    <wizard_description len="999">
+   此向导提供了如何配置 WD My Cloud Mirror 系统网络接口的分步说明。
+   单击&lt;b&gt;下一步&lt;/b&gt;继续。
+  </wizard_description>
+    <wizard_description2 len="999">
+      <![CDATA[
+	 		1.IP 设置<br><br> 2.摘要<br>
+		]]>
+    </wizard_description2>
+    <ip_description len="999">
+      <![CDATA[根据您的网络设置，配置这些 LAN 设置。]]>
+    </ip_description>
+    <vlan_description len="999">单击开关按钮开/关 VLAN 设置。&lt;br&gt;
+  每个 VLAN 需要一个 ID。输入与 VLAN 关联的号码。
+  </vlan_description>
+    <dhcp_client len="30">DHCP 客户端</dhcp_client>
+    <static_ip len="30">静态 IP</static_ip>
+    <ip_address len="30">IP 地址</ip_address>
+    <subnet_mask len="30">子网掩码</subnet_mask><gateway len="30">网关 IP 地址</gateway><dns len="30">DNS 服务器</dns><dns1 len="30">DNS 服务器 1</dns1><dns2 len="30">DNS 服务器 2</dns2><dns3 len="30">DNS 服务器 3</dns3><mac len="30">MAC 地址</mac><lltd_title len="999">LLTD 设置</lltd_title><lltd len="25">LLTD</lltd><jumbo_frame>巨型帧</jumbo_frame><speed_title len="999">链路速度设置</speed_title><speed len="30">链路速度</speed><speed2 len="30">速度</speed2><auto len="999">自动</auto><lan1 len="999">LAN 1</lan1><lan2 len="999">LAN 2</lan2><merge len="999">LAN 1 + LAN 2</merge><vlan_id_info len="999">1-4094</vlan_id_info><vlan len="999">VLAN</vlan><vlan_id len="999">VLAN ID</vlan_id><route_title len="999">路由设置</route_title><tunnel_title len="999">隧道代理设置</tunnel_title><dns_auto1 len="999">自动获得 DNS 服务器地址。</dns_auto1><dns_auto2 len="999">使用以下 DNS 服务器地址。</dns_auto2><ftp_access len="999">FTP 访问</ftp_access><ftp_access_set len="999">FTP 设置</ftp_access_set><ftp_config len="999">配置</ftp_config><choose_dhcp>请选择 DHCP 模式设置。</choose_dhcp><auto_fill>使用 Google Public DNS</auto_fill><google_dns>若使用 Google Public DNS，应遵守 Google 的适用服务条款和隐私策略。</google_dns><smb2>SMB 2</smb2><max_smb>最大 SMB 协议</max_smb><network_mode>网络模式</network_mode></_lan>
+  <_time>
+    <date_format>日期格式</date_format>
+    <time_format>时间格式</time_format>
+    <title len="999">
+      <![CDATA[语言和时钟]]>
+    </title>
+    <current_time len="40">
+      <![CDATA[日期和时间]]>
+    </current_time>
+    <time_d_header>
+      <![CDATA[日期和时间设置]]>
+    </time_d_header>
+    <time_d_desc>输入当前日期和时间。</time_d_desc>
+    <date len="30">日期</date>
+    <time len="30">时间</time>
+    <timezone len="40">时区</timezone>
+    <GMT-12-00 len="999">
+      <![CDATA[(GMT-12:00)国际日期变更线西]]>
+    </GMT-12-00>
+    <GMT-11-00 len="999">
+      <![CDATA[(GMT-11:00)UTC-11]]>
+    </GMT-11-00>
+    <GMT-11-00_1 len="999">
+      <![CDATA[(GMT-11:00)萨摩亚]]>
+    </GMT-11-00_1>
+    <GMT-10-00 len="999">
+      <![CDATA[(GMT-10:00)夏威夷]]>
+    </GMT-10-00>
+    <GMT-09-00 len="999">
+      <![CDATA[(GMT-09:00)阿拉斯加]]>
+    </GMT-09-00>
+    <GMT-08-00 len="999">
+      <![CDATA[(GMT-08:00)下加利福尼亚]]>
+    </GMT-08-00>
+    <GMT-08-00_1 len="999">
+      <![CDATA[(GMT-08:00)太平洋时间（美国和加拿大）]]>
+    </GMT-08-00_1>
+    <GMT-07-00 len="999">
+      <![CDATA[(GMT-07:00)山地时间（美国和加拿大）]]>
+    </GMT-07-00>
+    <GMT-07-00_1 len="999">
+      <![CDATA[(GMT-07:00)亚利桑那]]>
+    </GMT-07-00_1>
+    <GMT-07-00_2 len="999">
+      <![CDATA[(GMT-07:00)奇瓦瓦，拉巴斯，马扎特兰]]>
+    </GMT-07-00_2>
+    <GMT-06-00 len="999">
+      <![CDATA[(GMT-06:00)中美洲]]>
+    </GMT-06-00>
+    <GMT-06-00_1 len="999">
+      <![CDATA[(GMT-06:00)中部时间（美国和加拿大）]]>
+    </GMT-06-00_1>
+    <GMT-06-00_2 len="999">
+      <![CDATA[(GMT-06:00)瓜达拉哈拉，墨西哥城，蒙特雷]]>
+    </GMT-06-00_2>
+    <GMT-06-00_3 len="999">
+      <![CDATA[(GMT-06:00)萨斯喀彻温省]]>
+    </GMT-06-00_3>
+    <GMT-05-00 len="999">
+      <![CDATA[(GMT-05:00)印地安纳（东部）]]>
+    </GMT-05-00>
+    <GMT-05-00_1 len="999">
+      <![CDATA[(GMT-05:00)东部时间（美国和加拿大）]]>
+    </GMT-05-00_1>
+    <GMT-09-00_2 len="999">
+      <![CDATA[(GMT-05:00)波哥大，利马，基多]]>
+    </GMT-09-00_2>
+    <GMT-04-30 len="999">
+      <![CDATA[(GMT-04:30)加拉加斯]]>
+    </GMT-04-30>
+    <GMT-04-00 len="999">
+      <![CDATA[(GMT-04:00)大西洋时间（加拿大）]]>
+    </GMT-04-00>
+    <GMT-04-00_1 len="999">
+      <![CDATA[(GMT-04:00)乔治敦，拉巴斯，马瑙斯，圣胡安]]>
+    </GMT-04-00_1>
+    <GMT-04-00_2 len="999">
+      <![CDATA[(GMT-04:00)亚松森]]>
+    </GMT-04-00_2>
+    <GMT-04-00_3 len="999">
+      <![CDATA[(GMT-04:00)圣地亚哥]]>
+    </GMT-04-00_3>
+    <GMT-04-00_4 len="999">
+      <![CDATA[(GMT-04:00)奎亚巴]]>
+    </GMT-04-00_4>
+    <GMT-03-30 len="999">
+      <![CDATA[(GMT-03:30)纽芬兰]]>
+    </GMT-03-30>
+    <GMT-03-00 len="999">
+      <![CDATA[(GMT-03:00)巴西利亚]]>
+    </GMT-03-00>
+    <GMT-03-00_1 len="999">
+      <![CDATA[(GMT-03:00)布宜诺斯艾利斯]]>
+    </GMT-03-00_1>
+    <GMT-03-00_2 len="999">
+      <![CDATA[(GMT-03:00)格陵兰]]>
+    </GMT-03-00_2>
+    <GMT-03-00_3 len="999">
+      <![CDATA[(GMT-03:00)卡宴、福塔莱萨]]>
+    </GMT-03-00_3>
+    <GMT-03-00_4 len="999">
+      <![CDATA[(GMT-03:00)蒙得维]]>
+    </GMT-03-00_4>
+    <GMT-02-00 len="999">
+      <![CDATA[(GMT-02:00)中大西洋]]>
+    </GMT-02-00>
+    <GMT-02-00_1 len="999">
+      <![CDATA[(GMT-02:00)UTC-2]]>
+    </GMT-02-00_1>
+    <GMT-01-00 len="999">
+      <![CDATA[(GMT-01:00)亚述尔群岛]]>
+    </GMT-01-00>
+    <GMT-01-00_1 len="999">
+      <![CDATA[(GMT-01:00)佛得角群岛]]>
+    </GMT-01-00_1>
+    <GMT len="999">
+      <![CDATA[(GMT)卡萨布兰卡]]>
+    </GMT>
+    <GMT_1 len="999">
+      <![CDATA[(GMT)格林威治标准时间]]>
+    </GMT_1>
+    <GMT_2 len="999">
+      <![CDATA[(GMT)蒙罗维亚，雷克雅未克]]>
+    </GMT_2>
+    <GMT_3 len="999">
+      <![CDATA[(GMT)都柏林，爱丁堡，里斯本，伦敦]]>
+    </GMT_3>
+    <GMT01-00 len="999">
+      <![CDATA[(GMT+01:00)中西部非洲]]>
+    </GMT01-00>
+    <GMT01-00_1 len="999">
+      <![CDATA[(GMT+01:00)布鲁塞尔，哥本哈根，马德里，巴黎]]>
+    </GMT01-00_1>
+    <GMT01-00_2 len="999">
+      <![CDATA[(GMT+01:00)贝尔格莱德，布拉迪斯拉发，布达佩斯，卢布尔雅那，布拉格]]>
+    </GMT01-00_2>
+    <GMT01-00_3 len="999">
+      <![CDATA[(GMT+01:00)阿姆斯特丹，柏林，伯尔尼，罗马，斯德哥尔摩，维也纳]]>
+    </GMT01-00_3>
+    <GMT01-00_4 len="999">
+      <![CDATA[(GMT+01:00)萨拉热窝，斯科普里，华沙，萨格勒布]]>
+    </GMT01-00_4>
+    <GMT01-00_5 len="999">
+      <![CDATA[(GMT+01:00)温得和克]]>
+    </GMT01-00_5>
+    <GMT02-00 len="999">
+      <![CDATA[(GMT+02:00)安曼]]>
+    </GMT02-00>
+    <GMT02-00_1 len="999">
+      <![CDATA[(GMT+02:00)贝鲁特]]>
+    </GMT02-00_1>
+    <GMT02-00_2 len="999">
+      <![CDATA[(GMT+02:00)明斯克]]>
+    </GMT02-00_2>
+    <GMT02-00_3 len="999">
+      <![CDATA[(GMT+02:00)哈拉雷，比勒陀利亚]]>
+    </GMT02-00_3>
+    <GMT02-00_4 len="999">
+      <![CDATA[(GMT+02:00)耶路撒冷]]>
+    </GMT02-00_4>
+    <GMT02-00_5 len="999">
+      <![CDATA[(GMT+02:00)开罗]]>
+    </GMT02-00_5>
+    <GMT02-00_6 len="999">
+      <![CDATA[(GMT+02:00)雅典，布加勒斯特]]>
+    </GMT02-00_6>
+    <GMT02-00_7 len="999">
+      <![CDATA[(GMT+02:00)温得和克]]>
+    </GMT02-00_7>
+    <GMT02-00_8 len="999">
+      <![CDATA[(GMT+02:00)赫尔辛基，基辅，里加，索非亚，塔林，维尔纽斯]]>
+    </GMT02-00_8>
+    <GMT02-00_9 len="999">
+      <![CDATA[(GMT+02:00)大马士革]]>
+    </GMT02-00_9>
+    <GMT02-00_10 len="999">
+      <![CDATA[(GMT+02:00)尼科西亚]]>
+    </GMT02-00_10>
+    <GMT02-00_11 len="999">
+      <![CDATA[(GMT+02:00)伊斯坦布尔]]>
+    </GMT02-00_11>
+    <GMT03-00 len="999">
+      <![CDATA[(GMT+03:00)巴格达]]>
+    </GMT03-00>
+    <GMT03-00_1 len="999">
+      <![CDATA[(GMT+03:00)内罗毕]]>
+    </GMT03-00_1>
+    <GMT03-00_2 len="999">
+      <![CDATA[(GMT+03:00)科威特，利雅得]]>
+    </GMT03-00_2>
+    <GMT03-00_3 len="999">
+      <![CDATA[(GMT+03:00)加里宁格勒，明斯克]]>
+    </GMT03-00_3>
+    <GMT03-30 len="999">
+      <![CDATA[(GMT+03:30)德黑兰]]>
+    </GMT03-30>
+    <GMT04-00 len="999">
+      <![CDATA[(GMT+04:00)巴库]]>
+    </GMT04-00>
+    <GMT04-00_1 len="999">
+      <![CDATA[(GMT+04:00)阿布扎比，马斯喀特]]>
+    </GMT04-00_1>
+    <GMT04-00_2 len="999">
+      <![CDATA[(GMT+04:00)第比利斯]]>
+    </GMT04-00_2>
+    <GMT04-00_3 len="999">
+      <![CDATA[(GMT+04:00)埃里温]]>
+    </GMT04-00_3>
+    <GMT04-00_4 len="999">
+      <![CDATA[(GMT+04:00)路易港]]>
+    </GMT04-00_4>
+    <GMT03-00_4 len="999">
+      <![CDATA[(GMT+03:00)莫斯科，圣彼得堡，伏尔加格勒]]>
+    </GMT03-00_4>
+    <GMT04-30 len="999">
+      <![CDATA[(GMT+04:30)喀布尔]]>
+    </GMT04-30>
+    <GMT05-00_1 len="999">
+      <![CDATA[(GMT+05:00)伊斯兰堡、卡拉奇]]>
+    </GMT05-00_1>
+    <GMT05-00_2 len="999">
+      <![CDATA[(GMT+05:00)塔什干]]>
+    </GMT05-00_2>
+    <GMT05-30 len="999">
+      <![CDATA[(GMT+05:30)晨奈，加尔各答，孟买，新德里]]>
+    </GMT05-30>
+    <GMT05-30_1 len="999">
+      <![CDATA[(GMT+05:30)斯里加亚渥登普拉]]>
+    </GMT05-30_1>
+    <GMT05-45 len="999">
+      <![CDATA[(GMT+05:45)加德满都]]>
+    </GMT05-45>
+    <GMT06-00 len="999">
+      <![CDATA[(GMT+06:00)阿斯塔纳]]>
+    </GMT06-00>
+    <GMT06-00_1 len="999">
+      <![CDATA[(GMT+06:00)新西伯利亚]]>
+    </GMT06-00_1>
+    <GMT06-00_2 len="999">
+      <![CDATA[(GMT+06:00)达卡]]>
+    </GMT06-00_2>
+    <GMT06-00_3 len="999">
+      <![CDATA[(GMT+06:00)叶卡捷琳堡]]>
+    </GMT06-00_3>
+    <GMT06-30 len="999">
+      <![CDATA[(GMT+06:30)仰光]]>
+    </GMT06-30>
+    <GMT07-00 len="999">
+      <![CDATA[(GMT+07:00)克拉斯诺亚尔斯克]]>
+    </GMT07-00>
+    <GMT07-00_1 len="999">
+      <![CDATA[(GMT+07:00)曼谷，河内，雅加达]]>
+    </GMT07-00_1>
+    <GMT07-00_2 len="999">
+      <![CDATA[(GMT+07:00)新西伯利亚]]>
+    </GMT07-00_2>
+    <GMT08-00 len="999">
+      <![CDATA[(GMT+08:00)北京，重庆，香港，乌鲁木齐]]>
+    </GMT08-00>
+    <GMT08-00_1 len="999">
+      <![CDATA[(GMT+08:00)台北]]>
+    </GMT08-00_1>
+    <GMT08-00_2 len="999">
+      <![CDATA[(GMT+08:00)吉隆坡，新加坡]]>
+    </GMT08-00_2>
+    <GMT08-00_3 len="999">
+      <![CDATA[(GMT+08:00)珀斯]]>
+    </GMT08-00_3>
+    <GMT08-00_4 len="999">
+      <![CDATA[(GMT+08:00)乌兰巴托]]>
+    </GMT08-00_4>
+    <GMT08-00_5 len="999">
+      <![CDATA[(GMT+08:00)克拉斯诺亚尔斯克]]>
+    </GMT08-00_5>
+    <GMT09-00 len="999">
+      <![CDATA[(GMT+09:00)大阪，札幌，东京]]>
+    </GMT09-00>
+    <GMT09-00_1 len="999">
+      <![CDATA[(GMT+09:00)伊尔库茨克]]>
+    </GMT09-00_1>
+    <GMT09-00_2 len="999">
+      <![CDATA[(GMT+09:00)首尔]]>
+    </GMT09-00_2>
+    <GMT09-30 len="999">
+      <![CDATA[(GMT+09:30)阿德莱德]]>
+    </GMT09-30>
+    <GMT09-30_1 len="999">
+      <![CDATA[(GMT+09:30)达尔文市]]>
+    </GMT09-30_1>
+    <GMT10-00 len="999">
+      <![CDATA[(GMT+10:00)布里斯班]]>
+    </GMT10-00>
+    <GMT10-00_1 len="999">
+      <![CDATA[(GMT+10:00)堪培拉，墨尔本，悉尼]]>
+    </GMT10-00_1>
+    <GMT10-00_2 len="999">
+      <![CDATA[(GMT+10:00)雅库茨克]]>
+    </GMT10-00_2>
+    <GMT10-00_3 len="999">
+      <![CDATA[(GMT+10:00)霍巴特]]>
+    </GMT10-00_3>
+    <GMT10-00_4 len="999">
+      <![CDATA[(GMT+10:00)关岛、莫尔兹比港]]>
+    </GMT10-00_4>
+    <GMT11-00 len="999">
+      <![CDATA[(GMT+11:00)符拉迪沃斯托克]]>
+    </GMT11-00>
+    <GMT11-00_1 len="999">
+      <![CDATA[(GMT+11:00)所罗门群岛，新喀里多尼亚]]>
+    </GMT11-00_1>
+    <GMT12-00 len="999">
+      <![CDATA[(GMT+12:00)马加丹]]>
+    </GMT12-00>
+    <GMT12-00_1 len="999">
+      <![CDATA[(GMT+12:00)彼得罗巴甫洛夫斯克]]>
+    </GMT12-00_1>
+    <GMT12-00_2 len="999">
+      <![CDATA[(GMT+12:00)UTC+12]]>
+    </GMT12-00_2>
+    <GMT12-00_3 len="999">
+      <![CDATA[(GMT+12:00)斐济]]>
+    </GMT12-00_3>
+    <GMT12-00_4 len="999">
+      <![CDATA[(GMT+12:00)奥克兰，惠灵顿]]>
+    </GMT12-00_4>
+    <GMT13-00 len="999">
+      <![CDATA[(GMT+13:00)努库阿洛法]]>
+    </GMT13-00>
+    <GMT13-00_1 len="999">
+      <![CDATA[(GMT+13:00)萨摩亚]]>
+    </GMT13-00_1>
+    <ntp_service>NTP 服务</ntp_service>
+    <ntp_title len="999">NTP 设置</ntp_title>
+    <ntp_desc>
+      <![CDATA[
+		NTP 服务与您的网络同步，并自动更新 WD My Cloud Mirror 设备上的日期和时间。<br><br>当前的 NTP 服务器 <br> <br>
+			]]>
+    </ntp_desc>
+    <ntp_user>用户自定义的 NTP 服务器</ntp_user>
+    <ntp_server len="999">主服务器</ntp_server>
+    <add_ntp>添加用户 NTP</add_ntp>
+    <ntp_status>NTP 状态</ntp_status>
+    <msg1 len="999">无法连接到此 NTP 服务器。</msg1>
+    <msg2 len="999">此日期格式不正确。</msg2>
+    <msg3 len="999">请输入时间服务器 IP 地址。</msg3>
+    <msg4 len="999">重要注意事项：输入时间设置前，必须选择正确的时区。</msg4>
+  </_time>
+  <_device>
+    <title len="999">设备配置文件</title>
+    <title2 len="999">网络工作组</title2>
+    <title3 len="999">Windows 服务</title3>
+    <workgroup len="999">工作组</workgroup>
+    <name len="999">设备名称</name>
+    <device_description len="999">描述</device_description>
+    <lmb len="999">本地主浏览器</lmb>
+    <sdesc len="999">共享描述</sdesc>
+    <serial_number>序列号</serial_number>
+    <msg1 len="999">工作组不可包含空格。</msg1>
+    <msg2 len="999">请输入工作组。</msg2>
+    <msg3 len="999">工作组不可超过 16 个字符。</msg3>
+    <msg4 len="999">请输入设备名称。</msg4>
+    <msg5 len="999">设备名称不可超过 15 个字符。</msg5>
+    <msg6 len="999">请输入设备描述。</msg6>
+    <msg7 len="999">设备描述不可超过 32 个字符。</msg7>
+    <msg8 len="999">
+      <![CDATA[工作组不可包含以下字符：*+=|[]/\:";<>?,]]>
+    </msg8>
+    <msg9 len="999">服务器名称无效。</msg9>
+    <msg10 len="999">设备名称无效。设备名称必须在 2 到 15 个字符之间，包含字母、数字和短划线。不能以数字或连字符开头。</msg10>
+    <msg11 len="999">设备名称不可包含空格。</msg11>
+    <msg12 len="999">
+      <![CDATA[设备描述必须以字母或数字开头，可以包含空格和下划线，但总计不得超过 42 个字符。]]>
+    </msg12>
+    <msg13 len="999">第一个和最后一个字符不可为空。</msg13>
+    <msg14 len="999">设备名称不能以数字或连字符开头。</msg14>
+  <msg15>更改设备名称可能造成已建立的部分连接，如驱动器映射、别名、备份和 Time Machine 备份要求重置。如果您想继续更改，请检查并重新建立连接。</msg15></_device>
+  <_module>
+    <title len="999">应用配置文件</title>
+    <title2 len="999">服务条款</title2>
+    <file_path len="999">文件路径</file_path>
+    <no len="999">编号</no>
+    <module_name len="999">模块名称</module_name>
+    <version len="999">版本</version>
+    <status len="999">状态</status>
+    <on_off len="999">启动/停止</on_off>
+    <del len="999">删除</del>
+    <date len="999">安装日期</date>
+    <path len="999">安装路径</path>
+    <logitech len="999">Logitech 网站</logitech>
+    <desc1>手动安装</desc1>
+    <desc2>详细信息</desc2>
+    <desc3>已安装的应用</desc3>
+    <desc4>N/A</desc4>
+    <desc5>安装应用</desc5>
+    <desc6>浏览应用</desc6>
+    <desc7>配置 URL</desc7>
+    <desc8>已禁用</desc8>
+    <desc9>已启用</desc9>
+    <desc10>浏览第三方供应商的应用，并选择您想下载并安装的应用。所有应用都已通过 WD 认证。</desc10>
+    <desc11>可用应用</desc11>
+    <desc12>安装</desc12>
+    <desc13>正在初始化</desc13>
+    <desc14>有更新可用</desc14>
+    <desc15>正在下载</desc15>
+    <desc16>正在安装</desc16>
+    <desc17>管理所有应用</desc17>
+    <desc18>应用为您的 My Cloud 系统带来更多功能。在安装之前请查看应用的详细信息。</desc18>
+    <desc19><![CDATA[若要手动安装应用，请单击<a href="" onclick="return false;">此处</a>。]]></desc19>
+    <desc20>安装于</desc20>
+    <desc21>应用名称</desc21>
+    <desc22>应用详细信息</desc22>
+    <desc23>xxx 应用有更新可用。请见下面了解详细信息。</desc23>
+    <desc24>新增功能</desc24>
+    <desc25>更新</desc25>
+    <desc26>管理应用</desc26>
+    <desc27>添加应用</desc27>
+    <desc28>有更新可用</desc28>
+    <desc29>删除应用</desc29>
+    <desc30>以下应用有更新可用：</desc30>
+    <desc31>无可用应用。</desc31>
+    <desc32>注：对每个应用程序的支持应通过各家供应商获得</desc32>
+    <desc33><![CDATA[若要手动安装应用，请单击 <div class="file_input_div" style="width:50px;float:right;border:0px solid red;text-align:left;text-decoration:underline;"> 此处。<input type="file" name="f_apps_file" class="file_input_hidden" id="f_apps_file" onchange="apps_manually_install();"></div>]]></desc33>
+    <desc34>继续之前，请查看并接受这些条款和条件。</desc34>
+    <msg1 len="50">请选择包。</msg1>
+    <msg2 len="96">安装模块...</msg2>
+    <msg3 len="50">要删除应用吗？</msg3>
+    <msg4 len="96">应用程序安装成功。</msg4>
+    <msg5 len="96">无法安装应用程序。My Cloud 系统中的存储卷不可用。</msg5>
+    <msg6 len="96">应用程序安装失败。</msg6>
+    <msg7 len="50">该 {0} 应用程序已安装在 My Cloud 系统中。您是否要重新安装该应用程序？</msg7>
+    <msg8 len="96">无法安装应用程序。My Cloud 系统中没有足够的存储空间。请释放存储空间并再次尝试。</msg8>
+    <msg9 len="96">启用应用失败。</msg9>
+    <msg10 len="96">应用启用成功。</msg10>
+    <msg11 len="96">模块删除成功。</msg11>
+    <msg12 len="999">已达到最大模块数量。</msg12>
+    <msg13 len="96"><![CDATA[从 xxx 下载 Squeeze Center 包，并将其放在 Volume_1 文件夹下。]]></msg13>
+    <msg14 len="342">此加载项不是 WD 创建的。WD 不提供对第三方加载项的支持，如果问题是使用第三方加载项的直接结果，WD 也不会提供产品支持。一旦安装此加载项，即表示您明确同意使用此加载项是您自己的意愿，风险由您自担。</msg14>
+    <msg15 len="342">此加载项不是 Western Digitial Corporation 创建的。要替换此加载项吗？</msg15>
+    <msg16 len="999">磁盘空间低。请先删除某些项，然后再试。</msg16>
+    <msg17 len="999">安装此应用需要更新的固件。请升级 My Cloud 系统固件并再次尝试。</msg17>
+    <button1>拒绝</button1>
+    <button2>接受</button2>
+  <msg24>该 {0} 应用程序已成功地安装到 My Cloud 系统中。</msg24><msg25>此 {0} 和 {1} 应用程序已成功地安装到 My Cloud 系统中。</msg25><msg26>所有应用程序数据和设置都将被删除。&lt;br&gt;&lt;/br&gt;您确实要卸载 {0}?</msg26><title3>卸载 {0}</title3><tip1>卸载应用</tip1><tip2>安装应用</tip2><msg19>该应用程序无法运行，因为它有赖于将要运行的其他应用程序。</msg19><msg20>该应用程序无法删除，因为其他应用程序有赖于该应用程序。</msg20><msg21>该应用程序无法停止，因为其他应用程序有赖于该应用程序。</msg21></_module>
+  <_user>
+  	<groups>组</groups>
+    <setup_user len="999">设置用户</setup_user>
+    <setup_group len="999">设置组</setup_group>
+    <about_user len="999">关于用户</about_user>
+    <about_group len="999">关于组</about_group>
+    <user_title len="999">添加用户</user_title>
+    <del_user_title len="999">删除用户</del_user_title>
+    <del_group_title len="999">删除组</del_group_title>
+    <modify_group_title len="999">修改组</modify_group_title>
+    <modify_pw_title len="999">编辑密码</modify_pw_title>
+    <modify_quota_title len="999">修改配额</modify_quota_title>
+    <del_user_desc len="999">您确定要删除此用户吗？</del_user_desc>
+    <del_group_desc len="999">您确定要删除此组吗？</del_group_desc>
+    <user_desc len="999">控制谁能访问 WD My Cloud Mirror 系统及其访问类型。</user_desc>
+    <group_desc len="999">组是用户的集合，可用来更轻松地一次管理多个用户。</group_desc>
+    <modify_group_desc>使用下面的列表在此组中添加或删除用户。</modify_group_desc>
+    <user_profile len="999">用户配置文件</user_profile>
+    <group_profile len="999">组配置文件</group_profile>
+    <user_description4 len="999">      <![CDATA[允许用户访问以下应用程序]]>    </user_description4>
+    <user_description7 len="999">
+      <![CDATA[如果不希望设置任何用户配额，请将此字段留空。]]>
+    </user_description7>
+    <create_user>创建新用户账户</create_user>
+    <share_access len="999">共享访问</share_access>
+    <all len="999">全部</all>
+    <select_group len="999">选择要添加到该组的用户。</select_group>
+    <add_group len="999">添加组</add_group>
+    <select_share_folder len="999">网络共享设置</select_share_folder>
+    <group_title len="999">组设置</group_title>
+    <import_description2 len="999">
+      <![CDATA[选中您要使用的字段（灰色的选定项默认已选中）。]]>
+    </import_description2>
+    <create_group len="999">创建新组</create_group>
+    <select_user len="999">将用户加入组</select_user>
+    <group_name len="999">组名</group_name>
+    <user_name len="999">用户名</user_name>
+    <full_name len="999">全名</full_name>
+    <pw_hint len="999">密码提示</pw_hint>
+    <pw len="999">密码</pw>
+    <confirm_password len="999">确认密码</confirm_password>
+    <mail_addr len="999">电子邮件</mail_addr>
+    <req len="999">用户名必填</req>
+    <quota_settings len="999">配额设置</quota_settings>
+    <chg_pw len="999">更改密码</chg_pw>
+    <join_group len="999">加入组</join_group>
+    <chg_member len="999">更改成员</chg_member>
+    <group_member len="999">组成员</group_member>
+    <member len="999">成员</member>
+    <group len="999">组</group>
+    <user len="999">用户</user>
+    <quota_amount1 len="999">Volume_1 配额</quota_amount1>
+    <quota_amount2 len="999">Volume_2 配额</quota_amount2>
+    <quota_amount3 len="999">Volume_3 配额</quota_amount3>
+    <quota_amount4 len="999">Volume_4 配额</quota_amount4>
+    <no_hdd len="999">未找到卷。</no_hdd>
+    <none_group len="999">未定义组。</none_group>
+    <none_user len="999">未定义用户。</none_user>
+    <cifs len="999">CIFS</cifs>
+    <ftp len="999">FTP 访问</ftp>
+    <nfs len="999">NFS 访问</nfs>
+    <webdav len="999">WebDAV 访问</webdav>
+    <media len="999">媒体服务</media>
+    <u_prefix len="999">用户名前缀</u_prefix>
+    <start_num len="999">账户前缀</start_num>
+    <create_num len="999">用户数</create_num>
+    <overwrite len="999">覆盖重复账户</overwrite>
+    <overwrite2 len="999">覆盖现有用户</overwrite2>
+    <duplicate len="999">重复用户名</duplicate>
+    <illegal len="999">无效用户名</illegal>
+    <create len="999">创建单个用户</create>
+    <create2 len="999">新用户</create2>
+    <reference len="999">请参阅此示例文件了解参数。</reference>
+    <sel_list len="999">导入用户列表</sel_list>
+    <max len="999">最大</max>
+    <multiple len="999">添加多个用户</multiple>
+    <user_finish len="999">
+      <![CDATA[这将完成向导。单击<b>返回</b>复查设置。单击<b>应用</b>保存设置。 ]]>
+    </user_finish>
+    <pw_required>密码必填</pw_required>
+    <help_hint len="999">用户密码必须至少 5 个字符长。用户名不可与组名相同。</help_hint>
+    <old_pw len="999">旧密码</old_pw>
+    
+    
+      <g_multiple len="999">添加多个组</g_multiple>
+    
+    
+      <import_group len="999">导入组</import_group>
+    
+    
+      <sel_glist len="999">导入组列表</sel_glist>
+    
+    
+      <overwrite_group len="999">覆盖重复组</overwrite_group>
+    
+    
+      <user_description5 len="999">允许组访问以下应用程序。</user_description5>
+    
+    
+      <account_expires len="999">帐户过期</account_expires>
+    
+    
+      <end_of len="999">结束</end_of>
+    
+<wait_uesrs len="999">等待用户</wait_uesrs>
+	<wait_groups len="999">等待组</wait_groups>
+	<wait_shares len="999">等待共享</wait_shares>    
+    <msg1 len="999">已达到最大用户数量。</msg1>
+    <msg2 len="999">请选择一项。</msg2>
+    <msg3 len="999">用户账户添加成功。</msg3>
+    <msg4 len="999">用户账户已成功更改。</msg4>
+    <msg5 len="999">用户名必须是 1 到 16 个字母数字值，并且不能包含空格。</msg5>
+    <msg6 len="999">系统不接受此账户。请重试。</msg6>
+    <msg7 len="999">用户名 %s 已保留。它包含 1 到 16 个字母数字值，区分大小写，并且不能包含空格。</msg7>
+    <msg8 len="999">用户名不可包含空格。</msg8>
+    <msg9 len="999">用户名长度不可超过 16 个字符。请重试。</msg9>
+    <msg10 len="999">
+      <![CDATA[用户名格式不正确。用户名不可包含以下字符：* ?" < > | .; + = ~ ' [ ] { } @ # ( ) !^ $ % & , ` / \]]>
+    </msg10>
+    <msg11 len="999">用户名不可与组名相同。</msg11>
+    <msg12 len="999">输入的用户名已存在。请选择其他用户名。</msg12>
+    <msg13 len="999">已达到组的最大数量。</msg13>
+    <msg14 len="999">组已成功添加。</msg14>
+    <msg15 len="999">已成功删除组。</msg15>
+    <msg16 len="999">系统不接受此组名。请重试。</msg16>
+    <msg17 len="999">输入的组名已存在。请选择其他组名。</msg17>
+    <msg18 len="999">请输入组名。</msg18>
+    <msg19 len="999">组名必须是 1 到 16 个字母数字值，并且不能包含空格。</msg19>
+    <msg20 len="999">组名长度不可超过 16 个字符。请重试。</msg20>
+    <msg21 len="999">
+      <![CDATA[组名格式不正确。组名不可包含以下字符：* ?" < > | .; + = ~ ' [ ] { } @ # ( ) !^ $ % & , ` / \]]>
+    </msg21>
+    <msg22 len="999">组名不可与用户名相同。</msg22>
+    <msg23 len="999">组名已成功更改。</msg23>
+    <msg24 len="999">用户删除成功。</msg24>
+    <msg25 len="999">用户名必须以 a-z、A-Z、0-9 开头</msg25>
+    <msg26 len="999">组名必须以 a-z、A-Z、0-9 开头</msg26>
+    <msg27 len="999">用户已成功更改。</msg27>
+    <msg28 len="999">没有项要更改。</msg28>
+    <msg29 len="999">用户已成功添加。</msg29>
+    <msg30 len="999">用户名前缀不可包含空格。</msg30>
+    <msg31 len="999">请输入账户前缀。</msg31>
+    <msg32 len="999">请输入用户数。</msg32>
+    <msg33 len="999">用户数不可超过：</msg33>
+    <msg34 len="999">一次只能修改一项。</msg34>
+    <msg35 len="999">您确定要删除此用户吗？</msg35>
+    <msg36 len="999">导入用户错误。</msg36>
+    <msg37 len="999">导入文件格式不正确。请重试。</msg37>
+    <msg38 len="999">姓氏是几个字母数字值，区分大小写，加上名字后，一共不能超过16个字符。姓氏和名字组合在一起时，允许使用空格和下划线。</msg38>
+    <msg39 len="999">名字必须是 1 到 16 个字母数字值，区分大小写，并且不能包含空格。</msg39>
+    <msg40 len="999">无法创建您请求的互联网接入帐户。请确保您的网络可以连通，然后重试。</msg40>
+    <msg41 len="999">注：用户成功添加。</msg41>
+    <msg42 len="999">找到重复的用户帐户。请确保无重复的用户并重试。</msg42>
+  <msg43 len="999">电子邮件不可超过 48 个字符。</msg43>
+  <msg44 len="999">导入组错误。</msg44>
+    
+  <user_description6>如果不希望设置任何组配额，请将此字段留空。</user_description6><msg45>My Cloud 系统仍在添加先前导入的多个用户。若要编辑用户，请稍后再试。</msg45><msg46>My Cloud 系统仍在添加先前导入的多个组。若要编辑组，请稍后再试。</msg46><msg47>用户名称必须由 1 至 16 个字符组成的字母数字字符，第一个字符必须是字母。</msg47><msg48>姓氏必须由 1 到 16 个字母数字字符组成。</msg48><msg49>无效电子邮件地址。</msg49><user_description3>您可以使用以下字段编辑此用户的密码。&lt;br&gt;注意：更改此密码不会影响您的 &lt;a id="cloud_url" href="http://www.mycloud.com" target="_blank"&gt;MyCloud.com&lt;/a&gt; 帐户。</user_description3></_user>
+  <_network_access>
+    <title len="999">设置共享</title>
+    <about>关于共享</about>
+    <desc len="999">共享是指一个用于存储文件的区域(如一个文件夹)。您可以在一个存储设备上创建多个共享，并控制对每个共享的访问。</desc>
+    <share_profile>共享配置文件</share_profile>
+    <user_access len="999">用户访问</user_access>
+    <add_title len="999">添加共享</add_title>
+    <del_title len="999">删除共享</del_title>
+    <del_desc len="999">
+      <![CDATA[
+			删除此共享将删除其所有的内容和配置设置。<br><br>您确定要删除此共享吗？
+		]]>
+    </del_desc>
+    <share_name len="999">共享名称</share_name>
+    <read_only len="999">只读</read_only>
+    <read_write len="999">读/写</read_write>
+    <decline len="999">拒绝访问</decline>
+    <no_access len="999">无权访问</no_access>
+    <comment len="999">注释</comment>
+    <oplocks len="999">Oplocks</oplocks>
+    <map len="999">映射存档</map>
+    <recycle_bin len="999">启用回收站</recycle_bin>
+    <recycle_tree len="999">回收树</recycle_tree>
+    <share_settings len="999">共享设置</share_settings>
+    <path len="999">路径</path>
+    <user len="999">设备用户名</user>
+    <group len="999">组</group>
+    <create_folder_name len="999">创建新文件夹</create_folder_name>
+    <input_folder_name len="999">输入新文件夹名称</input_folder_name>
+    <assign_access_rights len="999">分配访问权限</assign_access_rights>
+    <ftp_settings len="999">FTP 设置</ftp_settings>
+    <anonymous_none len="999">匿名 无</anonymous_none>
+    <anonymous_read_only len="999">匿名 只读</anonymous_read_only>
+    <anonymous_write len="999">匿名 读/写</anonymous_write>
+    <confirm_settings len="999">确认设置</confirm_settings>
+    <application_list len="999">应用程序列表</application_list>
+    <anonymous len="999">FTP 匿名</anonymous>
+    <none len="999">无</none>
+    <read len="999">只读</read>
+    <write len="999">读/写</write>
+    <info len="999">网络共享信息</info>
+    <nfs_setting len="999">NFS 设置</nfs_setting>
+    <public len="999">公用</public>
+    <recycle_title len="999">回收站</recycle_title>
+    <msg1 len="999">共享名称重复，或者长度超过 80 个字符。请修改。</msg1>
+    <msg2 len="999">选择您要修改的项。</msg2>
+    <msg3 len="167">
+      <![CDATA[文件夹名称不可包含以下字符：\ / :* ?" < > | ]]>
+    </msg3>
+    <msg4 len="167">文件夹名称无效。</msg4>
+    <msg5 len="999">文件夹名称长度应为 1-226。</msg5>
+    <msg6 len="999">此文件夹父级已选中。</msg6>
+    <msg7 len="999">文件夹名称不可为空。</msg7>
+    <msg8 len="999">无法重命名新文件夹：您指定的名称已经有文件在用。请指定其他文件名。</msg8>
+    <msg9 len="999">共享名称不可为空。</msg9>
+    <msg10 len="999">请选择用户或组。</msg10>
+    <msg11 len="999">此文件夹已经设置为共享。</msg11>
+    <msg12 len="999">主机无效。</msg12>
+    <msg13 len="999">已达到网络共享的最大数量。</msg13>
+    <msg14 len="999">请选择“只读”或“读/写”。</msg14>
+    <msg15 len="999">共享失败的项</msg15>
+    <msg16 len="999">请选择“只读”。</msg16>
+    <msg17 len="999">请选择用户或组</msg17>
+    <msg18 len="999">
+      <![CDATA[注：您即将把网络访问列表重设为默认访问权限。访问权限默认为对所有账户开放（无需密码）。]]>
+    </msg18>
+    <msg19 len="999">
+      <![CDATA[共享名称不可包含以下字符：% < > * ?| / \ + = ; :" @ # !~ [ ]]]>
+    </msg19>
+    <msg20 len="999">
+      <![CDATA[共享名称的最后一个字符不可为“$”或“.”符号。]]>
+    </msg20>
+    <msg21 len="999">
+      <![CDATA[共享名称的第一个字符不可为“.”、“&”、“#”符号。]]>
+    </msg21>
+    <msg22 len="999">
+      <![CDATA[描述不可超过 128 个字符。]]>
+    </msg22>
+    <msg23 len="999">
+      <![CDATA[共享名称不可包含以下字符：\ / :* ?" < > | ]]>
+    </msg23>
+    <msg24 len="999">
+      <![CDATA[共享名称 %s 已保留。共享名称包含 1 到 80 个字母数字值，区分大小写，并且不能包含空格。]]>
+    </msg24>
+    <msg25 len="999">
+      <![CDATA[共享名称包含 1 到 80 个字母数字值，区分大小写，并且不能包含空格。]]>
+    </msg25>
+  <usage>用法</usage></_network_access>
+  <_iso_mount>
+    <iso_title len="999">关于 ISO 挂载</iso_title>
+    <edit_title len="999">编辑 ISO 共享</edit_title>
+    <info len="999">信息</info>
+    <desc>挂载位于网络共享的 ISO 文件，可让可访问网络共享的用户访问 ISO 文件中的文件和文件夹内容（文件级访问）。</desc>
+    <create_iso_share>创建 ISO 共享</create_iso_share>
+    <add_iso_share>创建 ISO 共享</add_iso_share>
+    <msg1 len="999">
+      <![CDATA[
+		无法删除共享的条目，因为该条目仍在使用。要删除该条目，请先停止访问该共享条目。
+		]]>
+    </msg1>
+    <msg2>您确定要删除此 ISO 挂载吗？</msg2>
+    <msg3>ISO 共享已经存在。</msg3>
+    <del_title>删除 ISO 共享</del_title>
+    <no_list>无 ISO 共享添加到 WD My Cloud Mirror 系统。</no_list>
+    <isoshare_list>ISO 共享列表</isoshare_list>
+  </_iso_mount>
+  <_network_services>
+    <adv_features>高级功能</adv_features>
+    <afp_title len="999">AFP 服务设置</afp_title>
+    <afp_service len="999">AFP 服务</afp_service>
+    <afp_service_b len="999">AFP 服务</afp_service_b>
+    <afp_description len="999">用户可在此处启用 AFP 服务选项。如果使用 Time Machine 选项，此选项自动启用。</afp_description>
+    <nfs_title len="999">NFS 服务设置</nfs_title>
+    <nfs_service len="999">NFS 服务</nfs_service>
+    <nfs_service_b len="999">NFS 服务</nfs_service_b>
+    <nfs_description len="999">用户可在此处启用 NFS 服务选项。</nfs_description>
+    <ftp_service len="999">FTP 服务</ftp_service>
+    <ftp_service_b len="999">FTP 服务</ftp_service_b>
+    <afp_note len="999">（注意：将共享添加到 AFP 服务将禁用 oplock。）</afp_note>
+    <nfs_note len="999">（注意：将任何共享应用到 NFS 服务将禁用 oplock。）</nfs_note>
+    <webdav_service len="999">WebDAV 服务</webdav_service>
+  </_network_services>
+  <_nfs>
+    <host len="999">主机</host>
+    <real_path len="999">真实路径</real_path>
+    <root_squash len="999">Root Squash</root_squash>
+    <write len="999">写入</write>
+    <msg1 len="999">
+<![CDATA[主机名允许以下字符：“a-z”、“A-Z”、“0-9”、“-”、“/”。]]>
+</msg1>
+    <msg2 len="999">加载点</msg2>
+  </_nfs>
+  <_quota>
+    <x_quota>%s 的配额</x_quota>
+    <used len="999">已用</used>
+    <limit len="999">限制</limit>
+    <total_records len="999">总记录数</total_records>
+    <unlimited len="999">无限</unlimited>
+    <status len="999">状态</status>
+    <enable len="999">启用</enable>
+    <disable len="999">已禁用</disable>
+    <start len="999">已启动</start>
+    <stop len="999">已停止</stop>
+    <quota_amount len="999">配额</quota_amount>
+    <msg1 len="999">用户配额不可大于组配额。</msg1>
+    <msg2 len="999">配额不可小于用户配额。</msg2>
+    <msg3 len="999">配额不是正整数。请重试。</msg3>
+    <msg4 len="999">配额无效。请输入有效的数字。</msg4>
+    <msg5 len="999">此数字大于硬盘驱动器的最大容量。请输入实数或将此设置保留为无限。</msg5>
+    <help_hint len="999">硬盘驱动器必须完成同步，然后才能设置配额。</help_hint>
+  </_quota>
+  <_ftp>
+    <idle_time len="999">空闲时间</idle_time>
+    <port_description len="999">1025 到 3688、3690 到 49999、65501 到 65535，默认：21</port_description>
+    <passive_mode len="999">被动模式</passive_mode>
+    <default_port len="999">使用默认端口范围。</default_port>
+    <following_port len="999">使用以下端口范围</following_port>
+    <report len="999">以 PASV 模式报告外部 IP</report>
+    <external_ip len="999">外部 IP</external_ip>
+    <client_language len="999">客户端语言</client_language>
+    <flow_control len="999">流控制</flow_control>
+    <unlimited len="999">无限</unlimited>
+    <!--<allow len="999">Allow SSL/TLS connections only</allow>-->
+    <ipv4 len="999">IPV4</ipv4>
+    <ipv6 len="999">IPV6</ipv6>
+    <ip len="999">IP</ip>
+    <max_user len="999">最大用户数</max_user>
+    <connection len="999">连接</connection>
+    <started len="999">已启动</started>
+    <stopped len="999">已停止</stopped>
+    <ssl_tsl len="999">TLS</ssl_tsl>
+    <fxp len="999">FXP</fxp>
+    <permanent len="999">持久</permanent>
+    <temporary len="999">临时</temporary>
+    <auto_blcoked len="999">自动阻止</auto_blcoked>
+    <title1 len="999">启用 SSH</title1>
+    <msg1 len="167">端口 8080 用于 HTTP 服务器。</msg1>
+    <msg2 len="167">端口 25 用于邮件服务器。</msg2>
+    <msg3 len="167">端口 3689 用于 iTunes 服务器。</msg3>
+    <msg4 len="167">端口 50000-65500 用于 UPnP 服务器。</msg4>
+    <msg5 len="167">端口 67、68 用于 DHCP 服务器。</msg5>
+    <msg6 len="167">端口必须为数字。</msg6>
+    <msg7 len="167">端口号必须介于 1~65535 之间。</msg7>
+    <msg8 len="167">流控制无效。</msg8>
+    <msg9 len="167">请输入流。</msg9>
+    <msg10 len="167">流不可包含空格。</msg10>
+    <msg11 len="167">流控制必须为数字。</msg11>
+    <msg12 len="167">流控制不可超过 16384。</msg12>
+    <msg13 len="167">请输入空闲时间。</msg13>
+    <msg14 len="167">空闲时间必须在 1~10 分钟之间。</msg14>
+    <msg15 len="167">空闲时间不可包含空格。</msg15>
+    <msg16 len="167">确定要删除吗？</msg16>
+    <msg18 len="167">请输入发布日期。</msg18>
+    <msg19 len="167">发布日期无效。</msg19>
+    <msg20 len="167">端口 3689 用于 iTunes 服务器。</msg20>
+    <msg21 len="167">外部 IP 地址无效。</msg21>
+    <msg22 len="167">已达到 FTP 共享的最大数量。</msg22>
+    <msg23 len="167">端口 xxx 用于 P2P 服务器。</msg23>
+    <msg24 len="167">使用偶数的端口范围。</msg24>
+    <msg25 len="167">请输入客户端语言。</msg25>
+    <msg26 len="167"><![CDATA[“客户端语言”长度不可超过 32 个字符。请重试。]]></msg26>
+    <msg27 len="167">此 FTP 共享已经存在。请选择其他 FTP 共享。</msg27>
+    <msg28 len="167">端口 4711 用于 aMule。</msg28>
+    <msg29 len="167">端口 9000 用于 Squeeze Center。</msg29>
+    <msg30 len="167">端口 514 用于日志。</msg30>
+    <msg31 len="167">端口 515 用于打印机。</msg31>
+    <msg32 len="167">端口 8000 用于 Audio Streamer。</msg32>
+    <msg33 len="167">客户端语言无效。</msg33>
+    <msg34 len="167">获取外部 IP 成功。</msg34>
+    <msg35 len="167">获取外部 IP 失败。</msg35>
+    <msg36 len="167">需要启用 SSH 才能使用 SFTP 来访问 WD My Cloud Mirror。</msg36>
+    <desc1 len="999">获取外部 IP</desc1>
+    <desc2 len="999">以下 IP 地址被阻止在网络上访问此设备。可以永久阻止 IP 地址，也可以临时阻止一段时间。</desc2>
+    <desc3 len="999">自定义</desc3>
+    <desc4 len="999">无限</desc4>
+    <desc5 len="999">默认</desc5>
+    <desc6 len="999">被阻止 IP 列表</desc6>
+    <desc7 len="999">隐式 TLS</desc7>
+		<desc8 len="999">显式 TLS</desc8>
+    <button1 len="10">获取 IP</button1>
+  <msg37>WD My Cloud Mirror 系统的 FTP 服务已经启用。转至“共享”页启用每个共享的 FTP 访问。</msg37></_ftp>
+  <_upnp>
+    <refresh len="10">刷新</refresh>
+    <shared_folder len="999">共享文件夹</shared_folder>
+    <state len="999">状态</state>
+    <msg1 len="999">不允许嵌套共享文件夹。</msg1>
+    <msg2 len="999">失败。</msg2>
+    <msg3 len="999">请选择一项。</msg3>
+    <msg4 len="999">共享文件夹容量超限。</msg4>
+  </_upnp>
+  <_itunes>
+    <mp3_tag_codepage len="21">MP3 标记代码页</mp3_tag_codepage>
+    <auto_refresh len="21">自动刷新</auto_refresh>
+    <auto_refresh1 len="999">5 分钟</auto_refresh1>
+    <auto_refresh2 len="999">15 分钟</auto_refresh2>
+    <auto_refresh3 len="999">30 分钟</auto_refresh3>
+    <auto_refresh4 len="999">1 小时</auto_refresh4>
+    <auto_refresh5 len="999">2 小时</auto_refresh5>
+    <auto_refresh6 len="999">6 小时</auto_refresh6>
+    <auto_refresh7 len="999">12 小时</auto_refresh7>
+    <auto_refresh8 len="999">1 天</auto_refresh8>
+    <default len="21">默认</default>
+    <folder len="21">文件夹</folder>
+    <share len="999">共享</share>
+    <desc1 len="999">启用 iTunes 服务器，通过 iTunes 播放器来访问您的媒体。</desc1>
+    <desc2 len="999">根</desc2>
+    <desc3 len="999">配置重新扫描 iTunes 数据库的定期计划，以查找新的媒体内容。</desc3>
+    <desc4 len="999">重新扫描您的所有内容目录以查找新的媒体。</desc4>
+    <desc5 len="25">正在初始化</desc5>
+    <desc6 len="999">iTunes 数据库</desc6>
+    <msg1 len="167">必须选择一个文件夹。</msg1>
+    <msg2 len="167">路径长度不可超过 235 个字符。请重试。</msg2>
+    <msg3 len="167">密码长度必须为至少 2 个字符。请重试。</msg3>
+    <msg4 len="167">密码长度不可超过 16 个字符。</msg4>
+    <msg5 len="167">密码格式不正确。请重试。</msg5>
+    <msg6 len="167">请输入 MP3 标记代码页。</msg6>
+    <msg7 leng="167"><![CDATA[密码不可包含以下字符：@ :/ \ % ' #]]></msg7>
+    <msg8 len="999">系统正在构建媒体库/数据库。</msg8>
+  </_itunes>
+  <_admin>
+    <username len="999">用户名</username>
+    <password len="999">密码</password>
+    <new_pwd len="999">新密码</new_pwd>
+    <confirm_pwd len="999">确认密码</confirm_pwd>
+  <desc1>创建管理员密码以防止 WD My Cloud Mirror 系统遭到未经授权的配置。</desc1><desc2>如果现在不想创建密码，请单击&lt;b&gt;下一步&lt;/b&gt;继续。</desc2></_admin>
+  <_system>
+    <restart_title len="999">重新启动</restart_title>
+    <system_restart len="999">系统重启</system_restart>
+    <default_title len="999">默认值</default_title>
+    <restore len="999">还原为出厂默认设置</restore>
+    <shutdown_title len="999">关闭</shutdown_title>
+    <warning_title len="999">警告</warning_title>
+    <system_shutdown len="999">系统关闭</system_shutdown>
+    <configuration_settings len="999">配置设置。</configuration_settings>
+    <save_configuration_settings len="999">保存配置设置</save_configuration_settings>
+    <load_configuration_settings len="999">加载配置设置</load_configuration_settings>
+    <idle_time_title len="999">空闲时间</idle_time_title>
+    <account_inactivity_timer len="999">账户非活动状态计时器</account_inactivity_timer>
+    <minutes len="999">分钟</minutes>
+    <temperature_title len="999">系统温度阈值</temperature_title>
+    <flash_system len="999">可闪系统 LED</flash_system>
+    <extended_log len="999">详尽日志</extended_log>
+    <help_hint len="999">如果还原出厂默认设置，则所有当前设置都将清除。</help_hint>
+    <msg1 len="999">上载的配置设置无效。请选择正确文件并重试。</msg1>
+    <msg2 len="999">您将重新启动 WD My Cloud Mirror 系统。任何备份、文件活动或文件传输都会中断。</msg2>
+    <msg3 len="999">您即将重置所有配置设置。这不会影响存储在驱动器上的数据。按确定继续。</msg3>
+    <msg4 len="999">系统将进入休眠状态。要继续吗？</msg4>
+    <msg5 len="999">请选择上载文件。</msg5>
+    <msg6 len="999">账户非活动状态计时器必须 &gt; 0 分钟</msg6>
+    <msg7 len="999">账户非活动状态计时器不可为空。</msg7>
+    <msg8 len="999">请输入一个数字。</msg8>
+    <msg9 len="999">空闲时间不可包含空格。</msg9>
+    <msg10 len="999">AC 电源丢失；现在正在使用 UPS。请注意 NAS 很快就将关闭。请完成所有未完成的工作，以确保没有数据丢失。</msg10>
+  <msg11 len="999">设备工作温度超过正常的极限温度。请将设备移到温度更低的位置。</msg11>
+    
+<msg12 len="999">系统过热</msg12>  
+  <default_system>
+“仅系统”操作将系统设置还原到其默认值，但保留用户数据和共享。
+&lt;br&gt;&lt;br&gt;
+继续吗？</default_system><default_quick>“快速还原”操作将所有设置还原到其默认值，清除所有用户数据和共享，保留默认共享。“快速还原”操作在设备上创建一个新的文件表，但不会完全覆盖或清除驱动器，因此，可以使用数据恢复程序来恢复用户数据和共享。
+&lt;br&gt;&lt;br&gt;
+继续吗？</default_quick><default_full>“完全还原”操作将所有设置还原到其默认值，永久删除所有用户数据和共享，保留默认共享。不能使用数据恢复程序来恢复数据；除了默认共享以外，其他所有用户收和共享都将被永久删除。
+&lt;br&gt;&lt;br&gt;
+继续吗？</default_full><msg13>打开或关闭扩展登录需要重新启动系统。任何备份、文件活动或文件传输都会中断。</msg13></_system>
+  <_firmware>
+    <importing>正在导入文件</importing>
+    <upgrading>正在升级...</upgrading>
+    <new_found>找到固件更新版本</new_found>
+    <new_available>新固件可用</new_available>
+    <auto_update>自动更新</auto_update>
+    <enable_auto>启用自动更新</enable_auto>
+    <available_update>可用更新</available_update>
+    <new_fw>新固件</new_fw>
+    <check_update>检查更新</check_update>
+    <last_update>上次更新</last_update>
+    <title len="999">更新固件</title>
+    <current len="999">当前版本</current>
+    <date len="999">固件日期</date>
+    <upload len="999">固件上载</upload>
+    <path len="999">固件路径</path>
+    <manual_update>手动更新</manual_update>
+    <fw_img>固件映像</fw_img>
+    <update_b>从文件更新</update_b>
+    <update_sch>更新计划</update_sch>
+    <release_note>固件版本说明</release_note>
+    <update_now>立即更新</update_now>
+    <reboot_required>需要重新启动</reboot_required>
+    <latest_version len="999">最新版本</latest_version>
+    <update_button>从文件更新</update_button>
+    <install_title>安装最新固件</install_title>
+    <msg1 len="999">固件更新成功。登录前，请等待 WD My Cloud Mirror 系统完成重新启动过程。这应该不超过一分钟。检查固件版本验证更新。</msg1>
+    <msg2 len="999">验证固件失败</msg2>
+    <msg3 len="999">上载固件失败。请重试。</msg3>
+    <msg4 len="999">验证固件失败</msg4>
+    <msg5 len="999">
+      <![CDATA[文件名不可包含以下字符：~`!@#$%^&+={}[];',]]>
+    </msg5>
+    <msg6 len="999">在安装固件更新时，请勿拔除 WD My Cloud Mirror 系统。固件更新完成后，您的网络驱动器会自动重启。</msg6>
+    <msg7 len="999">固件正在上载。</msg7>
+    <msg8 len="999">
+      <![CDATA[警告：LCD 固件更新正在进行。<br>不要重新启动或关闭 WD My Cloud Mirror 设备。]]>
+    </msg8>
+    <msg9 len="999">
+      <![CDATA[
+		<img src='/web/images/warning.png'> 为了完成 LCD 固件升级过程，请将电源线从 WD My Cloud Mirror 设备上拔下。<br><br>等待 5 秒，然后插入电源线，并打开 WD My Cloud Mirror 设备。<br><br>系统启动后，刷新页面登录。]]>
+    </msg9>
+    <msg10 len="999">预定的关机时间离系统时间过近。关机时间必须晚于系统时间至少 10 分钟。</msg10>
+    <msg11 len="999">您确定要上载固件吗？</msg11>
+    <msg12>WD My Cloud Mirror 系统固件是最新版本。</msg12>
+    <msg13 len="999">
+      <![CDATA[固件更新挂起，需要重新启动]]>
+    </msg13>
+    <msg14 len="999">
+在固件更新安装期间请勿拔除设备。
+完成更新后，您的网络驱动器将自动重新启动。</msg14>
+  <msg15>您的固件会立即更新。在安装固件更新时，请勿拔下您的设备。完成固件更新后，您的网络驱动器将自动重新启动。建议在继续下一步之前为计算机的操作系统安装最新的更新。
+  &lt;br&gt;&lt;br&gt;
+  &lt;b&gt;重要说明：&lt;/b&gt;在更新硬盘前，请确保为您的数据作了多份拷贝（备份）。</msg15><msg16>
+在固件更新安装期间请勿拔除设备。
+完成更新后，您的网络驱动器将自动重新启动。</msg16><msg17>无法连接固件更新服务器。请检查网络连接并再次尝试。</msg17></_firmware>
+  <_mail>
+    <notification>通知</notification>
+    <account len="999">账户</account>
+    <anonymous len="999">匿名</anonymous>
+    <user_name len="999">用户名</user_name>
+    <password len="999">密码</password>
+    <port len="999">端口</port>
+    <smtp_server len="999">SMTP 服务器</smtp_server>
+    <sender len="999">发件人电子邮件</sender>
+    <receiver len="999">收件人电子邮件</receiver>
+    <smtp_auth len="999">安全连接</smtp_auth>
+    <interval len="999">时间间隔</interval>
+    <hours len="999">小时</hours>
+    <Minutes len="999">分钟</Minutes>
+    <by_schedule len="999">按计划</by_schedule>
+    <event_log1 len="999">当日志文件满时</event_log1>
+    <fahrenheit len="999">华氏</fahrenheit>
+    <celcius len="999">摄氏</celcius>
+    <daily len="999">每日</daily>
+    <weekly len="999">每周</weekly>
+    <monthly len="999">每月</monthly>
+    <time len="999">时间</time>
+    <day_of_week len="999">星期几</day_of_week>
+    <mon len="999">周一</mon>
+    <tue len="999">周二</tue>
+    <wed len="999">周三</wed>
+    <thu len="999">周四</thu>
+    <fri len="999">周五</fri>
+    <sat len="999">周六</sat>
+    <sun len="999">周日</sun>
+    <day_of_month len="999">几号</day_of_month>
+    <help_hint len="999">SMTP 服务器是外发邮件服务器。如果不确定该服务器，请与为您提供电子邮件服务的公司联系。</help_hint>
+    <msg1 len="999">选择空间状态警报的时间间隔。</msg1>
+    <msg2 len="999">温度必须为数字。</msg2>
+    <msg5 leng="167">测试电子邮件：已发出</msg5>
+    <msg6 leng="167">测试电子邮件：失败</msg6>
+    <msg7 leng="167">请输入端口。</msg7>
+    <msg8 leng="167">端口不可包含空格。</msg8>
+    <msg9 leng="167">端口号无效。</msg9>
+    <msg10 leng="167">请输入用户名。</msg10>
+    <msg11 leng="167">请输入密码。</msg11>
+    <msg12 leng="167">密码长度不可超过 31 个字符。请重试。</msg12>
+    <msg13 leng="167">用户名长度不可超过 31 个字符。请重试。</msg13>
+    <msg14 leng="167">请输入 SMTP 服务器。</msg14>
+    <msg15 leng="167">请输入发件人电子邮件。</msg15>
+    <msg16 leng="167">请输入收件人电子邮件。</msg16>
+    <msg17 leng="167">“SMTP 服务器”长度不可超过 63 个字符。请重试。</msg17>
+    <msg18 leng="167">“发件人电子邮件”长度不可超过 63 个字符。请重试。</msg18>
+    <msg19 leng="167">“收件人电子邮件”长度不可超过 63 个字符。请重试。</msg19>
+    <msg20 leng="167">请检查发件人电子邮件地址格式。</msg20>
+    <msg21 leng="167">请检查收件人电子邮件地址格式。</msg21>
+    <msg22 len="167">请提供有效的电子邮件地址。</msg22>
+  <random>随机</random></_mail>
+  <_format>
+    <wizard_title13 len="999">请将 RAID 类型重新配置为 RAID 5</wizard_title13>
+    <wizard_title14 len="999">请将 RAID 类型从 RAID 1 重新配置为 RAID 5</wizard_title14>
+    <format_title2 len="73">自动重建配置</format_title2>
+    <initializing len="25">正在初始化</initializing>
+    <formatting len="25">正在格式化</formatting>
+    <verifying len="25">正在验证</verifying>
+    <vendor len="12">供应商</vendor>
+    <free_size len="999">可用大小</free_size>
+    <mode len="999">模式</mode>
+    <raid_description9 len="999">剩余空间将成为 JBOD（线性）卷。</raid_description9>
+    <raid_description10 len="999">剩余空间</raid_description10>
+    <summary len="999">摘要</summary>
+    <file_system len="12">文件系统</file_system>
+    <format_result len="999">格式化结果</format_result>
+    <error_code len="999">错误代码</error_code>
+    <step len="999">步骤</step>
+    <degraded len="999">已降级</degraded>
+    <partitioning len="999">正在分区</partitioning>
+    <rebuilding len="999">正在重建</rebuilding>
+    <disk len="6">磁盘</disk>
+    <encryption len="999">加密</encryption>
+    <auto_mount len="999">自动挂载</auto_mount>
+    <spare len="999">备用</spare>
+    <desc3 len="999">xxx 加密</desc3>
+    <desc4 len="999">将剩余磁盘空间配置为“跨区”。</desc4>
+    <desc5 len="167"><![CDATA[更改硬盘驱动器配置，并格式化新硬盘驱动器。格式化驱动器时，存储在此驱动器上的所有数据都将清除。单击<b>下一步</b>继续。]]></desc5>
+    <desc6 len="999">此部分提供有关硬盘驱动器的信息。这将显示磁盘阵列序列、制造商、型号和序列号以及磁盘容量。</desc6>
+    <desc8 len="999">此部分允许更改 WD My Cloud Mirror 系统上的文件系统。单击&lt;b&gt;下一步&lt;/b&gt;以继续。</desc8>
+    <desc9 len="999">此部分允许在 RAID 损坏时重建 RAID。选择“启用自动重建”自动重建 RAID，或者选择“禁用自动重建”以其他方式诊断 RAID。</desc9>
+    <desc10 len="999">此部分允许更改 RAID 大小，并将剩余磁盘空间配置为“跨区”格式。</desc10>
+    <desc11 len="999">此部分提供您刚刚创建的配置的摘要。它将显示卷名、文件格式、磁盘大小和磁盘阵列号。</desc11>
+    <desc12 len="999">在 WD My Cloud Mirror 设备更新系统时，请耐心等待。</desc12>
+    <desc13 len="999">在 WD My Cloud Mirror 设备格式化卷时，请耐心等待。</desc13>
+    <desc14 len="999">设置完成。此部分提供有关卷名、文件系统、RAID 模式（类型）和磁盘阵列的信息。</desc14>
+    <desc15 len="999">在 WD My Cloud Mirror 设备做驱动器分区时，请耐心等待。在此阶段不要关闭 NAS。</desc15>
+    <desc18 len="999"><![CDATA[更改硬盘驱动器配置，并格式化新硬盘驱动器。格式化驱动器时，存储在此驱动器上的所有数据都将清除。单击<b>下一步</b>继续。]]></desc18>
+    <desc19 len="999">此部分提供有关新安装的硬盘驱动器的信息。这将显示磁盘阵列序列、制造商、型号和序列号以及磁盘容量。</desc19>
+    <desc20 len="999">选择文件系统。文件系统是用来管理如何在磁盘上存储、分配和更新数据的技术。请在 ext3 和 ext4 之间选择。</desc20>
+    <desc21 len="999">在此部分中，请选择您想使用哪个磁盘来将驱动器重新配置为 RAID 1。</desc21>
+    <desc22 len="999"><![CDATA[此部分允许将剩余磁盘空间配置为“跨区”。请注意，格式化期间将清除新卷上的所有数据。单击<b>下一步</b>继续。]]></desc22>
+    <desc23 len="999"><![CDATA[单击<b>下一步</b>加密卷。]]></desc23>
+    <desc24 len="999"><![CDATA[此部分允许加密卷。单击<b>下一步</b>继续。]]></desc24>
+    <desc25 len="999">设置完成。此部分提供有关卷名、文件系统、RAID 模式（类型）和磁盘阵列的信息。</desc25>
+    <desc26 len="999">此向导帮助您将新驱动器配置为 RAID。</desc26>
+    <desc27 len="999"><![CDATA[格式化新驱动器（单击格式化按钮）。格式化过程完成后，旧数据将在新驱动器上同步。]]></desc27>
+    <desc28 len="999">在 WD My Cloud Mirror 设备分区并格式化驱动器，请耐心等待。此时不要关闭 NAS。</desc28>
+    <desc29 len="999">在 WD My Cloud Mirror 设备更新系统时，请耐心等待。此时不要关闭 NAS。</desc29>
+    <desc30 len="999">对磁盘和 RAID 的更改完成。这里是新磁盘，并附带阵列详细信息、制造商、型号名称和序列号。</desc30>
+    <desc31 len="999"><![CDATA[配置 RAID 5+spare（单击“创建备用磁盘”框）。“磁盘 4”随后将成为热备用。如果不想创建 RAID 5+spare，不要选择创建备用磁盘。重新调整 RAID 5 卷的大小，如果不使用全部空间，请选中“将剩余磁盘空间配置为 JBOD”。单击<b>下一步</b>继续。]]></desc31>
+    <desc34 len="999"><![CDATA[ <b><font color="#FF0000">警告：磁盘序列无效。</font></b> ]]></desc34>
+    <desc35 len="999">现在的磁盘序列为</desc35>
+    <desc36 len="999">请如下更改序列</desc36>
+    <msg1 len="167">选择 RAID 类型。</msg1>
+    <msg2 len="167">RAID 卷的大小只能在 xxx-yyy GB 之间。</msg2>
+    <msg3 len="167">您即将重新格式化硬盘驱动器。所有数据都将清除。要继续吗？</msg3>
+    <msg4 len="167">请输入 RAID 卷的大小[0-9]。</msg4>
+    <msg5 len="167">请输入 RAID 卷的大小。</msg5>
+    <msg6 len="167">再次登录前，请在 WD My Cloud Mirror 设备重新启动时静候一分钟。</msg6>
+    <msg7 len="167">硬盘驱动器格式化失败</msg7>
+    <msg8 len="167">xxx 现在正在同步。</msg8>
+    <msg9 len="167">请输入密码。</msg9>
+    <msg10 len="167">请再次输入密码。</msg10>
+    <msg11 len="167">密码长度不可超过 32 个字符。请重试。</msg11>
+    <msg12 len="167">新密码与确认密码不匹配。请重试。</msg12>
+    <msg13 len="167">新密码不可包含空格或以下字符：`~!@#$%^&amp;(){}'*+=|[]/\:";&lt;&gt;?,.</msg13>
+    <msg14 len="167">密码长度必须为至少 4 个字符。请重试。</msg14>
+    <msg16 len="167">启用此选项可能大大影响设备吞吐量。</msg16>
+    <msg17 len="167">在进行下列操作时，禁止关闭、恢复和重启系统以及更新固件：硬盘格式化、硬盘大小调整、硬盘迁移、RAID 奇偶性校验和固件上传。</msg17>
+    <msg18 len="167">至少需要选择一个磁盘。</msg18>
+    <msg19 len="167">至少需要选择两个磁盘。</msg19>
+  </_format>
+  <_diagnostic>
+    <title1 len="999">系统诊断</title1>
+    <desc1 len="999">磁盘测试</desc1>
+    <desc2 len="999">正在进行检测</desc2>
+    <desc3 len="999">自检结果</desc3>
+    <desc4 len="999">已取消自检</desc4>
+    <desc5 len="999">向导正在扫描系统。如果希望关闭窗口，请单击“关闭”按钮。关闭窗口不会取消系统扫描。</desc5>
+    <desc6 len="999">扫描磁盘</desc6>
+    <desc7 len="999">已成功扫描此卷。</desc7>
+    <desc8 len="999">在 WD My Cloud Mirror 设备更新系统时，请耐心等待。</desc8>
+    <desc9 len="999">所有卷</desc9>
+    <desc10 len="999">格式化磁盘</desc10>
+    <desc11 len="999">删除时安全擦除所有数据。</desc11>
+    <desc12 len="999"><![CDATA[这将永久删除磁盘上的所有数据。请注意，这将中断此操作期间的活动文件传输服务。<br><br>要继续吗？]]></desc12>
+    <desc13 len="999">已成功扫描卷。没有发现错误。</desc13>
+    <desc14 len="999">系统时钟</desc14>
+    <desc15 len="999">USB1</desc15>
+    <desc16 len="999">USB2</desc16>
+    <desc17 len="999">驱动器 1</desc17>
+    <desc18 len="999">驱动器 2</desc18>
+    <desc19 len="999">驱动器 3</desc19>
+    <desc20 len="999">驱动器 4</desc20>
+    <desc21 len="999">内存</desc21>
+    <desc23 len="999">风扇</desc23>
+    <desc24 len="999">系统测试</desc24>
+    <button1 len="999">快速检测</button1>
+    <button2 len="999">完全检测</button2>
+    <button3 len="999">完成</button3>
+    <button4 len="999">系统测试</button4>
+  </_diagnostic>
+  <_scandsk>
+    <wait len="999">请等待片刻...</wait>
+    <volume len="999">卷</volume>
+    <msg2 len="167">磁盘扫描完成。没有发现错误。</msg2>
+    <msg3 len="342"><![CDATA[开始扫描磁盘之前，请暂停硬盘驱动器的所有数据传输和数据活动。同时建议暂停所有网络活动。请注意，这将中断此操作期间的活动文件传输服务。<br><br>要继续吗？]]></msg3>
+  </_scandsk>
+  <_ve>
+    <title1 len="999">保存密钥</title1>
+    <title2 len="999">关于卷加密</title2>
+    <status len="999">状态</status>
+    <mount len="999">挂载</mount>
+    <pwd len="999">原始密码</pwd>
+    <button1 len="999">下载加密密钥文件</button1>
+    <desc1 len="999">新密码</desc1>
+    <desc2 len="999">确认密码</desc2>
+    <desc3 len="999">输入原始密码更改加密卷的设置。</desc3>
+    <desc4 len="999">单击“自动挂载”框在系统启动时自动挂载加密驱动器。请输入新密码并确认该密码，以覆盖原始密码。</desc4>
+    <desc5 len="999">输入加密驱动器的密码。</desc5>
+    <desc6 len="999">驱动器加密时请等待。</desc6>
+    <desc7 len="999">上载加密密钥文件</desc7>
+    <desc8 len="999">无效密钥文件；无法挂载卷 xxx。请尝试其他密钥文件。</desc8>
+    <desc9 len="999">驱动器解密时请等待。</desc9>
+    <desc10>
+  可以用 256 位 AES 加密来加密 WD My Cloud Mirror 系统，以防数据遭到未经授权的访问和盗窃。可以在创建卷时启用卷加密，并以正常读/写访问权限挂载此卷。&lt;br&gt;&lt;br&gt;
+  根据您的配置，还可以将卷加密设置为自动挂载卷，这样您就无需反复输入必需的加密凭据。
+ </desc10>
+    <msg1 len="167">请输入原始密码。</msg1>
+    <msg2 len="167">原始密码长度不可超过 32 个字符。请重试。</msg2>
+    <msg3 len="167"><![CDATA[原始密码不可包含以下字符：@ :/ \ % ']]></msg3>
+    <msg4 len="167">您输入的原始密码不正确。请重试。</msg4>
+    <help_hint len="999"><![CDATA[
+			卷加密是对称 256 位数据加密技术。其优点是可同时在多个网络层起作用。<br><br>卷加密发生在后台。其主要功能是编码数据，使其他用户无法识别。加密需要密码。加密数据后，需要此密码将其解密。<br><br>总是确保 USB 存储设备格式化，否则所有数据都将丢失。您的 NAS 当前支持 2GB/4GB/8GB/16GB/32GB 设备。可以将 USB 存储设备直接连接到 NAS 或通过您使用的工作站 (PC) 连接。
+		]]></help_hint>
+  </_ve>
+  <_ddns>
+    <title len="999">DDNS 设置</title>
+    <description len="999">动态 DNS 功能允许您使用购买的域名 (www.whateveryournameis.com)，结合动态分配的 IP 地址来托管服务器（Web、FTP、游戏服务器等）。大多数宽带 Internet 服务提供商都分配动态（不断更改）IP 地址。使用 DDNS 服务提供商时，不管您的 IP 地址是什么，您的好友只要输入主机名就能连接到您的 NAS。</description>
+    <ddns_title len="999">DDNS 设置</ddns_title>
+    <ddns len="999">动态 DNS</ddns>
+    <server_address len="999">服务器地址</server_address>
+    <select_ddns len="999">选择动态 DNS 服务器</select_ddns>
+    <host_name len="999">主机名</host_name>
+    <username len="999">用户名或密钥</username>
+    <pwd len="999">密码或密钥</pwd>
+    <verify len="999">验证密码或密钥</verify>
+    <status len="999">状态</status>
+    <help_hint len="999">若要使用此功能，必须先从下拉菜单中的某个提供商获得动态 DNS 账户。</help_hint>
+    <update_success len="999">更新成功</update_success>
+    <update_fail len="999">更新失败</update_fail>
+    <last len="999">上次更新时间</last>
+    <next len="999">下次更新时间</next>
+    <connect len="999">正在连接...</connect>
+    <msg1 len="999">服务器地址不可为空。</msg1>
+    <msg2 len="999">服务器地址不可超过 64 个字符。请重试。</msg2>
+    <msg3 len="999">主机名不可超过 64 个字符。请重试。</msg3>
+    <msg4 len="999">用户名不可超过 64 个字符。请重试。</msg4>
+    <msg5 len="999">密码不可超过 64 个字符。请重试。</msg5>
+    <msg6 len="999">密码不匹配。请重试。</msg6>
+    <msg7 len="999">用户名不可为空。</msg7>
+    <msg8 len="999">不可输入空格。</msg8>
+    <msg9 len="999">密码不可为空。</msg9>
+    <msg10 len="999">不可输入空格。</msg10>
+    <msg11 len="999">主机名不可为空</msg11>
+    <msg12 len="999">不可输入空格。</msg12>
+    <msg13 len="999">请选择 ddns 服务器。</msg13>
+  </_ddns>
+  <_sys_info>
+    <volume_info len="999">卷信息</volume_info>
+    <volume_name len="16">卷名</volume_name>
+    <volume_type len="999">卷类型</volume_type>
+    <sync_time len="999">剩余同步时间</sync_time>
+    <capacity len="999">硬盘驱动器总容量</capacity>
+    <ups_info len="999">UPS 信息</ups_info>
+    <battery_charge len="999">电池充电</battery_charge>
+    <usb_info len="999">USB 信息</usb_info>
+  </_sys_info>
+  <_hd_info>
+    <slot len="999">插槽</slot>
+    <manu len="999">制造商</manu>
+    <model len="999">型号</model>
+    <serial_number len="999">序列号</serial_number>
+    <temp len="999">温度</temp>
+    <size len="999">大小</size>
+    <id len="7">ID</id>
+    <item len="999">项</item>
+  </_hd_info>
+  <_monitor>
+    <network_active>网络活动</network_active>
+    <device_active>设备活动</device_active>
+    <desc>下面的列表指出 WD My Cloud Mirror 系统上运行的所有系统活动和进程。 </desc>
+    <cpu len="999">CPU</cpu>
+    <memory len="999">内存</memory>
+    <bandwidth len="999">带宽</bandwidth>
+    <lan1 len="999">LAN1</lan1>
+    <lan2 len="999">LAN2</lan2>
+    <process len="999">进程</process>
+    <used len="999">已用</used>
+    <free len="999">可用</free>
+    <process_name len="999">进程名</process_name>
+    <owner len="999">所有者</owner>
+    <id len="999">ID</id>
+    <utilitazion_ratio len="999">利用率(%)</utilitazion_ratio>
+    <kb_s len="999">
+      <![CDATA[KB/s]]>
+    </kb_s>
+    <percentage len="999">%</percentage>
+    <memory_usage>内存使用</memory_usage>
+  </_monitor>
+  <_backup>
+    <title1 len="999">内部备份</title1>
+    <title2 len="999">内部备份作业</title2>
+    <title3 len="999">关于内部备份</title3>
+    <title4 len="999">备份</title4>
+    <title5>备份恢复确认</title5>
+    <category len="999">类别</category>
+    <local len="999">内部备份</local>
+    <remote len="999">LAN 备份</remote>
+    <file len="999">文件</file>
+    <url len="999">URL</url>
+    <rename len="999">重命名</rename>
+    <when len="999">何时</when>
+    <recurring_backup len="999">定期重复</recurring_backup>
+    <none len="999">无</none>
+    <incremental_backup len="999">增量备份</incremental_backup>
+    <create len="999">创建作业</create>
+		<edit_job>修改作业</edit_job>
+    <desc1 len="999">选择路径</desc1>
+    <desc2 len="999">源文件夹</desc2>
+    <desc3 len="999">目标文件夹</desc3>
+    <desc4 len="999">作业名称</desc4>
+    <desc5 len="999">详细信息</desc5>
+    <desc6 len="999">每月</desc6>
+    <desc7 len="999">每周</desc7>
+    <desc8 len="999">每日</desc8>
+    <desc9 len="999">将内容从 My Cloud 系统上的一个存储位置备份到另一个位置。</desc9>
+    <desc10 len="999">上午</desc10>
+    <desc11 len="999">下午</desc11>
+    <desc12 len="999">下载成功</desc12>
+    <desc13 len="999">下载失败</desc13>
+    <desc14 len="999">正在下载</desc14>
+    <desc15 len="999">正在等待</desc15>
+    <desc16 len="999">下载已停止</desc16>
+    <desc17>恢复备份</desc17>
+    <msg1 len="167">检查时间设置。</msg1>
+    <msg2 len="167">文件名长度应为 1-</msg2>
+    <msg4 len="167"><![CDATA[文件名不可包含以下字符：\ / :* ?" < > | ]]></msg4>
+    <msg5 len="167">文件名无效。</msg5>
+    <msg6 len="167">目标不可以是 URL 的子目录。</msg6>
+    <msg7 len="167">URL 格式不正确，正确格式为：Volume_1/Test 或 \\192.168.0.32\Volume_1\Test\test.txt。请重试。</msg7>
+    <msg8 len="167">请输入作业名。</msg8>
+    <msg9 len="167">作业名长度不可超过 256 个字符。请重试。</msg9>
+    <msg10 len="167">源文件夹和目标文件夹不可相同。</msg10>
+    <msg11 len="167">您确定要删除内部备份作业吗？</msg11>
+    <msg12 len="167">请输入目标文件夹位置。</msg12>
+    <msg13 len="999">输入的作业名已存在。</msg13>
+    <msg14 len="167">输入源文件夹位置。</msg14>
+    <msg15 len="167">已达到备份作业的最大数量。</msg15>
+  	<msg16>源文件夹中的数据将被覆写。要继续吗？</msg16>
+  	<msg17>已经存在同名作业。请输入其他名称。</msg17>
+  	<button1>恢复</button1>
+  </_backup>
+  <_cloud_backup>
+    <title len="100">云备份</title>
+    <title_note len="100">什么是云备份？</title_note>
+    <description len="999">云备份允许创建可通过 Internet 以及各种移动设备访问的远程备份。</description>
+  </_cloud_backup>
+  <_download>
+    <title2 len="999">FTP 下载作业</title2>
+    <save_to len="999">保存到</save_to>
+    <speed len="999">速度</speed>
+    <download_path len="999">下载路径</download_path>
+    <idx len="999">idx</idx>
+    <test_result len="999">测试结果</test_result>
+    <successful len="999">成功</successful>
+    <fail len="999">失败</fail>
+    <file_size len="999">文件大小</file_size>
+    <unavailable len="999">不可用</unavailable>
+    <codepage len="999">语言</codepage>
+    <bytes len="999">字节</bytes>
+    <msg1 len="167">用户名长度不可超过 16 个字符。请重试。</msg1>
+    <msg2 len="167">URL 长度应为 1-1024！</msg2>
+    <msg3 len="167">请输入“保存到”位置。</msg3>
+    <msg4 len="167">“保存到”长度应为 1-226！</msg4>
+    <msg5 len="167">URL 格式不正确，正确格式为：http://192.168.0.32/test.txt。请重试。</msg5>
+    <msg6 len="167">请输入日期。</msg6>
+    <msg7 len="167">日期格式不正确。请重试。</msg7>
+    <msg8 len="167">密码长度不可超过 128 个字符。请重试。</msg8>
+  <detail_job>作业详细信息</detail_job></_download>
+  <_p2p>
+    <title len="999">P2P</title>
+    <title2 len="999">P2P 设置</title2>
+    <title3 len="999">配置 P2P</title3>
+    <download_title len="999">下载</download_title>
+    <set_title len="999">设置</set_title>
+    <add_url len="999">添加 Torrent 源 URL</add_url>
+    <add_file len="999">添加 Torrent 源 文件</add_file>
+    <tasks_title len="999">P2P 任务</tasks_title>
+    <stop_time len="999">停止时间</stop_time>
+    <start_time len="999">开始时间</start_time>
+    <disable len="999">P2P 禁用。</disable>
+    <p2p len="999">P2P</p2p>
+    <auto_download len="999">自动下载</auto_download>
+    <port_settings len="999">传入连接端口</port_settings>
+    <automatic len="999">自动</automatic>
+    <custom len="999">自定义</custom>
+    <incoming len="999">传入连接端口</incoming>
+    <bandwidth_control len="999">带宽控制</bandwidth_control>
+    <manual len="999">手动</manual>
+    <max_download_rate len="999">最大下载速率</max_download_rate>
+    <max_upload_rate len="999">最大上载速率</max_upload_rate>
+    <seeding len="999">做种</seeding>
+    <seed_removed len="999">做种直至删除</seed_removed>
+    <stop_seeding len="999">以下时间后停止做种</stop_seeding>
+    <minutes len="999">分钟</minutes>
+    <stop_seeding_when_meet len="999">符合以下条件时停止做种</stop_seeding_when_meet>
+    <torrent_save_path len="999">Torrent 保存路径</torrent_save_path>
+    <encryption len="999">加密</encryption>
+    <flow_control_schedule len="999">流控制计划</flow_control_schedule>
+    <bandwidth len="999">带宽</bandwidth>
+    <mon len="999">周一</mon>
+    <tue len="999">周二</tue>
+    <wed len="999">周三</wed>
+    <thu len="999">周四</thu>
+    <fri len="999">周五</fri>
+    <sat len="999">周六</sat>
+    <sun len="999">周日</sun>
+    <p2p_detail len="999">详细信息</p2p_detail>
+    <top len="999">置顶</top>
+    <up len="999">向上</up>
+    <down len="999">向下</down>
+    <bottom len="999">置底</bottom>
+    <detail len="999">详细信息</detail>
+    <torrent_scheduling len="18">计划安排</torrent_scheduling>
+    <monday len="999">星期一</monday>
+    <tuesday len="999">星期二</tuesday>
+    <wednesday len="999">星期三</wednesday>
+    <thursday len="999">星期四</thursday>
+    <friday len="999">星期五</friday>
+    <saturday len="999">星期六</saturday>
+    <sunday len="999">星期日</sunday>
+    <total len="999">总数</total>
+    <torrent_s len="999">Torrent</torrent_s>
+    <torrent_url_speed len="999">上载总速度</torrent_url_speed>
+    <torrent_dl_speed len="999">下载总速度</torrent_dl_speed>
+    <remove_completed len="18">删除完成的项</remove_completed>
+    <torrent len="999">Torrent</torrent>
+    <hhmm len="999">(HH:MM)</hhmm>
+    <start_download len="999">开始下载</start_download>
+    <stop_download len="999">停止下载</stop_download>
+    <dl_ul_speed len="999">下/上载速度</dl_ul_speed>
+    <priority len="999">优先级</priority>
+    <status len="999">状态</status>
+    <daily len="999">每日</daily>
+    <config len="999">配置</config>
+    <finished len="999">完成</finished>
+    <button1 len="999">单击上载文件</button1>
+    <button2 len="999">开始</button2>
+    <button3 len="999">停止</button3>
+    <desc1 len="999"><![CDATA[<br><br><b><font color=red>路径已更改。原路径不存在。</font></b>]]></desc1>
+    <desc2 len="999">如果“自动下载”启用，不允许安排计划。如果“自动下载”禁用，可以安排下载时间。</desc2>
+    <desc3 len="999">选择您希望用于保存 torrent 的卷。将会自动创建名为“P2P”的文件夹。</desc3>
+    <desc4 len="999"><![CDATA[启用/禁用增强下载安全性的加密。]]></desc4>
+    <desc5 len="999">留空表示指定无限下载速率。</desc5>
+    <desc6 len="999">P2P 全天关闭</desc6>
+    <msg1 len="167">值无效。</msg1>
+    <msg2 len="167">传入连接端口必须介于 10000-65000 之间。</msg2>
+    <msg3 len="167">该值必须在 1-1440 分钟之间。</msg3>
+    <msg4 len="167">该值必须介于 1-100 之间。</msg4>
+    <msg5 len="167">torrent 的最大数量为 20。</msg5>
+    <msg6 len="167">建议的最大并发下载数为 10。</msg6>
+    <msg7 len="167">请输入 URL。</msg7>
+    <msg8 len="167">请输入有效 URL。</msg8>
+    <msg9 len="167">请输入输入路径。</msg9>
+    <msg11 len="167">输入起始时间。</msg11>
+    <msg12 len="167">每日下载持续时间限制为 23:59。</msg12>
+    <msg13 len="167">起始时间不可晚于停止时间。</msg13>
+    <msg14 len="167">该值必须介于 1-100000 之间。</msg14>
+    <msg15 len="167">输入停止时间。</msg15>
+    <msg16 len="167">端口 xxx 用于 FTP 服务器。</msg16>
+    <msg17 len="167">只允许单选。</msg17>
+    <msg18 len="167">请输入语言。</msg18>
+    <msg19 len="167"><![CDATA[“语言”长度不可超过 32 个字符。请重试。]]></msg19>
+    <msg20 len="167">起始时间必须晚于当前时间。</msg20>
+    <msg21 len="167">无法添加此 torrent 文件。torrent 文件无效或重复。</msg21>
+    <msg22 len="167">无法添加此 torrent 文件。My Cloud 系统无足够的可用空间。</msg22>
+    <msg23 len="167">可用存储空间不足。</msg23>
+    <msg24 len="167">上载 Torrent 错误</msg24>
+    <msg25 len="167">此服务未启用。请联系管理员将其启用。</msg25>
+    <msg26 len="167">确定要删除 torrent 吗？</msg26>
+    <msg27 len="167">P2P 下载禁用。</msg27>
+    <msg28 len="167">P2P 下载已启用。</msg28>
+    <msg29 len="167">URL 的最大长度为 191 个字符。</msg29>
+  <desc7>将此留空以指定无限制的上传速率。</desc7><msg30>此端口号已被使用或已预留。请输入另一个端口号。</msg30><desc8>若更改 Torrent 保存路径，将不能访问此前下载的数据。在修改路径之前，请将下载的数据移走。</desc8><title4>计划下载</title4><schedule>计划</schedule><tip1>输入 torrent URL、magnet 链接或 torrent hash 代码以添加要下载的 torrent。</tip1><tip2>启用此选项以在有添加 torrent 时自动开始下载。计划下载将被忽略。</tip2><desc9>添加成功。</desc9></_p2p>
+  <_time_machine>
+    <title>Mac 备份</title>
+    <no_share len="999">无共享文件夹。</no_share>
+    <desc len="999">为您的 Mac 的 Time Machine 备份设置配置。</desc>
+    <sel len="999">请选择一个共享</sel>
+  </_time_machine>
+  <_elephant_drive>
+    <title len="50">ElephantDrive</title>
+    <access_backups>访问备份</access_backups>
+    <e_mail len="50">电子邮件</e_mail>
+    <password len="50">密码</password>
+    <verify_password len="50">验证密码</verify_password>
+    <key_featuresNote>
+   &lt;b&gt;保护 WD My Cloud Mirror 系统。&lt;/b&gt;&lt;br&gt;
+   ElephantDrive 提供云存储解决方案，将 WD My Cloud Mirror 系统连接到云，并提供保护。本机客户端提供云备份，并以行业领先的安全功能同步到 WD My Cloud Mirror 系统。此解决方案具备云存储的三大关键优点：单独站点保护、智能同步，以及简单、安全的共享。
+   &lt;br&gt;&lt;br&gt;
+  </key_featuresNote>
+    <elephant_link_tml>
+      <![CDATA[
+		有关 ElephantDrive 的更多信息，请访问 <a href="http://www.elephantdrive.com/m/ct.aspx?ici={0}" target="_blank">http://www.elephantdrive.com/m/ct.aspx?ici={1}</a>
+		]]>
+    </elephant_link_tml>
+    <conn_status>状态</conn_status>
+    <register>注册</register>
+    <reg_success>注册成功</reg_success>
+    <login>登录</login>
+    <forgot_password>
+      <![CDATA[
+		<a href="https://vault.elephantdrive.com/account/forgot_password.aspx" target="_blank">忘记密码？</a>
+		]]>
+    </forgot_password>
+    <Note1>如果没有 ElephantDrive 账户，请输入上面的信息，然后单击“注册”创建账户。</Note1>
+    <Note2>如果已有 ElephantDrive 账户，请输入上面的信息，然后单击“登录”。</Note2>
+    <Note3>对于账户管理和数据备份，请访问 ElephantDrive 网站： </Note3>
+    <msg1 len="167">输入电子邮件地址。</msg1>
+    <msg2 len="167">请输入有效的电子邮件地址。</msg2>
+    <msg3 len="167">输入密码。</msg3>
+    <msg4 len="167">密码与确认密码不匹配。请重试。</msg4>
+    <view_file_link>
+      <![CDATA[要查看文件，请访问“<a href="https://vault.elephantdrive.com" target="_blank">https://vault.elephantdrive.com</a>”]]>
+    </view_file_link>
+    <new_device_backup_wizard>
+      <![CDATA[<a href=" https://vault.elephantdrive.com/account/autologin.aspx?user={0}&session={1}&date={2}&tab={3}&dname={4}" target="_blank">新设备备份向导</a>]]>
+    </new_device_backup_wizard>
+    <msg6 len="167">联机</msg6>
+    <msg7 len="167">脱机</msg7>
+    <msg8 len="167">正在等待...</msg8>
+    <msg9 len="167">正在连接...</msg9>
+    <msg10 len="167">电子邮件已在数据库中</msg10>
+    <msg11 len="167">服务暂时不可用。</msg11>
+    <msg12 len="167">服务暂时不可用。</msg12>
+    <msg13 len="167">未找到电子邮件。</msg13>
+    <msg14 len="167">密码不正确</msg14>
+  </_elephant_drive>
+  <_codepage>
+    <ISO-8859-1 len="999">西欧</ISO-8859-1>
+    <ISO8859-1 len="999">西欧</ISO8859-1>
+    <ISO-8859-2 len="999">斯拉夫语/中欧</ISO-8859-2>
+    <ISO8859-2 len="999">斯拉夫语/中欧</ISO8859-2>
+    <ISO-8859-3 len="999">南欧</ISO-8859-3>
+    <ISO-8859-4 len="999">波罗的语</ISO-8859-4>
+    <ISO-8859-5 len="999">西里尔文</ISO-8859-5>
+    <ISO-8859-7 len="999">现代希腊语</ISO-8859-7>
+    <ISO-8859-9 len="999">土耳其语</ISO-8859-9>
+    <ISO8859-9 len="999">土耳其语</ISO8859-9>
+    <ISO-8859-10 len="999">北欧</ISO-8859-10>
+    <ISO-8859-13 len="999">波罗的语</ISO-8859-13>
+    <ISO-8859-14 len="999">凯尔特语</ISO-8859-14>
+    <ISO-8859-15 len="999">西欧语言，含欧元符号</ISO-8859-15>
+    <ISO-8859-16 len="999">南欧</ISO-8859-16>
+    <KOI8-R len="999">俄语</KOI8-R>
+    <KOI8-U len="999">乌克兰语，白俄罗斯语</KOI8-U>
+    <KOI8-RU len="999">乌克兰语，白俄罗斯语</KOI8-RU>
+    <CP1250 len="999">MS Windows 中欧</CP1250>
+    <CP1251 len="999">MS Windows 西里尔文</CP1251>
+    <cp1251 len="999">MS Windows 西里尔文</cp1251>
+    <CP1252 len="999">MS Windows 拉丁字母表</CP1252>
+    <CP1253 len="999">MS Windows 希腊语</CP1253>
+    <CP1254 len="999">MS Windows 土耳其语</CP1254>
+    <CP1257 len="999">MS Windows 波罗的语</CP1257>
+    <CP850 len="999">西欧</CP850>
+    <CP866 len="999">MS-DOS 西里尔文</CP866>
+    <CP1131 len="999">MS-DOS 白俄罗斯</CP1131>
+    <ISO-8859-6 len="999">阿拉伯语</ISO-8859-6>
+    <ISO-8859-8 len="999">希伯来语</ISO-8859-8>
+    <ISO8859-8 len="999">希伯来语</ISO8859-8>
+    <CP1255 len="999">MS Windows 希伯来语</CP1255>
+    <CP1256 len="999">MS Windows 阿拉伯语</CP1256>
+    <CP862 len="999">希伯来语</CP862>
+    <EUC-JP len="999">日语</EUC-JP>
+    <SHIFT_JIS len="999">日语</SHIFT_JIS>
+    <CP932 len="999">日语</CP932>
+    <ISO-2022-JP len="999">日语</ISO-2022-JP>
+    <ISO-2022-JP-2 len="999">日语</ISO-2022-JP-2>
+    <ISO-2022-JP-1 len="999">日语</ISO-2022-JP-1>
+    <EUC-CN len="999">简体中文</EUC-CN>
+    <HZ len="999">简体中文</HZ>
+    <GBK len="999">简体中文</GBK>
+    <CP936 len="999">简体中文</CP936>
+    <GB2312 len="999">简体中文</GB2312>
+    <gb2312 len="999">简体中文</gb2312>
+    <GB18030 len="999">简体中文</GB18030>
+    <EUC-TW len="999">繁体中文</EUC-TW>
+    <BIG5 len="999">繁体中文</BIG5>
+    <big5 len="999">繁体中文</big5>
+    <CP950 len="999">繁体中文</CP950>
+    <BIG5-HKSCS len="999">繁体中文，香港</BIG5-HKSCS>
+    <BIG5-HKSCS_2001 len="999">繁体中文，香港</BIG5-HKSCS_2001>
+    <BIG5-HKSCS_1999 len="999">繁体中文，香港</BIG5-HKSCS_1999>
+    <ISO-2022-CN len="999">简体中文</ISO-2022-CN>
+    <ISO-2022-CN-EXT len="999">简体中文</ISO-2022-CN-EXT>
+    <EUC-KR len="999">韩语</EUC-KR>
+    <euc-kr len="999">韩语</euc-kr>
+    <CP949 len="999">韩语</CP949>
+    <ISO-2022-KR len="999">韩语</ISO-2022-KR>
+    <JOHAB len="999">韩语</JOHAB>
+    <ARMSCII-8 len="999">亚美尼亚语</ARMSCII-8>
+    <Georgian-Academy len="999">格鲁吉亚语</Georgian-Academy>
+    <Georgian-PS len="999">格鲁吉亚语</Georgian-PS>
+    <KOI8-T len="999">塔吉克语</KOI8-T>
+    <PT154 len="999">哈萨克语</PT154>
+    <RK1048 len="999">哈萨克语</RK1048>
+    <ISO-8859-11 len="999">泰语</ISO-8859-11>
+    <TIS-620 len="999">泰语</TIS-620>
+    <CP874 len="999">泰语</CP874>
+    <MuleLao-1 len="999">老挝语</MuleLao-1>
+    <CP1133 len="999">老挝语</CP1133>
+    <VISCII len="999">越南语</VISCII>
+    <TCVN len="999">越南语</TCVN>
+    <CP1258 len="999">越南语</CP1258>
+    <UTF-8 len="999">Unicode 8 位</UTF-8>
+    <UCS-2 len="999">真 UTF-16 BE</UCS-2>
+    <UCS-2BE len="999">Unicode 16 位</UCS-2BE>
+    <UCS-2LE len="999">Unicode 16 位</UCS-2LE>
+    <UCS-4 len="999">Unicode 32 位</UCS-4>
+    <UCS-4BE len="999">Unicode 32 位</UCS-4BE>
+    <UCS-4LE len="999">Unicode 32 位</UCS-4LE>
+    <UTF-16 len="999">Unicode 16 位</UTF-16>
+    <UTF-16BE len="999">Unicode 16 位大端</UTF-16BE>
+    <UTF-16LE len="999">Unicode 16 位小端</UTF-16LE>
+    <UTF-32 len="999">Unicode 32 位</UTF-32>
+    <UTF-32BE len="999">Unicode 32 位大端</UTF-32BE>
+    <UTF-32LE len="999">Unicode 32 位小端</UTF-32LE>
+    <UTF-7 len="999">Unicode 7 位</UTF-7>
+    <CP437 len="999">美国，加拿大</CP437>
+    <CP737 len="999">希腊语</CP737>
+    <CP775 len="999">爱沙尼亚、立陶宛和拉脱维亚</CP775>
+    <CP852 len="999">斯拉夫语（中欧和东欧）</CP852>
+    <CP853 len="999">MS-DOS 土耳其</CP853>
+    <CP855 len="999">西里尔文</CP855>
+    <CP857 len="999">土耳其语</CP857>
+    <CP858 len="999">西欧</CP858>
+    <CP860 len="999">MS-DOS 葡萄牙语</CP860>
+    <CP861 len="999">MS-DOS 冰岛语</CP861>
+    <CP863 len="999">MS-DOS 加拿大法语</CP863>
+    <CP865 len="999">MS-DOS 北欧</CP865>
+    <cp865 len="999">MS-DOS 北欧</cp865>
+    <CP869 len="999">希腊语</CP869>
+    <CP1125 len="999">乌克兰语</CP1125>
+    <CP864 len="999">泰语</CP864>
+    <EUC-JISX0213 len="999">日语</EUC-JISX0213>
+    <Shift_JISX0213 len="999">日语</Shift_JISX0213>
+    <ISO-2022-JP-3 len="999">日语</ISO-2022-JP-3>
+    <BIG5-2003 len="999">繁体中文（试验性）</BIG5-2003>
+    <TDS565 len="999">土库曼语</TDS565>
+  </_codepage>
+  <_usb_backups>
+    <title len="999">关于 USB 备份</title>
+    <title_note len="999">使用 WD My Cloud Mirror 系统备份到 USB 设备或从 USB 设备备份出来。</title_note>
+    <title2 len="999">USB 备份作业</title2>
+    <backups_detail len="999">USB 备份详细信息</backups_detail>
+    <job_name len="999">作业名称</job_name>
+    <direction len="999">方向</direction>
+    <usb_backups len="999">USB 备份</usb_backups>
+    <usb_to_nas len="999">USB 到 NAS</usb_to_nas>
+    <nas_to_usb len="999">NAS 到 USB</nas_to_usb>
+    <source_dir len="999">源文件夹</source_dir>
+    <dest_dir len="999">目标文件夹</dest_dir>
+    <select_source_dir len="999">选择源文件夹</select_source_dir>
+    <select_dest_dir len="999">选择目标文件夹</select_dest_dir>
+    <sync len="999">同步</sync>
+    <copy len="999">复制</copy>
+    <status len="999">状态</status>
+    <datetime_format len="999">MM/dd/yyyy HH:mm:ss</datetime_format>
+    <msg2 len="167">选择源文件夹。</msg2>
+    <msg3 len="167">选择目标文件夹。</msg3>
+    <msg7 len="167">输入作业名。</msg7>
+    <msg8 len="167">作业名重复。</msg8>
+    <msg9 len="167">源文件夹和目标文件夹重复。</msg9>
+    <msg10 len="167">请选择作业。</msg10>
+    <status0_1>备份完成于 {0}</status0_1>
+    <status2>备份正在进行</status2>
+    <status_4>重复备份</status_4>
+    <status_5>不允许更多备份</status_5>
+    <status_6>内存分配错误</status_6>
+    <status_7>备份无效</status_7>
+    <status_8>备份路径无效</status_8>
+    <status_9>源文件夹无效</status_9>
+    <no_usb len="999">无 USB 存储。</no_usb>
+    <msg1 len="999">警告！文件已从源复制到目标。目标上的额外文件将删除，同名文件将由源覆盖。源数据将保留不变。</msg1>
+    <edit_usb_backup len="999">编辑 USB 备份</edit_usb_backup>
+	<backups_recovery len="999">USB 备份恢复</backups_recovery>
+	<incremental len="999">增量</incremental>
+	<msg11>
+		<![CDATA[
+		确定要删除此作业吗？<br> <br>
+		备份作业将被删除。<br>注：以前的文件备份将不会被删除。
+		]]>
+	</msg11>
+	<msg12>已达到备份作业的最大数量。</msg12>
+	<backup_now>开始备份</backup_now>
+	<backup_cancel>备份停止</backup_cancel>
+	<edit_job>修改作业</edit_job>
+	<del_job>删除作业</del_job>
+	<status_1>备份失败</status_1>
+	<create_usb_backups>创建作业</create_usb_backups>
+	<recover>恢复备份</recover>
+  <auto_start>连接时自动启动</auto_start>
+	<over_select_msg>已达到文件夹和/或文件的最大数量。</over_select_msg>
+	<recovering>正在恢复...</recovering>
+	<status_10>备份作业已取消</status_10>
+	<status_1_d>备份失败。请检查系统设置</status_1_d>
+	<status_2>备份源路径无效。请检查并纠正设置。</status_2>
+	<status_3>备份目标路径无效。请检查并纠正设置。</status_3>
+	<status1>备份就绪</status1>
+	<status0>备份完成</status0>
+	<details>作业详细信息</details>
+	<backup_type>备份类型</backup_type>
+	<backup_Stopped>备份已停止</backup_Stopped>
+  <backup_type_tip>复制 - 将文件从源复制到目标。复制的文件不会被覆写。&lt;br&gt;
+  同步 - 将文件从源复制到目标。复制的文件会被覆写。&lt;br&gt;
+  增量 - 将多达 25 份增量改变文件复制到目标。
+  </backup_type_tip></_usb_backups>
+  <_pwd>
+    <msg1 len="167">您输入的密码不正确。请重试。</msg1>
+    <msg2 len="167">管理员密码已成功更改。</msg2>
+    <msg3 len="167">密码不可包含空格。</msg3>
+    <msg4 len="167">新密码不可包含空格。</msg4>
+    <msg5 len="167">新密码必须为至少 5 个字符。请重试。</msg5>
+    <msg6 len="167">
+      <![CDATA[新密码不可包含以下字符：@ :/ \ % ']]>
+    </msg6>
+    <msg7 len="167">密码不匹配。</msg7>
+    <msg8 len="167">
+      <![CDATA[密码不可包含以下字符：@ :/ \ % ']]>
+    </msg8>
+    <msg9 len="167">密码不可包含空格。</msg9>
+    <msg10 len="167">密码长度必须为至少 5 个字符。请重试。</msg10>
+    <msg11 len="167">密码长度不可超过 16 个字符。请重试。</msg11>
+  </_pwd>
+  <_ip>
+    <msg1 len="167">输入的子网掩码不正确。</msg1>
+    <msg2 len="167">请输入 IP 地址。</msg2>
+    <msg3 len="167">请输入正整数。</msg3>
+    <msg4 len="167">IP 地址无效。第一组数字必须介于 1 到 223 之间。</msg4>
+    <msg5 len="167">IP 地址无效。第二组数字必须介于 0 到 255 之间。</msg5>
+    <msg6 len="167">IP 地址无效。第三组数字必须介于 0 到 255 之间。</msg6>
+    <msg7 len="167">IP 地址无效。第四组数字必须介于 1 到 254 之间。</msg7>
+    <msg8 len="167">不是有效的 IP 地址。</msg8>
+    <msg9 len="167">IP 地址无效。请重试。</msg9>
+    <msg10 len="167">请输入子网掩码地址。</msg10>
+    <msg11 len="167">只有数字才能用作子网掩码地址值。</msg11>
+    <msg12 len="167">子网掩码地址无效。第一组数字必须介于 1 到 255 之间。</msg12>
+    <msg13 len="167">子网掩码地址无效。第二组数字必须介于 0 到 255 之间。</msg13>
+    <msg14 len="167">子网掩码地址无效。第三组数字必须介于 0 到 255 之间。</msg14>
+    <msg15 len="167">子网掩码地址无效。第四组数字必须介于 0 到 255 之间。</msg15>
+    <msg16 len="167">不是有效的子网掩码地址。</msg16>
+    <msg17 len="167">子网掩码地址无效。请重试。</msg17>
+    <msg18 len="167">请输入网关地址。</msg18>
+    <msg19 len="167">只有数字才能用作网关地址值。</msg19>
+    <msg20 len="167">网关地址无效。第一组数字必须介于 1 到 223 之间。</msg20>
+    <msg21 len="167">网关地址无效。第二组数字必须介于 0 到 255 之间。</msg21>
+    <msg22 len="167">网关地址无效。第三组数字必须介于 0 到 255 之间。</msg22>
+    <msg23 len="167">网关地址无效。第四组数字必须介于 0 到 255 之间。</msg23>
+    <msg24 len="167">不是有效的网关地址。</msg24>
+    <msg25 len="167">网关地址无效。请重试。</msg25>
+    <msg26 len="167">DNS IP 地址中只能使用数字。</msg26>
+    <msg27 len="167">DNS IP 地址无效。第一组数字必须介于 1 到 223 之间。</msg27>
+    <msg28 len="167">DNS IP 地址无效。第二组数字必须介于 0 到 255 之间。</msg28>
+    <msg29 len="167">DNS IP 地址无效。第三组数字必须介于 0 到 255 之间。</msg29>
+    <msg30 len="167">DNS IP 地址无效。第四组数字必须介于 0 到 255 之间。</msg30>
+    <msg31 len="999">
+      <![CDATA[
+		输入的 IP 地址是设定子网掩码的广播地址，不能使用。请输入 IP 地址和子网掩码的有效组合。
+		]]>
+    </msg31>
+    <msg32 len="167">VLAN ID 必须介于 1 到 4094 之间。</msg32>
+    <msg33 len="167">VLAN ID 不可包含空格。</msg33>
+    <msg34 len="167">“前缀长度”不可包含空格。</msg34>
+    <msg35 len="167">“前缀长度”必须介于 0 到 128 之间。</msg35>
+    <msg36 len="167">不允许将 LAN1 和 LAN2 设置为同一个域。</msg36>
+    <msg37 len="167">请输入服务器地址。</msg37>
+    <msg38 len="167">不是有效的 DNS1 地址。</msg38>
+    <msg39 len="167">不是有效的 DNS2 地址。</msg39>
+  <msg40 len="999"><![CDATA[设置无效的静态 IP 可能造成 WD My Cloud Mirror 不可访问。<br>单击“保存”继续。]]></msg40>
+    
+  </_ip>
+  <_safepoints>
+    <title len="999">Safepoint 配置文件</title>
+    <name len="999">作业</name>
+    <create_on len="999">创建于</create_on>
+    <last_updated len="999">上次更新</last_updated>
+    <auto len="999">自动更新</auto>
+    <auto_s len="999">自动更新计划</auto_s>
+    <backup_now len="999">立即备份</backup_now>
+    <time len="999">自动更新时间</time>
+    <date_time len="999">
+      <![CDATA[自动更新日期和时间]]>
+    </date_time>
+    <size len="999">
+      <![CDATA[大小]]>
+    </size>
+  <sub_title>从还原点迁移内容</sub_title><desc>此向导将使您能够从用 My Cloud (Gen 1) 所创建的还原点备份中迁移内容。</desc><button_start_recovery>开始迁移</button_start_recovery><recovery_desc>请选择您还原点的位置。</recovery_desc><local_usb>本地 USB</local_usb><scan_network>扫描网络</scan_network><search_usb>搜索 USB 设备</search_usb><search_network_wait>正在扫描网络寻找设备...请稍候</search_network_wait><select_a_drive>请选择一个驱动器</select_a_drive><retrieving_safepoints>正在获取还原点</retrieving_safepoints><choose_a_savepoint>请选择一个还原点</choose_a_savepoint><choose_desc>在您选择的设备上找到以下还原点。请从下面的列表中选择一个还原点，单击“完成”以开始恢复。</choose_desc><safepoint_details>还原点详细信息</safepoint_details><created_for>创建</created_for><restore_progress>还原点迁移进度</restore_progress><currently_copying>正在复制</currently_copying><copied>({0}%) 已复制</copied><device_login>设备登录</device_login><share_login>共享登录</share_login><username>用户名</username><password>密码</password><error_code_1>无法连接远程共享。</error_code_1><error_code_2>目标位置不可用。</error_code_2><error_code_3>可供迁移使用的自由空间不足。</error_code_3><error_code_4>无法写入目标。</error_code_4><error_code_5>迁移数据时发生错误。</error_code_5><error_code_6>重命名已迁移数据时发生错误。</error_code_6><error_code_7>创建共享时发生错误。</error_code_7><error_code_8>用户已取消迁移。</error_code_8><error_code_9>迁移已在进行中。</error_code_9><restore_done>您的数据已成功恢复。</restore_done><msg_pre_restore>在迁移过程中，无法访问云。您将无法使用 DLNA 流媒体服务或任何 WD 软件，如 My Cloud、MyCloud.com、WD Photos 移动应用程序以及 WD Sync。确定要继续吗？</msg_pre_restore><preparing_data>正在准备要进行迁移的 Safepoint 数据。这可能会占用几分钟时间。</preparing_data></_safepoints>
+  <_remote_backup>
+    <server len="44">远程服务器</server>
+    <remote_title1 len="44">远程备份作业</remote_title1>
+    <remote_title2 len="44">远程备份服务器</remote_title2>
+    <remote_title3 len="999">保护您的数据</remote_title3>
+    <remote_title4 len="999">远程备份</remote_title4>
+    <remote_title5 len="999">连接到远程服务器</remote_title5>             
+	<remote_title6 len="999">登录 My Cloud 账户</remote_title6>    
+	<remote_title7 len="999">您想备份到哪里？</remote_title7>             
+	<remote_title8 len="999">未找到设备</remote_title8>                
+    <remote_title9 len="999">远程备份恢复列表</remote_title9>
+	<remote_title10 len="999">远程备份详细信息</remote_title10>         
+    <about len="999">关于远程备份</about>
+    <desc len="999">
+   将 WD My Cloud Mirror 系统备份到网络上或网络外的另一台服务器。&lt;br&gt;
+   继续远程备份之前，请确保以下事项：&lt;br&gt;
+   &lt;ol&gt;
+    &lt;li&gt;您有一个远程 WD My Cloud Mirror 系统，您要将此系统备份到该远程系统。除了先前存在的数据外，此系统上的现有共享和数据将复制到目标系统。&lt;/li&gt;
+    &lt;li&gt;远程服务器设置在远程 WD My Cloud Mirror 系统上开启。&lt;/li&gt;
+    &lt;li&gt;远程 WD My Cloud Mirror 系统的备份密码启用。&lt;/li&gt;
+    &lt;li&gt;您已在“设置 &gt; 网络 &gt; 端口转发”中添加了 SSH 和远程备份服务的端口转发规则，以便通过 Internet 查看 WD My Cloud Mirror 系统。&lt;/li&gt;
+   &lt;/ol&gt;
+  </desc>
+    <desc2 len="999">将现有内容从 WD My Cloud Mirror 系统上的一个存储位置备份到另一个位置。</desc2>
+    <desc3 len="999">无远程备份作业添加到 WD My Cloud Mirror 系统。</desc3>
+    <desc4 len="999">选择您想如何连接到远程服务器</desc4>
+	<desc5 len="999">在您注册电子邮件后，WD My Cloud Mirror 将神奇工作，并发现所有设备。</desc5>
+	<desc6 len="999">
+   找不到 WD My Cloud Mirror 系统可备份到的设备。&lt;br&gt;&lt;br&gt;
+   请确保：&lt;br&gt;&lt;br&gt;
+   *RSync、SSH 端口已转发。&lt;br&gt;&lt;br&gt;
+   单击“返回”重试。
+  </desc6>
+    <server_desc len="999">设置备份密码以启用此系统向远程服务器的远程备份。</server_desc>
+    <create_desc len="999">可以选择保护 WD My Cloud Mirror 系统上的内容。指定您要保护的共享，然后选择&lt;b&gt;确定&lt;/b&gt;继续。</create_desc>
+    <backup_complete_on len="999">备份完成于 %s</backup_complete_on>
+    <recover_complete_on len="999">恢复完成于 %s</recover_complete_on>
+    <task len="999">作业名称</task>
+    <schedule len="999">计划</schedule>
+    <status len="999">状态</status>
+    <now len="999">现在</now>
+    <recover len="999">恢复</recover>
+    <ready len="999">准备就绪</ready>
+    <finished len="999">完成</finished>
+    <job_desc len="999">描述</job_desc>
+    <type len="999">服务类型</type>
+    <path len="999">文件夹路径</path>
+    <remote_path len="999">远程共享</remote_path>
+    <ip len="999">远程 IP</ip>
+    <pw len="999">密码</pw>
+    <Num len="999">Num</Num>
+    <ssh_result len="999">SSH 测试结果</ssh_result>
+    <rsync_result len="999">RSYNC 测试结果</rsync_result>
+    <failed len="999">失败</failed>
+    <wait len="999">请等待..</wait>
+    <mode len="999">计划模式</mode>
+    <manual len="999">手动</manual>
+    <schedule2 len="999">计划</schedule2>
+    <month len="999">月</month>
+    <day len="999">日</day>
+    <hour len="999">时</hour>
+    <minute len="999">分</minute>
+    <yes len="999">是</yes>
+    <no len="999">否</no>
+    <select_one len="999">请选择一个共享</select_one>
+    <create len="999">创建作业</create>
+    <job_name len="999">作业名称</job_name>
+    <create_on len="999">创建于</create_on>
+    <last_updated len="999">上次更新</last_updated>
+    <auto len="999">自动更新</auto>
+    <auto_s len="999">自动更新计划</auto_s>
+    <backup_now len="999">立即备份</backup_now>
+    <later len="999">以后</later>
+    <time len="999">自动更新时间</time>
+    <date_time len="999">
+      <![CDATA[自动更新日期和时间]]>
+    </date_time>
+    <size len="999">
+      <![CDATA[大小]]>
+    </size>
+    <x_detail len="999">%s 的详细信息</x_detail>
+    <create_schedule_desc len="999">创建远程备份可能需要一段时间，并可能在这段时间里轻微影响 WD My Cloud Mirror 系统的性能。可以选择立即创建一个备份，也可以选择安排在以后。</create_schedule_desc>
+    <incomplete len="999">备份失败</incomplete>
+    <completed len="999">备份完成</completed>
+    <pw_desc len="999">为了在 Internet 上看到您的 WD My Cloud Mirror 系统，请确保在“设置 &gt; 网络 &gt; 端口转发”中为 SSH 和远程备份服务添加了端口转发规则。</pw_desc>
+    <choose len="999">选择方法</choose>
+	<mycloud len="999">My Cloud</mycloud>
+    <encryption len="999">加密</encryption>
+    <bandwidth>带宽限制</bandwidth>
+    <msg1 len="999">您是否要现在运行此备份作业？</msg1>
+    <msg2 len="999">
+      <![CDATA[设置完成。单击<b>完成</b>保存当前设置。]]>
+    </msg2>
+    <msg3 len="999">输入任务名称。</msg3>
+    <msg4 len="999">输入的作业名已存在。请输入其他名称。</msg4>
+    <msg5 len="999">
+      <![CDATA[
+		作业名只能包含以下字符：“a-z”、“A-Z”、“0-9”、“-”和“_”
+		]]>
+    </msg5>
+    <msg6 len="999">选择路径</msg6>
+    <msg7 len="999">路径长度不可超过 235 个字符。请重试。</msg7>
+    <msg8 len="999">请输入密码。</msg8>
+    <msg9 len="999">请输入 RSYNC 用户名。</msg9>
+    <msg10 len="999">请输入 RSYNC 密码。</msg10>
+    <msg11 len="999">请输入 ssh 用户名。</msg11>
+    <msg12 len="999">请输入 ssh 密码。</msg12>
+    <msg13 len="999">远程硬盘驱动器上没有足够的空间。</msg13>
+    <msg14 len="999">本地硬盘驱动器上没有足够的空间。</msg14>
+    <msg15 len="999">请选择一项。</msg15>
+    <msg16 len="999">备份作业将被删除。注：以前的文件备份将不会被删除。</msg16>
+    <msg17 len="999">已达到备份作业的最大数量</msg17>
+    <msg18 len="999">请输入远程 IP。</msg18>
+    <msg19 len="999">需要的空间</msg19>
+    <msg20 len="999">可用的空间</msg20>
+    <msg21 len="999">
+      <![CDATA[
+		密码不可包含以下字符：" ' \ ?# ` :& + ;
+		]]>
+    </msg21>
+    <msg22 len="999">选择路径</msg22>
+    <msg23 len="999">RSYNC 测试失败。</msg23>
+    <msg24 len="999">请输入远程 IP 地址。</msg24>
+    <msg25 len="999">您确定要立即执行备份吗？</msg25>
+    <msg26 len="999">无项。</msg26>
+    <msg27 len="999">SSH 用户名不可包含空格。</msg27>
+    <msg28 len="999">请选择一个文件夹。</msg28>
+    <msg29 len="999">您确定要恢复数据吗？此过程将把数据从远程服务器恢复到本地 WD My Cloud Mirror 设备。</msg29>
+    <msg30 len="999">您确定要关闭远程服务器功能？这将不允许其他网络存储设备备份到此 WD My Cloud Mirror。</msg30>
+    <msg31 len="999">作业将按以下计划运行</msg31>
+    <msg32 len="999">此远程备份作业未完成。</msg32>
+    <msg33 len="999">已达到文件夹和/或文件的最大数量。</msg33>
+	<msg34 len="999">远程备份失败。请确保远程服务器处于活动状态。</msg34>
+    <success len="999">成功</success>
+    <fail len="999">失败</fail>
+    <f1 len="999">由于 SSH 故障，远程备份无法继续。</f1>
+    <f2 len="999">由于未知的 SSH 主机，远程备份无法继续。</f2>
+    <f3 len="999">由于拒绝连接，远程备份无法继续。</f3>
+    <f4 len="999">由于 SSH 访问失败，远程备份无法继续。</f4>
+    <f5 len="999">由于 SSH 密钥更改故障，远程备份无法继续。</f5>
+    <f6 len="999">由于 RSYNC 测试失败，远程备份无法继续。</f6>
+    <f7 len="999">由于 RSYNC 服务器连接被拒，远程备份无法继续。</f7>
+    <f8 len="999">远程路径无效。请输入有效路径并重试。</f8>
+    <f9 len="999">由于远程共享有只读权限，远程备份无法继续。请更改远程共享的设置，并重试。</f9>
+    <f10 len="999">由于 RSYNC 模块无效，远程备份无法继续。</f10>
+    <f11 len="999">远程备份密码无效。请重试。</f11>
+    <f12 len="999">由于未知原因，远程备份无法继续。</f12>
+    <no_share len="999">无共享。</no_share>
+    <backup_status len="999">备份状态</backup_status>
+    <recover_status len="999">恢复状态</recover_status>
+    <remote_share len="999">远程共享</remote_share>
+    <local_share len="999">本地共享</local_share>
+    <a_space len="999">可用空间</a_space>
+    <total_size len="999">总备份大小</total_size>
+    <cancel_on>备份停止于 %s</cancel_on>
+    <failed_on>备份失败于 %s</failed_on>
+    <cancel>停止备份</cancel>
+  <nas_server>NAS 服务器</nas_server>
+	<linux_server>Linux 服务器</linux_server>
+	<ssh_account>SSH 用户名</ssh_account>
+	<ssh_pw>SSH 密码</ssh_pw>
+	<recurrence>定期重复</recurrence>    
+  <msg35>如需了解更多关于端口转发的信息，请访问&lt;a href="#" id="backups_rlink" target="_blank"&gt;此处&lt;/a&gt;。</msg35><transfer_encryption>传输加密</transfer_encryption></_remote_backup>
+  <_sms>
+    <title>SMS 设置</title>
+    <sms len="999">SMS</sms>
+    <provider len="999">SMS 服务提供商</provider>
+    <add len="999">添加</add>
+    <del len="999">删除</del>
+    <url len="999">URL</url>
+    <replace len="999">将空格字符替换为</replace>
+    <no_replace len="999">使用默认值</no_replace>
+    <phone1 len="999">电话号码 1</phone1>
+    <phone2 len="999">电话号码 2</phone2>
+    <test len="999">测试 SMS</test>
+    <description len="999">
+      <![CDATA[
+		“SMS 设置”菜单允许您设置要以 SMS 短消息的形式发送给手机的事件警报。您需要一台手机，并向 SMS 网关提供商订用服务，该提供商必须提供要用于配置的有效 HTTP API URL。配置好 SMS 设置后，只要“事件设置”菜单下选中的事件发生，事件警报就会作为短消息发送到配置的手机。
+		]]>
+    </description>
+    <name len="999">提供商名称</name>
+    <url2 len="999">输入 SMS URL 并附带消息内容“Hello world”</url2>
+    <sms_url len="999">SMS URL</sms_url>
+    <sms_description len="999">
+      <![CDATA[
+			*此 SMS URL 仅供设置之用。设置完成后，不会发出 SMS 消息。此 URL 的格式由 SMS 服务提供商提供，URL 必须包含以下参数：用户名、密码、目标手机和消息内容。以 Clickatell 为例，可能的 URL 为：https://api.clickatell.com/http/sendmsg?user=TestUser&password=TestPassword&api_id=3148203&to=886123456789&text=Hello。
+		]]>
+    </sms_description>
+    <parameter len="999">URL 参数定义</parameter>
+    <sel len="999">选择每个参数的对应类别</sel>
+    <username len="999">用户名</username>
+    <pw len="999">密码</pw>
+    <number len="999">电话号码</number>
+    <message len="999">消息内容</message>
+    <other len="999">其他</other>
+    <msg1 len="999">SMS 号码不可超过 64 个字符。</msg1>
+    <msg2 len="999">提供的名称重复，请重试。</msg2>
+    <msg3 len="999">提供商名称格式不正确。</msg3>
+    <msg4 len="999">url 不是有效值。</msg4>
+    <msg5 len="999">url 参数不可超过 7。</msg5>
+    <msg6 len="999">请输入手机和文本参数。</msg6>
+    <msg7 len="999">用户名重复</msg7>
+    <msg8 len="999">密码重复</msg8>
+    <msg9 len="999">电话号码重复</msg9>
+    <msg10 len="999">文本重复</msg10>
+    <msg11 len="999">更新成功</msg11>
+    <msg12 len="999">无 SMS</msg12>
+    <msg13 len="999">请输入 url。</msg13>
+    <msg14 len="999">请输入特殊字符。</msg14>
+    <msg15 len="999">电话号码无效。请输入有效的号码。</msg15>
+    <msg16 len="999">电话号码相同，请更改。</msg16>
+    <msg17 len="999">用户名不可为空。</msg17>
+    <msg18 len="999">用户名不是有效值。</msg18>
+    <msg19 len="999">密码不可为空。</msg19>
+    <msg20 len="999">密码不是有效值。</msg20>
+    <msg21 len="999">请添加 SMS 服务提供商。</msg21>
+    <msg22 len="999">测试 SMS：已发出</msg22>
+    <msg23 len="999">测试 SMS：失败</msg23>
+    <msg24 len="999">提供商名称不可为空。</msg24>
+    <msg25 len="999">请输入电话号码。</msg25>
+    <msg26 len="999">url 不可有参数。</msg26>
+    <help_hint len="999">
+      <![CDATA[
+		在“SMS 设置”中启用 SMS 通知，即可将事件日志以短消息形式发送到您的手机。请联系移动设备提供商，获得配置所需的相应 URL 设置。<br><br>*此 SMS URL 仅供设置之用。设置完成后，不会发出 SMS 消息。此 URL 的格式由 SMS 服务提供商提供，URL 必须包含以下参数：用户名、密码、目标手机和消息内容。以 Clickatell 为例，可能的 URL 为：https://api.clickatell.com/http/sendmsg?user=TestUser&password=TestPassword&api_id=3148203&to=886123456789&text=Hello。
+		]]>
+    </help_hint>
+  </_sms>
+  <_wfs>
+    <upload len="999">上传</upload>
+    <download len="999">下载</download>
+    <refresh len="999">刷新</refresh>
+    <size len="999">大小</size>
+    <type len="999">类型</type>
+    <modified len="999">修改时间</modified>
+    <copy len="999">复制</copy>
+    <move len="999">移动</move>
+    <rename len="999">重命名</rename>
+    <properties len="999">属性</properties>
+    <folder_name len="999">文件夹名称</folder_name>
+    <location len="999">位置</location>
+    <change_time len="999">更改时间</change_time>
+    <access_time len="999">访问时间</access_time>
+    <owner len="999">所有者</owner>
+    <user_group len="999">用户组</user_group>
+    <privilege len="999">权限</privilege>
+    <owner_user_group len="999">
+      <![CDATA[所有者和用户组]]>
+    </owner_user_group>
+    <read len="999">
+      <![CDATA[读取]]>
+    </read>
+    <write len="999">
+      <![CDATA[写入]]>
+    </write>
+    <execute len="999">
+      <![CDATA[执行]]>
+    </execute>
+    <create_title len="44">创建目录</create_title>
+    <select_files len="15">选择文件</select_files>
+    <file_size_error len="40">文件大小错误</file_size_error>
+    <add_to_zip len="40">添加到 Zip</add_to_zip>
+    <preview len="999">预览</preview>
+    <open len="999">打开</open>
+    <unzip len="999">解压缩 zip</unzip>
+    <untar len="999">解压缩 tar</untar>
+    <select_zip_file>选择 Zip 文件</select_zip_file>
+    <compress_msg>请等待.....文件压缩正在进行。</compress_msg>
+    <decompress_msg>请等待.....文件解压缩正在进行。</decompress_msg>
+    <create_folder>创建文件夹</create_folder>
+    <msg1 len="999">下载文件大小必须小于 4 GB。</msg1>
+    <msg2 len="999">选择下载文件。</msg2>
+    <msg3 len="999">选择保存上载文件路径。</msg3>
+    <msg4 len="999">不可输入空白字符。</msg4>
+    <msg5 len="999">请输入名称。</msg5>
+    <msg6 len="999">未选择文件。</msg6>
+    <msg7 len="999">您没有足够权限访问此目录。</msg7>
+    <msg8 len="999">您确定要删除所选文件吗？</msg8>
+    <msg9 len="999">
+<![CDATA[
+		Web 文件查看器使用 Adobe® Flash® Player 从您的计算机上载文件。继续之前，请先从 <a href='http://www.adobe.com'>www.adobe.com</a> 安装最新的 Adobe Flash Player。
+		
+		]]>
+</msg9>
+    <msg10 len="999">文件上载成功。</msg10>
+    <msg11 len="999">队列满。最大大小为 </msg11>
+    <msg12 len="999">上载成功。</msg12>
+    <msg13 len="999">文件正在上载。</msg13>
+    <msg14 len="999">将文件放在此处</msg14>
+    <msg15 len="999">大小 &gt; 2G；无法上载</msg15>
+    <msg16 len="999">
+<![CDATA[解压缩失败！<br>为了成功解压缩文件，请确保压缩格式和文件扩展名匹配。]]>
+</msg16>
+    <msg17>这将取消上载。确定要继续吗？</msg17>
+  <msg18>保留两个文件</msg18>
+    
+    
+      <msg19>请选择移动方法</msg19>
+    
+    
+      <msg20>请选择复制方法</msg20>
+    
+  <upload_desc>上传文件至 My Cloud 系统</upload_desc><file_desc>当发现名称相同的文件时，执行以下操作：</file_desc><destination>目标</destination><msg21>某些文件并未添加到队列中：</msg21><msg22>文件 %s1 超过了大小限制 (%s)。</msg22></_wfs>
+  <_s3>
+    <no_list>无 S3 列表添加到您的 WD My Cloud Mirror 设备。</no_list>
+    <title>关于 Amazon S3</title>
+    <queue>Amazon S3 队列</queue>
+    <amazon len="22">Amazon S3</amazon>
+    <s3_dialog_title len="44">设置您的 Amazon S3 备份 </s3_dialog_title>
+    <job_name len="999">作业名称</job_name>
+    <type len="999">类型</type>
+    <a_key len="999">访问密钥</a_key>
+    <p_key len="999">私钥</p_key>
+    <b_path len="999">远程路径</b_path>
+    <region len="999">地区</region>
+    <backup_type len="999">备份类型</backup_type>
+    <local_path len="999">本地路径</local_path>
+    <schedule_mode len="999">计划模式</schedule_mode>
+    <overwrite len="999">覆盖现有文件</overwrite>
+    <fullbackup len="999">完全备份</fullbackup>
+    <incremental_backup len="999">增量备份</incremental_backup>
+    <united_states len="999">美国</united_states>
+    <northern_california len="999">北加利福尼亚</northern_california>
+    <oregon len="999">俄勒冈</oregon>
+    <sydney len="999">悉尼</sydney>
+    <sao_paulo len="999">圣保罗</sao_paulo>
+    <ireland len="999">爱尔兰</ireland>
+    <singapore len="999">新加坡</singapore>
+    <tokyo len="999">东京</tokyo>
+    <running len="15">正在运行</running>
+    <backup_now len="15">立即备份</backup_now>
+    <msg1 len="999">请输入作业名。</msg1>
+    <msg2 len="999">作业名不可包含空格。</msg2>
+    <msg3 len="999">请输入访问密钥。</msg3>
+    <msg4 len="999">访问密钥不可包含空格。</msg4>
+    <msg5 len="999">请输入私钥。</msg5>
+    <msg6 len="999">私钥不可包含空格。</msg6>
+    <msg7 len="999">请输入 Bucket 路径。</msg7>
+    <msg8 len="999">远程路径不可包含空格。</msg8>
+    <msg9 len="999">远程路径必须至少为 3 个字符。请重试。</msg9>
+    <msg10 len="999">请选择本地路径。</msg10>
+    <msg11 len="999">远程路径不可包含下划线。</msg11>
+    <msg12 len="999">作业名重复。</msg12>
+    <msg13 len="999">
+      <![CDATA[请输入远程复本的名称，然后单击<b>下一步</b>。]]>
+    </msg13>
+    <msg14 len="999">
+      <![CDATA[单击<b>下一步</b>继续。]]>
+    </msg14>
+    <msg15 len="999">恢复失败。</msg15>
+    <msg16 len="999">备份失败。</msg16>
+    <msg17 len="999">系统不接受该作业名。请重试。</msg17>
+    <msg18 len="999">系统不接受该远程路径。请重试。</msg18>
+    <msg19 len="999">远程路径不可以短划线结尾。</msg19>
+    <msg20 len="999">远程路径不可包含两个相邻句点。</msg20>
+    <msg21 len="999">远程路径在句点旁边不可包含短划线。</msg21>
+    <msg22 len="999">远程路径在句点旁边不可包含短划线。</msg22>
+    <msg23 len="999">
+      <![CDATA[远程路径的开头不可包含 test_]]>
+    </msg23>
+    <msg24 len="999">
+      <![CDATA[远程路径的开头不可包含“test”或“TEST”。]]>
+    </msg24>
+    <msg25 len="999">远程路径必须以 a-z、A-Z、0-9 开头</msg25>
+    <msg26 len="999">作业名不可包含空格。</msg26>
+    <msg27 len="999">远程路径不可包含反斜杠。</msg27>
+    <msg28 len="999">
+      <![CDATA[可以包含小写字母、数字、句点 (.) 和短划线 (-)]]>
+    </msg28>
+    <time_error len="999">系统时间不正确。请重试。</time_error>
+    <key_error len="999">访问密钥无效。请重试。</key_error>
+    <private_key_error len="999">私钥无效。请重试。</private_key_error>
+    <bucket_error len="999">远程路径无效。</bucket_error>
+    <bucket_error1 len="999">远程路径不存在。</bucket_error1>
+    <seq len="20">
+      <![CDATA[序列]]>
+    </seq>
+    <backup_date len="35">备份日期/时间</backup_date>
+    <action len="12">操作</action>
+    <step1 len="999">设置您的 Amazon S3 备份</step1>
+    <step2 len="999">设置您的 Amazon S3 备份</step2>
+    <step3 len="999">设置您的 Amazon S3 备份</step3>
+    <step4 len="999">设置您的 Amazon S3 备份</step4>
+    <step5 len="999">设置您的 Amazon S3 备份</step5>
+    <step6 len="999">设置您的 Amazon S3 备份</step6>
+    <step1_desc len="999">输入一个 16 字符的作业名，以识别待创建的上传至云或下载至云的作业。作业名不可包含空格。允许以下字符：a-z、A-Z、0-9。 </step1_desc>
+    <step2_desc len="999"> 
+  请输入 Amazon S3 分配的&lt;b&gt;访问密钥&lt;/b&gt;和&lt;b&gt;私钥&lt;/b&gt;。密钥允许您的 WD My Cloud Mirror 系统访问 Amazon S3 云存储。在&lt;b&gt;远程路径&lt;/b&gt;字段，输入新的或现有 Amazon S3 &lt;b&gt;Bucket&lt;/b&gt; 名称。这是云存储上的一个文件夹，您的数据将写入此文件夹或从此文件夹读取。最后选择将提供最佳 Amazon S3 云读写服务的相应地区。
+  </step2_desc>
+    <step3_desc len="999">  
+  如果希望将 WD My Cloud Mirror 系统数据备份到 Amazon S3 云，则在&lt;b&gt;类型&lt;/b&gt;下拉菜单中选择&lt;b&gt;上载&lt;/b&gt;。如果希望从 Amazon S3 云将数据备份到 WD My Cloud Mirror 设备，则选择&lt;b&gt;下载&lt;/b&gt;。&lt;br&gt;&lt;br&gt;
+  在&lt;b&gt;备份类型&lt;/b&gt;下拉菜单中，选择&lt;b&gt;覆盖现有文件&lt;/b&gt;，这样目标文件夹中的任何文件都将被同名源文件覆盖。选择&lt;b&gt;完全备份&lt;/b&gt;，这将在每次作业执行时创建一个单独的文件夹，其中包含所有备份数据。选择&lt;b&gt;增量备份&lt;/b&gt;，这样比目标文件夹文件更新的源文件将覆盖目标文件。
+  </step3_desc>
+    <step4_desc len="999">
+      <![CDATA[
+			在<b>本地路径</b>字段中，输入作业的源或目标目录文件夹的完整路径名（例如 Volume_1/backup_docs）。
+		]]>
+    </step4_desc>
+    <step5_desc len="999">
+      <![CDATA[
+		选择在作业执行时要使用的相应<b>计划模式</b>。单击<b>手动</b>在以后使用手动单击的按钮启动作业。单击<b>一次</b>安排只运行作业一次的日期和时间。单击<b>计划</b>设置作业每天运行的时间。
+		]]>
+    </step5_desc>
+    <step6_desc len="999">
+      <![CDATA[
+		检查所有设置，并单击<b>上一步</b>返回进行任何更改。单击<b>退出</b>退出向导而不保存作业。单击<b>完成</b>保存作业并退出向导。
+		]]>
+    </step6_desc>
+    <recovery>恢复</recovery>
+    <msg29>设置完成。单击“完成”保存当前设置。</msg29>
+    <desc>
+      <![CDATA[Amazon S3（简单存储服务）是由 Amazon Web Services 提供的在线文件存储 Web 服务。它提供通过 Web 服务接口将设备上的数据备份到云的存储。]]>
+    </desc>
+    <del_msg>您确定要删除此 Amazon S3 作业吗？</del_msg>
+    <s3_config>S3 配置</s3_config>
+    <progress>进度</progress>
+  </_s3>
+  <_ads>
+    <title len="999">Active Directory 设置</title>
+    <enable len="999">启用 Active Directory</enable>
+    <desc len="999">请确保 WD My Cloud Mirror 系统与域服务器的时区匹配，并且两者相差不超过 5 分钟。</desc>
+    <enable_desc len="999">启用 Active Directory 可以利用 Windows 域中已经存在的用户。但是，在此期间，将无法管理现有本地用户和共享。</enable_desc>
+    <enable_desc2 len="999">您确定要启用此功能吗？</enable_desc2>
+    <time_desc len="999">请确保 WD My Cloud Mirror 系统与域服务器的时区匹配，并且两者相差不超过 5 分钟。</time_desc>
+    <name len="999">用户名</name>
+    <pw len="999">密码</pw>
+    <workgroup len="999">工作组</workgroup>
+    <realm_name len="999">领域名称</realm_name>
+    <server_name len="999">AD 服务器名称</server_name>
+    <ads_user len="999">ADS 用户</ads_user>
+    <msg1 len="999">用户名字段为空。请输入用户名。</msg1>
+    <msg2 len="999">密码字段为空。请输入密码。</msg2>
+    <msg3 len="999">
+      <![CDATA[工作组名称允许以下字符：“a-z”、“A-Z”、“0-9”、“-”]]>
+    </msg3>
+    <msg4 len="999">请输入工作组。</msg4>
+    <msg5 len="999">域名字段为空。输入域名。</msg5>
+    <msg6 len="999">请输入 AD 服务器名称。</msg6>
+    <msg7 len="999">
+      <![CDATA[请检查“设置->网络”中的 DNS 设置]]>
+    </msg7>
+    <msg8 len="999">成功</msg8>
+    <msg9 len="999">时间不正确。请检查您系统的日期和时间。使日期和时间与 AD 服务器同步。（NAS 和 Active Directory 服务器将只允许至多 5 分钟的时间差异。）</msg9>
+    <msg10 len="999">登录失败。目标帐户名不正确。</msg10>
+    <msg11 len="999">帐户名格式不正确。请输入一个有效的帐户名。</msg11>
+    <msg12 len="999">设置 servicePrincipalNames 失败。请确保此服务器的域名匹配 AD 域。</msg12>
+    <msg13 len="999">加入域失败。</msg13>
+    <msg14 len="999">连接失败。请检查您的配置。</msg14>
+    <msg15 len="999">身份验证失败。请重新输入正确的登录凭据。</msg15>
+    <msg16 len="999">Active Directory 域内未找到用户名。请确保用户名已正确输入。用户不存在。</msg16>
+    <msg17 len="999">无法解析所请求的 Active Directory 域内密钥分布中心 (KDC) 的网络地址。</msg17>
+    <msg18 len="999">AFP 和 Time Machine 服务将停止。</msg18>
+    <msg19 len="999">
+      <![CDATA[
+			“用户名”不可包含以下字符：'
+		]]>
+    </msg19>
+    <msg20 len="999">
+      <![CDATA[
+			“密码”不可包含以下字符：'
+		]]>
+    </msg20>
+  <msg57>域名未被定义。请输入一个域名。</msg57><msg58>域名无效。请重新输入。</msg58><msg59>无法打开秘密数据库。</msg59><msg60>“工作组”设置为 %s1，应为 %s2。</msg60><msg61>“域”设置为 %s1，应为 %s2。</msg61><msg62>“安全”设置为 '%s1'，应为 %s2。</msg62><msg63>无效配置 (%s1) 和配置修改未被请求。</msg63><msg64>已请求配置操作但未被后端支持。</msg64><msg65>未找到域 %s1 的 DC。</msg65><msg66>未查询到 RPC：%s2 域 %s1 的 DC 信息。</msg66><msg67>未能在 %s1 预创建帐户。</msg67><msg68>未能加入此 RPC 的域 %s1 ：%s2.</msg68><msg69>在加入此项后未能验证域成员：%s1.</msg69></_ads>
+  <_snmp>
+    <community len="999">SNMP 共同体</community>
+    <notification len="999">通知</notification>
+    <notification_ip len="999">通知 IP 地址</notification_ip>
+    <description len="999">此部分允许配置 SNMP 功能。可以设置 SNMP 共同体，以及陷阱/通知的目标。</description>
+    <enable>SNMP</enable>
+    <msg1 len="999">请输入 SNMP 共同体。</msg1>
+    <msg2 len="999">SNMP 共同体不可包含空格。</msg2>
+    <msg3 len="999">共同体不可包含以下字符：@ :/ \\ %</msg3>
+    <msg4 len="999">请输入 IP 地址。</msg4>
+    <msg5 len="999">只有数字才能用作 IP 地址值。</msg5>
+    <title_1>SNMP 设置</title_1>
+    <title_2>用户管理 (SNMPv3)</title_2>
+    <title_3>SNMPv3 用户详情</title_3>
+    <sys_contact>联系信息</sys_contact>
+    <notification_community>通知社区</notification_community>
+    <community_v2>社区 (SNMPv2c)</community_v2>
+    <scuritylevel>安全级别</scuritylevel>
+    <authtype>身份验证类型</authtype>
+    <encrytype>加密类型</encrytype>
+    <view>视图</view>
+    <view_system>系统</view_system>
+    <view_network>网络</view_network>
+    <edit>编辑</edit>
+    <msg6>位置不得包含重音符。</msg6>
+    <msg7>联系信息不得包含重音符。</msg7>
+    <msg8>通知社区字符串必须由 1 到 255 个字母数字字符组成，不能包含空格、反斜杠、重音符。 </msg8>
+    <msg9>社区 (SNMPv2c) 字符串必须由 1 到 255 个字母数字字符组成，不能包含空格、反斜杠、重音符。 </msg9>
+    <msg10>用户名必须是 1 到 31 个字母数字值，并且不能包含空格。</msg10>
+    <msg11>身份验证密码与确认密码不匹配。请重试。</msg11>
+    <msg12>身份验证密码必须由 8 到 255 个字母数字字符组成，不能包含空格、反斜杠、重音符。</msg12>
+    <msg13>加密密码与确认密码不匹配。请重试。</msg13>
+    <msg14>加密密码必须由 8 到 255 个字母数字字符组成，不能包含空格、反斜杠、重音符。</msg14>
+    <msg15>您确定要删除此用户吗？</msg15>
+  </_snmp>
+  <_bonding>
+    <title len="999">链路聚合</title>
+    <mode1 len="999">轮循机制</mode1>
+    <mode2 len="999">活动备份</mode2>
+    <mode3 len="999">Balance-XOR</mode3>
+    <mode4 len="999">广播</mode4>
+    <mode5 len="999">802.3ad</mode5>
+    <mode6 len="999">自适应传输负载平衡</mode6>
+    <mode7 len="999">自适应负载平衡</mode7>
+    <bonding_option len="999">选项</bonding_option>
+  </_bonding>
+  <_portforwarding>
+    <no_list>无端口转发服务添加到您的 WD My Cloud Mirror 设备。</no_list>
+    <built_desc len="999">请选择默认服务</built_desc>
+    <custom_desc len="999">自定义端口转发服务</custom_desc>
+    <scan len="999">扫描</scan>
+    <service len="30">服务</service>
+    <protocol len="20">协议</protocol>
+    <e_port len="20">外部端口</e_port>
+    <p_port len="20">内部端口</p_port>
+    <title len="44">端口转发设置</title>
+    <step1 len="44">端口转发设置</step1>
+    <step2 len="44">端口转发设置</step2>
+    <msg1 len="999">请选择内置应用程序。</msg1>
+    <msg2 len="999">外部端口重复。</msg2>
+    <msg3 len="999">路由表可能无法清空。</msg3>
+    <msg4 len="999">请输入服务。</msg4>
+    <msg5 len="999">已达到最大端口转发设置数。</msg5>
+    <msg6 len="999">请输入服务。</msg6>
+    <msg7 len="999">请输入外部端口。</msg7>
+    <msg8 len="999">请输入内部端口。</msg8>
+    <error1 len="999">端口转发设置失败。</error1>
+    <error2 len="999">端口转发设置失败</error2>
+    <error3 len="999">服务设置错误。请重试。</error3>
+    <ok1 len="999">端口转发设置成功。</ok1>
+    <ok2 len="999">端口转发设置成功。</ok2>
+    <del_error len="999">端口转发删除失败。</del_error>
+    <del_ok len="999">端口转发删除成功。</del_ok>
+    <upnp_title len="999">UPnP 路由器检测</upnp_title>
+    <upnp_test len="999">UPnP 路由器测试</upnp_test>
+    <found len="999">网络上发现 UPnP 路由器。</found>
+    <not_found len="999">网络上未发现 UPnP 路由器。</not_found>
+  </_portforwarding>
+  <_dfs>
+    <local_path len="999">本地文件夹名称</local_path>
+    <host len="999">远程主机</host>
+    <remote_folder len="999">远程共享</remote_folder>
+    <enable len="999">启用分布式文件系统</enable>
+    <enable_title len="999">分布式文件系统启用/禁用</enable_title>
+    <set_title len="999">共享聚集设置</set_title>
+    <get_folder len="999">获得远程共享文件夹</get_folder>
+    <modify_title len="999">分布式文件系统修改</modify_title>
+    <group_title len="999">根文件夹列表</group_title>
+    <group_title2 len="999">创建根文件夹</group_title2>
+    <group_title3 len="999">修改根文件夹名称</group_title3>
+    <root_name len="999">根文件夹名称</root_name>
+    <action len="999">操作</action>
+    <group len="999">文件夹名称</group>
+    <sel len="999">请选择文件夹</sel>
+    <dfs_description len="999">
+      <![CDATA[
+			<!--DFS is a method of storing and accessing files based in a client/NAS architecture. Any number of remote computers can access these files on the NAS with the proper authorization rights. DFS uses a uniform naming convention and a mapping scheme to keep track of where files are located. When you try to retrieve a file from the NAS, the file appears as a normal file, and you are able to work with the file in the same way as if it were stored locally on your hard drive. When you are finished working with the file, it is returned over the network to the NAS, which stores the now-altered file for retrieval at a later time.--> 在分布式文件系统中，一台或多台中心服务器存储可由网络中任意数量的远程客户端访问的文件（只要客户端有相应的授权）。单击“启用”激活此功能。
+		]]>
+    </dfs_description>
+    <dfs_group_description len="999">
+      <![CDATA[
+		创建将存储所有文件的“根文件夹”。
+		]]>
+    </dfs_group_description>
+    <dfs_link_description len="999">在本地 My Cloud 系统配置一个可链接到远程共享的文件夹。</dfs_link_description>
+    <msg1 len="999">无法检索远程共享文件夹。</msg1>
+    <msg2 len="999">共享已经存在。请选择其他共享名称。</msg2>
+    <msg3 len="999">已达到最大共享数量。</msg3>
+    <msg4 len="999">请输入主机。</msg4>
+    <msg5 len="999">IP 地址中只能使用数字。</msg5>
+    <msg6 len="999">请输入本地共享名称。</msg6>
+    <msg7 len="999">请输入主机。</msg7>
+    <msg8 len="999">请选择远程共享文件夹。</msg8>
+    <msg9 len="999">请输入名称。</msg9>
+    <msg10 len="999">已达到根文件夹的最大数量。</msg10>
+    <msg11 len="999">输入的根文件夹名已存在。请输入其他名称。</msg11>
+    <msg12 len="999">共享名称长度不可超过 80 个字符。</msg12>
+    <msg13 len="999">本地系统不能被用作远程主机。</msg13>
+    <msg14 len="999">您确定要删除该分布式文件系统吗？</msg14>
+  </_dfs>
+  <_ipv6>
+    <ipv6_title len="999">IPv6</ipv6_title>
+    <ipv6_setup len="999">IPv6 设置</ipv6_setup>
+    <ipv4_setup len="999">LAN IP 设置</ipv4_setup>
+    <ipv4_setup2 len="999">LAN 2 IP 设置</ipv4_setup2>
+    <ipv4_setup3 len="999">LAN 1 + LAN 2 IP 设置</ipv4_setup3>
+    <auto len="999">自动</auto>
+    <dhcp len="999">DHCP</dhcp>
+    <static len="999">静态</static>
+    <off len="999">关</off>
+    <prefix len="999">前缀长度</prefix>
+    <def_gw len="999">默认网关</def_gw>
+    <gw len="999">网关</gw>
+    <mode len="999">模式</mode>
+    <interface len="999">接口</interface>
+    <addr len="999">IPv6 地址</addr>
+    <setup len="999">设置</setup>
+    <tunnel_enable len="999">启用隧道</tunnel_enable>
+    <tunnel_server len="999">服务器地址</tunnel_server>
+    <tunnel_username len="999">用户名</tunnel_username>
+    <tunnel_pw len="999">密码</tunnel_pw>
+    <enable len="999">启用 IPv6</enable>
+    <msg1>启用 IPV6 将在 WD My Cloud Mirror 系统上禁用云访问。&lt;br&gt;&lt;br&gt;希望继续吗？</msg1>
+  </_ipv6>
+  <_iso_create>
+    <title len="50">创建 ISO 映像</title>
+    <wizard_desc1 len="999">
+      <![CDATA[
+				从卷中选择要添加到 ISO 文件的内容。
+		]]>
+    </wizard_desc1>
+    <total_size len="40">映像大小</total_size>
+    <image_path len="40">映像路径</image_path>
+    <image_name len="40">映像名称</image_name>
+    <overwrite len="50">覆盖</overwrite>
+    <create_iso len="18">创建 ISO 映像</create_iso>
+    <auto_mount len="50">自动挂载</auto_mount>
+    <select len="10">选择</select>
+    <total_space len="13">总空间</total_space>
+    <used_space len="12">已用空间</used_space>
+    <free_space len="12">可用空间</free_space>
+    <img_wizard len="999">正在创建 ISO 映像。此过程中，请勿关闭 WD My Cloud Mirror 系统。</img_wizard>
+    <msg1 len="50">请选择映像路径。</msg1>
+    <msg2 len="50">映像名称不可包含空格。</msg2>
+    <msg3 len="50">请选择文件夹。</msg3>
+    <msg4 len="50">请输入映像名称。</msg4>
+    <msg5 len="50">ISO 映像已经存在。请输入其他映像名称。</msg5>
+    <msg6 len="50">创建 ISO 映像失败。</msg6>
+    <msg7 len="50">
+      <![CDATA[这将创建 ISO 映像。创建后无法修改。单击<b>确定</b>继续。]]>
+    </msg7>
+    <msg8 len="50">正在创建 ISO 映像。</msg8>
+    <msg9 len="50">
+      <![CDATA[您已达到最大 ISO 文件/文件夹级别。更改文件夹大小。单击<b>确定</b>继续。]]>
+    </msg9>
+    <msg10 len="50">硬盘空间不足。</msg10>
+    <msg11 len="50">创建 ISO 配置失败。</msg11>
+    <msg12 len="50">这是根文件夹。不可将其删除。</msg12>
+    <msg13 len="50">
+      <![CDATA[映像名称允许以下字符：“a-z”、“A-Z”、“0-9”、“-”、“_”。]]>
+    </msg13>
+    <msg14 len="999">单击此复选框自动挂载 ISO 映像。</msg14>
+    <msg15 len="999">已达到 ISO 映像文件的最大数量。只能使用“删除”或“修改”功能。 </msg15>
+  </_iso_create>
+  <_vv>
+    <title1 len="999">关于卷虚拟化</title1>
+    <title2 len="999">创建虚拟卷</title2>
+    <title3 len="999">卷虚拟化</title3>
+    <desc1 len="999">发起方 IQN</desc1>
+    <desc2 len="999">设备 IP</desc2>
+    <desc3 len="999">端口</desc3>
+    <desc4 len="999">身份验证</desc4>
+    <desc5 len="999">用户名</desc5>
+    <desc6 len="999">密码</desc6>
+    <desc7 len="999">目标</desc7>
+    <desc8 len="999">共享文件夹</desc8>
+    <desc9 len="999">搜索邮件</desc9>
+    <desc10 len="999">卷虚拟化允许您映射到其他 iSCSI 目标，并使其作为 WD My Cloud Mirror 系统上的卷出现，从而简化可伸缩性。</desc10>
+    <desc11 len="999">连接</desc11>
+    <desc12 len="999">断开连接</desc12>
+    <desc13 len="999">连接错误</desc13>
+    <desc14 len="999">正在连接</desc14>
+    <desc15 len="999">已连接</desc15>
+    <desc16 len="999">已断开连接</desc16>
+    <desc17 len="999">正在重新连接</desc17>
+    <desc18 len="999">正在运行</desc18>
+    <desc19 len="999">无格式</desc19>
+    <desc20 len="999">正在格式化</desc20>
+    <desc21 len="999">错误</desc21>
+    <desc22 len="999">正在创建卷</desc22>
+    <desc23 len="999">脱机</desc23>
+    <desc24 len="999">不受支持的文件系统</desc24>
+    <desc25 len="999">连接错误</desc25>
+    <desc26 len="999">创建卷失败</desc26>
+    <desc27 len="999">禁用</desc27>
+    <desc28 len="999">只读</desc28>
+    <desc29 len="999">等待格式化</desc29>
+    <desc30 len="999">注：少量空间用于容纳虚拟卷的格式化信息。</desc30>
+    <msg1 len="999">输入的共享名称已经存在。请输入其他共享名称。</msg1>
+    <msg2 len="999">将删除虚拟卷。确定要继续吗？</msg2>
+    <msg3 len="999">请输入设备 IP 地址。</msg3>
+    <msg4 len="999">请输入端口。</msg4>
+    <msg5 len="999">未找到目标。</msg5>
+    <msg6 len="999">请输入共享文件夹名称。</msg6>
+    <msg7 len="167">新密码必须为至少 12 个字符。请重试。</msg7>
+  </_vv>
+  <_http_downloads>
+    <title1 len="999">HTTP 下载</title1>
+    <title2 len="999">HTTP 下载队列</title2>
+    <title3 len="999">HTTP 下载测试结果</title3>
+    <desc1 len="999">选择下载路径</desc1>
+    <desc2 len="999">将正下载的文件重命名为指定的名称。</desc2>
+    <desc3>dddd, mmmm dd, yyyy, h:MM:ss TT</desc3>
+    <msg1 len="167">URL 格式不正确，正确格式为：http://192.168.0.32/test.txt。请重试。</msg1>
+    <msg2 len="167">您确定要删除此 HTTP 下载作业吗？</msg2>
+  </_http_downloads>
+  <_ftp_downloads>
+    <title1 len="999">FTP 下载</title1>
+    <title2 len="999">FTP 下载测试结果</title2>
+    <login_method len="999">登录方法</login_method>
+    <file len="999">文件</file>
+    <folder len="999">文件夹</folder>
+    <desc2 len="999">使用您的  My Cloud Mirror 设备来向 FTP 站点备份和备份 FTP 站点的内容。</desc2>
+	  <detail len="999">FTP 下载详细信息</detail>
+		<status0>下载完成</status0>
+		<status0_1>成功完成从 [{0}] 下载，时间为 [{1}]。</status0_1>
+		<status2>下载正在进行</status2>
+		<status_1>下载失败</status_1>
+		<status_1_d>下载失败。请检查系统设置。</status_1_d>
+		<status_2>下载源路径无效。请检查并纠正设置。</status_2>
+		<status_3>下载目标路径无效。请检查并纠正设置。</status_3>
+		<status_4>重复下载</status_4>
+		<status_5>不允许更多下载</status_5>
+		<status_6>系统出错。请重新启动系统。</status_6>
+	  <status_7>无效下载</status_7>
+		<status_8>无效下载路径</status_8>
+	  <status_9>下载目标文件夹只读。请检查并纠正设置。</status_9>
+		<status_10>下载于 [{0}] 停止。</status_10>
+		<status_11>下载目标上的存储空间已满。从存储空间中移出文件以释放空间。</status_11>
+		<status_430>失败的认证导致下载失败。请重新输入正确的登录凭据。</status_430>
+		<status_451>无效的目标路径导致下载失败。请重新选择目标路径。</status_451>
+		<status_550>无效的远程源路径导致下载失败。请重新选择源路径。</status_550>
+		<status_10057>连接错误导致下载失败。请检查所有 FTP 设置。</status_10057>
+		<status_10060>连接超时导致下载失败。请确认 FTP 服务器是否可用。</status_10060>
+		<status_10061>无法连接服务器。</status_10061>
+		<status_10064>主机不可用导致下载失败。请验证主机地址和 FTP 服务器可用性。</status_10064>
+		<status_1100>无效的主机导致下载失败。请重新输入正确的主机名。</status_1100>	
+		<download_cancel>下载停止</download_cancel>
+		<download_now>开始下载</download_now>
+		<msg1 len="167">已达到下载作业的最大数量。</msg1>
+	  <msg2 len="167">请输入 URL。</msg2>
+	  <msg3 len="167">URL 长度应为 1-235 个字符。</msg3>
+	  <msg4 len="167">您确定要删除此 FTP 作业吗？</msg4>
+		<msg11><![CDATA[
+		 确定要删除此作业吗？<br> <br>
+		 下载作业将被删除。<br>注：以前的文件下载将不会被删除。]]>
+		</msg11>
+</_ftp_downloads>
+<_media>
+    <title1 len="73">iTunes</title1>
+    <title2>DLNA 媒体服务器</title2>
+    <title3>iTunes 服务器设置</title3>
+    <desc1>媒体流</desc1>
+    <desc2>版本</desc2>
+    <desc3>上次更新</desc3>
+    <desc4>DLNA 数据库</desc4>
+    <desc5>为多个设备启用内容流。</desc5>
+    <desc6>重建媒体数据库。只有在怀疑数据库损坏的情况下，才能使用此选项。</desc6>
+    <desc7><![CDATA[查看媒体播放器 >>]]></desc7>
+    <desc8>媒体</desc8>
+    <desc9>音乐</desc9>
+    <desc10>图片</desc10>
+    <desc11>视频</desc11>
+    <desc12>正在更新数据库...</desc12>
+    <desc13>媒体流选项</desc13>
+    <desc14>在家中将音乐、视频和照片发送到兼容的设备上。</desc14>
+    <desc15>媒体播放器</desc15>
+    <desc16>开</desc16>
+    <desc17>关</desc17>
+    <desc18>媒体播放器</desc18>
+    <desc19>通用媒体接收器</desc19>
+    <desc20>高级选项</desc20>
+    <button1>重新扫描</button1>
+ 		<title4>相机备份</title4>
+		<title5>相机文件夹选项</title5>
+		<mode>传输模式</mode>
+		<recent>近期活动</recent>
+		<move_f>正在移动文件</move_f>
+		<copy_f>正在复制文件</copy_f>
+		<move_b>立即移动</move_b>
+		<copy_b>立即复制</copy_b>
+		<trans_foldere>传输文件夹</trans_foldere>
+		<folder_options>文件夹选项</folder_options>
+		<enter_folder>输入文件夹名称</enter_folder>	
+		<trans_file>传输文件</trans_file>
+		<info>信息</info>
+		<connect_camera>连接的相机</connect_camera>
+		<auto_trans>自动传输</auto_trans>	
+		<today_date>今天的日期</today_date>
+    <date_taken>拍摄日期</date_taken>
+    <custom_folder_name>自定义文件夹名称</custom_folder_name>
+    <select_destination>选择目标</select_destination>
+	<msg1>请输入文件夹名称。</msg1>		
+		<msg2 len="999">已将 %s 个文件从 %s1 复制到 %s3 上的 %s2。</msg2>
+		<msg3 len="999">已将 %s 个文件从 %s1 移动到 %s3 上的 %s2。</msg3>
+		<msg4 len="999">将 %s 个文件从相机复制到 %s1 失败。请参阅系统日志获得更多详细信息。</msg4>
+		<msg5 len="999">将 %s 个文件从相机移动到 %s1 失败。请参阅系统日志获得更多详细信息。</msg5>
+  <status_success>从 %s 备份于 %s1 成功完成。</status_success><status_fail1>备份失败。请检查连接的 USB 设备。</status_fail1><status_fail2>备份失败。备份目标路径无效。请修改备份设置，然后重试。</status_fail2><status_fail3>由于系统错误，备份失败。请重新启动 My Cloud Mirror 系统。</status_fail3><status_fail4>备份目标为只读。请修改备份设置。</status_fail4><status_fail5>备份目标上的存储空间已满。从目标空间中移出文件以释放空间。</status_fail5><status_fail6>备份停止于 %s</status_fail6><camera_title>关于相机备份</camera_title><camera_description>使用 WD My Cloud Mirror 系统备份您的相机。</camera_description><status_fail7>无法从 %s 删除文件</status_fail7><msg6>已为 My Cloud 系统启用媒体流。前往共享页面配置每份共享的媒体服务。</msg6></_media>
+  <_disk_mgmt>
+    <title1>磁盘配置文件</title1>
+    <title2>系统磁盘</title2>
+    <title3>驱动器详细信息</title3>
+    <title4>硬盘驱动器信息</title4>
+    <title5>磁盘状态</title5>
+    <title6>ID</title6>
+    <title7>属性</title7>
+    <title8>当前</title8>
+    <title9>最差</title9>
+    <title10>阈值</title10>
+    <title11>原始值</title11>
+    <desc1>驱动器</desc1>
+    <desc2>磁盘运行状况</desc2>
+    <desc3>健康</desc3>
+    <desc4>供应商</desc4>
+    <desc5>型号</desc5>
+    <desc6>序列号</desc6>
+    <desc7>容量</desc7>
+    <desc8>良好</desc8>
+    <desc9>较差</desc9>
+    <desc10>驱动器不兼容</desc10>
+    <desc11>无驱动器</desc11>
+    <desc12>固件版本</desc12>
+    <desc13>S.M.A.R.T.Data</desc13>
+  </_disk_mgmt>
+  <_raid>
+    <title1>RAID 配置文件</title1>
+    <title2>RAID 卷</title2>
+    <title3>更改 RAID 模式</title3>
+    <title4>RAID 漫游</title4>
+    <desc1>RAID 运行状况</desc1>
+    <desc2>健康</desc2>
+    <desc3>所有 RAID 卷都处于活动状态且运行状况良好。</desc3>
+    <desc4>自动重建</desc4>
+    <desc5 len="20">JBOD</desc5>
+    <desc6 len="20">跨区</desc6>
+    <desc7 len="20">RAID 0</desc7>
+    <desc8 len="20">RAID 1</desc8>
+    <desc9 len="20">RAID 5</desc9>
+    <desc10 len="20">备用</desc10>
+    <desc11 len="20">RAID 10</desc11>
+    <desc12>驱动器</desc12>
+    <desc13 len="999">JBOD 配置</desc13>
+    <desc14 len="999">跨区配置</desc14>
+    <desc15 len="999">RAID 0 配置</desc15>
+    <desc16 len="999">RAID 1 配置</desc16>
+    <desc17 len="999">RAID 5 配置</desc17>
+    <desc18 len="999">RAID 10 配置</desc18>
+    <desc19 len="999">一个或多个驱动器不在 RAID 配置中使用，但作为单独的逻辑卷来管理。</desc19>
+    <desc20 len="999">切换到 JBOD</desc20>
+    <desc21 len="999">切换到跨区</desc21>
+    <desc22 len="999">切换到 RAID 0</desc22>
+    <desc23 len="999">切换到 RAID 1</desc23>
+    <desc24 len="999">切换到 RAID 5</desc24>
+    <desc25 len="999">切换到 RAID 10</desc25>
+    <desc27 len="999">线性方式的驱动器组合，用于创建一个大逻辑卷。</desc27>
+    <desc28 len="999">数据分成跨多个硬盘驱动器的带区，通过合并两个或更多驱动器的工作来提升性能，从而加快数据的读取和记录。</desc28>
+    <desc29 len="999">数据的两个瞬时副本记录在多个单独的硬盘驱动器上，因此，如果其中一个驱动器失效，其他驱动器继续读/写数据，直至发生故障的硬盘驱动器被更换。</desc29>
+    <desc30 len="999">将数据分成跨 3 或更多驱动器的带区，并将每个驱动器的四分之一专用于容错，从而带来优异的性能和保护。</desc30>
+    <desc31 len="999">数据写入跨主磁盘的带区，而主磁盘镜像到辅助磁盘的 RAID 协议。</desc31>
+    <desc32 len="999">可以通过下面的滑块指定 RAID 大小设置。如果不使用全部卷容量，可以选择将剩余空间配置为跨区。</desc32>
+    <desc33 len="999"><![CDATA[配置 RAID 5+spare（单击“创建备用磁盘”框）。“磁盘 4”随后将成为热备用。如果不想创建 RAID 5+spare，不要选择<b>创建备用磁盘</b>。重新调整 RAID 5 卷的大小，如果不使用全部空间，请选中<b><b><b>将剩余磁盘空间配置为</b>跨区</b></b>。单击<b>下一步</b>继续。]]></desc33>
+    <desc34 len="999">xxx 的卷</desc34>
+    <desc35 len="999">此部分允许在 RAID 损坏时重建 RAID。启用自动重建，以在识别磁盘后自动重建 RAID。</desc35>
+    <desc36 len="999">自动挂载</desc36>
+    <desc37 len="999">请输入加密密码</desc37>
+    <desc38 len="999">请验证加密密码</desc38>
+    <desc39 len="999">此部分允许为所选卷设置密码。选择 <b>自动挂载</b> 自动挂载加密的卷，而无需在启动时再次输入密码。</desc39>
+    <desc40 len="999">加密卷 1</desc40>
+    <desc41 len="999">加密卷 2</desc41>
+    <desc42 len="999">加密卷 3</desc42>
+    <desc43 len="999">加密卷 4</desc43>
+    <desc44 len="999">已降级</desc44>
+    <desc45 len="999">良好</desc45>
+    <desc46 len="999">将剩余磁盘空间配置为“跨区”。</desc46>
+    <desc47 len="999">数据现在将迁移到 RAID5。</desc47>
+    <desc48 len="999"><![CDATA[
+		如果需要更改 RAID 模式选择，请单击返回按钮。如果对您的选择满意，单击<b>完成</b>将数据迁移到 RAID5。
+		]]></desc48>
+    <desc50 len="999">自动挂载</desc50>
+    <desc51 len="999">创建新卷</desc51>
+    <desc52 len="999">加密 xxx</desc52>
+    <desc53 len="167">替换硬盘驱动器没有足够的容量支持 RAID 卷。插入容量更高的硬盘驱动器。</desc53>
+    <desc54 len="167">迁移到 RAID 1</desc54>
+    <desc55 len="167">迁移到 RAID 5</desc55>
+    <desc56 len="167">将新插入的硬盘驱动器配置为加入 RAID 或创建单独的卷。</desc56>
+    <desc57 len="999">您即将重新格式化硬盘驱动器。所有数据都将清除。要继续吗？</desc57>
+    <desc58 len="999">在此部分中，请选择您想使用哪个磁盘来将驱动器重新配置为 RAID 1。</desc58>
+    <desc59 len="999">EXT 3</desc59>
+    <desc60 len="999">EXT 4</desc60>
+    <desc61 len="999">创建备用磁盘</desc61>
+    <desc62 len="999">在此部分中，请选择您想使用哪个磁盘来将驱动器重新配置为 RAID 5。</desc62>
+    <desc63 len="999"><![CDATA[要在剩余的可用存储空间上创建新卷，请单击<a href="javascript:Remain_Linear_Format();" class="edit_detail">此处</a>。]]></desc63>
+    <desc64>未知</desc64>
+    <desc66>没有配置的卷</desc66>
+    <desc67>设置 RAID 模式以在此设备上配置新的 RAID 卷。</desc67>
+    <desc68>已降级</desc68>
+    <desc69>一个或多个 RAID 卷已降级。</desc69>
+    <desc70>选择配置存储模式。</desc70>
+    <desc71 len="999">此部分允许您选择要加密哪些卷。</desc71>
+    <desc72 len="999">安全卷</desc72>
+    <desc73 len="999">无安全性</desc73>
+    <desc74 len="999">加密已启用。</desc74>
+    <desc75 len="999">加密已禁用。</desc75>
+    <desc76 len="999">自动挂载已启用。</desc76>
+    <desc77 len="999">自动挂载已禁用。</desc77>
+    <desc78 len="999">创建备用磁盘更换 RAID 集中正在失效或已失效的磁盘。</desc78>
+    <desc79 len="999">正在重建</desc79>
+    <desc80 len="999">在剩余空间上创建卷</desc80>
+    <desc81 len="999">卷调整大小。</desc81>
+    <desc82 len="999">迁移中</desc82>
+    <desc83 len="999"><![CDATA[
+		如果需要更改 RAID 模式选择，请单击返回按钮。<br><br>如果对您的选择满意，单击<b>完成</b>将数据迁移到 RAID1。
+		]]></desc83>
+    <desc84 len="999">手动重建</desc84>
+    <desc85 len="999">请选择卷，然后从列表中选择相应的驱动器，再继续更改 RAID 类型。</desc85>
+    <desc86 len="999">调整大小</desc86>
+    <desc87 len="999">请如下更改序列：</desc87>
+    <desc88 len="999">现在的磁盘序列为：</desc88>
+    <desc89 len="999">磁盘序列</desc89>
+    <desc90 len="999"><![CDATA[请注意，这将中断此操作期间的活动文件传输服务。<br><br>要继续吗？]]></desc90>
+    <desc91 len="999">等待调整大小</desc91>
+    <desc92 len="999">重要说明：请注意，如果选择此选项，数据将无法迁移到 RAID 5。</desc92>
+    <desc93 len="999">扩展容量</desc93>
+		<desc94 len="999">是否要将现有驱动器替换为新驱动器？</desc94>
+		<desc95 len="999">正在扩容</desc95>
+		<desc96 len="999">正在重新同步</desc96>
+		<desc97 len="999">扩容。移除驱动器。</desc97>
+		<desc98 len="999">扩容。插入新驱动器。</desc98>
+		<desc99 len="999">扩展容量</desc99>
+		<desc100 len="999">重整</desc100>
+		<desc101 len="999">RAID 1 降级为 JBOD</desc101>
+		<desc102 len="999">多个驱动器上仍有数据。如果要将存储模式从 RAID 1 更改为 JBOD，需要选择主驱动器。</desc102>
+		<desc103 len="999">选择主驱动器：</desc103>
+		<desc104 len="999">注：辅助驱动器上的任何数据都将删除。</desc104>
+		<desc105 len="999">等待迁移</desc105>
+		<desc106 len="999">迁移继续</desc106>
+		<desc107 len="999">分钟</desc107>
+		<desc108 len="999">
+  警告：&lt;br&gt;
+  1.更改 RAID 模式将清除下列驱动器上的所有数据。&lt;br&gt;
+  2.更改 RAID 模式期间，这些驱动器将不可访问。&lt;br&gt;
+  3.驱动器自检 (DST) 在卷创建之前执行。 
+ </desc108>
+	  <desc109>从该驱动器旁边的红色 LED 开始更换驱动器。</desc109>
+    <desc110>扩大 RAID 容量。</desc110>
+    <desc111 len="999">警告：卷现在已降级。为了数据完整性，请记得重建 RAID。</desc111>
+    <desc112 len="999"><![CDATA[“自动重建配置”允许您启用或禁用自动重建功能。还可以单击<b>下一步</b>手动重建。请注意重建将清除新插入驱动器上的所有数据。]]></desc112>
+    <desc113>更换 RAID 1 的故障驱动器时，请确保替换驱动器的容量大于等于此驱动器。 </desc113>
+    <desc114>驱动器自检</desc114>
+    <desc122>xxx正重新构建。</desc122>
+    <desc123>xxx正在扩展。</desc123>
+    <desc124>xxx正在迁移。</desc124>
+    <unknown len="999">N/A</unknown>
+    <msg1 len="342"><![CDATA[此卷漫游自另一个 WD My Cloud Mirror（不是此系统上创建的）。单击“确定”将其集成到当前 WD My Cloud Mirror。如果不集成，那么一旦卷降级，您将面临丢失数据的风险。单击“取消”继续而不集成。]]></msg1>
+    <msg6 len="167">再次登录前，请在 WD My Cloud Mirror 系统重新启动时静候一分钟。</msg6>
+    <msg7 len="167">不建议在迁移期间访问系统卷。卷可能不可用。</msg7>
+    <msg8 len="167">系统忙。在插入另一个驱动器前，请等待至系统 LED 灯变为稳定的蓝色。</msg8>
+    <msg9 len="167">在系统准备好接收驱动器之前，已插入驱动器。因此，新驱动器的数据可能无法集成到系统。请在执行任何配置前先重新启动系统，以避免产生数据集成问题。</msg9>
+    <msg10 len="167">xxx 格式化失败（错误代码：yyy）</msg10>
+    <msg11 len="167">配置卷故障（错误代码：yyy）</msg11>
+    <button1>立即手动重建</button1>
+    <button2>更改 RAID 模式</button2>
+    <button3>在剩余的可用存储空间上创建新卷</button3>
+    <button4>完成</button4>
+    <button5>设置 RAID 模式</button5>
+    <button6>将新驱动器格式化为 RAID 1 类型</button6>
+    <button7>将新驱动器格式化为 RAID 5 类型</button7>
+    <button8>将新驱动器格式化为 RAID 10 类型</button8>
+  
+  <desc125>警告：在扩展容量前请确保您已备份数据。在正常情况下，您的数据将被保留。但是在扩展过程中，电源中断或驱动器扇区故障等小概率发生事件可能导致扩展失败。</desc125><desc126>验证 RAID 奇偶性</desc126><desc127>检查后台奇偶一致性。在此过程中系统性能可能受到影响。</desc127><desc128>硬盘故障导致 RAID 设置失败。关闭系统，更换硬盘再试一次。</desc128></_raid>
+  <_ssh>
+    <enable len="999">SSH</enable>
+    <enable_desc1 len="999">当前此系统上正在运行远程备份。关闭 SSH 将禁用所有远程备份。</enable_desc1>
+    <enable_desc2 len="999">要禁用 SSH 吗？</enable_desc2>
+    <enable_desc3 len="999">请注意，以任何本产品常规操作以外的方式对此系统进行调整或试图进行调整，您将无法享受 WD 保修。</enable_desc3>
+    <enable_desc4 len="999">启用 WD My Cloud Mirror 作为远程服务器运行将启用 SSH。请注意，以任何本产品常规操作以外的方式对此系统进行调整或试图进行调整，您将无法享受 WD 保修。</enable_desc4>
+    <desc1 len="999">关闭 SSH 将禁用对 WD My Cloud Mirror 系统的所有远程备份和安全 FTP (SFTP) 访问。</desc1>
+    <desc2 len="999">禁用 SSH 访问也将禁用对 WD My Cloud Mirror 系统的安全 FTP (SFTP) 访问。是否要继续？</desc2>
+    <desc3 len="999">      <![CDATA[SSH 用户名为“sshd”（区分大小写）。<br><br>*请在下面创建密码，以获取 SSH 访问。<br><br>]]>
+    </desc3>
+    <accept>我接受</accept>
+    <ssh>SSH</ssh>
+  </_ssh>
+  <_cloud>
+    <sing_up>注册</sing_up>                                                	
+	<signup_desc>%s 没有 MyCloud.com 帐户。输入电子邮件地址注册登录账号。</signup_desc>  	
+    <cloud_dev len="999">云设备</cloud_dev>
+    <title len="999">云访问</title>
+    <service len="999">云服务</service>
+    <status len="999">连接状态</status>
+    <dash_access len="999">
+      <![CDATA[仪表板云 <br>访问]]>
+    </dash_access>
+    <cloud_access len="999">云访问状态</cloud_access>
+    <cloud_for len="999">%s 的 MyCloud.com 账户</cloud_for>
+    <cloud_for_info len="999">%s 没有注册 WD My Cloud Mirror Web 账户。请注册电子邮件地址。</cloud_for_info>
+    <register>注册</register>
+    <dev_for len="999">%s 的云设备</dev_for>
+    <dev_for_info len="999">没有为 %s 配置云设备访问。单击“获得代码”为您的云设备生成一个激活码。代码自请求时起 48 小时有效，且只能使用一次。</dev_for_info>
+    <add_access len="999">添加云访问</add_access>
+    <add_desc len="999">激活码已成功生成。请在您移动设备上的应用程序中输入代码。 </add_desc>
+    <desc len="999">生成一个激活码，从而远程访问您储存在驱动器中的内容。</desc>
+    <configure_access len="999">配置访问</configure_access>
+    <wd2go_db len="999">内容数据库</wd2go_db>
+    <step_desc len="999">
+      <![CDATA[ 
+			步骤：<br>
+			<ol>
+				<li>从下拉列表中选择一个用户，然后单击“<b>获得代码</b>”生成一个激活码。</li>
+				<li>在您的平板或移动设备上安装 WD Photos 和/或 WD My Cloud Mirror。</li>
+				<li>启动应用程序，然后单击“立即连接”。</li>
+				<li>选择您的产品。</li>
+				<li>输入激活码。</li>
+			</ol>
+		]]>
+    </step_desc>
+    <sel_user len="999">请选择一个用户</sel_user>
+    <get len="999">获得代码</get>
+    <del_code len="999">删除代码</del_code>
+    <del_desc len="999">您确定要删除此代码吗？</del_desc>
+    <old_mail len="999">旧电子邮件</old_mail>
+    <new_mail len="999">新电子邮件</new_mail>
+    <code len="999">激活码</code>
+    <code2>代码</code2>
+    <expiration len="999">到期日期</expiration>
+    <expires len="999">到期</expires>
+    <connectivity len="999">连接</connectivity>
+    <option_title len="999">云访问连接选项</option_title>
+    <option_desc len="999">配置连接选项，用于远程访问您的设备。</option_desc>
+    <auto len="999">自动</auto>
+    <manual len="999">手动</manual>
+    <win len="999">Win XP</win>
+    <disable len="999">已禁用</disable>
+    <ready len="999">准备就绪</ready>
+    <connected len="999">已连接</connected>
+    <connected_desc len="999">已连接（已建立中继连接）</connected_desc>
+    <failed len="999">失败</failed>
+    <connecting len="999">正在连接</connecting>
+    <new_device len="999">新的未注册设备</new_device>
+    <disconnecting len="999">正在断开连接</disconnecting>
+    <disable_desc len="999">已禁用云访问。</disable_desc>
+    <disable_desc2 len="999">
+      <![CDATA[要启用云访问，找到“设置">"常规">"云访问“。]]>
+    </disable_desc2>
+    <dexplainedtxt len="999">为获得最佳性能，请在您的路由器上启用 UPnP，建立直接连接。</dexplainedtxt>
+    <explainedtxt_part1 len="999">端口转发未能在端口连接</explainedtxt_part1>
+    <explainedtxt_part2 len="999">和端口</explainedtxt_part2>
+    <failedexplainedtxt len="999">无法建立远程访问连接。请确保您已连接到 Internet。</failedexplainedtxt>
+    <connectingexplainedtxt len="999">正在尝试建立远程访问连接...</connectingexplainedtxt>
+    <readyexplainedtxt len="999">现在可从您的设备实现云访问。</readyexplainedtxt>
+    <retrievingtxt len="999">正在获取信息...</retrievingtxt>
+    <portforwardedexplainedtxt len="999">端口转发连接已建立。</portforwardedexplainedtxt>
+    <reg_mail len="999">注册电子邮件已发送</reg_mail>
+    <reg_desc1 len="999">注册电子邮件已成功发送给指定的用户。 </reg_desc1>
+    <reg_desc2 len="999">请等待一段时间，电子邮件即将送达用户的收件箱。提供了关于远程访问驱动器中内容的说明。</reg_desc2>
+    <update_title len="999">更新 MyCloud.com 帐户</update_title>
+    <update_desc len="999">更改您的 MyCloud.com 账户的电子邮件地址。  </update_desc>
+    <required len="999">必填</required>
+    <rebuild len="999">重建</rebuild>
+    <started len="999">使用入门</started>
+    <about>关于云访问</about>
+    <about_cloud len="999">需要先将智能手机或平板电脑注册为您个人云生态系统的一部分，然后它们才能访问您驱动器上的内容。您生成的代码将把移动设备与驱动器配对。</about_cloud>
+    <part1>
+      <![CDATA[外部端口 1<br>(HTTP)*]]>
+    </part1>
+    <part2>
+      <![CDATA[外部端口 2<br>(HTTPS)*]]>
+    </part2>
+    <invite>邀请其他人访问您的个人云</invite>
+    <enable_title>仪表板云访问</enable_title>
+    <enable_desc>
+      <![CDATA[
+		允许从当前网络外部访问此仪表板 Web 界面将帮助您远程管理此设备。但是，这也会稍稍增高有人未经授权访问 WD My Cloud Mirror 的风险。<br><br>您确定要启用此功能吗？
+		]]>
+    </enable_desc>
+    <enable_desc2>允许从当前网络外部访问此仪表板 Web 界面将帮助您远程管理此设备。然而这可能会增加未经授权访问您的 WD My Cloud Mirror 的风险。某些功能（如添加一位新用户）在您的网络外将不可用。&lt;br&gt;&lt;br&gt;
+为了确保安全性，启用此功能之前，您需要输入此设备的管理员密码。</enable_desc2>
+    <auto_desc>尝试在您的设备和路由器间建立直接连接。</auto_desc>
+    <manual_desc>
+      <![CDATA[
+			手动配置您的路由器，使其适应您的设备。<a href="http://wdc.custhelp.com/app/answers/detail/a_id/8526" target="_blank">了解更多信息</a>
+		]]>
+    </manual_desc>
+    <xp_desc>为保证 Win XP 兼容性，尝试在您的设备和路由器间建立直接连接。</xp_desc>
+    <del_title>删除 WD My Cloud Mirror 账户吗?</del_title>
+    <del_code_title>移除移动访问</del_code_title>
+    <msg1>无法删除该网络帐户。请确保您的设备已注册，且没有任何网络连接问题，然后重试。</msg1>
+    <msg2>正在更新您的设置，请稍候。在更新期间，不要刷新此页面或关闭您的设备。</msg2>
+    <msg3>
+      <![CDATA[
+		确定要移除对 %s 的云访问吗？<br><br>您将不能通过互联网远程访问在驱动器中存储的内容。
+		]]>
+    </msg3>
+    <msg4>您确定要移除此设备的移动访问吗？</msg4>
+  <msg5>一旦关闭云服务，您将无法使用任何 WD 软件，如 My Cloud、WD Photos 移动应用和 WD Sync。确定要继续吗？</msg5>
+	<msg6>系统将开始扫描您的存储空间，以便进行云访问。根据文件量，这可能需要一些时间才能完成。</msg6>
+	<msg7>注</msg7>
+  <edit>编辑</edit><resend>重新发送</resend><not_allow>未允许</not_allow><not_allow_desc>此操作未被允许，因为您正在从设备本地网络外访问仪表板（web 界面）。&lt;br&gt;&lt;br&gt;请在您设备的本地网络访问此界面以完成此操作。</not_allow_desc><usb_availability>USB 内容可用性</usb_availability></_cloud>
+  <_top>
+    <wizard len="999">入门向导</wizard>
+    <help len="999">帮助</help>
+    <support len="999">支持</support>
+    <about len="999">关于</about>
+  </_top>
+  <_tip>
+    <notification len="999">通过电子邮件接收系统通知。</notification>
+    <fw_auto len="999">启用自动固件更新。</fw_auto>
+    <fw_check len="999">检查是否有可用的固件更新。</fw_check>
+    <fw_update len="999">从文件更新固件。</fw_update>
+    <scan len="999">扫描 My Cloud Mirror 系统中的硬盘驱动器，查看是否有任何错误。</scan>
+    <restore len="999">使用任何恢复选项前，先创建一个备份。
+使用“仅系统”选项，将系统数据恢复到原来的出厂设置。“快速恢复”将清除内容和系统信息，但可以使用恢复软件恢复；“全面恢复”会永久删除所有内容和系统信息，并且无法恢复。使用任何恢复选项前，一定要先创建一个备份。</restore>
+    <config len="999">保存当前配置设置。或导入存储的配置设置。</config>
+    <smart len="999">“快速测试”快速扫描并测试 My Cloud Mirror 系统硬盘驱动器是否有潜在故障。“完整测试”扫描整个系统硬盘驱动器，可能需要几小时。</smart>
+    <dev len="999">重新启动设备或让其进入休眠状态。</dev>
+    <gen_ntp len="999">启用 NTP 服务以同步您的网络并自动更新日期和时间。</gen_ntp>
+    <gen_tm len="999">对该设备启用 Time Machine 备份。</gen_tm>
+    <gen_dfs len="999">共享聚集与分布式文件系统 (DFS) 相似，它可以合并其他支持 SMB 协议的 My Cloud 系统或网络设备的共享。</gen_dfs>
+    <gen_ads len="999">启用/禁用允许 WD My Cloud Mirror 设备加入现有 Windows 域的 Active Directory 服务。</gen_ads>
+    <gen_drive len="999">启用驱动器睡眠模式以节约能源。</gen_drive>
+    <gen_led len="999">启用/禁用系统 LED。</gen_led>
+    <gen_lcd len="999">打开或关闭系统液晶显示器。在关闭模式下，长按装置上的按钮 10 秒将打开液晶显示器。</gen_lcd>
+    <gen_lcd_on len="999">LCD 默认开启。</gen_lcd_on>
+    <gen_cloud len="999">启用/禁用对您的设备的云访问。</gen_cloud>
+    <gen_status len="999">显示当前云访问连接的状态。</gen_status>
+    <gen_timeout len="999">配置强制自动系统注销的默认时间。</gen_timeout>
+    <gen_recovery len="999">电源恢复功能自动将先前因电源故障而意外关闭的设备重启。</gen_recovery>
+    <s3 len="999">创建新的 Amazon S3 备份作业</s3>
+    <s3_backup len="999">指定备份的 Amazon S3 bucket 或根目录路径。</s3_backup>
+    <s3_auto len="999">根据计划自动更新备份。</s3_auto>
+    <recycle>包含从网络共享删除的任何文件，这些文件可以恢复也可永久删除。</recycle>
+    <webdav>WebDAV 允许以多用户协作的方式通过 HTTP 管理和编辑文件。</webdav>
+    <nfs>NFS（网络文件系统）是一项协议，允许用户通过网络访问文件。在 Unix、Linux 和一些 Mac OSx 版本中很常见。</nfs>
+    <host>输入要允许 NFS 访问此共享的 IP 地址。要允许所有 IP 地址，请输入 *。</host>
+    <root>启用此选项将删除用户的根级 NFS 权限（如有必要）。</root>
+    <write>启用此选项将开放通过 NFS 对此共享的写权限。</write>
+    <remote_ip>输入要用来备份此设备的远程服务器的 IP 地址。</remote_ip>
+    <autoupdate_remote>启用/禁用自动更新远程备份的计划。</autoupdate_remote>
+    <cloud_status>显示当前云访问连接的状态。</cloud_status>
+    <group>可在主要用户页创建组。</group>
+    <public>启用或禁用对该共享的公共访问。将此值设置为 ON 将允许网络上的任何人访问此共享中的文件。此选项只在创建一个或多个用户账户时启用。</public>
+    <afp>启用或禁用 Apple 文件协议服务。如果设置 Time Machine 备份，此选项将自动启用。</afp>
+    <lltd>启用或禁用链路层拓扑发现协议，以增强 Microsoft Windows 机器上的网络发现和诊断。</lltd>
+    <snmp>启用或禁用通过 IP 网络管理设备的简单网络管理协议服务。</snmp>
+    <ssh>通过网络启用安全 Shell (SSH) 连接至 SSH 应用。</ssh>
+    <ddns>动态 DNS 功能允许使用域名托管服务器（Web、FTP、游戏服务器等...）。</ddns>
+    <remote>启用 WD My Cloud Mirror 系统作为远程服务器，并且能够从 LAN 或 WAN 上的其他兼容 My Cloud Mirror 系统备份共享。</remote>
+    <bonding>也称为&lt;b&gt;绑定&lt;/b&gt;，是指使用 NAS 中存在的两个网络接口和同时连接到路由器的两根电缆。这将提高性能和可靠性。</bonding>
+    <jumbo>巨型帧是用来在受支持的网络上提高性能的大型 IP 帧。</jumbo>
+    <ipv4>选择“静态”输入 IP 地址、子网掩码和网关信息，或者选择“DHCP”（动态主机配置协议），让网络检索 IP 地址分配和其他配置信息。</ipv4>
+    <ipv6>IPv6 是新的 IP 标准，它规定了跨多个 IP 网络的数据包格式和编址方案。</ipv6>
+    <ftp>文件传输协议 (FTP) 是一个用来在 Internet 上的两台计算机之间传输数据的标准网络协议。</ftp>
+    <workgroup>工作组可让同一工作组的设备相互访问，并且只有 Windows 系统才有。每次将设备添加到网络时，都为其分配同样的工作组名称。</workgroup>
+    <lmb>启用/禁用域主浏览器跨多个子网收集和记录资源和/或服务信息。</lmb>
+    <speed>选择“自动”、“100”或“1000”。“自动”对所有场景起作用。</speed>
+    <port_forwarding>通过分配默认或自定义端口号来管理与特定服务的连接。</port_forwarding>
+    <user_prefix>输入用户名前缀。前缀不可包含任何空格。</user_prefix>
+    <account_prefix>为“账户前缀”输入数字值。账户前缀将添加到用户名前缀。</account_prefix>
+    <wfs_upload>单击将一个或多个文件上载到 WD My Cloud Mirror 系统。</wfs_upload>
+    <iso_overwrite>选择覆盖将覆盖复制同名文件。</iso_overwrite>
+    <cloud_automatic>
+      <![CDATA[自动：使用UPnP，在您的设备和路由器之间直接建立连接。如果连接无法打开路由器的端口，则建立中继连接。<br><br>手动：通过所选的两个端口建立一个连接。如果其中一个端口不可用，则建立中继连接。必需手动路由器配置。<br><br>Windows XP 兼容性：通过端口 80 和 443 建立连接。如果这些端口不可用，将建立中继连接。Windows XP 必需。]]>
+    </cloud_automatic>
+    <cloud_rebuild>重建 MyCloud.com 数据库。仅在怀疑数据库损坏时用来排除故障。</cloud_rebuild>
+    <require_mail>需要电子邮件地址。</require_mail>
+    <dashboard>通过设置并转发路由器上所需的外部端口到此设备的内部默认端口（端口 80），启用或禁用通过 Internet 访问此网络接口的权限。</dashboard>
+    <ftp_enable>启用/禁用对此共享的 FTP 访问。</ftp_enable>
+    <ftp_disable>此系统当前禁用 FTP 访问。转到“设置 &gt; 网络”启用 FTP 设置，然后再试。</ftp_disable>
+    <nfs_disable>此系统当前禁用 NFS 访问。转到“设置 &gt; 网络”启用 NFS 设置，然后再试。</nfs_disable>
+    <webdav_enable>启用 WebDAV 协议，允许网络访问相同网络中的内容。</webdav_enable>
+    <webdav_disable>此系统当前禁用 WebDAV 访问。转到“设置 &gt; 网络”启用 WebDAV 设置，然后再试。</webdav_disable>
+    <autofw>
+      <![CDATA[固件更新（如果有）将发生在凌晨 3 点，并且需要重新启动。要配置自动更新设置，请转至“设置 >> 固件更新”。]]>
+    </autofw>
+    <sms>
+      <![CDATA[通过短信服务 (SMS) 接收系统通知]]>
+    </sms>
+    <ups>可将此系统配置为负责将 UPS 状态通报给其他设备（主模式），或使其与 UPS 主控通信，以接收 UPS 状态和命令（从模式）。</ups>
+    <account_mail>输入用户电子邮件，授予他们云访问权。登录说明将发送到提供的电子邮件地址。</account_mail>
+    <smb2>启用 SMB2 以在 Windows 8 中支持 Windows 文件历史记录。</smb2>
+    <p2p_port>要启用端口设置，请浏览至“设置 &gt; 网络 &gt; 端口转发 &gt; 添加”，并从列表中选择适当的服务。</p2p_port>
+    <system_test>执行系统测试以检查内存单元、温度、风扇和其他相关错误。</system_test>
+    <wipe>将 My Cloud Mirror 系统中的硬盘驱动器格式化。驱动器上的所有数据将永久删除。</wipe>
+  <raid>在您添加或移除硬盘驱动器时，自动在系统上重建 RAID 卷。</raid>
+	<fdownload_url>文件路径和文件名区分大小写。</fdownload_url>
+	<camera_auto>在您将照相机连接到 WD My Cloud Mirror 系统时，文件将自动传输到您的设备。</camera_auto>
+    
+    
+      <camera_copy>复制操作将复制照相机上的文件，并将它们传输到 WD My Cloud Mirror 系统。</camera_copy>
+    
+    
+      <camera_move>移动操作将文件从照相机传输到 WD My Cloud Mirror 系统，但照相机内容将被删除。</camera_move>
+    
+    
+      <oplocks>启用 Oplock 将在 SMB 客户端上缓存文件，从而提高 Samba 性能。</oplocks>
+    
+    
+      <media_enable>启用/禁用对此共享的媒体服务。</media_enable>
+    
+    <media_disable><![CDATA[媒体服务当前已禁用。请转至 “设置”>“媒体”启用媒体服务器。]]></media_disable>
+  
+<ve_download_key>下载加密密钥</ve_download_key>
+    <media_serving>媒体服务选项启用和禁用与 DLNA 和 iTunes 服务器共享。</media_serving>
+  <extendedlog>在系统诊断报告中捕获详尽日志。</extendedlog>
+  
+<improvement>产品改进计划收集并定期发送诊断和使用信息，帮助 WD 提高产品的质量和性能。这些信息通常包括设备、应用程序和服务的使用情况，以及错误诊断信息。可能包括设备配置、CPU 和按应用程序分类的其他使用统计数据、API 呼叫、服务崩溃信息、网络状态、存储利用率以及文件的大小和类型。</improvement><ad_domain>输入待加入 Active Directory 的完全合格的域名 (FQDN)。</ad_domain><snmp_1>使用简单网络管理协议服务以通过 IP 网络管理设备。</snmp_1><snmp_2>&lt;b&gt;NoAuthNoPriv：&lt;/b&gt;消息未进行身份验证及加密。&lt;br&gt;&lt;b&gt;AuthNoPriv：&lt;/b&gt;消息已进行身份验证但未加密。&lt;br&gt;&lt;b&gt;AuthPriv：&lt;/b&gt;消息已进行身份验证及加密。</snmp_2><snmp_3>指定用户访问级别。&lt;br&gt;&lt;b&gt;系统：&lt;/b&gt;仅允许查询设备的系统信息。&lt;br&gt;&lt;b&gt;网络：&lt;/b&gt;仅允许查询设备的网络信息。&lt;br&gt;&lt;b&gt;全部：&lt;/b&gt;允许查询所有设备信息。</snmp_3><dev1>重启您的设备。</dev1></_tip>
+  <_utilities>
+    <quick_restore len="999">快速还原</quick_restore>
+    <full_restore len="999">完全还原</full_restore>
+    <restore_title len="999">仅系统</restore_title>
+    <restore len="999">还原到默认设置</restore>
+    <config_title len="999">系统配置</config_title>
+    <config len="999">系统配置</config>
+    <config_save len="999">保存配置文件</config_save>
+    <config_import len="999">导入文件</config_import>
+    <device_title len="999">设备维护</device_title>
+    <device len="999">设备电源</device>
+    <shutdown len="999">休眠</shutdown>
+    <shut_down len="999">关闭</shut_down>
+    <up_time len="999">设备正常运行时间</up_time>
+    <reboot len="999">重新启动</reboot>
+    <msg1 len="999">
+      <![CDATA[您即将重置配置设置。这不会影响存储在驱动器上的数据。按<b>确定</b>继续。]]>
+    </msg1>
+    <msg2 len="999">设备正在重新启动。&lt;br&gt;&lt;br&gt;在重新启动过程中，请勿拔下设备。</msg2>
+    <msg3 len="999">正在关闭设备。</msg3>
+  <full_factory_restore>完全还原出厂设置</full_factory_restore><quick_factory_restore>快速还原出厂设置</quick_factory_restore><msg4>正在进行出厂还原。</msg4></_utilities>
+  <_notification>
+    <title1 len="999">通知电子邮件</title1>
+    <alert_email len="999">提醒电子邮件</alert_email>
+    <title2 len="999">显示通知</title2>
+    <title2_msg len="999">显示以下消息的通知</title2_msg>
+    <critical_only len="999">仅限严重</critical_only>
+    <c_warning len="999">严重和警告</c_warning>
+    <all len="999">全部</all>
+    <d_header len="999">提醒配置</d_header>
+    <d_desc len="999">
+      <![CDATA[						
+			设置通知配置，通过 WD My Cloud Mirror 界面或通过电子邮件接收系统通知。<br><br>为以下消息发送电子邮件通知：
+			]]>
+    </d_desc>
+    <new_email len="999">新电子邮件</new_email>
+    <test_mail len="999">发送测试电子邮件</test_mail>
+    <info len="999">信息</info>
+    <warning len="999">警告</warning>
+    <critical len="999">严重</critical>
+    <view len="999">查看全部</view>
+    <no_alert len="999">没有找到提醒。</no_alert>
+  </_notification>
+  <_energy>
+    <energy_saver>节电器</energy_saver>
+    <drive_sleep len="999">驱动器睡眠</drive_sleep>
+    <led len="999">LED</led>
+    <lcd len="999">LCD</lcd>
+    <p_recovery len="999">电源恢复</p_recovery>
+    <p_sch len="999">电源计划</p_sch>
+    <p_set len="999">电源设置</p_set>
+    <timeout len="999">Web 访问超时</timeout>
+    <p_off_all>已全天关闭电源</p_off_all>
+  </_energy>
+  <_iscsi>
+    <title len="999">iSCSI 目标</title>
+    <desc len="999">
+  WD My Cloud Mirror 系统允许创建和管理 iSCSI 目标。iSCSI 目标提供类似本地硬盘驱动器的存储，但是通过网络访问，而不是本地访问。iSCSI 目标还受到 WD My Cloud Mirror 服务器的底层 RAID 结构的保护。
+  &lt;br&gt;
+  &lt;br&gt;
+  要创建 iSCSI 目标，请单击下面的&lt;b&gt;创建 iSCSI 目标&lt;/b&gt;按钮。
+  &lt;br&gt;
+  &lt;br&gt;
+   </desc>
+    <iscsi len="999">iSCSI</iscsi>
+    <iscsi_server len="999">iSCSI iSNS 客户端</iscsi_server>
+    <server>服务器</server>
+    <list_title len="999">iSCSI 目标列表</list_title>
+    <no_connect len="999">未连接发起方</no_connect>
+    <image_file len="999">映像文件</image_file>
+    <security len="999">安全性</security>
+    <chap len="999">CHAP</chap>
+    <address len="999">门户地址</address>
+    <ry_deatil len="999">Ryanspace 详细信息</ry_deatil>
+    <create_iscsi_target len="999">创建 iSCSI 目标</create_iscsi_target>
+    <alias len="999">别名</alias>
+    <create_on len="999">创建于</create_on>
+    <desc1 len="999">
+      <![CDATA[
+	如果要从现有映像文件创建 iSCSI 目标，请单击<span style="color:#0067A6;cursor: pointer;" onclick="i_create_tree_dialog('form_s3','s3_tree');">此处</span>
+		]]>
+    </desc1>
+    <connect len="999">已连接发起方</connect>
+    <initi_title len="999">发起方</initi_title>
+    <initi_list len="999">下面的列表指出了当前连接到 iSCSI 目标的发起方。</initi_list>
+    <name len="999">名称</name>
+    <no_list len="999">无 iSCSI 目标添加到 WD My Cloud Mirror 系统。</no_list>
+    <create_iscsi_lun len="999">创建 iSCSI LUN</create_iscsi_lun>
+    <lun_list_title len="999">iSCSI LUN 列表</lun_list_title>
+    <create_iscsi_acl len="999">创建 iSCSI ACL</create_iscsi_acl>
+    <acl_list_title len="999">iSCSI ACL 列表</acl_list_title>
+    <acl_name>ACL 名称</acl_name>
+    <acl_backup_title len="999">iSCSI 备份列表</acl_backup_title>
+    <create_iscsi_backup len="999">创建 iSCSI 备份</create_iscsi_backup>
+    <iqn>
+      <![CDATA[发起方名称 (IQN)]]>
+    </iqn>
+    <acl_info>ACL 信息</acl_info>
+    <lun_mapping>LUN 映射</lun_mapping>
+    <pre_allocate>预分配</pre_allocate>
+    <target_mapping>目标映射</target_mapping>
+    <msg1 len="999">目标名称的第一个字符必须为：“a-z”或“0-9”。 </msg1>
+    <msg2 len="999">目标名称仅允许以下字符：“a-z”、“A-Z”、“0-9”、“-”、“.”和“:”。</msg2>
+    <msg3 len="999">已达到 iSCSI 目标的最大数量。</msg3>
+    <msg4 len="999">目标已存在。</msg4>
+    <msg5 len="999">
+      <![CDATA[名称允许以下字符：“a-z”、“A-Z”、“0-9”、“-”、“_”]]>
+    </msg5>
+    <msg6 len="999">密码必须为至少 12 个字符。请重试。</msg6>
+    <msg7 len="999">
+      <![CDATA[密码允许以下字符：“a-z”、“A-Z”、“0-9”、“-”、“_”]]>
+    </msg7>
+    <msg8 len="999">请选择 1GB-16TB 的文件。</msg8>
+    <msg9 len="999">请输入别名。</msg9>
+    <msg10 len="999">不可缩小现有 iSCSI 目标的大小。</msg10>
+    <msg11 len="999">
+      <![CDATA[目标大小不可大于 ]]>
+    </msg11>
+    <msg12 len="999">
+      <![CDATA[请输入大小。]]>
+    </msg12>
+    <msg13 len="999">
+      <![CDATA[要移除映像文件吗？]]>
+    </msg13>
+    <msg14 len="999">
+      <![CDATA[iSCSI 目标别名不能包含大写字母。]]>
+    </msg14>
+    <msg15 len="999">
+      <![CDATA[映像文件已使用。]]>
+    </msg15>
+  <msg16 len="999">
+      <![CDATA[名称的开头不可包含 snapshots]]>
+    </msg16>
+    <msg17 len="999">
+      <![CDATA[名称的开头不可包含 shap-]]>
+    </msg17>
+    <msg18 len="999">请输入 iqn。</msg18>
+    <msg19 len="999">请输入 ACL 名称。</msg19>
+    <msg20 len="999">请输入 LUN 名称。</msg20>
+    <msg21 len="999">
+      <![CDATA[名称不可为 Default-Policy]]>
+    </msg21>
+  <msg22>请选择更大的单位。</msg22><msg23>勿留空格。</msg23><msg24>目标名称仅允许以下字符：“a-z”、“0-9”、“-”、“.”和“:”。勿留空格。</msg24><creating>创建</creating></_iscsi>
+  <getting_start>
+    <desc1 len="999">WD My Cloud Mirror 可让您创建个人云。在一个地方存储您的照片、视频、音乐和文件，并在任何地方访问您的内容。访问需要有一个 MyCloud.com 账户，每个用户使用一个账户。</desc1>
+    <desc2 len="999">输入您的电子邮件地址，注册您的系统，然后进行设置，您就可以接收到关于 WD My Cloud Mirror 的更新和信息。</desc2>
+    <desc3 len="999">
+      <![CDATA[如果现在不想添加其他用户，请单击<b>下一步</b>继续。]]>
+    </desc3>
+    <desc4 len="999">感谢您注册。您的注册已提交。</desc4>
+    <login len="999">设置云访问</login>
+    <first_name len="999">名字</first_name>
+    <last_name len="999">姓氏</last_name>
+    <email len="999">电子邮件地址</email>
+    <complete len="999">设置完成</complete>
+	<more len="999"><![CDATA[就这么简单。]]></more>
+	<more_2 len="999"><![CDATA[您将收到一封来自 MyCloud.com 的电子邮件，其中包含登录信息。]]></more_2>
+	<more_3 len="999"><![CDATA[单击这些链接，以获取额外的软件和信息：]]></more_3>
+    <update len="999">上载内容</update>
+    <backup len="999">对 PC/Mac 备份</backup>
+    <mobile len="999">访问移动应用程序</mobile>
+    <auto len="999">当有固件可用时，自动更新系统固件。</auto>
+    <register len="999">注册 WD My Cloud Mirror 系统，接收持续产品支持。</register>
+  <imp>参与产品改进计划。</imp><desc5>提高 WD 体验</desc5><desc6>注册产品</desc6><desc7>注册产品可帮您注册保修并可使您接收到关于产品的更新。</desc7><desc8>设置完成</desc8><auto_fw>自动更新固件</auto_fw><auto_tip>当有设备固件可用时，自动更新设备固件。</auto_tip><imp_tip>参加 WD 的产品改进计划，帮助 WD 提供产品改进。</imp_tip><desc9>这将是您人生最精彩的时刻。下载：</desc9></getting_start>
+  <_support>
+    <title>支持</title>
+    <title1>请求自动支持</title1>
+    <title2>创建并保存系统报告</title2>
+    <title3>支持资源</title3>
+    <desc1>
+      <![CDATA[
+		选择“自动客户支持”将产生一份全面的诊断报告并附在您的支持请求中，包括设备的序列号、MAC地址和其它状态信息。然后，您的请求会被发送给一个专家团队，尽可能快速、高效地给您帮助。<br><br>要将您的报告附在您的支持请求中，选择“附上我的设备诊断报告并请求支持”选项；然后单击“请求支持”。<br><br>要在不附加设备诊断报告的情况下提交支持请求，请通过我们的标准支持页面提交请求。
+	]]>
+    </desc1>
+    <desc2>创建一份系统报告并将其保存到您的驱动器中，这将识别和解决网络问题。</desc2>
+    <sel_desc>
+      <![CDATA[附上我的设备诊断报告并请求支持]]>
+    </sel_desc>
+    <request_support>请求支持</request_support>
+    <privacy>隐私策略</privacy>
+    <save>创建并保存</save>
+    <doc>产品文档</doc>
+    <faq>常见问题解答</faq>
+    <forum>论坛</forum>
+    <contacts>联系人</contacts>
+    <msg1>更新系统日志时出错。</msg1>
+  <desc3>加入计划不会影响设备的性能，但是会帮助我们改进产品。您的设备将定期向 WD 发送其序列号以及基本设备信息。</desc3><title4>产品改进计划</title4><title5>参与产品改进</title5><desc4>&lt;li&gt;您将帮助我们推动产品未来的更新&lt;/li&gt;
+&lt;li&gt;这将使支持团队更高效地为您提供帮助&lt;/li&gt;
+&lt;li&gt;您可以随时停止参与计划&lt;/li&gt;</desc4></_support>
+  <_about>
+    <copyright>
+      <![CDATA[版权所有 © 2010-2015 Western Digital Technologies, Inc.]]>
+    </copyright>
+    <info>版权信息</info>
+    <gnu>GNU 通用公共许可证</gnu>
+  </_about>
+  <eula>
+    <choose>选择您的语言</choose>
+    <agree>
+      <![CDATA[我同意 <span class="wdlink" onclick="open_eula()">WD 最终用户许可协议</span>]]>
+    </agree>
+    <accept>我接受</accept>
+    <print>打印</print>
+    <title>Western Digital 最终用户许可协议</title>
+    <title2>许可协议</title2>
+    <desc>请仔细阅读许可协议。</desc>
+    <regiest>注册失败。请访问register.wdc.com注册您的产品。</regiest>
+  <nohdd_desc1>插入硬盘驱动器</nohdd_desc1>
+	<nohdd_desc2>
+		<![CDATA[
+			请将硬盘驱动器插入 WD My Cloud Mirror 系统的插槽，以便正确设置系统。如需购买硬盘驱动器，请访问 <a id="eula_noHDD_link">WD 商店</a>。
+   			<p>
+   			插入硬盘驱动器后，单击“继续”。		
+		]]>
+	</nohdd_desc2>
+  <regiest_fail_1>设备已注册。单击“下一步”以继续。</regiest_fail_1><regiest_fail_2>注册失败。若要直接通过 WD 注册您的产品，请单击&lt;a href="http://register.wdc.com" target="_blank"&gt;这里&lt;/a&gt;。如果现在不想注册，请单击下一步继续。</regiest_fail_2></eula>
+  <_wizard>
+    <msg1 leng="167">密码与确认密码字符不匹配。</msg1>
+    <msg2 leng="167">新密码必须为至少 5 个字符。请重试。</msg2>
+    <msg3 leng="167">密码不可包含空格。</msg3>
+    <msg4 leng="167">新密码长度不可超过 16 个字符。</msg4>
+    <msg5 leng="167">
+      <![CDATA[新密码不可包含以下字符：@ :/ \\ % ']]>
+    </msg5>
+    <msg6 leng="167">请输入确认密码。</msg6>
+    <msg7 leng="167">确认密码不可包含空格。</msg7>
+    <relogin_msg leng="167">
+      <![CDATA[为了使这些设置生效，您需要重新登录。]]>
+    </relogin_msg>
+    <relogin_msg2 leng="167">
+      <![CDATA[仍在尝试从 DHCP 服务器获得可用的 IP。GUI 重定向失败。以后使用存储实用工具发现设备。]]>
+    </relogin_msg2>
+  </_wizard>
+  <_dialog_title>
+    <time_machine_2 len="44">步骤 2：摘要</time_machine_2>
+    <lan_1 len="44">欢迎使用 LAN 设置向导</lan_1>
+    <lan_2 len="44">VLAN 设置</lan_2>
+    <import_user_4 len="44">步骤 3：摘要</import_user_4>
+  </_dialog_title>
+  <_port>
+    <msg1>端口号 %s 无效。请输入有效端口号（1024 到 65535 之间，或者 80）。</msg1>
+    <msg2>端口号 %s 无效。请输入有效端口号（1024 到 65535 之间，或者 443）。</msg2>
+  </_port>
+  <_network_ups>
+    <title1>网络 UPS</title1>
+    <title2>网络 UPS 从模式</title2>
+    <fail len="999">失败</fail>
+    <on_line len="999">使用市电</on_line>
+    <on_battery len="999">使用电池</on_battery>
+    <low_battery len="999">电池电量低</low_battery>
+    <unknown len="999">N/A</unknown>
+    <device_info len="999">设备信息</device_info>
+    <desc1>从</desc1>
+    <desc2>输入联网 UPS 主控的 IP 地址。</desc2>
+    <desc3>在向导配置并执行 UPS 设置时，请耐心等待。</desc3>
+    <msg1 len="999">当前无 UPS 设备连接到此设备。</msg1>
+    <msg2 len="999">主模式</msg2>
+    <msg4 len="999">从模式</msg4>
+    <msg5 len="999">您的 WD My Cloud Mirror 无法连接到 UPS（主）设备。</msg5>
+  </_network_ups>
+  <_logs>
+		<title len="999">日志</title>
+		<view_logs len="999">查看日志</view_logs>
+	<system_log>系统日志</system_log>		
+		<log_filter>日志筛选器</log_filter>
+    <view_event>查看事件</view_event>
+    <filter_by>筛选依据</filter_by>
+		<level>级别</level>
+		<log_level>日志级别</log_level>
+	</_logs>
+
+<_recycle>
+    <title>回收站设置</title>
+    <auto_clear>自动清空回收站</auto_clear>
+    <clear_days_1>文件保留时间</clear_days_1>
+    <clear_days_2>天</clear_days_2>
+  <del_msg_title>清空回收站</del_msg_title>
+	<del_msg>确定要永久删除回收站中的所有数据吗？</del_msg>
+  <err_clear_days_empty>文件保留时间必须为 1 至 365 间的数字值。</err_clear_days_empty></_recycle>
+<_app_center><desc12>多媒体</desc12><desc10>了解更多信息</desc10></_app_center><_smart><full_pass>通过 - 完整磁盘测试成功完成。</full_pass><full_fail>失败 - 完整磁盘测试失败。请备份您的数据并更换该磁盘。如果您需要更多协助，请联系 WD 支持人员。</full_fail><full_fail_glcr>失败 - 完整磁盘测试失败。请联系 WD 支持人员。</full_fail_glcr><quick_pass>通过 - 快速磁盘测试成功完成。</quick_pass><quick_fail>失败 - 快速磁盘测试失败。请备份您的数据并更换该磁盘。如果您需要更多协助，请联系 WD 支持人员。</quick_fail><quick_fail_glcr>失败 - 快速磁盘测试失败。请联系 WD 支持人员。</quick_fail_glcr></_smart><_help><mshares>管理共享</mshares><cshare>创建共享</cshare><caccess>更改对共享的访问权限</caccess><mgroups>管理组</mgroups><cgroup>添加组</cgroup><musers>管理用户</musers><cuser>添加用户</cuser><mcloud>管理云访问</mcloud><raccess>关于远程访问的基本知识</raccess><saccess>设置云访问</saccess></_help><_share_aggregation><desc>创建可以访问其他 My Cloud 系统共享的本地共享，合并分布式资源。</desc><c2share>连接至共享</c2share><add_link>添加链接</add_link><tip1>根文件夹将用于存储已链接的远程共享，且在“共享聚集”共享下创建。</tip1><tip2>添加链接以聚集远程共享。</tip2><tip3>根文件夹下显示的文件夹名称。</tip3><tip4>请输入目标设备的主机名或 IP 地址。</tip4><tip5>手动输入远程共享名称或点击 &lt;b&gt;Get Remote Share List&lt;/b&gt;（获得远程共享列表）以显示远程主机共享。</tip5><msg1>远程共享名称不可包含以下字符：\ / :* ?" &lt; &gt; | </msg1><msg2>远程主机无可用共享。</msg2><msg3>远程共享名称不存在。</msg3></_share_aggregation><_domain><connected_to>已连接至 %s</connected_to><disconnected>已断开连接 %s</disconnected><ad_status>Active Directory 状态</ad_status></_domain></text>

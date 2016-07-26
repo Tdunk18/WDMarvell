@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><cki><ck fm=\"Info zur Verwaltung Ihrer persönlichen Cloud\" to=\"Ein-/Ausschalten des DLNA-Medienservers\" num=\"51\"/><ck fm=\"Ändern eines FTP-Downloads\" to=\"Was sind Apps?\" num=\"53\"/><ck fm=\"Was sind Benutzergruppen?\" to=\"Was ist ein RAID-Speicher?\" num=\"3\"/></cki>";

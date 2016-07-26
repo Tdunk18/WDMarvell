@@ -1,0 +1,78 @@
+Index: linux/include/linux/fsnotify_backend.h
+===================================================================
+--- linux/include/linux/fsnotify_backend.h	(revision 16115)
++++ linux/include/linux/fsnotify_backend.h	(working copy)
+@@ -283,6 +283,7 @@
+ 	atomic_t refcnt;		/* active things looking at this mark */
+ 	struct fsnotify_group *group;	/* group this mark is for */
+ 	struct list_head g_list;	/* list of marks by group->i_fsnotify_marks */
++	struct list_head free_g_list;
+ 	spinlock_t lock;		/* protect group and inode */
+ 	union {
+ 		struct fsnotify_inode_mark i;
+Index: linux/fs/notify/inode_mark.c
+===================================================================
+--- linux/fs/notify/inode_mark.c	(revision 16115)
++++ linux/fs/notify/inode_mark.c	(working copy)
+@@ -288,20 +288,25 @@
+ 		spin_unlock(&inode->i_lock);
+ 
+ 		/* In case the dropping of a reference would nuke next_i. */
+-		if ((&next_i->i_sb_list != list) &&
+-		    atomic_read(&next_i->i_count)) {
++		while (&next_i->i_sb_list != list) {
+ 			spin_lock(&next_i->i_lock);
+-			if (!(next_i->i_state & (I_FREEING | I_WILL_FREE))) {
++			if (!(next_i->i_state & (I_FREEING | I_WILL_FREE)) &&
++						atomic_read(&next_i->i_count)) {
+ 				__iget(next_i);
+ 				need_iput = next_i;
++				spin_unlock(&next_i->i_lock);
++				break;
+ 			}
+ 			spin_unlock(&next_i->i_lock);
++			next_i = list_entry(next_i->i_sb_list.next,
++						struct inode, i_sb_list);
+ 		}
+ 
+ 		/*
+-		 * We can safely drop inode_sb_list_lock here because we hold
+-		 * references on both inode and next_i.  Also no new inodes
+-		 * will be added since the umount has begun.
++		 * We can safely drop inode_sb_list_lock here because either
++		 * we actually hold references on both inode and next_i or
++		 * end of list.  Also no new inodes will be added since the
++		 * umount has begun.
+ 		 */
+ 		spin_unlock(&inode_sb_list_lock);
+ 
+Index: linux/fs/notify/mark.c
+===================================================================
+--- linux/fs/notify/mark.c	(revision 16115)
++++ linux/fs/notify/mark.c	(working copy)
+@@ -299,16 +299,22 @@
+ 					 unsigned int flags)
+ {
+ 	struct fsnotify_mark *lmark, *mark;
+-
++	LIST_HEAD(free_list);
++	
+ 	mutex_lock_nested(&group->mark_mutex, SINGLE_DEPTH_NESTING);
+ 	list_for_each_entry_safe(mark, lmark, &group->marks_list, g_list) {
+ 		if (mark->flags & flags) {
++		    list_add(&mark->free_g_list, &free_list);
++		    list_del_init(&mark->g_list);
+ 			fsnotify_get_mark(mark);
+-			fsnotify_destroy_mark_locked(mark, group);
+-			fsnotify_put_mark(mark);
+ 		}
+ 	}
+ 	mutex_unlock(&group->mark_mutex);
++	
++	list_for_each_entry_safe(mark, lmark, &free_list, free_g_list) {
++	    fsnotify_destroy_mark(mark, group);
++	    fsnotify_put_mark(mark);
++	}
+ }
+ 
+ /*

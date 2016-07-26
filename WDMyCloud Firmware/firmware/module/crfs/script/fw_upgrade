@@ -1,0 +1,10 @@
+#!/bin/sh
+if [ "$1" == "" ]; then
+	echo "** please input file path **"	
+	exit 0
+fi
+
+upload_firmware -c auto
+cp $1 /usr/local/upload/firmware
+upload_firmware -n firmware
+do_reboot

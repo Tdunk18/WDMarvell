@@ -1,0 +1,26 @@
+MODVER ?= 1
+
+EZLK ?= 0
+USEGDB ?= 1
+
+ERLONE ?= 1
+ERLTWO ?= 1
+
+DEBUG_ISCSI ?= 0
+DEBUG_OPCODES ?= 0
+
+DEBUG_AUTHD ?= 0
+DEBUG_CHAP ?= 0
+DEBUG_ERL ?= 0
+DEBUG_DEV ?= 0
+
+DEBUG_SUSE ?= 0
+# ALPHA tim - 
+# LIO Default ->
+#SNMP_FEATURE ?= 1
+#SNAP_FEATURE ?= 1
+# 
+# ALPHA customized ->
+SNMP_FEATURE ?= 0
+SNAP_FEATURE ?= 0
+

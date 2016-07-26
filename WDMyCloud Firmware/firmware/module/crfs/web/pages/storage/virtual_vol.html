@@ -1,0 +1,112 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="PRAGMA" content="no-cache"> 
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+
+<style>
+a {FONT-SIZE: 15px; FONT-FAMILY: Helvetica, Geneva, Arial, sans-serif;color:rgb(137,137,137);}
+
+.del:active{
+		padding:0px 0px 0px 0px;
+		margin:0px 0px 0px 0px;
+		width:18px;
+		height:18px;
+		display: inline-block;
+		background: url('/web/images/icon/IconListDropdownNotificationsDeleteUp.png') no-repeat;
+		cursor: pointer;
+		border:0px solid red;
+}	
+.del{
+
+		padding:0px 0px 0px 0px;
+		margin:0px 0px 0px 0px;
+		width:18px;
+		height:18px;
+		display: inline-block;
+		background: url('/web/images/icon/IconListDropdownNotificationsDeleteUp.png') no-repeat;
+		cursor: pointer;
+		border:0px solid red;
+}	
+.del:hover{
+
+		padding:0px 0px 0px 0px;
+		margin:0px 0px 0px 0px;
+		width:18px;
+		height:18px;
+		display: inline-block;
+		background: url('/web/images/icon/IconListDropdownNotificationsDeleteDown.png') no-repeat;
+		cursor: pointer;
+		border:0px solid red;
+}
+</style>
+
+</head>
+<script language="javascript" src="/web/function/raid_define.js"></script>
+<script type="text/javascript" src="/web/function/raid_diag.js"></script>
+<script type="text/javascript" src="/web/function/vv_diag.js"></script>
+<script type="text/javascript" src="/web/function/vv.js"></script>
+  
+<script type="text/javascript">
+var _DIALOG = "";
+var timeoutId = 0;
+
+function page_load()
+{
+	var sys_time = (new Date()).getTime();
+	initDiag("/web/storage/virtual_vol_diag.html?r="+sys_time);
+	
+	VirtualVol_List();
+
+	$("#storage_volumevirtualCreate_button").click(function() {	
+		
+		VirtualVol_Create_Diag();
+	});	
+	
+	$("#storage_volumevirtualModify_button").click(function() {	
+		
+		var grid = $("#VV_List");
+		var selected_count = $('.trSelected', grid).length;
+		if(selected_count==0)
+		{
+			jAlert( _T('_user','msg2'), "warning" );	//Text:Please select one item.
+			return;
+		}
+		var idx = $('.trSelected td:nth-child(1) div',grid).text();
+		
+		
+		VirtualVol_Modify_Diag(idx);
+	});	
+}
+
+function page_unload()
+{
+	if (timeoutId != 0) clearTimeout(timeoutId);
+}
+</script>
+
+<body>
+<!-- Block 1 : Volume Encryption -->
+<div class="h1_content header_2">
+	<span class="_text" lang="_vv" datafld="title1">Virtual Volume</span></div>																
+	<div class="field_top"><span class="_text" lang="_vv" datafld="desc10"></span></div>
+	<!--<div class="hr_0_content"><div class="hr_1"></div></div>-->
+	
+	<div class="field_top" style="border:0px solid red;display:none" id="DIV_VV_List">
+		<table id="VV_List"></table>
+	</div>
+	
+	<div class="field_top" style="border:0px solid red">
+	
+		<table cellspacing="0" cellpadding="3" border="0">
+			<tr>
+				<td id="TD_VV_Create_Button"><button type="button" id="storage_volumevirtualCreate_button"><span class="_text" lang="_button" datafld="create"></span></button></td>
+				<td id="TD_VV_Modify_Button" style="display:none"><button type="button" id="storage_volumevirtualModify_button"><span class="_text" lang="_common" datafld="modify"></span></button></td>
+			</tr>
+		</table>
+			
+	</div>
+</body>
+</html>

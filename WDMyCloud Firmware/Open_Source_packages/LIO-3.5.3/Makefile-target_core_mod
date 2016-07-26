@@ -1,0 +1,12 @@
+CWD=$(shell pwd)
+AUTOCONFIG=$(CWD)/autoconfig --write-to-file --current-directory=$(CWD)
+include $(shell $(AUTOCONFIG))
+
+all:
+	make -C kernel/drivers/target all
+
+install: all
+	make -C kernel/drivers/target install
+
+clean:
+	make -C kernel/drivers/target clean

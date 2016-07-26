@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+    <name>System</name>
+    <version>2.1</version>
+    <description>Module has {}</description >
+
+    <components>
+
+        <component>
+            <name>device_description</name>
+            <module>System</module>
+            <controller_class>\System\Device\Controller\DeviceDescriptionController</controller_class>
+            <auth_security>
+                <get>NO_AUTH_LAN</get>
+                <put>ADMIN_AUTH_LAN</put>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>device_registration</name>
+            <module>System</module>
+            <controller_class>\System\Device\Controller\DeviceRegistrationController</controller_class>
+            <auth_security>
+                <get>ADMIN_AUTH_LAN</get>
+                <put>ADMIN_AUTH_LAN</put>
+                <post>ADMIN_AUTH_LAN</post>
+            </auth_security>
+        </component>
+        
+        <component>
+            <name>device_security</name>
+            <module>System</module>
+            <controller_class>\System\Device\Security\Controller\DeviceSecurity</controller_class>
+            <auth_security>
+                <get>ADMIN_AUTH</get>
+                <put>ADMIN_AUTH</put>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>language_configuration</name>
+            <module>System</module>
+            <controller_class>\System\Device\Controller\LanguageConfigurationController</controller_class>
+            <auth_security>
+                <get>NO_AUTH_LAN</get>
+                <post>NO_AUTH_LAN</post>
+                <put>NO_AUTH_LAN</put>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>eula_acceptance</name>
+            <module>System</module>
+            <controller_class>\System\Device\Controller\EulaAcceptanceController</controller_class>
+            <auth_security>
+                <get>NO_AUTH_LAN</get>
+                <post>NO_AUTH_LAN</post>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>update_counts</name>
+            <module>System</module>
+            <controller_class>\System\Device\Controller\UpdateCountsController</controller_class>
+            <auth_security>
+                <get>NO_AUTH_LAN_USER_WAN</get>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>privacy_options</name>
+            <module>System</module>
+            <controller_class>\System\Device\Controller\PrivacyOptionsController</controller_class>
+            <auth_security>
+                <get>ADMIN_AUTH</get>
+                <put>ADMIN_AUTH</put>
+            </auth_security>
+        </component>
+
+        <!-- DateTime -->
+
+        <component>
+            <name>date_time_configuration</name>
+            <module>System</module>
+            <controller_class>\System\DateTime\Controller\Configuration</controller_class>
+            <auth_security>
+                <get>NO_AUTH</get>
+                <put>ADMIN_AUTH_LAN</put>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>time_zones</name>
+            <module>System</module>
+            <controller_class>\System\DateTime\Controller\TimeZones</controller_class>
+            <auth_security>
+                <get>ADMIN_AUTH_LAN</get>
+            </auth_security>
+        </component>
+
+        <!-- Network -->
+
+        <component>
+            <name>network_configuration</name>
+            <module>System</module>
+            <controller_class>\System\Network\Controller\NetworkConfiguration</controller_class>
+            <auth_security>
+                <get>ADMIN_AUTH_LAN</get>
+                <post>ADMIN_AUTH_LAN</post>
+                <put>ADMIN_AUTH_LAN</put>
+                <delete>ADMIN_AUTH_LAN</delete>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>network_test</name>
+            <module>System</module>
+            <controller_class>\System\Network\Controller\NetworkTestController</controller_class>
+            <auth_security>
+                <get>NO_AUTH</get>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>network_services_configuration</name>
+            <module>System</module>
+            <controller_class>\System\Network\Controller\NetworkServicesConfiguration</controller_class>
+            <auth_security>
+                <get>ADMIN_AUTH_LAN</get>
+                <post>ADMIN_AUTH_LAN</post>
+                <put>ADMIN_AUTH_LAN</put>
+                <delete>ADMIN_AUTH_LAN</delete>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>network_workgroup</name>
+            <module>System</module>
+            <controller_class>\System\Network\Controller\NetworkWorkgroup</controller_class>
+            <auth_security>
+                <get>ADMIN_AUTH_LAN</get>
+                <post>ADMIN_AUTH_LAN</post>
+                <put>ADMIN_AUTH_LAN</put>
+                <delete>ADMIN_AUTH_LAN</delete>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>ssh_configuration</name>
+            <module>System</module>
+            <controller_class>\System\Network\Controller\SshConfiguration</controller_class>
+            <auth_security>
+                <get>ADMIN_AUTH_LAN</get>
+                <post>ADMIN_AUTH_LAN</post>
+                <put>ADMIN_AUTH_LAN</put>
+                <delete>ADMIN_AUTH_LAN</delete>
+            </auth_security>
+        </component>
+
+        <!-- Power -->
+
+        <component>
+            <name>battery_status</name>
+            <module>System</module>
+            <controller_class>\System\Power\Controller\BatteryStatus</controller_class>
+            <auth_security>
+                <all>NO_AUTH_LAN</all>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>power_profile</name>
+            <module>System</module>
+            <controller_class>\System\Power\Controller\PowerProfile</controller_class>
+            <auth_security>
+                <all>NO_AUTH_LAN</all>
+            </auth_security>
+        </component>
+
+        <!-- Firmware -->
+
+        <component>
+            <name>firmware_info</name>
+            <module>System</module>
+            <controller_class>\System\Firmware\Controller\Info</controller_class>
+            <auth_security>
+                <get>NO_AUTH_LAN_USER_WAN</get>
+                <put>ADMIN_AUTH_LAN</put>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>firmware_update</name>
+            <module>System</module>
+            <controller_class>\System\Firmware\Controller\Update</controller_class>
+            <auth_security>
+              <get>NO_AUTH_LAN_USER_WAN</get>
+              <post>USER_AUTH</post>
+              <put>ADMIN_AUTH</put>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>firmware_update_configuration</name>
+            <module>System</module>
+            <controller_class>\System\Firmware\Controller\UpdateConfiguration</controller_class>
+            <auth_security>
+                <get>ADMIN_AUTH</get>
+                <put>ADMIN_AUTH</put>
+            </auth_security>
+        </component>
+
+        <!-- Configuration -->
+
+        <component>
+            <name>system_configuration</name>
+            <module>System</module>
+            <controller_class>\System\Configuration\Controller\Configuration</controller_class>
+            <auth_security>
+                <get>ADMIN_AUTH_LAN</get>
+                <post>ADMIN_AUTH_LAN</post>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>shutdown</name>
+            <module>System</module>
+            <controller_class>\System\Configuration\Controller\Shutdown</controller_class>
+            <auth_security>
+                <put>ADMIN_AUTH_LAN</put>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>system_factory_restore</name>
+            <module>System</module>
+            <controller_class>\System\Configuration\Controller\FactoryRestore</controller_class>
+            <auth_security>
+                <get>NO_AUTH_LAN</get>
+                <post>ADMIN_AUTH_LAN</post>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>vft_configuration</name>
+            <module>System</module>
+            <controller_class>\System\Configuration\Controller\VftConfiguration</controller_class>
+            <auth_security>
+                <get>ADMIN_AUTH_LAN</get>
+                <put>ADMIN_AUTH_LAN</put>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>led_configuration</name>
+            <module>System</module>
+            <controller_class>\System\Configuration\Controller\LedConfiguration</controller_class>
+            <auth_security>
+                <get>NO_AUTH_LAN</get>
+                <put>ADMIN_AUTH_LAN</put>
+            </auth_security>
+        </component>
+        
+        <!-- Reporting -->
+
+        <component>
+            <name>system_information</name>
+            <module>SystemReporting</module>
+            <controller_class>\System\Reporting\Controller\Information</controller_class>
+            <auth_security>
+                <get>NO_AUTH_LAN_USER_WAN</get>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>system_log</name>
+            <module>SystemReporting</module>
+            <controller_class>\System\Reporting\Controller\Log</controller_class>
+            <auth_security>
+                <get>ADMIN_AUTH_LAN</get>
+                <post>NO_AUTH_LAN</post>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>system_state</name>
+            <module>SystemReporting</module>
+            <controller_class>\System\Reporting\Controller\State</controller_class>
+            <auth_security>
+                <get>NO_AUTH_LAN</get>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>status</name>
+            <module>SystemReporting</module>
+            <controller_class>\System\Reporting\Controller\Status</controller_class>
+            <auth_security>
+                <all>USER_AUTH_LAN</all>
+            </auth_security>
+        </component>
+
+    </components>
+
+    <!-- Network -->
+
+    <class_factory>
+
+        <factory>System\Network\Configuration\AbstractConfiguration</factory>
+
+        <implementation>
+            <class_name>System\Network\Configuration\Linux\ConfigurationImpl</class_name>
+            <attributes osname="linux" />
+        </implementation>
+
+        <implementation>
+            <class_name>System\Network\Configuration\Windows\ConfigurationImpl</class_name>
+            <attributes osname="windows" />
+        </implementation>
+
+    </class_factory>
+
+    <!-- Power -->
+
+    <class_factory>
+
+        <factory>System\Power\Manager\ConfigurationInterface</factory>
+
+        <implementation>
+            <class_name>System\Power\Manager\Linux\ConfigurationImpl</class_name>
+            <attributes osname="linux" />
+        </implementation>
+
+        <implementation>
+            <class_name>System\Power\Manager\Windows\ConfigurationImpl</class_name>
+            <attributes osname="windows" />
+        </implementation>
+
+    </class_factory>
+
+    <!-- Reporting -->
+
+    <class_factory>
+
+        <factory>System\Reporting\Status\StatusManager</factory>
+
+        <implementation>
+            <class_name>System\Reporting\Status\Linux\StatusManagerImpl</class_name>
+            <attributes osname="linux" />
+        </implementation>
+
+        <implementation>
+            <class_name>System\Reporting\Status\Windows\StatusManagerImpl</class_name>
+            <attributes osname="windows" />
+        </implementation>
+
+    </class_factory>
+
+    <class_factory>
+
+        <factory>System\Reporting\System\AbstractSystem</factory>
+
+        <implementation>
+            <class_name>System\Reporting\System\Linux\SystemImpl</class_name>
+            <attributes osname="linux" />
+        </implementation>
+
+        <implementation>
+            <class_name>System\Reporting\System\Windows\SystemImpl</class_name>
+            <attributes osname="windows" />
+        </implementation>
+
+    </class_factory>
+
+</module>

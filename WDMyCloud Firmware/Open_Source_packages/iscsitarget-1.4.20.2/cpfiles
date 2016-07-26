@@ -1,0 +1,10 @@
+#!/bin/sh
+#make ARCH=arm CROSS_COMPILE=arm-mv5sft-linux-gnueabi- KSRC=../../DNS-345_LSP/linux-2.6.31.8 kernel
+#make ARCH=arm CROSS_COMPILE=arm-mv5sft-linux-gnueabi- KSRC=../../DNS-345_LSP/linux-2.6.31.8 usr
+mkdir -p ../../DNS-345/module/crfs/crfs/iscsi
+sudo rm -f ../../DNS-345/module/crfs/crfs/iscsi/iscsi_trgt.ko
+sudo rm -f ../../DNS-345/module/crfs/crfs/iscsi/ietd
+sudo rm -f ../../DNS-345/module/crfs/crfs/iscsi/ietadm
+sudo cp ./kernel/iscsi_trgt.ko ../../DNS-345/module/crfs/crfs/iscsi/
+sudo cp ./usr/ietd ../../DNS-345/module/crfs/crfs/iscsi/
+sudo cp ./usr/ietadm ../../DNS-345/module/crfs/crfs/iscsi/

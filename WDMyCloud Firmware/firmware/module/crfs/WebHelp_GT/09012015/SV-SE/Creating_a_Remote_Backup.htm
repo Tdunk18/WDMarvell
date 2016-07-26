@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Skapa en fjärrsäkerhetskopia</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Säkerhetskopiera ditt eget moln\nFjärrsäkerhetskopior\nSkapa en fjärrsäkerhetskopia");
+addButton("show",BTN_TEXT,"Visa","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("index.htm", "", ">", "Hem", "welcome.htm");
+document.write("<a href=\"Creating_a_USB_Backup.htm\">Säkerhetskopiera ditt eget moln<\/a> > <a href=\"Creating_a_Remote_Backup.htm\">Fjärrsäkerhetskopior<\/a> > Skapa en fjärrsäkerhetskopia<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1 style="background-color: Transparent;">Skapa en fj&auml;rrs&auml;kerhetskopia</h1>
+<p class="Body">Med en fj&auml;rrs&auml;kerhetskopia kan du s&auml;kerhetskopiera My Cloud Mirror -enheten till en annan server utanf&ouml;r n&auml;tverket.&#160;&#160;S&aring; h&auml;r f&ouml;ljer du stegen f&ouml;r att skapa en fj&auml;rrs&auml;kerhetskopia f&ouml;r din My Cloud Mirror-server.</p>
+<ol style="list-style: decimal;">
+	<li style="list-style: none; display: inline;"><ol style="list-style: decimal;">
+		<li class="n1">Klicka p&aring; <b>S&auml;kerhetskopior</b>.</li>
+		<li class="n1">Klicka p&aring; <b>S&auml;kerhetskopia via fj&auml;rrstyrning.</b></li>
+		<li class="n1">Klicka p&aring; knappen <span style="font-weight: bold;">Skapa jobb</span>.</li>
+		<li class="n1">Ange ett jobbnamn.</li>
+		<li class="n1">V&auml;lj en server fr&aring;n fj&auml;rrserverns rullgardinsmeny.</li>
+		<li class="n1">&#160;I f&auml;ltet Fj&auml;rr-IP anger du IP-adressen f&ouml;r fj&auml;rrs&auml;kerhetskopians enhet.<br />(Exempel 192.168.1.16)</li>
+		<li class="n1">I f&auml;ltet L&ouml;senord anger du l&ouml;senordet f&ouml;r fj&auml;rrs&auml;kerhetskopians enhet.</li>
+		<li class="n1">Ange ett SSH-anv&auml;ndarnamn.</li>
+		<li class="n1">I SSH-l&ouml;senordsf&auml;ltet, ange SSH-l&ouml;senordet.</li>
+		<li class="n1">Klicka p&aring; <span style="font-weight: bold;">Bl&auml;ddra</span> f&ouml;r att k&auml;lla k&auml;llmapp.</li>
+		<li class="n1">Fr&aring;n mapplistan &ouml;ver fj&auml;rrs&auml;kerhetskopia, markera en eller flera mappar som ska skyddas.</li>
+		<li class="n1">Klicka p&aring; <span style="font-weight: bold;">OK</span>.</li>
+		<li class="n1">Klicka p&aring; Bl&auml;ddra n&auml;r du v&auml;ljer en mapp f&ouml;r fj&auml;rrs&auml;kerhetskopior.</li>
+		<li class="n1">V&auml;lj en mapp och klicka p&aring; OK.</li>
+		<li class="n1">V&auml;lj s&auml;kerhetskopieringstyp fr&aring;n rullgardinsmenyn.</li>
+		<li class="n1">Om du vill ange ett schema f&ouml;r s&auml;kerhetskopiering, klicka p&aring; v&auml;xlingsikonen bredvid Upprepningar <img alt="" src="Graphics/toggle_button.png" style="border: none;" 
+								 border="0" /> .</li>
+		<li class="n1">Klicka p&aring; v&auml;xlingsikonen <img src="Graphics/toggle_button.png" alt="" style="border: none;" 
+				 border="0" /> n&auml;r du vill st&auml;lla in &ouml;verf&ouml;ring av kryptering.</li>
+		<li class="n1">Klicka p&aring; <span style="font-weight: bold;">Skapa</span>.</li>
+	</ol></li>
+</ol>
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt;">© 2015 Western Digital Technologies, Inc. 
+	 <span lang="de-DE" xml:lang="de-DE"><b style="font-weight: normal;">Med 
+	 ensamrätt</b></span><span lang="de-DE" xml:lang="de-DE">.</span></p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>

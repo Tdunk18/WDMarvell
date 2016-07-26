@@ -1,0 +1,84 @@
+<!-- dfs dialog -->
+<div id="dfsDiag" class="WDLabelDiag" style="display:none">
+	<div class="WDLabelHeaderDialogue WDLabelHeaderDialogueDFSIcon" id="dfsDiag_title"></div>
+	<div align="center"><div class="hr"><hr/></div></div>
+
+		<!-- dDiag_create_group -->
+		<div id="dDiag_create_group" style="display:none">
+			<div id="dfs_group" class="WDLabelBodyDialogue">
+				<div class="_text maxwidth" lang="_share_aggregation" datafld="desc"></div>
+				<table border="0" cellspacing="0" cellpadding="0" height="0">
+					<tr>
+						<td class="tdfield"><span class="_text" lang="_dfs" datafld="root_name"></span></td>
+						<td class="tdfield_padding"><input type="text" name="settings_networkDFSRootFolder_text" id="settings_networkDFSRootFolder_text" maxlength="16"></td>
+						<td class="tdfield_padding tdfield_padding_left_10"><div class="TooltipIcon" id="tip_dfs_root"></div></td>
+					</tr>
+					<tr id="settings_networkDFSShareLink_tr" style="display:none">
+						<td class="tdfield"><span class="_text" lang="_share_aggregation" datafld="c2share"></span></td>
+						<td class="tdfield_padding">
+							<button type="button" id="settings_networkDFSConfigSave_button"><span class="_text" lang="_share_aggregation" datafld="add_link"></span></button>&nbsp;&nbsp<span class="TooltipIcon" id="tip_dfs_link"></span>
+						<td class="tdfield_padding"></td>
+					</tr>
+				</table>
+				
+				<div>
+					<div id="dfs_list"></div>
+				</div>
+			</div>
+			<div class="hrBottom2"><hr/></div>
+			<button type="button" class="ButtonMarginLeft_40px close" id="settings_networkDFSCancel_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+			<button type="button" class="ButtonRightPos2" id="settings_networkDSFRootFolderSave_button"><span class="_text" lang="_button" datafld="apply"></span></button>
+		</div><!-- end dDiag_create_group -->
+		
+		<!-- dDiag_set -->
+		<div id="dDiag_set" style="display:none">
+			<div id="dfs_set" class="WDLabelBodyDialogue">
+				<span class="_text" lang="_dfs" datafld="dfs_link_description"></span>
+
+				<table border="0" cellspacing="0" cellpadding="0" id="dst_tb" width="100%">
+					<tr>
+						<td class="tdfield"><span class="_text" lang="_dfs" datafld="local_path">Local Share Name</span></td>
+						<td class="tdfield_padding" width="255"><input type="text" name="settings_networkDFSShareName_text" id="settings_networkDFSShareName_text" maxlength="16"></td>
+						<td class="tdfield_padding tdfield_padding_left_10"><div class="TooltipIcon" id="tip_dfs_local_folder"></div></td>
+					</tr>
+					<tr>
+						<td class="tdfield"><span class="_text" lang="_dfs" datafld="host">Host</span></td>
+						<td class="tdfield_padding"><input type="text" name="settings_networkDFSHost_text" id="settings_networkDFSHost_text" maxlength="16"></td>
+						<td class="tdfield_padding tdfield_padding_left_10"><div class="TooltipIcon" id="tip_dfs_host"></div></td>
+					</tr>
+					<tr>
+						<td class="tdfield"><span class="_text" lang="_dfs" datafld="remote_folder">Remote Share Folder</span></td>
+						<td class="tdfield_padding">
+							<span id="wait_span" style="display:none"></span>
+							<span id="dfs_input"><input type="text" id="settings_networkDFSRemoteFolder_text" name="settings_networkDFSRemoteFolder_text"></span>
+						</td>
+						<td class="tdfield_padding">
+							<table border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td id="remote_folder_td" width="190" style="display:none">
+										<div id="list_span">
+								<div style="float:left;padding-top:8px">&nbsp;<<&nbsp;</div> <div id="remote_folder_list" class="select_menu"></div>
+										</div>
+									</td>
+									<td class="tdfield_padding_left_10">
+										<div class="TooltipIcon" id="tip_dfs_remote_share"></div>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td class="tdfield_padding" colspan="2">
+							<button type="button" id="settings_networkDFSGetRemoteFolder_button" onclick="get_host_folder()"><span class="_text" lang="_dfs" datafld="get_folder"></span></button>
+						</td>			
+					</tr>
+				</table>
+			</div>
+			<div class="hrBottom2"><hr/></div>
+			<button type="button" class="ButtonMarginLeft_40px" id="settings_networkDFSBack_button"><span class="_text" lang="_button" datafld="back"></span></button>
+			<button type="button" class="ButtonMarginLeft_20px close" id="settings_networkDFSCancel_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+			<button type="button" class="ButtonRightPos2" id="settings_networkDFSSave_button" onclick="dfs_set()"><span class="_text" lang="_button" datafld="apply"></span></button>
+			<button type="button" class="ButtonRightPos2" id="settings_networkDFSTest_button" onclick="dfs_test()"><span class="_text" lang="_button" datafld="test"></span></button>
+		</div><!-- end dDiag_set -->
+</div>	<!-- dfsDiag end -->

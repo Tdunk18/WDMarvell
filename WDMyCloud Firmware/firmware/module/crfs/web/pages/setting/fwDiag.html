@@ -1,0 +1,228 @@
+﻿<div id="FWUpdateDiag" class="WDLabelDiag" style="display:none;">
+	<div class="WDLabelHeaderDialogue WDLabelHeaderDialogueFWIcon">
+		<!--Update Firmware-->
+		<span class="_text" lang="_firmware" datafld="title"></span>
+	</div>
+	<div align="center"><div class="hr"><hr/></div>
+	</div>
+	<div class="WDLabelBodyDialogue">			
+			<b><span class="_text" lang="_firmware" datafld="new_found"></span>:<!--Firmware Update Version found:--></b><br><br>		
+			<div id="id_auto_new_firm_version"></div>	<br>		
+			<div class="scrollbar_autofw">	
+			<a id="id_auto_new_firm_note" target="_blank"><span class="_text" lang="_firmware" datafld="release_note"></span></a>
+			</div>
+		<!--
+		Your firmware will now be updated. Please do not unplug your device or close this window during the firmware update installation. 
+		After completing the firmware update, your network drive will automatically reboot.
+		<br><br>
+		<b>Important:</b> Please ensure your have multiple copies of your data (another backup) before updating your drive.
+		-->
+	</div>
+	
+	<div class="hrBottom2"><hr/></div>
+		<button class="ButtonMarginLeft_40px close" id="settings_fwUpdateClose_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>		
+		<button class="ButtonRightPos2" id="settings_fwUpdateInstall_button" onclick="fw_install(this.id);"><span class="_text" lang="_button" datafld="install"></span></button>		
+</div>
+
+
+
+
+<div id="FWDiag" class="WDLabelDiag" style="display:none;">
+	<div class="WDLabelHeaderDialogue WDLabelHeaderDialogueFWIcon">
+		<!--Update Firmware--><span class="_text" lang="_firmware" datafld="title"></span>
+	</div>
+
+	<div align="center"><div class="hr"><hr/></div>
+	</div>
+
+	<div class="WDLabelBodyDialogue">
+		<span id="id_fw_uptodate" class="_text" lang="_firmware" datafld="msg12"></span><!--Your firmware is up to date.-->
+		<span id="id_fw_networkerror" style="display:none;width: 534px;display: inline-block;" class="_text" lang="_firmware" datafld="msg17"></span><!--network error.-->
+	</div>
+	
+	<div class="hrBottom2"><hr/></div>
+		<button class="ButtonRightPos2 close" id="settings_fwChkUpdateOk_button"><span class="_text" lang="_button" datafld="Ok"></span></button>
+</div>
+
+
+
+<div id="hFWUpdateDiag" class="WDLabelDiag" style="display:none;">
+	<div class="WDLabelHeaderDialogue WDLabelHeaderDialogueFWIcon">
+<!--New firmware available--><span class="_text" lang="_firmware" datafld="new_available"></span>
+	</div>
+
+	<div align="center"><div class="hr"><hr/></div>
+	</div>
+
+	<div class="WDLabelBodyDialogue">
+		<b><span class="_text" lang="_firmware" datafld="new_found"></span>:<!--Firmware Update Version found:--></b><br><br>
+		
+			<div id="id_h_auto_new_firm_version"></div><br>	
+			<div class="scrollbar_autofw">
+				<a id="id_h_auto_new_firm_note" target="_blank"><span class="_text" lang="_firmware" datafld="release_note"></span></a>
+			</div>
+			<!--
+			<div id="scrollbar_autofw">
+				<div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+				<div class="viewport">
+       <div class="overview">
+				
+			<span id="id_h_auto_new_firm_note"></span>
+			
+				</div></div>			
+				</div>-->
+	<!--	 <div id="fw_parogressbar"> </div>-->
+	</div>
+	
+	<div class="hrBottom2"><hr/></div>
+		<button class="ButtonMarginLeft_40px close" id="settings_fwUpdateClose_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>		
+		<button class="ButtonRightPos2" id="home_fwUpdateInstall_button" onclick="fw_install(this.id);"><span class="_text" lang="_button" datafld="install"></span></button>				
+</div>
+
+
+<div id="overlay" class="WDLabelDiag" style="display:none;">
+	<div class="WDLabelHeaderDialogue WDLabelHeaderDialogueFWIcon">
+		<!--Update Firmware--><span class="_text" lang="_firmware" datafld="title"></span>
+	</div>
+
+	<div align="center"><div class="hr"><hr/></div>
+	</div>
+
+	<div class="WDLabelBodyDialogue">
+		<span id="fw_upgrading_show" style='display:none'>
+		<br>
+			<span class="_text" lang="_firmware" datafld="upgrading"></span>(<span class="id_percentage">0%</span>) 
+		</span>
+		<span id="fw_downloading_show" style="display:none">
+		<br>
+			<span class="_text" lang="_common" datafld="download"></span>(<span class="id_percentage">0%</span>)						
+		</span>
+		
+			<div id="id_new_firm_version"></div>
+			<br>
+		 <div id="fw_parogressbar"> </div>
+		 <br>
+		 <span id="id_msg" style="display:;width: 534px;display: inline-block;">		
+		 <span class="_text" lang="_firmware" datafld="msg16"></span>
+		</span>
+	</div>
+	
+	<div class="hrBottom2"><hr/></div>	
+	<button type="button" id="settings_fimrwareImpore_button" style="display:none" class="ButtonRightPos1 close f_button"><span class="_text" lang="_button" datafld="close"></span> </button>
+</div>
+<div id="rebootDiag" class="WDLabelDiag" style="display:none;">
+	<div class="WDLabelHeaderDialogue WDLabelHeaderDialogueInfoIcon">
+		<span class="_text" lang="_utilities" datafld="reboot"></span>
+	</div>
+	<div align="center"><div class="hr"><hr/></div>
+	</div>
+	<div class="WDLabelBodyDialogue">
+	<img src="/web/images/SpinnerSun.gif?v200" border=0 style="margin-bottom:-10px;">	
+	<span class="_text" lang="_utilities" datafld="msg2"></span>
+	</div>	
+	<div class="hrBottom2"><hr/></div>	
+</div>
+<div id="fw_shutdownDiag" class="WDLabelDiag" style="display:none;">
+	<div class="WDLabelHeaderDialogue WDLabelHeaderDialogueFWIcon">
+		<!--Update Firmware--><span class="_text" lang="_firmware" datafld="title"></span>
+	</div>
+	<div align="center"><div class="hr"><hr/></div>
+	</div>
+	<div class="WDLabelBodyDialogue">
+		<span class="_text" lang="_firmware" datafld="msg9"></span>
+	</div>
+	<div class="hrBottom2"><hr/></div>
+</div>
+
+<!-- for eula -->
+<div id="eulaFWUpdateDiag" class="WDLabelDiag" style="display:none;">
+	<div class="WDLabelHeaderDialogue WDLabelHeaderDialogueFWIcon">
+<!--New firmware available--><!--<span class="_text" lang="_firmware" datafld="new_available"></span>-->
+<span class="_text" lang="_firmware" datafld="install_title"></span>
+	</div>
+
+	<div align="center"><div class="hr"><hr/></div>
+	</div>
+
+	<div class="WDLabelBodyDialogue">
+		
+			<span class="_text" lang="_firmware" datafld="msg14"></span>
+			<!--Please install the latest version of the firmware that hascritical software updates before you proceed.-->
+			<!--Firmware Update Version found:--><br><br>
+		
+			<table width=100%>		
+				<tr>
+					<td height=40>
+						<span class="_text" lang="_firmware" datafld="current"></span>						
+					</td>	
+					<td width=10></td>
+					<td>
+						<div id="id_eula_current"></div>
+					</td>	
+						<td width=10></td>
+					<td>
+					</td>	
+				</tr>	
+				<tr>
+					<td height=40>
+						<!--<span class="_text" lang="_firmware" datafld="current"></span>						-->
+						<span class="_text" lang="_firmware" datafld="latest_version"></span>						
+					</td>	
+					<td width=10></td>
+					<td>
+						<div id="id_e_latest"></div>
+					</td>	
+						<td width=10></td>
+					<td>
+						<a id="id_eula_auto_new_firm_note" target="_blank"><span class="_text" lang="_firmware" datafld="release_note"></span></a>	
+					</td>	
+				</tr>	
+				
+				<tr>
+					<td height=40>						
+						<span class="_text" lang="_firmware" datafld="manual_update"></span>						
+					</td>	
+					<td width=10></td>
+					<td colspan=3>
+					
+<iframe id="eula_upload_target" name="eula_upload_target" style="display:none;width:0;height:0"></iframe>											
+<form name="form_fw" id="form_fw" method="post" enctype="multipart/form-data" action="/cgi-bin/system_mgr.cgi" target="eula_upload_target">  	
+
+<input type="hidden" name="cmd" value="cgi_firmware_upload"> 
+						<span class="file_input_div">					
+							<button type="button">	<span class="_text" lang="_firmware" datafld="update_button"></span></button>							
+								<input type="file" name="file" id="file" size="30" maxLength="256" class="file_input_hidden" onchange="eula_start_upload();" style="cursor:pointer;">
+						</span>		
+								
+								
+</form>
+	
+					
+					</td>	
+				</tr>	
+				
+			</table>
+		
+			<div id="id_eula_auto_new_firm_version"></div><br>	
+			
+				
+			<!--
+			<div id="scrollbar_autofw">
+				<div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+				<div class="viewport">
+       <div class="overview">
+				
+			<span id="id_h_auto_new_firm_note"></span>
+			
+				</div></div>			
+				</div>-->
+	<!--	 <div id="fw_parogressbar"> </div>-->
+
+	
+
+	
+<!-- end -->	 
+	</div>
+	<div class="hrBottom2"><hr/></div>
+	<button class="ButtonRightPos2" id="eula_fwUpdateInstall_button" onclick="fw_install();"><span class="_text" lang="_button" datafld="install"></span></button>					
+</div>

@@ -1,0 +1,234 @@
+<div id="createGroupDiag" class="WDLabelDiag" style="display:none">
+	<div class="WDLabelHeaderDialogue WDLabelHeaderDialogueGroupIcon" id="createGroupDiag_title"></div>
+	<div align="center"><div class="hr"><hr/></div></div>
+	
+	<!-- groupDiag -->
+	<div id="gDiag_group">
+		<div class="WDLabelBodyDialogue" style="overflow:hidden;" >
+			<table id="create_group_tb" border="0" cellspacing="0" cellpadding="0" height="0">
+				<tr class="tdfield">
+					<td><span class="_text" lang="_user" datafld="group_name">Group Name</span></td>
+					<td style="padding-left:10px"><input type="text" name="users_groupName_text" id="users_groupName_text" maxlength="16" value=""></td>
+				</tr>
+			</table>
+			<div style="margin-top:15px" id="add_info" class="_text" lang="_user" datafld="select_group"></div>
+			
+			<div class="scroll-pane-group">
+			        	<div id="user_list_div"></div>
+			        </div>
+		</div><!-- WDLabelBodyDialogue end -->
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonMarginLeft_40px close" id="uesrs_addGroupCancel1_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" id="users_addGroupSave_button"><span class="_text" lang="_button" datafld="apply"></span></button>
+	</div>
+</div> <!-- createGroupDiag end -->
+
+<div id="editGroupDiag" class="WDLabelDiag" style="display:none">
+	<div class="WDLabelHeaderDialogue WDLabelHeaderDialogueGroupIcon" id="editDiag_title"></div>
+	<div align="center"><div class="hr"><hr/></div></div>
+		
+	<!-- m_quotaDiag -->
+	<div id="m_quotaDiag" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<!--<div id="m_g_quota_tb"></div>-->
+			<table border="0" cellspacing="0" cellpadding="0" height="0" id="m_g_quota_tb" width="600">
+				<tr id="v_1" style="display:none">
+					<td class="tdfield"><div id="n1"></div></td>
+					<td class="tdfield_padding">
+						<table border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td><input name="users_v1Size_text" id="users_v1Size_text" type="text" class="input_x2"></td>
+								<!--<td><span id="max_quota_size_1"></span></td>-->
+								<td>
+									<div id="users_v1Unit_select" class="select_menu"></div>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr id="v_2" style="display:none">
+					<td class="tdfield"><div id="n2"></div></td>
+					<td class="tdfield_padding">
+						<table border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td><input name="users_v2Size_text" id="users_v2Size_text" type="text" class="input_x2"></td>
+								<!--<td><span id="max_quota_size_2"></span></td>-->
+								<td>
+									<div id="users_v2Unit_select" class="select_menu"></div>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr id="v_3" style="display:none">
+					<td class="tdfield"><div id="n3"></div></td>
+					<td class="tdfield_padding">
+						<table border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td><input name="users_v3Size_text" id="users_v3Size_text" type="text" class="input_x2"></td>
+								<!--<td><span id="max_quota_size_3"></span></td>-->
+								<td>
+									<div id="users_v3Unit_select" class="select_menu"></div>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr id="v_4" style="display:none">
+					<td class="tdfield"><div id="n4"></div></td>
+					<td class="tdfield_padding">
+						<table border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td><input name="users_v4Size_text" id="users_v4Size_text" type="text" class="input_x2"></td>
+								<!--<td><span id="max_quota_size_4"></span></td>-->
+								<td>
+									<div id="users_v4Unit_select" class="select_menu"></div>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<br>
+			<div class="_text tdfield_padding" lang="_user" datafld="user_description6">
+			(The value for unlimited blocks/inodes is zero)</div>
+		</div>
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonMarginLeft_40px close" id="users_editQuotaCancel_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" id="users_editQuotaSave_button" onclick="modify_group('quota')"><span class="_text" lang="_button" datafld="apply"></span></button>
+	</div> <!-- m_quotaDiag end -->
+	
+	<!-- m_memberDiag -->
+	<div id="m_memberDiag" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="_text" lang="_user" datafld="select_group"></div>
+			<div class="scroll-pane-group" style="margin-top:10px;">
+				<div id="m_user_list_div"></div>
+			</div>
+		</div>
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonMarginLeft_40px close" id="users_editGroupMemberCancel_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" id="users_editGroupMemberSave_button" onclick="modify_group('member')"><span class="_text" lang="_button" datafld="apply"></span></button>
+	</div> <!-- m_memberDiag end -->
+	
+</div> <!-- editUserDiag end -->
+
+<div id="iGroupDiag" class="WDLabelDiag" style="display:none">
+	<div class="WDLabelHeaderDialogue2 WDLabelHeaderDialogueUsersIcon" id="iGroupDiag_title"></div>
+	<div align="center"><div class="hr"><hr/></div></div>
+	
+	<!-- impDiag_sel_type 
+	<div id="impDiag_sel_type" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<table>
+				<tr>
+					<td>
+						<div id="f_type" style="display:none"><button id="muplite_button" class="left_button" value="1"><span class="_text" lang="_common" datafld="batch_create"></span></button><button class="right_button" value="2"><span class="_text" lang="_common" datafld="import_users"></span></button></div>
+					</td>
+				</tr>									
+			</table>
+		</div>
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonMarginLeft_40px close" ><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" id="imp_next_button_1"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div>-->
+				
+	<!-- iGroupDiag_sel_file -->
+	<div id="iGroupDiag_sel_file" style="display:none">
+		<div class="WDLabelBodyDialogue" >
+			<table border="0" width="650" cellspacing="0" cellpadding="0">
+				<tr>
+					<td width="230" class="str_nowrap">&nbsp;<span class="_text" lang="_user" datafld="reference"></span></td>
+					<td width="260" class="padding_td"><button id="users_downloadGroupSample_button" onclick="download_group_sample()"><span class="_text" lang="_wfs" datafld="download"></span></button></td>
+				</tr>
+			</table>
+			<br>
+			<iframe id="upload_target_group" name="upload_target_group" src="" width="1" height="1" marginwidth="1" marginheight="1" scrolling="no" border="0" frameborder="0"></iframe>
+			
+			<table border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td><input type="checkbox" name="users_impGroupOverwrite_chkbox" value="ON" id="users_impGroupOverwrite_chkbox"></td>
+					<td style="padding-left:5px;"><label for="users_impGroupOverwrite_chkbox"><span class="_text" lang="_user" datafld="overwrite_group"></span></label></td>
+				</tr>
+			</table>
+			<br><br>
+			<div style="width:auto;cursor: pointer;">
+				<form name="form_import_group" id="form_import_group" method="post" enctype="multipart/form-data" action="/web/php/upload.php" target="upload_target_group"> 
+					<input type="hidden" name="cmd" value="cgi_import_groups">
+                    <table border="0">
+                    	 <tr>
+                    		<td width="auto">
+								<div class="file_input_div">
+									<button onclick="open_gimport_dialog();"><span class="_text" lang="_user" datafld="sel_glist"></span></button>
+									<input id="users_impGroupsFile_text" class="file_input_hidden" type="file" onchange="show_filename_group();" name="users_impGroupsFile_text">
+									<input type="hidden" id="list_type" name="list_type" value="groups" >
+								</div>
+                    		</td>
+                   		 </tr>	
+                	</table>
+				</form>
+			</div>
+			<div id="file_name_group" style="margin-top:20px"></div>
+		</div>
+		<div class="hrBottom2"><hr/></div>
+		<!--<button type="button" class="ButtonMarginLeft_40px" id="iGroup_back_button_2"><span class="_text" lang="_button" datafld="back"></span></button>-->
+		<button type="button" class="ButtonMarginLeft_40px close" id="users_impGroupCancel1_butto"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" id="users_impGroupNext1_button"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div> <!-- iGroupDiag_sel_file end-->
+
+	<!-- iGroupDiag_apply_to -->
+	<div id="iGroupDiag_apply_to" style="display:none">
+		<div class="WDLabelBodyDialogue" id="imp_group_share_tab">
+			<span class="_text" lang="_user" datafld="user_description5">
+			Allow the user to access following applications</span>
+			<br>
+			<br>
+			<table border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td><input type="checkbox" checked disabled value="ON" name="users_cifs_chkbox" id="users_cifs_chkbox"></td>
+					<td class="tdfield_padding_left_10"><span class="_text" lang="_user" datafld="cifs">CIFS</span></td>					
+				</tr>
+				<tr>
+					<td class="tdfield_padding"><input type="checkbox" checked disabled value="ON" name="users_afp_chkbox" id="users_afp_chkbox"></td>
+					<td class="tdfield_padding tdfield_padding_left_10"><span class="_text" lang="_user" datafld="afp">AFP</span></td>					
+				</tr>
+				<tr>
+					<td class="tdfield_padding"><input type="checkbox" value="ON" name="users_ftp_chkbox" id="users_ftp_chkbox"></td>
+					<td class="tdfield_padding tdfield_padding_left_10"><label for="users_ftp_chkbox"> <span class="_text" lang="_user" datafld="ftp">FTP</span> </label></td>					
+				</tr>
+			</table>
+		</div>
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonMarginLeft_40px" id="users_impGroupBack2_button"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" class="ButtonMarginLeft_20px close" id="users_impGroupCancel2_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" id="users_impGroupNext2_button"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div>
+	
+	<!-- iGroupDiag_complited -->
+	<div id="iGroupDiag_complited" style="display:none">
+		<div class="WDLabelBodyDialogue" >
+			<div class="SpinnerSun" style="display:none"><span class="_text" lang="_common" datafld="loading"></span></div>
+			<div class="scroll-pane-group">
+			<div id="import_group_table" style="margin-top:-10px"></div>
+		</div>
+		</div>
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonMarginLeft_40px" id="users_impGroupBack3_button"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" class="ButtonMarginLeft_20px close" id="users_impGroupCancel3_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" id="users_impGroupSave_button"><span class="_text" lang="_button" datafld="apply"></span></button>
+	</div>
+	
+	<!-- iGroupDiag_detail -->
+	<div id="iGroupDiag_detail" style="display:none">
+		<div class="WDLabelBodyDialogue" >
+			<div id="import_group_info" style="width:500px;height:300px;overflow-x:hidden;overflow-y:auto;"></div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonRightPos2" id="users_impGroupClose_button"><span class="_text" lang="_button" datafld="close"></span></button>
+	</div>
+</div><!-- end iGroupDiag-->
+
+<form action="/cgi-bin/account_mgr.cgi" method="post" name="form_group_download">
+	<input type="hidden" name="cmd" value="cgi_download_import_group_sample">
+</form>

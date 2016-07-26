@@ -1,0 +1,306 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="PRAGMA" content="no-cache"> 
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+
+<style>
+#P2P_Downloads_TFile_Form .file_input_div{
+	position: relative;
+	width:auto;
+	height:auto;
+}
+#P2P_Downloads_TFile_Form .file_input_hidden{
+	cursor: pointer;
+	font-size: 50px; 
+	position: absolute; 
+	right: 0px; 
+	top: 0px; 
+	width:1px;
+	opacity: 0; 
+	filter: alpha(opacity=0); 
+	-ms-filter: "alpha(opacity=0)"; 
+	-khtml-opacity: 0; 
+	-moz-opacity: 0;
+	z-index: -1;
+}
+</style> 
+</head>
+
+<!-- Upload File -->
+<script language="javascript" src="/web/jquery/ajaxfileupload/ajaxfileupload.js"></script>
+<script type="text/javascript" src="/web/function/p2p.js"></script>
+<script type="text/javascript" src="/web/function/p2pDiag.js"></script>
+
+<script type="text/javascript">
+var _SELECT_ITEMS  = new Array(
+	"apps_p2pdownloadsConfigureTorrentSavePath_select",
+	"apps_p2pdownloadsQueueSchedulingType_select",
+	"apps_p2pdownloadsQueueSchedulingStartHour_select",
+	"apps_p2pdownloadsQueueSchedulingStartMins_select",
+	"apps_p2pdownloadsQueueSchedulingStopHour_select",
+	"apps_p2pdownloadsQueueSchedulingStopMins_select");        
+	    
+var timeoutId = 0;
+function page_load()
+{
+	$("#tip_p2pdownload_torrent_url_div").attr('title',_T('_p2p','tip1'));
+	
+	init_switch();
+	init_tooltip();
+		
+	HD_Status(0,function(hd_status){	
+		
+		if ( parseInt(hd_status, 10) == 0 ) //No Volume
+		{
+			setSwitch('#apps_p2pdownloads_switch',	0);
+			$("#apps_p2pdownloads_switch").attr("disabled","disabled");
+			if (!$("#apps_p2pdownloads_switch").hasClass("gray_out")) $("#apps_p2pdownloads_switch").addClass("gray_out");
+			return;
+		}
+	
+		var sys_time = (new Date()).getTime();
+		initDiag("/web/addons/p2pDiag.html?r="+sys_time);
+	
+		$("input:text").inputReset();	
+	
+		p2p_config_get_state();
+	
+		if (getSwitch('#apps_p2pdownloads_switch') == 1) 
+		{	
+			p2p_config_get_config();
+			p2p_downloads_list();	
+		}	
+	
+		if (user_login) //Add by Ben
+		{
+			var msg = (getSwitch('#apps_p2pdownloads_switch') == 1)?_T("_p2p", "msg28"):_T("_p2p", "msg27");
+			$("#_enable_setting").html(msg);
+			$("#_enable_setting").show();
+			$("#this_first_hr").hide();
+		}
+		else
+		{
+			$("#_enable_setting").show();
+		}
+	
+		//scheduling button
+		p2p_download_active_scheduing()
+		
+		$("#apps_p2pdownloadsschedule_button").click(function(){	
+				p2p_config_schedule_diag();
+		});
+		
+		$("#apps_p2pdownloads_switch").click(function(){	
+				var my_p2p = getSwitch('#apps_p2pdownloads_switch');
+				google_analytics_log('P2P_Enabled',my_p2p);
+	    	p2p_config_set_state(my_p2p);
+	  });
+    
+    $("#apps_p2pdownloadsAddURL_button").click(function(){	
+    	if ($(this).hasClass("gray_out")) return;
+			
+    	p2p_download_format_AddURL('1');
+    });
+    
+    $("#apps_p2pdownloadAddURL_form").submit(function( event ) {
+    	if (timeoutId != 0) 
+    	{
+    		clearTimeout(timeoutId);
+    	}	
+    	
+    	event.preventDefault();
+    	
+    	if (!$("#apps_p2pdownloadsAddURL_button").hasClass("gray_out")){
+    		p2p_download_format_AddURL();
+    	}
+    });	
+    
+    $("#apps_p2pdownloadsAddFile_button").click(function(){
+    		if ($(this).hasClass("gray_out")) return;
+    		$("#f_torrent_file").click();
+    });		
+    $("#apps_p2pdownloadsQueueRemoveFinished_button").click(function(){
+    	p2p_download_remove_completed();
+    });	
+    
+    $("#apps_p2pdownloadsQueueScheduling_button").click(function(){	
+    	var grid = $("#p2p_downloads_list");
+		var selected_count = $('.trSelected', grid).length;
+		if(selected_count==0)
+		{
+			jAlert( _T('_user','msg2'), "warning");	//Text:Please select one item.
+			return;
+		}
+		
+		var idx = $('.trSelected td:nth-child(4) div',grid).text();
+		p2p_downloads_torrent_scheduing(idx);
+    });	
+    
+	    $("#apps_p2pdownloadsQueueTop_button").click(function(){	
+    	var grid = $("#p2p_downloads_list");
+		var selected_count = $('.trSelected', grid).length;
+		if(selected_count==0)
+		{
+			jAlert( _T('_user','msg2'), "warning");	//Text:Please select one item.
+			return;
+		}
+		
+		var idx = $('.trSelected td:nth-child(4) div',grid).text();
+		p2p_download_priority_set(idx,'t');
+    });	  	
+    
+    $("#apps_p2pdownloadsQueueUP_button").click(function(){	
+    	
+    	var grid = $("#p2p_downloads_list");
+		var selected_count = $('.trSelected', grid).length;
+		if(selected_count==0)
+		{
+			jAlert( _T('_user','msg2'), "warning");	//Text:Please select one item.
+			return;
+		}
+		
+		var idx = $('.trSelected td:nth-child(4) div',grid).text();
+		
+		 p2p_download_priority_set(idx,'u');
+    });	
+    
+    $("#apps_p2pdownloadsQueueDown_button").click(function(){	
+    	
+    	var grid = $("#p2p_downloads_list");
+			var selected_count = $('.trSelected', grid).length;
+			if(selected_count==0)
+			{
+				jAlert( _T('_user','msg2'), "warning");	//Text:Please select one item.
+				return;
+			}
+			
+			var idx = $('.trSelected td:nth-child(4) div',grid).text();
+		 p2p_download_priority_set(idx,'d');
+    });
+	
+	 $("#apps_p2pdownloadsQueueBottom_button").click(function(){	
+    	
+    	var grid = $("#p2p_downloads_list");
+		var selected_count = $('.trSelected', grid).length;
+		if(selected_count==0)
+		{
+			jAlert( _T('_user','msg2'), "warning");	//Text:Please select one item.
+			return;
+		}
+		
+		var idx = $('.trSelected td:nth-child(4) div',grid).text();
+		 p2p_download_priority_set(idx,'b');
+    });
+			
+	})// end of HD_Status(0,function(hd_status){	
+}
+
+function page_unload()
+{
+	if (timeoutId != 0) clearTimeout(timeoutId);
+}
+</script>
+
+<body>
+ <div id="_enable_setting" style="display: none;">
+	<!-- Block 1 : Configuration Set -->
+	<div class="h1_content header_2"><span class="_text" lang="_p2p" datafld="title2"></span></div>																
+	<div>
+		<table border="0" cellpadding="0" cellspacing="0">
+			  	<tr>
+	            	<td class="tdfield" style="width:40px"><span class="_text" lang="_p2p" datafld="title"></span></td>
+	                <td class="tdfield_padding">
+	                	<input id="apps_p2pdownloads_switch" name="apps_p2pdownloads_switch" class="onoffswitch" type="checkbox" value="true" >						
+	                </td>
+	                <td class="tdfield_padding" style="padding-left:20px;" id="TD_P2P_Config_Set" style="display:none;">
+	                	<a id="apps_p2pdownloadsConfigure_link" href="javascript:p2p_config_diag();" class="edit_detail"><span class="_text" lang="_p2p" datafld="config"></span> >></a>
+	                </td>
+	         </tr>
+	         <tr id="apps_p2pconfig_schedule_tr" style="display:none;">
+	            	<td class="tdfield" style="width:40px"><span class="_text" lang="_p2p" datafld="schedule"></span></td>
+	              <td class="tdfield_padding" colspans="2">
+	              		<button type="button" id="apps_p2pdownloadsschedule_button"><span class="_text" lang="_p2p" datafld="config"></span></button>
+	              </td>
+	         </tr>
+	     </table>	
+	</div>
+ </div>
+
+	<div id="DIV_P2P_Downloads" style="display:none;">
+		
+		<!-- Block 3 : Torrent Upload / Get -->
+		<div class="hr_0_content"><div class="hr_1"></div></div>
+		<div class="h1_content header_2"><span class="_text" lang="_menu" datafld="p2p_downloads"></span></div>
+		<div class="field_top">
+			 <table border="0">
+              <tr>
+                <td>
+                    <form method="POST" name="add_url_form" id="apps_p2pdownloadAddURL_form" action="">
+                     <table border="0">
+                     	<tr>
+                     		<td class="tdfield"><span class="_text" lang="_p2p" datafld="add_url">Add Torrents From URL</span></td>
+                     		<td class="tdfield_padding"><input type="text" name="f_torrent_url" id="f_torrent_url"></td>
+                     		<td class="tdfield_padding tdfield_padding_left_10"><button type="button" id="apps_p2pdownloadsAddURL_button"><span class="_text" lang="_button" datafld="add_torrent"></span></button></td>
+                    		<td class="tdfield_padding"><div class="TooltipIcon" id="tip_p2pdownload_torrent_url_div"></div></td>
+                    	</tr>	
+                     </table>		
+                    </form>
+                </td>
+              </tr>
+        	  <tr>
+                 <td>
+                    <form method="POST" name="P2P_Downloads_TFile_Form" id="P2P_Downloads_TFile_Form" action="#" enctype="multipart/form-data" onSubmit="return false;">
+                        <table border="0">
+	                    	 <tr>
+	                    	 	<td class="tdfield"><span class="_text" lang="_p2p" datafld="add_file">Add Torrent From File</span></td>
+	                    		<td class="tdfield_padding" width="auto">
+	                    			
+	                    			<div class="file_input_div">
+														<button type="button" id="apps_p2pdownloadsAddFile_button"><span class="_text" lang="_p2p" datafld="button1"></span></button>
+														<input type="file" name="f_torrent_file" id="f_torrent_file"  class="file_input_hidden" type="file" onchange="p2p_downloads_add_file();">
+														</div>
+														
+	                    		</td>
+	                   		 </tr>	
+	                	</table>	
+                     </form>
+                </td>
+              </tr>
+             </table>
+			
+		</div>
+							
+		<!-- Block 3 : Torrent List -->
+		<div class="hr_0_content"><div class="hr_1"></div></div>
+		<div class="h1_content header_2"><span class="_text" lang="_menu" datafld="p2p_downloads_queue"></span></div>
+		<div class="field_top"  id="div_p2p_download_button" style="display:none">
+			<table>
+				<tr>
+					<!-- button : Remove Completed -->
+					<td><button type="button" id="apps_p2pdownloadsQueueRemoveFinished_button"><span class="_text" lang="_p2p" datafld="remove_completed"></span></button></td>
+					<!-- button : Torrent Scheduling -->
+					<td id="td_but_p2p_download_scheduling" style="display:none"><button type="button" id="apps_p2pdownloadsQueueScheduling_button"><span class="_text" lang="_p2p" datafld="torrent_scheduling"></span></button></td>
+					<!-- button : Top -->
+					<td><button type="button" id="apps_p2pdownloadsQueueTop_button"><span class="_text" lang="_p2p" datafld="top"></span></button></td>
+					<!-- button : UP -->
+					<td><button type="button" id="apps_p2pdownloadsQueueUP_button"><span class="_text" lang="_p2p" datafld="up"></span></button></td>
+					<!-- button : Down -->
+					<td><button type="button" id="apps_p2pdownloadsQueueDown_button"><span class="_text" lang="_p2p" datafld="down"></span></button></td>
+					<!-- button : Bottom -->
+					<td><button type="button" id="apps_p2pdownloadsQueueBottom_button"><span class="_text" lang="_p2p" datafld="bottom"></span></button></td>
+				</tr>	
+				
+			</table>	
+		</div>
+		<div class="field_top" sytle="border:#ff00FF 1px solid;">
+			<table id="p2p_downloads_list"></table>
+		</div>
+	</div>
+
+	<div class="field_top" style="border:0px solid red;height:10px"></div>	
+
+</body>
+</html>

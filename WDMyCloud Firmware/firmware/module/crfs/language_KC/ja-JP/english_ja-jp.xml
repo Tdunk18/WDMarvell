@@ -1,0 +1,3507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<text>
+  <_menu_title>
+    <home len="16">ホーム</home>
+    <users len="16">ユーザー</users>
+    <shares len="16">共有</shares>
+    <cloud_access len="16">クラウド アクセス</cloud_access>
+    <backups len="16">バックアップ</backups>
+    <storage len="16">ストレージ</storage>
+    <app len="16">アプリ</app>
+    <settings len="16">設定</settings>
+  </_menu_title>
+  <_menu>
+    <lan len="22">LAN 設定</lan>
+    <time len="22">日時</time>
+    <device len="22">デバイス</device>
+    <network len="22">ネットワーク</network>
+    <quota len="22">割り当て</quota>
+    <itunes len="22">iTunes サーバー</itunes>
+    <addon len="22">アプリ</addon>
+    <system len="22">システム設定</system>
+    <firmware len="22">ファームウェア アップグレード</firmware>
+    <email len="22">通知</email>
+    <power len="22">電源管理</power>
+    <ddns len="22">動的 DNS</ddns>
+    <disk len="22">ディスクのスキャン</disk>
+    <system_info len="22">システム情報</system_info>
+    <logs len="22">ログ</logs>
+    <p2p_downloads len="22">P2P ダウンロード</p2p_downloads>
+    <p2p_downloads_queue len="22">P2P ダウンロード キュー</p2p_downloads_queue>
+    <time_machine len="22">Time Machine</time_machine>
+    <logout len="22">ログアウト</logout>
+    <network_services len="22">ネットワーク サービス</network_services>
+    <afp len="22">AFP サービス</afp>
+    <nfs len="22">NFS サービス</nfs>
+    <remote_backups len="22">リモート バックアップ</remote_backups>
+    <web_file_server len="22">Web ファイル ビューア</web_file_server>
+    <language len="22">言語</language>
+    <resource_monitor_estimated len="26">リソース監視の推定</resource_monitor_estimated>
+    <ads len="22">Active Directory</ads>
+    <forwarding len="22">ポート転送</forwarding>
+    <resource_monitor len="22">リソース監視</resource_monitor>
+    <snmp len="22">SNMP</snmp>
+    <dfs len="23">共有集約</dfs>
+    <usb_backups len="22">USB バックアップ</usb_backups>
+    <ipv6 len="22">IPv6 設定</ipv6>
+    <volume_encryption len="22">ボリューム暗号化</volume_encryption>
+    <usb_device len="22">USB デバイス</usb_device>
+    <my_file len="15">Web ファイル ビューア</my_file>
+    <ftp_downloads len="22">FTP ダウンロード</ftp_downloads>
+    <http_downloads len="22">HTTP ダウンロード</http_downloads>
+    <RAID len="22">RAID</RAID>
+    <general>全般</general>
+    <iso_mount>ISO マウント</iso_mount>
+    <media>メディア</media>
+    <utilities>ユーティリティ</utilities>
+    <firmware_update>ファームウェア更新</firmware_update>
+    <no_usb>USB デバイスが見つかりません。</no_usb>
+    <unmount_success>マウント解除しました</unmount_success>
+    <service>サービス</service>
+  <safepoints>Safepoint の移行</safepoints></_menu>
+  <_button>
+    <Skip len="11">スキップ</Skip>
+    <Ok len="11">OK</Ok>
+    <Next len="11">次へ</Next>
+    <Cancel len="999">キャンセル</Cancel>
+    <Previous len="11">前へ</Previous>
+    <Exit len="11">終了</Exit>
+    <Restart len="11">再起動</Restart>
+    <Completed len="11">完了</Completed>
+    <save_settings len="20">設定の保存</save_settings>
+    <set_time len="25">コンピュータの時刻を設定</set_time>
+    <restore len="16">復元</restore>
+    <shutdown len="16">シャットダウン</shutdown>
+    <save len="10">保存</save>
+    <load len="10">読み込み</load>
+    <apply len="10">適用</apply>
+    <test_mail len="10">テスト電子メール</test_mail>
+    <normal len="999">正常</normal>
+    <refresh len="10">更新</refresh>
+    <refresh_all len="10">すべて更新</refresh_all>
+    <browse len="10">参照</browse>
+    <finished len="999">完了</finished>
+    <configuration len="999">設定</configuration>
+    <applications len="999">アプリケーション</applications>
+    <confirm len="11">確認</confirm>
+    <scan_disk len="10">ディスクのスキャン</scan_disk>
+    <create len="10">作成</create>
+    <finish len="11">完了</finish>
+    <abnormal len="999">異常</abnormal>
+    <local len="10">ローカル</local>
+    <test len="10">テスト</test>
+    <add_torrent len="11">Torrent の追加</add_torrent>
+    <close len="16">閉じる</close>
+    <format len="11">フォーマット</format>
+    <unmount len="10">マウント解除</unmount>
+    <clear len="10">クリア</clear>
+    <cfg_link len="10">設定リンク</cfg_link>
+    <yes len="10">はい</yes>
+    <no len="10">いいえ</no>
+    <add len="10">追加</add>
+    <back len="10">戻る</back>
+    <search len="10">検索</search>
+    <install len="20">インストールして再起動</install>
+    <remove>削除</remove>
+    <continue>続行</continue>
+    <dismiss_all>すべて非表示</dismiss_all>
+  <switch_to_quick>簡易に切り替え</switch_to_quick></_button>
+  <_common>
+    <enable len="26">有効にする</enable>
+    <disable len="26">無効にする</disable>
+    <product len="999">製品ページ</product>
+    <firmware len="999">ファームウェア バージョン</firmware>
+    <update_success len="167">設定が保存されました</update_success>
+    <set_success len="167">設定が正しく保存されました。</set_success>
+    <success len="999">成功</success>
+    <error len="999">エラー</error>
+    <wait len="999">お待ちください...</wait>
+    <add len="10">追加</add>
+    <modify len="10">修正</modify>
+    <del len="10">削除</del>
+    <page len="10">ページ</page>
+    <of len="999">中</of>
+    <display len="999">表示</display>
+    <to len="999">～</to>
+    <item len="999">項目</item>
+    <completed len="999">完了</completed>
+    <message len="999">メッセージ</message>
+    <start len="999">開始</start>
+    <stop len="999">停止</stop>
+    <loading len="999">読み込んでいます...</loading>
+    <saving len="999">保存しています</saving>
+    <connection_error len="45">接続エラー</connection_error>
+    <no_items len="45">項目なし</no_items>
+    <new len="10">新規</new>
+    <wait_msg len="68">WD My Cloud EX2 Ultra システムが再起動しています。処理が完了するのをお待ちください。</wait_msg>
+    <shutdown_msg len="68">WD My Cloud EX2 Ultra システムがシャットダウンしました。</shutdown_msg>
+    <warning len="7">警告</warning>
+    <save_msg len="167">新しい設定を保存してもよろしいですか?</save_msg>
+    <unlimited len="10">無制限</unlimited>
+    <none len="999">なし</none>
+    <quick_search len="26">簡易検索</quick_search>
+    <pagestat len="36">
+      <![CDATA[{total} 項目中 {from} ～ {to} 件を表示しています]]>
+    </pagestat>
+    <processing len="45">処理しています。お待ちください...</processing>
+    <batch_create len="80">複数ユーザーの作成</batch_create>
+    <import_users len="16">ユーザーのインポート</import_users>
+    <info len="999">情報</info>
+    <set>設定...</set>
+    <agree>同意</agree>
+    <download>ダウンロード中...</download>
+    <filename>ファイル名</filename>
+    <retrieving>取得中</retrieving>
+    <updating>更新中</updating>
+    <on>オン</on>
+    <off>オフ</off>
+    <list>リスト</list>
+    <jan>1</jan>
+    <feb>2</feb>
+    <mar>3</mar>
+    <apr>4</apr>
+    <may>5</may>
+    <jun>6</jun>
+    <jul>7</jul>
+    <aug>8</aug>
+    <sep>9</sep>
+    <oct>10</oct>
+    <nov>11</nov>
+    <dec>12</dec>
+    <january>1 月</january>
+    <february>2 月</february>
+    <march>3 月</march>
+    <april>4 月</april>
+    <june>6 月</june>
+    <july>7 月</july>
+    <august>8 月</august>
+    <september>9 月</september>
+    <october>10 月</october>
+    <november>11 月</november>
+    <december>12 月</december>
+    <date_format1>dddd, mmmm dd, yyyy, h:MM:ss TT</date_format1>
+    <code>コード</code>
+    <day>日</day>
+    <hours>時間</hours>
+    <minutes>分</minutes>
+  <hour len="999">時間</hour>
+    <minute len="999">分</minute>
+    <days>日</days>
+  <installed>インストール済みです</installed><checking>確認中...</checking></_common>
+  <_login>
+    <user>ユーザー</user>
+    <sel len="26">アカウントを選択してください</sel>
+    <admin len="31">システム管理者 (admin)</admin>
+    <others len="6">その他</others>
+    <pw len="11">パスワード</pw>
+    <remember len="30">ログイン情報を記憶する</remember>
+    <ssl len="30">SSL ログイン</ssl>
+    <login len="16">ログイン</login>
+    <more len="4">詳細</more>
+    <msg1 len="999">管理者のみが [設定] ページにアクセスできます。</msg1>
+    <msg2 len="999">WD My Cloud EX2 Ultra システムが再起動しています。処理が完了するのをお待ちください。</msg2>
+    <msg3 len="115">入力したユーザー名またはパスワードが間違っています。&lt;br&gt;もう一度入力してください。</msg3>
+    <msg4 len="115">入力したユーザー アカウントは現在使用中です。&lt;br&gt;管理者に連絡するか、しばらくたってから再試行してください。</msg4>
+    <msg5 len="167">ログインがタイムアウトしました。再ログインしてください。</msg5>
+    <msg6 len="115"><![CDATA[入力したユーザー名またはパスワードが正しくありません。ヘルプが必要な場合は、<a href="%s" target="_blank">こちら</a>をご覧ください。]]></msg6>
+    <msg_booting len="167">システムが起動しています。お待ちください。</msg_booting>
+  <msg7>パスワードが作成されていません</msg7>
+  <msg_system_restore>システムのフォーマット中です。お待ちください。</msg_system_restore><msg8>入力したパスワードは期限切れです。ドメイン管理者に連絡し、新しいパスワードを設定してください。</msg8><msg_scandisk_power_failure>システムの電源が切れました。ファイル システムの一貫性チェックを実行しています。お待ちください</msg_scandisk_power_failure><msg9>ブラウザがサポートされていません。</msg9><msg10>&lt;p&gt;Internet Explorer のこのバージョンには対応していません。&lt;/p&gt;
+&lt;p&gt;最新バージョンの Microsoft Internet Explorer にアップデートするか、または対応しているその他のブラウザ (Google Chrome、Mozilla Firefox など) を使用して、この Web インターフェイスを表示してください。&lt;/p&gt;</msg10><msg11>管理者ユーザーのみが許可されています。</msg11><account_locked>ドメイン アカウントがロックされています。ドメイン管理者にご相談ください。</account_locked></_login>
+  <_home>
+    <storage len="23">ストレージ ステータス</storage>
+    <shutdown len="13">シャットダウン</shutdown>
+    <restart len="13">再起動</restart>
+    <welcome len="32">ようこそ</welcome>
+    <capacity len="10">容量</capacity>
+    <available len="10">使用可能</available>
+    <system_log len="24">最近のアクティビティ</system_log>
+    <temperature>温度</temperature>
+    <normal>正常</normal>
+    <elevated>昇格</elevated>
+    <critical>重大</critical>
+    <healthy>正常</healthy>
+    <RPM>RPM</RPM>
+    <imminent_failure>近いうちに起こる故障</imminent_failure>
+    <fault>障害</fault>
+    <diagnostics>診断</diagnostics>
+    <firmware len="22">ファームウェア</firmware>
+    <free len="999">空き</free>
+    <desc1 len="999">容量の使用状況</desc1>
+    <desc2 len="999">My Cloud EX2 Ultra システム容量の現在の使用状況。</desc2>
+    <desc3 len="999">WD My Cloud EX2 Ultra システムの全体的な正常性を示すシステム コンポーネントのスナップショットを表示します。</desc3>
+    <desc4 len="999">温度ステータス</desc4>
+    <desc5 len="999">ドライブ SMART ステータス</desc5>
+    <desc6 len="999">ファン速度ステータス</desc6>
+    <desc7 len="999">ファン速度</desc7>
+    <desc8 len="999">ドライブ ステータス</desc8>
+    <desc9 len="999">RAID の状態ステータス</desc9>
+    <desc10 len="999">注意</desc10>
+    <desc11 len="999">空き</desc11>
+    <desc12 len="999">ムービー</desc12>
+    <desc13 len="999">音楽</desc13>
+    <desc14 len="999">画像</desc14>
+    <desc15 len="999">その他</desc15>
+    <msg1 len="999">システムがシャットダウンします。続行してもよろしいですか?</msg1>
+    <msg2 len="999">USB デバイスが見つかりません。</msg2>
+    <usb_details>USB デバイス詳細</usb_details>
+    <usb_device_name>USB デバイス名</usb_device_name>
+    <usb_manufacturer>製造元</usb_manufacturer>
+    <usb_model>モデル</usb_model>
+    <usb_serial_number>シリアル番号</usb_serial_number>
+    <usb_firmware_version>ファームウェア バージョン</usb_firmware_version>
+    <usb_Size>サイズ</usb_Size>
+    <usb_unlock_device>USB デバイスのロック解除</usb_unlock_device>
+    <usb_password>パスワード</usb_password>
+    <usb_password_hint>パスワードのヒント</usb_password_hint>
+    <usb_save_password>パスワードの保存</usb_save_password>
+    <usb_eject_title>USB デバイスを取り外してもよろしいですか?</usb_eject_title>
+    <usb_eject_msg>
+  &lt;b&gt;この USB デバイスを取り外してもよろしいですか?&lt;/b&gt;
+  &lt;ul&gt;
+   &lt;li&gt;この USB デバイスを取り外すと、My Cloud EX2 Ultra システムで関連づけられている共有がすべて切断されます。&lt;/li&gt;
+   &lt;li&gt;実行中のバックアップ ジョブは中断されます。&lt;/li&gt;
+   &lt;li&gt;リモートでログオンしている場合は、この USB デバイスを再接続するまで、デバイスにアクセスできません。&lt;/li&gt;
+  &lt;/ul&gt;
+  </usb_eject_msg>
+    <umount_usb_drive>USB ドライブの取り出し</umount_usb_drive>
+    <usb_size>{0} なし {1}</usb_size>
+    <usb_unlock_password_error>正しくない USB パスワード。再試行してください。</usb_unlock_password_error>
+    <usb_unlock>ロック解除</usb_unlock>
+
+    <ups_details>UPS デバイス詳細</ups_details>
+    <ups_barrery_charge_bar>バッテリ充電: {0}{1}</ups_barrery_charge_bar>
+    <ups_barrery_charge>バッテリ充電</ups_barrery_charge>
+    <ups_barrery_charge_OL>電源使用時</ups_barrery_charge_OL>
+    <ups_barrery_charge_OB>バッテリ使用時</ups_barrery_charge_OB>
+    <ups_barrery_charge_LB>バッテリ低下</ups_barrery_charge_LB>
+    <ups_status>ステータス</ups_status>
+  <usb_unlock_exceeded>
+  パスワード回復の試行回数が多すぎます&lt;br&gt;
+  再試行するには：&lt;br&gt;
+  1.My Cloud EX2 Ultra システムから安全に USB ドライブを取り外します&lt;br&gt;
+  2.My Cloud EX2 Ultra システムに USB ドライブを再接続します&lt;br&gt;
+  </usb_unlock_exceeded><usb_unlock_exceeded_title>パスワード試行回数が多すぎます</usb_unlock_exceeded_title><desc16>S.M.A.R.T.温度</desc16><desc17>ドライブ X  の温度</desc17><usb_port_num>接続済みの USB ポート {0}</usb_port_num><usb_port_front>正面パネルの接続済み USB ポート</usb_port_front></_home>
+  <_user_login_home>
+    <quick_status>簡易ステータス</quick_status>
+    <last_time_login>前回のログイン時刻:</last_time_login>
+    <total_ftp_downloads>FTP ダウンロード合計数</total_ftp_downloads>
+    <total_http_downloads>HTTP ダウンロード合計数</total_http_downloads>
+    <total_p2p_downloads>P2P ダウンロード合計数</total_p2p_downloads>
+    <download_wd_apps>WD Apps のダウンロード</download_wd_apps>
+    <wd_my_cloud_desktop>My Cloud Desktop</wd_my_cloud_desktop>
+    <wd_2go_photos>My Cloud および WD Photos です。</wd_2go_photos>
+  </_user_login_home>
+  <_lan>
+    <title len="61">LAN 設定</title>
+    <title2 len="61">IPv6 設定</title2>
+    <title3>ネットワーク プロファイル</title3>
+    <wizard_description len="999">
+   このウィザードでは、段階的な手順を実行し、WD My Cloud EX2 Ultra システムでネットワーク インターフェイスを設定します。
+   [&lt;b&gt;次へ&lt;/b&gt;] をクリックして続行します。
+  </wizard_description>
+    <wizard_description2 len="999">
+      <![CDATA[
+	 		1.IP 設定<br><br> 2.サマリー<br>
+		]]>
+    </wizard_description2>
+    <ip_description len="999">
+      <![CDATA[ネットワーク設定に従い、これらの LAN 設定を構成します。]]>
+    </ip_description>
+    <vlan_description len="999">スイッチ ボタンをクリックし、VLAN 設定のオン/オフを切り替えます。&lt;br&gt;
+  各 VLAN には ID が必要です。VLAN に関連付けられた数字を入力します。
+  </vlan_description>
+    <dhcp_client len="30">DHCP クライアント</dhcp_client>
+    <static_ip len="30">固定 IP</static_ip>
+    <ip_address len="30">IP アドレス</ip_address>
+    <subnet_mask len="30">サブネット マスク</subnet_mask><gateway len="30">ゲートウェイ IP アドレス</gateway><dns len="30">DNS サーバー</dns><dns1 len="30">DNS サーバー 1</dns1><dns2 len="30">DNS サーバー 2</dns2><dns3 len="30">DNS サーバー 3</dns3><mac len="30">MAC アドレス</mac><lltd_title len="999">LLTD 設定</lltd_title><lltd len="25">LLTD</lltd><jumbo_frame>ジャンボ フレーム</jumbo_frame><speed_title len="999">リンク速度設定</speed_title><speed len="30">リンク速度</speed><speed2 len="30">速度</speed2><auto len="999">自動</auto><lan1 len="999">LAN 1</lan1><lan2 len="999">LAN 2</lan2><merge len="999">LAN 1 + LAN 2</merge><vlan_id_info len="999">1 ～ 4094</vlan_id_info><vlan len="999">VLAN</vlan><vlan_id len="999">VLAN ID</vlan_id><route_title len="999">ルート設定</route_title><tunnel_title len="999">トンネル ブローカ設定</tunnel_title><dns_auto1 len="999">DNS サーバーのアドレスを自動的に取得します。</dns_auto1><dns_auto2 len="999">次の DNS サーバー アドレスを使用します。</dns_auto2><ftp_access len="999">FTP アクセス</ftp_access><ftp_access_set len="999">FTP 設定</ftp_access_set><ftp_config len="999">設定</ftp_config><choose_dhcp>DHCP モード設定を選択してください。</choose_dhcp><auto_fill>Google Public DNS を使用</auto_fill><google_dns>Google Public DNS を使用する際には、Google の該当する利用規約およびプライバシー ポリシーが適用されます。</google_dns><smb2>SMB 2</smb2><max_smb>最大 SMB プロトコル</max_smb><network_mode>ネットワーク モード</network_mode></_lan>
+  <_time>
+    <date_format>日付の形式</date_format>
+    <time_format>時刻の形式</time_format>
+    <title len="999">
+      <![CDATA[言語と時刻]]>
+    </title>
+    <current_time len="40">
+      <![CDATA[日時]]>
+    </current_time>
+    <time_d_header>
+      <![CDATA[日時設定]]>
+    </time_d_header>
+    <time_d_desc>現在の日時を入力します。</time_d_desc>
+    <date len="30">日付</date>
+    <time len="30">時刻</time>
+    <timezone len="40">タイム ゾーン</timezone>
+    <GMT-12-00 len="999">
+      <![CDATA[(GMT-12:00) 国際日付変更線西部]]>
+    </GMT-12-00>
+    <GMT-11-00 len="999">
+      <![CDATA[(GMT-11:00) UTC-11]]>
+    </GMT-11-00>
+    <GMT-11-00_1 len="999">
+      <![CDATA[(GMT-11:00) サモア]]>
+    </GMT-11-00_1>
+    <GMT-10-00 len="999">
+      <![CDATA[(GMT-10:00) ハワイ]]>
+    </GMT-10-00>
+    <GMT-09-00 len="999">
+      <![CDATA[(GMT-09:00) アラスカ]]>
+    </GMT-09-00>
+    <GMT-08-00 len="999">
+      <![CDATA[(GMT-08:00) バハ・カリフォルニア]]>
+    </GMT-08-00>
+    <GMT-08-00_1 len="999">
+      <![CDATA[(GMT-08:00) 太平洋標準時 (米国およびカナダ)]]>
+    </GMT-08-00_1>
+    <GMT-07-00 len="999">
+      <![CDATA[(GMT-07:00) 山地標準時 (米国およびカナダ)]]>
+    </GMT-07-00>
+    <GMT-07-00_1 len="999">
+      <![CDATA[(GMT-07:00) アリゾナ]]>
+    </GMT-07-00_1>
+    <GMT-07-00_2 len="999">
+      <![CDATA[(GMT-07:00) チワワ、ラパス、マサトラン]]>
+    </GMT-07-00_2>
+    <GMT-06-00 len="999">
+      <![CDATA[(GMT-06:00) 中央アメリカ]]>
+    </GMT-06-00>
+    <GMT-06-00_1 len="999">
+      <![CDATA[(GMT-06:00) 中部標準時 (米国およびカナダ)]]>
+    </GMT-06-00_1>
+    <GMT-06-00_2 len="999">
+      <![CDATA[(GMT-06:00) グアダラハラ、メキシコシティ、モントレー]]>
+    </GMT-06-00_2>
+    <GMT-06-00_3 len="999">
+      <![CDATA[(GMT-06:00) サスカチュワン]]>
+    </GMT-06-00_3>
+    <GMT-05-00 len="999">
+      <![CDATA[(GMT-05:00) インディアナ東部]]>
+    </GMT-05-00>
+    <GMT-05-00_1 len="999">
+      <![CDATA[(GMT-05:00) 東部標準時 (米国およびカナダ)]]>
+    </GMT-05-00_1>
+    <GMT-09-00_2 len="999">
+      <![CDATA[(GMT-05:00) ボゴタ、リマ、キト]]>
+    </GMT-09-00_2>
+    <GMT-04-30 len="999">
+      <![CDATA[(GMT-04:30) カラカス]]>
+    </GMT-04-30>
+    <GMT-04-00 len="999">
+      <![CDATA[(GMT-04:00) 大西洋標準時 (カナダ)]]>
+    </GMT-04-00>
+    <GMT-04-00_1 len="999">
+      <![CDATA[(GMT-04:00) ジョージタウン、ラパス、マナウス、サンファン]]>
+    </GMT-04-00_1>
+    <GMT-04-00_2 len="999">
+      <![CDATA[(GMT-04:00) アスンシオン]]>
+    </GMT-04-00_2>
+    <GMT-04-00_3 len="999">
+      <![CDATA[(GMT-04:00) サンティアゴ]]>
+    </GMT-04-00_3>
+    <GMT-04-00_4 len="999">
+      <![CDATA[(GMT-04:00) クイアバ]]>
+    </GMT-04-00_4>
+    <GMT-03-30 len="999">
+      <![CDATA[(GMT-03:30) ニューファンドランド]]>
+    </GMT-03-30>
+    <GMT-03-00 len="999">
+      <![CDATA[(GMT-03:00) ブラジリア]]>
+    </GMT-03-00>
+    <GMT-03-00_1 len="999">
+      <![CDATA[(GMT-03:00) ブエノスアイレス]]>
+    </GMT-03-00_1>
+    <GMT-03-00_2 len="999">
+      <![CDATA[(GMT-03:00) グリーンランド]]>
+    </GMT-03-00_2>
+    <GMT-03-00_3 len="999">
+      <![CDATA[(GMT-03:00) カイエンヌ、フォルタレザ]]>
+    </GMT-03-00_3>
+    <GMT-03-00_4 len="999">
+      <![CDATA[(GMT-03:00) モンテビデオ]]>
+    </GMT-03-00_4>
+    <GMT-02-00 len="999">
+      <![CDATA[(GMT-02:00) 中央大西洋]]>
+    </GMT-02-00>
+    <GMT-02-00_1 len="999">
+      <![CDATA[(GMT-02:00) UTC-2]]>
+    </GMT-02-00_1>
+    <GMT-01-00 len="999">
+      <![CDATA[(GMT-01:00) アゾレス諸島]]>
+    </GMT-01-00>
+    <GMT-01-00_1 len="999">
+      <![CDATA[(GMT-01:00) カーボベルデ諸島]]>
+    </GMT-01-00_1>
+    <GMT len="999">
+      <![CDATA[(GMT) カサブランカ]]>
+    </GMT>
+    <GMT_1 len="999">
+      <![CDATA[(GMT) グリニッジ標準時]]>
+    </GMT_1>
+    <GMT_2 len="999">
+      <![CDATA[(GMT) モンロビア、レイキャビク]]>
+    </GMT_2>
+    <GMT_3 len="999">
+      <![CDATA[(GMT) ダブリン、エジンバラ、リスボン、ロンドン]]>
+    </GMT_3>
+    <GMT01-00 len="999">
+      <![CDATA[(GMT+01:00) 西中央アフリカ]]>
+    </GMT01-00>
+    <GMT01-00_1 len="999">
+      <![CDATA[(GMT+01:00) ブリュッセル、コペンハーゲン、マドリッド、パリ]]>
+    </GMT01-00_1>
+    <GMT01-00_2 len="999">
+      <![CDATA[(GMT+01:00) ベオグラード、ブラチスラバ、ブダペスト、リュブリャナ、プラハ]]>
+    </GMT01-00_2>
+    <GMT01-00_3 len="999">
+      <![CDATA[(GMT+01:00) アムステルダム、ベルリン、ベルン、ローマ、ストックホルム、ウィーン]]>
+    </GMT01-00_3>
+    <GMT01-00_4 len="999">
+      <![CDATA[(GMT+01:00) サラエボ、スコピエ、ワルシャワ、ザグレブ]]>
+    </GMT01-00_4>
+    <GMT01-00_5 len="999">
+      <![CDATA[(GMT+01:00) ウィントフーク]]>
+    </GMT01-00_5>
+    <GMT02-00 len="999">
+      <![CDATA[(GMT+02:00) アンマン]]>
+    </GMT02-00>
+    <GMT02-00_1 len="999">
+      <![CDATA[(GMT+02:00) ベイルート]]>
+    </GMT02-00_1>
+    <GMT02-00_2 len="999">
+      <![CDATA[(GMT+02:00) ミンスク]]>
+    </GMT02-00_2>
+    <GMT02-00_3 len="999">
+      <![CDATA[(GMT+02:00) ハラーレ、プレトリア]]>
+    </GMT02-00_3>
+    <GMT02-00_4 len="999">
+      <![CDATA[(GMT+02:00) エルサレム]]>
+    </GMT02-00_4>
+    <GMT02-00_5 len="999">
+      <![CDATA[(GMT+02:00) カイロ]]>
+    </GMT02-00_5>
+    <GMT02-00_6 len="999">
+      <![CDATA[(GMT+02:00) アテネ、ブカレスト]]>
+    </GMT02-00_6>
+    <GMT02-00_7 len="999">
+      <![CDATA[(GMT+02:00) ウィントフーク]]>
+    </GMT02-00_7>
+    <GMT02-00_8 len="999">
+      <![CDATA[(GMT+02:00) ヘルシンキ、キエフ、リガ、ソフィア、タリン、ビリニュス]]>
+    </GMT02-00_8>
+    <GMT02-00_9 len="999">
+      <![CDATA[(GMT+02:00) ダマスカス]]>
+    </GMT02-00_9>
+    <GMT02-00_10 len="999">
+      <![CDATA[(GMT+02:00) ニコシア]]>
+    </GMT02-00_10>
+    <GMT02-00_11 len="999">
+      <![CDATA[(GMT+02:00) イスタンブール]]>
+    </GMT02-00_11>
+    <GMT03-00 len="999">
+      <![CDATA[(GMT+03:00) バグダッド]]>
+    </GMT03-00>
+    <GMT03-00_1 len="999">
+      <![CDATA[(GMT+03:00) ナイロビ]]>
+    </GMT03-00_1>
+    <GMT03-00_2 len="999">
+      <![CDATA[(GMT+03:00) クウェート、リヤド]]>
+    </GMT03-00_2>
+    <GMT03-00_3 len="999">
+      <![CDATA[(GMT+03:00) カリーニングラード、ミンスク]]>
+    </GMT03-00_3>
+    <GMT03-30 len="999">
+      <![CDATA[(GMT+03:30) テヘラン]]>
+    </GMT03-30>
+    <GMT04-00 len="999">
+      <![CDATA[(GMT+04:00) バクー]]>
+    </GMT04-00>
+    <GMT04-00_1 len="999">
+      <![CDATA[(GMT+04:00) アブダビ、マスカット]]>
+    </GMT04-00_1>
+    <GMT04-00_2 len="999">
+      <![CDATA[(GMT+04:00) トビリシ]]>
+    </GMT04-00_2>
+    <GMT04-00_3 len="999">
+      <![CDATA[(GMT+04:00) エレバン]]>
+    </GMT04-00_3>
+    <GMT04-00_4 len="999">
+      <![CDATA[(GMT+04:00) ポート・ルイス]]>
+    </GMT04-00_4>
+    <GMT03-00_4 len="999">
+      <![CDATA[(GMT+03:00) モスクワ、サンクトペテルブルグ、ボルゴグラード]]>
+    </GMT03-00_4>
+    <GMT04-30 len="999">
+      <![CDATA[(GMT+04:30) カブール]]>
+    </GMT04-30>
+    <GMT05-00_1 len="999">
+      <![CDATA[(GMT+05:00) イスラマバード、カラチ]]>
+    </GMT05-00_1>
+    <GMT05-00_2 len="999">
+      <![CDATA[(GMT+05:00) タシケント]]>
+    </GMT05-00_2>
+    <GMT05-30 len="999">
+      <![CDATA[(GMT+05:30) チェンマイ、コルカタ、ムンバイ、ニューデリー]]>
+    </GMT05-30>
+    <GMT05-30_1 len="999">
+      <![CDATA[(GMT+05:30) スリジャヤワルダナプラコッテ]]>
+    </GMT05-30_1>
+    <GMT05-45 len="999">
+      <![CDATA[(GMT+05:45) カトマンズ]]>
+    </GMT05-45>
+    <GMT06-00 len="999">
+      <![CDATA[(GMT+06:00) アスターナ]]>
+    </GMT06-00>
+    <GMT06-00_1 len="999">
+      <![CDATA[(GMT+06:00) ノヴォシビルスク]]>
+    </GMT06-00_1>
+    <GMT06-00_2 len="999">
+      <![CDATA[(GMT+06:00) ダッカ]]>
+    </GMT06-00_2>
+    <GMT06-00_3 len="999">
+      <![CDATA[(GMT+06:00) エカテリンブルグ]]>
+    </GMT06-00_3>
+    <GMT06-30 len="999">
+      <![CDATA[(GMT+06:30) ヤンゴン (ラングーン)]]>
+    </GMT06-30>
+    <GMT07-00 len="999">
+      <![CDATA[(GMT+07:00) クラスノヤルスク]]>
+    </GMT07-00>
+    <GMT07-00_1 len="999">
+      <![CDATA[(GMT+07:00) バンコク、ハノイ、ジャカルタ]]>
+    </GMT07-00_1>
+    <GMT07-00_2 len="999">
+      <![CDATA[(GMT+07:00) ノヴォシビルスク]]>
+    </GMT07-00_2>
+    <GMT08-00 len="999">
+      <![CDATA[(GMT+08:00) 北京、重慶、香港、ウルムチ]]>
+    </GMT08-00>
+    <GMT08-00_1 len="999">
+      <![CDATA[(GMT+08:00) 台北]]>
+    </GMT08-00_1>
+    <GMT08-00_2 len="999">
+      <![CDATA[(GMT+08:00) クアラルンプール、シンガポール]]>
+    </GMT08-00_2>
+    <GMT08-00_3 len="999">
+      <![CDATA[(GMT+08:00) パース]]>
+    </GMT08-00_3>
+    <GMT08-00_4 len="999">
+      <![CDATA[(GMT+08:00) ウランバートル]]>
+    </GMT08-00_4>
+    <GMT08-00_5 len="999">
+      <![CDATA[(GMT+08:00) クラスノヤルスク]]>
+    </GMT08-00_5>
+    <GMT09-00 len="999">
+      <![CDATA[(GMT+09:00) 大阪、札幌、東京]]>
+    </GMT09-00>
+    <GMT09-00_1 len="999">
+      <![CDATA[(GMT+09:00) イルクーツク]]>
+    </GMT09-00_1>
+    <GMT09-00_2 len="999">
+      <![CDATA[(GMT+09:00) ソウル]]>
+    </GMT09-00_2>
+    <GMT09-30 len="999">
+      <![CDATA[(GMT+09:30) アデレード]]>
+    </GMT09-30>
+    <GMT09-30_1 len="999">
+      <![CDATA[(GMT+09:30) ダーウィン]]>
+    </GMT09-30_1>
+    <GMT10-00 len="999">
+      <![CDATA[(GMT+10:00) ブリスベン]]>
+    </GMT10-00>
+    <GMT10-00_1 len="999">
+      <![CDATA[(GMT+10:00) キャンベラ、メルボルン、シドニー]]>
+    </GMT10-00_1>
+    <GMT10-00_2 len="999">
+      <![CDATA[(GMT+10:00) ヤクーツク]]>
+    </GMT10-00_2>
+    <GMT10-00_3 len="999">
+      <![CDATA[(GMT+10:00) ホバート]]>
+    </GMT10-00_3>
+    <GMT10-00_4 len="999">
+      <![CDATA[(GMT+10:00) グアム、ポートモレスビー]]>
+    </GMT10-00_4>
+    <GMT11-00 len="999">
+      <![CDATA[(GMT+11:00) ウラジオストック]]>
+    </GMT11-00>
+    <GMT11-00_1 len="999">
+      <![CDATA[(GMT+11:00) ソロモン諸島、ニューカレドニア]]>
+    </GMT11-00_1>
+    <GMT12-00 len="999">
+      <![CDATA[(GMT+12:00) マガダン]]>
+    </GMT12-00>
+    <GMT12-00_1 len="999">
+      <![CDATA[(GMT+12:00) ペトロパブロフスク・カムチャツキー]]>
+    </GMT12-00_1>
+    <GMT12-00_2 len="999">
+      <![CDATA[(GMT+12:00) UTC+12]]>
+    </GMT12-00_2>
+    <GMT12-00_3 len="999">
+      <![CDATA[(GMT+12:00) フィジー]]>
+    </GMT12-00_3>
+    <GMT12-00_4 len="999">
+      <![CDATA[(GMT+12:00) オークランド、ウェリントン]]>
+    </GMT12-00_4>
+    <GMT13-00 len="999">
+      <![CDATA[(GMT+13:00) ヌクアロファ]]>
+    </GMT13-00>
+    <GMT13-00_1 len="999">
+      <![CDATA[(GMT+13:00) サモア]]>
+    </GMT13-00_1>
+    <ntp_service>NTP サービス</ntp_service>
+    <ntp_title len="999">NTP 設定</ntp_title>
+    <ntp_desc>
+      <![CDATA[
+		NTP サービスはネットワークと同期し、WD My Cloud EX2 Ultra デバイスの日時を自動的に更新します。<br><br>現在の NTP サーバー <br> <br>
+			]]>
+    </ntp_desc>
+    <ntp_user>ユーザー定義 NTP サーバー</ntp_user>
+    <ntp_server len="999">プライマリ サーバー</ntp_server>
+    <add_ntp>ユーザー NTP の追加</add_ntp>
+    <ntp_status>NTP ステータス</ntp_status>
+    <msg1 len="999">この NTP サーバーに接続できません。</msg1>
+    <msg2 len="999">これは正しい日付形式ではありません。</msg2>
+    <msg3 len="999">時間サーバーの IP アドレスを入力します。</msg3>
+    <msg4 len="999">重要な注記:時間設定を入力する前に、正しいタイム ゾーンを選択する必要があります。</msg4>
+  </_time>
+  <_device>
+    <title len="999">デバイス プロファイル</title>
+    <title2 len="999">ネットワーク ワークグループ</title2>
+    <title3 len="999">Windows サービス</title3>
+    <workgroup len="999">ワークグループ</workgroup>
+    <name len="999">デバイス名</name>
+    <device_description len="999">説明</device_description>
+    <lmb len="999">ローカル マスタ ブラウザ</lmb>
+    <sdesc len="999">共有の説明</sdesc>
+    <serial_number>シリアル番号</serial_number>
+    <msg1 len="999">ワークグループにはスペースを使用できません。</msg1>
+    <msg2 len="999">ワークグループを入力します。</msg2>
+    <msg3 len="999">ワークグループは 16 文字以下で指定する必要があります。</msg3>
+    <msg4 len="999">デバイス名を入力します。</msg4>
+    <msg5 len="999">デバイス名は 15 文字以下で指定する必要があります。</msg5>
+    <msg6 len="999">デバイス説明を入力します。</msg6>
+    <msg7 len="999">デバイス説明は 32 文字以下で指定する必要があります。</msg7>
+    <msg8 len="999">
+      <![CDATA[ワークグループには次の文字を使用できません。*+=|[]/\:";<>?,]]>
+    </msg8>
+    <msg9 len="999">無効なサーバー名。</msg9>
+    <msg10 len="999">無効なデバイス名。デバイス名はアルファベット、数字、およびダッシュを含む2～15文字で指定する必要があります。先頭に数字やハイフンを使用することはできません。</msg10>
+    <msg11 len="999">デバイス名にはスペースを使用できません。</msg11>
+    <msg12 len="999">
+      <![CDATA[デバイスの明の先頭は英数字で、42 文字以内でなければなりません。スペースまたはアンダースコアを使用できます。]]>
+    </msg12>
+    <msg13 len="999">先頭と末尾の文字を空白にすることはできません。</msg13>
+    <msg14 len="999">デバイス名の先頭に数字やハイフンは使用できません。</msg14>
+  <msg15>デバイス名を変更すると、ドライブ マップ、エイリアス、バックアップ、Time Machine バックアップなどの確立済みの接続でリセットが必要になる可能性があります。変更を続行したい場合は、接続を確認し、確立し直してください。</msg15></_device>
+  <_module>
+    <title len="999">アプリ プロファイル</title>
+    <title2 len="999">サービス利用規約</title2>
+    <file_path len="999">ファイル パス</file_path>
+    <no len="999">番号</no>
+    <module_name len="999">モジュール名</module_name>
+    <version len="999">バージョン</version>
+    <status len="999">ステータス</status>
+    <on_off len="999">開始/停止</on_off>
+    <del len="999">削除</del>
+    <date len="999">インストール日</date>
+    <path len="999">インストール パス</path>
+    <logitech len="999">Logitech Web サイト</logitech>
+    <desc1>手動インストール</desc1>
+    <desc2>詳細</desc2>
+    <desc3>インストールされたアプリ</desc3>
+    <desc4>なし</desc4>
+    <desc5>アプリのインストール</desc5>
+    <desc6>アプリの参照</desc6>
+    <desc7>設定 URL</desc7>
+    <desc8>無効</desc8>
+    <desc9>有効</desc9>
+    <desc10>他社製のアプリを参照し、ダウンロードしてインストールするアプリを選択します。すべてのアプリは WD による認定済みです。</desc10>
+    <desc11>使用可能なアプリ</desc11>
+    <desc12>インストール</desc12>
+    <desc13>初期化中</desc13>
+    <desc14>更新が利用可能です</desc14>
+    <desc15>ダウンロード中</desc15>
+    <desc16>インストールしています</desc16>
+    <desc17>すべてのアプリの管理</desc17>
+    <desc18>アプリでは、My Cloud システムの追加機能を使用できます。インストールする前に、アプリの情報を確認してください。</desc18>
+    <desc19><![CDATA[アプリを手動でインストールするには、<a href="" onclick="return false;">ここ</a>をクリックします。]]></desc19>
+    <desc20>インストール場所</desc20>
+    <desc21>アプリ名</desc21>
+    <desc22>アプリ詳細</desc22>
+    <desc23>xxx アプリの更新が利用可能です。詳細については、次を参照してください。</desc23>
+    <desc24>新機能</desc24>
+    <desc25>更新</desc25>
+    <desc26>アプリの管理</desc26>
+    <desc27>アプリの追加</desc27>
+    <desc28>更新が利用可能です</desc28>
+    <desc29>アプリの削除</desc29>
+    <desc30>次のアプリの更新が利用可能です。</desc30>
+    <desc31>使用可能なアプリがありません。</desc31>
+    <desc32>注:各アプリのサポートは個々のベンダーから入手してください</desc32>
+    <desc33><![CDATA[アプリを手動でインストールするには、 <div class="file_input_div" style="width:170px;float:right;border:0px solid red;text-align:left;text-decoration:underline;"> ここをクリックします。<input type="file" name="f_apps_file" class="file_input_hidden" id="f_apps_file" onchange="apps_manually_install();"></div>]]></desc33>
+    <desc34>続行する前に、これらの規約と条件を確認して同意してください。</desc34>
+    <msg1 len="50">パッケージを選択します。</msg1>
+    <msg2 len="96">モジュールのインストール...</msg2>
+    <msg3 len="50">アプリを削除してもよろしいですか?</msg3>
+    <msg4 len="96">アプリが正常にインストールされました。</msg4>
+    <msg5 len="96">アプリをインストールできませんでした。My Cloud システムのストレージ ボリュームが使用できません。</msg5>
+    <msg6 len="96">アプリをインストールできませんでした。</msg6>
+    <msg7 len="50">{0} アプリは既に My Cloud システムにインストールされています。アプリを再インストールしてもよろしいですか?</msg7>
+    <msg8 len="96">アプリをインストールできませんでした。My Cloud システムの空き容量が不足しています。空き領域を増やしてからやり直してください。</msg8>
+    <msg9 len="96">アプリを有効にできませんでした。</msg9>
+    <msg10 len="96">アプリが有効にされました。</msg10>
+    <msg11 len="96">モジュールが削除されました。</msg11>
+    <msg12 len="999">モジュールの最大数に達しました。</msg12>
+    <msg13 len="96"><![CDATA[xxx から Squeeze Center パッケージをダウンロードし、Volume_1 フォルダの下に配置します。]]></msg13>
+    <msg14 len="342">このアドオンは WD によって開発されていません。WD は他社製のアドオンをサポートしません。また、問題の直接的な原因が他社製のアドオンの使用であった場合、製品サポートを提供しないことがあります。このアドオンをインストールすることで、お客様のリスクと裁量によってこのアドオンを使用することに明示的に同意するものとします。</msg14>
+    <msg15 len="342">このアドオンは Western Digital Corporation によって開発されたものではありません。このアドオンを置換してもよろしいですか?</msg15>
+    <msg16 len="999">ディスクの空き領域が低下しています。まず一部の項目を削除してから、再試行してください。</msg16>
+    <msg17 len="999">このアプリをインストールするには、新しいファームウェアが必要です。My Cloud システムのファームウェアをアップグレードしてから再試行してください。</msg17>
+    <button1>拒否</button1>
+    <button2>承諾</button2>
+  <msg24>My Cloud システムで、{0} アプリが正しくインストールされました。</msg24><msg25>My Cloud システムで、アプリ {0} および {1} が正しくインストールされました。</msg25><msg26>すべてのアプリ データと設定が削除されます。&lt;br&gt;&lt;/br&gt;{0} をアンインストールしてよろしいですか?</msg26><title3>{0}をアンインストール</title3><tip1>アプリのアンインストール</tip1><tip2>アプリのインストール</tip2><msg19>このアプリは、他のアプリが実行中であることに依存しているため、このアプリは実行できません。</msg19><msg20>他のアプリがこのアプリに依存しているため、このアプリは削除できません。</msg20><msg21>他のアプリがこのアプリに依存しているため、このアプリは停止できません。</msg21></_module>
+  <_user>
+  	<groups>グループ</groups>
+    <setup_user len="999">ユーザーの設定</setup_user>
+    <setup_group len="999">グループの設定</setup_group>
+    <about_user len="999">ユーザーについて</about_user>
+    <about_group len="999">グループについて</about_group>
+    <user_title len="999">ユーザーの追加</user_title>
+    <del_user_title len="999">ユーザーの削除</del_user_title>
+    <del_group_title len="999">グループの削除</del_group_title>
+    <modify_group_title len="999">グループの修正</modify_group_title>
+    <modify_pw_title len="999">パスワードの編集</modify_pw_title>
+    <modify_quota_title len="999">割り当ての修正</modify_quota_title>
+    <del_user_desc len="999">このユーザーを削除してもよろしいですか?</del_user_desc>
+    <del_group_desc len="999">このグループを削除してもよろしいですか?</del_group_desc>
+    <user_desc len="999">WD My Cloud EX2 Ultra システムにアクセス可能なユーザーとアクセス タイプを制御します。</user_desc>
+    <group_desc len="999">グループはユーザーの集合であり、複数のユーザーを同時に管理することが容易になります。</group_desc>
+    <modify_group_desc>次のリストを使用し、ユーザーをこのグループに追加するか、グループから削除します。</modify_group_desc>
+    <user_profile len="999">ユーザー プロファイル</user_profile>
+    <group_profile len="999">グループ プロファイル</group_profile>
+    <user_description4 len="999">      <![CDATA[ユーザーは次のアプリケーションにアクセスできます]]>    </user_description4>
+    <user_description7 len="999">
+      <![CDATA[ユーザーの割り当てを設定しない場合は、フィールドを空白にします。]]>
+    </user_description7>
+    <create_user>新しいユーザー アカウントの作成</create_user>
+    <share_access len="999">共有アクセス</share_access>
+    <all len="999">すべて</all>
+    <select_group len="999">グループに追加するユーザーを選択します。</select_group>
+    <add_group len="999">グループの追加</add_group>
+    <select_share_folder len="999">ネットワーク共有設定</select_share_folder>
+    <group_title len="999">グループ設定</group_title>
+    <import_description2 len="999">
+      <![CDATA[使用するフィールドを選択 (灰色で表示されている選択項目はデフォルトで選択されています)]]>
+    </import_description2>
+    <create_group len="999">新しいグループの作成</create_group>
+    <select_user len="999">ユーザーをグループに参加させる</select_user>
+    <group_name len="999">グループ名</group_name>
+    <user_name len="999">ユーザー名</user_name>
+    <full_name len="999">氏名</full_name>
+    <pw_hint len="999">パスワードのヒント</pw_hint>
+    <pw len="999">パスワード</pw>
+    <confirm_password len="999">パスワードの確認</confirm_password>
+    <mail_addr len="999">電子メール</mail_addr>
+    <req len="999">ユーザー名は必須です</req>
+    <quota_settings len="999">割り当て設定</quota_settings>
+    <chg_pw len="999">パスワードの変更</chg_pw>
+    <join_group len="999">グループに参加</join_group>
+    <chg_member len="999">メンバーの変更</chg_member>
+    <group_member len="999">グループ メンバーシップ</group_member>
+    <member len="999">メンバー</member>
+    <group len="999">グループ</group>
+    <user len="999">ユーザー</user>
+    <quota_amount1 len="999">Volume_1 割り当て</quota_amount1>
+    <quota_amount2 len="999">Volume_2 割り当て</quota_amount2>
+    <quota_amount3 len="999">Volume_3 割り当て</quota_amount3>
+    <quota_amount4 len="999">Volume_4 割り当て</quota_amount4>
+    <no_hdd len="999">ボリュームが見つかりません。</no_hdd>
+    <none_group len="999">グループが定義されていません。</none_group>
+    <none_user len="999">ユーザーが定義されていません。</none_user>
+    <cifs len="999">CIFS</cifs>
+    <ftp len="999">FTP アクセス</ftp>
+    <nfs len="999">NFS アクセス</nfs>
+    <webdav len="999">WebDAV アクセス</webdav>
+    <media len="999">メディア サービス</media>
+    <u_prefix len="999">ユーザー名のプレフィックス</u_prefix>
+    <start_num len="999">アカウント プレフィックス</start_num>
+    <create_num len="999">ユーザー数</create_num>
+    <overwrite len="999">重複するアカウントの上書き</overwrite>
+    <overwrite2 len="999">既存のユーザーの上書き</overwrite2>
+    <duplicate len="999">重複するユーザー名</duplicate>
+    <illegal len="999">無効なユーザー名</illegal>
+    <create len="999">1 人のユーザーの作成</create>
+    <create2 len="999">新しいユーザー</create2>
+    <reference len="999">パラメータについては、このサンプル ファイルを参照してください。</reference>
+    <sel_list len="999">ユーザー リストのインポート</sel_list>
+    <max len="999">最大</max>
+    <multiple len="999">複数ユーザーの追加</multiple>
+    <user_finish len="999">
+      <![CDATA[これでウィザードが完了しました。設定を見直すには、[<b>戻る</b>] をクリックします。設定を保存するには、[<b>適用</b>] をクリックします。 ]]>
+    </user_finish>
+    <pw_required>パスワードは必須です</pw_required>
+    <help_hint len="999">ユーザー パスワードは 5 文字以上で指定する必要があります。ユーザー名をグループ名と同じにすることはできません。</help_hint>
+    <old_pw len="999">古いパスワード</old_pw>
+    
+    
+      <g_multiple len="999">複数グループの追加</g_multiple>
+    
+    
+      <import_group len="999">グループのインポート</import_group>
+    
+    
+      <sel_glist len="999">グループ リストのインポート</sel_glist>
+    
+    
+      <overwrite_group len="999">重複するグループの上書き</overwrite_group>
+    
+    
+      <user_description5 len="999">グループは次のアプリケーションにアクセスできます。</user_description5>
+    
+    
+      <account_expires len="999">アカウントの有効期限</account_expires>
+    
+    
+      <end_of len="999">終了</end_of>
+    
+<wait_uesrs len="999">ユーザの待機中</wait_uesrs>
+	<wait_groups len="999">グループの待機中</wait_groups>
+	<wait_shares len="999">共有の待機中</wait_shares>    
+    <msg1 len="999">最大ユーザー数に達しました。</msg1>
+    <msg2 len="999">1 つの項目を選択してください。</msg2>
+    <msg3 len="999">ユーザー アカウントが追加されました。</msg3>
+    <msg4 len="999">ユーザー アカウントが変更されました。</msg4>
+    <msg5 len="999">ユーザー名はスペースを含まない 1 ～ 16 文字の英数字で入力してください。</msg5>
+    <msg6 len="999">このアカウントは許可されませんでした。再試行してください。</msg6>
+    <msg7 len="999">ユーザー名 %s は予約されています。大文字と小文字を区別します。スペースを含まない 1 ～ 16 文字の英数字で入力してください。</msg7>
+    <msg8 len="999">ユーザー名にはスペースを使用できません。</msg8>
+    <msg9 len="999">ユーザー名は 16 文字以下で指定する必要があります。再試行してください。</msg9>
+    <msg10 len="999">
+      <![CDATA[ユーザー名の形式が正しくありません。ユーザー名には次の文字を使用できません。* ?" < > | .; + = ~ ' [ ] { } @ # ( ) !^ $ % & , ` / \]]>
+    </msg10>
+    <msg11 len="999">ユーザー名をグループ名と同じにすることはできません。</msg11>
+    <msg12 len="999">入力したユーザー名は既に存在します。別のユーザー名を選択してください。</msg12>
+    <msg13 len="999">最大グループ数に達しました。</msg13>
+    <msg14 len="999">グループが追加されました。</msg14>
+    <msg15 len="999">グループが削除されました。</msg15>
+    <msg16 len="999">このグループ名は許可されませんでした。再試行してください。</msg16>
+    <msg17 len="999">入力したグループ名は既に存在します。別のグループ名を選択してください。</msg17>
+    <msg18 len="999">グループ名を入力します。</msg18>
+    <msg19 len="999">グループ名はスペースを含まない 1 ～ 16 文字の英数字で入力してください。</msg19>
+    <msg20 len="999">グループ名は 16 文字以下で指定する必要があります。再試行してください。</msg20>
+    <msg21 len="999">
+      <![CDATA[グループ名の形式が正しくありません。グループ名には次の文字を使用できません。* ?" < > | .; + = ~ ' [ ] { } @ # ( ) !^ $ % & , ` / \]]>
+    </msg21>
+    <msg22 len="999">グループ名をユーザー名と同じにすることはできません。</msg22>
+    <msg23 len="999">グループ名が変更されました。</msg23>
+    <msg24 len="999">ユーザーが削除されました。</msg24>
+    <msg25 len="999">ユーザー名の先頭の文字は、a-z、A-Z、0-9 でなければなりません。</msg25>
+    <msg26 len="999">グループ名の先頭の文字は、a-z、A-Z、0-9 でなければなりません。</msg26>
+    <msg27 len="999">ユーザーが変更されました。</msg27>
+    <msg28 len="999">変更されていません。</msg28>
+    <msg29 len="999">ユーザーが追加されました。</msg29>
+    <msg30 len="999">ユーザー名のプレフィックスには、スペースを使用できません。</msg30>
+    <msg31 len="999">アカウント プレフィックスを入力します。</msg31>
+    <msg32 len="999">ユーザー数を入力します。</msg32>
+    <msg33 len="999">最大ユーザー数:</msg33>
+    <msg34 len="999">1 度に 1 つの項目のみを修正できます。</msg34>
+    <msg35 len="999">このユーザーを削除してもよろしいですか?</msg35>
+    <msg36 len="999">ユーザー インポート エラー。</msg36>
+    <msg37 len="999">インポート ファイルの形式が正しくありません。再試行してください。</msg37>
+    <msg38 len="999">名前 (姓) は大文字と小文字を区別します。名前 (名) と合わせて 16 文字以下になるように英数字で入力してください。名前 (姓) と名前 (名) を組み合わせるときには、スペースおよびアンダースコアを入力できます。</msg38>
+    <msg39 len="999">名前 (名) はスペースを含まない 1 ～ 16 文字の英数字で入力してください。</msg39>
+    <msg40 len="999">要求した Web アクセス アカウントを作成できませんでした。ネットワーク接続の問題がないことを確認し、再試行してください。</msg40>
+    <msg41 len="999">注:ユーザーが追加されました。</msg41>
+    <msg42 len="999">重複するユーザー アカウントが見つかりました。ユーザーの重複がないことを確認してから再試行してください。</msg42>
+  <msg43 len="999">電子メール アドレスは 48 文字以下で指定する必要があります。</msg43>
+  <msg44 len="999">グループ インポート エラー。</msg44>
+    
+  <user_description6>グループの割り当てを設定しない場合は、フィールドを空白にします。</user_description6><msg45>My Cloud システムは、まだ前回のインポートから複数のユーザーを追加しています。ユーザーを編集するには、後で再試行してください。</msg45><msg46>My Cloud ディステムは、まだ前回のインポートから複数のグループを追加しています。グループを編集するには、後で再試行してください。</msg46><msg47>ユーザー名は、1～16 文字のアルファベットまたは数字で、最初の文字はアルファベットにする必要があります。</msg47><msg48>名字は 1 ～ 16 文字の英数字を使用してください。</msg48><msg49>無効なメール アドレス。</msg49><user_description3>以下のフィールドを使用して、このユーザーのパスワードを編集できます。&lt;br&gt; 注：このパスワードを変更しても、あなたの &lt;a id="cloud_url" href="http://www.mycloud.com" target="_blank"&gt;MyCloud.com&lt;/a&gt; アカウントに影響はありません。</user_description3></_user>
+  <_network_access>
+    <title len="999">共有の設定</title>
+    <about>共有について</about>
+    <desc len="999">共有はフォルダのようなファイルを保存するための領域です。1 台のストレージ デバイスで複数の共有を作成し、各共有へのアクセスを制御できます。</desc>
+    <share_profile>共有プロファイル</share_profile>
+    <user_access len="999">ユーザー アクセス</user_access>
+    <add_title len="999">共有の追加</add_title>
+    <del_title len="999">共有の削除</del_title>
+    <del_desc len="999">
+      <![CDATA[
+			この共有を削除すると、共有内のすべてのコンテンツと構成設定が削除されます。<br><br>この共有を削除してもよろしいですか?
+		]]>
+    </del_desc>
+    <share_name len="999">共有名</share_name>
+    <read_only len="999">読み取り専用</read_only>
+    <read_write len="999">読み取り/書き込み</read_write>
+    <decline len="999">アクセスを禁止</decline>
+    <no_access len="999">アクセスなし</no_access>
+    <comment len="999">コメント</comment>
+    <oplocks len="999">楽観ロック</oplocks>
+    <map len="999">マップ アーカイブ</map>
+    <recycle_bin len="999">ゴミ箱を有効にする</recycle_bin>
+    <recycle_tree len="999">リサイクル ツリー</recycle_tree>
+    <share_settings len="999">共有設定</share_settings>
+    <path len="999">パス</path>
+    <user len="999">デバイスのユーザー名</user>
+    <group len="999">グループ</group>
+    <create_folder_name len="999">新規フォルダの作成</create_folder_name>
+    <input_folder_name len="999">新規フォルダ名の入力</input_folder_name>
+    <assign_access_rights len="999">アクセス権の割り当て</assign_access_rights>
+    <ftp_settings len="999">FTP 設定</ftp_settings>
+    <anonymous_none len="999">匿名なし</anonymous_none>
+    <anonymous_read_only len="999">匿名読み取り専用</anonymous_read_only>
+    <anonymous_write len="999">匿名読み取り/書き込み</anonymous_write>
+    <confirm_settings len="999">設定の確認</confirm_settings>
+    <application_list len="999">アプリケーション リスト</application_list>
+    <anonymous len="999">FTP 匿名</anonymous>
+    <none len="999">なし</none>
+    <read len="999">読み取り専用</read>
+    <write len="999">読み取り/書き込み</write>
+    <info len="999">ネットワーク共有情報</info>
+    <nfs_setting len="999">NFS 設定</nfs_setting>
+    <public len="999">パブリック</public>
+    <recycle_title len="999">ゴミ箱</recycle_title>
+    <msg1 len="999">共有名が重複しているか、81 文字以上です。修正してください。</msg1>
+    <msg2 len="999">修正する項目を選択します。</msg2>
+    <msg3 len="167">
+      <![CDATA[フォルダ名には次の文字を使用できません。\ / :* ?" < > | ]]>
+    </msg3>
+    <msg4 len="167">有効なフォルダ名ではありません。</msg4>
+    <msg5 len="999">フォルダ名は 1 ～ 226 文字で指定する必要があります。</msg5>
+    <msg6 len="999">フォルダのこの親は既に選択されています。</msg6>
+    <msg7 len="999">フォルダ名を空にできません。</msg7>
+    <msg8 len="999">新規フォルダの名前を変更できません。指定した名前のファイルは既に存在します。別のファイル名を指定してください。</msg8>
+    <msg9 len="999">共有名を空にできません。</msg9>
+    <msg10 len="999">ユーザーまたはグループを選択してください。</msg10>
+    <msg11 len="999">このフォルダには既に共有が設定されています。</msg11>
+    <msg12 len="999">有効なホストではありません。</msg12>
+    <msg13 len="999">最大ネットワーク共有数に達しました。</msg13>
+    <msg14 len="999">[読み取り専用] または [読み取り/書き込み] を選択します。</msg14>
+    <msg15 len="999">エラー項目を共有する</msg15>
+    <msg16 len="999">[読み取り専用] を選択します。</msg16>
+    <msg17 len="999">ユーザーまたはグループを選択する</msg17>
+    <msg18 len="999">
+      <![CDATA[注:ネットワーク アクセス リストをデフォルトのアクセス権にリセットしようとしています。すべてのアカウントのデフォルトのアクセス権は [オープン] (パスワード不要) です。]]>
+    </msg18>
+    <msg19 len="999">
+      <![CDATA[共有名には次の文字を使用できません。% < > * ?| / \ + = ; :" @ # !~ [ ]]]>
+    </msg19>
+    <msg20 len="999">
+      <![CDATA[共有名の最後の文字には「$」または「.」記号を使用できません。]]>
+    </msg20>
+    <msg21 len="999">
+      <![CDATA[共有名の最初の文字には「.」、「&」、「#」記号を使用できません。]]>
+    </msg21>
+    <msg22 len="999">
+      <![CDATA[説明は 128 文字以下で指定する必要があります。]]>
+    </msg22>
+    <msg23 len="999">
+      <![CDATA[共有名には次の文字を使用できません。\ / :* ?" < > | ]]>
+    </msg23>
+    <msg24 len="999">
+      <![CDATA[共有名 %s は予約されています。共有名は大文字と小文字を区別します。スペースを含まない 1 ～ 80 文字の英数字で入力してください。]]>
+    </msg24>
+    <msg25 len="999">
+      <![CDATA[共有名は大文字と小文字を区別します。スペースを含まない 1 ～ 80 文字の英数字で入力してください。]]>
+    </msg25>
+  <usage>使用</usage></_network_access>
+  <_iso_mount>
+    <iso_title len="999">ISO マウントについて</iso_title>
+    <edit_title len="999">ISO 共有の編集</edit_title>
+    <info len="999">情報</info>
+    <desc>ネットワーク共有にある ISO ファイルをマウントすると、ISO ファイルのファイルとフォルダの内容へのファイル レベルのアクセス権が、ネットワーク共有へのアクセス権を持つユーザーに付与されます。</desc>
+    <create_iso_share>ISO 共有の作成</create_iso_share>
+    <add_iso_share>ISO 共有の作成</add_iso_share>
+    <msg1 len="999">
+      <![CDATA[
+		この共有エントリは使用中であるため削除できません。エントリを削除するには、共有エントリへのアクセスを停止します。
+		]]>
+    </msg1>
+    <msg2>この ISO マウントを削除してもよろしいですか?</msg2>
+    <msg3>ISO 共有は既に存在します。</msg3>
+    <del_title>ISO 共有の削除</del_title>
+    <no_list>WD My Cloud EX2 Ultra システムには ISO 共有が追加されていません。</no_list>
+    <isoshare_list>ISO 共有リスト</isoshare_list>
+  </_iso_mount>
+  <_network_services>
+    <adv_features>詳細機能</adv_features>
+    <afp_title len="999">AFP サービス設定</afp_title>
+    <afp_service len="999">AFP サービス</afp_service>
+    <afp_service_b len="999">AFP サービス</afp_service_b>
+    <afp_description len="999">ユーザーはここで AFP サービス オプションを有効にできます。Time Machine オプションが使用される場合、このオプションは自動的に有効になります。</afp_description>
+    <nfs_title len="999">NFS サービス設定</nfs_title>
+    <nfs_service len="999">NFS サービス</nfs_service>
+    <nfs_service_b len="999">NFS サービス</nfs_service_b>
+    <nfs_description len="999">ユーザーはここで NFS サービス オプションを有効にできます。</nfs_description>
+    <ftp_service len="999">FTP サービス</ftp_service>
+    <ftp_service_b len="999">FTP サービス</ftp_service_b>
+    <afp_note len="999">(注意:AFP サービスに共有を追加すると、楽観ロックが無効になります。)</afp_note>
+    <nfs_note len="999">(注意:NFS サービスに共有を適用すると、楽観ロックが無効になります。))</nfs_note>
+    <webdav_service len="999">WebDAV サービス</webdav_service>
+  </_network_services>
+  <_nfs>
+    <host len="999">ホスト</host>
+    <real_path len="999">実際のパス</real_path>
+    <root_squash len="999">Root Squash</root_squash>
+    <write len="999">書き込み</write>
+    <msg1 len="999">
+<![CDATA[ホスト名には次の文字を使用できます。「a-z」、「A-Z」、「0-9」、「-」、「/」。]]>
+</msg1>
+    <msg2 len="999">マウント ポイント</msg2>
+  </_nfs>
+  <_quota>
+    <x_quota>%s さんの割り当て</x_quota>
+    <used len="999">使用済み</used>
+    <limit len="999">上限</limit>
+    <total_records len="999">合計レコード数</total_records>
+    <unlimited len="999">無制限</unlimited>
+    <status len="999">ステータス</status>
+    <enable len="999">有効にする</enable>
+    <disable len="999">無効</disable>
+    <start len="999">開始</start>
+    <stop len="999">停止</stop>
+    <quota_amount len="999">割り当て</quota_amount>
+    <msg1 len="999">ユーザー割り当てをグループ割り当てよりも大きくすることはできません。</msg1>
+    <msg2 len="999">割り当てをユーザー割り当てよりも小さくすることはできません。</msg2>
+    <msg3 len="999">割り当てが正の整数ではありません。再試行してください。</msg3>
+    <msg4 len="999">割り当てが無効です。有効な数字を入力してください。</msg4>
+    <msg5 len="999">この数字はハード ドライブの最大容量を超えています。実際の数字を入力するか、設定を無制限のままにしてください。</msg5>
+    <help_hint len="999">割り当てを設定する前に、ハード ドライブで同期を完了する必要があります。</help_hint>
+  </_quota>
+  <_ftp>
+    <idle_time len="999">アイドル時間</idle_time>
+    <port_description len="999">1025 ～ 3688、3690 ～ 49999、65501 ～ 65535、デフォルト:21</port_description>
+    <passive_mode len="999">パッシブ モード</passive_mode>
+    <default_port len="999">デフォルト ポート範囲を使用します。</default_port>
+    <following_port len="999">次のポート範囲を使用します。</following_port>
+    <report len="999">PASV モードの外部 IP を報告する</report>
+    <external_ip len="999">外部 IP</external_ip>
+    <client_language len="999">クライアント言語</client_language>
+    <flow_control len="999">フロー制御</flow_control>
+    <unlimited len="999">無制限</unlimited>
+    <!--<allow len="999">Allow SSL/TLS connections only</allow>-->
+    <ipv4 len="999">IPV4</ipv4>
+    <ipv6 len="999">IPV6</ipv6>
+    <ip len="999">IP</ip>
+    <max_user len="999">最大ユーザー</max_user>
+    <connection len="999">接続</connection>
+    <started len="999">開始</started>
+    <stopped len="999">停止</stopped>
+    <ssl_tsl len="999">TLS</ssl_tsl>
+    <fxp len="999">FXP</fxp>
+    <permanent len="999">永久</permanent>
+    <temporary len="999">一時</temporary>
+    <auto_blcoked len="999">自動ブロック</auto_blcoked>
+    <title1 len="999">SSH を有効にする</title1>
+    <msg1 len="167">8080 番ポートは HTTP サーバーで使用されます。</msg1>
+    <msg2 len="167">25 番ポートはメール サーバーで使用されます。</msg2>
+    <msg3 len="167">3689 番ポートは iTunes サーバーで使用されます。</msg3>
+    <msg4 len="167">50000 ～ 65500 番ポートは UPnP サーバーで使用されます。</msg4>
+    <msg5 len="167">67、68 番ポートは DHCP サーバーで使用されます。</msg5>
+    <msg6 len="167">ポートは数字でなければなりません。</msg6>
+    <msg7 len="167">ポート番号は 1 ～ 65535 の範囲でなければなりません。</msg7>
+    <msg8 len="167">有効なフロー制御ではありません。</msg8>
+    <msg9 len="167">フローを入力します。</msg9>
+    <msg10 len="167">フローにはスペースを使用できません。</msg10>
+    <msg11 len="167">フロー制御は数字でなければなりません。</msg11>
+    <msg12 len="167">フロー制御は 16384 以下でなければなりません。</msg12>
+    <msg13 len="167">アイドル時間を入力します。</msg13>
+    <msg14 len="167">アイドル時間は 1 ～ 10 分の範囲でなければなりません。</msg14>
+    <msg15 len="167">アイドル時間にはスペースを使用できません。</msg15>
+    <msg16 len="167">削除してもよろしいですか?</msg16>
+    <msg18 len="167">リリース日を入力します。</msg18>
+    <msg19 len="167">有効なリリース日ではありません。</msg19>
+    <msg20 len="167">3689 番ポートは iTunes サーバーで使用されます。</msg20>
+    <msg21 len="167">有効な外部 IP アドレスではありません。</msg21>
+    <msg22 len="167">FTP 共有の最大数に達しました。</msg22>
+    <msg23 len="167">xxx 番ポートは P2P サーバーで使用されます。</msg23>
+    <msg24 len="167">偶数の数字のポート範囲を使用します。</msg24>
+    <msg25 len="167">クライアント言語を入力します。</msg25>
+    <msg26 len="167"><![CDATA[クライアント言語は 32 文字以下で指定する必要があります。再試行してください。]]></msg26>
+    <msg27 len="167">この FTP 共有は既に存在します。別の FTP 共有を選択してください。</msg27>
+    <msg28 len="167">4711 番ポートは aMule で使用されます。</msg28>
+    <msg29 len="167">9000 番ポートは Squeeze Center で使用されます。</msg29>
+    <msg30 len="167">514 番ポートはログで使用されます。</msg30>
+    <msg31 len="167">515 番ポートはプリンタで使用されます。</msg31>
+    <msg32 len="167">8000 番ポートは Audio Streamer で使用されます。</msg32>
+    <msg33 len="167">無効なクライアント言語です。</msg33>
+    <msg34 len="167">外部 IP を取得しました。</msg34>
+    <msg35 len="167">外部 IP を取得できませんでした。</msg35>
+    <msg36 len="167">SFTP を使用して WD My Cloud EX2 Ultra にアクセスするには、SSH を有効にする必要があります。</msg36>
+    <desc1 len="999">外部 IP の取得</desc1>
+    <desc2 len="999">次の IP アドレスはネットワーク上のこのデバイスにアクセスできないようにブロックされています。IP アドレスを永久的にブロックするか、特定の期間に一時的にブロックできます。</desc2>
+    <desc3 len="999">カスタマイズ</desc3>
+    <desc4 len="999">無制限</desc4>
+    <desc5 len="999">デフォルト</desc5>
+    <desc6 len="999">ブロックされた IP のリスト</desc6>
+    <desc7 len="999">暗黙 TLS</desc7>
+		<desc8 len="999">明示 TLS</desc8>
+    <button1 len="10">IP の取得</button1>
+  <msg37>WD My Cloud EX2 Ultra システムの FTP サービスが有効になりました。各共有の FTP アクセスを有効にするには、[共有] ページに移動します。</msg37></_ftp>
+  <_upnp>
+    <refresh len="10">更新</refresh>
+    <shared_folder len="999">共有フォルダ</shared_folder>
+    <state len="999">状態</state>
+    <msg1 len="999">共有フォルダをネストできません。</msg1>
+    <msg2 len="999">失敗。</msg2>
+    <msg3 len="999">1 つの項目を選択してください。</msg3>
+    <msg4 len="999">共有フォルダの数が上限を超えました。</msg4>
+  </_upnp>
+  <_itunes>
+    <mp3_tag_codepage len="21">MP3 タグ コードページ</mp3_tag_codepage>
+    <auto_refresh len="21">自動更新</auto_refresh>
+    <auto_refresh1 len="999">5 分</auto_refresh1>
+    <auto_refresh2 len="999">15 分</auto_refresh2>
+    <auto_refresh3 len="999">30 分</auto_refresh3>
+    <auto_refresh4 len="999">1 時間</auto_refresh4>
+    <auto_refresh5 len="999">2 時間</auto_refresh5>
+    <auto_refresh6 len="999">6 時間</auto_refresh6>
+    <auto_refresh7 len="999">12 時間</auto_refresh7>
+    <auto_refresh8 len="999">1 日</auto_refresh8>
+    <default len="21">デフォルト</default>
+    <folder len="21">フォルダ</folder>
+    <share len="999">共有</share>
+    <desc1 len="999">iTunes サーバーを有効にし、iTunes プレイヤー経由でメディアにアクセスします。</desc1>
+    <desc2 len="999">ルート</desc2>
+    <desc3 len="999">新しいメディア コンテンツの iTunes データベースの定期再スキャン スケジュールを設定します。</desc3>
+    <desc4 len="999">すべてのコンテンツ ディレクトリを再スキャンして、新しいメディアを検索します。</desc4>
+    <desc5 len="25">初期化中</desc5>
+    <desc6 len="999">iTunes データベース</desc6>
+    <msg1 len="167">フォルダを選択する必要があります。</msg1>
+    <msg2 len="167">パスは 235 文字以下で指定する必要があります。再試行してください。</msg2>
+    <msg3 len="167">パスワードは 2 文字以上で指定する必要があります。再試行してください。</msg3>
+    <msg4 len="167">パスワードは 16 文字以下で指定する必要があります。</msg4>
+    <msg5 len="167">パスワードの形式が正しくありません。再試行してください。</msg5>
+    <msg6 len="167">MP3 タグ コードページを入力してください。</msg6>
+    <msg7 leng="167"><![CDATA[パスワードには次の文字を使用できません。@ :/ \ % ' #]]></msg7>
+    <msg8 len="999">メディア ライブラリ/データベースを構築しています。</msg8>
+  </_itunes>
+  <_admin>
+    <username len="999">ユーザー名</username>
+    <password len="999">パスワード</password>
+    <new_pwd len="999">新しいパスワード</new_pwd>
+    <confirm_pwd len="999">パスワードの確認</confirm_pwd>
+  <desc1>管理者パスワードを作成して、WD My Cloud EX2 Ultra システムで無許可の設定を不可にすることができます。</desc1><desc2>今すぐパスワードを作成しない場合は、[&lt;b&gt;次へ&lt;/b&gt;] をクリックして続行します。</desc2></_admin>
+  <_system>
+    <restart_title len="999">再起動</restart_title>
+    <system_restart len="999">システム再起動</system_restart>
+    <default_title len="999">デフォルト</default_title>
+    <restore len="999">初期設定を復元します。</restore>
+    <shutdown_title len="999">シャットダウン</shutdown_title>
+    <warning_title len="999">警告</warning_title>
+    <system_shutdown len="999">システム シャットダウン</system_shutdown>
+    <configuration_settings len="999">構成設定</configuration_settings>
+    <save_configuration_settings len="999">構成設定を保存</save_configuration_settings>
+    <load_configuration_settings len="999">構成設定を読み込み</load_configuration_settings>
+    <idle_time_title len="999">アイドル時間</idle_time_title>
+    <account_inactivity_timer len="999">アカウント アイドル状態タイマー</account_inactivity_timer>
+    <minutes len="999">分</minutes>
+    <temperature_title len="999">システム温度しきい値</temperature_title>
+    <flash_system len="999">システム LEDの点滅</flash_system>
+    <extended_log len="999">拡張ロギング</extended_log>
+    <help_hint len="999">初期設定を復元した場合、現在の設定がすべて消去されます。</help_hint>
+    <msg1 len="999">無効な構成設定ファイルがアップロードされました。正しいファイルを選択して、再試行してください。</msg1>
+    <msg2 len="999">WD My Cloud EX2 Ultra システムを再起動しようとしています。すべてのバックアップ、ファイル操作、またはファイル転送が中断されます。</msg2>
+    <msg3 len="999">すべての構成設定をリセットしようとしています。ドライブに保存されているデータには影響しません。[OK] を押すと続行します。</msg3>
+    <msg4 len="999">システムが休止状態になります。続行してもよろしいですか? </msg4>
+    <msg5 len="999">アップロード ファイルを選択してください。</msg5>
+    <msg6 len="999">アカウント アイドル状態タイマーには 0 分よりも長い値を指定する必要があります。</msg6>
+    <msg7 len="999">アカウント アイドル状態タイマーは、空にできません。</msg7>
+    <msg8 len="999">数字を入力してください。</msg8>
+    <msg9 len="999">アイドル時間にはスペースを使用できません。</msg9>
+    <msg10 len="999">AC 電源が失われました。現在 UPS が使用中です。NAS はまもなくシャットダウンします。データが失われないように、未完了の作業を完了してください。</msg10>
+  <msg11 len="999">本製品は標準の動作温度を超えています。涼しい場所に移動させてください。</msg11>
+    
+<msg12 len="999">システム過熱</msg12>
+  <default_system>
+[システムのみ] はシステム設定をデフォルト値に戻しますが、ユーザー データと共有は保持します。
+&lt;br&gt;&lt;br&gt;
+続行しますか?</default_system><default_quick>[簡易初期状態に復元] はすべての設定をデフォルト値に戻し、すべてのユーザー データと共有を削除し、デフォルト共有を保持します。[簡易初期状態に復元] はデバイスで新しいファイル テーブルを作成しますが、完全にドライブを上書きまたは消去しません。このため、データ回復プログラムを使用して、ユーザー データと共有を復元できます。
+&lt;br&gt;&lt;br&gt;
+続行しますか?</default_quick><default_full>[完全初期状態に復元] はすべての設定をデフォルト値に戻し、すべてのユーザー データと共有を完全に消去し、デフォルト共有を保持します。データ回復プログラムを使用してデータを復元できません。デフォルト共有を除き、すべてのユーザー データと共有は完全に削除されます。
+&lt;br&gt;&lt;br&gt;
+続行しますか?</default_full><msg13>拡張ロギングのオン/オフを切り換えるには、システムの再起動が必要です。すべてのバックアップ、ファイル操作、またはファイル転送が中断されます。</msg13></_system>
+  <_firmware>
+    <importing>ファイルをインポート中</importing>
+    <upgrading>アップグレード中...</upgrading>
+    <new_found>ファームウェア更新バージョンが見つかりました</new_found>
+    <new_available>新しいファームウェアが利用可能です</new_available>
+    <auto_update>自動更新</auto_update>
+    <enable_auto>自動更新を有効にする</enable_auto>
+    <available_update>利用可能な更新</available_update>
+    <new_fw>新しいファームウェア</new_fw>
+    <check_update>更新の確認</check_update>
+    <last_update>前回の更新</last_update>
+    <title len="999">ファームウェアを更新</title>
+    <current len="999">現在のバージョン</current>
+    <date len="999">ファームウェア日付</date>
+    <upload len="999">ファームウェア アップロード</upload>
+    <path len="999">ファームウェア パス</path>
+    <manual_update>手動更新</manual_update>
+    <fw_img>ファームウェア イメージ</fw_img>
+    <update_b>ファイルから更新</update_b>
+    <update_sch>更新スケジュール</update_sch>
+    <release_note>ファームウェア リリース ノート</release_note>
+    <update_now>すぐに更新</update_now>
+    <reboot_required>再起動が必要</reboot_required>
+    <latest_version len="999">最新バージョン</latest_version>
+    <update_button>ファイルから更新</update_button>
+    <install_title>最新ファームウェアのインストール</install_title>
+    <msg1 len="999">ファームウェア更新が正常に完了しました。ログインする前に、WD My Cloud EX2 Ultra システムで再起動処理が完了するのをお待ちください。これは 1 分以内に完了します。ファームウェア バージョンを確認し、更新を検証します。</msg1>
+    <msg2 len="999">ファームウェアの検証エラー</msg2>
+    <msg3 len="999">ファームウェアのアップロードが正しく完了しませんでした。再試行してください。</msg3>
+    <msg4 len="999">ファームウェアの検証エラー</msg4>
+    <msg5 len="999">
+      <![CDATA[ファイル名には次の文字を使用できません。~`!@#$%^&+={}[];',]]>
+    </msg5>
+    <msg6 len="999">ファームウェア更新のインストール中に WD My Cloud EX2 Ultra システムを切断しないでください。更新の完了後、ネットワーク ドライブが自動的に再起動します。</msg6>
+    <msg7 len="999">ファームウェアをアップロードしています。</msg7>
+    <msg8 len="999">
+      <![CDATA[警告:Micro-P ファームウェアを更新しています。<br>WD My Cloud EX2 Ultra デバイスを再起動またはシャットダウンしないでください。]]>
+    </msg8>
+    <msg9 len="999">
+      <![CDATA[
+		<img src='/web/images/warning.png'> Micro-P ファームウェア アップグレード処理を完了するには、WD My Cloud EX2 Ultra デバイスから電源コードを取り外します。<br><br>5 秒間待機してから、電源コードを接続し、WD My Cloud EX2 Ultra デバイスの電源を入れます。<br><br>システムが起動した後、ログイン ページが更新されます。]]>
+    </msg9>
+    <msg10 len="999">スケジュールされた電源オフ時間がシステム時刻に近すぎます。電源オフ時間はシステム時刻よりも 10 分以上後でなければなりません。</msg10>
+    <msg11 len="999">ファームウェアをアップロードしてもよろしいですか?</msg11>
+    <msg12>WD My Cloud EX2 Ultra システムのファームウェアは、最新の状態になっています。</msg12>
+    <msg13 len="999">
+      <![CDATA[ファームウェア更新の保留中 - 再起動が必要]]>
+    </msg13>
+    <msg14 len="999">
+ファームウェア更新のインストール中にデバイスを切断しないでください。
+アップデートが完了すると、ネットワークドライブが自動的に再起動します。</msg14>
+  <msg15>ファームウェアが更新されました。ファームウェア更新のインストール中にデバイスを切断しないでください。ファームウェア更新の完了後、ネットワーク ドライブが自動的に再起動します。処理を続行する前に、OSの最新アップデートをコンピュータにインストールすることをおすすめします。
+  &lt;br&gt;&lt;br&gt;
+  &lt;b&gt;重要：&lt;/b&gt;ドライブをアップデートする前に、複数のデータコピー（他のバックアップ）が作成されていることを確認してください。</msg15><msg16>
+ファームウェア更新のインストール中にデバイスを切断しないでください。
+アップデートが完了すると、ネットワークドライブが自動的に再起動します。</msg16><msg17>ファームウェア更新サーバーに接続できません。ネットワークの接続を確認し、再試行してください。</msg17></_firmware>
+  <_mail>
+    <notification>通知</notification>
+    <account len="999">アカウント</account>
+    <anonymous len="999">匿名</anonymous>
+    <user_name len="999">ユーザー名</user_name>
+    <password len="999">パスワード</password>
+    <port len="999">ポート</port>
+    <smtp_server len="999">SMTP サーバー</smtp_server>
+    <sender len="999">送信者の電子メール アドレス</sender>
+    <receiver len="999">受信者の電子メール アドレス</receiver>
+    <smtp_auth len="999">安全な接続</smtp_auth>
+    <interval len="999">間隔</interval>
+    <hours len="999">時間</hours>
+    <Minutes len="999">分</Minutes>
+    <by_schedule len="999">スケジュール</by_schedule>
+    <event_log1 len="999">ログ ファイルが満杯のとき</event_log1>
+    <fahrenheit len="999">華氏</fahrenheit>
+    <celcius len="999">摂氏</celcius>
+    <daily len="999">毎日</daily>
+    <weekly len="999">毎週</weekly>
+    <monthly len="999">毎月</monthly>
+    <time len="999">時刻</time>
+    <day_of_week len="999">曜日</day_of_week>
+    <mon len="999">月</mon>
+    <tue len="999">火</tue>
+    <wed len="999">水</wed>
+    <thu len="999">木</thu>
+    <fri len="999">金</fri>
+    <sat len="999">土</sat>
+    <sun len="999">日</sun>
+    <day_of_month len="999">日</day_of_month>
+    <help_hint len="999">SMTP サーバーは送信メール サーバーです。この意味がわからない場合は、電子メール サービスのプロバイダに問い合わせてください。</help_hint>
+    <msg1 len="999">領域ステータス アラートの間隔を選択します。</msg1>
+    <msg2 len="999">温度は数字でなければなりません。</msg2>
+    <msg5 leng="167">テスト電子メール:送信済み</msg5>
+    <msg6 leng="167">テスト電子メール:エラー</msg6>
+    <msg7 leng="167">ポートを入力してください。</msg7>
+    <msg8 leng="167">ポートには空白を使用できません。</msg8>
+    <msg9 leng="167">無効なポート番号。</msg9>
+    <msg10 leng="167">ユーザー名を入力してください。</msg10>
+    <msg11 leng="167">パスワードを入力してください。</msg11>
+    <msg12 leng="167">パスワードは 31 文字以下で指定する必要があります。再試行してください。</msg12>
+    <msg13 leng="167">ユーザー名は 31 文字以下で指定する必要があります。再試行してください。</msg13>
+    <msg14 leng="167">SMTP サーバーを入力します。</msg14>
+    <msg15 leng="167">送信者の電子メール アドレスを入力します。</msg15>
+    <msg16 leng="167">受信者の電子メール アドレスを入力します。</msg16>
+    <msg17 leng="167">SMTP サーバーは 63 文字以下で指定する必要があります。再試行してください。</msg17>
+    <msg18 leng="167">送信者の電子メール アドレスは 63 文字以下で指定する必要があります。再試行してください。</msg18>
+    <msg19 leng="167">受信者の電子メール アドレスは 63 文字以下で指定する必要があります。再試行してください。</msg19>
+    <msg20 leng="167">送信者の電子メール アドレスの形式を確認してください。</msg20>
+    <msg21 leng="167">受信者の電子メール アドレスの形式を確認してください。</msg21>
+    <msg22 len="167">有効な電子メール アドレスを入力してください。</msg22>
+  <random>ランダム</random></_mail>
+  <_format>
+    <wizard_title13 len="999">RAID タイプを RAID 5 に設定する</wizard_title13>
+    <wizard_title14 len="999">RAID タイプを RAID 1 から RAID 5 に設定する</wizard_title14>
+    <format_title2 len="73">設定の自動再構築</format_title2>
+    <initializing len="25">初期化中</initializing>
+    <formatting len="25">フォーマット中</formatting>
+    <verifying len="25">検証中</verifying>
+    <vendor len="12">ベンダー</vendor>
+    <free_size len="999">空き領域サイズ</free_size>
+    <mode len="999">モード</mode>
+    <raid_description9 len="999">残り領域は JBOD (リニア) ボリュームになります。</raid_description9>
+    <raid_description10 len="999">残り領域</raid_description10>
+    <summary len="999">サマリー</summary>
+    <file_system len="12">ファイル システム</file_system>
+    <format_result len="999">フォーマット結果</format_result>
+    <error_code len="999">エラー コード</error_code>
+    <step len="999">手順</step>
+    <degraded len="999">劣化</degraded>
+    <partitioning len="999">パーティション化中</partitioning>
+    <rebuilding len="999">復元中</rebuilding>
+    <disk len="6">ディスク</disk>
+    <encryption len="999">暗号化</encryption>
+    <auto_mount len="999">自動マウント</auto_mount>
+    <spare len="999">予備</spare>
+    <desc3 len="999">xxx 暗号化</desc3>
+    <desc4 len="999">残りディスク領域をスパニングとして構成します。</desc4>
+    <desc5 len="167"><![CDATA[ハード ドライブ構成を変更し、新しいハード ドライブをフォーマットします。このドライブに保存されたすべてのデータは、ドライブをフォーマットするときに削除されます。[<b>次へ</b>] をクリックすると続行します。]]></desc5>
+    <desc6 len="999">このセクションには、ハード ドライブ情報が表示されます。ディスク アレイ シーケンス、製造元、モデル、シリアル番号、ディスク容量が表示されます。</desc6>
+    <desc8 len="999">このセクションでは、WD My Cloud EX2 Ultra システムのファイル システムを変更できます。[&lt;b&gt;次へ&lt;/b&gt;］ をクリックすると続行します。</desc8>
+    <desc9 len="999">このセクションでは、RAID が破損した場合に、RAID を復元できます。[自動再構築を有効にする] を選択すると、RAID を自動的に復元します。[自動再構築を無効にする] を選択すると、別の方法で診断します。</desc9>
+    <desc10 len="999">このセクションでは、RAID サイズを変更し、スパニング形式として残りディスク領域を構成できます。</desc10>
+    <desc11 len="999">このセクションには、作成した構成のサマリーが表示されます。ボリューム名、ファイル形式、ディスク サイズ、およびディスク アレイ番号が表示されます。</desc11>
+    <desc12 len="999">WD My Cloud EX2 Ultra デバイスがシステムを更新している間、お待ちください。</desc12>
+    <desc13 len="999">WD My Cloud EX2 Ultra デバイスがボリュームをフォーマットしている間、お待ちください。</desc13>
+    <desc14 len="999">セットアップが完了しました。このセクションには、ボリューム名、ファイル システム、RAID モード (タイプ)、およびディスク アレイに関する情報が表示されます。</desc14>
+    <desc15 len="999">WD My Cloud EX2 Ultra デバイスがドライブをパーティション化している間、お待ちください。この段階で、NAS の電源を切らないでください。</desc15>
+    <desc18 len="999"><![CDATA[ハード ドライブ構成を変更し、新しいハード ドライブをフォーマットします。このドライブに保存されたすべてのデータは、ドライブをフォーマットするときに削除されます。[<b>次へ</b>] をクリックすると続行します。]]></desc18>
+    <desc19 len="999">このセクションには、新しく取り付けられたハード ドライブ情報が表示されます。ディスク アレイ シーケンス、製造元、モデル、シリアル番号、ディスク容量が表示されます。</desc19>
+    <desc20 len="999">ファイル システムを選択します。ファイル システムは、ディスク上のデータの保存、割り当て、および更新方法を管理するために使用されます。ext3 または ext4 を選択します。</desc20>
+    <desc21 len="999">このセクションでは、ドライブを RAID 1 に再構成するために使用するディスクを選択します。</desc21>
+    <desc22 len="999"><![CDATA[このセクションでは、残りディスク領域をスパニングとして構成できます。フォーマット中には、新しいボリュームのすべてのデータが消去されます。[<b>次へ</b>] をクリックすると続行します。]]></desc22>
+    <desc23 len="999"><![CDATA[[次へ] をクリックするとボリュームを暗号化します。]]></desc23>
+    <desc24 len="999"><![CDATA[このセクションでは、ボリュームを暗号化できます。[<b>次へ</b>] をクリックすると続行します。]]></desc24>
+    <desc25 len="999">セットアップが完了しました。このセクションには、ボリューム名、ファイル システム、RAID モード (タイプ)、およびディスク アレイに関する情報が表示されます。</desc25>
+    <desc26 len="999">このウィザードでは、新しいドライブを RAID として構成できます。</desc26>
+    <desc27 len="999"><![CDATA[新しいドライブをフォーマットします ([フォーマット] ボタンをクリック)。フォーマット処理が完了した後は、古いデータは新しいドライブで同期されます。]]></desc27>
+    <desc28 len="999">WD My Cloud EX2 Ultra デバイスがドライブをパーティション化およびフォーマットしている間、お待ちください。この段階で、NAS の電源を切らないでください。</desc28>
+    <desc29 len="999">WD My Cloud EX2 Ultra デバイスがシステムを更新している間、お待ちください。この段階で、NAS の電源を切らないでください。</desc29>
+    <desc30 len="999">ディスクと RAID への変更が完了します。ここには、新しいディスクとアレイの詳細、製造元、モデル名、およびシリアル番号が表示されます。</desc30>
+    <desc31 len="999"><![CDATA[RAID 5+spare を構成します ([スペア ディスクの作成] ボックスをクリック)。「ディスク 4」がホット スペアになります。RAID 5+spare を作成する場合は、[スペア ディスクの作成] をオフにします。RAID 5 ボリュームのサイズを調整し、すべての領域を使用しない場合は、[残りディスク領域を JBOD として構成する] をオンにします。[<b>次へ</b>] をクリックすると続行します。]]></desc31>
+    <desc34 len="999"><![CDATA[ <b><font color="#FF0000">警告: ディスク シーケンスが無効です。</font></b> ]]></desc34>
+    <desc35 len="999">ディスク シーケンスが</desc35>
+    <desc36 len="999">次の手順でシーケンスを交換してください</desc36>
+    <msg1 len="167">RAID タイプを選択します。</msg1>
+    <msg2 len="167">RAID ボリュームのサイズは xxx ～ yyy GB の範囲でなければなりません。</msg2>
+    <msg3 len="167">ハード ドライブを再フォーマットしようとしています。すべてのデータが消去されます。続行してもよろしいですか?</msg3>
+    <msg4 len="167">RAID ボリューム [0 ～ 9] のサイズを入力します。</msg4>
+    <msg5 len="167">RAID ボリュームのサイズを入力します。</msg5>
+    <msg6 len="167">再度ログインする前に、WD My Cloud EX2 Ultra デバイスが再起動している間、少しお待ちください。</msg6>
+    <msg7 len="167">ハード ドライブ フォーマット エラー</msg7>
+    <msg8 len="167">xxx が現在同期中です。</msg8>
+    <msg9 len="167">パスワードを入力してください。</msg9>
+    <msg10 len="167">パスワードを再入力してください。</msg10>
+    <msg11 len="167">パスワードは 32 文字以下で指定する必要があります。再試行してください。</msg11>
+    <msg12 len="167">新しいパスワードとパスワードの確認が一致しません。再試行してください。</msg12>
+    <msg13 len="167">新しいパスワードには、スペースまたは次の文字を使用できません。`~!@#$%^&amp;(){}'*+=|[]/\:";&lt;&gt;?,.</msg13>
+    <msg14 len="167">パスワードは 4 文字以上で指定する必要があります。再試行してください。</msg14>
+    <msg16 len="167">このオプションを有効にすると、デバイスのスループットに大きく影響する場合があります。</msg16>
+    <msg17 len="167">システムのシャットダウン、復元、再起動およびファームウェア アップデートは、以下の操作の実行中には禁じられています： ディスクのフォーマット、ディスクのサイズ変更、ディスクの移行、RAID パリティ チェック、ファームウェアのアップロード。</msg17>
+    <msg18 len="167">1 つ以上のディスクを選択する必要があります。</msg18>
+    <msg19 len="167">2 つ以上のディスクを選択する必要があります。</msg19>
+  </_format>
+  <_diagnostic>
+    <title1 len="999">システム診断</title1>
+    <desc1 len="999">ディスク テスト</desc1>
+    <desc2 len="999">テスト実行中</desc2>
+    <desc3 len="999">自己テスト結果</desc3>
+    <desc4 len="999">自己テストがキャンセルされました</desc4>
+    <desc5 len="999">ウィザードはシステムをスキャンしています。ウィンドウを閉じる場合は、[閉じる] ボタンをクリックします。ウィンドウを閉じても、システム スキャンはキャンセルされません。</desc5>
+    <desc6 len="999">ディスクのスキャン</desc6>
+    <desc7 len="999">このボリュームは正常にスキャンされました。</desc7>
+    <desc8 len="999">WD My Cloud EX2 Ultra デバイスがシステムを更新している間、お待ちください。</desc8>
+    <desc9 len="999">すべてのボリューム</desc9>
+    <desc10 len="999">ディスクのフォーマット</desc10>
+    <desc11 len="999">削除時にすべてのデータを安全な方法でワイプします。</desc11>
+    <desc12 len="999"><![CDATA[これにより、ディスク上のすべてのデータが完全に削除されます。「この操作の実行中はアクティブなファイル転送サービスが中断されることに注意してください。<br><br>続行してもよろしいですか?]]></desc12>
+    <desc13 len="999">このボリュームは正常にスキャンされました。エラーが見つかりません。</desc13>
+    <desc14 len="999">システム クロック</desc14>
+    <desc15 len="999">USB1</desc15>
+    <desc16 len="999">USB2</desc16>
+    <desc17 len="999">ドライブ1</desc17>
+    <desc18 len="999">ドライブ2</desc18>
+    <desc19 len="999">ドライブ3</desc19>
+    <desc20 len="999">ドライブ4</desc20>
+    <desc21 len="999">メモリ</desc21>
+    <desc23 len="999">ファン</desc23>
+    <desc24 len="999">システム テスト</desc24>
+    <button1 len="999">簡易テスト</button1>
+    <button2 len="999">完全テスト</button2>
+    <button3 len="999">完了</button3>
+    <button4 len="999">システム テスト</button4>
+  </_diagnostic>
+  <_scandsk>
+    <wait len="999">しばらくお待ちください...</wait>
+    <volume len="999">ボリューム</volume>
+    <msg2 len="167">ディスク スキャンが完了しました。エラーが見つかりませんでした。</msg2>
+    <msg3 len="342"><![CDATA[ディスクのスキャンを開始する前に、ハード ドライブへのすべてのデータ転送とデータ処理を一時停止します。また、すべてのネットワーク アクティビティも一時停止することをお勧めします。「この操作の実行中はアクティブなファイル転送サービスが中断されることに注意してください。<br><br>続行してもよろしいですか?]]></msg3>
+  </_scandsk>
+  <_ve>
+    <title1 len="999">鍵の保存</title1>
+    <title2 len="999">ボリューム暗号化について</title2>
+    <status len="999">ステータス</status>
+    <mount len="999">マウント</mount>
+    <pwd len="999">元のパスワード</pwd>
+    <button1 len="999">暗号化された鍵ファイルのダウンロード</button1>
+    <desc1 len="999">新しいパスワード</desc1>
+    <desc2 len="999">パスワードの確認</desc2>
+    <desc3 len="999">元のパスワードを入力して、暗号化されたボリュームの設定を変更します。</desc3>
+    <desc4 len="999">[自動マウント] ボックスをクリックし、システム起動時に暗号化されたドライブを自動的にマウントします。新しいパスワードを入力し、元のパスワードを上書きすることを確認します。</desc4>
+    <desc5 len="999">暗号化されたドライブのパスワードを入力します。</desc5>
+    <desc6 len="999">ドライブを暗号化している間、お待ちください</desc6>
+    <desc7 len="999">暗号化された鍵ファイルのアップロード</desc7>
+    <desc8 len="999">無効な鍵ファイルです。ボリューム xxx をマウントできませんでした。別の鍵ファイルを試してください。</desc8>
+    <desc9 len="999">ドライブを復号化している間、お待ちください</desc9>
+    <desc10>
+  WD My Cloud EX2 Ultra システムは、256-bit AES 暗号化方式で暗号化することで、不正アクセスや窃盗からデータを保護できます。ボリュームの作成時にボリュームの暗号化を有効にし、標準の読み取り/書き込みアクセス権限でマウントします。&lt;br&gt;&lt;br&gt;
+  構成によっては、ボリューム暗号化を設定し、ボリュームを自動的にマウントすることで、必要な暗号化認証資格情報を何度も入力せずに済みます。
+ </desc10>
+    <msg1 len="167">元のパスワードを入力します。</msg1>
+    <msg2 len="167">元のパスワードは 32 文字以下で指定する必要があります。再試行してください。</msg2>
+    <msg3 len="167"><![CDATA[元のパスワードには次の文字を使用できません。@ :/ \ % ']]></msg3>
+    <msg4 len="167">入力した元のパスワードが正しくありません。再試行してください。</msg4>
+    <help_hint len="999"><![CDATA[
+			ボリューム暗号化は対称 256 ビット データ 暗号化技術です。複数のネットワーク レイヤーで同時に動作するという利点があります。<br><br>ボリューム暗号化はバッググラウンドで実行されます。主な機能は、他のユーザーが認識できない方法で、データをコード化することです。暗号化にはパスワードが必要です。データを暗号化した時点で、復号化のためにこのパスワードが必要になります。<br><br>必ず USB ストレージ デバイスがフォーマットされることを確認してください。確認しないと、すべてのデータが失われます。現在、NAS は 2GB/4GB/8GB/16GB/32GB デバイスをサポートしています。USB ストレージ デバイスを NAS に直接リンクするか、使用しているワークステーション (PC) 経由でリンクします。
+		]]></help_hint>
+  </_ve>
+  <_ddns>
+    <title len="999">DDNS 設定</title>
+    <description len="999">動的 DNS 機能では、購入したドメイン名 (www.whateveryournameis.com) と動的に割り当てられた IP アドレスを使用して、サーバー (Web、FTP、ゲーム サーバーなど) をホストできます。ほとんどのブロードバンド インターネット サービス プロバイダは、動的 (変更する) IP アドレスを割り当てます。DDNS サービス プロバイダを使用すると、IP アドレスに関係なく、他のユーザーがホスト名を入力し、NAS に接続できます。</description>
+    <ddns_title len="999">DDNS 設定</ddns_title>
+    <ddns len="999">動的 DNS</ddns>
+    <server_address len="999">サーバー アドレス</server_address>
+    <select_ddns len="999">動的 DNS サーバーを選択</select_ddns>
+    <host_name len="999">ホスト名</host_name>
+    <username len="999">ユーザー名またはキー</username>
+    <pwd len="999">パスワードまたはキー</pwd>
+    <verify len="999">パスワードまたはキーの検証</verify>
+    <status len="999">ステータス</status>
+    <help_hint len="999">この機能を使用するには、まず、ドロップダウン メニューのプロバイダのいずれかが提供する動的 DNS アカウントが必要です。</help_hint>
+    <update_success len="999">更新されました</update_success>
+    <update_fail len="999">更新エラー</update_fail>
+    <last len="999">前回更新時刻</last>
+    <next len="999">次回更新時刻</next>
+    <connect len="999">接続中...</connect>
+    <msg1 len="999">サーバー アドレスを空にできません。</msg1>
+    <msg2 len="999">サーバー アドレスは 64 文字以下で指定する必要があります。再試行してください。</msg2>
+    <msg3 len="999">ホスト名は 64 文字以下で指定する必要があります。再試行してください。</msg3>
+    <msg4 len="999">ユーザー名は 64 文字以下で指定する必要があります。再試行してください。</msg4>
+    <msg5 len="999">パスワードは 64 文字以下で指定する必要があります。再試行してください。</msg5>
+    <msg6 len="999">パスワードが一致しません。再試行してください。</msg6>
+    <msg7 len="999">ユーザー名を空にできません。</msg7>
+    <msg8 len="999">空白スペースを入力できません。</msg8>
+    <msg9 len="999">パスワードを空にできません。</msg9>
+    <msg10 len="999">空白スペースを入力できません。</msg10>
+    <msg11 len="999">ホスト名を空にできません。</msg11>
+    <msg12 len="999">空白スペースを入力できません。</msg12>
+    <msg13 len="999">DDNS サーバーを選択します。</msg13>
+  </_ddns>
+  <_sys_info>
+    <volume_info len="999">ボリューム情報</volume_info>
+    <volume_name len="16">ボリューム名</volume_name>
+    <volume_type len="999">ボリューム タイプ</volume_type>
+    <sync_time len="999">残り同期時間</sync_time>
+    <capacity len="999">合計ハード ドライブ容量</capacity>
+    <ups_info len="999">UPS 情報</ups_info>
+    <battery_charge len="999">バッテリ充電</battery_charge>
+    <usb_info len="999">USB 情報</usb_info>
+  </_sys_info>
+  <_hd_info>
+    <slot len="999">スロット</slot>
+    <manu len="999">製造元</manu>
+    <model len="999">モデル</model>
+    <serial_number len="999">シリアル番号</serial_number>
+    <temp len="999">温度</temp>
+    <size len="999">サイズ</size>
+    <id len="7">ID</id>
+    <item len="999">項目</item>
+  </_hd_info>
+  <_monitor>
+    <network_active>ネットワーク アクティビティ</network_active>
+    <device_active>デバイス アクティビティ</device_active>
+    <desc>次のリストは、WD My Cloud EX2 Ultra システムで実行中のすべてのシステム アクティビティとプロセスを示します。 </desc>
+    <cpu len="999">CPU</cpu>
+    <memory len="999">メモリ</memory>
+    <bandwidth len="999">帯域幅</bandwidth>
+    <lan1 len="999">LAN 1</lan1>
+    <lan2 len="999">LAN 2</lan2>
+    <process len="999">プロセス</process>
+    <used len="999">使用済み</used>
+    <free len="999">空き</free>
+    <process_name len="999">プロセス名</process_name>
+    <owner len="999">所有者</owner>
+    <id len="999">ID</id>
+    <utilitazion_ratio len="999">利用率 (%)</utilitazion_ratio>
+    <kb_s len="999">
+      <![CDATA[KB/秒]]>
+    </kb_s>
+    <percentage len="999">%</percentage>
+    <memory_usage>メモリ使用状況</memory_usage>
+  </_monitor>
+  <_backup>
+    <title1 len="999">内部バックアップ</title1>
+    <title2 len="999">内部バックアップ ジョブ</title2>
+    <title3 len="999">内部バックアップについて</title3>
+    <title4 len="999">バックアップ</title4>
+    <category len="999">カテゴリ</category>
+    <local len="999">内部バックアップ</local>
+    <remote len="999">LAN バックアップ</remote>
+    <file len="999">ファイル</file>
+    <url len="999">URL</url>
+    <rename len="999">名前の変更</rename>
+    <when len="999">スケジュール</when>
+    <recurring_backup len="999">繰り返し</recurring_backup>
+    <none len="999">なし</none>
+    <incremental_backup len="999">増分バックアップ</incremental_backup>
+    <create len="999">ジョブの作成</create>
+		<edit_job>ジョブの修正</edit_job>
+    <desc1 len="999">パスの選択</desc1>
+    <desc2 len="999">バックアップ元フォルダ</desc2>
+    <desc3 len="999">バックアップ先フォルダ</desc3>
+    <desc4 len="999">ジョブ名</desc4>
+    <desc5 len="999">詳細</desc5>
+    <desc6 len="999">毎月</desc6>
+    <desc7 len="999">毎週</desc7>
+    <desc8 len="999">毎日</desc8>
+    <desc9 len="999">1つのストレージ ロケーションから、My Cloud システム内の別のロケーションにコンテンツをバックアップします。</desc9>
+    <desc10 len="999">午前</desc10>
+    <desc11 len="999">午後</desc11>
+    <desc12 len="999">ダウンロードしました</desc12>
+    <desc13 len="999">ダウンロードが失敗しました</desc13>
+    <desc14 len="999">ダウンロード中</desc14>
+    <desc15 len="999">待機中</desc15>
+    <desc16 len="999">ダウンロードが停止しました</desc16>
+    <desc17>バックアップの回復</desc17>
+    <msg1 len="167">時間設定を確認してください。</msg1>
+    <msg2 len="167">ファイル名は 1 文字以上で指定する必要があります。</msg2>
+    <msg4 len="167"><![CDATA[ファイル名には次の文字を使用できません。\ / :* ?" < > | ]]></msg4>
+    <msg5 len="167">有効なファイル名ではありません。</msg5>
+    <msg6 len="167">ターゲットには URL のサブディレクトリを指定できません。</msg6>
+    <msg7 len="167">URL 形式が正しくありません。正しい形式:Volume_1/Test or \\192.168.0.32\Volume_1\Test\test.txt再試行してください。</msg7>
+    <msg8 len="167">ジョブ名を入力してください。</msg8>
+    <msg9 len="167">ジョブ名は 256 文字以下で指定する必要があります。再試行してください。</msg9>
+    <msg10 len="167">バックアップ元フォルダとバックアップ先フォルダを同じにすることはできません。</msg10>
+    <msg11 len="167">内部バックアップ ジョブを削除してもよろしいですか?</msg11>
+    <msg12 len="167">バックアップ先フォルダの場所を入力します。</msg12>
+    <msg13 len="999">入力したジョブ名は既に存在します。</msg13>
+    <msg14 len="167">バックアップ元フォルダの場所を入力します。</msg14>
+    <msg15 len="167">最大バックアップ ジョブ数に達しました。</msg15>
+  <msg16>ソース・フォルダのデータが上書きされます。続行してもよろしいですか?</msg16><title5>バックアップ復元の確認</title5><msg17>入力した名前と同じ名前のジョブが既に存在します。別の名前を入力してください。</msg17><button1>回復</button1></_backup>
+  <_cloud_backup>
+    <title len="100">クラウド バックアップ</title>
+    <title_note len="100">クラウド バックアップとは何ですか。</title_note>
+    <description len="999">クラウド バックアップでは、インターネットやさまざまなモバイル デバイス経由でアクセスできるリモート バックアップを作成できます。</description>
+  </_cloud_backup>
+  <_download>
+    <title2 len="999">FTP ダウンロード ジョブ</title2>
+    <save_to len="999">保存先</save_to>
+    <speed len="999">速度</speed>
+    <download_path len="999">ダウンロード パス</download_path>
+    <idx len="999">idx</idx>
+    <test_result len="999">テスト結果</test_result>
+    <successful len="999">成功</successful>
+    <fail len="999">失敗</fail>
+    <file_size len="999">ファイル サイズ</file_size>
+    <unavailable len="999">使用不可</unavailable>
+    <codepage len="999">言語</codepage>
+    <bytes len="999">バイト</bytes>
+    <msg1 len="167">ユーザー名は 16 文字以下で指定する必要があります。再試行してください。</msg1>
+    <msg2 len="167">URL は 1 ～ 1024 文字で指定する必要があります。</msg2>
+    <msg3 len="167">保存先を入力します。</msg3>
+    <msg4 len="167">保存先は 1 ～ 226 文字で指定する必要があります。</msg4>
+    <msg5 len="167">URL 形式が正しくありません。正しい形式:http://192.168.0.32/test.txt再試行してください。</msg5>
+    <msg6 len="167">日付を入力します。</msg6>
+    <msg7 len="167">日付の形式が正しくありません。再試行してください。</msg7>
+    <msg8 len="167">パスワードは 128 文字以下で指定する必要があります。再試行してください。</msg8>
+  <detail_job>ジョブ詳細</detail_job></_download>
+  <_p2p>
+    <title len="999">P2P</title>
+    <title2 len="999">P2P 設定</title2>
+    <title3 len="999">P2P の設定</title3>
+    <download_title len="999">ダウンロード</download_title>
+    <set_title len="999">設定</set_title>
+    <add_url len="999">URL から Torrent を追加</add_url>
+    <add_file len="999">ファイルから Torrent を追加</add_file>
+    <tasks_title len="999">P2P タスク</tasks_title>
+    <stop_time len="999">停止時刻</stop_time>
+    <start_time len="999">開始時刻</start_time>
+    <disable len="999">P2P が無効です。</disable>
+    <p2p len="999">P2P</p2p>
+    <auto_download len="999">自動ダウンロード</auto_download>
+    <port_settings len="999">受信接続ポート</port_settings>
+    <automatic len="999">自動</automatic>
+    <custom len="999">カスタム</custom>
+    <incoming len="999">受信接続ポート</incoming>
+    <bandwidth_control len="999">帯域幅制御</bandwidth_control>
+    <manual len="999">手動</manual>
+    <max_download_rate len="999">最大ダウンロード速度</max_download_rate>
+    <max_upload_rate len="999">最大アップロード速度</max_upload_rate>
+    <seeding len="999">シーディング</seeding>
+    <seed_removed len="999">削除されるまでシーディング</seed_removed>
+    <stop_seeding len="999">シーディングを停止するまでの時間</stop_seeding>
+    <minutes len="999">分</minutes>
+    <stop_seeding_when_meet len="999">シーディングを停止する条件</stop_seeding_when_meet>
+    <torrent_save_path len="999">Torrent 保存パス</torrent_save_path>
+    <encryption len="999">暗号化</encryption>
+    <flow_control_schedule len="999">フロー制御スケジュール</flow_control_schedule>
+    <bandwidth len="999">帯域幅</bandwidth>
+    <mon len="999">月</mon>
+    <tue len="999">火</tue>
+    <wed len="999">水</wed>
+    <thu len="999">木</thu>
+    <fri len="999">金</fri>
+    <sat len="999">土</sat>
+    <sun len="999">日</sun>
+    <p2p_detail len="999">詳細</p2p_detail>
+    <top len="999">上</top>
+    <up len="999">上へ</up>
+    <down len="999">下へ</down>
+    <bottom len="999">下</bottom>
+    <detail len="999">詳細</detail>
+    <torrent_scheduling len="18">スケジュール中</torrent_scheduling>
+    <monday len="999">月曜日</monday>
+    <tuesday len="999">火曜日</tuesday>
+    <wednesday len="999">水曜日</wednesday>
+    <thursday len="999">木曜日</thursday>
+    <friday len="999">金曜日</friday>
+    <saturday len="999">土曜日</saturday>
+    <sunday len="999">日曜日</sunday>
+    <total len="999">合計</total>
+    <torrent_s len="999">Torrent</torrent_s>
+    <torrent_url_speed len="999">合計アップロード速度</torrent_url_speed>
+    <torrent_dl_speed len="999">合計ダウンロード速度</torrent_dl_speed>
+    <remove_completed len="18">完了済みの項目を削除</remove_completed>
+    <torrent len="999">Torrent</torrent>
+    <hhmm len="999">(HH:MM)</hhmm>
+    <start_download len="999">ダウンロード開始</start_download>
+    <stop_download len="999">ダウンロード停止</stop_download>
+    <dl_ul_speed len="999">ダウンロード/アップロード速度</dl_ul_speed>
+    <priority len="999">優先度</priority>
+    <status len="999">ステータス</status>
+    <daily len="999">毎日</daily>
+    <config len="999">設定</config>
+    <finished len="999">完了</finished>
+    <button1 len="999">クリックすると、ファイルをアップロードします</button1>
+    <button2 len="999">開始</button2>
+    <button3 len="999">停止</button3>
+    <desc1 len="999"><![CDATA[<br><br><b><font color=red>パスが変更されました。元のパスが存在しません。</font></b>]]></desc1>
+    <desc2 len="999">[自動ダウンロード] が有効な場合、スケジュールはできません。[自動ダウンロード] が無効な場合、ダウンロードをスケジュールできます。</desc2>
+    <desc3 len="999">トレントを保存したいボリュームを選択してください。「P2P」フォルダが自動的に作成されます。</desc3>
+    <desc4 len="999"><![CDATA[暗号化を有効/無効にし、ダウンロードのセキュリティを強化します。]]></desc4>
+    <desc5 len="999">この項目を空白にすると、ダウンロード速度が無制限になります。</desc5>
+    <desc6 len="999">P2P 終日オフ</desc6>
+    <msg1 len="167">有効な値ではありません。</msg1>
+    <msg2 len="167">受信接続ポートは 10000 ～ 65000 の範囲でなければなりません。</msg2>
+    <msg3 len="167">値は 1 ～ 1440 分の範囲でなければなりません。</msg3>
+    <msg4 len="167">値は 1 ～ 100 の範囲でなければなりません。</msg4>
+    <msg5 len="167">Torrent カウントの最大値は 20 です。</msg5>
+    <msg6 len="167">推奨される最大同時ダウンロード数は 10 です。</msg6>
+    <msg7 len="167">URL を入力してください。</msg7>
+    <msg8 len="167">有効な URL を入力してください。</msg8>
+    <msg9 len="167">入力パスを入力してください。</msg9>
+    <msg11 len="167">開始時刻を入力してください。</msg11>
+    <msg12 len="167">日次ダウンロード期間は 23:59 に制限されています。</msg12>
+    <msg13 len="167">開始時刻を停止時刻よりも後にすることはできません。</msg13>
+    <msg14 len="167">値は 1 ～ 100000 の範囲でなければなりません。</msg14>
+    <msg15 len="167">停止時刻を入力してください。</msg15>
+    <msg16 len="167">xxx 番ポートは FTP サーバーで使用されます。</msg16>
+    <msg17 len="167">1 つのみ選択できます。</msg17>
+    <msg18 len="167">言語を入力します。</msg18>
+    <msg19 len="167"><![CDATA[言語は 32 文字以下で指定する必要があります。再試行してください。]]></msg19>
+    <msg20 len="167">開始時刻は現在の時刻よりも後でなければなりません。</msg20>
+    <msg21 len="167">このトレント ファイルを追加できませんでした。トレント ファイルが無効であるか、重複しています。</msg21>
+    <msg22 len="167">このトレント ファイルを追加できませんでした。My Cloud システムの空き容量が不十分です。</msg22>
+    <msg23 len="167">ストレージに十分な空き領域がありません。</msg23>
+    <msg24 len="167">Torrent アップロード エラー</msg24>
+    <msg25 len="167">このサービスが有効ではありません。有効にするには、管理者に問い合わせてください。</msg25>
+    <msg26 len="167">Torrent を削除してもよろしいですか?</msg26>
+    <msg27 len="167">P2P ダウンロードが無効です</msg27>
+    <msg28 len="167">P2P ダウンロードが有効です。</msg28>
+    <msg29 len="167">URL は 191 文字以下にしてください。</msg29>
+  <desc7>この項目を空白にすると、アップロード速度が無制限になります。</desc7><msg30>このポート番号は既に使用されているか、保留されています。異なったポート番号を入力してください。</msg30><desc8>Torrent Save Path (トレント保存パス) を変更すると、以前にダウンロードしたデータにアクセスできなくなります。パスを変更する前に、ダウンロードしたデータを移動してください。</desc8><title4>ダウンロードをスケジュール</title4><schedule>スケジュール</schedule><tip1>ダウンロードするトレントを追加するには、トレント URL、マグネット リンクまたはトレント ハッシュ コードを入力します。</tip1><tip2>このオプションを有効にすると、トレントを追加したときにダウンロードが自動的に開始されます。スケジュールされているダウンロードが行われません。</tip2><desc9>正しく追加されました。</desc9></_p2p>
+  <_time_machine>
+    <title>Mac バックアップ</title>
+    <no_share len="999">共有フォルダではありません。</no_share>
+    <desc len="999">Mac の Time Machine バックアップ設定を構成します。</desc>
+    <sel len="999">共有を選択</sel>
+  </_time_machine>
+  <_elephant_drive>
+    <title len="50">ElephantDrive</title>
+    <access_backups>バックアップにアクセス</access_backups>
+    <e_mail len="50">電子メール アドレス</e_mail>
+    <password len="50">パスワード</password>
+    <verify_password len="50">パスワードの確認</verify_password>
+    <key_featuresNote>
+   &lt;b&gt;WD My Cloud EX2 Ultra システムを保護します。&lt;/b&gt;&lt;br&gt;
+   ElephantDrive はクラウド ストレージ ソリューションを提供し、WD My Cloud EX2 Ultra システムをクラウドに接続して保護します。ネイティブ クライアントは、業界最高のセキュリティ機能を使用して、クラウド バックアップを提供し、WD My Cloud EX2 Ultra システムに同期します。このソリューションには、サイト保護の分離、インテリジェント同期、およびシンプルかつ安全な共有という、クラウド ストレージにおける 3 つの重要な利点があります。
+   &lt;br&gt;&lt;br&gt;
+  </key_featuresNote>
+    <elephant_link_tml>
+      <![CDATA[
+		ElephantDrive の詳細については、<a href="http://www.elephantdrive.com/m/ct.aspx?ici={0}" target="_blank">http://www.elephantdrive.com/m/ct.aspx?ici={1}</a> を参照してください。
+		]]>
+    </elephant_link_tml>
+    <conn_status>ステータス</conn_status>
+    <register>登録</register>
+    <reg_success>ログイン</reg_success>
+    <login>ログイン</login>
+    <forgot_password>
+      <![CDATA[
+		<a href="https://vault.elephantdrive.com/account/forgot_password.aspx" target="_blank">パスワードを忘れた場合</a>
+		]]>
+    </forgot_password>
+    <Note1>ElephantDrive アカウントがない場合、上記の情報を入力し、[登録] をクリックして、アカウントを作成します。</Note1>
+    <Note2>ElephantDrive アカウントがある場合は、上記の情報を入力して、[ログイン] をクリックします。</Note2>
+    <Note3>アカウント管理とデータのバックアップについては、ElephantDrive の Web サイトをご覧ください。 </Note3>
+    <msg1 len="167">電子メール アドレスを入力してください。</msg1>
+    <msg2 len="167">有効な電子メール アドレスを入力してください。</msg2>
+    <msg3 len="167">パスワードを入力してください。</msg3>
+    <msg4 len="167">パスワードとパスワードの確認が一致しません。再試行してください。</msg4>
+    <view_file_link>
+      <![CDATA[ファイルを表示するには、<a href="https://vault.elephantdrive.com" target="_blank">https://vault.elephantdrive.com</a> にアクセスしてください。]]>
+    </view_file_link>
+    <new_device_backup_wizard>
+      <![CDATA[<a href=" https://vault.elephantdrive.com/account/autologin.aspx?user={0}&session={1}&date={2}&tab={3}&dname={4}" target="_blank">新しいデバイス バックアップ ウィザード</a>]]>
+    </new_device_backup_wizard>
+    <msg6 len="167">オンライン</msg6>
+    <msg7 len="167">オフライン</msg7>
+    <msg8 len="167">待機中...</msg8>
+    <msg9 len="167">接続中...</msg9>
+    <msg10 len="167">電子メール アドレスは既にデータベースに登録されています</msg10>
+    <msg11 len="167">サービスが一時的に使用できません。</msg11>
+    <msg12 len="167">サービスが一時的に使用できません。</msg12>
+    <msg13 len="167">電子メールが見つかりません。</msg13>
+    <msg14 len="167">正しくないパスワード</msg14>
+  </_elephant_drive>
+  <_codepage>
+    <ISO-8859-1 len="999">西ヨーロッパ言語</ISO-8859-1>
+    <ISO8859-1 len="999">西ヨーロッパ言語</ISO8859-1>
+    <ISO-8859-2 len="999">スラブ語/中央ヨーロッパ言語</ISO-8859-2>
+    <ISO8859-2 len="999">スラブ語/中央ヨーロッパ言語</ISO8859-2>
+    <ISO-8859-3 len="999">南ヨーロッパ言語</ISO-8859-3>
+    <ISO-8859-4 len="999">バルト言語</ISO-8859-4>
+    <ISO-8859-5 len="999">キリル言語</ISO-8859-5>
+    <ISO-8859-7 len="999">現代ギリシャ語</ISO-8859-7>
+    <ISO-8859-9 len="999">トルコ語</ISO-8859-9>
+    <ISO8859-9 len="999">トルコ語</ISO8859-9>
+    <ISO-8859-10 len="999">北ヨーロッパ言語</ISO-8859-10>
+    <ISO-8859-13 len="999">バルト言語</ISO-8859-13>
+    <ISO-8859-14 len="999">ケルト語</ISO-8859-14>
+    <ISO-8859-15 len="999">西ヨーロッパ言語とユーロ</ISO-8859-15>
+    <ISO-8859-16 len="999">南ヨーロッパ言語</ISO-8859-16>
+    <KOI8-R len="999">ロシア語</KOI8-R>
+    <KOI8-U len="999">ウクライナ語、ベラルーシ語</KOI8-U>
+    <KOI8-RU len="999">ウクライナ語、ベラルーシ語</KOI8-RU>
+    <CP1250 len="999">MS Windows 中央ヨーロッパ言語</CP1250>
+    <CP1251 len="999">MS Windows キリル語</CP1251>
+    <cp1251 len="999">MS Windows キリル語</cp1251>
+    <CP1252 len="999">MS Windows ラテン文字</CP1252>
+    <CP1253 len="999">MS Windows ギリシャ語</CP1253>
+    <CP1254 len="999">MS Windows トルコ語</CP1254>
+    <CP1257 len="999">MS Windows バルト語</CP1257>
+    <CP850 len="999">西ヨーロッパ言語</CP850>
+    <CP866 len="999">MS-DOS キリル語</CP866>
+    <CP1131 len="999">MS-DOS ベラルーシ語</CP1131>
+    <ISO-8859-6 len="999">アラビア語</ISO-8859-6>
+    <ISO-8859-8 len="999">ヘブライ語</ISO-8859-8>
+    <ISO8859-8 len="999">ヘブライ語</ISO8859-8>
+    <CP1255 len="999">MS Windows ヘブライ語</CP1255>
+    <CP1256 len="999">MS Windows アラビア語</CP1256>
+    <CP862 len="999">ヘブライ語</CP862>
+    <EUC-JP len="999">日本語</EUC-JP>
+    <SHIFT_JIS len="999">日本語</SHIFT_JIS>
+    <CP932 len="999">日本語</CP932>
+    <ISO-2022-JP len="999">日本語</ISO-2022-JP>
+    <ISO-2022-JP-2 len="999">日本語</ISO-2022-JP-2>
+    <ISO-2022-JP-1 len="999">日本語</ISO-2022-JP-1>
+    <EUC-CN len="999">簡体中国語</EUC-CN>
+    <HZ len="999">簡体中国語</HZ>
+    <GBK len="999">簡体中国語</GBK>
+    <CP936 len="999">簡体中国語</CP936>
+    <GB2312 len="999">簡体中国語</GB2312>
+    <gb2312 len="999">簡体中国語</gb2312>
+    <GB18030 len="999">簡体中国語</GB18030>
+    <EUC-TW len="999">繁体中国語</EUC-TW>
+    <BIG5 len="999">繁体中国語</BIG5>
+    <big5 len="999">繁体中国語</big5>
+    <CP950 len="999">繁体中国語</CP950>
+    <BIG5-HKSCS len="999">繁体中国語 (香港)</BIG5-HKSCS>
+    <BIG5-HKSCS_2001 len="999">繁体中国語 (香港)</BIG5-HKSCS_2001>
+    <BIG5-HKSCS_1999 len="999">繁体中国語 (香港)</BIG5-HKSCS_1999>
+    <ISO-2022-CN len="999">簡体中国語</ISO-2022-CN>
+    <ISO-2022-CN-EXT len="999">簡体中国語</ISO-2022-CN-EXT>
+    <EUC-KR len="999">韓国語</EUC-KR>
+    <euc-kr len="999">韓国語</euc-kr>
+    <CP949 len="999">韓国語</CP949>
+    <ISO-2022-KR len="999">韓国語</ISO-2022-KR>
+    <JOHAB len="999">韓国語</JOHAB>
+    <ARMSCII-8 len="999">アルメニア語</ARMSCII-8>
+    <Georgian-Academy len="999">グルジア語</Georgian-Academy>
+    <Georgian-PS len="999">グルジア語</Georgian-PS>
+    <KOI8-T len="999">タジク語</KOI8-T>
+    <PT154 len="999">カザフ語</PT154>
+    <RK1048 len="999">カザフ語</RK1048>
+    <ISO-8859-11 len="999">タイ語</ISO-8859-11>
+    <TIS-620 len="999">タイ語</TIS-620>
+    <CP874 len="999">タイ語</CP874>
+    <MuleLao-1 len="999">ラオス語</MuleLao-1>
+    <CP1133 len="999">ラオス語</CP1133>
+    <VISCII len="999">ベトナム語</VISCII>
+    <TCVN len="999">ベトナム語</TCVN>
+    <CP1258 len="999">ベトナム語</CP1258>
+    <UTF-8 len="999">Unicode 8 ビット</UTF-8>
+    <UCS-2 len="999">UTF-16 BE</UCS-2>
+    <UCS-2BE len="999">Unicode 16 ビット</UCS-2BE>
+    <UCS-2LE len="999">Unicode 16 ビット</UCS-2LE>
+    <UCS-4 len="999">Unicode 32 ビット</UCS-4>
+    <UCS-4BE len="999">Unicode 32 ビット</UCS-4BE>
+    <UCS-4LE len="999">Unicode 32 ビット</UCS-4LE>
+    <UTF-16 len="999">Unicode 16 ビット</UTF-16>
+    <UTF-16BE len="999">Unicode 16 ビット エンディアン</UTF-16BE>
+    <UTF-16LE len="999">Unicode 16 ビット リトル エンディアン</UTF-16LE>
+    <UTF-32 len="999">Unicode 32 ビット</UTF-32>
+    <UTF-32BE len="999">Unicode 32 ビット ビッグ エンディアン</UTF-32BE>
+    <UTF-32LE len="999">Unicode 32 ビット リトル エンディアン</UTF-32LE>
+    <UTF-7 len="999">Unicode 7 ビット</UTF-7>
+    <CP437 len="999">米国、カナダ</CP437>
+    <CP737 len="999">ギリシャ語</CP737>
+    <CP775 len="999">エストニア語、リトアニア語、ラトビア語</CP775>
+    <CP852 len="999">スラブ語 (中央および東ヨーロッパ)</CP852>
+    <CP853 len="999">MS-DOS トルコ語</CP853>
+    <CP855 len="999">キリル言語</CP855>
+    <CP857 len="999">トルコ語</CP857>
+    <CP858 len="999">西ヨーロッパ言語</CP858>
+    <CP860 len="999">MS-DOS ポルトガル語</CP860>
+    <CP861 len="999">MS-DOS アイスランド語</CP861>
+    <CP863 len="999">MS-DOS フランス語 (カナダ)</CP863>
+    <CP865 len="999">MS-DOS 北ヨーロッパ言語</CP865>
+    <cp865 len="999">MS-DOS 北ヨーロッパ言語</cp865>
+    <CP869 len="999">ギリシャ語</CP869>
+    <CP1125 len="999">ウクライナ語</CP1125>
+    <CP864 len="999">タイ語</CP864>
+    <EUC-JISX0213 len="999">日本語</EUC-JISX0213>
+    <Shift_JISX0213 len="999">日本語</Shift_JISX0213>
+    <ISO-2022-JP-3 len="999">日本語</ISO-2022-JP-3>
+    <BIG5-2003 len="999">繁体中国語 (実験)</BIG5-2003>
+    <TDS565 len="999">トルクメン語</TDS565>
+  </_codepage>
+  <_usb_backups>
+    <title len="999">USB バックアップについて</title>
+    <title_note len="999">WD My Cloud EX2 Ultra システムを使用して、USB デバイスとの間でバックアップします。</title_note>
+    <title2 len="999">USB バックアップ ジョブ</title2>
+    <backups_detail len="999">USB バックアップ詳細</backups_detail>
+    <job_name len="999">ジョブ名</job_name>
+    <direction len="999">方向</direction>
+    <usb_backups len="999">USB バックアップ</usb_backups>
+    <usb_to_nas len="999">USB から NAS</usb_to_nas>
+    <nas_to_usb len="999">NAS から USB</nas_to_usb>
+    <source_dir len="999">バックアップ元フォルダ</source_dir>
+    <dest_dir len="999">バックアップ先フォルダ</dest_dir>
+    <select_source_dir len="999">バックアップ元フォルダの選択</select_source_dir>
+    <select_dest_dir len="999">バックアップ先フォルダの選択</select_dest_dir>
+    <sync len="999">同期</sync>
+    <copy len="999">コピー</copy>
+    <status len="999">ステータス</status>
+    <datetime_format len="999">MM/dd/yyyy HH:mm:ss</datetime_format>
+    <msg2 len="167">バックアップ元フォルダを選択します。</msg2>
+    <msg3 len="167">バックアップ先フォルダを選択します。</msg3>
+    <msg7 len="167">ジョブ名を入力します。</msg7>
+    <msg8 len="167">ジョブ名が重複しています。</msg8>
+    <msg9 len="167">バックアップ元フォルダとバックアップ先フォルダが重複しています。</msg9>
+    <msg10 len="167">ジョブを選択します。</msg10>
+    <status0_1>バックアップ完了 {0}</status0_1>
+    <status2>バックアップ中</status2>
+    <status_4>重複したバックアップ</status_4>
+    <status_5>バックアップは追加できません</status_5>
+    <status_6>メモリ割り当てエラー</status_6>
+    <status_7>無効なバックアップ</status_7>
+    <status_8>無効なバックアップ パス</status_8>
+    <status_9>無効なバックアップ元フォルダ</status_9>
+    <no_usb len="999">USB ストレージではありません。</no_usb>
+    <msg1 len="999">警告!ファイルがバックアップ元からバックアップ先にコピーされます。バックアップ先の余分なファイルは削除され、同じ名前のファイルはバックアップ元のファイルで上書きされます。バックアップ元データは変更されません。</msg1>
+    <edit_usb_backup len="999">USB バックアップの編集</edit_usb_backup>
+	<backups_recovery len="999">USB バックアップ回復</backups_recovery>
+	<incremental len="999">増分</incremental>
+	<msg11>
+		<![CDATA[
+		このジョブを削除してもよろしいですか?<br> <br>
+		バックアップ ジョブが削除されます。<br>注:前回のファイル バックアップが削除されません。
+		]]>
+	</msg11>
+	<msg12>最大バックアップ ジョブ数に達しました。</msg12>
+	<backup_now>バックアップ開始</backup_now>
+	<backup_cancel>バックアップ停止</backup_cancel>
+	<edit_job>ジョブの修正</edit_job>
+	<del_job>ジョブの削除</del_job>
+	<status_1>バックアップが失敗しました</status_1>
+	<create_usb_backups>ジョブの作成</create_usb_backups>
+	<recover>バックアップの回復</recover>
+  <auto_start>接続時に自動起動する</auto_start>
+	<over_select_msg>フォルダまたはファイルの最大数に達しました。</over_select_msg>
+	<recovering>回復中...</recovering>
+	<status_10>バックアップ ジョブがキャンセルされました</status_10>
+	<status_1_d>バックアップが失敗しました。システム設定を確認してください</status_1_d>
+	<status_2>バックアップ元のパスが無効です。設定を確認して、修正してください。</status_2>
+	<status_3>バックアップ先のパスが無効です。設定を確認して、修正してください。</status_3>
+	<status1>バックアップ準備完了</status1>
+	<status0>バックアップ完了</status0>
+	<details>ジョブ詳細</details>
+	<backup_type>バックアップ タイプ</backup_type>
+	<backup_Stopped>バックアップ停止</backup_Stopped>
+  <backup_type_tip>コピー － コピー元からコピー先にファイルをコピーします。重複しているファイルは上書きされません。&lt;br&gt;
+  同期 － コピー元からコピー先にファイルをコピーします。重複しているファイルは上書きされます。&lt;br&gt;
+  増分 － コピー先に、ファイルの変更を最大 25 版までコピーします。
+  </backup_type_tip></_usb_backups>
+  <_pwd>
+    <msg1 len="167">入力したパスワードが正しくありません。再試行してください。</msg1>
+    <msg2 len="167">管理者パスワードが変更されました。</msg2>
+    <msg3 len="167">パスワードにはスペースを使用できません。</msg3>
+    <msg4 len="167">新しいパスワードにはスペースを使用できません。</msg4>
+    <msg5 len="167">新しいパスワードは 5 文字以上で指定する必要があります。再試行してください。</msg5>
+    <msg6 len="167">
+      <![CDATA[新しいパスワードには次の文字を使用できません。@ :/ \ % ']]>
+    </msg6>
+    <msg7 len="167">パスワードが一致しません。</msg7>
+    <msg8 len="167">
+      <![CDATA[パスワードには次の文字を使用できません。@ :/ \ % ']]>
+    </msg8>
+    <msg9 len="167">パスワードにはスペースを使用できません。</msg9>
+    <msg10 len="167">パスワードは 5 文字以上で指定する必要があります。再試行してください。</msg10>
+    <msg11 len="167">パスワードは 16 文字以下で指定する必要があります。再試行してください。</msg11>
+  </_pwd>
+  <_ip>
+    <msg1 len="167">入力したサブネット マスクが正しくありません。</msg1>
+    <msg2 len="167">IP アドレスを入力します。</msg2>
+    <msg3 len="167">正の整数を入力します。</msg3>
+    <msg4 len="167">無効な IP アドレス。最初のセットの番号は 1 ～ 223 でなければなりません。</msg4>
+    <msg5 len="167">無効な IP アドレス。2 番目のセットの番号は 0 ～ 255 でなければなりません。</msg5>
+    <msg6 len="167">無効な IP アドレス。3 番目のセットの番号は 0 ～ 255 でなければなりません。</msg6>
+    <msg7 len="167">無効な IP アドレス。4 番目のセットの番号は 1 ～ 254 でなければなりません。</msg7>
+    <msg8 len="167">有効な IP アドレスではありません。</msg8>
+    <msg9 len="167">無効な IP アドレス。再試行してください。</msg9>
+    <msg10 len="167">有効なサブネット マスク アドレスを入力してください。</msg10>
+    <msg11 len="167">サブネット マスク アドレス値には数字のみを使用できます。</msg11>
+    <msg12 len="167">無効なサブネット マスク アドレス。最初のセットの番号は 1 ～ 255 でなければなりません。</msg12>
+    <msg13 len="167">無効なサブネット マスク アドレス。2 番目のセットの番号は 0 ～ 255 でなければなりません。</msg13>
+    <msg14 len="167">無効なサブネット マスク アドレス。3 番目のセットの番号は 0 ～ 255 でなければなりません。</msg14>
+    <msg15 len="167">無効なサブネット マスク アドレス。4 番目のセットの番号は 0 ～ 255 でなければなりません。</msg15>
+    <msg16 len="167">有効なサブネット マスク アドレスではありません。</msg16>
+    <msg17 len="167">無効なサブネット マスク アドレス。再試行してください。</msg17>
+    <msg18 len="167">ゲートウェイ アドレスを入力します。</msg18>
+    <msg19 len="167">ゲートウェイ アドレス値には数字のみを使用できます。</msg19>
+    <msg20 len="167">無効なゲートウェイ アドレス。最初のセットの番号は 1 ～ 223 でなければなりません。</msg20>
+    <msg21 len="167">無効なゲートウェイ アドレス。2 番目のセットの番号は 0 ～ 255 でなければなりません。</msg21>
+    <msg22 len="167">無効なゲートウェイ アドレス。3 番目のセットの番号は 0 ～ 255 でなければなりません。</msg22>
+    <msg23 len="167">無効なゲートウェイ アドレス。4 番目のセットの番号は 0 ～ 255 でなければなりません。</msg23>
+    <msg24 len="167">有効なゲートウェイ アドレスではありません。</msg24>
+    <msg25 len="167">無効なゲートウェイ アドレス。再試行してください。</msg25>
+    <msg26 len="167">DNS IP アドレスには数字のみを使用できます。</msg26>
+    <msg27 len="167">無効な DNS IP アドレス。最初のセットの番号は 1 ～ 223 でなければなりません。</msg27>
+    <msg28 len="167">無効な DNS IP アドレス。2 番目のセットの番号は 0 ～ 255 でなければなりません。</msg28>
+    <msg29 len="167">無効な DNS IP アドレス。3 番目のセットの番号は 0 ～ 255 でなければなりません。</msg29>
+    <msg30 len="167">無効な DNS IP アドレス。4 番目のセットの番号は 0 ～ 255 でなければなりません。</msg30>
+    <msg31 len="999">
+      <![CDATA[
+		IP アドレスには設定されたサブネット マスクのブロードキャスト アドレスが入力され、使用できません。IP アドレスとサブネット マスクの有効な組み合わせを入力してください。
+		]]>
+    </msg31>
+    <msg32 len="167">VLAN ID は 1 ～ 4094 の範囲でなければなりません。</msg32>
+    <msg33 len="167">VLAN ID にはスペースを使用できません。</msg33>
+    <msg34 len="167">プレフィックスにはスペースを使用できません。</msg34>
+    <msg35 len="167">プレフィックスは 0 ～ 128 の範囲でなければなりません。</msg35>
+    <msg36 len="167">LAN 1 と LAN 2 を同じドメインにすることはできません。</msg36>
+    <msg37 len="167">サーバー アドレスを入力します。</msg37>
+    <msg38 len="167">有効な DNS 1 アドレスではありません。</msg38>
+    <msg39 len="167">有効な DNS 2 アドレスではありません。</msg39>
+  <msg40 len="999"><![CDATA[無効な固定 IP を設定すると、WD My Cloud EX2 Ultra にアクセスできなくなる可能性があります。<br>操作を続ける場合は、[保存] をクリックしてください。]]></msg40>
+    
+  </_ip>
+  <_safepoints>
+    <title len="999">Safepoint プロファイル</title>
+    <name len="999">ジョブ</name>
+    <create_on len="999">作成日</create_on>
+    <last_updated len="999">前回更新日</last_updated>
+    <auto len="999">自動更新</auto>
+    <auto_s len="999">自動更新スケジュール</auto_s>
+    <backup_now len="999">すぐにバックアップ</backup_now>
+    <time len="999">自動更新時刻</time>
+    <date_time len="999">
+      <![CDATA[自動更新日時]]>
+    </date_time>
+    <size len="999">
+      <![CDATA[サイズ]]>
+    </size>
+  <sub_title>Safepoint からコンテンツを移行する</sub_title><desc>このウィザードでは、My Cloud (Gen 1) で作成した Safepoint バックアップからコンテンツを移行することができます。</desc><button_start_recovery>移行を開始</button_start_recovery><recovery_desc>Safepoint の場所を選択してください。</recovery_desc><local_usb>ローカル USB</local_usb><scan_network>ネットワークのスキャン</scan_network><search_usb>USB デバイスを検索中</search_usb><search_network_wait>ネットワークのデバイスをスキャン中... お待ちください</search_network_wait><select_a_drive>ドライブを選択</select_a_drive><retrieving_safepoints>Safepoints を取得中</retrieving_safepoints><choose_a_savepoint>Safepoint を選択してください</choose_a_savepoint><choose_desc>選択したドライブまたは共有に次の Safepoint が見つかりました。次のリストから Safepoint を選択し、[完了] をクリックして復元を開始してください。</choose_desc><safepoint_details>Safepoint 詳細</safepoint_details><created_for>作成目的</created_for><restore_progress>Safepoint の移行中</restore_progress><currently_copying>現在コピー中</currently_copying><copied>({0}%) コピー済み</copied><device_login>デバイスのログオン</device_login><share_login>ログオンを共有</share_login><username>ユーザー名</username><password>パスワード</password><error_code_1>リモート共有に接続できません。</error_code_1><error_code_2>ターゲット ロケーションが使用できません。</error_code_2><error_code_3>移行するためには、空き容量が不十分です</error_code_3><error_code_4>ターゲットに書き込むことができません。</error_code_4><error_code_5>データの移行中にエラーが発生しました。</error_code_5><error_code_6>移行したデータの名前を変更しているときにエラーが発生しました。</error_code_6><error_code_7>共有の作成中にエラーが発生しました。</error_code_7><error_code_8>ユーザー外交をキャンセルしました。</error_code_8><error_code_9>既に移行を実行中です。</error_code_9><restore_done>データが正しく復元されました。</restore_done><msg_pre_restore>移行の実行中には、クラウド アクセスを使用できなくなります。DLNA ストリーミング サービスや、My Cloud、MyCloud.com、WD Photos モバイル アプリ、および WD Sync などの WD ソフトウェアは使用できなくなります。続行してもよろしいですか?</msg_pre_restore><preparing_data>移行する Safepoint データを準備しています。このプロセスには数分かかることがあります。</preparing_data></_safepoints>
+  <_remote_backup>
+    <server len="44">リモート サーバー</server>
+    <remote_title1 len="44">リモート バックアップ ジョブ</remote_title1>
+    <remote_title2 len="44">リモート バックアップ サーバー</remote_title2>
+    <remote_title3 len="999">データの保護</remote_title3>
+    <remote_title4 len="999">リモート バックアップ</remote_title4>
+    <remote_title5 len="999">リモート サーバーに接続</remote_title5>     
+	<remote_title6 len="999">My Cloud アカウントにログイン</remote_title6>    
+	<remote_title7 len="999">バックアップ先を選択してください。</remote_title7>      
+	<remote_title8 len="999">デバイスが見つかりません</remote_title8>    
+    <remote_title9 len="999">リモート バックアップ回復リスト</remote_title9>
+	<remote_title10 len="999">リモート バックアップ詳細</remote_title10>    
+    <about len="999">リモート バックアップについて</about>
+    <desc len="999">
+   WD My Cloud EX2 Ultra システムを別のサーバーまたはネットワーク外にバックアップします。&lt;br&gt;
+   リモート バックアップを実行する前に、次の点を確認してください。&lt;br&gt;
+   &lt;ol&gt;
+    &lt;li&gt;このシステムのバックアップ先となるリモート WD My Cloud EX2 Ultra システムがあること。既存のデータの他に、既存の共有とこのシステムのデータがバックアップ先のシステムにコピーされます。&lt;/li&gt;
+    &lt;li&gt;リモート WD My Cloud EX2 Ultra システムで、リモート サーバー設定がオンになっていること。&lt;/li&gt;
+    &lt;li&gt;リモート WD My Cloud EX2 Ultra システムのバックアップ パスワードが有効になっていること。&lt;/li&gt;
+    &lt;li&gt;ポート転送ルールを SSH とリモート バックアップの両方のサービスについて [設定] &gt; [ネットワーク] &gt; [ポート転送] で追加済みです。これは、WD My Cloud EX2 Ultra システムをインターネット経由で参照できるようにするためです。&lt;/li&gt;
+   &lt;/ol&gt;
+  </desc>
+    <desc2 len="999">あるストレージ ロケーションから、WD My Cloud EX2 Ultra システムの別のロケーションに、既存の内容をバックアップします。</desc2>
+    <desc3 len="999">WD My Cloud EX2 Ultra システムには、リモート バックアップ ジョブが追加されていません。</desc3>
+    <desc4 len="999">リモート サーバーに接続する方法を選択してください</desc4>
+	<desc5 len="999">WD My Cloud EX2 Ultra は優れた機能を備え、電子メールを登録すると、すべてのデバイスを検索します</desc5>
+	<desc6 len="999">
+   WD My Cloud EX2 Ultra システムをバックアップできるデバイスが見つかりませんでした。&lt;br&gt;&lt;br&gt;
+   次の点を確認してください。&lt;br&gt;&lt;br&gt;
+   *RSync、SSH ポートが転送されること。&lt;br&gt;&lt;br&gt;
+   再試行するには、[戻る] をクリックします。
+  </desc6>
+    <server_desc len="999">バックアップ パスワードを設定し、このシステムからリモート サーバーへのリモート バックアップを有効にします。</server_desc>
+    <create_desc len="999">WD My Cloud EX2 Ultra システムのコンテンツを保護するように選択できます。保護する共有を指定し、[&lt;b&gt;OK&lt;/b&gt;] を選択して続行します。</create_desc>
+    <backup_complete_on len="999">バックアップ完了 %s</backup_complete_on>
+    <recover_complete_on len="999">回復完了 %s</recover_complete_on>
+    <task len="999">ジョブ名</task>
+    <schedule len="999">スケジュール</schedule>
+    <status len="999">ステータス</status>
+    <now len="999">すぐに作成</now>
+    <recover len="999">回復</recover>
+    <ready len="999">準備完了</ready>
+    <finished len="999">完了</finished>
+    <job_desc len="999">説明</job_desc>
+    <type len="999">サービス タイプ</type>
+    <path len="999">フォルダ パス</path>
+    <remote_path len="999">リモート共有</remote_path>
+    <ip len="999">リモート IP</ip>
+    <pw len="999">パスワード</pw>
+    <Num len="999">数字</Num>
+    <ssh_result len="999">SSH テスト結果</ssh_result>
+    <rsync_result len="999">RSYNC テスト結果</rsync_result>
+    <failed len="999">失敗</failed>
+    <wait len="999">お待ちください...</wait>
+    <mode len="999">スケジュール モード</mode>
+    <manual len="999">手動</manual>
+    <schedule2 len="999">スケジュール</schedule2>
+    <month len="999">月</month>
+    <day len="999">日</day>
+    <hour len="999">時間</hour>
+    <minute len="999">分</minute>
+    <yes len="999">はい</yes>
+    <no len="999">いいえ</no>
+    <select_one len="999">1 つの共有を選択してください。</select_one>
+    <create len="999">ジョブの作成</create>
+    <job_name len="999">ジョブ名</job_name>
+    <create_on len="999">作成日</create_on>
+    <last_updated len="999">前回更新日</last_updated>
+    <auto len="999">自動更新</auto>
+    <auto_s len="999">自動更新スケジュール</auto_s>
+    <backup_now len="999">すぐにバックアップ</backup_now>
+    <later len="999">後で作成</later>
+    <time len="999">自動更新時刻</time>
+    <date_time len="999">
+      <![CDATA[自動更新日時]]>
+    </date_time>
+    <size len="999">
+      <![CDATA[サイズ]]>
+    </size>
+    <x_detail len="999">%s の詳細</x_detail>
+    <create_schedule_desc len="999">リモート バックアップを作成するには少し時間がかかり、その間 WD My Cloud EX2 Ultra システムのパフォーマンスに多少影響する可能性があります。すぐにバックアップを作成するか、後から作成するようにスケジュールできます。</create_schedule_desc>
+    <incomplete len="999">バックアップが失敗しました</incomplete>
+    <completed len="999">バックアップ完了</completed>
+    <pw_desc len="999">WD My Cloud EX2 Ultra システムをインターネット上で表示するには、[設定] &gt; [ネットワーク] &gt; [ポート転送] で SSH とリモート バックアップ サービスの両方のポート転送ルールを追加したことを確認してください。</pw_desc>
+    <choose len="999">方法を選択してください</choose>
+	<mycloud len="999">My Cloud</mycloud>
+    <encryption len="999">暗号化</encryption>
+    <bandwidth>帯域幅制限</bandwidth>
+    <msg1 len="999">今すぐこのバックアップ ジョブを実行してもよろしいですか?</msg1>
+    <msg2 len="999">
+      <![CDATA[設定が完了しました。現在の設定を保存するには、[<b>完了</b>] をクリックします。]]>
+    </msg2>
+    <msg3 len="999">タスク名を入力します。</msg3>
+    <msg4 len="999">入力したジョブ名は既に存在します。別の名前を入力してください。</msg4>
+    <msg5 len="999">
+      <![CDATA[
+		ジョブ名には次の文字のみを使用できます。「a-z」、「A-Z」、「0-9」、「-」、「_」
+		]]>
+    </msg5>
+    <msg6 len="999">パスの選択</msg6>
+    <msg7 len="999">パスは 235 文字以下で指定する必要があります。再試行してください。</msg7>
+    <msg8 len="999">パスワードを入力してください。</msg8>
+    <msg9 len="999">RSYNC ユーザー名を入力してください。</msg9>
+    <msg10 len="999">RSYNC パスワードを入力してください。</msg10>
+    <msg11 len="999">SSH ユーザー名を入力してください。</msg11>
+    <msg12 len="999">SSH パスワードを入力してください。</msg12>
+    <msg13 len="999">リモート ハード ドライブ上に十分な領域があります。</msg13>
+    <msg14 len="999">ローカル ハード ドライブ上に十分な領域があります。</msg14>
+    <msg15 len="999">1 つの項目を選択してください。</msg15>
+    <msg16 len="999">バックアップ ジョブが削除されます。注：前回のファイル バックアップが削除されません。</msg16>
+    <msg17 len="999">最大バックアップ ジョブ数に達しました。</msg17>
+    <msg18 len="999">リモート IP を入力してください。</msg18>
+    <msg19 len="999">領域が必要です</msg19>
+    <msg20 len="999">空き領域があります</msg20>
+    <msg21 len="999">
+      <![CDATA[
+		パスワードには次の文字を使用できません。" ' \ ?# ` :& + ;
+		]]>
+    </msg21>
+    <msg22 len="999">パスの選択</msg22>
+    <msg23 len="999">RSYNC テストが失敗しました。</msg23>
+    <msg24 len="999">リモート IP アドレスを入力してください。</msg24>
+    <msg25 len="999">今すぐバックアップを実行してもよろしいですか?</msg25>
+    <msg26 len="999">項目がありません。</msg26>
+    <msg27 len="999">SSH ユーザー名にはスペースを使用できません。</msg27>
+    <msg28 len="999">1 つのフォルダを選択してください。</msg28>
+    <msg29 len="999">データを回復してもよろしいですか?この処理ではリモート サーバーからローカル WD My Cloud EX2 Ultra デバイスにデータを回復します。</msg29>
+    <msg30 len="999">リモート サーバー機能をオフにしてもよろしいですか?これにより、他のネットワーク ストレージ デバイスは、この WD My Cloud EX2 Ultra にバックアップできなくなります。</msg30>
+    <msg31 len="999">ジョブは次のスケジュールで実行されます</msg31>
+    <msg32 len="999">このリモート バックアップ ジョブは完了していませんでした。</msg32>
+    <msg33 len="999">フォルダまたはファイルの最大数に達しました。</msg33>
+	<msg34 len="999">リモート バックアップに失敗しました。リモート サーバーがアクティブであることを確認してください。</msg34>
+    <success len="999">成功</success>
+    <fail len="999">失敗</fail>
+    <f1 len="999">SSH エラーのため、リモート バックアップを続行できません。</f1>
+    <f2 len="999">不明な SSH ホストのため、リモート バックアップを続行できません。</f2>
+    <f3 len="999">接続が拒否されたため、リモート バックアップを続行できません。</f3>
+    <f4 len="999">SSH アクセス エラーのため、リモート バックアップを続行できません。</f4>
+    <f5 len="999">SSH 鍵交換エラーのため、リモート バックアップを続行できません。</f5>
+    <f6 len="999">RSYNC テストが失敗したため、リモート バックアップを続行できません。</f6>
+    <f7 len="999">RSYNC サーバー接続が拒否されたため、リモート バックアップを続行できません。</f7>
+    <f8 len="999">無効なリモート パス。有効なパスを入力し、再試行してください。</f8>
+    <f9 len="999">リモート共有は読み取り専用権限であるため、リモート バックアップを続行できません。リモート共有の設定を変更し、再試行してください。</f9>
+    <f10 len="999">無効な RSYNC モードのため、リモート バックアップを続行できません。</f10>
+    <f11 len="999">無効なリモート バックアップ パスワード。再試行してください。</f11>
+    <f12 len="999">不明な理由のため、リモート バックアップを続行できません。</f12>
+    <no_share len="999">共有がありません。</no_share>
+    <backup_status len="999">バックアップ ステータス</backup_status>
+    <recover_status len="999">回復ステータス</recover_status>
+    <remote_share len="999">リモート共有</remote_share>
+    <local_share len="999">ローカル共有</local_share>
+    <a_space len="999">空き領域</a_space>
+    <total_size len="999">合計バックアップ サイズ</total_size>
+    <cancel_on>バックアップ停止 %s</cancel_on>
+    <failed_on>バックアップ失敗 %s</failed_on>
+    <cancel>バックアップの停止</cancel>
+  <nas_server>NAS サーバー</nas_server>
+	<linux_server>Linux サーバー</linux_server>
+	<ssh_account>SSH ユーザー名</ssh_account>
+	<ssh_pw>SSH パスワード</ssh_pw>
+	<recurrence>繰り返し</recurrence>
+  <msg35>ポート転送について詳しくは、&lt;a href="#" id="backups_rlink" target="_blank"&gt;こちら&lt;/a&gt;を参照してください。</msg35><transfer_encryption>転送暗号化</transfer_encryption></_remote_backup>
+  <_sms>
+    <title>SMS 設定</title>
+    <sms len="999">SMS</sms>
+    <provider len="999">SMS サービス プロバイダ</provider>
+    <add len="999">追加</add>
+    <del len="999">削除</del>
+    <url len="999">URL</url>
+    <replace len="999">スペース文字を置換する文字</replace>
+    <no_replace len="999">デフォルトを使用する</no_replace>
+    <phone1 len="999">電話番号 1</phone1>
+    <phone2 len="999">電話番号 2</phone2>
+    <test len="999">SMS のテスト</test>
+    <description len="999">
+      <![CDATA[
+		[SMS 設定] メニューでは、イベント アラートを SMS テキスト メッセージとして携帯電話に送信するように設定できます。携帯電話と SMS ゲートウェイ プロバイダへの加入が必要です。設定で使用する有効な HTTP API URL は、SMS ゲートウェイ プロバイダから入手する必要があります。SMS 設定が構成された時点で、[イベント設定] メニューの下で選択したイベントが発生するたびに、イベント アラートが設定した携帯電話にテキスト メッセージとして送信されます。
+		]]>
+    </description>
+    <name len="999">プロバイダ名</name>
+    <url2 len="999">「Hello world」というメッセージの SMS URL を入力します。</url2>
+    <sms_url len="999">SMS URL</sms_url>
+    <sms_description len="999">
+      <![CDATA[
+			* SMS URL は設定用です。設定の完了後は、SMS メッセージは送信されません。この URL の形式は SMS サービス プロバイダによって提供されます。URL には、ユーザー名、パスワード、宛先の電話番号、およびメッセージ パラメータが含まれる必要があります。たとえば Clickatell の場合の URL は次のようになります。https://api.clickatell.com/http/sendmsg?user=TestUser&password=TestPassword&api_id=3148203&to=886123456789&text=Hello.
+		]]>
+    </sms_description>
+    <parameter len="999">URL パラメータ定義</parameter>
+    <sel len="999">各パラメータの対応するカテゴリを選択します。</sel>
+    <username len="999">ユーザー名</username>
+    <pw len="999">パスワード</pw>
+    <number len="999">電話番号</number>
+    <message len="999">メッセージ</message>
+    <other len="999">その他</other>
+    <msg1 len="999">SMS 番号は 64 文字以下で指定する必要があります。</msg1>
+    <msg2 len="999">プロバイダ名が重複しています。再試行してください。</msg2>
+    <msg3 len="999">プロバイダ名の形式が正しくありません。</msg3>
+    <msg4 len="999">URL が有効な値ではありません。</msg4>
+    <msg5 len="999">URL パラメータは 7 文字以下で指定する必要があります。</msg5>
+    <msg6 len="999">電話番号とテキスト パラメータを入力してください。</msg6>
+    <msg7 len="999">ユーザー名が重複しています</msg7>
+    <msg8 len="999">パスワードが重複しています</msg8>
+    <msg9 len="999">電話番号が重複しています</msg9>
+    <msg10 len="999">テキストが重複しています</msg10>
+    <msg11 len="999">更新されました</msg11>
+    <msg12 len="999">SMS がありません</msg12>
+    <msg13 len="999">URL を入力してください。</msg13>
+    <msg14 len="999">特殊文字を入力してください。</msg14>
+    <msg15 len="999">電話番号が無効です。有効な番号を入力してください。</msg15>
+    <msg16 len="999">電話番号が同じです。変更してください。</msg16>
+    <msg17 len="999">ユーザー名を空白にできません。</msg17>
+    <msg18 len="999">ユーザー名が有効な値ではありません。</msg18>
+    <msg19 len="999">パスワードを空白にできません。</msg19>
+    <msg20 len="999">パスワードが有効な値ではありません。</msg20>
+    <msg21 len="999">SMS サービス プロバイダを追加してください。</msg21>
+    <msg22 len="999">SMS のテスト:送信済み</msg22>
+    <msg23 len="999">SMS のテスト:エラー</msg23>
+    <msg24 len="999">プロバイダ名を空にできません。</msg24>
+    <msg25 len="999">電話番号を入力してください。</msg25>
+    <msg26 len="999">URL にパラメータを指定することはできません。</msg26>
+    <help_hint len="999">
+      <![CDATA[
+		テキスト メッセージの形式で携帯電話にイベント ログを送信するには、SMS 設定で SMS 通知を有効にします。構成に必要な正しい URL 設定については、携帯電話会社にお問い合わせください。<br><br>* SMS URL は設定用です。設定の完了後は、SMS メッセージは送信されません。この URL の形式は SMS サービス プロバイダによって提供されます。URL には、ユーザー名、パスワード、宛先の電話番号、およびメッセージ パラメータが含まれる必要があります。たとえば Clickatell の場合の URL は次のようになります。https://api.clickatell.com/http/sendmsg?user=TestUser&password=TestPassword&api_id=3148203&to=886123456789&text=Hello.
+		]]>
+    </help_hint>
+  </_sms>
+  <_wfs>
+    <upload len="999">アップロード</upload>
+    <download len="999">ダウンロード</download>
+    <refresh len="999">更新</refresh>
+    <size len="999">サイズ</size>
+    <type len="999">タイプ</type>
+    <modified len="999">修正時刻</modified>
+    <copy len="999">コピー</copy>
+    <move len="999">移動</move>
+    <rename len="999">名前の変更</rename>
+    <properties len="999">プロパティ</properties>
+    <folder_name len="999">フォルダ名</folder_name>
+    <location len="999">ロケーション</location>
+    <change_time len="999">変更時刻</change_time>
+    <access_time len="999">アクセス時刻</access_time>
+    <owner len="999">所有者</owner>
+    <user_group len="999">ユーザー グループ</user_group>
+    <privilege len="999">権限</privilege>
+    <owner_user_group len="999">
+      <![CDATA[所有者とユーザー グループ]]>
+    </owner_user_group>
+    <read len="999">
+      <![CDATA[読み取り]]>
+    </read>
+    <write len="999">
+      <![CDATA[書き込み]]>
+    </write>
+    <execute len="999">
+      <![CDATA[実行]]>
+    </execute>
+    <create_title len="44">ディレクトリの作成</create_title>
+    <select_files len="15">ファイルの選択</select_files>
+    <file_size_error len="40">ファイル サイズ エラー</file_size_error>
+    <add_to_zip len="40">Zip に入りに追加</add_to_zip>
+    <preview len="999">プレビュー</preview>
+    <open len="999">開く</open>
+    <unzip len="999">Zip を解凍</unzip>
+    <untar len="999">Tar を解凍</untar>
+    <select_zip_file>Zip ファイルの選択</select_zip_file>
+    <compress_msg>お待ちください... ファイルを圧縮しています。</compress_msg>
+    <decompress_msg>お待ちください... ファイルを解凍しています。</decompress_msg>
+    <create_folder>フォルダの作成</create_folder>
+    <msg1 len="999">ダウンロード ファイル サイズは 4 GB 未満でなければなりません。</msg1>
+    <msg2 len="999">ダウンロード ファイルを選択してください。</msg2>
+    <msg3 len="999">アップロード ファイルの保存先のパスを選択してください。</msg3>
+    <msg4 len="999">空白文字を入力できません。</msg4>
+    <msg5 len="999">名前を入力してください。</msg5>
+    <msg6 len="999">ファイルが選択されていません。</msg6>
+    <msg7 len="999">このディレクトリにアクセスするには、十分な権限がありません。</msg7>
+    <msg8 len="999">選択したファイルを削除してもよろしいですか?</msg8>
+    <msg9 len="999">
+<![CDATA[
+		Web ファイル ビューアは Adobe® Flash® Player を使用して、コンピュータからファイルをアップロードします。<a href='http://www.adobe.com'>www.adobe.com</a> から最新の Adobe Flash Player をインストールしてから、続行してください。
+		
+		]]>
+</msg9>
+    <msg10 len="999">ファイルがアップロードされました。</msg10>
+    <msg11 len="999">キューが満杯です。最大サイズ </msg11>
+    <msg12 len="999">アップロードされました。</msg12>
+    <msg13 len="999">ファイルをアップロードしています。</msg13>
+    <msg14 len="999">ここにファイルをドロップ</msg14>
+    <msg15 len="999">サイズが 2 G を超えています。アップロードできません。</msg15>
+    <msg16 len="999">
+<![CDATA[解凍できませんでした。<br>ファイルを解凍するには、圧縮形式とファイル拡張子が一致することを確認してください。]]>
+</msg16>
+    <msg17>アップロードがキャンセルされます。続行してもよろしいですか?</msg17>
+  <msg18>両方のファイルを保持</msg18>
+    
+    
+      <msg19>移動方法を選択してください</msg19>
+    
+    
+      <msg20>コピー方法を選択してください</msg20>
+    
+  <upload_desc>My Cloud システムにファイルをアップロード</upload_desc><file_desc>同一の名前のファイルが見つかった場合は、次のことを行う：</file_desc><destination>送信先</destination><msg21>一部のファイルはキューに追加されませんでした。</msg21><msg22>ファイル %s1 はサイズの上限 (%s) を超えています。</msg22></_wfs>
+  <_s3>
+    <no_list>WD My Cloud EX2 Ultra デバイスには S3 リストが追加されていません。</no_list>
+    <title>Amazon S3 について</title>
+    <queue>Amazon S3 キュー</queue>
+    <amazon len="22">Amazon S3</amazon>
+    <s3_dialog_title len="44">Amazon S3 バックアップの設定 </s3_dialog_title>
+    <job_name len="999">ジョブ名</job_name>
+    <type len="999">タイプ</type>
+    <a_key len="999">アクセス キー</a_key>
+    <p_key len="999">プライベート キー</p_key>
+    <b_path len="999">リモート パス</b_path>
+    <region len="999">地域</region>
+    <backup_type len="999">バックアップ タイプ</backup_type>
+    <local_path len="999">ローカル パス</local_path>
+    <schedule_mode len="999">スケジュール モード</schedule_mode>
+    <overwrite len="999">既存のファイルを上書きする</overwrite>
+    <fullbackup len="999">完全バックアップ</fullbackup>
+    <incremental_backup len="999">増分バックアップ</incremental_backup>
+    <united_states len="999">米国</united_states>
+    <northern_california len="999">カリフォルニア州北部</northern_california>
+    <oregon len="999">オレゴン</oregon>
+    <sydney len="999">シドニー</sydney>
+    <sao_paulo len="999">サンパウロ</sao_paulo>
+    <ireland len="999">アイルランド</ireland>
+    <singapore len="999">シンガポール</singapore>
+    <tokyo len="999">東京</tokyo>
+    <running len="15">実行中</running>
+    <backup_now len="15">すぐにバックアップ</backup_now>
+    <msg1 len="999">ジョブ名を入力してください。</msg1>
+    <msg2 len="999">ジョブ名にはスペースを使用できません。</msg2>
+    <msg3 len="999">アクセス キーを入力してください。</msg3>
+    <msg4 len="999">アクセス キーにはスペースを使用できません。</msg4>
+    <msg5 len="999">プライベート キーを入力してください。</msg5>
+    <msg6 len="999">プライベート キーにはスペースを使用できません。</msg6>
+    <msg7 len="999">バケット パスを入力してください。</msg7>
+    <msg8 len="999">リモート パスにはスペースを使用できません。</msg8>
+    <msg9 len="999">リモート パスは 3 文字以上で指定する必要があります。再試行してください。</msg9>
+    <msg10 len="999">ローカル パスを選択してください。</msg10>
+    <msg11 len="999">リモート パスにはアンダーラインを使用できません。</msg11>
+    <msg12 len="999">ジョブ名が重複しています。</msg12>
+    <msg13 len="999">
+      <![CDATA[リモート複製名を入力し、[<b>次へ</b>] をクリックします。]]>
+    </msg13>
+    <msg14 len="999">
+      <![CDATA[[<b>次へ</b>] をクリックすると続行します。]]>
+    </msg14>
+    <msg15 len="999">回復できません。</msg15>
+    <msg16 len="999">バックアップできません。</msg16>
+    <msg17 len="999">ジョブ名は許可されませんでした。再試行してください。</msg17>
+    <msg18 len="999">リモート パスは許可されませんでした。再試行してください。</msg18>
+    <msg19 len="999">リモート パスの最後の文字にはダッシュを使用できません。</msg19>
+    <msg20 len="999">リモート パスでは 2 つ以上のピリオドを連続して使用できません。</msg20>
+    <msg21 len="999">リモート パスでは、ピリオドとダッシュを隣り合わせに使用できません。</msg21>
+    <msg22 len="999">リモート パスでは、ピリオドとダッシュを隣り合わせに使用できません。</msg22>
+    <msg23 len="999">
+      <![CDATA[リモート パスの先頭の文字には test_ を使用できません。]]>
+    </msg23>
+    <msg24 len="999">
+      <![CDATA[リモート パスの先頭の文字には「test」または「TEST」を使用できません。]]>
+    </msg24>
+    <msg25 len="999">リモート パスの先頭の文字は、a-z、A-Z、0-9 でなければなりません。</msg25>
+    <msg26 len="999">ジョブ名にはスペースを使用できません。</msg26>
+    <msg27 len="999">リモート パスにはバックスラッシュを使用できません。</msg27>
+    <msg28 len="999">
+      <![CDATA[小文字、数字、ピリオド (.)、およびダッシュ (-) は使用できます。]]>
+    </msg28>
+    <time_error len="999">システム時刻が正しくありません。再試行してください。</time_error>
+    <key_error len="999">アクセス キーが無効です。再試行してください。</key_error>
+    <private_key_error len="999">プライベート キーが無効です。再試行してください。</private_key_error>
+    <bucket_error len="999">無効なリモート パス。</bucket_error>
+    <bucket_error1 len="999">リモート パスが存在しません。</bucket_error1>
+    <seq len="20">
+      <![CDATA[シーケンス]]>
+    </seq>
+    <backup_date len="35">バックアップ日時</backup_date>
+    <action len="12">操作</action>
+    <step1 len="999">Amazon S3 バックアップの設定</step1>
+    <step2 len="999">Amazon S3 バックアップの設定</step2>
+    <step3 len="999">Amazon S3 バックアップの設定</step3>
+    <step4 len="999">Amazon S3 バックアップの設定</step4>
+    <step5 len="999">Amazon S3 バックアップの設定</step5>
+    <step6 len="999">Amazon S3 バックアップの設定</step6>
+    <step1_desc len="999">作成したいクラウドへのアップロードまたはダウンロードのジョブを識別するために、16 文字のジョブ名を入力します。ジョブ名にはスペースは使用できません。以下の文字が使用できます： a-z, A-Z, 0-9。 </step1_desc>
+    <step2_desc len="999"> 
+  Amazon S3 で割り当てられた&lt;b&gt;アクセス&lt;/b&gt; キーと&lt;b&gt;プライベート&lt;/b&gt; キーを入力します。キーによって、WD My Cloud EX2 Ultra システムが Amazon S3 クラウド ストレージにアクセスできます。[&lt;b&gt;リモート パス&lt;/b&gt;] フィールドで、新規または既存の Amazon S3 &lt;b&gt;バケット&lt;/b&gt;名を入力します。これは、データの読み書きを実行するクラウド ストレージ上のフォルダです。最後に、Amazon S3 クラウドとの読み取りにおいて最適なサービスを提供する適切な地域を選択します。
+  </step2_desc>
+    <step3_desc len="999">  
+  WD My Cloud EX2 Ultra システム データを Amazon S3 クラウドにバックアップする場合は、[&lt;b&gt;タイプ&lt;/b&gt;] ドロップダウン メニューで、[&lt;b&gt;アップロード&lt;/b&gt;] を選択します。Amazon S3 クラウドから WD My Cloud EX2 Ultra システムにデータをバックアップする場合は、[&lt;b&gt;ダウンロード&lt;/b&gt;] を選択します。&lt;br&gt;&lt;br&gt;
+  [&lt;b&gt;バックアップ タイプ&lt;/b&gt;] ドロップダウン メニューで、[&lt;b&gt;既存のファイルを上書きする&lt;/b&gt;] を選択し、バックアップ先フォルダにある、バックアップ元ファイルと同じ名前のファイルを上書きします。[&lt;b&gt;完全バックアップ&lt;/b&gt;] を選択すると、ジョブが実行されるたびに、すべてのバックアップ データを含む個別のフォルダを作成します。[&lt;b&gt;増分バックアップ&lt;/b&gt;] を選択すると、バックアップ先フォルダのファイルよりも新しいバックアップ元ファイルで上書きします。
+  </step3_desc>
+    <step4_desc len="999">
+      <![CDATA[
+			[<b>ローカル パス</b>] フィールドで、ジョブのバックアップ元またはバックアップ先ディレクトリ フォルダの完全パス名を入力します (例: Volume_1/backup_docs)。
+		]]>
+    </step4_desc>
+    <step5_desc len="999">
+      <![CDATA[
+		ジョブを実行するための適切な<b>スケジュール モード</b>を選択します。[<b>手動</b>] をクリックすると、手動でボタンをクリックすることで、後からジョブを開始できます。[<b>1 回のみ</b>] をクリックすると、日時をスケジュールし、その時刻に 1 回だけジョブを実行します。[<b>スケジュール</b>] をクリックすると、時刻を設定し、ジョブを毎日実行します。
+		]]>
+    </step5_desc>
+    <step6_desc len="999">
+      <![CDATA[
+		すべての設定を確認し、変更する場合は [<b>前へ</b>] をクリックして戻ります。[<b>終了</b>] をクリックすると、ジョブを保存せずに、ウィザードを終了します。[<b>完了</b>] をクリックすると、ジョブを保存して、ウィザードを終了します。
+		]]>
+    </step6_desc>
+    <recovery>回復</recovery>
+    <msg29>設定が完了しました。現在の設定を保存するには、[完了] をクリックします。</msg29>
+    <desc>
+      <![CDATA[Amazon S3 (簡易ストレージ サービス) は、Amazon Web Services によって提供されるオンライン ファイル ストレージ サービスです。このサービスは、Web サービス インターフェイス経由でストレージを提供し、デバイスのデータをクラウドにバックアップします。]]>
+    </desc>
+    <del_msg>この Amazon S3 ジョブを削除してもよろしいですか?</del_msg>
+    <s3_config>S3 設定</s3_config>
+    <progress>進行状況</progress>
+  </_s3>
+  <_ads>
+    <title len="999">Active Directory 設定</title>
+    <enable len="999">Active Directory を有効にする</enable>
+    <desc len="999">WD My Cloud EX2 Ultra システムとドメイン サーバーのタイム ゾーンが一致し、誤差が 5 分以内であることを確認してください。</desc>
+    <enable_desc len="999">Active Directory を有効にすると、既に Windows ドメインに参加しているユーザーを利用できます。ただし、その間は、既存のローカルユーザーと共有を管理できません。</enable_desc>
+    <enable_desc2 len="999">この機能を有効にしてもよろしいですか?</enable_desc2>
+    <time_desc len="999">WD My Cloud EX2 Ultra システムとドメイン サーバーのタイム ゾーンが一致し、誤差が 5 分以内であることを確認してください。</time_desc>
+    <name len="999">ユーザー名</name>
+    <pw len="999">パスワード</pw>
+    <workgroup len="999">ワークグループ</workgroup>
+    <realm_name len="999">レルム名</realm_name>
+    <server_name len="999">AD サーバー名</server_name>
+    <ads_user len="999">ADS ユーザー</ads_user>
+    <msg1 len="999">ユーザー名フィールドが空欄です。ユーザー名を入力してください。</msg1>
+    <msg2 len="999">パスワード フィールドが空欄です。パスワードを入力してください。</msg2>
+    <msg3 len="999">
+      <![CDATA[ワークグループ名には次の文字を使用できます。「a-z」、「A-Z」、「0-9」、「-」]]>
+    </msg3>
+    <msg4 len="999">ワークグループを入力します。</msg4>
+    <msg5 len="999">ドメイン名フィールドが空欄です。ドメイン名を入力してください。</msg5>
+    <msg6 len="999">AD サーバー名を入力します。</msg6>
+    <msg7 len="999">
+      <![CDATA[[設定] -> [ネットワーク] で、DNS 設定を確認します。]]>
+    </msg7>
+    <msg8 len="999">成功</msg8>
+    <msg9 len="999">時刻が正しくありません。システムの日付と時刻を確認してください。AD サーバーと同期。(NAS と Active Directory サーバーの許容時間差は、最大 5 分です。)</msg9>
+    <msg10 len="999">ログイン エラー。ターゲットのアカウント名が正しくありません。</msg10>
+    <msg11 len="999">アカウント名の形式が正しくありません。有効なアカウント名を入力してください。</msg11>
+    <msg12 len="999">servicePrincipalNames を設定できませんでした。このサーバーのドメイン名が AD ドメインに一致していることを確認してください。</msg12>
+    <msg13 len="999">ドメインに参加できませんでした。</msg13>
+    <msg14 len="999">接続に失敗しました。設定を確認してください。</msg14>
+    <msg15 len="999">認証に失敗しました。正しいログイン情報を再入力してください。</msg15>
+    <msg16 len="999">ユーザー名は、Active Directory ドメインでは見つかりませんでした。ユーザー名を正しく入力したことを確認してください。ユーザーが存在しません。</msg16>
+    <msg17 len="999">要求された Active Directory ドメインのキー配布センター (KDC) のネットワーク アドレスを解決できません。</msg17>
+    <msg18 len="999">AFP および Time Machine サービスが停止します。</msg18>
+    <msg19 len="999">
+      <![CDATA[
+			ユーザー名には次の文字を使用できません。'
+		]]>
+    </msg19>
+    <msg20 len="999">
+      <![CDATA[
+			パスワードには次の文字を使用できません。'
+		]]>
+    </msg20>
+  <msg57>ドメイン名が指定されていません。ドメイン名を入力してください。</msg57><msg58>ドメイン名が無効です。再入力してください。</msg58><msg59>秘密のデータベースを開けません。</msg59><msg60>「ワークグループ」 が %s1 に設定されています。%s2 にすべきです。</msg60><msg61>「レルム」 が %s1 に設定されています。%s2 にすべきです。</msg61><msg62>「セキュリティ」 が「%s1」に設定されています。%s2 にすべきです。</msg62><msg63>無効な設定 (%s1) であり、設定の変更が要求されませんでした。</msg63><msg64>設定の操作が要求されましたが、バックエンドのサポートがありませんでした。</msg64><msg65>ドメインの%s1 が見つかりませんでした。</msg65><msg66>ドメイン%s1 の DC 情報を rpc:%s2 で検索できませんでした。 </msg66><msg67>%s1 でアカウントを事前作成できませんでした。</msg67><msg68>ドメイン%s1 に rpc: で参加することができませんでした%s2。</msg68><msg69>参加後にドメイン メンバーシップを確認できませんでした：%s1。</msg69></_ads>
+  <_snmp>
+    <community len="999">SNMP コミュニティ</community>
+    <notification len="999">通知</notification>
+    <notification_ip len="999">通知 IP アドレス</notification_ip>
+    <description len="999">このセクションでは、SNMP 機能を設定できます。SNMP コミュニティと、トラップ/通知の宛先を設定できます。</description>
+    <enable>SNMP</enable>
+    <msg1 len="999">SNMP コミュニティを入力します。</msg1>
+    <msg2 len="999">SNMP コミュニティにはスペースを使用できません。</msg2>
+    <msg3 len="999">コミュニティには次の文字を使用できません。@ :/ \\ %</msg3>
+    <msg4 len="999">IP アドレスを入力します。</msg4>
+    <msg5 len="999">IP アドレス値には数字のみを使用できます。</msg5>
+    <title_1>SNMP 設定</title_1>
+    <title_2>ユーザー管理 (SNMPv3)</title_2>
+    <title_3>SNMPv3 ユーザー情報</title_3>
+    <sys_contact>連絡先情報</sys_contact>
+    <notification_community>通知コミュニティ</notification_community>
+    <community_v2>コミュニティ (SNMPv2c)</community_v2>
+    <scuritylevel>セキュリティ レベル</scuritylevel>
+    <authtype>認証タイプ</authtype>
+    <encrytype>暗号化タイプ</encrytype>
+    <view>表示</view>
+    <view_system>システム</view_system>
+    <view_network>ネットワーク</view_network>
+    <edit>編集</edit>
+    <msg6>[場所] には、グレイヴ アクセントは使用できません。</msg6>
+    <msg7>[連絡先情報] には、グレイヴ アクセントは使用できません。</msg7>
+    <msg8>[通知コミュニティ] ストリングはスペース、バックスラッシュ、グレイヴ アクセントを含まない 1 ～ 255 文字の英数字で入力してください。 </msg8>
+    <msg9>[コミュニティ (SNMPv2c)] ストリングはスペース、バックスラッシュ、グレイヴ アクセントを含まない 1 ～ 255 文字の英数字で入力してください。 </msg9>
+    <msg10>ユーザー名はスペースを含まない 1 ～ 31 文字の英数字で入力してください。</msg10>
+    <msg11>認証パスワードとパスワードの確認が一致しません。再試行してください。</msg11>
+    <msg12>認証パスワードはスペース、バックスラッシュ、グレイヴ アクセントを含まない 8 ～ 255 文字の英数字で入力してください。</msg12>
+    <msg13>暗号化パスワードとパスワードの確認が一致しません。再試行してください。</msg13>
+    <msg14>暗号化パスワードはスペース、バックスラッシュ、グレイヴ アクセントを含まない 8 ～ 255 文字の英数字で入力してください。</msg14>
+    <msg15>このユーザーを削除してもよろしいですか?</msg15>
+  </_snmp>
+  <_bonding>
+    <title len="999">リンク集約</title>
+    <mode1 len="999">ラウンド ロビン</mode1>
+    <mode2 len="999">アクティブ バックアップ</mode2>
+    <mode3 len="999">バランス XOR</mode3>
+    <mode4 len="999">ブロードキャスト</mode4>
+    <mode5 len="999">802.3ad</mode5>
+    <mode6 len="999">アダプティブ トランスミット ロード バランシング</mode6>
+    <mode7 len="999">アダプティブ ロード バランシング</mode7>
+    <bonding_option len="999">オプション</bonding_option>
+  </_bonding>
+  <_portforwarding>
+    <no_list>WD My Cloud EX2 Ultra デバイスには、ポート転送サービスが追加されていません。</no_list>
+    <built_desc len="999">デフォルト サービス スキャンを選択する</built_desc>
+    <custom_desc len="999">ポート転送サービスをカスタマイズする</custom_desc>
+    <scan len="999">スキャン</scan>
+    <service len="30">サービス</service>
+    <protocol len="20">プロトコル</protocol>
+    <e_port len="20">外部ポート</e_port>
+    <p_port len="20">内部ポート</p_port>
+    <title len="44">ポート転送設定</title>
+    <step1 len="44">ポート転送設定</step1>
+    <step2 len="44">ポート転送設定</step2>
+    <msg1 len="999">ビルトイン アプリケーションを選択します。</msg1>
+    <msg2 len="999">外部ポートが重複しています。</msg2>
+    <msg3 len="999">ルート テーブルが明確でない可能性があります。</msg3>
+    <msg4 len="999">サービスを入力します。</msg4>
+    <msg5 len="999">最大ポート転送設定数に達しました。</msg5>
+    <msg6 len="999">サービスを入力します。</msg6>
+    <msg7 len="999">外部ポートを入力します。</msg7>
+    <msg8 len="999">内部ポートを入力します。</msg8>
+    <error1 len="999">ポート転送設定が失敗しました。</error1>
+    <error2 len="999">ポート転送設定が失敗しました</error2>
+    <error3 len="999">サービス設定エラー。再試行してください。</error3>
+    <ok1 len="999">ポート転送設定が成功しました。</ok1>
+    <ok2 len="999">ポート転送設定が成功しました。</ok2>
+    <del_error len="999">ポート転送削除が失敗しました。</del_error>
+    <del_ok len="999">ポート転送削除が成功しました。</del_ok>
+    <upnp_title len="999">UPnP ルーター検出</upnp_title>
+    <upnp_test len="999">UPnP ルーター テスト</upnp_test>
+    <found len="999">ネットワーク上で UPnP ルーターが検出されました。</found>
+    <not_found len="999">ネットワーク上で UPnP ルーターが検出されませんでした。</not_found>
+  </_portforwarding>
+  <_dfs>
+    <local_path len="999">ローカル フォルダ名</local_path>
+    <host len="999">リモート ホスト</host>
+    <remote_folder len="999">リモート共有</remote_folder>
+    <enable len="999">分散ファイル システムを有効にする</enable>
+    <enable_title len="999">分散ファイル システム有効/無効</enable_title>
+    <set_title len="999">共有集約の設定</set_title>
+    <get_folder len="999">リモート共有フォルダの取得</get_folder>
+    <modify_title len="999">分散ファイル システム修正</modify_title>
+    <group_title len="999">ルート フォルダ リスト</group_title>
+    <group_title2 len="999">ルート フォルダの作成</group_title2>
+    <group_title3 len="999">ルート フォルダ名の変更</group_title3>
+    <root_name len="999">ルート フォルダ名</root_name>
+    <action len="999">操作</action>
+    <group len="999">フォルダ名</group>
+    <sel len="999">フォルダを選択</sel>
+    <dfs_description len="999">
+      <![CDATA[
+			<!--DFS is a method of storing and accessing files based in a client/NAS architecture. Any number of remote computers can access these files on the NAS with the proper authorization rights. DFS uses a uniform naming convention and a mapping scheme to keep track of where files are located. When you try to retrieve a file from the NAS, the file appears as a normal file, and you are able to work with the file in the same way as if it were stored locally on your hard drive. When you are finished working with the file, it is returned over the network to the NAS, which stores the now-altered file for retrieval at a later time.--> 分散ファイル システムでは、1 台以上のセントラル サーバーにファイルが保存されます。このファイルには、適切な認証権限を持つ、無制限の数のネットワーク上のリモート クライアントからアクセスできます。[有効にする] をクリックすると、この機能を有効にできます。
+		]]>
+    </dfs_description>
+    <dfs_group_description len="999">
+      <![CDATA[
+		すべてのファイルが保存されるルート フォルダを作成します。
+		]]>
+    </dfs_group_description>
+    <dfs_link_description len="999">リモート共有にリンクするローカル My Cloud システムのフォルダを設定します。</dfs_link_description>
+    <msg1 len="999">リモート共有フォルダを取得できません。</msg1>
+    <msg2 len="999">共有は既に存在します。別の共有名を選択してください。</msg2>
+    <msg3 len="999">最大共有数に達しました。</msg3>
+    <msg4 len="999">ホストを入力します。</msg4>
+    <msg5 len="999">IP アドレスには数字のみを使用できます。</msg5>
+    <msg6 len="999">ローカル共有名を入力します。</msg6>
+    <msg7 len="999">ホストを入力します。</msg7>
+    <msg8 len="999">リモート共有フォルダを選択します。</msg8>
+    <msg9 len="999">名前を入力します。</msg9>
+    <msg10 len="999">最大ルート フォルダ数に達しました。</msg10>
+    <msg11 len="999">入力したルート フォルダ名は既に存在します。別の名前を入力してください。</msg11>
+    <msg12 len="999">共有名は 80 文字以下で指定する必要があります。</msg12>
+    <msg13 len="999">ローカル システムをリモート ホストとして使用することはできません。</msg13>
+    <msg14 len="999">分散ファイル システムを削除してもよろしいですか?</msg14>
+  </_dfs>
+  <_ipv6>
+    <ipv6_title len="999">IPv6</ipv6_title>
+    <ipv6_setup len="999">IPv6 設定</ipv6_setup>
+    <ipv4_setup len="999">LAN IP 設定</ipv4_setup>
+    <ipv4_setup2 len="999">LAN 2 IP 設定</ipv4_setup2>
+    <ipv4_setup3 len="999">LAN 1 + LAN 22 IP 設定</ipv4_setup3>
+    <auto len="999">自動</auto>
+    <dhcp len="999">DHCP</dhcp>
+    <static len="999">固定</static>
+    <off len="999">オフ</off>
+    <prefix len="999">プレフィックスの長さ</prefix>
+    <def_gw len="999">デフォルト ゲートウェイ</def_gw>
+    <gw len="999">ゲートウェイ</gw>
+    <mode len="999">モード</mode>
+    <interface len="999">インターフェイス</interface>
+    <addr len="999">IPv6 アドレス</addr>
+    <setup len="999">セットアップ</setup>
+    <tunnel_enable len="999">トンネルを有効にする</tunnel_enable>
+    <tunnel_server len="999">サーバー アドレス</tunnel_server>
+    <tunnel_username len="999">ユーザー名</tunnel_username>
+    <tunnel_pw len="999">パスワード</tunnel_pw>
+    <enable len="999">IPv6 を有効にする</enable>
+    <msg1>IPV6 を有効にすると、WD My Cloud EX2 Ultra システムのクラウド アクセスが無効になります。&lt;br&gt;&lt;br&gt;続行しますか?</msg1>
+  </_ipv6>
+  <_iso_create>
+    <title len="50">ISO イメージの作成</title>
+    <wizard_desc1 len="999">
+      <![CDATA[
+				ボリュームから ISO ファイルに追加するコンテンツを選択します。
+		]]>
+    </wizard_desc1>
+    <total_size len="40">イメージ サイズ</total_size>
+    <image_path len="40">イメージ パス</image_path>
+    <image_name len="40">イメージ名</image_name>
+    <overwrite len="50">上書き</overwrite>
+    <create_iso len="18">ISO イメージの作成</create_iso>
+    <auto_mount len="50">自動マウント</auto_mount>
+    <select len="10">選択</select>
+    <total_space len="13">合計領域</total_space>
+    <used_space len="12">使用済み領域</used_space>
+    <free_space len="12">空き領域</free_space>
+    <img_wizard len="999">ISO イメージを作成しています。この処理中は、WD My Cloud EX2 Ultra システムの電源を切らないでください。</img_wizard>
+    <msg1 len="50">イメージ パスを選択します。</msg1>
+    <msg2 len="50">イメージ名にはスペースを使用できません。</msg2>
+    <msg3 len="50">フォルダを選択します。</msg3>
+    <msg4 len="50">イメージ名を入力します。</msg4>
+    <msg5 len="50">ISO イメージが既に存在します。別のイメージ名を入力してください。</msg5>
+    <msg6 len="50">ISO イメージを作成できませんでした。</msg6>
+    <msg7 len="50">
+      <![CDATA[ISO イメージが作成されます。作成後は修正できません。[<b>OK</b>] をクリックすると続行します。]]>
+    </msg7>
+    <msg8 len="50">ISO イメージを作成しています。</msg8>
+    <msg9 len="50">
+      <![CDATA[最大 ISO ファイル/フォルダ レベルに達しました。フォルダ サイズを変更します。[<b>OK</b>] をクリックすると続行します。]]>
+    </msg9>
+    <msg10 len="50">十分なハード ディスク領域がありません。</msg10>
+    <msg11 len="50">ISO 構成を作成できませんでした。</msg11>
+    <msg12 len="50">これはルート フォルダです。削除できません。</msg12>
+    <msg13 len="50">
+      <![CDATA[イメージ名には次の文字を使用できます。「a-z」、「A-Z」、「0-9」、「-」、「_」]]>
+    </msg13>
+    <msg14 len="999">このチェック ボックスをクリックすると、ISO イメージを自動的にマウントします。</msg14>
+    <msg15 len="999">ISO イメージ ファイルの最大数に達しました。削除または修正機能のみを使用できます。 </msg15>
+  </_iso_create>
+  <_vv>
+    <title1 len="999">ボリューム仮想化について</title1>
+    <title2 len="999">ボリューム仮想化の作成</title2>
+    <title3 len="999">ボリューム仮想化</title3>
+    <desc1 len="999">イニシエータ IQN</desc1>
+    <desc2 len="999">デバイス IP</desc2>
+    <desc3 len="999">ポート</desc3>
+    <desc4 len="999">認証</desc4>
+    <desc5 len="999">ユーザー名</desc5>
+    <desc6 len="999">パスワード</desc6>
+    <desc7 len="999">ターゲット</desc7>
+    <desc8 len="999">共有フォルダ</desc8>
+    <desc9 len="999">検索エラー</desc9>
+    <desc10 len="999">ボリューム仮想化は、他の iSCSI ターゲットにマッピングし、WD My Cloud EX2 Ultra システムのボリュームとして提供することで、拡張性を簡素化します。</desc10>
+    <desc11 len="999">接続</desc11>
+    <desc12 len="999">切断</desc12>
+    <desc13 len="999">接続エラー</desc13>
+    <desc14 len="999">接続中</desc14>
+    <desc15 len="999">接続</desc15>
+    <desc16 len="999">切断されました</desc16>
+    <desc17 len="999">再接続中</desc17>
+    <desc18 len="999">実行中</desc18>
+    <desc19 len="999">フォーマットなし</desc19>
+    <desc20 len="999">フォーマット中</desc20>
+    <desc21 len="999">エラー</desc21>
+    <desc22 len="999">ボリュームの作成中</desc22>
+    <desc23 len="999">オフライン</desc23>
+    <desc24 len="999">サポートされていないファイル システム</desc24>
+    <desc25 len="999">接続エラー</desc25>
+    <desc26 len="999">ボリュームを作成できませんでした</desc26>
+    <desc27 len="999">無効にする</desc27>
+    <desc28 len="999">読み取り専用</desc28>
+    <desc29 len="999">フォーマット待機</desc29>
+    <desc30 len="999">注:仮想ボリュームのフォーマット情報を格納するには、少しの領域が使用されます。</desc30>
+    <msg1 len="999">入力した共有名は既に存在します。別の共有名を入力してください。</msg1>
+    <msg2 len="999">仮想ボリュームが削除されます。続行してもよろしいですか?</msg2>
+    <msg3 len="999">デバイスの IP アドレスを入力します。</msg3>
+    <msg4 len="999">ポートを入力してください。</msg4>
+    <msg5 len="999">ターゲットが見つかりません。</msg5>
+    <msg6 len="999">共有フォルダ名を入力します。</msg6>
+    <msg7 len="167">新しいパスワードは 12 文字以上で指定する必要があります。再試行してください。</msg7>
+  </_vv>
+  <_http_downloads>
+    <title1 len="999">HTTP ダウンロード</title1>
+    <title2 len="999">HTTP ダウンロード キュー</title2>
+    <title3 len="999">HTTP ダウンロード テスト結果</title3>
+    <desc1 len="999">ダウンロード パスの選択</desc1>
+    <desc2 len="999">ダウンロード中のファイル名を指定した名前に変更します。</desc2>
+    <desc3>dddd, mmmm dd, yyyy, h:MM:ss TT</desc3>
+    <msg1 len="167">URL 形式が正しくありません。正しい形式:http://192.168.0.32/test.txt再試行してください。</msg1>
+    <msg2 len="167">HTTP ダウンロード ジョブを削除してもよろしいですか?</msg2>
+  </_http_downloads>
+  <_ftp_downloads>
+    <title1 len="999">FTP ダウンロード</title1>
+    <title2 len="999">FTP ダウンロード テスト結果</title2>
+    <login_method len="999">ログイン方法</login_method>
+    <file len="999">ファイル</file>
+    <folder len="999">フォルダ</folder>
+    <desc1 len="999">Select Download Path</desc1>
+    <desc2 len="999">My Cloud EX2 Ultraデバイスを使用して、FTP サイトから、または FTP サイトへのバックアップを行います。</desc2>
+		<detail len="999">FTP ダウンロード詳細</detail>
+		<status0>ダウンロード完了</status0>
+		<status0_1>[{0}] から [{1}] でダウンロードが正しく完了しました。</status0_1>
+		<status2>ダウンロード中です</status2>
+		<status_1>ダウンロードできませんでした</status_1>
+		<status_1_d>ダウンロードに失敗しました。システム設定を確認してください。</status_1_d>
+		<status_2>ダウンロード元のパスが無効です。設定を確認して、修正してください。</status_2>
+		<status_3>ダウンロード先のパスが無効です。設定を確認して、修正してください。</status_3>
+		<status_4>重複ダウンロード</status_4>
+		<status_5>ダウンロードは追加できません</status_5>
+		<status_6>システムエラーです。システムを再起動してください。</status_6>
+	  <status_7>無効なダウンロード</status_7>
+		<status_8>無効なダウンロード パス</status_8>
+		<status_9>ダウンロード先フォルダは読み取り専用です。設定を確認して、修正してください。</status_9>
+		<status_10>[{0}] でダウンロードが停止しました。</status_10>
+	  <status_11>ダウンロード先の記憶領域が満杯です。ファイルをストレージから移動して、空き領域を作成します。</status_11>	
+		<status_430>認証に失敗したため、ダウンロードに失敗しました。正しいログイン情報を再入力してください。</status_430>
+		<status_451>ダウンロード先のパスが無効なため、ダウンロードに失敗しました。ダウンロード先のパスを選択しなおしてください。</status_451>
+		<status_550>リモート ソースのパスが無効なため、ダウンロードに失敗しました。ソース パスを選択しなおしてください。</status_550>
+		<status_10057>接続エラーのため、ダウンロードに失敗しました。FTP 設定をすべて確認してください。</status_10057>
+		<status_10060>接続タイムアウトのため、ダウンロードに失敗しました。FTP サーバーが使用できることを確認してください。</status_10060>
+		<status_10061>サーバーに接続できませんでした。</status_10061>
+		<status_10064>ホストにアクセスできないため、ダウンロードに失敗しました。ホスト アドレスと FTP サーバーを使用できるかどうかを確認してください。</status_10064>
+		<status_1100>ホストが無効なため、ダウンロードに失敗しました。正しいホスト名を再入力してください。</status_1100>
+		<download_cancel>ダウンロード停止</download_cancel>
+		<download_now>ダウンロード開始</download_now>
+		<msg1 len="167">最大ダウンロード ジョブ数に達しました。</msg1>
+	  <msg2 len="167">URL を入力してください。</msg2>
+	  <msg3 len="167">URL は 1 ～ 235 文字で指定する必要があります。</msg3>
+	  <msg4 len="167">FTP ジョブを削除してもよろしいですか?</msg4>
+		<msg11><![CDATA[
+			このジョブを削除してもよろしいですか?<br> <br>
+			ダウンロード ジョブが削除されます。<br>注:前回のファイル ダウンロードが削除されません。
+		]]></msg11>
+	</_ftp_downloads>
+<_media>
+    <title1 len="73">iTunes</title1>
+    <title2>DLNA メディア サーバー</title2>
+    <title3>iTunes サーバー設定</title3>
+    <desc1>メディア ストリーミング</desc1>
+    <desc2>バージョン</desc2>
+    <desc3>前回の更新</desc3>
+    <desc4>DLNA データベース</desc4>
+    <desc5>さまざまなデバイスへのコンテンツ ストリーミングを有効にします。</desc5>
+    <desc6>メディア データベースを復元します。データベースが破損している疑いがある場合にのみ、これを使用します。</desc6>
+    <desc7><![CDATA[メディア プレイヤーの表示 >>]]></desc7>
+    <desc8>メディア</desc8>
+    <desc9>音楽トラック</desc9>
+    <desc10>画像</desc10>
+    <desc11>動画</desc11>
+    <desc12>データベースを更新中...</desc12>
+    <desc13>メディア ストリーミング オプション</desc13>
+    <desc14>ホームから対応するデバイスに音楽、動画、画像をストリーミングします。</desc14>
+    <desc15>メディア プレイヤー</desc15>
+    <desc16>オン</desc16>
+    <desc17>オフ</desc17>
+    <desc18>メディア プレイヤー</desc18>
+    <desc19>全般メディア レシーバー</desc19>
+    <desc20>詳細オプション</desc20>
+    <button1>再スキャン</button1>
+  	<title4>カメラ設定</title4>
+		<title5>カメラ フォルダ オプション</title5>
+		<mode>転送モード</mode>
+		<recent>最近のアクティビティ</recent>
+		<move_f>ファイルを移動しています</move_f>
+		<copy_f>ファイルをコピーしています</copy_f>
+		<move_b>すぐに移動</move_b>
+		<copy_b>すぐにコピー</copy_b>
+		<trans_foldere>転送フォルダ</trans_foldere>
+		<folder_options>フォルダ オプション</folder_options>
+		<enter_folder>フォルダ名を入力</enter_folder>	
+		<trans_file>転送ファイル</trans_file>
+		<info>情報</info>
+		<connect_camera>接続されたカメラ</connect_camera>
+		<auto_trans>自動転送</auto_trans>	
+		<today_date>今日の日付</today_date>
+    <date_taken>取得された日付</date_taken>
+    <custom_folder_name>カスタム フォルダ名</custom_folder_name>
+    <select_destination>保存先の選択</select_destination>
+	<msg1>フォルダ名を入力してください。</msg1>		
+		<msg2 len="999">%s3 に %s ファイルが %s1 から %s2 にコピーされました。</msg2>
+		<msg3 len="999">%s3 に %s ファイルが %s1 から %s2 に移動されました。</msg3>
+		<msg4 len="999">%s ファイルをカメラから %s1 にコピーできませんでした。詳細については、システム ログを参照してください。</msg4>
+		<msg5 len="999">%s ファイルをカメラから %s1 に移動できませんでした。詳細については、システム ログを参照してください。</msg5>
+  <status_success>%s1 で %s からのバックアップが正しく完了しました。</status_success><status_fail1>バックアップが失敗しました。接続されている USB デバイスを確認してください。</status_fail1><status_fail2>バックアップが失敗しました。バックアップ先のパスが無効です。バックアップの設定を修正して、再試行してください。</status_fail2><status_fail3>システム エラーのためにバックアップが失敗しました。My Cloud EX2 Ultra システムを再起動してください。</status_fail3><status_fail4>バックアップ先が読み取り専用になっています。バックアップの設定を修正してください。</status_fail4><status_fail5>バックアップ先のストレージ スペースが満杯です。バックアップ先からファイルを移動して、空き領域を作成してください。</status_fail5><status_fail6>バックアップの停止： %s</status_fail6><camera_title>カメラ バックアップについて</camera_title><camera_description>WD My Cloud EX2 Ultra システムを使用して、カメラをバックアップします。</camera_description><status_fail7>%s からファイルを削除できません</status_fail7><msg6>My Cloud システムでは、メディア ストリーミングが有効になっています。各タイプの共有にサービスを行っているメディアを設定するには、[共有] ページを参照してください。</msg6></_media>
+  <_disk_mgmt>
+    <title1>ディスク プロファイル</title1>
+    <title2>システム ディスク</title2>
+    <title3>ドライブ詳細</title3>
+    <title4>ハード ドライブ情報</title4>
+    <title5>ディスク ステータス</title5>
+    <title6>ID</title6>
+    <title7>属性</title7>
+    <title8>現在</title8>
+    <title9>最低</title9>
+    <title10>しきい値</title10>
+    <title11>Raw 値</title11>
+    <desc1>ドライブ</desc1>
+    <desc2>ディスクの正常性</desc2>
+    <desc3>正常</desc3>
+    <desc4>ベンダー</desc4>
+    <desc5>モデル</desc5>
+    <desc6>シリアル番号</desc6>
+    <desc7>容量</desc7>
+    <desc8>良好</desc8>
+    <desc9>不良</desc9>
+    <desc10>互換性のないドライブ</desc10>
+    <desc11>ドライブなし</desc11>
+    <desc12>ファームウェア バージョン</desc12>
+    <desc13>S.M.A.R.T.Data</desc13>
+  </_disk_mgmt>
+  <_raid>
+    <title1>RAID プロファイル</title1>
+    <title2>RAID ボリューム</title2>
+    <title3>RAID モードの変更</title3>
+    <title4>RAID ローミング</title4>
+    <desc1>RAID の正常性</desc1>
+    <desc2>正常</desc2>
+    <desc3>すべての RAID ボリュームがアクティブで正常です。</desc3>
+    <desc4>自動再構築</desc4>
+    <desc5 len="20">JBOD</desc5>
+    <desc6 len="20">スパニング</desc6>
+    <desc7 len="20">RAID 0</desc7>
+    <desc8 len="20">RAID 1</desc8>
+    <desc9 len="20">RAID 5</desc9>
+    <desc10 len="20">予備</desc10>
+    <desc11 len="20">RAID 10</desc11>
+    <desc12>ドライブ</desc12>
+    <desc13 len="999">JBOD 構成</desc13>
+    <desc14 len="999">スパニング構成</desc14>
+    <desc15 len="999">RAID 0 構成</desc15>
+    <desc16 len="999">RAID 1 構成</desc16>
+    <desc17 len="999">RAID 5 構成</desc17>
+    <desc18 len="999">RAID 10 構成</desc18>
+    <desc19 len="999">RAID 構成ではない 1 台以上のドライブを使用しますが、個別の論理ボリュームとして管理されます。</desc19>
+    <desc20 len="999">JBOD に切り替え</desc20>
+    <desc21 len="999">スパニングに切り替え</desc21>
+    <desc22 len="999">RAID 0 に切り替え</desc22>
+    <desc23 len="999">RAID 1 に切り替え</desc23>
+    <desc24 len="999">RAID 5 に切り替え</desc24>
+    <desc25 len="999">RAID 10 に切り替え</desc25>
+    <desc27 len="999">ドライブを直線的に組み合わせ、1 つの大規模な論理ボリュームを作成します。</desc27>
+    <desc28 len="999">複数のハード ドライブ間でデータをストライプ化します。2 台以上のドライブの処理を組み合わせ、パフォーマンスを高めることで、データの読み書きを高速化します。</desc28>
+    <desc29 len="999">データの 2 つの即時コピーが別のハード ドライブに記録されるため、いずれかのドライブが故障した場合、障害のあるハード ドライブが交換されるまで、他のドライブがデータの読み書きを継続できます。</desc29>
+    <desc30 len="999">3 台以上のドライブでストライプ化し、各ドライブの 4 分の 1 をフォールト トレランス専用にすると、優れたパフォーマンスと保護を実現できます。</desc30>
+    <desc31 len="999">RAID プロトコルでは、セカンダリ ディスクにミラーリングされたプライマリ ディスク上のストライプに、データが書き込まれます。</desc31>
+    <desc32 len="999">下のスライダを使用して、RAID サイズ設定を指定できます。合計ボリューム容量を使用していない場合、残りの領域をスパニングとして構成することもできます。</desc32>
+    <desc33 len="999"><![CDATA[RAID 5+spare を構成します ([スペア ディスクの作成] ボックスをクリック)。「ディスク 4」がホット スペアになります。RAID 5+spare を作成する場合は、[<b>スペア ディスクの作成</b>] をオフにします。RAID 5 ボリュームのサイズを調整し、すべての領域を使用しない場合は、[<b>残りディスク領域をスパニングとして構成する</b>] をオンにします。[<b>次へ</b>] をクリックすると続行します。]]></desc33>
+    <desc34 len="999">xxx のボリューム</desc34>
+    <desc35 len="999">このセクションでは、RAID が破損した場合に、RAID を復元できます。自動再構築を有効にし、ディスクが認識された時点で、自動的に RAID を復元します。</desc35>
+    <desc36 len="999">自動マウント</desc36>
+    <desc37 len="999">暗号化パスワードの入力</desc37>
+    <desc38 len="999">暗号化パスワードの確認</desc38>
+    <desc39 len="999">このセクションでは、選択したボリュームのパスワードを設定できます。選択 <b>自動マウント</b> 起動時にパスワードを再入力せずに、暗号化されたドライブを自動的にマウントします。</desc39>
+    <desc40 len="999">暗号化ボリューム 1</desc40>
+    <desc41 len="999">暗号化ボリューム 2</desc41>
+    <desc42 len="999">暗号化ボリューム 3</desc42>
+    <desc43 len="999">暗号化ボリューム 4</desc43>
+    <desc44 len="999">劣化</desc44>
+    <desc45 len="999">良好</desc45>
+    <desc46 len="999">残りディスク領域をスパニングとして構成します。</desc46>
+    <desc47 len="999">データは RAID 5 に移行されます。</desc47>
+    <desc48 len="999"><![CDATA[
+		RAID モード選択を変更する必要がある場合は、[戻る] ボタンをクリックします。データを RAID 5 に移行する準備が完了したら、[<b>完了</b>] をクリックします。
+		]]></desc48>
+    <desc50 len="999">自動マウント</desc50>
+    <desc51 len="999">新しいボリュームの作成</desc51>
+    <desc52 len="999">暗号化 xxx</desc52>
+    <desc53 len="167">交換したハード ドライブには、RAID ボリュームをサポートする十分な容量がありません。容量の大きいハード ドライブを挿入してください。</desc53>
+    <desc54 len="167">RAID 1 へ移行</desc54>
+    <desc55 len="167">RAID 5 へ移行</desc55>
+    <desc56 len="167">新しく挿入されたハード ドライブを、RAID に参加するか、別のボリュームを作成するように構成します。</desc56>
+    <desc57 len="999">ハード ドライブを再フォーマットしようとしています。すべてのデータが消去されます。続行してもよろしいですか?</desc57>
+    <desc58 len="999">このセクションでは、ドライブを RAID 1 に再構成するために使用するディスクを選択します。</desc58>
+    <desc59 len="999">EXT 3</desc59>
+    <desc60 len="999">EXT 4</desc60>
+    <desc61 len="999">スペア ディスクの作成</desc61>
+    <desc62 len="999">このセクションでは、ドライブを RAID 5 に再構成するために使用するディスクを選択します。</desc62>
+    <desc63 len="999"><![CDATA[残りの空きストレージ領域から新しいボリュームを作成するには、<a href="javascript:Remain_Linear_Format();" class="edit_detail">ここ</a>をクリックします。]]></desc63>
+    <desc64>不明</desc64>
+    <desc66>構成されたボリュームがありません</desc66>
+    <desc67>RAID モードを設定し、このデバイスの新しい RAID ボリュームを構成します。</desc67>
+    <desc68>劣化</desc68>
+    <desc69>1 つ以上の RAID ボリュームが劣化しています。</desc69>
+    <desc70>選択すると、ストレージ モードを設定します。</desc70>
+    <desc71 len="999">このセクションでは、暗号化するボリュームを選択できます。</desc71>
+    <desc72 len="999">安全なボリューム</desc72>
+    <desc73 len="999">セキュリティなし</desc73>
+    <desc74 len="999">暗号化が有効です。</desc74>
+    <desc75 len="999">暗号化が無効です。</desc75>
+    <desc76 len="999">自動マウントが有効です。</desc76>
+    <desc77 len="999">自動マウントが無効です。</desc77>
+    <desc78 len="999">スペア ディスクを作成し、RAID セットで故障中または故障が発生したディスクを交換します。</desc78>
+    <desc79 len="999">復元中</desc79>
+    <desc80 len="999">残り領域からボリュームを作成</desc80>
+    <desc81 len="999">ボリュームのサイズを調整しています。</desc81>
+    <desc82 len="999">移行中</desc82>
+    <desc83 len="999"><![CDATA[
+		RAID モード選択を変更する必要がある場合は、[戻る] ボタンをクリックします。<br><br>データを RAID 1 に移行する準備が完了したら、[<b>完了</b>] をクリックします。
+		]]></desc83>
+    <desc84 len="999">手動復元</desc84>
+    <desc85 len="999">RAID タイプを変更する前に、ボリュームを選択してから、リストから該当するドライブを選択します。</desc85>
+    <desc86 len="999">サイズ調整中</desc86>
+    <desc87 len="999">次の手順でシーケンスを変更してください。</desc87>
+    <desc88 len="999">現在のディスク シーケンスは次のとおりです。</desc88>
+    <desc89 len="999">ディスク シーケンス</desc89>
+    <desc90 len="999"><![CDATA[「この操作の実行中はアクティブなファイル転送サービスが中断されることに注意してください。<br><br>続行してもよろしいですか?]]></desc90>
+    <desc91 len="999">サイズ調整を待つ</desc91>
+    <desc92 len="999">重要:このオプションを選択した場合は、後からデータを RAID 5 に移行できません。</desc92>
+    <desc93 len="999">容量の拡大</desc93>
+    <desc94 len="999">既存のドライブを新しいドライブに交換してもよろしいですか?</desc94>
+		<desc95 len="999">拡張しています</desc95>
+		<desc96 len="999">再同期しています</desc96>
+		<desc97 len="999">拡張しています。ドライブを削除します。</desc97>
+		<desc98 len="999">拡張しています。新しいデバイスを挿入します。</desc98>
+		<desc99 len="999">容量の拡大</desc99>
+		<desc100 len="999">再構築しています</desc100>
+		<desc101 len="999">RAID 1 から JBOD にダウングレード</desc101>
+		<desc102 len="999">複数のドライブにデータがあります。ストレージ モードを RAID 1 から JBOD に変更する場合は、プライマリ ドライブを選択する必要があります。</desc102>
+		<desc103 len="999">プライマリ ドライブを選択: </desc103>
+		<desc104 len="999">注:セカンダリ ドライブのすべてのデータが消去されます。</desc104>
+		<desc105 len="999">移行の完了を待機</desc105>
+		<desc106 len="999">移行は続行します</desc106>
+		<desc107 len="999">分</desc107>
+		<desc108 len="999">
+  警告：&lt;br&gt;
+  1.RAID モードを変更すると、以下に記載されているドライブのすべてのデータが消去されます。&lt;br&gt;
+  2.RAID モードの変更中はこれらのドライブにアクセスできません。&lt;br&gt;
+  3.ボリュームを作成する前に、ドライブ セルフ テスト (DST) が行われます。 
+ </desc108>
+    <desc109>付近の赤色の LED が点滅しているドライブをまず交換します。</desc109>
+    <desc110>RAID 容量を拡張します。</desc110>
+    <desc111 len="999">警告:現在、ボリュームは劣化しています。データ整合性のため、必ず RAID を復元してください。</desc111>
+    <desc112 len="999"><![CDATA[自動再構築設定では、自動再構築機能を有効または無効にできます。手動で復元するには、[<b>次へ</b>] をクリックします。復元を実行すると、新しく挿入されたドライブのすべてのデータが消去されます。]]></desc112>
+    <desc113>RAID 1 で故障したドライブを交換するときには、交換用ドライブの容量が同じかそれ以上であることを確認してください。 </desc113>
+    <desc114>ドライブ セルフ テスト</desc114>
+    <desc122>xxx が再構築中です。</desc122>
+    <desc123>xxx が拡張中です。</desc123>
+    <desc124>xxx が移行中です。</desc124>
+    <unknown len="999">なし</unknown>
+    <msg1 len="342"><![CDATA[このボリュームは、(このシステムに作成されていない) 別の WD My Cloud EX2 Ultra からローミングしています。[OK] をクリックすると、現在の WD My Cloud EX2 Ultra に統合します。統合しない場合は、ボリュームが劣化したときに、データが損失するリスクがあります。[キャンセル] をクリックすると、統合せずに続行します。]]></msg1>
+    <msg6 len="167">再度ログインする前に、WD My Cloud EX2 Ultra システムが再起動している間、少しお待ちください。</msg6>
+    <msg7 len="167">移行中にシステム ボリュームにアクセスすることはお勧めしません。ボリュームは使用できない可能性があります。</msg7>
+    <msg8 len="167">システムはビジー状態です。システム LED が青色で点灯状態になるまで待ってから、別のドライブを挿入してください。</msg8>
+    <msg9 len="167">システムが受け入れ可能になる前にドライブが挿入されました。このことが原因で、新しいドライブからのデータがシステムに統合されない可能性があります。データ統合の問題を防ぐには、構成を実行する前にシステムを再起動してください。</msg9>
+    <msg10 len="167">xxx フォーマット エラー (エラー コード:yyy)</msg10>
+    <msg11 len="167">ボリュームの構成エラー (エラー コード:yyy)</msg11>
+    <button1>今すぐ手動復元</button1>
+    <button2>RAID モードの変更</button2>
+    <button3>残りの空きストレージ領域から新しいボリュームを作成</button3>
+    <button4>完了</button4>
+    <button5>RAID モードの設定</button5>
+    <button6>新しいドライブを RAID 1 タイプとしてフォーマット</button6>
+    <button7>新しいドライブを RAID 5 タイプとしてフォーマット</button7>
+    <button8>新しいドライブを RAID 10 タイプとしてフォーマット</button8>
+  <desc125>警告：容量を拡張する前に、データのバックアップを行ったことを確認してください。通常の場合は、データは消去されません。しかし、万一停電になった場合や拡張プロセスの実行中にドライブのセクターが故障した場合は、失敗することがあります。</desc125><desc126>RAID パリティの検証中</desc126><desc127>バックグランドでパリティの一貫性を確認しています。このプロセス中、システムの性能に影響する場合があります。</desc127><desc128>ハード ディスクの故障のために、RAID のセットアップに失敗しました。システムをシャットダウンし、ハード ディスクを交換した後で再試行してください。</desc128></_raid>
+  <_ssh>
+    <enable len="999">SSH</enable>
+    <enable_desc1 len="999">現在、このシステムでリモート バックアップが実行中です。SSH をオフにすると、すべてのリモート バックアップが無効になります。</enable_desc1>
+    <enable_desc2 len="999">SSH を無効にしてもよろしいですか?</enable_desc2>
+    <enable_desc3 len="999">本製品の通常動作以外でこのシステムを修正したり、修正を試みたりすると、WD の保証が無効になります。</enable_desc3>
+    <enable_desc4 len="999">WD My Cloud EX2 Ultra がリモート サーバーとして動作できるようにすると、SSH が有効になります。本製品の通常動作以外でこのシステムを修正したり、修正を試みたりすると、WD の保証が無効になります。</enable_desc4>
+    <desc1 len="999">SSH をオフにすると、WD My Cloud EX2 Ultra システムへのリモート バックアップとセキュア FTP (SFTP) のアクセスもすべて無効になります。</desc1>
+    <desc2 len="999">SSH アクセスを無効にすると、WD My Cloud EX2 Ultra システムへのセキュア FTP (SFTP) アクセスも無効になります。続行してもよろしいですか?</desc2>
+    <desc3 len="999">      <![CDATA[SSH ユーザー名は「sshd」(大文字と小文字を区別) です。<br><br>* SSH アクセスについては、次のパスワードを作成してください。<br><br>]]>
+    </desc3>
+    <accept>同意する</accept>
+    <ssh>SSH</ssh>
+  </_ssh>
+  <_cloud>
+    <sing_up>登録</sing_up>                                                                      	
+	<signup_desc>%s には MyCloud.com アカウントがありません。ログイン登録を行うためのメール アドレスを入力します。</signup_desc>  	
+    <cloud_dev len="999">クラウド デバイス</cloud_dev>
+    <title len="999">クラウド アクセス</title>
+    <service len="999">クラウド サービス</service>
+    <status len="999">接続ステータス</status>
+    <dash_access len="999">
+      <![CDATA[ダッシュボード クラウド <br>アクセス]]>
+    </dash_access>
+    <cloud_access len="999">クラウド アクセス ステータス</cloud_access>
+    <cloud_for len="999">%s の MyCloud.com アカウント</cloud_for>
+    <cloud_for_info len="999">%s に登録された WD My Cloud EX2 Ultra アカウントはありません。電子メール アドレスを登録してください。</cloud_for_info>
+    <register>登録</register>
+    <dev_for len="999">%s のクラウド デバイス</dev_for>
+    <dev_for_info len="999">%s に設定されたクラウド デバイス アクセスはありません。[コードの取得] をクリックして、クラウド デバイスの認証コードを取得してください。コードは要求から 48 時間有効で、1 回だけ使用できます。</dev_for_info>
+    <add_access len="999">クラウド アクセスの追加</add_access>
+    <add_desc len="999">認証コードが生成されました。モバイル デバイスのアプリでコードを入力してください。 </add_desc>
+    <desc len="999">認証コードを生成し、ドライブのコンテンツへのリモート アクセスを取得します。</desc>
+    <configure_access len="999">アクセスの設定</configure_access>
+    <wd2go_db len="999">コンテンツ データベース</wd2go_db>
+    <step_desc len="999">
+      <![CDATA[ 
+			手順:<br>
+			<ol>
+				<li>ドロップダウン リストからユーザーを選択し、[<b>コードの取得</b>] をクリックして認証コードを生成します。</li>
+				<li>タブレットまたはモバイル デバイスに WD Photos または WD My Cloud EX2 Ultra (あるいは両方) をインストールします。</li>
+				<li>アプリを起動して、[すぐに接続] をタップします。</li>
+				<li>製品を選択します。</li>
+				<li>認証コードを入力します。</li>
+			</ol>
+		]]>
+    </step_desc>
+    <sel_user len="999">ユーザーを選択</sel_user>
+    <get len="999">コードの取得</get>
+    <del_code len="999">コードの削除</del_code>
+    <del_desc len="999">このコードを削除してもよろしいですか?</del_desc>
+    <old_mail len="999">古い電子メール アドレス</old_mail>
+    <new_mail len="999">新しい電子メール アドレス</new_mail>
+    <code len="999">認証コード</code>
+    <code2>コード</code2>
+    <expiration len="999">有効期限</expiration>
+    <expires len="999">期限</expires>
+    <connectivity len="999">接続</connectivity>
+    <option_title len="999">クラウド アクセス接続オプション</option_title>
+    <option_desc len="999">デバイスへのリモート アクセスの接続オプションを設定します。</option_desc>
+    <auto len="999">自動</auto>
+    <manual len="999">手動</manual>
+    <win len="999">Win XP</win>
+    <disable len="999">無効</disable>
+    <ready len="999">準備完了</ready>
+    <connected len="999">接続</connected>
+    <connected_desc len="999">接続 (リレー接続が確立されました)</connected_desc>
+    <failed len="999">失敗</failed>
+    <connecting len="999">接続中</connecting>
+    <new_device len="999">新しい未登録のデバイス</new_device>
+    <disconnecting len="999">切断中</disconnecting>
+    <disable_desc len="999">クラウド アクセスが無効です。</disable_desc>
+    <disable_desc2 len="999">
+      <![CDATA[クラウド アクセスを有効にするには、[設定] > [全般] > [クラウド アクセス] に移動します。]]>
+    </disable_desc2>
+    <dexplainedtxt len="999">最高のパフォーマンスのため、ルーターの UPnP を有効にして、直接接続を確立してください。</dexplainedtxt>
+    <explainedtxt_part1 len="999">ポート転送はポート間</explainedtxt_part1>
+    <explainedtxt_part2 len="999">で接続できませんでした</explainedtxt_part2>
+    <failedexplainedtxt len="999">リモート アクセス接続を確立できません。インターネットに接続していることを確認してください。</failedexplainedtxt>
+    <connectingexplainedtxt len="999">リモート アクセス接続の確立を試行中...</connectingexplainedtxt>
+    <readyexplainedtxt len="999">クラウド アクセスはデバイスから使用可能です。</readyexplainedtxt>
+    <retrievingtxt len="999">情報を取得中...</retrievingtxt>
+    <portforwardedexplainedtxt len="999">ポート転送接続が確立されました。</portforwardedexplainedtxt>
+    <reg_mail len="999">登録メールが送信されました</reg_mail>
+    <reg_desc1 len="999">登録メールは指定したユーザーに送信されました。 </reg_desc1>
+    <reg_desc2 len="999">電子メースがユーザーの受信トレイに配信されるまでには少し時間がかかります。ドライブのコンテンツへのリモート アクセスを取得するための手順が記載されています。</reg_desc2>
+    <update_title len="999">MyCloud.com アカウントを更新</update_title>
+    <update_desc len="999">MyCloud.com アカウントのメール アドレスを変更します。 </update_desc>
+    <required len="999">必須</required>
+    <rebuild len="999">復元</rebuild>
+    <started len="999">使用開始</started>
+    <about>クラウド アクセスについて</about>
+    <about_cloud len="999">スマートフォンまたはタブレットがドライブのコンテンツにアクセスする前に、パーソナル クラウド システムの一部として登録する必要があります。モバイル デバイスとドライブをペアリングするコードを生成します。</about_cloud>
+    <part1>
+      <![CDATA[外部ポート 1<br> (HTTP)*]]>
+    </part1>
+    <part2>
+      <![CDATA[外部ポート 2 <br>(HTTPS)*]]>
+    </part2>
+    <invite>他のユーザーをパーソナルクラウドに招待</invite>
+    <enable_title>ダッシュボード クラウド アクセス</enable_title>
+    <enable_desc>
+      <![CDATA[
+		現在のネットワーク外でこのダッシュボード Web インターフェイスへのアクセスを有効にすると、このデバイスをリモートで管理できます。ただし、WD My Cloud EX2 Ultra での不正アクセスのリスクが若干高くなります。<br><br>この機能を有効にしてもよろしいですか?
+		]]>
+    </enable_desc>
+    <enable_desc2>現在のネットワーク外でこのダッシュボード Web インターフェイスへのアクセスを有効にすると、このデバイスをリモートで管理できます。ただし、My Cloud EX2 Ultra に無許可でアクセスされる危険が少し大きくなります。新規ユーザーの追加などの一部の機能には、ネットワーク外ではアクセスできません。&lt;br&gt;&lt;br&gt;
+セキュリティを保証するには、この機能を有効にする前に、このデバイスの管理者パスワードを入力する必要があります。</enable_desc2>
+    <auto_desc>デバイスとルーター間で直接接続を確立しようとしています。</auto_desc>
+    <manual_desc>
+      <![CDATA[
+			デバイスと動作するように、ルーターを手動で設定してください。<a href="http://wdc.custhelp.com/app/answers/detail/a_id/8526" target="_blank">詳細 >></a>
+		]]>
+    </manual_desc>
+    <xp_desc>Windows XP 互換のために直接またはリレー接続を確立しようとしています。</xp_desc>
+    <del_title>WD My Cloud EX2 Ultra アカウントを削除してもよろしいですか?</del_title>
+    <del_code_title>モバイル アクセスを削除</del_code_title>
+    <msg1>この Web アカウントを削除できませんでした。デバイスが登録され、ネットワーク接続の問題がないことを確認し、再試行してください。</msg1>
+    <msg2>設定の更新が完了するまでお待ちください。この処理が完了するまでは、このページを再読み込みしたりユニットの電源をオフにしたりしないでください。</msg2>
+    <msg3>
+      <![CDATA[
+		%s のクラウド アクセスを削除してもよろしいですか?<br><br>インターネットからドライブ上に保存したコンテンツへのリモート アクセスはありません。
+		]]>
+    </msg3>
+    <msg4>このデバイスのモバイル アクセスを削除してもよろしいですか?</msg4>
+  <msg5>クラウド サービスをオフにすると、My Cloud、WD Photos モバイル アプリ、および WD Sync などの WD ソフトウェアは使用できなくなります。続行してもよろしいですか?</msg5>
+	<msg6>クラウド アクセスのためストレージの再スキャンを開始します。ファイルの量によっては、完了するまでに少し時間がかかる場合があります。</msg6>
+	<msg7>注</msg7>
+  <edit>編集</edit><resend>再送信</resend><not_allow>許可されていません</not_allow><not_allow_desc>このデバイスのローカル ネットワーク外からダッシュボード (Web インターフェイス) にアクセスしているため、この操作は許可されていません。&lt;br&gt;&lt;br&gt;この操作を行うには、このデバイスのローカル ネットワークからこのインターフェイスにアクセスしてください。</not_allow_desc><usb_availability>USB コンテンツの可用性</usb_availability></_cloud>
+  <_top>
+    <wizard len="999">使用開始ウィザード</wizard>
+    <help len="999">ヘルプ</help>
+    <support len="999">サポート</support>
+    <about len="999">情報</about>
+  </_top>
+  <_tip>
+    <notification len="999">電子メールでシステム通知を受け取ります。</notification>
+    <fw_auto len="999">自動ファームウェア更新を有効にします。</fw_auto>
+    <fw_check len="999">使用可能なファームウェア更新を確認します。</fw_check>
+    <fw_update len="999">ファイルからファームウェアを更新します。</fw_update>
+    <scan len="999">My Cloud EX2 Ultra システム上のハード ドライブをスキャンして、にエラーがないかどうかを確認します。</scan>
+    <restore len="999">復元オプションを使用する前に、必ずバックアップを作成してください。
+[システムのみ] を使用して、システム データを初期設定に復元します。［簡易復元］ ではコンテンツおよびシステム情報が消去されますが、回復ソフトウェアによって回復可能です。［完全復元］ ではすべてのコンテンツとシステム情報が完全に削除され、回復不能です。</restore>
+    <config len="999">現在の構成設定を保存します。あるいは、保存された構成設定をインポートします。</config>
+    <smart len="999">［簡易 テスト］ では、My Cloud EX2 Ultra システムのハード ドライブに故障の可能性がないかどうかをスキャンしてテストします。［完全 テスト］ では、システム ハード ドライブ全体をスキャンします。これには、数時間かかる場合があります。</smart>
+    <dev len="999">デバイスを再起動または休止状態にしてください。</dev>
+    <gen_ntp len="999">NTP サービスを有効にしてネットワークと同期し、日時を自動的に更新します。</gen_ntp>
+    <gen_tm len="999">このデバイスへの Time Machine バックアップを有効にします。</gen_tm>
+    <gen_dfs len="999">共有集約は、他の My Cloud システムや SMB プロトコルに対応しているネットワーク デバイスの共有をまとめる分散ファイル システム (DFS) に似ています。</gen_dfs>
+    <gen_ads len="999">Active Directory サービスを有効または無効にし、WD My Cloud EX2 Ultra デバイスが既存の Windows ドメインに参加できるようにします。</gen_ads>
+    <gen_drive len="999">ドライブのスリープ モードを有効にし、電力を節約します。</gen_drive>
+    <gen_led len="999">システムの LED を有効または無効にします。</gen_led>
+    <gen_lcd len="999">システム LCD のオン・オフを切り換えます。オフ モードのときにユニットのボタンを押すと、LCD が 10 秒間にわたりオンになります。</gen_lcd>
+    <gen_lcd_on len="999">LCD はデフォルトでオンです。</gen_lcd_on>
+    <gen_cloud len="999">デバイスへのクラウド アクセスを有効または無効にします。</gen_cloud>
+    <gen_status len="999">クラウド アクセス接続の現在のステータスを表示します。</gen_status>
+    <gen_timeout len="999">デフォルト時刻を設定し、自動システム ログアウトを強制的に実行します。</gen_timeout>
+    <gen_recovery len="999">電源回復機能は、電源故障による前回の予期しないシャットダウンから、デバイスを自動的に再起動します。</gen_recovery>
+    <s3 len="999">新しい Amazon S3 バックアップ ジョブの作成</s3>
+    <s3_backup len="999">バックアップ用の Amazon S3 バケットまたはルート ディレクトリ パスを指定します。</s3_backup>
+    <s3_auto len="999">スケジュールに基づいて自動的にバックアップが更新されます。</s3_auto>
+    <recycle>ネットワーク共有で削除されたファイルが含まれます。回復可能または完全に削除された状態です。</recycle>
+    <webdav>WebDAV では、HTTP 上でファイルを管理および編集できます。また、複数のユーザーが共同作業できます。</webdav>
+    <nfs>NFS (ネットワーク ファイル システム) は、ユーザーがネットワーク上でファイルにアクセスできるようにするプロトコルです。Unix、Linux、および一部のバージョンのMac OSxで共通です。</nfs>
+    <host>この共有への NFS アクセスを許可する IP アドレスを入力します。すべての IP アドレスを許可するには、* を入力します。</host>
+    <root>このオプションを有効にすると、必要に応じて、ルート レベルの NFS 権限をユーザーから削除します。</root>
+    <write>このオプションを有効にすると、この共有の NFS 経由で書き込みアクセス権を解放します。</write>
+    <remote_ip>このデバイスをバックアップするために使用するリモート サーバーの IP アドレスを入力します。</remote_ip>
+    <autoupdate_remote>スケジュールを有効または無効にすると、リモート バックアップを自動的に更新します。</autoupdate_remote>
+    <cloud_status>クラウド アクセス接続の現在のステータスを表示します。</cloud_status>
+    <group>グループはメイン ユーザー ページで作成できます。</group>
+    <public>共有へのパブリック アクセスを有効または無効にします。この値をオンに設定すると、ネットワーク上の全ユーザーがこの共有のファイルにアクセスできます。このオプションは、1 つ以上のユーザー アカウントが作成されている場合に有効になります。</public>
+    <afp>Apple ファイル プロトコル サービスを有効または無効にします。このオプションは、Time Machine バックアップを設定している場合に自動的に有効になります。</afp>
+    <lltd>リンク レイヤー トポロジ検出プロトコルを有効または無効にすると、Microsoft Windows コンピュータでのネットワーク検出および診断を強化します。</lltd>
+    <snmp>簡易ネットワーク管理プロトコルを有効または無効にし、IP ネットワーク上でデバイスを管理します。</snmp>
+    <ssh>ネットワーク上で SSH アプリケーションへのセキュア シェル (SSH) 接続を有効にします。</ssh>
+    <ddns>動的 DNS 機能では、ドメイン名を使用してサーバー (Web、FTP、ゲーム サーバーなど) をホストできます。</ddns>
+    <remote>WD My Cloud EX2 Ultra システムがリモート サーバーとして動作できるようにし、LAN または WAN 上で対応している別の My Cloud EX2 Ultra システムから共有をバックアップできるようにします。</remote>
+    <bonding>&lt;b&gt;ボンディング&lt;/b&gt;とも呼ばれ、NAS で 2 つのネットワーク インターフェイスを使用し、2 本のケーブルが同時にルーターに接続されている状態を示します。これにより、パフォーマンスと信頼性が向上します。</bonding>
+    <jumbo>ジャンボ フレームは、サポートされるネットワーク上でパフォーマンスを向上するために使用される大規模な IP フレームです。</jumbo>
+    <ipv4>[固定] を選択して、IP アドレス、サブネット マスク、およびゲートウェイ情報、または DHCP (動的ホスト設定プロトコル) を入力し、ネットワークで IP アドレス割り当ておよびその他の設定情報を取得します。</ipv4>
+    <ipv6>IPv6 は新しい IP 規格であり、複数の IP ネットワークでのパケットの形式とアドレス指定体系を規定します。</ipv6>
+    <ftp>ファイル転送プロトコル (FTP) は、インターネット上でコンピュータ間のデータを転送するために使用される標準ネットワーク プロトコルです。</ftp>
+    <workgroup>ワークグループでは、同じワークグループのデバイスが相互にアクセスできます。Windows システムでのみ使用できます。デバイスをネットワークに追加するたびに、同じワークグループ名を割り当てます。</workgroup>
+    <lmb>ドメイン マスター ブラウザを有効または無効にすると、複数のサブネット上でリソースおよびサービス情報を収集して記録します。</lmb>
+    <speed>[自動]、[100]、[1000] のいずれかを選択します。[自動] はすべてのシナリオに対応します。</speed>
+    <port_forwarding>デフォルトまたはカスタム ポート番号を割り当て、特定のサービスへの接続を管理します。</port_forwarding>
+    <user_prefix>ユーザー名のプレフィックスを入力します。プレフィックスにはスペースを使用できません。</user_prefix>
+    <account_prefix>アカウント プレフィックスの数字を入力します。アカウント プレフィックスはユーザー名プレフィックスに追加されます。</account_prefix>
+    <wfs_upload>クリックすると、1 つ以上のファイルを WD My Cloud EX2 Ultra システムにアップロードします。</wfs_upload>
+    <iso_overwrite>[上書き] を選択すると、同じ名前でファイルを上書きコピーします。</iso_overwrite>
+    <cloud_automatic>
+      <![CDATA[自動:uPnP を使用して、デバイスとルーター間で直接接続を確立します。接続がルーターのポートを開けない場合は、リレー接続が確立されます。<br><br>手動:選択した 2 つのポート経由で接続を確立します。ポートが使用できない場合は、リレー接続が確立されます。手動によるルーター構成が必要です。<br><br>Windows XP 互換:ポート 80 および 443 を使用した接続を確立します。これらのポートが利用できない場合は、中継接続が確立されます。Windows XP の場合に必須です。]]>
+    </cloud_automatic>
+    <cloud_rebuild>MyCloud.com データベースを復元します。データベースの破損が疑われる場合にのみ、トラブルシューティング目的で使用します。</cloud_rebuild>
+    <require_mail>電子メール アドレスは必須です。</require_mail>
+    <dashboard>インターネットでこのウェブインタフェースへのアクセスを有効/無効にするには、ルーターの外部ポートを設定してこのデバイスの内部デフォルトポート（ポート80）に転送します。</dashboard>
+    <ftp_enable>この共有への FTP アクセスを有効または無効にします。</ftp_enable>
+    <ftp_disable>現在、このシステムの FTP アクセスは無効です。FTP 設定を有効にするには、[設定] &gt; [ネットワーク] に移動し、再試行します。</ftp_disable>
+    <nfs_disable>現在、このシステムの NFS アクセスは無効になっています。NFS 設定を有効にするには、[設定] &gt; [ネットワーク] に移動し、再試行します。</nfs_disable>
+    <webdav_enable>同一のネットワーク上にあるコンテンツに Web 経由でアクセスできるようにするには、WebDAV プロトコルを有効にしてください。</webdav_enable>
+    <webdav_disable>現在、このシステムの WebDAV アクセスは無効になっています。WebDAV 設定を有効にするには、[設定] &gt; [ネットワーク] に移動し、再試行します。</webdav_disable>
+    <autofw>
+      <![CDATA[ファームウェア更新が利用可能な場合、午前 3 時に更新を実行し、再起動が必要になります。自動更新設定を構成するには、[設定] > [ファームウェア更新] に移動します。]]>
+    </autofw>
+    <sms>
+      <![CDATA[システム通知をショート メッセージ サービス (SMS) で受け取る]]>
+    </sms>
+    <ups>UPS ステータスを他のデバイスに通信するようにこのシステムを設定できます (マスター モード)。あるいは、UPS マスターと通信し、UPS ステータスとコマンドを受信するように設定できます (スレーブ モード)。</ups>
+    <account_mail>ユーザーの電子メール アドレスを入力して、ユーザーにクラウド アクセスを付与します。ログインの手順は、提供された電子メール アドレスに送信されます。</account_mail>
+    <smb2>SMB2 を有効にすると、Windows 8 の Windows ファイル履歴をサポートします。</smb2>
+    <p2p_port>ポート設定を有効にするには、[設定] &gt; [ネットワーク] &gt; [ポート転送] &gt; [追加] を選択し、一覧から該当するサービスを選択して有効にします。</p2p_port>
+    <system_test>システム テストを実行して、ユニットのメモリ、温度、ファン、他の関連エラーがないかをチェックします。</system_test>
+    <wipe>My Cloud EX2 Ultra システム上のハード ドライブをフォーマットします。ドライブ上のすべてのデータが永久に削除されます。</wipe>
+    <raid>ハード ドライブを追加または削除するときに、システムの RAID ボリュームを自動的に復元します。</raid>
+	<fdownload_url>ファイル パスおよびファイル名は大文字と小文字を区別します。</fdownload_url>
+	<camera_auto>カメラを WD My Cloud EX2 Ultra システムに接続すると、ファイルが自動的にデバイスに転送されます。</camera_auto>
+    
+    
+      <camera_copy>［コピー］ を使用すると、カメラのファイルを複製し、WD My Cloud EX2 Ultra システムに転送します。</camera_copy>
+    
+    
+      <camera_move>［移動］ を使用すると、ファイルをカメラから WD My Cloud EX2 Ultra システムに転送しますが、カメラのコンテンツは削除されます。</camera_move>
+    
+    
+      <oplocks>Oplock を有効にすると、SMB クライアントのファイルをキャッシュに保存し、Samba のパフォーマンスが向上します。</oplocks>
+    
+    
+      <media_enable>この共有へのメディア サービスを有効または無効にします。</media_enable>
+    
+    <media_disable><![CDATA[メディア サービスは現在無効です。設定に移動して、メディアをクリックして、メディア サーバーを有効にしてください。]]></media_disable>
+ 
+<ve_download_key>暗号鍵のダウンロード</ve_download_key>
+    <media_serving>メディア サービス オプションは DLNA と iTunes サーバーとのこの共有を有効/無効にします。</media_serving>
+ <extendedlog>システム診断レポートで拡張ログを取り込みます。</extendedlog>
+ <improvement>製品改善プログラムは、診断および使用情報を収集して定期的に送信し、WD 製品の品質性能改善に役立たせます。この情報には一般的に、デバイス、アプリケーション、サービスの使用、およびエラーの診断が含まれます。デバイスの設定、アプリケーション別の CPU およびその他の使用統計、API コール、サービス クラッシュの情報、ネットワーク ステータス、ストレージの使用量、ファイルのサイズおよびタイプなどの情報が含まれます。</improvement><ad_domain>Active Directory が参加する、適切なドメイン名 (FQDN) を入力します。</ad_domain><snmp_1>簡易ネットワーク管理プロトコルを使用して、IP ネットワーク上でデバイスを管理します。</snmp_1><snmp_2>&lt;b&gt;NoAuthNoPriv :&lt;/b&gt;メッセージが認証されていなく、暗号化されていません。&lt;br&gt;&lt;b&gt;AuthNoPriv:&lt;/b&gt; メッセージは認証されていますが、暗号化されていません。&lt;br&gt;&lt;b&gt;AuthPriv:&lt;/b&gt; メッセージが認証され、暗号化されています。</snmp_2><snmp_3>ユーザー アクセスのレベルを示します。&lt;br&gt;&lt;b&gt;システム：&lt;/b&gt; デバイスのシステム情報のクエリーのみを許可。&lt;br&gt;&lt;b&gt;ネットワーク：&lt;/b&gt; デバイスのネットワーク情報のクエリーのみを許可。&lt;br&gt;&lt;b&gt;すべて：&lt;/b&gt; すべてのデバイス情報のクエリーを許可。</snmp_3><dev1>デバイスを再起動します。</dev1></_tip>
+  <_utilities>
+    <quick_restore len="999">簡易復元</quick_restore>
+    <full_restore len="999">完全復元</full_restore>
+    <restore_title len="999">システムのみ</restore_title>
+    <restore len="999">初期設定を復元</restore>
+    <config_title len="999">システム設定</config_title>
+    <config len="999">システム設定</config>
+    <config_save len="999">設定ファイルの保存</config_save>
+    <config_import len="999">ファイルのインポート</config_import>
+    <device_title len="999">デバイス メンテナンス</device_title>
+    <device len="999">デバイス電源</device>
+    <shutdown len="999">休止状態</shutdown>
+    <shut_down len="999">シャットダウン</shut_down>
+    <up_time len="999">デバイス アップタイム</up_time>
+    <reboot len="999">再起動</reboot>
+    <msg1 len="999"><![CDATA[構成設定をリセットしようとしています。ドライブに保存されているデータには影響しません。[<b>OK</b>] を押すと続行します。]]></msg1>
+    <msg2 len="999">デバイスが再起動しています。&lt;br&gt;&lt;br&gt;再起動処理中にデバイスを切断しないでください。</msg2>
+    <msg3 len="999">デバイスがシャットダウン中です。</msg3>
+  <full_factory_restore>完全初期状態に復元</full_factory_restore><quick_factory_restore>簡易初期状態に復元</quick_factory_restore><msg4>初期状態に復元中です。</msg4></_utilities>
+  <_notification>
+    <title1 len="999">通知電子メール</title1>
+    <alert_email len="999">アラート メール</alert_email>
+    <title2 len="999">通知表示</title2>
+    <title2_msg len="999">次のメッセージの通知を表示</title2_msg>
+    <critical_only len="999">重大のみ</critical_only>
+    <c_warning len="999">重大と警告</c_warning>
+    <all len="999">すべて</all>
+    <d_header len="999">アラート設定</d_header>
+    <d_desc len="999">
+      <![CDATA[						
+			WD My Cloud EX2 Ultra インターフェイスまたは電子メール経由でシステム通知を受信するための通知設定を行います。<br><br>次のメッセージの電子メール通知を送信:
+			]]>
+    </d_desc>
+    <new_email len="999">新しい電子メール アドレス</new_email>
+    <test_mail len="999">テスト電子メールの送信</test_mail>
+    <info len="999">情報</info>
+    <warning len="999">警告</warning>
+    <critical len="999">重大</critical>
+    <view len="999">すべて表示</view>
+    <no_alert len="999">アラートが見つかりません。</no_alert>
+  </_notification>
+  <_energy>
+    <energy_saver>省電力</energy_saver>
+    <drive_sleep len="999">ドライブ スリープ</drive_sleep>
+    <led len="999">LED</led>
+    <lcd len="999">LCD</lcd>
+    <p_recovery len="999">電源回復</p_recovery>
+    <p_sch len="999">電源スケジュール</p_sch>
+    <p_set len="999">電源設定</p_set>
+    <timeout len="999">Web アクセス タイムアウト</timeout>
+    <p_off_all>終日電源オフ</p_off_all>
+  </_energy>
+  <_iscsi>
+    <title len="999">iSCSI ターゲット</title>
+    <desc len="999">
+  WD My Cloud EX2 Ultra システム で、iSCSI ターゲットの作成および管理が可能です。iSCSI ターゲットはローカル ハード ディスク ドライブのようにストレージを提供しますが、ローカルではなくネットワーク上でアクセスされます。iSCSI ターゲットも、WD My Cloud EX2 Ultra サーバーの基本 RAID 構造によって保護されます。
+  &lt;br&gt;
+  &lt;br&gt;
+  iSCSI ターゲットを作成するには、下の [&lt;b&gt;iSCSI ターゲットの作成&lt;/b&gt;] ボタンをクリックします。
+  &lt;br&gt;
+  &lt;br&gt;
+   </desc>
+    <iscsi len="999">iSCSI</iscsi>
+    <iscsi_server len="999">iSCSI iSNS クライアント</iscsi_server>
+    <server>サーバー</server>
+    <list_title len="999">iSCSI ターゲット リスト</list_title>
+    <no_connect len="999">イニシエータが接続されていません</no_connect>
+    <image_file len="999">イメージ ファイル</image_file>
+    <security len="999">セキュリティ</security>
+    <chap len="999">CHAP</chap>
+    <address len="999">ポータル アドレス</address>
+    <ry_deatil len="999">Ryanspace 詳細</ry_deatil>
+    <create_iscsi_target len="999">iSCSI ターゲットの作成</create_iscsi_target>
+    <alias len="999">エイリアス</alias>
+    <create_on len="999">作成日</create_on>
+    <desc1 len="999">
+      <![CDATA[
+	既存のイメージ ファイルから iSCSI ターゲットを作成する場合は、<span style="color:#0067A6;cursor: pointer;" onclick="i_create_tree_dialog('form_s3','s3_tree');">ここ</span>をクリックします。
+		]]>
+    </desc1>
+    <connect len="999">イニシエータが接続されました</connect>
+    <initi_title len="999">イニシエータ</initi_title>
+    <initi_list len="999">次のリストに、現在 iSCSI ターゲットに接続しているイニシエータを示します。</initi_list>
+    <name len="999">名前</name>
+    <no_list len="999">WD My Cloud EX2 Ultra システムには  iSCSI ターゲットが追加されていません。</no_list>
+    <create_iscsi_lun len="999">iSCSI LUN の作成</create_iscsi_lun>
+    <lun_list_title len="999">iSCSI LUN リスト</lun_list_title>
+    <create_iscsi_acl len="999">iSCSI ACL の作成</create_iscsi_acl>
+    <acl_list_title len="999">iSCSI ACL リスト</acl_list_title>
+    <acl_name>ACL 名</acl_name>
+    <acl_backup_title len="999">iSCSI バックアップ リスト</acl_backup_title>
+    <create_iscsi_backup len="999">iSCSI バックアップの作成</create_iscsi_backup>
+    <iqn>
+      <![CDATA[イニシエータ名 (IQN)]]>
+    </iqn>
+    <acl_info>ACL 情報</acl_info>
+    <lun_mapping>LUN マッピング</lun_mapping>
+    <pre_allocate>事前割り当て</pre_allocate>
+    <target_mapping>ターゲット マッピング</target_mapping>
+    <msg1 len="999">ターゲット名の最初の文字には次の文字のみを使用できます：「a-z」、「0-9」。 </msg1>
+    <msg2 len="999">ターゲット名には次の文字のみを使用できます。「a-z」、「A-Z」、「0-9」、「-」、「.」、「:」。</msg2>
+    <msg3 len="999">iSCSI ターゲットの最大数に達しました。</msg3>
+    <msg4 len="999">ターゲットが存在します。</msg4>
+    <msg5 len="999">
+      <![CDATA[名前には次の文字を使用できます。「a-z」、「A-Z」、「0-9」、「-」、「_」]]>
+    </msg5>
+    <msg6 len="999">パスワードは 12 文字以上で指定する必要があります。再試行してください。</msg6>
+    <msg7 len="999">
+      <![CDATA[パスワードには次の文字を使用できます。「a-z」、「A-Z」、「0-9」、「-」、「_」]]>
+    </msg7>
+    <msg8 len="999">1 GB ～ 16 TB のファイルを選択してください。</msg8>
+    <msg9 len="999">エイリアスを入力してください。</msg9>
+    <msg10 len="999">既存の iSCSI ターゲットのサイズを小さくすることはできません。</msg10>
+    <msg11 len="999">
+      <![CDATA[ターゲット サイズを次の値よりも大きくできません ]]>
+    </msg11>
+    <msg12 len="999">
+      <![CDATA[サイズを入力してください。]]>
+    </msg12>
+    <msg13 len="999">
+      <![CDATA[イメージ ファイルを削除してもよろしいですか?]]>
+    </msg13>
+    <msg14 len="999">
+      <![CDATA[iSCSI ターゲット エイリアスには大文字を使用できません。]]>
+    </msg14>
+    <msg15 len="999">
+      <![CDATA[イメージ ファイルは使用されています。]]>
+    </msg15>
+  <msg16 len="999">
+      <![CDATA[名前の先頭の文字には「snapshots」を使用できません]]>
+    </msg16>
+    <msg17 len="999">
+      <![CDATA[名前の先頭の文字には「shap-」を使用できません]]>
+    </msg17>
+    <msg18 len="999">IQN を入力してください。</msg18>
+    <msg19 len="999">ACL 名を入力してください。</msg19>
+    <msg20 len="999">LUN 名を入力してください。</msg20>
+    <msg21 len="999">
+      <![CDATA[名前は「Default-Policy」にすることはできません。]]>
+    </msg21>
+  <msg22>もっと大きなユニットを選択してください。</msg22><msg23>スペースは含めないでください。</msg23><msg24>ターゲット名には次の文字のみを使用できます。「a-z」、「0-9」、「-」、「.」、「:」。スペースは含めないでください。</msg24><creating>作成中</creating></_iscsi>
+  <getting_start>
+    <desc1 len="999">WD My Cloud EX2 Ultra では、パーソナル クラウドを作成できます。画像、動画、音楽、およびファイルを 1 つの場所に保存し、あらゆる場所のコンテンツにアクセスします。アクセスするには、ユーザーごとに MyCloud.com のアカウントが必要です。</desc1>
+    <desc2 len="999">電子メール アドレスを入力すると、デバイスが登録され、WD My Cloud EX2 Ultra に関する更新と最新情報を受信するように設定されます。</desc2>
+    <desc3 len="999">
+      <![CDATA[他のユーザーを追加しない場合は、[<b>次へ</b>] をクリックして続行します。]]>
+    </desc3>
+    <desc4 len="999">ご登録いただき、どうもありがとうございました。登録内容は送信されました。</desc4>
+    <login len="999">クラウド アクセスの設定</login>
+    <first_name len="999">名前 (名)</first_name>
+    <last_name len="999">名前 (姓)</last_name>
+    <email len="999">電子メール アドレス</email>
+    <complete len="999">セットアップ完了</complete>
+	<more len="999"><![CDATA[以上です。]]></more>
+	<more_2 len="999"><![CDATA[ログイン情報が記載された電子メールが MyCloud.com から送信されます。]]></more_2>
+	<more_3 len="999"><![CDATA[追加ソフトウェアおよび情報については、これらのリンクをクリックしてください。]]></more_3>
+    <update len="999">コンテンツのアップロード</update>
+    <backup len="999">PC/Mac のバックアップ</backup>
+    <mobile len="999">モバイル アプリにアクセス</mobile>
+    <auto len="999">利用可能なシステム ファームウェアを自動的に更新します。</auto>
+    <register len="999">WD My Cloud EX2 Ultra システムを登録することで、継続的な製品サポートを受けられます。</register>
+  <imp>製品改善プログラムに参加します。</imp><desc5>WD Experienceを強化</desc5><desc6>製品登録</desc6><desc7>製品を登録すると、保証登録に役立ち、ご使用の製品についてのアップデートを受信できます。</desc7><desc8>セットアップ完了</desc8><auto_fw>ファームウェアの自動アップデート</auto_fw><auto_tip>アップデートが発表されたときに、デバイスのファームウェアを自動的に更新します。</auto_tip><imp_tip>WD の製品改善プログラム参加し、WD の製品改善を支援します。</imp_tip><desc9>人生で一番エキサイティングなときとなるでしょう。ダウンロード：</desc9></getting_start>
+  <_support>
+    <title>サポート</title>
+    <title1>自動サポートの要求</title1>
+    <title2>システム レポートを作成して保存</title2>
+    <title3>サポート リソース</title3>
+    <desc1>
+      <![CDATA[
+		[自動カスタマー サポート] を選択すると、包括的な診断レポートが生成され、サポート要求に添付されます。これには、デバイスのシリアル番号、MAC アドレス、およびその他のステータス情報が含まれています。サポート要求は専門技術者チームに配信され、できる限り迅速かつ効率的にサポートを実施します。<br><br>サポート要求にレポートを添付するには、[デバイスの診断レポートを添付してサポートを要求] オプションを選択し、[サポートの要求] をクリックします。<br><br>デバイス診断レポートを添付せずにサポート要求を送信するには、標準のサポート ページから要求を送信してください。
+	]]>
+    </desc1>
+    <desc2>システム レポートを作成し、ドライブに保存して、ネットワークの問題を特定して解決します。</desc2>
+    <sel_desc>
+      <![CDATA[デバイスの診断レポートを添付してサポートを要求]]>
+    </sel_desc>
+    <request_support>サポートを要求</request_support>
+    <privacy>プライバシー ポリシー</privacy>
+    <save>作成して保存</save>
+    <doc>製品ドキュメント</doc>
+    <faq>FAQ</faq>
+    <forum>フォーラム</forum>
+    <contacts>お問い合わせ</contacts>
+    <msg1>システム ログ更新エラー。</msg1>
+  <desc3>このプログラムに参加しても、デバイスのパフォーマンスには影響しません。当社の製品の改善を支援するものです。デバイスは定期的にシリアル番号と基本デバイス情報を WD に送信します。</desc3><title4>製品改善プログラム</title4><title5>製品改善プログラムへの参加</title5><desc4>&lt;li&gt;当社の製品の今後の更新に役立てさせていただきます。&lt;/li&gt;
+&lt;li&gt;当社のサポート チームが、より効果的にお客様を支援できるようになります&lt;/li&gt;
+&lt;li&gt;いつでも参加を中止していただけます。&lt;/li&gt;</desc4></_support>
+  <_about>
+    <copyright>
+      <![CDATA[Copyright © 2010-2015 Western Digital Technologies, Inc.]]>
+    </copyright>
+    <info>著作権情報</info>
+    <gnu>GNU 一般公有使用許諾</gnu>
+  </_about>
+  <eula>
+    <choose>言語を選択</choose>
+    <agree>
+      <![CDATA[<span class="wdlink" onclick="open_eula()">WD エンド ユーザー使用許諾契約</span>に同意します]]>
+    </agree>
+    <accept>同意する</accept>
+    <print>印刷</print>
+    <title>Western Digital エンド ユーザー使用許諾契約</title>
+    <title2>使用許諾契約</title2>
+    <desc>使用許諾契約をよくお読みください。</desc>
+    <regiest>登録に失敗しました。register.wdc.com にアクセスし、製品を登録してください。</regiest>
+  <nohdd_desc1>ハード ドライブの挿入</nohdd_desc1>
+	<nohdd_desc2>
+		<![CDATA[
+			システムを正しく設定するには、My Cloud EX2 Ultra システムのスロットにハード ドライブを挿入してください。ハード ドライブを購入するには、<a id="eula_noHDD_link">WD ストア</a> にアクセスしてください。
+   			<p>
+   			ハード ドライブが挿入されたら、[続行] をクリックします。
+		]]>
+	</nohdd_desc2>
+  <regiest_fail_1>デバイスは既に登録されています。［次へ］ をクリックして作業を続けます。</regiest_fail_1><regiest_fail_2>登録に失敗しました。WD で直接製品を登録するには、&lt;a href="http://register.wdc.com" target="_blank"&gt;ここ&lt;/a&gt;をクリックしてください。今すぐ登録したくない場合は、[次へ] をクリックして続行します。</regiest_fail_2></eula>
+  <_wizard>
+    <msg1 leng="167">パスワードと確認パスワード文字が一致しません。</msg1>
+    <msg2 leng="167">新しいパスワードは 5 文字以上で指定する必要があります。再試行してください。</msg2>
+    <msg3 leng="167">パスワードにはスペースを使用できません。</msg3>
+    <msg4 leng="167">新しいパスワードは 16 文字以下で指定する必要があります。</msg4>
+    <msg5 leng="167">
+      <![CDATA[新しいパスワードには次の文字を使用できません。@ :/ \\ % ']]>
+    </msg5>
+    <msg6 leng="167">パスワードの確認を入力します。</msg6>
+    <msg7 leng="167">パスワードの確認にはスペースを使用できません。</msg7>
+    <relogin_msg leng="167">
+      <![CDATA[これらの設定を有効にするには、再ログインする必要があります。]]>
+    </relogin_msg>
+    <relogin_msg2 leng="167">
+      <![CDATA[DHCP サーバーから使用可能な IP アドレスを取得しようとしています。GUI のリダイレクトが失敗しました。ストレージ ユーティリティを使用して、後からデバイスを検出してください。]]>
+    </relogin_msg2>
+  </_wizard>
+  <_dialog_title>
+    <time_machine_2 len="44">手順 2:サマリー</time_machine_2>
+    <lan_1 len="44">LAN セットアップ ウィザードへようこそ</lan_1>
+    <lan_2 len="44">VLAN 設定</lan_2>
+    <import_user_4 len="44">手順 3:サマリー</import_user_4>
+  </_dialog_title>
+  <_port>
+    <msg1>ポート番号 %s が無効です。1024 ～ 65535 または 80 番の有効なポート番号を入力してください。</msg1>
+    <msg2>ポート番号 %s が無効です。1024 ～ 65535 または 443 番の有効なポート番号を入力してください。</msg2>
+  </_port>
+  <_network_ups>
+    <title1>ネットワーク UPS</title1>
+    <title2>ネットワーク UPS スレーブ モード</title2>
+    <fail len="999">失敗</fail>
+    <on_line len="999">電源使用時</on_line>
+    <on_battery len="999">バッテリ使用時</on_battery>
+    <low_battery len="999">バッテリ低下</low_battery>
+    <unknown len="999">なし</unknown>
+    <device_info len="999">デバイス情報</device_info>
+    <desc1>スレーブ</desc1>
+    <desc2>ネットワーク接続された UPS マスターの IP アドレスを入力します。</desc2>
+    <desc3>ウィザードが UPS 設定を構成および実行している間、お待ちください。</desc3>
+    <msg1 len="999">現在、UPS デバイスはこのデバイスに接続されていません。</msg1>
+    <msg2 len="999">マスター モード</msg2>
+    <msg4 len="999">スレーブ モード</msg4>
+    <msg5 len="999">WD My Cloud EX2 Ultra は UPS (マスタ) デバイスに接続できませんでした。</msg5>
+  </_network_ups>
+  <_logs>
+		<title len="999">ログ</title>
+		<view_logs len="999">ログの表示</view_logs>
+		<system_log>システム ログ</system_log>		
+	<log_filter>ログ フィルタ</log_filter>
+    <view_event>イベントの表示</view_event>
+    <filter_by>フィルタ条件</filter_by>
+	<level>レベル</level>
+	<log_level>ログ レベル</log_level>
+  </_logs> 
+  <_recycle>
+    <title>ゴミ箱設定</title>
+    <auto_clear>ゴミ箱の自動削除</auto_clear>
+    <clear_days_1>ファイル保持期間</clear_days_1>
+    <clear_days_2>日</clear_days_2>
+  <del_msg_title>ゴミ箱を空にする</del_msg_title>
+	<del_msg>ゴミ箱のすべてのデータを完全に削除してよろしいですか？</del_msg>
+  <err_clear_days_empty>ファイル保持時間は、1 から 365 までの数値で指定してください。</err_clear_days_empty></_recycle>  <_app_center><desc12>マルチメディア</desc12><desc10>詳細</desc10></_app_center><_smart><full_pass>合格 - 完全ディスク テストが正しく完了しました。</full_pass><full_fail>失敗 - 完全ディスク テストが失敗しました。データをバックアップし、このディスクを交換してください。さらに支援が必要な場合は、WD サポートにお問い合わせください。</full_fail><full_fail_glcr>失敗 - 完全ディスク テストが失敗しました。WD サポートにお問い合わせください。</full_fail_glcr><quick_pass>合格 - 簡易 ディスク テストが正しく完了しました。</quick_pass><quick_fail>失敗 - 簡易 ディスク テストが失敗しました。データをバックアップし、このディスクを交換してください。さらに支援が必要な場合は、WD サポートにお問い合わせください。</quick_fail><quick_fail_glcr>失敗 - 簡易 ディスク テストが失敗しました。WD サポートにお問い合わせください。</quick_fail_glcr></_smart><_help><mshares>共有の管理</mshares><cshare>共有の作成</cshare><caccess>共有へのアクセスの変更</caccess><mgroups>グループの管理</mgroups><cgroup>グループの追加</cgroup><musers>ユーザーの管理</musers><cuser>ユーザーの追加</cuser><mcloud>クラウド アクセスの管理</mcloud><raccess>リモート アクセスの基本</raccess><saccess>クラウド アクセスを設定中</saccess></_help><_share_aggregation><desc>他の My Cloud システムの共有へのアクセスを提供するローカル共有を作成すると、分散したリソースをまとめることができます。</desc><c2share>共有に接続</c2share><add_link>リンクを追加</add_link><tip1>ルート フォルダは、リンクしたリモート共有の「コンテナ」として動作し、共有集約の共有で作成されます。</tip1><tip2>集約リモート共有へのリンクを追加。</tip2><tip3>ルート フォルダに表示されるフォルダ名。</tip3><tip4>ターゲット デバイスのホスト名または IP アドレスを入力してください。</tip4><tip5>リモート共有名を手動で入力するか、または [&lt;b&gt;リモート共有フォルダの取得&lt;/b&gt;] をクリックしてリモート ホスト共有を表示します。</tip5><msg1>リモート共有名には次の文字を使用できません。\ / :* ?" &lt; &gt; | </msg1><msg2>リモート ホストには、使用できる共有がありません。</msg2><msg3>リモート共有名は存在しません。</msg3></_share_aggregation><_domain><connected_to>接続先： %s</connected_to><disconnected>...から接続を解除しました %s</disconnected><ad_status>Active Directory のステータス</ad_status></_domain></text>

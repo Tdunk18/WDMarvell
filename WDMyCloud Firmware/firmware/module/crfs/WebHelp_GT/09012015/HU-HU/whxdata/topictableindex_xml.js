@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><cki><ck fm=\"A személyes felhő kezeléséről\" to=\"A DLNA-médiakiszolgáló be-/kikapcsolása\" num=\"51\"/><ck fm=\"FTP-letöltés módosítása\" to=\"Mik az alkalmazások?\" num=\"53\"/><ck fm=\"Mik a felhasználói csoportok?\" to=\"Mi a RAID típusú tárolás?\" num=\"3\"/></cki>";

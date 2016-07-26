@@ -1,0 +1,10 @@
+#%PAM-1.0
+auth       required	pam_nologin.so
+auth       sufficient   /lib/security/pam_ldap.so
+auth       sufficient   /lib/security/pam_winbind.so
+auth       required	pam_stack.so service=system-auth
+account    sufficient   /lib/security/pam_ldap.so
+account    sufficient   /lib/security/pam_winbind.so
+account    required	pam_stack.so service=system-auth
+session    required	pam_stack.so service=system-auth
+password   required	pam_stack.so service=system-auth

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="MS-HAID" content="Creating an Amazon S3 Cloud Backup" />
+<meta http-equiv="Content-Language" content="zh-TW" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>建立 Amazon S3 雲端備份</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("備份您的個人雲端\n雲端備份\n建立 Amazon S3 雲端備份");
+addButton("show",BTN_TEXT,"顯示","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("index.htm", "", ">", "首頁", "welcome.htm");
+document.write("<a href=\"Creating_a_USB_Backup.htm\">備份您的個人雲端<\/a> > <a href=\"What_is_a_Cloud_Backup.htm\">雲端備份<\/a> > 建立 Amazon S3 雲端備份<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>建立 Amazon S3 雲端備份</h1>
+<p class="Body"><span style="font-weight: bold;">注意</span>：要建立雲端備份，請先至 
+ <a href="http://aws.amazon.com/s3" target="_blank">http://aws.amazon.com/s3</a> 
+ 申請 Amazon S3 服務。</p>
+<p class="Body">設定好您的 Amazon S3 帳戶後，使用下列步驟建立雲端備份。</p>
+<ol style="list-style: square;">
+	<li style="list-style: none; display: inline;"><ol style="list-style: decimal;">
+		<li class="n1">按一下 [<b>備份</b>]。</li>
+		<li class="n1">按一下 <span style="font-weight: bold;">[雲端備份]</span>。</li>
+		<li class="n1">按一下畫面頂端的 <b>[Amazon S3] </b>按鈕。<img src="Graphics/image016.png" 
+															 alt="" width="90" 
+															 height="18" 
+															 border="0" /></li>
+		<li class="n1">按一下 [<b>建立</b>]。</li>
+		<li class="n1">輸入雲端備份的作業名稱。</li>
+		<li class="n1">按一下 [<b>下一步]</b>。</li>
+		<li class="n1">輸入 Amazon S3 提供的下列資訊：</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b>區域：</b>從下拉式功能表中選取您的雲端所使用區域。</li>
+		<li class="b1"><b style="font-weight: bold;">存取金鑰</b>：輸入 Amazon 
+		 S3 提供給您的存取金鑰。</li>
+		<li class="b1"><b style="font-weight: bold;">私人金鑰</b>：輸入 Amazon 
+		 S3 提供給您的私人金鑰。</li>
+		<li class="b1"><b>遠端路徑：</b>輸入雲端的遠端路徑。這通常就是貯體名稱。</li>
+	</ul>
+	<ol start="8" style="list-style: decimal;">
+		<li class="n1">按一下 [<b>下一步</b>]。</li>
+		<li class="n1">在 [類型] 欄位中選取下列其中一個選項：</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold;">上傳：</b>將 My Cloud 
+		 Mirror 資料備份至 Amazon S3 貯體。</li>
+		<li class="b1"><b style="font-weight: bold;">下載：</b>將 Amazon S3 
+		 貯體備份至 My Cloud Mirror 伺服器。</li>
+	</ul>
+	<ol start="10" style="list-style: decimal;">
+		<li class="n1">在 [備份類型] 欄位中，從下拉式功能表中選取您要執行的備份類型。選項包括：</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold;">覆寫現有檔案：</b>覆寫目標資料夾中名稱與來源檔案相同的檔案。</li>
+		<li class="b1"><b>完整備份：</b>每次執行備份時，都建立包含所有備份資料的不同資料夾。</li>
+		<li class="b1"><b>增量備份：</b>使用比較新的來源檔案，覆寫目標檔案。</li>
+	</ul>
+	<ol start="11" style="list-style: decimal;">
+		<li class="n1">按一下 <span style="font-weight: bold;">[下一頁]</span>。</li>
+		<li class="n1">在 [本機路徑] 欄位中，輸入 My Cloud Mirror 裝置上的備份路徑。</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">按一下 <span style="font-weight: bold;">[瀏覽]</span>，瀏覽至設備上的備份位置。<br />
+		(範例：Volume_1/backup)</li>
+	</ul>
+	<ol start="13" style="list-style: decimal;">
+		<li class="n1">按一下 <img src="Graphics/toggle_button.png" alt="" 
+								 width="20" height="15" border="0" /> 啟動自動更新功能。如此會根據您建立的排程，自動更新備份。</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">如果啟動自動更新功能：</li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: circle;">
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">選取自動更新排程：每日、每週或每月</p></li>
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">從下拉式功能表中選取 
+			 [自動更新時間] (每日選項)。</p></li>
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">從下拉式功能表中選取 
+			 [自動更新日期和時間] (每週或每月選項)。</p></li>
+		</ul></li>
+	</ul>
+	<ol start="14" style="list-style: decimal;">
+		<li class="n1">按一下 [<b>下一步]</b>。</li>
+		<li class="n1">檢閱設定，然後按一下 <b>[完成]</b>。您的 Amazon S3 雲端備份隨即創建。</li>
+	</ol></li>
+</ol>
+<p class="Body" style="margin-left: 60px;"><span style="font-weight: bold;">附註</span>：存取 
+ Amazon S3 雲端備份貯體可以檢視設備備份。</p>
+<p class="ListContinue2CxSpLast">&#160;</p>
+<p>
+<a href="javascript:void(0);" onclick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) &gt;=2 &amp;&amp; typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','什麼是雲端備份','What_is_a_Cloud_Backup.htm','啟用 ElephantDrive 雲端備份','Enabling_an_ElephantDrive_Cloud_Backup.htm');return false;" title="另請參閱"><img src="ss_btn_另請參閱.gif" border="0" height="17" width="50" alt="另請參閱" /></a>
+
+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt;">© 2015 Western Digital Technologies, Inc. 
+	 <span style="font-family: 'Arial Unicode MS'; line-height: 100%;">保留所有權利。</span></p>
+</div>
+<script type="text/javascript" language="JavaScript">//<![CDATA[
+if (parseInt(navigator.appVersion) >= 3 && typeof (WritePopupMenuLayer) == "function")
+  WritePopupMenuLayer();
+//]]></script><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>
+

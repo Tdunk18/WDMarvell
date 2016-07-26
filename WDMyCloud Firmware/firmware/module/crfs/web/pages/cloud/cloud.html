@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="PRAGMA" content="no-cache"> 
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+</head>	
+<style>
+.sign_up_button{
+	margin-top:-50px;
+	margin-right:15px;
+	float:right;
+}
+#device_user_none_email{
+	margin-top:20px;
+}
+</style>
+<script type="text/javascript">
+function page_load()
+{
+	page_unload();
+	
+	help_link();
+	cloud_text();
+	
+	var sys_time = (new Date()).getTime();
+	initDiag("/web/cloud/cloudDiag.html?r=" + sys_time);
+	get_cloud_user_list();
+
+	Internet_StatusID = setInterval(_REST_Get_Internet_Access, 3000);	
+	_REST_Get_Device_Status();
+
+	$("#tip_cloud_status").attr('title',_T('_tip','gen_status'));
+	init_tooltip();
+	
+	currentIndex=1;
+	$(".ButtonArrowTop").addClass('gray_out');
+	scrollDivTop_User('SubMenuDiv');
+}
+var Cloud_StatusID,_REST_USER_CODE_ID,Internet_StatusID;
+function page_unload()
+{
+	clearTimeout(Cloud_StatusID);
+	clearTimeout(_REST_USER_CODE_ID);		
+	clearInterval(Internet_StatusID);	
+}
+</script>
+
+<body>
+<table cellspacing="0" cellpadding="0" border="0">
+	<tr valign="bottom">
+	<td width="28"></td>
+		<td align="left">
+			<div class="header_1 _text" lang="_cloud" datafld="configure_access"></div>
+		</td>
+	</tr>
+</table>
+<div class="hr_0"><div class="hr_1"></div></div>
+
+<table cellspacing="0" cellpadding="0" border="0" >
+<tr>
+	<td valign="top" id="share_name_td" class="unselect">
+		<ul id="cloud_userUp_link" class="ButtonArrowTop disable" onmousedown="scrollDivDown('SubMenuDiv')">
+			<li class="ButtonArrowUpListUp"></li>
+		</ul>
+		<div id="SubMenuDiv" class="no_top_btns">
+			<div class="LightningSubMenubg">
+				<ul class="LightningSubMenu userMenu cloudMenuList"></ul>
+			</div>
+		</div>
+		<ul id="cloud_userDown_link" class="ButtonArrowBottom disable" onmousedown="scrollDivUp('SubMenuDiv')">
+			<li class="ButtonArrowDownListUp"></li>
+		</ul>
+	</td>
+	<td valign="top">
+		<div class="r_content mainbody" id="mainbody">		
+			<div id="cloud_desc" class="field_top">
+				<table border="0" cellspacing="0" cellpadding="0" height="0" width="695">
+					<tr>
+						<td valign="top">
+				<div class="h1_content header_2"><span class="_text" lang="_cloud" datafld="about"></span></div>
+							<div class="_text tdfield_padding_top_14" lang="_cloud" datafld="about_cloud"></div>
+							<div id="cloud_help">
+							<div class="h1_content header_2 field_top"><span class="_text" lang="_top" datafld="help"></span></div>
+							<div class="bumper_link_container"><a class="bumper_help_link about_cloud_access" href="#"><span class="_text" lang="_help" datafld="mcloud"></span></a></div>
+							<div class="bumper_link_container"><a class="bumper_help_link cloud_access_basics" href="#"><span class="_text" lang="_help" datafld="raccess"></span></a></div>
+							<div class="bumper_link_container"><a class="bumper_help_link setting_up_cloud_access" href="#"><span class="_text" lang="_help" datafld="saccess"></span></a></div>
+							</div>
+						</td>
+						<td><div id="cloud_img"></div></td>
+					</tr>
+				</table>
+			</div>
+			<div id="cloud_detail" style="display:none">
+				<div class="h1_content header_2"><span class="_text" lang="_cloud" datafld="cloud_access"></span></div>
+				<table border="0" cellspacing="0" cellpadding="0" height="0" width="400">
+					<tr>
+						<td class="tdfield"><span class="_text" lang="_cloud" datafld="status"></span></td>
+			 			<td class="tdfield_padding">
+			 				<table border="0" cellspacing="0" cellpadding="0" height="0">
+			 					<tr>
+			 						<td><span id="cloud_status_value"></span></td>
+			 						<td class="tdfield_padding_left_10"><div class="TooltipIcon" id="tip_cloud_status"></div></td>
+			 					</tr>
+			 				</table>
+			 			</td>
+					</tr>
+					<tr id="cloud_status_tr">
+						<td class="tdfield_padding" colspan="2"><div id="cloud_statusInfo_value"></div></td>
+					</tr>
+				</table>
+						
+				<div class="hr_0_content" style="margin-top:30px;margin-bottom:30px;"><div class="hr_1"></div></div>
+				<div class="h1_content header_2"><span id="cloud_for"></span></div>
+				<div id="device_user_none_email" style="width:400px"></div>
+				<div id="device_user"></div>
+										
+				<div class="hr_0_content" style="margin-top:30px;margin-bottom:30px;"><div class="hr_1"></div></div>
+				<div class="h1_content header_2">
+					<span id="dev_for"></span>
+					<div style="float:right;margin-right:15px;">
+						<button id="cloud_getCode_button" type="button" onclick="get_code(_Cloud_User_Array.name,'cloud');"><span class="_text" lang="_cloud" datafld="get"></span></button>
+					</div>
+				</div>
+				<div class="tdfield_padding" id="dev_for_info" style="width:400px;"></div>
+				<div id="device_code_list"></div>
+		</div>  <!-- mainbody end -->
+		</div>
+	</td>
+</tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+#!/bin/sh
+ 
+PLATFORM=sequoia
+ 
+ 
+start()
+{
+    #if [ ! -f /tmp/ready ]; then
+    #    logger "Wait for system ready - skipping start of orion services.."
+    #    exit 0
+    #fi
+    logger  "Starting Communication Manager"
+                /usr/local/orion/communicationmanager/communicationmanagerd start                      
+}
+ 
+stop()
+{
+   /usr/local/orion/communicationmanager/communicationmanagerd stop                           
+}
+ 
+case "$1" in
+  start)
+                                start
+        ;;
+  stop)
+                                stop
+        ;;
+  restart)
+                                stop
+                                start
+          ;;
+  status)
+          ;;
+  *)
+          echo "Usage: $0 {start|stop|restart|status}"
+          exit 1
+esac
+exit 0

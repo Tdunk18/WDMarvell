@@ -1,0 +1,1868 @@
+diff -urN kernel-orig-10242009-2.6.30/drivers/lio-core/iscsi_auth_chap.c kernel/drivers/lio-core/iscsi_auth_chap.c
+--- kernel-orig-10242009-2.6.30/drivers/lio-core/iscsi_auth_chap.c	2009-10-24 02:40:32.000000000 -0700
++++ kernel/drivers/lio-core/iscsi_auth_chap.c	2009-10-24 02:40:51.000000000 -0700
+@@ -29,6 +29,7 @@
+ #include <linux/crypto.h>
+ #include <linux/err.h>
+ #include <linux/scatterlist.h>
++#include <linux/random.h>
+ 
+ #include <iscsi_linux_os.h>
+ #include <iscsi_linux_defs.h>
+@@ -217,8 +218,12 @@
+ 	unsigned char client_digest[MD5_SIGNATURE_SIZE], server_digest[MD5_SIGNATURE_SIZE];
+ 	unsigned char chap_n[MAX_CHAP_N_SIZE], chap_r[MAX_RESPONSE_LENGTH];
+ 	iscsi_chap_t *chap = (iscsi_chap_t *) conn->auth_protocol;
++#if LINUX_VERSION_CODE > KERNEL_VERSION(2,6,19)
+ 	struct crypto_hash *tfm;
+ 	struct hash_desc desc;
++#else
++	struct crypto_tfm *tfm;
++#endif
+ 	struct scatterlist sg;
+ 	int auth_ret = -1, ret, challenge_len;
+ 	
+@@ -276,6 +281,7 @@
+ 	PRINT("[server] Got CHAP_R=%s\n", chap_r);
+ 	chap_string_to_hex(client_digest, chap_r, strlen(chap_r));
+ 
++#if LINUX_VERSION_CODE > KERNEL_VERSION(2,6,19)
+ 	tfm = crypto_alloc_hash("md5", 0, CRYPTO_ALG_ASYNC);
+ 	if (IS_ERR(tfm)) {
+ 		printk(KERN_ERR "Unable to allocate struct crypto_hash\n");
+@@ -322,7 +328,27 @@
+ 		goto out;
+ 	}
+ 	crypto_free_hash(tfm);
++#else
++	tfm = crypto_alloc_tfm("md5", 0);
++	if (!(tfm)) {
++		printk(KERN_ERR "crypto_alloc_tfm() failed for md5\n");
++		goto out;
++	}
++
++	crypto_digest_init(tfm);
++
++	sg_init_one(&sg, (void *)&chap->id, 1);
++	crypto_digest_update(tfm, &sg, 1);
++
++	sg_init_one(&sg, (void *)&auth->password, strlen(auth->password));
++	crypto_digest_update(tfm, &sg, 1);
++
++	sg_init_one(&sg, (void *)chap->challenge, strlen(chap->challenge));
++	crypto_digest_update(tfm, &sg, 1);
+ 
++	crypto_digest_final(tfm, server_digest);
++	crypto_free_tfm(tfm);
++#endif
+ 	chap_binaryhex_to_asciihex(response, server_digest, MD5_SIGNATURE_SIZE);
+ 	PRINT("[server] MD5 Server Digest: %s\n", response);
+ 
+@@ -380,6 +406,7 @@
+ 	/*
+ 	 * Generate CHAP_N and CHAP_R for mutual authentication.
+ 	 */
++#if LINUX_VERSION_CODE > KERNEL_VERSION(2,6,19)
+ 	tfm = crypto_alloc_hash("md5", 0, CRYPTO_ALG_ASYNC);
+ 	if (IS_ERR(tfm)) {
+ 		printk(KERN_ERR "Unable to allocate struct crypto_hash\n");
+@@ -428,6 +455,27 @@
+ 		goto out;
+ 	}
+ 	crypto_free_hash(tfm);
++#else
++	tfm = crypto_alloc_tfm("md5", 0);
++	if (!(tfm)) {
++		printk(KERN_ERR "crypto_alloc_tfm() failed for md5\n");
++		goto out;
++	}
++
++	crypto_digest_init(tfm);
++
++	sg_init_one(&sg, (void *)&id, 1);
++	crypto_digest_update(tfm, &sg, 1);
++	
++	sg_init_one(&sg, (void *)auth->password_mutual, strlen(auth->password_mutual));
++	crypto_digest_update(tfm, &sg, 1);
++
++	sg_init_one(&sg, (void *)challenge_binhex, challenge_len);
++	crypto_digest_update(tfm, &sg, 1);
++	
++	crypto_digest_final(tfm, digest);
++	crypto_free_tfm(tfm);
++#endif
+ 	/*
+ 	 * Generate CHAP_N and CHAP_R.
+ 	 */
+diff -urN kernel-orig-10242009-2.6.30/drivers/lio-core/iscsi_linux_defs.h kernel/drivers/lio-core/iscsi_linux_defs.h
+--- kernel-orig-10242009-2.6.30/drivers/lio-core/iscsi_linux_defs.h	2009-10-24 02:40:32.000000000 -0700
++++ kernel/drivers/lio-core/iscsi_linux_defs.h	2009-10-24 02:40:51.000000000 -0700
+@@ -30,7 +30,9 @@
+ /*
+  * Used for utsname()-> access
+  */
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,19)
+ #include <linux/syscalls.h>
++#endif
+ #include <linux/highmem.h>
+ 
+ /*
+@@ -38,6 +40,36 @@
+  */
+ #define CALL_USERMODEHELPER(a, b, c)   call_usermodehelper(a, b, c, 1)
+ 
++#ifdef MEMORY_DEBUG
++#define inline
++#endif
++
++/*
++ * 2.6.24 provides an updated struct scatterlist API.  Use macros for the new
++ * code, and use inline functions for legacy operation. 
++ */
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,24)
++# define SET_SG_TABLE(sg, cnt)		sg_init_table((struct scatterlist *)sg, cnt);
++# define GET_ADDR_SG(sg)		sg_virt(sg)
++# define GET_PAGE_SG(sg)		sg_page(sg)
++# define SET_PAGE_SG(sg, page)		sg_assign_page(sg, page)
++#else
++#include <linux/scatterlist.h>
++#define SET_SG_TABLE(sg, cnt)	
++static inline void *GET_ADDR_SG(struct scatterlist *sg)
++{
++	return(page_address(sg->page) + sg->offset);
++}
++static inline struct page *GET_PAGE_SG(struct scatterlist *sg)
++{
++	return(sg->page);
++}
++static inline void SET_PAGE_SG(struct scatterlist *sg, struct page *page)
++{
++	sg->page = page;
++	return;
++}
++#endif
+ 
+ /*
+  * kernel -- userspace copy commands
+@@ -48,6 +80,93 @@
+ 	copy_to_user((void *)(dest), (void *)(src), (len))
+ 
+ /*
++ * Sockets.
++ */
++#define iscsi_sock_create(sock, f, t, p, uc, td) sock_create(f, t, p, sock)
++#define iscsi_sock_create_lite(sock, f, t, p, uc, td) sock_create_lite(f, t, p, sock)
++#define iscsi_sock_connect(sock, s_in, size, td) sock->ops->connect(sock, s_in, size, 0)
++#define iscsi_sock_bind(sock, s_in, size, td) sock->ops->bind(sock, s_in, size)
++#define iscsi_sock_listen(sock, backlog, td) sock->ops->listen(sock, backlog)
++#define iscsi_sock_accept(sock, newsock, td) sock->ops->accept(sock, newsock, 0)
++#define iscsi_sock_sockopt_off(sock, p, o) \
++	{ \
++	int value = 0; \
++	sock->ops->setsockopt(sock, p, o, (char *)&value, sizeof(value)); \
++	}
++#define iscsi_sock_sockopt_on(sock, p, o) \
++	{ \
++	int value = 1; \
++	sock->ops->setsockopt(sock, p, o, (char *)&value, sizeof(value)); \
++	}
++#define iscsi_sock_sockopt_bindtodev(sock, dev) \
++	{ \
++	sock->ops->setsockopt(sock, SOL_SOCKET, SO_BINDTODEVICE, dev, strlen(dev)); \
++	}
++
++#include <linux/net.h>
++#include <linux/inet.h>
++#include <linux/socket.h>
++#include <linux/module.h>
++#include <net/sock.h>
++
++static inline int lio_kernel_bind(struct socket *sock, struct sockaddr *addr, int addrlen)
++{
++        return sock->ops->bind(sock, addr, addrlen);
++}
++
++static inline int lio_kernel_listen(struct socket *sock, int backlog)
++{
++        return sock->ops->listen(sock, backlog);
++}
++
++static inline int lio_kernel_accept(struct socket *sock, struct socket **newsock, int flags)
++{
++        struct sock *sk = sock->sk;
++        int err;
++
++        err = sock_create_lite(sk->sk_family, sk->sk_type, sk->sk_protocol,
++                               newsock);
++        if (err < 0)
++                goto done;
++
++        err = sock->ops->accept(sock, *newsock, flags);
++        if (err < 0) {
++                sock_release(*newsock);
++                *newsock = NULL;
++                goto done;
++        }
++
++        (*newsock)->ops = sock->ops;
++        __module_get((*newsock)->ops->owner);
++
++done:
++        return err;
++}
++
++static inline int lio_kernel_setsockopt(struct socket *sock, int level, int optname,
++                        char *optval, int optlen)
++{
++        mm_segment_t oldfs = get_fs();
++        int err;
++
++        set_fs(KERNEL_DS);
++        if (level == SOL_SOCKET)
++                err = sock_setsockopt(sock, level, optname, optval, optlen);
++        else
++                err = sock->ops->setsockopt(sock, level, optname, optval,
++                                            optlen);
++        set_fs(oldfs);
++        return err;
++}
++
++
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,24)
++# define DEV_GET_BY_NAME(name)	dev_get_by_name(&init_net, name)
++#else
++# define DEV_GET_BY_NAME(name)	dev_get_by_name(name)
++#endif
++
++/*
+  * Threads.
+  */
+ #define iscsi_daemon(thread, name, sigs) \
+@@ -69,4 +188,179 @@
+ 	timer.data	= (unsigned long) d; \
+ 	timer.function	= func;
+ 
++/*
++ * Other misc stuff.
++ */
++
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,19)
++# define TCM_UTS_SYSNAME      utsname()->sysname
++# define TCM_UTS_MACHINE      utsname()->machine
++#else
++# define TCM_UTS_SYSNAME      system_utsname.sysname  
++# define TCM_UTS_MACHINE      system_utsname.machine
++#endif
++
++#ifndef SCSI_DATA_UNKNOWN
++#define SCSI_DATA_UNKNOWN       (DMA_BIDIRECTIONAL)
++#endif
++#ifndef SCSI_DATA_WRITE
++#define SCSI_DATA_WRITE         (DMA_TO_DEVICE)
++#endif
++#ifndef SCSI_DATA_READ
++#define SCSI_DATA_READ          (DMA_FROM_DEVICE)
++#endif
++#ifndef SCSI_DATA_NONE
++#define SCSI_DATA_NONE          (DMA_NONE)
++#endif
++
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,28)
++#define BLKDEV_GET(bd, fmode, mode)	blkdev_get(bd, fmode)
++#define BLKDEV_PUT(bd, fmode)		blkdev_put(bd, fmode)
++#else
++#define BLKDEV_GET(bd, fmode, mode)	blkdev_get(bd, fmode, mode)
++#define BLKDEV_PUT(bd, fmode)		blkdev_put(bd)
++#endif
++
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,23)
++#define KMEM_CACHE_CREATE(name, size, align, flags, ctor0)	\
++	kmem_cache_create(name, size, align, flags, ctor0)
++#else
++#define KMEM_CACHE_CREATE(name, size, align, flags, ctor0)       \
++	kmem_cache_create(name, size, align, flags, ctor0, NULL)
++#endif
++
++#if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,23)
++#include <linux/list.h>
++
++static inline struct list_head *seq_list_start(struct list_head *head, loff_t pos)
++{
++        struct list_head *lh;
++
++        list_for_each(lh, head)
++                if (pos-- == 0)
++                        return lh;
++
++        return NULL;
++}
++
++static inline struct list_head *seq_list_start_head(struct list_head *head, loff_t pos)
++{
++        if (!pos)
++                return head;
++
++        return seq_list_start(head, pos - 1);
++}
++
++static inline struct list_head *seq_list_next(void *v, struct list_head *head, loff_t *ppos)
++{
++        struct list_head *lh;
++
++        lh = ((struct list_head *)v)->next;
++        ++*ppos;
++        return lh == head ? NULL : lh;
++}
++#endif
++
++static inline int strict_strtoul(const char *cp, unsigned int base, unsigned long *res)
++{
++        char *tail;
++        unsigned long val;
++        size_t len;
++
++        *res = 0;
++        len = strlen(cp);
++        if (len == 0)
++                return -EINVAL;
++
++        val = simple_strtoul(cp, &tail, base);
++#if 0
++        if (tail == cp)
++                return -EINVAL;
++        if ((*tail == '\0') ||
++                ((len == (size_t)(tail - cp) + 1) && (*tail == '\n'))) {
++                *res = val;
++                return 0;
++        }
++
++        return -EINVAL;
++#else
++	*res = val;
++	return 0;
++#endif
++}
++
++static inline int strict_strtoull(const char *cp, unsigned int base, unsigned long long *res)
++{
++        char *tail;
++        unsigned long long val;
++        size_t len;
++
++        *res = 0;
++        len = strlen(cp);
++        if (len == 0)
++                return -EINVAL;
++
++        val = simple_strtoull(cp, &tail, base);
++#if 0
++        if (tail == cp)
++                return -EINVAL;
++        if ((*tail == '\0') ||
++                ((len == (size_t)(tail - cp) + 1) && (*tail == '\n'))) {
++                *res = val;
++                return 0;
++        }
++
++        return -EINVAL;
++#else
++	*res = val;
++	return 0;
++#endif
++}
++
++static inline int strict_strtol(const char *cp, unsigned int base, long *res)
++{
++        int ret;
++        if (*cp == '-') {
++                ret = strict_strtoul(cp + 1, base, (unsigned long *)res);
++                if (!ret)
++                        *res = -(*res);
++        } else {
++                ret = strict_strtoul(cp, base, (unsigned long *)res);
++        }
++
++        return ret;
++}
++
++#ifndef MAINTENANCE_IN
++# define MAINTENANCE_IN		0xa3
++#endif
++#ifndef MAINTENANCE_OUT
++# define MAINTENANCE_OUT	0xa4
++#endif
++
++#define SECURITY_PROTOCOL_OUT 0xb5
++#define SECURITY_PROTOCOL_IN  0xa2
++#define EXTENDED_COPY         0x83
++#define READ_ATTRIBUTE        0x8c
++#define RECEIVE_COPY_RESULTS  0x84
++#define WRITE_ATTRIBUTE       0x8d
++#define VARIABLE_LENGTH_CMD   0x7f
++
++#define MI_MANAGEMENT_PROTOCOL_IN 0x10
++/* values for maintenance in */
++#define MI_REPORT_IDENTIFYING_INFORMATION 0x05
++#define MI_REPORT_TARGET_PGS  0x0a
++#define MI_REPORT_ALIASES     0x0b
++#define MI_REPORT_SUPPORTED_OPERATION_CODES 0x0c
++#define MI_REPORT_SUPPORTED_TASK_MANAGEMENT_FUNCTIONS 0x0d
++#define MI_REPORT_PRIORITY   0x0e
++#define MI_REPORT_TIMESTAMP  0x0f
++#define MI_MANAGEMENT_PROTOCOL_IN 0x10
++
++#define MO_SET_TARGET_PGS	0x0a
++
++#define ACCESS_CONTROL_IN     0x86
++#define ACCESS_CONTROL_OUT    0x87
++#define READ_MEDIA_SERIAL_NUMBER 0xab
++
+ #endif    /*** ISCSI_LINUX_DEFS_H ***/
+diff -urN kernel-orig-10242009-2.6.30/drivers/lio-core/iscsi_target.c kernel/drivers/lio-core/iscsi_target.c
+--- kernel-orig-10242009-2.6.30/drivers/lio-core/iscsi_target.c	2009-10-24 02:40:32.000000000 -0700
++++ kernel/drivers/lio-core/iscsi_target.c	2009-10-24 02:40:51.000000000 -0700
+@@ -38,6 +38,7 @@
+ #include <linux/miscdevice.h>
+ #include <linux/string.h>
+ #include <linux/timer.h>
++#include <linux/delay.h>
+ #include <linux/blkdev.h>
+ #include <linux/proc_fs.h>
+ #include <linux/slab.h>
+@@ -839,6 +840,8 @@
+ 	return(0);
+ }
+ 
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,26)
++
+ static int default_targetname_seq_show (struct seq_file *m, void *p)
+ {
+ 	if (iscsi_global->targetname_set)
+@@ -850,7 +853,7 @@
+ static int version_info_seq_show (struct seq_file *m, void *p)
+ {
+ 	seq_printf(m, "%s iSCSI Target Core Stack "PYX_ISCSI_VERSION" on %s/%s on "UTS_RELEASE"\n",
+-			PYX_ISCSI_VENDOR, utsname()->sysname, utsname()->machine);
++			PYX_ISCSI_VENDOR, TCM_UTS_SYSNAME, TCM_UTS_MACHINE);
+ 
+ 	return(0);
+ }
+@@ -879,6 +882,38 @@
+ 	.release	= single_release,
+ };
+ 
++#else
++
++static int iscsi_target_nodename_info (
++        char *buffer,
++        char **start,
++        off_t offset,
++        int length)
++{
++        char *p = buffer;
++
++        if (iscsi_global->targetname_set)
++                p += sprintf(p, "iSCSI TargetName: %s\n", iscsi_global->targetname);
++
++        return(p-buffer);
++}
++
++static int iscsi_target_version_info (
++        char *buffer,
++        char **start,
++        off_t offset,
++        int length)
++{
++        char *p = buffer;
++
++        p += sprintf(p, "%s iSCSI Target Core Stack "PYX_ISCSI_VERSION" on %s/%s on "UTS_RELEASE"\n",
++                        PYX_ISCSI_VENDOR, TCM_UTS_SYSNAME, TCM_UTS_MACHINE);
++
++        return(p-buffer);
++}
++
++#endif
++
+ /*	iscsi_target_detect():
+  *
+  *	This function is called upon module_init and does the following
+@@ -906,7 +941,7 @@
+ 	struct proc_dir_entry *dir_entry, *name_entry, *ver_entry;
+ 
+ 	printk("%s iSCSI Target Core Stack "PYX_ISCSI_VERSION" on %s/%s on "UTS_RELEASE"\n",
+-		PYX_ISCSI_VENDOR, utsname()->sysname, utsname()->machine);
++		PYX_ISCSI_VENDOR, TCM_UTS_SYSNAME, TCM_UTS_MACHINE);
+ 
+ 	if (!(iscsi_global = (iscsi_global_t *)kmalloc(
+ 			sizeof(iscsi_global_t), GFP_KERNEL))) {
+@@ -943,6 +978,7 @@
+ 		ret = -1;
+ 		goto out;
+         }
++# if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,26)
+ 	if (!(name_entry = proc_create("target_nodename", 0,
+ 			dir_entry, &default_targetname))) {
+ 		TRACE_ERROR("create_proc() failed.\n");
+@@ -958,6 +994,25 @@
+ 		ret = -1;
+ 		goto out;
+ 	}
++#else
++        if (!(name_entry = create_proc_info_entry(
++                        "iscsi_target/target_nodename", 0, 0,
++                        iscsi_target_nodename_info))) {
++                TRACE_ERROR("create_proc_info_entry() failed.\n");
++                remove_proc_entry("iscsi_target", 0);
++                ret = -1;
++                goto out;
++        }
++        if (!(ver_entry = create_proc_info_entry(
++                        "iscsi_target/version_info", 0, 0,
++                        iscsi_target_version_info))) {
++                TRACE_ERROR("create_proc_info_entry() failed.\n");
++                remove_proc_entry("iscsi_target/target_node_name", 0);
++                remove_proc_entry("iscsi_target", 0);
++                ret = -1;
++                goto out;
++        }
++#endif
+ 
+ #ifdef SNMP_SUPPORT
+ 	init_iscsi_target_mib();
+@@ -974,56 +1029,56 @@
+ 		goto out;
+ 	}
+ 
+-	if (!(lio_cmd_cache = kmem_cache_create("lio_cmd_cache",
++	if (!(lio_cmd_cache = KMEM_CACHE_CREATE("lio_cmd_cache",
+ 			sizeof(iscsi_cmd_t), __alignof__(iscsi_cmd_t),
+ 			0, NULL))) {
+ 		printk(KERN_ERR "Unable to kmem_cache_create() for lio_cmd_cache\n");
+ 		goto out;
+ 	}
+ 
+-	if (!(lio_sess_cache = kmem_cache_create("lio_sess_cache",
++	if (!(lio_sess_cache = KMEM_CACHE_CREATE("lio_sess_cache",
+ 			sizeof(iscsi_session_t), __alignof__(iscsi_session_t),
+ 			0, NULL))) {
+ 		printk(KERN_ERR "Unable to kmem_cache_create() for lio_sess_cache\n");
+ 		goto out;
+ 	}
+ 
+-	if (!(lio_conn_cache = kmem_cache_create("lio_conn_cache",
++	if (!(lio_conn_cache = KMEM_CACHE_CREATE("lio_conn_cache",
+ 			sizeof(iscsi_conn_t), __alignof__(iscsi_conn_t),
+ 			0, NULL))) {
+ 		printk(KERN_ERR "Unable to kmem_cache_create() for lio_conn_cache\n");
+ 		goto out;
+ 	}
+ 
+-	if (!(lio_qr_cache = kmem_cache_create("lio_qr_cache",
++	if (!(lio_qr_cache = KMEM_CACHE_CREATE("lio_qr_cache",
+ 			sizeof(iscsi_queue_req_t), __alignof__(iscsi_queue_req_t),
+ 			0, NULL))) {
+ 		printk(KERN_ERR "nable to kmem_cache_create() for lio_qr_cache\n");
+ 		goto out;
+ 	}
+ 
+-	if (!(lio_dr_cache = kmem_cache_create("lio_dr_cache",
++	if (!(lio_dr_cache = KMEM_CACHE_CREATE("lio_dr_cache",
+ 			sizeof(iscsi_datain_req_t), __alignof__(iscsi_datain_req_t),
+ 			0, NULL))) {
+ 		printk(KERN_ERR "Unable to kmem_cache_create() for lio_dr_cache\n");
+ 		goto out;
+ 	}
+ 
+-	if (!(lio_ooo_cache = kmem_cache_create("lio_ooo_cache",
++	if (!(lio_ooo_cache = KMEM_CACHE_CREATE("lio_ooo_cache",
+ 			sizeof(iscsi_ooo_cmdsn_t), __alignof__(iscsi_ooo_cmdsn_t),
+ 			0, NULL))) {
+ 		printk(KERN_ERR "Unable to kmem_cache_create() for lio_ooo_cache\n");
+ 		goto out;
+ 	}
+ 
+-	if (!(lio_r2t_cache = kmem_cache_create("lio_r2t_cache",
++	if (!(lio_r2t_cache = KMEM_CACHE_CREATE("lio_r2t_cache",
+ 			sizeof(iscsi_r2t_t), __alignof__(iscsi_r2t_t),
+ 			0, NULL))) {
+ 		printk(KERN_ERR "Unable to kmem_cache_create() for lio_r2t_cache\n");
+ 		goto out;
+ 	}
+ 
+-	lio_tpg_cache = kmem_cache_create("lio_tpg_cache",
++	lio_tpg_cache = KMEM_CACHE_CREATE("lio_tpg_cache",
+ 			sizeof(iscsi_portal_group_t),
+ 			__alignof__(iscsi_portal_group_t),
+ 			0, NULL);
+diff -urN kernel-orig-10242009-2.6.30/drivers/lio-core/iscsi_target_configfs.c kernel/drivers/lio-core/iscsi_target_configfs.c
+--- kernel-orig-10242009-2.6.30/drivers/lio-core/iscsi_target_configfs.c	2009-10-24 02:40:32.000000000 -0700
++++ kernel/drivers/lio-core/iscsi_target_configfs.c	2009-10-24 02:40:51.000000000 -0700
+@@ -633,7 +633,7 @@
+ 	.show_attribute		= lio_target_port_attr_show,
+ 	.store_attribute	= lio_target_port_attr_store,
+ 	.allow_link		= lio_target_port_link,
+-	.check_link		= lio_target_port_check_link,
++//	.check_link		= lio_target_port_check_link,
+ 	.drop_link		= lio_target_port_unlink,
+ };
+ 
+@@ -2372,8 +2372,8 @@
+                                       char *page)
+ {
+         return(sprintf(page, "Linux-iSCSI.org Target "PYX_ISCSI_VERSION""
+-		" on %s/%s on "UTS_RELEASE"\n", utsname()->sysname,
+-		utsname()->machine));
++		" on %s/%s on "UTS_RELEASE"\n", TCM_UTS_SYSNAME,
++		TCM_UTS_MACHINE));
+ }
+ 
+ static struct configfs_item_operations lio_target_item_ops = {
+diff -urN kernel-orig-10242009-2.6.30/drivers/lio-core/iscsi_target_login.c kernel/drivers/lio-core/iscsi_target_login.c
+--- kernel-orig-10242009-2.6.30/drivers/lio-core/iscsi_target_login.c	2009-10-24 02:40:32.000000000 -0700
++++ kernel/drivers/lio-core/iscsi_target_login.c	2009-10-24 02:40:51.000000000 -0700
+@@ -806,7 +806,7 @@
+ 		sock_in6.sin6_family = AF_INET6;
+ 		sock_in6.sin6_port = htons(np->np_port);
+ //		sock_in6.sin6_scope_id = if_nametoindex("eth0");
+-#if 1
++#if 0
+ 		if ((ret = in6_pton(&np->np_ipv6[0], IPV6_ADDRESS_SPACE,
+ 				(void *)&sock_in6.sin6_addr.in6_u, -1, &end)) <= 0) {
+ 			TRACE_ERROR("in6_pton returned: %d\n", ret);
+@@ -831,14 +831,14 @@
+ 	 */
+ 	opt = 1;
+ 	if (np->np_network_transport == ISCSI_TCP) {
+-		if ((ret = kernel_setsockopt(sock, IPPROTO_TCP, TCP_NODELAY,
++		if ((ret = lio_kernel_setsockopt(sock, IPPROTO_TCP, TCP_NODELAY,
+ 				(char *)&opt, sizeof(opt))) < 0) {
+ 			printk(KERN_ERR "kernel_setsockopt() for TCP_NODELAY"
+ 				" failed: %d\n", ret);
+ 			goto fail;
+ 		}
+ 	}
+-	if ((ret = kernel_setsockopt(sock, SOL_SOCKET, SO_REUSEADDR, 
++	if ((ret = lio_kernel_setsockopt(sock, SOL_SOCKET, SO_REUSEADDR, 
+ 			(char *)&opt, sizeof(opt))) < 0) {
+ 		printk(KERN_ERR "kernel_setsockopt() for SO_REUSEADDR"
+ 			" failed\n");
+@@ -846,20 +846,20 @@
+ 	}
+ 	
+ 	if (np->np_flags & NPF_NET_IPV6) {
+-		if ((ret = kernel_bind(sock, (struct sockaddr *)&sock_in6,
++		if ((ret = lio_kernel_bind(sock, (struct sockaddr *)&sock_in6,
+ 				sizeof(struct sockaddr_in6))) < 0) {
+ 			TRACE_ERROR("kernel_bind() failed: %d\n", ret);
+ 			goto fail;
+ 		}
+ 	} else {
+-		if ((ret = kernel_bind(sock, (struct sockaddr *)&sock_in,
++		if ((ret = lio_kernel_bind(sock, (struct sockaddr *)&sock_in,
+ 				sizeof(struct sockaddr))) < 0) {
+ 			TRACE_ERROR("kernel_bind() failed: %d\n", ret);
+ 			goto fail;
+ 		}
+ 	}
+ 
+-	if (kernel_listen(sock, backlog)) {
++	if (lio_kernel_listen(sock, backlog)) {
+ 		TRACE_ERROR("kernel_listen() failed.\n");
+ 		goto fail;
+ 	}
+@@ -961,7 +961,7 @@
+ 	}
+ 	spin_unlock_bh(&np->np_thread_lock);
+ 	
+-	if (kernel_accept(sock, &new_sock, 0) < 0) {
++	if (lio_kernel_accept(sock, &new_sock, 0) < 0) {
+ 		if (signal_pending(current)) {
+ 			spin_lock_bh(&np->np_thread_lock);
+ 			if (np->np_thread_state == ISCSI_NP_THREAD_RESET) {
+diff -urN kernel-orig-10242009-2.6.30/drivers/lio-core/iscsi_target_mib.c kernel/drivers/lio-core/iscsi_target_mib.c
+--- kernel-orig-10242009-2.6.30/drivers/lio-core/iscsi_target_mib.c	2009-10-24 02:40:32.000000000 -0700
++++ kernel/drivers/lio-core/iscsi_target_mib.c	2009-10-24 02:40:51.000000000 -0700
+@@ -39,6 +39,8 @@
+ #include <scsi/scsi_device.h>
+ #include <scsi/scsi_host.h>
+ 
++#include <../lio-core/iscsi_linux_defs.h>
++
+ #include <iscsi_protocol.h>
+ #include <iscsi_target_core.h>
+ #include <iscsi_target_device.h>
+@@ -164,7 +166,7 @@
+ 		seq_printf(seq, "description: %s\n", ISCSI_INST_DESCR);
+ 		seq_printf(seq, "vendor: %s\n", ISCSI_VENDOR);
+ 		seq_printf(seq, "version: %s on %s/%s\n", PYX_ISCSI_VERSION,
+-			utsname()->sysname, utsname()->machine);
++			TCM_UTS_SYSNAME, TCM_UTS_MACHINE);
+ 	}
+ 	return 0;
+ }
+diff -urN kernel-orig-10242009-2.6.30/drivers/lio-core/iscsi_target_util.c kernel/drivers/lio-core/iscsi_target_util.c
+--- kernel-orig-10242009-2.6.30/drivers/lio-core/iscsi_target_util.c	2009-10-24 02:40:32.000000000 -0700
++++ kernel/drivers/lio-core/iscsi_target_util.c	2009-10-24 02:40:51.000000000 -0700
+@@ -1909,7 +1909,7 @@
+ {
+ 	struct net_device *net_dev;
+ 
+-	if (!(net_dev = dev_get_by_name(&init_net, conn->net_dev))) {
++	if (!(net_dev = DEV_GET_BY_NAME(conn->net_dev))) {
+ 		TRACE_ERROR("Unable to locate active network interface:"
+ 			" %s\n", strlen(conn->net_dev) ? conn->net_dev : "None");
+ 		conn->net_if = NULL;
+diff -urN kernel-orig-10242009-2.6.30/drivers/lio-core/Makefile kernel/drivers/lio-core/Makefile
+--- kernel-orig-10242009-2.6.30/drivers/lio-core/Makefile	2009-10-24 02:40:32.000000000 -0700
++++ kernel/drivers/lio-core/Makefile	2009-10-24 02:40:51.000000000 -0700
+@@ -24,11 +24,12 @@
+ ##################################################################################
+ 
+ CWD=$(shell pwd)
++AUTOCONFIG=$(CWD)/../../../autoconfig --write-to-file --current-directory=$(CWD)
++include $(shell $(AUTOCONFIG))
++include $(CWD)/MCONFIG_TARGET
++include $(CWD)/MCONFIG_ALL
+ 
+-include $(CWD)/drivers/lio-core/MCONFIG_TARGET
+-include $(CWD)/drivers/lio-core/MCONFIG_ALL
+-
+-obj-$(CONFIG_LIO_TARGET)	+=	iscsi_target_mod.o
++obj-m				+=	iscsi_target_mod.o
+ iscsi_target_mod-objs		:=	iscsi_auth_chap.o \
+ 					iscsi_crc.o \
+ 					iscsi_debug_opcodes.o \
+@@ -87,7 +88,7 @@
+ EXTRA_CFLAGS += -DCONFIG_ISCSI_DEBUG=1
+ endif
+ 
+-EXTRA_CFLAGS+=-I$(CWD)/drivers/lio-core/ -I$(CWD)/drivers/scsi/
++EXTRA_CFLAGS+=-I$(CWD)/drivers/lio-core/ -I$(CWD)/drivers/scsi/ -I$(CWD)/../../include -I$(CWD) -I$(CWD)../target/
+ EXTRA_CFLAGS+=-D_TARGET -DLINUX -DLINUX_KERNEL_26 -DLINUX_SCSI_HOST_LOCK -DLINUX_USE_SIGHAND
+ EXTRA_CFLAGS+=-DLINUX_SCATTERLIST_HAS_PAGE -DPYX_ISCSI_VENDOR='"Linux-iSCSI.org"'  -DIQN_PREFIX='"iqn.2003-01.org.linux-iscsi"'
+ 
+@@ -95,11 +96,8 @@
+ 	$(MAKE) -C $(KERNEL_DIR) SUBDIRS=$(CWD) modules CWD=$(CWD) ARCH=$(ARCH) KBUILD_VERBOSE=0
+ 
+ install ins:
+-	rm -f /lib/modules/`uname -r`/kernel/drivers/scsi/iscsi_target_mod.ko
+-	rm -f /lib/modules/`uname -r`/kernel/drivers/iscsi/iscsi_target_mod.ko
+-	mkdir -p /lib/modules/`uname -r`/kernel/drivers/iscsi
+-	cp -f iscsi_target_mod.ko /lib/modules/`uname -r`/kernel/drivers/iscsi
+-	cp -f target_core_mod.ko /lib/modules/`uname -r`/kernel/drivers/iscsi
++	mkdir -p /lib/modules/`uname -r`/extra
++	cp -f iscsi_target_mod.ko /lib/modules/`uname -r`/extra
+ 	depmod -ae
+ 
+ 
+@@ -108,6 +106,4 @@
+ 	rm -f $(foreach prog,$(iscsi_target_mod-objs) $(obj-m),$(CWD)/$(prog)) $(CWD)/iscsi_target_mod.mod.o
+ 	rm -f iscsi_target_mod.ko iscsi_target_mod.mod.c
+ 	rm -f .*.cmd ../common/.*.cmd .make_autoconfig *~
+-	rm -fr .tmp_versions
+-
+-
++	rm -fr .tmp_versions Module.*
+diff -urN kernel-orig-10242009-2.6.30/drivers/target/Makefile kernel/drivers/target/Makefile
+--- kernel-orig-10242009-2.6.30/drivers/target/Makefile	2009-10-24 02:40:32.000000000 -0700
++++ kernel/drivers/target/Makefile	2009-10-24 02:40:51.000000000 -0700
+@@ -24,11 +24,12 @@
+ ##################################################################################
+ 
+ CWD=$(shell pwd)
++AUTOCONFIG=$(CWD)/../../../autoconfig --write-to-file --current-directory=$(CWD)
++include $(shell $(AUTOCONFIG))
++include $(CWD)/MCONFIG_TARGET
++include $(CWD)/MCONFIG_ALL
+ 
+-include $(CWD)/drivers/target/MCONFIG_TARGET
+-include $(CWD)/drivers/target/MCONFIG_ALL
+-
+-obj-$(CONFIG_TARGET_CORE)		+=	target_core_mod.o
++obj-m					+=	target_core_mod.o
+ target_core_mod-objs			:=	target_core_configfs.o \
+ 						target_core_device.o \
+ 						target_core_hba.o \
+@@ -78,7 +79,7 @@
+ endif
+ 
+ 
+-EXTRA_CFLAGS+=-I$(CWD)/drivers/target/ -I$(CWD)/drivers/scsi/
++EXTRA_CFLAGS+=-I$(CWD)/drivers/target/ -I$(CWD)/drivers/scsi/ -I$(CWD)/../../include/ -I$(CWD)
+ EXTRA_CFLAGS+=-D_TARGET -DLINUX -DLINUX_KERNEL_26 -DLINUX_SCSI_HOST_LOCK -DLINUX_USE_SIGHAND
+ EXTRA_CFLAGS+=-DLINUX_SCATTERLIST_HAS_PAGE -DPYX_ISCSI_VENDOR='"Linux-iSCSI.org"'
+ 
+@@ -86,11 +87,8 @@
+ 	$(MAKE) -C $(KERNEL_DIR) SUBDIRS=$(CWD) modules CWD=$(CWD) ARCH=$(ARCH) KBUILD_VERBOSE=0
+ 
+ install ins:
+-	rm -f /lib/modules/`uname -r`/kernel/drivers/scsi/iscsi_target_mod.ko
+-	rm -f /lib/modules/`uname -r`/kernel/drivers/iscsi/iscsi_target_mod.ko
+-	mkdir -p /lib/modules/`uname -r`/kernel/drivers/iscsi
+-	cp -f iscsi_target_mod.ko /lib/modules/`uname -r`/kernel/drivers/iscsi
+-	cp -f target_core_mod.ko /lib/modules/`uname -r`/kernel/drivers/iscsi
++	mkdir -p /lib/modules/`uname -r`/extra
++	cp -f target_core_mod.ko /lib/modules/`uname -r`/extra
+ 	depmod -ae
+ 
+ 
+@@ -99,6 +97,6 @@
+ 	rm -f $(foreach prog,$(target_core_mod-objs) $(obj-m),$(CWD)/$(prog)) $(CWD)/target_core_mod.mod.o
+ 	rm -f target_core_mod.ko target_core_mod.mod.c
+ 	rm -f .*.cmd ../common/.*.cmd .make_autoconfig *~
+-	rm -fr .tmp_versions
++	rm -fr .tmp_versions Module.*
+ 
+ 
+diff -urN kernel-orig-10242009-2.6.30/drivers/target/MCONFIG_TARGET kernel/drivers/target/MCONFIG_TARGET
+--- kernel-orig-10242009-2.6.30/drivers/target/MCONFIG_TARGET	2009-10-24 02:40:32.000000000 -0700
++++ kernel/drivers/target/MCONFIG_TARGET	2009-10-24 02:40:51.000000000 -0700
+@@ -9,7 +9,7 @@
+ # Transport Plugins and Devices.
+ #
+ LINUX_PARALLEL_SCSI ?= 1
+-LINUX_STGT ?= 1
++LINUX_STGT ?= 0
+ LINUX_SCSI_MEDIA_ROM ?= 1
+ LINUX_PARALLEL_ATA ?= 0
+ LINUX_IBLOCK ?= 1
+diff -urN kernel-orig-10242009-2.6.30/drivers/target/target_core_alua.c kernel/drivers/target/target_core_alua.c
+--- kernel-orig-10242009-2.6.30/drivers/target/target_core_alua.c	2009-10-24 02:40:32.000000000 -0700
++++ kernel/drivers/target/target_core_alua.c	2009-10-24 02:40:51.000000000 -0700
+@@ -30,9 +30,13 @@
+ #include <linux/slab.h>
+ #include <linux/spinlock.h>
+ #include <linux/configfs.h>
++#include <linux/delay.h>
++#include <linux/blkdev.h>
+ #include <scsi/scsi.h>
+ #include <scsi/scsi_cmnd.h>
+ 
++#include <../lio-core/iscsi_linux_defs.h>
++
+ #include <target/target_core_base.h>
+ #include <target/target_core_device.h>
+ #include <target/target_core_hba.h>
+diff -urN kernel-orig-10242009-2.6.30/drivers/target/target_core_configfs.c kernel/drivers/target/target_core_configfs.c
+--- kernel-orig-10242009-2.6.30/drivers/target/target_core_configfs.c	2009-10-24 02:40:32.000000000 -0700
++++ kernel/drivers/target/target_core_configfs.c	2009-10-24 02:40:51.000000000 -0700
+@@ -38,6 +38,8 @@
+ #include <linux/configfs.h>
+ #include <linux/proc_fs.h>
+ 
++#include <../lio-core/iscsi_linux_defs.h>
++
+ #include <target/target_core_base.h>
+ #include <target/target_core_device.h>
+ #include <target/target_core_hba.h>
+@@ -73,6 +75,28 @@
+ 	return hba;
+ }
+ 
++static inline struct config_item * to_item(struct list_head * entry)
++{
++        return container_of(entry,struct config_item,ci_entry);
++}
++
++struct config_item *config_group_find_item(struct config_group *group,
++                                           const char *name)
++{
++        struct list_head * entry;
++        struct config_item * ret = NULL;
++
++        list_for_each(entry,&group->cg_children) {
++                struct config_item * item = to_item(entry);
++                if (config_item_name(item) &&
++                    !strcmp(config_item_name(item), name)) {
++                        ret = config_item_get(item);
++                        break;
++                }
++        }
++        return ret;
++}
++
+ /*
+  * Attributes for /sys/kernel/config/target/
+  */
+@@ -82,7 +106,7 @@
+ {
+ 	return sprintf(page, "Target Engine Core ConfigFS Infrastructure %s"
+ 		" on %s/%s on "UTS_RELEASE"\n", TARGET_CORE_CONFIGFS_VERSION,
+-		utsname()->sysname, utsname()->machine);
++		TCM_UTS_SYSNAME, TCM_UTS_MACHINE);
+ }
+ 
+ static struct configfs_item_operations target_core_item_ops = {
+@@ -333,9 +357,9 @@
+ {
+ 	struct config_item *fabric;
+ 
+-	mutex_lock(&target_su->su_mutex);
++//	mutex_lock(&target_su->su_mutex);
+ 	fabric = config_group_find_item(&target_su->su_group, name);
+-	mutex_unlock(&target_su->su_mutex);
++//	mutex_unlock(&target_su->su_mutex);
+ 
+ 	return fabric;
+ }
+@@ -2997,11 +3021,15 @@
+ 
+ 	printk(KERN_INFO "TARGET_CORE[0]: Loading Generic Kernel Storage"
+ 		" Engine: %s on %s/%s on "UTS_RELEASE"\n",
+-		TARGET_CORE_VERSION, utsname()->sysname, utsname()->machine);
++		TARGET_CORE_VERSION, TCM_UTS_SYSNAME, TCM_UTS_MACHINE);
+ 
+ 	subsys = target_core_subsystem[0];
+ 	config_group_init(&subsys->su_group);
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,24)
+ 	mutex_init(&subsys->su_mutex);
++#else
++	init_MUTEX(&subsys->su_sem);	
++#endif
+ 
+ 	INIT_LIST_HEAD(&g_tf_list);
+ 	mutex_init(&g_tf_lock);
+@@ -3088,7 +3116,7 @@
+ 	}
+ 	printk(KERN_INFO "TARGET_CORE[0]: Initialized ConfigFS Fabric"
+ 		" Infrastructure: "TARGET_CORE_CONFIGFS_VERSION" on %s/%s"
+-		" on "UTS_RELEASE"\n", utsname()->sysname, utsname()->machine);
++		" on "UTS_RELEASE"\n", TCM_UTS_SYSNAME, TCM_UTS_MACHINE);
+ 
+ 	plugin_load_all_classes();
+ #ifdef SNMP_SUPPORT
+diff -urN kernel-orig-10242009-2.6.30/drivers/target/target_core_device.c kernel/drivers/target/target_core_device.c
+--- kernel-orig-10242009-2.6.30/drivers/target/target_core_device.c	2009-10-24 02:40:32.000000000 -0700
++++ kernel/drivers/target/target_core_device.c	2009-10-24 02:40:51.000000000 -0700
+@@ -42,6 +42,8 @@
+ #include <net/tcp.h>
+ #include <scsi/scsi.h>
+ 
++#include <../lio-core/iscsi_linux_defs.h>
++
+ #include <target/target_core_base.h>
+ #include <target/target_core_device.h>
+ #include <target/target_core_hba.h>
+@@ -51,6 +53,7 @@
+ #include <target/target_core_transport.h>
+ #include <target/target_core_ua.h>
+ #include <target/target_core_fabric_ops.h>
++#include <target/target_core_configfs.h>
+ #include <target/target_core_plugin.h>
+ #include <target/target_core_seobj.h>
+ 
+@@ -73,7 +76,7 @@
+ 		return NULL;
+ 	}
+ 
+-	if (blkdev_get(bd, FMODE_WRITE|FMODE_READ) < 0) {
++	if (BLKDEV_GET(bd, FMODE_WRITE|FMODE_READ, O_RDWR) < 0) {
+ 		*ret = -1;
+ 		return NULL;
+ 	}
+@@ -84,7 +87,7 @@
+ 		claim_ptr = (void *)bd;
+ 
+ 	if (bd_claim(bd, claim_ptr) < 0) {
+-		blkdev_put(bd, FMODE_WRITE|FMODE_READ);
++		BLKDEV_PUT(bd, FMODE_WRITE|FMODE_READ);
+ 		*ret = 0;
+ 		return bd;
+ 	}
+@@ -107,7 +110,7 @@
+ 	if (!(bd))
+ 		return NULL;
+ 
+-	if (blkdev_get(bd, FMODE_WRITE|FMODE_READ) < 0)
++	if (BLKDEV_GET(bd, FMODE_WRITE|FMODE_READ, O_RDWR) < 0)
+ 		return NULL;
+ 	/*
+ 	 * If no claim pointer was passed from claimee, use struct block_device.
+@@ -116,7 +119,7 @@
+ 		claim_ptr = (void *)bd;
+ 
+ 	if (bd_claim(bd, claim_ptr) < 0) {
+-		blkdev_put(bd, FMODE_WRITE|FMODE_READ);
++		BLKDEV_PUT(bd, FMODE_WRITE|FMODE_READ);
+ 		return NULL;
+ 	}
+ 
+@@ -138,7 +141,7 @@
+ 		bd = bd_p;
+ 
+ 	bd_release(bd);
+-	blkdev_put(bd, FMODE_WRITE|FMODE_READ);
++	BLKDEV_PUT(bd, FMODE_WRITE|FMODE_READ);
+ 
+ 	return 0;
+ }
+diff -urN kernel-orig-10242009-2.6.30/drivers/target/target_core_file.c kernel/drivers/target/target_core_file.c
+--- kernel-orig-10242009-2.6.30/drivers/target/target_core_file.c	2009-10-24 02:40:32.000000000 -0700
++++ kernel/drivers/target/target_core_file.c	2009-10-24 02:40:51.000000000 -0700
+@@ -39,6 +39,8 @@
+ #include <scsi/scsi.h>
+ #include <scsi/scsi_host.h>
+ 
++#include <../lio-core/iscsi_linux_defs.h>
++
+ #include <target/target_core_base.h>
+ #include <target/target_core_device.h>
+ #include <target/target_core_transport.h>
+@@ -139,7 +141,7 @@
+ 	if (dev->dev_flags & DF_READ_ONLY) {
+ 		printk(KERN_INFO "FILEIO: Calling blkdev_put() for Major:Minor"
+ 			" - %d:%d\n", fd_dev->fd_major, fd_dev->fd_minor);
+-		blkdev_put((struct block_device *)fd_dev->fd_bd, FMODE_READ);
++		BLKDEV_PUT((struct block_device *)fd_dev->fd_bd, FMODE_READ);
+ 	} else {
+ 		printk(KERN_INFO "FILEIO: Releasing Major:Minor - %d:%d\n",
+ 			fd_dev->fd_major, fd_dev->fd_minor);
+@@ -591,7 +593,7 @@
+ 
+ 	for (i = 0; i < req->fd_sg_count; i++) {
+ 		iov[i].iov_len = sg[i].length;
+-		iov[i].iov_base = sg_virt(&sg[i]);
++		iov[i].iov_base = GET_ADDR_SG(&sg[i]);
+ 	}
+ 
+ 	old_fs = get_fs();
+@@ -693,7 +695,7 @@
+ 				sg[i].length, sg[i].page);
+ 		length += sg[i].length;
+ 		iov->iov_len = sg[i].length;
+-		iov->iov_base = sg_virt(&sg[i]);
++		iov->iov_base = GET_ADDR_SG(&sg[i]);
+ 		printk(KERN_INFO "iov_iov_len: %d iov_iov_base: %p\n",
+ 			iov->iov_len, iov->iov_base);
+ 	}
+@@ -805,7 +807,7 @@
+ 
+ 	for (i = 0; i < req->fd_sg_count; i++) {
+ 		iov[i].iov_len = sg[i].length;
+-		iov[i].iov_base = sg_virt(&sg[i]);
++		iov[i].iov_base = GET_ADDR_SG(&sg[i]);
+ 	}
+ 
+ 	old_fs = get_fs();
+@@ -906,7 +908,7 @@
+ 
+ 		length += sg[i].length;
+ 		iov->iov_len = sg[i].length;
+-		iov->iov_base = sg_virt(&sg[i]);
++		iov->iov_base = GET_ADDR_SG(&sg[i]);
+ 		printk(KERN_INFO "iov_iov_len: %d iov_iov_base: %p\n",
+ 			iov->iov_len, iov->iov_base);
+ 	}
+diff -urN kernel-orig-10242009-2.6.30/drivers/target/target_core_iblock.c kernel/drivers/target/target_core_iblock.c
+--- kernel-orig-10242009-2.6.30/drivers/target/target_core_iblock.c	2009-10-24 02:40:32.000000000 -0700
++++ kernel/drivers/target/target_core_iblock.c	2009-10-24 02:40:51.000000000 -0700
+@@ -42,6 +42,8 @@
+ #include <scsi/scsi.h>
+ #include <scsi/scsi_host.h>
+ 
++#include <../lio-core/iscsi_linux_defs.h>
++
+ #include <target/target_core_base.h>
+ #include <target/target_core_device.h>
+ #include <target/target_core_transport.h>
+@@ -143,7 +145,7 @@
+ 	if (ro == 1) {
+ 		printk(KERN_INFO "IBLOCK: Calling blkdev_put() for Major:Minor"
+ 			" - %d:%d\n", ib_dev->ibd_major, ib_dev->ibd_minor);
+-		blkdev_put((struct block_device *)ib_dev->ibd_bd, FMODE_READ);
++		BLKDEV_PUT((struct block_device *)ib_dev->ibd_bd, FMODE_READ);
+ 	} else {
+ 		printk(KERN_INFO "IBLOCK: Releasing Major:Minor - %d:%d\n",
+ 			ib_dev->ibd_major, ib_dev->ibd_minor);
+@@ -252,7 +254,11 @@
+ 	/*
+ 	 * These settings need to be made tunable..
+ 	 */
++#if LINUX_VERSION_CODE > KERNEL_VERSION(2,6,21)
+ 	ib_dev->ibd_bio_set = bioset_create(32, 64);
++#else
++	ib_dev->ibd_bio_set = bioset_create(32, 64, 8);
++#endif
+ 	if (!(ib_dev->ibd_bio_set)) {
+ 		printk(KERN_ERR "IBLOCK: Unable to create bioset()\n");
+ 		__iblock_release_phydevice(ib_dev,
+@@ -890,10 +896,10 @@
+ 	 */
+ 	for (i = 0; i < task->task_sg_num; i++) {
+ 		DEBUG_IBLOCK("task: %p bio: %p Calling bio_add_page(): page:"
+-			" %p len: %u offset: %u\n", task, bio, sg_page(&sg[i]),
++			" %p len: %u offset: %u\n", task, bio, GET_PAGE_SG(&sg[i]),
+ 				sg[i].length, sg[i].offset);
+ again:
+-		ret = bio_add_page(bio, sg_page(&sg[i]), sg[i].length,
++		ret = bio_add_page(bio, GET_PAGE_SG(&sg[i]), sg[i].length,
+ 				sg[i].offset);
+ 		if (ret != sg[i].length) {
+ 
+@@ -1030,11 +1036,26 @@
+ 	return IBLOCK_MAX_DEVICE_QUEUE_DEPTH;
+ }
+ 
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,24)
+ void iblock_bio_done(struct bio *bio, int err)
++#else
++extern int iblock_bio_done (struct bio *bio, unsigned int bytes_done, int err)
++#endif
+ {
+ 	se_task_t *task = (se_task_t *)bio->bi_private;
+ 	iblock_req_t *ibr = (iblock_req_t *)task->transport_req;
++	int ret = 0;
+ 
++#if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,24)
++        if (bio->bi_size) {
++                printk(KERN_ERR "bio: %p task_lba: %llu bio_lba: %llu err=%d,"
++                        " returned with bio->bi_size: %u\n", bio, task->task_lba,
++                                (unsigned long long)bio->bi_sector, err, bio->bi_size);
++                transport_complete_task(task, 0);
++                ret = 1;
++                goto out;
++        }
++#endif
+ 	err = test_bit(BIO_UPTODATE, &bio->bi_flags) ? err : -EIO;
+ 	if (err != 0) {
+ 		printk(KERN_ERR "test_bit(BIO_UPTODATE) failed for bio: %p,"
+@@ -1059,5 +1080,9 @@
+ 	ibr->ib_bio = NULL;
+ 	transport_complete_task(task, (!err));
+ out:
+-	return;
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,24)
++        return;
++#else
++        return ret;
++#endif
+ }
+diff -urN kernel-orig-10242009-2.6.30/drivers/target/target_core_mib.c kernel/drivers/target/target_core_mib.c
+--- kernel-orig-10242009-2.6.30/drivers/target/target_core_mib.c	2009-10-24 02:40:32.000000000 -0700
++++ kernel/drivers/target/target_core_mib.c	2009-10-24 02:40:51.000000000 -0700
+@@ -39,6 +39,8 @@
+ #include <scsi/scsi_device.h>
+ #include <scsi/scsi_host.h>
+ 
++#include <../lio-core/iscsi_linux_defs.h>
++
+ #include <target/target_core_base.h>
+ #include <target/target_core_hba.h>
+ #include <target/target_core_transport.h>
+diff -urN kernel-orig-10242009-2.6.30/drivers/target/target_core_pr.c kernel/drivers/target/target_core_pr.c
+--- kernel-orig-10242009-2.6.30/drivers/target/target_core_pr.c	2009-10-24 02:40:32.000000000 -0700
++++ kernel/drivers/target/target_core_pr.c	2009-10-24 02:40:51.000000000 -0700
+@@ -31,9 +31,13 @@
+ #include <linux/slab.h>
+ #include <linux/spinlock.h>
+ #include <linux/list.h>
++#include <linux/delay.h>
++#include <linux/blkdev.h>
+ #include <scsi/scsi.h>
+ #include <scsi/scsi_cmnd.h>
+ 
++#include <../lio-core/iscsi_linux_defs.h>
++
+ #include <target/target_core_base.h>
+ #include <target/target_core_device.h>
+ #include <target/target_core_hba.h>
+diff -urN kernel-orig-10242009-2.6.30/drivers/target/target_core_pscsi.c kernel/drivers/target/target_core_pscsi.c
+--- kernel-orig-10242009-2.6.30/drivers/target/target_core_pscsi.c	2009-10-24 02:40:32.000000000 -0700
++++ kernel/drivers/target/target_core_pscsi.c	2009-10-24 02:40:51.000000000 -0700
+@@ -43,8 +43,10 @@
+ #include <scsi/scsi_device.h>
+ #include <scsi/scsi_cmnd.h>
+ #include <scsi/scsi_host.h>
+-#include <sd.h>
+-#include <sr.h>
++//#include <sd.h>
++//#include <sr.h>
++
++#include <../lio-core/iscsi_linux_defs.h>
+ 
+ #include <target/target_core_base.h>
+ #include <target/target_core_device.h>
+@@ -58,6 +60,8 @@
+ 
+ #define ISPRINT(a)  ((a >= ' ') && (a <= '~'))
+ 
++extern const char * scsi_device_type(unsigned);
++
+ /*	pscsi_get_sh():
+  *
+  *
+@@ -83,8 +87,11 @@
+ int pscsi_check_sd(struct scsi_device *sd)
+ {
+ 	struct gendisk *disk;
+-	struct scsi_disk *sdisk;
+-
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,26)
++        struct scsi_disk *sdisk;
++#else
++        struct iscsi_disc_s *sdisk;
++#endif
+ 	if (!sd) {
+ 		printk(KERN_ERR "struct scsi_device is NULL!\n");
+ 		return -1;
+@@ -122,8 +129,11 @@
+ {
+ 	struct block_device *bdev;
+ 	struct gendisk *disk;
+-	struct scsi_disk *sdisk;
+-
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,26)
++        struct scsi_disk *sdisk;
++#else
++        struct iscsi_disc_s *sdisk;
++#endif
+ 	if (!sd) {
+ 		printk(KERN_ERR "struct scsi_device is NULL!\n");
+ 		return -1;
+@@ -165,8 +175,11 @@
+ int pscsi_release_sd(struct scsi_device *sd)
+ {
+ 	struct gendisk *disk;
+-	struct scsi_disk *sdisk;
+-
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,26)
++        struct scsi_disk *sdisk;
++#else
++        struct iscsi_disc_s *sdisk;
++#endif
+ 	if (!sd) {
+ 		printk(KERN_ERR "struct scsi_device is NULL!\n");
+ 		return -1;
+@@ -765,7 +778,7 @@
+ 		u16 bdl;
+ 		u32 blocksize;
+ 
+-		buf = sg_virt(&sg[0]);
++		buf = GET_ADDR_SG(&sg[0]);
+ 		if (!(buf)) {
+ 			printk(KERN_ERR "Unable to get buf for scatterlist\n");
+ 			goto after_mode_select;
+@@ -815,6 +828,7 @@
+ 	return pt;
+ }
+ 
++#if 0
+ static int pscsi_blk_get_request(se_task_t *task)
+ {
+ 	pscsi_plugin_task_t *pt = (pscsi_plugin_task_t *) task->transport_req;
+@@ -851,6 +865,33 @@
+ 
+ 	return 0;
+ }
++#endif
++
++extern void pscsi_req_done_legacy(void *, char *, int, int);
++
++static int pscsi_do_task_legacy(
++	se_task_t *task,
++	pscsi_plugin_task_t *pt,
++	pscsi_dev_virt_t *pdv)
++{
++	se_cmd_t *cmd = TASK_CMD(task);
++	void *pscsi_buf = (task->task_sg_num != 0) ? task->task_sg :
++			T_TASK(cmd)->t_task_buf;
++	int ret;
++
++	ret = scsi_execute_async(pdv->pdv_sd, pt->pscsi_cdb,
++			COMMAND_SIZE(pt->pscsi_cdb[0]), pt->pscsi_direction,
++			pscsi_buf, task->task_size, task->task_sg_num,
++			(pdv->pdv_sd->type == TYPE_DISK) ? PS_TIMEOUT_DISK :
++			PS_TIMEOUT_OTHER, PS_RETRY, (void *)task,
++			pscsi_req_done_legacy, GFP_KERNEL);
++	if (ret != 0) {
++		printk(KERN_ERR "PSCSI Execute(): returned: %d\n", ret);
++		return PYX_TRANSPORT_LOGICAL_UNIT_COMMUNICATION_FAILURE;
++	}
++
++	return 0;
++}
+ 
+ /*      pscsi_do_task(): (Part of se_subsystem_api_t template)
+  *
+@@ -861,6 +902,9 @@
+ 	pscsi_plugin_task_t *pt = (pscsi_plugin_task_t *) task->transport_req;
+ 	pscsi_dev_virt_t *pdv = (pscsi_dev_virt_t *) task->se_dev->dev_ptr;
+ 	struct gendisk *gd = NULL;
++#if 1
++	return pscsi_do_task_legacy(task, pt, pdv);
++#else
+ 	/*
+ 	 * Grab pointer to struct gendisk for TYPE_DISK and TYPE_ROM
+ 	 * cases (eg: cases where struct scsi_device has a backing
+@@ -887,6 +931,7 @@
+ 	blk_execute_rq_nowait(pdv->pdv_sd->request_queue, gd,
+ 			      pt->pscsi_req, 1, pscsi_req_done);
+ 
++#endif
+ 	return PYX_TRANSPORT_SENT_TO_TRANSPORT;
+ }
+ 
+@@ -1214,8 +1259,13 @@
+ 		}
+ 
+ 		if (sd->type == TYPE_DISK) {
++#if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,26)
+ 			struct scsi_disk *sdisk =
+ 					dev_get_drvdata(&sd->sdev_gendev);
++#else
++        		struct iscsi_disc_s *sdisk =
++					dev_get_drvdata(&sd->sdev_gendev);
++#endif
+ 			struct gendisk *disk = (struct gendisk *) sdisk->disk;
+ 			struct block_device *bdev = bdget(MKDEV(disk->major,
+ 						disk->first_minor));
+@@ -1232,6 +1282,7 @@
+ 	return;
+ }
+ 
++#if 0
+ static void pscsi_bi_endio(struct bio *bio, int error)
+ {
+ 	bio_put(bio);
+@@ -1250,6 +1301,7 @@
+ 
+ 	return bio;
+ }
++#endif
+ 
+ #if 0
+ #define DEBUG_PSCSI(x...) printk(x)
+@@ -1263,6 +1315,7 @@
+  */
+ int pscsi_map_task_SG(se_task_t *task)
+ {
++#if 0
+ 	pscsi_plugin_task_t *pt = (pscsi_plugin_task_t *) task->transport_req;
+ 	pscsi_dev_virt_t *pdv = (pscsi_dev_virt_t *) task->se_dev->dev_ptr;
+ 	struct bio *bio = NULL, *hbio = NULL, *tbio = NULL;
+@@ -1363,6 +1416,9 @@
+ 		bio_endio(bio, 0);
+ 	}
+ 	return ret;
++#else
++	return 0;
++#endif
+ }
+ 
+ /*	pscsi_map_task_non_SG():
+@@ -1371,6 +1427,7 @@
+  */
+ int pscsi_map_task_non_SG(se_task_t *task)
+ {
++#if 0
+ 	se_cmd_t *cmd = TASK_CMD(task);
+ 	pscsi_plugin_task_t *pt = (pscsi_plugin_task_t *) task->transport_req;
+ 	pscsi_dev_virt_t *pdv = (pscsi_dev_virt_t *) task->se_dev->dev_ptr;
+@@ -1386,6 +1443,7 @@
+ 		printk(KERN_ERR "PSCSI: blk_rq_map_kern() failed: %d\n", ret);
+ 		return PYX_TRANSPORT_LOGICAL_UNIT_COMMUNICATION_FAILURE;
+ 	}
++#endif
+ 	return 0;
+ }
+ 
+@@ -1398,9 +1456,10 @@
+ 	pscsi_plugin_task_t *pt = (pscsi_plugin_task_t *) task->transport_req;
+ 
+ 	pt->pscsi_direction = DMA_FROM_DEVICE;
++#if 0
+ 	if (pscsi_blk_get_request(task) < 0)
+ 		return -1;
+-
++#endif
+ 	return pscsi_map_task_non_SG(task);
+ }
+ 
+@@ -1409,8 +1468,11 @@
+ 	pscsi_plugin_task_t *pt = (pscsi_plugin_task_t *) task->transport_req;
+ 
+ 	pt->pscsi_direction = DMA_NONE;
+-
++#if 0
+ 	return pscsi_blk_get_request(task);
++#else
++	return 0;
++#endif
+ }
+ 
+ /*	pscsi_CDB_read_non_SG():
+@@ -1422,10 +1484,10 @@
+ 	pscsi_plugin_task_t *pt = (pscsi_plugin_task_t *) task->transport_req;
+ 
+ 	pt->pscsi_direction = DMA_FROM_DEVICE;
+-
++#if 0
+ 	if (pscsi_blk_get_request(task) < 0)
+ 		return PYX_TRANSPORT_LOGICAL_UNIT_COMMUNICATION_FAILURE;
+-
++#endif
+ 	return pscsi_map_task_non_SG(task);
+ }
+ 
+@@ -1438,10 +1500,10 @@
+ 	pscsi_plugin_task_t *pt = (pscsi_plugin_task_t *) task->transport_req;
+ 
+ 	pt->pscsi_direction = DMA_FROM_DEVICE;
+-
++#if 0
+ 	if (pscsi_blk_get_request(task) < 0)
+ 		return PYX_TRANSPORT_LOGICAL_UNIT_COMMUNICATION_FAILURE;
+-
++#endif
+ 	if (pscsi_map_task_SG(task) < 0)
+ 		return PYX_TRANSPORT_LOGICAL_UNIT_COMMUNICATION_FAILURE;
+ 
+@@ -1457,10 +1519,10 @@
+ 	pscsi_plugin_task_t *pt = (pscsi_plugin_task_t *) task->transport_req;
+ 
+ 	pt->pscsi_direction = DMA_TO_DEVICE;
+-
++#if 0
+ 	if (pscsi_blk_get_request(task) < 0)
+ 		return PYX_TRANSPORT_LOGICAL_UNIT_COMMUNICATION_FAILURE;
+-
++#endif
+ 	return pscsi_map_task_non_SG(task);
+ }
+ 
+@@ -1473,10 +1535,10 @@
+ 	pscsi_plugin_task_t *pt = (pscsi_plugin_task_t *) task->transport_req;
+ 
+ 	pt->pscsi_direction = DMA_TO_DEVICE;
+-
++#if 0
+ 	if (pscsi_blk_get_request(task) < 0)
+ 		return PYX_TRANSPORT_LOGICAL_UNIT_COMMUNICATION_FAILURE;
+-
++#endif
+ 	if (pscsi_map_task_SG(task) < 0)
+ 		return PYX_TRANSPORT_LOGICAL_UNIT_COMMUNICATION_FAILURE;
+ 
+@@ -1632,6 +1694,20 @@
+ 	return;
+ }
+ 
++void pscsi_req_done_legacy(void *data, char *sense, int result, int data_len)
++{
++	se_task_t *task = (se_task_t *)data;
++	pscsi_plugin_task_t *pt = (pscsi_plugin_task_t *)task->transport_req;
++
++	pt->pscsi_result = result;
++	pt->pscsi_resid = data_len;
++
++	if (result != 0)
++		memcpy(pt->pscsi_sense, sense, SCSI_SENSE_BUFFERSIZE);	
++
++	pscsi_process_SAM_status(task, pt);
++}
++
+ void pscsi_req_done(struct request *req, int uptodate)
+ {
+ 	se_task_t *task = (se_task_t *)req->end_io_data;
+diff -urN kernel-orig-10242009-2.6.30/drivers/target/target_core_rd.c kernel/drivers/target/target_core_rd.c
+--- kernel-orig-10242009-2.6.30/drivers/target/target_core_rd.c	2009-10-24 02:40:32.000000000 -0700
++++ kernel/drivers/target/target_core_rd.c	2009-10-24 02:40:51.000000000 -0700
+@@ -40,6 +40,8 @@
+ #include <scsi/scsi.h>
+ #include <scsi/scsi_host.h>
+ 
++#include <../lio-core/iscsi_linux_defs.h>
++
+ #include <target/target_core_base.h>
+ #include <target/target_core_device.h>
+ #include <target/target_core_transport.h>
+@@ -128,7 +130,7 @@
+ 		sg_per_table = sg_table[i].rd_sg_count;
+ 
+ 		for (j = 0; j < sg_per_table; j++) {
+-			pg = sg_page(&sg[j]);
++			pg = GET_PAGE_SG(&sg[j]);
+ 			if ((pg)) {
+ 				__free_page(pg);
+ 				page_count++;
+@@ -193,7 +195,7 @@
+ 			return -1;
+ 		}
+ 
+-		sg_init_table((struct scatterlist *)&sg[0], sg_per_table);
++		SET_SG_TABLE((struct scatterlist *)&sg[0], sg_per_table);
+ 
+ 		sg_table[i].sg_table = sg;
+ 		sg_table[i].rd_sg_count = sg_per_table;
+@@ -209,7 +211,8 @@
+ 					" pages for rd_dev_sg_table_t\n");
+ 				return -1;
+ 			}
+-			sg_assign_page(&sg[j], pg);
++			
++			SET_PAGE_SG(&sg[j], pg);
+ 			sg[j].length = PAGE_SIZE;
+ 		}
+ 
+@@ -579,11 +582,11 @@
+ 			if (length > req->rd_size)
+ 				length = req->rd_size;
+ 
+-			dst = sg_virt(&sg_d[i++]) + dst_offset;
++			dst = GET_ADDR_SG(&sg_d[i++]) + dst_offset;
+ 			if (!dst)
+ 				BUG();
+ 
+-			src = sg_virt(&sg_s[j]) + src_offset;
++			src = GET_ADDR_SG(&sg_s[j]) + src_offset;
+ 			if (!src)
+ 				BUG();
+ 
+@@ -604,7 +607,7 @@
+ 			if (length > req->rd_size)
+ 				length = req->rd_size;
+ 
+-			dst = sg_virt(&sg_d[i]) + dst_offset;
++			dst = GET_ADDR_SG(&sg_d[i]) + dst_offset;
+ 			if (!dst)
+ 				BUG();
+ 
+@@ -614,7 +617,7 @@
+ 			} else
+ 				dst_offset = length;
+ 
+-			src = sg_virt(&sg_s[j++]) + src_offset;
++			src = GET_ADDR_SG(&sg_s[j++]) + src_offset;
+ 			if (!src)
+ 				BUG();
+ 
+@@ -701,11 +704,11 @@
+ 			if (length > req->rd_size)
+ 				length = req->rd_size;
+ 
+-			src = sg_virt(&sg_s[i++]) + src_offset;
++			src = GET_ADDR_SG(&sg_s[i++]) + src_offset;
+ 			if (!src)
+ 				BUG();
+ 
+-			dst = sg_virt(&sg_d[j]) + dst_offset;
++			dst = GET_ADDR_SG(&sg_d[j]) + dst_offset;
+ 			if (!dst)
+ 				BUG();
+ 
+@@ -726,7 +729,7 @@
+ 			if (length > req->rd_size)
+ 				length = req->rd_size;
+ 
+-			src = sg_virt(&sg_s[i]) + src_offset;
++			src = GET_ADDR_SG(&sg_s[i]) + src_offset;
+ 			if (!src)
+ 				BUG();
+ 
+@@ -736,7 +739,7 @@
+ 			} else
+ 				src_offset = length;
+ 
+-			dst = sg_virt(&sg_d[j++]) + dst_offset;
++			dst = GET_ADDR_SG(&sg_d[j++]) + dst_offset;
+ 			if (!dst)
+ 				BUG();
+ 
+@@ -855,7 +858,7 @@
+ 			if (offset_length > req->rd_size)
+ 				offset_length = req->rd_size;
+ 
+-			se_mem->se_page = sg_page(&sg_s[j++]);
++			se_mem->se_page = GET_PAGE_SG(&sg_s[j++]);
+ 			se_mem->se_off = req->rd_offset;
+ 			se_mem->se_len = offset_length;
+ 
+@@ -867,7 +870,7 @@
+ 		offset_length = (req->rd_size < req->rd_offset) ?
+ 			req->rd_size : req->rd_offset;
+ 
+-		se_mem->se_page = sg_page(&sg_s[j]);
++		se_mem->se_page = GET_PAGE_SG(&sg_s[j]);
+ 		se_mem->se_len = offset_length;
+ 
+ 		set_offset = 1;
+@@ -954,7 +957,7 @@
+ 		length = (req->rd_size < sg_s[j].length) ?
+ 			req->rd_size : sg_s[j].length;
+ 
+-		se_mem->se_page = sg_page(&sg_s[j++]);
++		se_mem->se_page = GET_PAGE_SG(&sg_s[j++]);
+ 		se_mem->se_len = length;
+ 
+ #ifdef DEBUG_RAMDISK_DR
+diff -urN kernel-orig-10242009-2.6.30/drivers/target/target_core_tmr.c kernel/drivers/target/target_core_tmr.c
+--- kernel-orig-10242009-2.6.30/drivers/target/target_core_tmr.c	2009-10-24 02:40:32.000000000 -0700
++++ kernel/drivers/target/target_core_tmr.c	2009-10-24 02:40:51.000000000 -0700
+@@ -29,6 +29,7 @@
+ #include <linux/version.h>
+ #include <linux/slab.h>
+ #include <linux/spinlock.h>
++#include <linux/blkdev.h>
+ #include <linux/list.h>
+ #include <scsi/scsi.h>
+ #include <scsi/scsi_cmnd.h>
+diff -urN kernel-orig-10242009-2.6.30/drivers/target/target_core_transport.c kernel/drivers/target/target_core_transport.c
+--- kernel-orig-10242009-2.6.30/drivers/target/target_core_transport.c	2009-10-24 02:40:32.000000000 -0700
++++ kernel/drivers/target/target_core_transport.c	2009-10-24 02:40:51.000000000 -0700
+@@ -46,6 +46,8 @@
+ #include <scsi/scsi.h>
+ #include <scsi/scsi_cmnd.h>
+ 
++#include <../lio-core/iscsi_linux_defs.h>
++
+ #include <target/target_core_base.h>
+ #include <target/target_core_device.h>
+ #include <target/target_core_hba.h>
+@@ -261,19 +263,19 @@
+ 	spin_lock_init(&global->lu_gps_lock);
+ 	spin_lock_init(&global->plugin_class_lock);
+ 
+-	se_cmd_cache = kmem_cache_create("se_cmd_cache",
++	se_cmd_cache = KMEM_CACHE_CREATE("se_cmd_cache",
+ 			sizeof(se_cmd_t), __alignof__(se_cmd_t), 0, NULL);
+ 	if (!(se_cmd_cache)) {
+ 		printk(KERN_ERR "kmem_cache_create for se_cmd_t failed\n");
+ 		goto out;
+ 	}
+-	se_task_cache = kmem_cache_create("se_task_cache",
++	se_task_cache = KMEM_CACHE_CREATE("se_task_cache",
+ 			sizeof(se_task_t), __alignof__(se_task_t), 0, NULL);
+ 	if (!(se_task_cache)) {
+ 		printk(KERN_ERR "kmem_cache_create for se_task_t failed\n");
+ 		goto out;
+ 	}
+-	se_tmr_req_cache = kmem_cache_create("se_tmr_cache",
++	se_tmr_req_cache = KMEM_CACHE_CREATE("se_tmr_cache",
+ 			sizeof(se_tmr_req_t), __alignof__(se_tmr_req_t),
+ 			0, NULL);
+ 	if (!(se_tmr_req_cache)) {
+@@ -281,7 +283,7 @@
+ 				" failed\n");
+ 		goto out;
+ 	}
+-	se_sess_cache = kmem_cache_create("se_sess_cache",
++	se_sess_cache = KMEM_CACHE_CREATE("se_sess_cache",
+ 			sizeof(se_session_t), __alignof__(se_session_t),
+ 			0, NULL);
+ 	if (!(se_sess_cache)) {
+@@ -289,7 +291,7 @@
+ 				" failed\n");
+ 		goto out;
+ 	}
+-	se_hba_cache = kmem_cache_create("se_hba_cache",
++	se_hba_cache = KMEM_CACHE_CREATE("se_hba_cache",
+ 			sizeof(se_hba_t), __alignof__(se_hba_t),
+ 			0, NULL);
+ 	if (!(se_hba_cache)) {
+@@ -297,13 +299,13 @@
+ 				" failed\n");
+ 		goto out;
+ 	}
+-	se_ua_cache = kmem_cache_create("se_ua_cache",
++	se_ua_cache = KMEM_CACHE_CREATE("se_ua_cache",
+ 			sizeof(se_ua_t), __alignof__(se_ua_t), 0, NULL);
+ 	if (!(se_ua_cache)) {
+ 		printk(KERN_ERR "kmem_cache_create() for se_ua_t failed\n");
+ 		goto out;
+ 	}
+-	t10_pr_reg_cache = kmem_cache_create("t10_pr_reg_cache",
++	t10_pr_reg_cache = KMEM_CACHE_CREATE("t10_pr_reg_cache",
+ 			sizeof(t10_pr_registration_t),
+ 			__alignof__(t10_pr_registration_t), 0, NULL);
+ 	if (!(t10_pr_reg_cache)) {
+@@ -311,7 +313,7 @@
+ 				" failed\n");
+ 		goto out;
+ 	}
+-	t10_alua_lu_gp_cache = kmem_cache_create("t10_alua_lu_gp_cache",
++	t10_alua_lu_gp_cache = KMEM_CACHE_CREATE("t10_alua_lu_gp_cache",
+ 			sizeof(t10_alua_lu_gp_t), __alignof__(t10_alua_lu_gp_t),
+ 			0, NULL);
+ 	if (!(t10_alua_lu_gp_cache)) {
+@@ -319,7 +321,7 @@
+ 				" failed\n");
+ 		goto out;
+ 	}
+-	t10_alua_lu_gp_mem_cache = kmem_cache_create("t10_alua_lu_gp_mem_cache",
++	t10_alua_lu_gp_mem_cache = KMEM_CACHE_CREATE("t10_alua_lu_gp_mem_cache",
+ 			sizeof(t10_alua_lu_gp_member_t),
+ 			__alignof__(t10_alua_lu_gp_member_t), 0, NULL);
+ 	if (!(t10_alua_lu_gp_mem_cache)) {
+@@ -327,7 +329,7 @@
+ 				"cache failed\n");
+ 		goto out;
+ 	}
+-	t10_alua_tg_pt_gp_cache = kmem_cache_create("t10_alua_tg_pt_gp_cache",
++	t10_alua_tg_pt_gp_cache = KMEM_CACHE_CREATE("t10_alua_tg_pt_gp_cache",
+ 			sizeof(t10_alua_tg_pt_gp_t),
+ 			__alignof__(t10_alua_tg_pt_gp_t), 0, NULL);
+ 	if (!(t10_alua_tg_pt_gp_cache)) {
+@@ -335,7 +337,7 @@
+ 				"cache failed\n");
+ 		goto out;
+ 	}
+-	t10_alua_tg_pt_gp_mem_cache = kmem_cache_create(
++	t10_alua_tg_pt_gp_mem_cache = KMEM_CACHE_CREATE(
+ 			"t10_alua_tg_pt_gp_mem_cache",
+ 			sizeof(t10_alua_tg_pt_gp_member_t),
+ 			__alignof__(t10_alua_tg_pt_gp_member_t),
+@@ -1394,6 +1396,25 @@
+ 	*bl += sprintf(b + *bl, "        ");
+ }
+ 
++/**
++ * scsi_device_type - Return 17 char string indicating device type.
++ * @type: type number to look up
++ */
++#if LINUX_VERSION_CODE < KERNEL_VERSION(2,6,19)
++const char * scsi_device_type(unsigned type)
++{
++        if (type == 0x1e)
++                return "Well-known LUN   ";
++        if (type == 0x1f)
++                return "No Device        ";
++        if (type >= ARRAY_SIZE(scsi_device_types))
++                return "Unknown          ";
++        return scsi_device_types[type];
++}
++
++EXPORT_SYMBOL(scsi_device_type);
++#endif
++
+ void transport_dump_dev_info(
+ 	se_device_t *dev,
+ 	se_lun_t *lun,
+@@ -6156,7 +6177,7 @@
+ 		return 0;
+ 	}
+ 
+-	sg_init_table(&task->task_sg[0], task->task_sg_num);
++	SET_SG_TABLE(&task->task_sg[0], task->task_sg_num);
+ 
+ 	DEBUG_SC("Successfully allocated task->task_sg_num(%u)\n",
+ 			task->task_sg_num);
+@@ -6250,7 +6271,7 @@
+ 		INIT_LIST_HEAD(&se_mem->se_list);
+ 
+ 		if (*task_offset == 0) {
+-			se_mem->se_page = sg_page(&sg_s[j]);
++			se_mem->se_page = GET_PAGE_SG(&sg_s[j]);
+ 			se_mem->se_off = sg_s[j].offset;
+ 
+ 			if (task_size >= sg_s[j].length)
+@@ -6269,7 +6290,7 @@
+ 			if (saved_task_offset)
+ 				*task_offset = saved_task_offset;
+ 		} else {
+-			se_mem->se_page = sg_page(&sg_s[j]);
++			se_mem->se_page = GET_PAGE_SG(&sg_s[j]);
+ 			se_mem->se_off = (*task_offset + sg_s[j].offset);
+ 
+ 			if ((sg_s[j].length - *task_offset) > task_size) {
+@@ -6421,7 +6442,7 @@
+ 
+ 	while (task_size) {
+ 		if (*task_offset == 0) {
+-			sg_assign_page(&sg[sg_no], se_mem->se_page);
++			SET_PAGE_SG(&sg[sg_no], se_mem->se_page);
+ 			sg[sg_no].offset = se_mem->se_off;
+ 
+ 			if (task_size >= se_mem->se_len) {
+@@ -6452,7 +6473,7 @@
+ 			if (saved_task_offset)
+ 				*task_offset = saved_task_offset;
+ 		} else {
+-			sg_assign_page(&sg[sg_no], se_mem->se_page);
++			SET_PAGE_SG(&sg[sg_no], se_mem->se_page);
+ 			sg[sg_no].offset = (*task_offset + se_mem->se_off);
+ 
+ 			if ((se_mem->se_len - *task_offset) > task_size) {
+@@ -6487,7 +6508,7 @@
+ next:
+ 		DEBUG_MEM("task[%u] - sg[%u](%p)(%u)(%u) - Reducing task_size"
+ 			" to(%u)\n", task->task_no, sg_no,
+-			sg_page(&sg[sg_no]), sg[sg_no].length,
++			GET_PAGE_SG(&sg[sg_no]), sg[sg_no].length,
+ 			sg[sg_no].offset, task_size);
+ 
+ 		sg_no++;
+diff -urN kernel-orig-10242009-2.6.30/drivers/target/target_core_ua.c kernel/drivers/target/target_core_ua.c
+--- kernel-orig-10242009-2.6.30/drivers/target/target_core_ua.c	2009-10-24 02:40:32.000000000 -0700
++++ kernel/drivers/target/target_core_ua.c	2009-10-24 02:40:51.000000000 -0700
+@@ -29,6 +29,7 @@
+ #include <linux/version.h>
+ #include <linux/slab.h>
+ #include <linux/spinlock.h>
++#include <linux/blkdev.h>
+ #include <scsi/scsi.h>
+ #include <scsi/scsi_cmnd.h>
+ 
+diff -urN kernel-orig-10242009-2.6.30/include/target/target_core_configfs.h kernel/include/target/target_core_configfs.h
+--- kernel-orig-10242009-2.6.30/include/target/target_core_configfs.h	2009-10-24 02:40:32.000000000 -0700
++++ kernel/include/target/target_core_configfs.h	2009-10-24 02:40:51.000000000 -0700
+@@ -43,6 +43,9 @@
+ extern int target_core_init_configfs(void);
+ extern void target_core_exit_configfs(void);
+ 
++extern int configfs_depend_item(struct configfs_subsystem *subsys, struct config_item *target);
++extern void configfs_undepend_item(struct configfs_subsystem *subsys, struct config_item *target);
++
+ struct target_fabric_configfs {
+ 	char			tf_name[TARGET_FABRIC_NAME_SIZE];
+ 	atomic_t		tf_access_cnt;
+diff -urN kernel-orig-10242009-2.6.30/include/target/target_core_iblock.h kernel/include/target/target_core_iblock.h
+--- kernel-orig-10242009-2.6.30/include/target/target_core_iblock.h	2009-10-24 02:40:32.000000000 -0700
++++ kernel/include/target/target_core_iblock.h	2009-10-24 02:40:51.000000000 -0700
+@@ -82,7 +82,11 @@
+ extern u32 iblock_get_max_sectors(se_device_t *);
+ extern u32 iblock_get_queue_depth(se_device_t *);
+ extern u32 iblock_get_max_queue_depth(se_device_t *);
+-extern void iblock_bio_done(struct bio *, int);
++# if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,24)
++extern void iblock_bio_done (struct bio *, int);
++# else
++extern int iblock_bio_done (struct bio *, unsigned int, int);
++# endif
+ #endif /* ! IBLOCK_INCLUDE_STRUCTS */
+ 
+ typedef struct iblock_req_s {
+diff -urN kernel-orig-10242009-2.6.30/include/target/target_core_pscsi.h kernel/include/target/target_core_pscsi.h
+--- kernel-orig-10242009-2.6.30/include/target/target_core_pscsi.h	2009-10-24 02:40:32.000000000 -0700
++++ kernel/include/target/target_core_pscsi.h	2009-10-24 02:40:51.000000000 -0700
+@@ -103,6 +103,31 @@
+ #include <linux/kref.h>
+ #include <linux/kobject.h>
+ 
++#if LINUX_VERSION_CODE <= KERNEL_VERSION(2,6,25)
++
++/* Based upon contents of pointer of scsi disk structures */
++typedef struct iscsi_disc_s {
++        struct scsi_driver *driver;
++        struct scsi_device *device;
++# if LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,17)
++        struct class_device cdev;
++# elif LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,6)
++        struct kref     kref;
++# elif LINUX_VERSION_CODE >= KERNEL_VERSION(2,6,0)
++        struct kobject  kobj;
++# endif
++        struct gendisk  *disk;
++        unsigned int    openers;
++        sector_t        capacity;
++        u32             index;
++        u8              media_present;
++        u8              write_prot;
++        unsigned        WCE : 1;
++        unsigned        RCD : 1;
++} iscsi_disc_t;
++
++#endif
++
+ typedef struct pscsi_plugin_task_s {
+ 	unsigned char pscsi_cdb[SCSI_CDB_SIZE];
+ 	unsigned char pscsi_sense[SCSI_SENSE_BUFFERSIZE];

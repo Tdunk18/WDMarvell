@@ -1,0 +1,29 @@
+#!/bin/sh
+case $1 in
+start)
+	umask 0000
+	if [ ! -e /var/log/apache2 ]; then
+		mkdir -m 777 -p /var/log/apache2
+	fi
+	httpd -f /usr/local/apache2/conf/httpd.conf > /dev/null 2>&1
+	;;
+stop)
+	httpd -f /usr/local/apache2/conf/httpd.conf -k graceful-stop > /dev/null 2>&1
+	;;
+restart)
+	umask 0000
+	if [ ! -e /var/log/apache2 ]; then
+		mkdir -m 777 -p /var/log/apache2
+	fi
+	httpd -f /usr/local/apache2/conf/httpd.conf -k graceful > /dev/null 2>&1
+	;;
+force-stop)
+	httpd -f /usr/local/apache2/conf/httpd.conf -k stop > /dev/null 2>&1
+	;;
+*)
+    echo $"Usage: lighty {start|stop|restart}"
+    exit 1
+	;;
+esac
+
+exit 0

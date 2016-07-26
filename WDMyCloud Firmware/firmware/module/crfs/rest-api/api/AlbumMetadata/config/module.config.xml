@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+    <name>AlbumMetadata</name>
+    <version>2.1</version>
+    <description>Module has albummetadata related components.</description >
+    <components>
+        <component>
+            <name>metadb_album</name>
+            <module>AlbumMetadata</module>
+            <controller_class>\AlbumMetadata\Controller\MetaDbAlbum</controller_class>
+            <auth_security>
+                <get>USER_AUTH</get>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>metadb_album_summary</name>
+            <module>AlbumMetadata</module>
+            <controller_class>\AlbumMetadata\Controller\MetaDbAlbumSummary</controller_class>
+            <auth_security>
+                <get>USER_AUTH</get>
+            </auth_security>
+        </component>
+
+    </components>
+</module>
+
+
+
+

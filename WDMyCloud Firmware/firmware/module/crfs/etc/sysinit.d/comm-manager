@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+# (c) 2014-2015 Western Digital Technologies, Inc. All rights reserved.
+#
+#
+#---------------------
+
+[ ! -d /etc/init.d ] && mkdir -p /etc/init.d
+cp -a /usr/local/modules/etc/init.d/commgrd /etc/init.d/
+
+[ ! -d /usr/local/orion ] && mkdir -p /usr/local/orion
+cp -a /usr/local/modules/localorion/communicationmanager /usr/local/orion/
+chmod 644 /usr/local/orion/communicationmanager/comm_mgr_wd.sh
+
+[ ! -d /usr/local/sbin ] && mkdir -p /usr/local/sbin
+ln -s /usr/local/modules/localsbin/getRaEnhancedLogs.sh /usr/local/sbin/.
+ln -s /usr/local/modules/localsbin/wd2go.sh /usr/local/sbin/.
+
+[ ! -d /lib ] && mkdir -p /lib
+ln -s /usr/local/modules/lib/libminiupnpc.so /lib/.
+ln -s /usr/local/modules/lib/libnatpmp.so /lib/.

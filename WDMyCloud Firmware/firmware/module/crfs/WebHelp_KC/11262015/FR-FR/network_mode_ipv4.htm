@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="fr-FR" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Modification du mode réseau IPv4</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Configuration de My Cloud (Paramètres)\nRéseau\nServices réseau\nModification du mode réseau IPv4");
+addButton("show",BTN_TEXT,"Afficher","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left; background: #fafafa\"> ");
+AddMasterBreadcrumbs("index.htm", "", "&gt;", "Home", "welcome.htm");
+document.write("<a href=\"general_change_device_name.htm\">Configuration de My Cloud (Paramètres)<\/a> &gt; <a href=\"network_address.htm\">Réseau<\/a> &gt; <a href=\"network_mode_ipv4.htm\">Services réseau<\/a> &gt; Modification du mode réseau IPv4<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(0);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Modification du mode réseau IPv4</h1>
+<p class="Body">Par défaut, le mode réseau est DHCP, ce qui signifie que 
+ le dispositif My Cloud™ obtient 
+ automatiquement l'adresse IP et d'autres paramètres à partir de votre 
+ réseau. Si vous souhaitez définir une adresse IP manuellement, modifiez 
+ le mode à l'aide de cette procédure.</p>
+<p class="Body">Suivez les étapes suivantes pour modifier le mode réseau 
+ IPv4.</p>
+<ol style="list-style: decimal;">
+	<li style="list-style: none; display: inline;"><ol style="list-style: decimal;">
+		<li class="n1">Cliquez sur <span style="font-weight: bold;">Paramètres</span>.</li>
+		<li class="n1">Dans le volet de gauche, cliquez sur <span style="font-weight: bold;">Réseau</span>.</li>
+		<li class="n1">Dans la zone Services réseau&gt;Mode réseau IPv4, 
+		 sélectionnez une méthode permettant d'attribuer l'adresse IPv4 
+		 unique du dispositif&#160;:
+		<ul style="list-style: square;">
+			<li class="b1"><span style="font-weight: bold;">Statique</span>&#160;: 
+			 une adresse IP statique vous permet d'avoir la même adresse 
+			 IP à chaque connexion. Vous serez invité à saisir l'adresse 
+			 IP, le masque de sous-réseau, l'adresse IP de la passerelle 
+			 et le serveur DNS. (Si vous n'avez pas ces informations, veuillez 
+			 vérifier les paramètres de votre routeur.)</li>
+			<li class="b1"><span style="font-weight: bold;">DHCP</span>&#160;: 
+			 le client DHCP permet au dispositif My Cloud d'obtenir 
+			 automatiquement une adresse IP et les paramètres associés 
+			 à partir du serveur DHCP local.<br />
+			<span style="font-weight: bold;">Remarque&#160;</span>: lorsque 
+			 vous configurez la méthode Statique ou DHCP, enregistrez en 
+			 lieu sûr pour référence votre masque de sous-réseau, l'adresse 
+			 IP de la passerelle et le serveur DNS. Ces informations ne 
+			 seront pas affichées une fois saisies dans le serveur My Cloud.</li>
+		</ul></li>
+	</ol>
+	<ol start="4" style="list-style: decimal;">
+		<li class="n1"><p>Terminez l'Assistant de configuration du réseau 
+		 local pour configurer votre mode réseau.</p></li>
+	</ol></li>
+</ol>
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt;">© 2015 Western Digital Technologies, Inc. 
+	 <span style="color: rgb(75, 90, 104); font-size: 10.6666669845581px; 
+			 line-height: 21.3333339691162px; orphans: auto; widows: 1; 
+			 -webkit-text-stroke-width: 0px; display: inline	 ! important ; 
+			 float: none; background-color: rgb(250, 250, 250);">Tous droits 
+	 réservés.</span> </p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>

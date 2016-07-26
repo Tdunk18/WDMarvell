@@ -1,0 +1,9 @@
+#!/bin/bash 
+
+#This wrapper script invokes ffmpeg's convert 
+#The script is invoked when we require converison to video's formatted files.
+
+#The environment variables below apply to the PRODUCTION environment.
+INSTALL_DIR=/usr/local/wdmcserver/
+export LD_LIBRARY_PATH=$INSTALL_DIR/lib:$INSTALL_DIR/bin
+$INSTALL_DIR/bin/ffmpeg "$@"

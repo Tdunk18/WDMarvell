@@ -1,0 +1,302 @@
+0001 = Nadměrná teplota systému
+0001D = Teplota systému je vyšší než běžná provozní teplota. Přeneste systém na chladnější místo. Nebude-li provedeno žádné opatření, systém se po dosažení kritické limitní teploty vypne.
+
+0002 = Nízká teplota systému
+0002D = Teplota systému je nižší než zadaná minimální teplota. Přeneste systém na teplejší místo.
+
+0003 = Selhání disku detekované technologií SMART
+0003D = Samočinný test disku %1 selhal. Kontaktujte podporu WD.
+
+0004 = Selhání svazku
+0004D = Datový svazek %1 na disku není dostupný. Kontaktujte podporu WD.
+
+0005 = Systém se z důvodu nadměrné teploty brzy vypne.
+0005D = Systém se přehřívá, a pokud neprovedete žádnou akci, brzy se automaticky vypne.
+
+0006 = Systém se z důvodu nadměrné teploty okamžitě vypne.
+0006D = Systém je kriticky přehřátý, a aby nedošlo k jeho poškození, okamžitě se vypne.
+
+2020 = Probíhá vypnutí systému
+2020D = Systém se vypíná.
+
+1020 = Probíhá vypnutí systému
+1020D = Systém se vypíná.
+
+0020 = Probíhá vypnutí systému
+0020D = Systém se vypíná.
+
+0029 = Nefunguje ventilátor
+0029D = Nefunguje ventilátor systému. Kontaktujte podporu WD.
+
+0031 = Zapnuté napájení z nepřerušitelného zdroje napájení (UPS)
+0031D = Systém je napájen z nepřerušitelného zdroje napájení (UPS). %1Zbývá % energie.
+
+0201 = Selhání disku
+0201D = Selhal disk v pozici %1. Vadný disk vyměňte. Kontaktujte podporu WD.
+
+0207 = Blíží se selhání disku
+0207D = Blíží se selhání disku %1. Vadný disk vyměňte. Kontaktujte podporu WD.
+
+0208 = Degradace svazku
+0208D = Degradace svazku %1. Zkontrolujte stav jednotky spuštěním testu disku v části Nastavení >> Nástroje.
+
+0209 = Probíhá migrace svazku
+0209D = Probíhá migrace svazku %1–%2 %
+
+2209 = Probíhá migrace svazku
+2209D = Probíhá migrace svazku %1: %2 %
+
+0210 = Probíhá obnova svazku
+0210D = Doba obnovy svazku %1: %2 minut
+
+2210 = Probíhá obnova svazku
+2210D = Probíhá obnova svazku %1: %2 minut
+
+0212 = Obnova svazku se nezdařila
+0212D = Obnova svazku %1 se nezdařila. Zkontrolujte stav jednotek spuštěním testu disku v části Nastavení >> Nástroje.
+
+0213 = Rozšíření svazku se nezdařilo
+0213D = Rozšíření svazku %1 se nezdařilo. Zkontrolujte stav jednotek spuštěním testu disku v části Nastavení >> Nástroje.
+
+0216 = Roaming RAID aktivován
+0216D = Byl aktivován roaming RAID.
+
+2216 = Roaming RAID aktivován
+2216D = Byl aktivován roaming RAID.
+
+0224 = Vyměňte disk s červenou kontrolkou
+0224D = Vyměňte disk s červenou kontrolkou LED.
+
+2041 = Port Ethernet %1 připojen s rychlostí 10/100
+2041D = Rychlost připojení je omezena na 10/100 Mb/s.
+
+0042 = V nepřerušitelném zdroji napájení (UPS) zbývá 50 % kapacity
+0042D = Systém je napájen z nepřerušitelného zdroje napájení (UPS), ve kterém zbývá 50 % kapacity. Připojte systém co nejdříve k novému zdroji napájení.
+
+0043 = V nepřerušitelném zdroji napájení (UPS) zbývá 15 % kapacity
+0043D = Systém je napájen z nepřerušitelného zdroje napájení (UPS), ve kterém zbývá 15 % kapacity. Připojte systém okamžitě k novému zdroji napájení.  Nebude-li provedeno žádné opatření, systém se vypne, jakmile se nepřerušitelný zdroj napájení (UPS) vybije.
+
+0044 = Nepřerušitelný zdroj napájení (UPS) je vybitý
+0044D = Nepřerušitelný zdroj napájení je zcela vybitý. Systém se okamžitě vypne, aby nedošlo k jeho poškození.
+
+1001 = Využití svazku přesahuje 95 %
+1001D = Využití svazku %1 se blíží plné kapacitě a mohou se začít projevovat problémy s výkonem. Ujistěte se, zda jsou soubory zálohovány, a uvolněte místo přesunutím některých souborů z disku. Pokud je povolen koš, zkuste ho vysypat a uvolnit tak místo na disku.
+
+1002 = Síťové připojení nefunguje
+1002D = Síťové připojení %1 je vypnuto nebo bylo přerušeno. Zkontrolujte připojení k síti.
+
+1010 = Síťové připojení nefunguje
+1010D = Síťové připojení %1 je vypnuto nebo bylo přerušeno. Zkontrolujte připojení k síti.
+
+1003 = Aktualizace firmwaru se nezdařila
+1003D = Aktualizace firmwaru se nezdařila. Zkuste to znovu. Pokud chyba přetrvává, kontaktujte podporu WD.
+
+1004 = Vysoká teplota systému
+1004D = Zařízení je momentálně přehřáté. Zajistěte dostatečnou ventilaci zařízení.
+
+1021 = Obnova konfigurace se nezdařila
+1021D = Obnova konfigurace se nezdařila.
+
+0022 = Závada napájení
+0022D = Závada napájení %1.
+
+1022 = Závada napájení
+1022D = Závada napájení %1. Zkontrolujte zdroj napájení.
+
+1030 = Kapacita úložiště pod prahovou hodnotou
+1030D = Kapacita úložiště je pod prahovou hodnotou.
+
+1035 = Program zlepšování produktu
+1035D = Chcete se zúčastnit programu zlepšování našeho produktu? Další informace %1
+
+0036 = Kontrola systému souborů selhala
+0036D = Kontrola systému souborů odhalila chyby v konfiguraci. Proveďte zálohu dat a tyto chyby opravte opětovným vytvořením konfigurace disku. Pokud problém přetrvává, kontaktujte podporu WD.
+
+1036 = Kontrola systému souborů selhala
+1036D = Kontrola systému souborů odhalila chyby v konfiguraci. Proveďte zálohu dat a tyto chyby opravte opětovným vytvořením konfigurace disku. Pokud problém přetrvává, kontaktujte podporu WD.
+
+1045 = Chyba systému souborů byla opravena
+1045D = Kontrola systému souborů odhalila a opravila chyby v konfiguraci.
+
+1037 = Systém není připraven
+1037D = Systém je zaneprázdněn. Před vložením dalšího disku vyčkejte, až indikátor LED napájení začne nepřerušovaně modře svítit.
+
+1120 = Nepodporované zařízení USB
+1120D = Bylo zjištěno nepodporované zařízení USB (dodavatel: %1, model: %2, sériové číslo: %3). Vyjměte zařízení USB.
+
+1121 = Nepodporovaný systém souborů
+1121D = Byl zjištěn nepodporovaný systém souborů v zařízení USB (dodavatel: %1, model: %2, sériové číslo: %3, systém souborů: %4, jmenovka: %5). Vyjměte zařízení USB.
+
+1122 = Nelze vytvořit sdílenou složku
+1122D = Nelze vytvořit sdílenou složku v zařízení USB (dodavatel: %1, model: %2, sériové číslo: %3, systém souborů: %4, jmenovka: %5, název sdílené složky: %6)
+
+1123 = Nebezpečné vyjmutí zařízení
+1123D = Zařízení USB (dodavatel: %1, model: %2, sériové číslo: %3) bylo vyjmuto bez použití funkce vysunutí, což mohlo ovlivnit data na disku %2.
+
+1124 = Nelze vložit zařízení USB
+1124D = Nelze vložit zařízení USB (dodavatel: %1, model: %2, sériové číslo: %3). Zkontrolujte zařízení USB.
+
+1127 = Nelze zálohovat soubory ze zařízení USB
+1127D = Nelze zálohovat soubory ze zařízení USB. Zkontrolujte konektivitu zařízení.
+
+1130 = Zálohování zařízení USB bylo zařazeno do fronty.
+1130D = Předchozí úloha zálohování stále probíhá. Zálohování zařízení USB se spustí automaticky, jakmile bude předchozí úloha dokončena.
+
+1400 = Chyba vzdáleného zálohování
+1400D = Došlo k chybě při provádění úlohy vzdáleného zálohování s názvem: %1. Zkontrolujte nastavení systému.
+
+1401 = Chyba obnovení ze vzdálené zálohy
+1401D = Došlo k chybě při provádění úlohy obnovy ze vzdálené zálohy s názvem: %1. Zkontrolujte nastavení systému.
+
+2402 = Úspěšné vzdálené zálohování
+2402D = Úloha vzdáleného zálohování s názvem: %1, byla úspěšně dokončena ze zařízení: %2, do sdílené složky: %3
+
+1402 = Úspěšné vzdálené zálohování
+1402D = Úloha vzdáleného zálohování s názvem: %1, byla úspěšně dokončena ze zařízení: %2, do sdílené složky: %3
+
+2403 = Úspěšné obnovení ze vzdálené zálohy
+2403D = Úloha obnovy ze vzdálené zálohy s názvem: %1, byla úspěšně dokončena ze zařízení: %2, do sdílené složky: %3
+
+1403 = Úspěšné obnovení ze vzdálené zálohy
+1403D = Úloha obnovy ze vzdálené zálohy s názvem: %1, byla úspěšně dokončena ze zařízení: %2, do sdílené složky: %3
+
+2001 = Restartování systému
+2001D = Systém byl restartován.
+
+1011 = Nový firmware k dispozici
+1011D = Byla vydána nová verze firmwaru. Proveďte aktualizaci systému.
+
+2002 = Nový firmware k dispozici
+2002D = Byla vydána nová verze firmwaru. Proveďte aktualizaci systému.
+
+2003 = Normální teplota
+2003D = Teplota systému je v rámci zadaného rozsahu normální teploty.
+
+2004 = Úspěšná aktualizace firmwaru
+2004D = Firmware byl úspěšně aktualizován na verzi %1.
+
+2005 = Proběhlo obnovení nastavení z výroby
+2005D = V systému byla obnovena nastavení z výroby.
+
+2006 = Máte nárok na nový upgrade softwaru!
+2006D = Další informace naleznete v řídicím panelu zařízení WD My Cloud.
+
+2024 = Stahování aktualizace firmwaru
+2024D = Probíhá stahování aktualizace firmwaru.
+
+2026 = Instalace aktualizace firmwaru
+2026D = Probíhá instalace aktualizace firmwaru.
+
+1028 = Vyžadován restart
+1028D = Je vyžadován restart.
+
+2028 = Vyžadován restart
+2028D = Je vyžadován restart.
+
+2032 = Systém je v pohotovostním režimu
+2032D = Systém je v pohotovostním režimu.
+
+1033 = Probíhá restartování systému
+1033D = Probíhá restartování systému.
+
+2033 = Probíhá restartování systému
+2033D = Probíhá restartování systému.
+
+1038 = Kvóta úložiště je téměř zaplněna
+1038D = Kvóta úložiště pro [%1] je téměř zaplněna. Ujistěte se, zda jsou soubory zálohovány, a uvolněte místo přesunutím některých souborů z disku.
+
+2038 = Kvóta úložiště je téměř zaplněna
+2038D = Kvóta úložiště pro [%1] je téměř zaplněna. Ujistěte se, zda jsou soubory zálohovány, a uvolněte místo přesunutím některých souborů z disku.
+
+1039 = Kvóta úložiště je zaplněna
+1039D = Kvóta úložiště pro [%1] dosáhla svého limitu. Ujistěte se, zda jsou soubory zálohovány, a uvolněte místo přesunutím některých souborů z disku.
+
+2039 = Kvóta úložiště je zaplněna
+2039D = Kvóta úložiště pro [%1] dosáhla svého limitu. Ujistěte se, zda jsou soubory zálohovány, a uvolněte místo přesunutím některých souborů z disku.
+
+2040 = Nepodporované zařízení UPS
+2040D = Nepodporované zařízení UPS
+
+2121 = Uzamknuté zařízení USB
+2121D = Bylo zjištěno uzamknuté zařízení USB (dodavatel: %1, model: %2, sériové číslo: %3).
+
+2126 = Soubory jsou kopírovány ze zařízení USB
+2126D = Soubory jsou kopírovány ze zařízení <%1> do <%2>
+
+2128 = Kopírování souborů
+2128D = Probíhá kopírování souborů ze zařízení USB.
+
+2129 = Soubory jsou přesouvány ze zařízení USB
+2129D = Soubory jsou přesouvány ze zařízení <%1> do <%2>
+
+2131 = Přesouvání souborů
+2131D = Probíhá přesouvání souborů ze zařízení USB.
+
+1200 = Nepodporovaný disk
+1200D = Nepodporovaný disk v pozici %1. Nahraďte vložený disk schváleným diskem. Seznam schválených disků naleznete na adrese: www.wd.com
+
+2200 = Nepodporovaný disk
+2200D = Nepodporovaný disk v pozici %1. Nahraďte vložený disk schváleným diskem. Seznam schválených disků naleznete na adrese: www.wd.com
+
+2202 = Příliš malý disk
+2202D = Příliš malý disk v umístění %1
+
+2203 = Probíhá inicializace disku
+2203D = Probíhá inicializace disku v umístění %1
+
+2211 = Kontrola integrity úložiště
+2211D = Probíhá kontrola integrity úložiště.
+
+2214 = Vložený disk
+2214D = Do pozice %1 byl vložen nový disk. Chcete-li přidat disk k existujícímu systémovému poli RAID, přejděte do položky Úložiště >> RAID a klikněte na tlačítko Změnit režim RAID.
+
+0215 = Vyjmutý disk
+0215D = Vyjmutý disk z pozice %1
+
+2215 = Vyjmutý disk
+2215D = Vyjmutý disk z pozice %1. Zkontrolujte systém.
+
+2217 = Žádné disky
+2217D = Nejsou nainstalovány žádné disky. Přidejte disky pro zahájení používání systému. Nový disk můžete zakoupit na webu: www.wd.com
+
+2218 = Do diskového pole RAID byl přidán disk k výměně za chodu
+2218D = Do diskového pole RAID byl přidán disk k výměně za chodu.
+
+2219 = Migrace RAID dokončena
+2219D = Migrace RAID dokončena.
+
+2220 = Obnova RAID dokončena
+2220D = Obnova RAID dokončena.
+
+2221 = Vložen disk Red NAS jiného výrobce než WD
+2221D = Byl vložen disk Red NAS jiného výrobce než WD. Upozorňujeme, že zařízení WD My Cloud bylo navrženo pro optimální používání pevných disků Red NAS od společnosti WD.
+
+2222 = Svazek je naformátován
+2222D = Svazek %1 je naformátován.
+
+2223 = Probíhá rozšiřování svazku
+2223D = Probíhá rozšiřování svazku %1: %2%
+
+2300 = Prohledávání médií bylo zastaveno
+2300D = Zařízení zastavilo prohledávání médií. V důsledku toho se při vzdáleném přístupu nezobrazí některé miniatury. Chcete-li v prohledávání pokračovat, restartujte systém WD My Cloud.
+
+1501 = Dostupná aktualizace aplikace
+1501D = %1 má k dispozici aktualizaci. Proveďte aktualizaci.
+
+1502 = Nalezen virus
+1502D = Základy antivirové ochrany: Hledání virů bylo dokončeno a byl nalezen virus. Podrobnosti naleznete ve zprávě hledání virů.
+
+2503 = Hledání virů bylo dokončeno
+2503D = Základy antivirové ochrany: Hledání virů bylo dokončeno. Nebyl nalezen žádný virus.
+
+2504 = Bylo spuštěno naplánované hledání virů
+2504D = Základy antivirové ochrany: Bylo spuštěno naplánované hledání virů.
+
+2505 = Bylo zastaveno naplánované hledání virů
+2505D = Základy antivirové ochrany: Naplánované hledání virů bylo zastaveno, jelikož byl splněn čas zastavení. Hledání nebylo dokončeno. 
+
+1103 = Během obnovy dat z bodu obnovení došlo k chybě
+1103D = %4 – Během obnovy dat z bodu obnovení %1 ve sdílené složce %2 na %3 došlo k chybě.
+
+2103 = Data byla z vašeho bodu obnovení úspěšně obnovena
+2103D = Data byla z vašeho bodu obnovení %1 ve sdílené složce %2 na %3 úspěšně obnovena.

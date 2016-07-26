@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><cki><ck fm=\"Info zum Datenträgerstatus\" to=\"Formatieren des My Cloud-Gerätedatenträgers\" num=\"55\"/><ck fm=\"Konfigurieren von Verbindungsoptionen\" to=\"Erstellen einer Freigabe\" num=\"56\"/><ck fm=\"Löschen einer Freigabe\" to=\"Was ist ein RAID-Speicher?\" num=\"41\"/></cki>";

@@ -1,0 +1,8 @@
+0001 = Riasztási üzenet innen: %1
+0002 = A következő események jönnek létre itt: %2 %1
+0003 = Esemény leírása
+0004 = Súlyosság
+0005 = Esemény kódja
+0006 = Esemény ideje
+0007 = Esemény címe
+0008 = Belső vezérlőprogram verziószáma

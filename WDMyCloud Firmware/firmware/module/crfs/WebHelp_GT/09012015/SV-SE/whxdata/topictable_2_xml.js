@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><ck><di ky=\"106\" rd=\"what_is_raid_storage.htm|Vad är RAID-lagringsutrymme?\" ct=\"Med RAID (Redundant Array of Independent Disks)  kan  du lagra samma data på olika platser på flera  ...\" bc=\"\"/></ck>";

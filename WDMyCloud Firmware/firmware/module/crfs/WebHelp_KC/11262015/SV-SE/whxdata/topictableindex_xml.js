@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><cki><ck fm=\"Om Diskstatus\" to=\"Slå på/av molnåtkomst\" num=\"57\"/><ck fm=\"Ändra enhetsbeskrivningen\" to=\"Begära support\" num=\"58\"/><ck fm=\"Slå på/av Molnåtkomst från instrumentpanel\" to=\"Vad är RAID-lagringsutrymme?\" num=\"37\"/></cki>";

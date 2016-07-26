@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="MS-HAID" content="Creating an Amazon S3 Cloud Backup" />
+<meta http-equiv="Content-Language" content="pt-BR" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Criando um backup de nuvem do Amazon S3</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Fazendo backup da sua nuvem pessoal\nBackups de nuvem\nCriando um backup de nuvem do Amazon S3");
+addButton("show",BTN_TEXT,"Mostrar","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left; background: #fafafa\"> ");
+AddMasterBreadcrumbs("index.htm", "", "&gt;", "Home", "welcome.htm");
+document.write("<a href=\"creating_a_usb_backup.htm\">Fazendo backup da sua nuvem pessoal<\/a> &gt; <a href=\"updates_about.htm\">Backups de nuvem<\/a> &gt; Criando um backup de nuvem do Amazon S3<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(0);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Criando um backup de nuvem do Amazon S3</h1>
+<p class="Body"><span style="font-weight: bold;">Observação</span>: Antes 
+ de criar seu backup de nuvem, registre-se no serviço Amazon S3 em <a href="http://aws.amazon.com/" 
+	 target="_blank">http://aws.amazon.com/</a>.</p>
+<p class="Body">Quando a conta Amazon S3 estiver configurada, use as seguintes 
+ etapas para criar um backup de nuvem.</p>
+<ol style="list-style: square;">
+	<li style="list-style: none; display: inline;"><ol style="list-style: decimal;">
+		<li class="n1">Clique em <b>Backups</b>.</li>
+		<li class="n1">Clique em <b>Backups</b> de <span style="font-weight: bold;">Nuvem</span>.</li>
+		<li class="n1">Clique no botão na parte superior da tela <b>Amazon 
+		 S3</b>.</li>
+		<li class="n1">Clique em <b>Criar</b>.</li>
+		<li class="n1">Insira um nome de trabalho para seu backup de nuvem.</li>
+		<li class="n1">Clique em <b>Seguinte</b>.</li>
+		<li class="n1">Insira as seguintes informações fornecidas pelo 
+		 Amazon S3:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold;">Região</b>: Selecione 
+		 a Região usada para sua nuvem a partir do menu suspenso.</li>
+		<li class="b1"><b style="font-weight: bold;">Chave de acesso</b>: 
+		 Insira a chave de acesso fornecida para você pelo Amazon S3.</li>
+		<li class="b1"><b style="font-weight: bold;">Chave privada</b>: 
+		 Insira a chave privada fornecida para você pelo Amazon S3.</li>
+		<li class="b1"><b style="font-weight: bold;">Atalho remoto</b>: 
+		 Inserira o caminho remoto para sua nuvem. Este normalmente é seu 
+		 nome de Bucket.</li>
+	</ul>
+	<ol start="8" style="list-style: decimal;">
+		<li class="n1">Clique em <b>Seguinte</b>.</li>
+		<li class="n1">No campo Tipo selecione uma das seguintes opções:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b>Upload:</b> Faz o backup dos seus dados do My Cloud para seu conteúdo do 
+		 Amazon S3.</li>
+		<li class="b1"><b>Download:</b> Faz o backup do seu conteúdo do 
+		 Amazon S3 ao seu servidor My Cloud.</li>
+	</ul>
+	<ol start="10" style="list-style: decimal;">
+		<li class="n1">No campo Tipo de Backup, selecione o tipo de backup 
+		 que você deseja executar a partir do menu suspenso. As opções 
+		 incluem:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold;">Substituir arquivos 
+		 existentes</b>: Substitua arquivos na pasta de destino que têm 
+		 nome idêntico ao seu arquivo de origem.</li>
+		<li class="b1"><b style="font-weight: bold;">Backup</b> <b>completo</b>: 
+		 Crie uma pasta separada contendo todos os dados de backup cada 
+		 vez que o backup for realizado.</li>
+		<li class="b1"><b>Backup adicional:</b> Substitua arquivos por 
+		 arquivos de origem que são mais recentes do que os arquivos de 
+		 destino.</li>
+	</ul>
+	<ol start="11" style="list-style: decimal;">
+		<li class="n1">Clique em <span style="font-weight: bold;">Seguinte</span>.</li>
+		<li class="n1">No campo Atalho Local, digite um atalho para seu 
+		 backup no dispositivo My Cloud.</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">Clique em <span style="font-weight: bold;">Procurar</span> 
+		 para procurar um local para o backup de seu dispositivo.<br />
+		(Exemplo Volume_1/backup)</li>
+	</ul>
+	<ol start="13" style="list-style: decimal;">
+		<li class="n1">Clique em <img src="graphics/toggle_button.png" alt="" width="20" height="15" border="0" /> para ativar o recurso 
+		 de atualização automática. Isso atualiza automaticamente o backup 
+		 com base em um agendamento criado por você.</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">Se você ativar o recurso de atualização automática:</li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: circle;">
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">Selecione 
+			 o agendamento de atualização automática: Diariamente, semanalmente, 
+			 ou mensalmente</p></li>
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">Selecione 
+			 a hora da atualização automática a partir do menu suspenso 
+			 (opção Diariamente).</p></li>
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">Selecione 
+			 a data e hora da atualização automática a partir dos menus 
+			 suspensos (opção Semanalmente ou Mensalmente).</p></li>
+		</ul></li>
+	</ul>
+	<ol start="14" style="list-style: decimal;">
+		<li class="n1">Se você não selecionar a atualização automática, 
+		 no campo Fazer backup agora, indique se deseja começar o backup 
+		 agora.</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">Selecione Sim para iniciar o backup agora.</li>
+	</ul>
+	<ol start="15" style="list-style: decimal;">
+		<li class="n1">Clique em <b>Seguinte</b>.</li>
+		<li class="n1">Revise suas configurações, depois clique em <b>Finalizar.</b> 
+		 Seu backup de nuvem do Amazon S3 foi criado. A nova tarefa exibe 
+		 na seção da Fila do Amazon S3 da página de backup da Amazon S3.</li>
+	</ol>
+	<p class="Body" style="margin-left: 60px;"><span style="font-weight: bold;">Observação</span>: 
+	 Acesse seu backup de nuvem do Amazon S3 bucket para ver seus dispositivos 
+	 de backup.</p>
+	<p class="ListContinue2CxSpLast">&#160;</p></li>
+</ol>
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt;">© 2015 Western Digital Technologies, Inc. 
+	 <span style="color: rgb(75, 90, 104); font-size: 10.6666669845581px; 
+			 line-height: 21.3333339691162px; orphans: auto; widows: 1; 
+			 -webkit-text-stroke-width: 0px; display: inline	 ! important ; 
+			 float: none; background-color: rgb(250, 250, 250);">Todos 
+	 os direitos reservados.</span> </p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>

@@ -1,0 +1,258 @@
+﻿<div id="chgAdminPWDiag" class="WDLabelDiag" style="display:none">
+	<div class="WDLabelHeaderDialogue2 WDLabelHeaderDialogueUsersIcon"><span class="_text" lang="_cloud" datafld="started"></span></div>
+	<div align="center"><div class="hr"><hr/></div></div>
+	
+	<!-- chgPWDiag -->
+	<div id="chgPWDiag">
+		<div class="WDLabelBodyDialogue" style="overflow:hidden;">
+			<div style="height:420px">
+				<div class="_text" lang="_admin" datafld="desc1"></div>
+				<br>
+				<table border="0" cellspacing="0" cellpadding="0" height="0" class="field_top">
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_login" datafld="user"></span></td>
+					<td class="tdfield_padding">admin</td>
+					<td class="tdfield_padding tdfield_padding_left_10"></td>
+				</tr>
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_user" datafld="pw"></span></td>
+					<td class="tdfield_padding"><input type="password" id="gettingstarted_newPW_password" name="gettingstarted_newPW_password"></td>
+					<td class="tdfield_padding tdfield_padding_left_10"><div class="TooltipIconError tip_pw_error"></div></td>
+				</tr>
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_user" datafld="confirm_password"></span></td>
+					<td class="tdfield_padding"><input type="password" id="gettingstarted_comfirmPW_password" name="gettingstarted_comfirmPW_password"></td>
+					<td class="tdfield_padding tdfield_padding_left_10"><div class="TooltipIconError tip_pw2_error"></div></td>
+				</tr>
+			</table>
+			<br><br>
+			<div class="_text field_top" lang="_admin" datafld="desc2"></div>
+			</div>
+		</div><!-- WDLabelBodyDialogue end -->
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonMarginLeft_40px close" id="gettingstarted_chgPWCancel_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<!--<button type="button" class="ButtonMarginLeft_40px" id="gettingstarted_chgPWSkip_button"><span class="_text" lang="_button" datafld="Skip"></span></button>-->
+		<button type="button" class="ButtonRightPos2" id="gettingstarted_chgPWSave_button"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div>
+</div> <!-- chgPWDiag end -->
+
+<!-- wDiag -->
+<div id="wDiag" class="WDLabelDiag" style="display:none;width:750px;" >
+	<div id="wDiag_title" class="WDLabelHeaderDialogue WDLabelHeaderDialogueCloud"></div>
+	<div align="center"><div class="hr" style="width:690px"><hr></div></div>
+
+	<!-- step 2 -->
+	<div id="w_step1" style="display:none" >
+		<div class="WDLabelBodyDialogue" style="width:650px">
+			<div class="_text" lang="getting_start" datafld="desc1"></div>
+		
+			<div style="margin-top:20px;clean:both;">
+				<span id="wd2go_header" class="WDLabelHeader2"></span>
+				
+				<div class="cloud_user_scroll">
+					<div id="create_device_user_list" style="height:280px;"></div>
+				</div>
+				
+				<div style="margin-top:20px;">
+					<!--<div class="_text" lang="getting_start" datafld="desc2"></div>
+					<br>-->
+					<div class="_text" lang="getting_start" datafld="desc3"></div>
+				</div>
+			</div>
+		</div>		
+		<div class="hrBottom2"><hr/></div>
+		<button class="ButtonMarginLeft_40px" id="gettingstarted_back1_button" style="display:none"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button class="ButtonMarginLeft_40px close" id="gettingstarted_cancel1_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>		
+		<button class="ButtonRightPos2" id="gettingstarted_next1_button" ><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div>
+</div>
+
+<!-- w3Diag -->
+<div id="w3Diag" class="WDLabelDiag" style="display:none;" >
+	<div id="wDiag_title2" class="WDLabelHeaderDialogue WDLabelHeaderDialogueCloud"></div>
+	<div align="center"><div class="hr"<hr></div></div>
+
+	<!-- step 2 -->
+	<div id="w_step2" style="display:none" >
+		<div class="WDLabelBodyDialogue" style="width:650px">
+			<div class="_text WDLabelHeader2" lang="getting_start" datafld="desc5"></div>
+			<table border="0" cellspacing="0" cellpadding="0" height="0">
+				<tr>
+					<td class="tdfield_250">
+						<span class="_text" lang="getting_start" datafld="auto_fw"></span>
+					</td>
+					<td class="tdfield_padding_left_10 tdfield_padding">
+						<input id="gettingstarted_autofw_switch" name="gettingstarted_autofw_switch" class="onoffswitch" type="checkbox" value="true" >
+					</td>
+					<td class="tdfield_padding_left_10 tdfield_padding">
+						<span class="TooltipIcon" id="tip_autofw"></span>
+					</td>
+				</tr>
+				<tr id="eula_productImprovement">
+					<td class="tdfield_250">
+						<span class="_text" lang="_support" datafld="title4"></span>
+					</td>
+					<td class="tdfield_padding_left_10 tdfield_padding">
+						<input id="gettingstarted_imp_switch" name="gettingstarted_imp_switch" class="onoffswitch" type="checkbox" value="true" >
+					</td>
+					<td class="tdfield_padding_left_10 tdfield_padding">
+						<span class="TooltipIcon" id="tip_imp_info"></span>
+					</td>
+				</tr>
+			</table>
+			<div class="hr_0_content" style="margin-top:30px;margin-bottom:30px;"><div class="hr_1"></div></div>
+			<div class="_text WDLabelHeader2" lang="getting_start" datafld="desc6"></div>
+			<div class="_text tdfield_padding_top_14" lang="getting_start" datafld="desc7"></div>
+			<div class="tdfield_padding_top_14"></div>
+			<input id="gettingstarted_rFirstName_text" class="personal_v input_x170" name="gettingstarted_rFirstName_text" type="text">&nbsp;&nbsp;&nbsp;<input id="gettingstarted_rLastName_text" class="personal_v input_x170" name="gettingstarted_rLastName_text" type="text">&nbsp;&nbsp;&nbsp;<input id="gettingstarted_rMail_text" class="personal_v input_x170" name="gettingstarted_rMail_text" type="text">&nbsp;&nbsp;&nbsp;<button id="gettingstarted_Register_button" onclick="_REST_Registered_Device();" style="display:none"><span class="_text" lang="_elephant_drive" datafld="register"></span></button>
+			<div id="gettingstarted_register_status" style="color:red;" class="tdfield_padding"></div><p></p>
+		</div>
+		<div class="hrBottom2"><hr/></div>
+		<button class="ButtonMarginLeft_40px" id="gettingstarted_back2_button"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button class="ButtonMarginLeft_40px close" id="gettingstarted_cancel2_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>		
+		<button class="ButtonRightPos2" id="gettingstarted_next2_button" ><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div>
+		
+	<!-- step 3 -->
+	<div id="w_step3" style="display:none;" >
+	<div class="WDLabelBodyDialogue">
+	
+			<!--<div class="_text WDLabelHeader2" lang="getting_start" datafld="desc8"></div>
+			<div class="_text tdfield_padding_top_14" lang="getting_start" datafld="desc9"></div>-->
+			
+			
+			<b><div class="_text" lang="getting_start" datafld="more"></div></b>
+			<div id="w3Diag_desc" class="_text" lang="getting_start" datafld="more_2"></div>
+			<div class="hr_1" style="margin-top:120px;margin-bottom: 25px;"></div>
+			<div class="_text" lang="getting_start" datafld="more_3"></div>
+			<table id="gettingstarted_app_link" style="margin-top:14px;" border="0"  cellspacing="0" cellpadding="0" height="0">		
+				<tr>
+					<td>
+						<a id="gettingstarted_update_link" href="#" target="_blank"><span class="_text" lang="getting_start" datafld="update"></span></a>
+					</td>
+					<td class="tdfield_padding_left_30">
+						<a id="gettingstarted_backup_link" href="#" target="_blank"><span class="_text" lang="getting_start" datafld="backup"></span></a>
+					</td>
+					<td class="tdfield_padding_left_30">
+						<a id="gettingstarted_mobile_link" href="#" target="_blank"><span class="_text" lang="getting_start" datafld="mobile"></span></a>
+					</td>
+				</tr>
+			</table>
+			
+			<!--
+			<table style="margin-top:10px;" border="0"  cellspacing="0" cellpadding="0" height="0">
+				<tr>
+					<td colspan="2">
+						<table border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="40"><input type="checkbox" value="1" id="gettingstarted_autoUpdateFW_chkbox" name="gettingstarted_autoUpdateFW_chkbox" ></td>
+								<td style="padding-left:5px"><span class="_text" lang="getting_start" datafld="auto"></span>  <span class="TooltipIcon" id="tip_autofw"></span></td>
+								<td style="padding-left:5px"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<table border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="40" id="register_td"><input type="checkbox" value="2" id="gettingstarted_registerDev_chkbox" name="gettingstarted_registerDev_chkbox" checked ></td>
+								<td style="padding-left:5px"><span class="_text" lang="getting_start" datafld="register"></span></td>
+								<td><div class="TooltipIcon" id="tip_mail_info" style="display:none"></div></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<table border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="40"><input type="checkbox" value="2" id="gettingstarted_imp_chkbox" name="gettingstarted_imp_chkbox"></td>
+								<td style="padding-left:5px;width:520px;"><span class="_text" lang="getting_start" datafld="imp"></span>  <span class="TooltipIcon" id="tip_imp_info"></span></td>
+								<td style="padding-left:5px"></td>
+							</tr>
+						</table>
+					</td>
+				</tr>				
+				<tr style="display:none">
+					<td colspan="2">
+						<table border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="40" id="register_country"><span class="_text" lang="getting_start" datafld="country">Country</span></td>
+								<td style="padding-left:5px">
+									<div class="select_menu">
+										<ul>
+											<li class="option_list">
+												<div id="id_language_main" class="wd_select option_selected">
+													<div class="sLeft wd_select_l"></div>
+													<div class="sBody text wd_select_m" id="gettingstarted_country_select" rel="0">English</div>
+													<div class="sRight wd_select_r"></div>
+												</div>
+												<ul class="ul_obj" style="width:120px;height:250px;">
+													<div class='language_scroll'>
+														<li rel="0" style="width:110px"><a href="#">English</a></li>
+														<li rel="1" style="width:110px"><a href="#">Français</a></li>
+														<li rel="2" style="width:110px"><a href="#">Italiano</a></li>
+														<li rel="3" style="width:110px"><a href="#">Deutsch</a></li>
+														<li rel="4" style="width:110px"><a href="#">Español</a></li>
+														<li rel="5" style="width:110px"><a href="#">简体中文</a></li>
+														<li rel="6" style="width:110px"><a href="#">繁體中文</a></li>
+														<li rel="7" style="width:110px"><a href="#">한국어</a></li>
+														<li rel="8" style="width:110px"><a href="#">日本語</a></li>
+														<li rel="9" style="width:110px"><a href="#">Русский</a></li>
+														<li rel="10" style="width:110px"><a href="#">Português</a></li>
+														<li rel="11" style="width:110px"><a href="#">Čeština</a></li>
+														<li rel="12" style="width:110px"><a href="#">Nederlands</a></li>
+														<li rel="13" style="width:110px"><a href="#">Magyar</a></li>
+														<li rel="14" style="width:110px"><a href="#">Norsk</a></li>
+														<li rel="15" style="width:110px"><a href="#">Polski</a></li>
+														<li rel="16" style="width:110px"><a href="#">Svenska</a></li>
+														<li rel="17" style="width:110px"><a href="#">Türkçe</a></li>
+													</div>
+												</ul>
+											</li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>-->
+		</div>		
+		<div class="hrBottom2"><hr/></div>				
+			<button class="ButtonMarginLeft_40px" id="gettingstarted_back3_button"><span class="_text" lang="_button" datafld="back"></span></button>		
+			<button class="ButtonMarginLeft_20px close" id="gettingstarted_cancel3_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>		
+			<button class="ButtonRightPos2" id="gettingstarted_save_button"><span class="_text" lang="_button" datafld="finish"></span></button>
+	</div>
+</div>
+
+<script>
+function country_mapping(language)
+{
+	var lang_array = new Array(
+	"English",
+	"Francais",
+	"Italiano",
+	"Deutsch",
+	"Espanol",
+	"简体中文",      
+	"繁體中文",		
+	"한국어",        
+	"日本語",
+	"Русский",  
+	"Português",
+	"Čeština",
+	"Nederlands",
+	"Magyar",
+	"Norsk",
+	"Polski",
+	"Svenska",
+	"Türkçe");
+	
+	_Regist_Info.lang = language;
+	$('#gettingstarted_country_select').html(lang_array[language]);
+	$('#gettingstarted_country_select').attr("rel",language)
+	init_select();
+}
+</script>

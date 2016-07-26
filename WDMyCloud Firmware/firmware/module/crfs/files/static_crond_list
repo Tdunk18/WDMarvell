@@ -1,0 +1,12 @@
+0 3 * * * /usr/sbin/daily_log_upload.sh &
+0 3 * * * /usr/sbin/traceroute_wd.sh &
+*/30 * * * * /usr/sbin/quota_monitor &
+*/10 * * * * /usr/sbin/rlog -s /usr/local/modules/files/syslog_rotate.conf
+01 */8 * * * [ -f /etc/init.d/atop ] && /etc/init.d/atop rotate
+30 0 * * * /usr/local/sbin/ssl_cert_job.sh start > /var/log/ssl_cert_cron.out 2>&1
+58 2 * * * /usr/local/sbin/PullWdlogConfig.sh
+30 0 * * 1 logwdmsg -e &
+0 3 * * * logwdmsg -o &
+01 3 * * * /usr/local/sbin/LogDataSize.sh
+00 3 * * * /usr/sbin/wd_rotate.sh
+30 0 * * 1 /usr/sbin/wdappmgr_log_stats.py > /dev/null 2>&1 &

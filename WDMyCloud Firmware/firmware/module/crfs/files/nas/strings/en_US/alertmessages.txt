@@ -1,0 +1,302 @@
+0001 = System Over Temperature
+0001D = The system temperature is above the normal operating temperature. Move the system to a cooler location. If no action taken, the system will shut down when temperature reaches to the critical limit.
+
+0002 = System Under Temperature
+0002D = The system temperature is below the specific minimum temperature. Move the system to a warmer location.
+
+0003 = Drive SMART Failure
+0003D = The drive %1 self-check failed. Contact WD Support.
+
+0004 = Volume Failure
+0004D = The data volume %1 on the drive is not accessible. Contact WD Support.
+
+0005 = Pending Thermal Shutdown
+0005D = Your system is overheating and will soon shut down automatically if no action is taken.
+
+0006 = Thermal Shutdown Immediate
+0006D = Your system is critically overheated and is shutting down immediately to prevent damage.
+
+2020 = System Shutting Down
+2020D = The system is shutting down.
+
+1020 = System Shutting Down
+1020D = The system is shutting down.
+
+0020 = System Shutting Down
+0020D = The system is shutting down.
+
+0029 = Fan Not Working
+0029D = The system fan is not working. Contact WD Support.
+
+0031 = On UPS Power
+0031D = The system is running on UPS power. %1% power left.
+
+0201 = Drive Failed
+0201D = Drive failed in Bay %1. Replace the failed drive. Contact WD Support.
+
+0207 = Drive About to Fail
+0207D = Drive %1 is about to fail. Replace the failed drive. Contact WD Support.
+
+0208 = Volume Degraded
+0208D = Volume %1 degraded. Please check status of drive by running Disk Test in Settings  >> Utilities.
+
+0209 = Volume Migration Progress
+0209D = Volume %1 Migration Progress - %2 %
+
+2209 = Volume Migration Progress
+2209D = Volume %1 migration progress: %2 %
+
+0210 = Rebuilding Volume
+0210D = Rebuilding volume %1 time in progress: %2 minutes
+
+2210 = Rebuilding Volume
+2210D = Rebuilding volume %1 time in progress: %2 minutes
+
+0212 = Volume Rebuild Failed
+0212D = The volume %1 rebuild has failed. Please check status of drives by running Disk Test in Settings  >> Utilities.
+
+0213 = Volume Expansion Failed
+0213D = The volume %1 Expansion failed. Please check status of drives by running Disk Test in Settings  >> Utilities.
+
+0216 = RAID Roaming Enabled
+0216D = RAID roaming enabled.
+
+2216 = RAID Roaming Enabled
+2216D = RAID roaming enabled.
+
+0224 = Replace Drive with Red Light
+0224D = Replace drive with red LED.
+
+2041 = Ethernet Port %1 Connected at 10/100
+2041D = Connection speed limited to 10/100 Mbps rates.
+
+0042 = 50% UPS Power Left
+0042D = The system is running on UPS power with 50% power remaining. Connect your system to a new power source as soon as possible.
+
+0043 = 15% UPS Power Left
+0043D = The system is running on UPS power with 15% power remaining. Connect your system to a new power source immediately.  If no action taken, the system will shut down when the UPS is out of power.
+
+0044 = UPS Out of Power
+0044D = The UPS power has no power remaining. The system is shutting down immediately to prevent damage.
+
+1001 = Volume Usage is Above 95%
+1001D = Your volume %1 usage is close to full capacity and you may begin to experience performance issues. Ensure that your files are backed up, then move files off your drive to create free space. If recycle bin is enabled, try clearing it to free up space.
+
+1002 = Network Link Down
+1002D = The network link %1 is down or has become intermittent. Check your network connection.
+
+1010 = Network Link Down
+1010D = The network link %1 is down or has become intermittent. Check your network connection.
+
+1003 = Firmware Update Failed
+1003D = The firmware update failed. Please retry. If the failure persists, contact WD Support.
+
+1004 = High system temperature
+1004D = Your device is currently overheated. Ensure that your device has adequate ventilation.
+
+1021 = Restore Config Failed
+1021D = Restoring configuration failed.
+
+0022 = Power loss detected
+0022D = Power loss detected on port %1. 
+
+1022 =  Power loss detected
+1022D = Power loss detected on port %1.
+
+1030 = Storage Below Threshold
+1030D = Storage below threshold.
+
+1035 = Product Improvement Program
+1035D = Would you like to participate in improving our product? Learn More %1
+
+0036 = File System Check Failed
+0036D = File system check has detected errors on your configuration. Backup your data and recreate your drive configuration to resolve these errors. If problem remains, contact WD Support.
+
+1036 = File System Check Failed
+1036D = File system check has detected errors on your configuration. Backup your data and recreate your drive configuration to resolve these errors. If problem remains, contact WD Support.
+
+1045 = File System Error Corrected
+1045D = File system check has detected and corrected errors on your configuration.
+
+1037 = System Not Ready
+1037D = The system is busy. Please wait until the power LED turns solid blue before inserting another drive.
+
+1120 = Unsupported USB Device
+1120D = An unsupported USB device has been detected (vendor: %1, model: %2, serial number: %3). Please remove the USB device.
+
+1121 = Unsupported File System
+1121D = An unsupported file system has been detected on a USB device (vendor %1, model: %2, serial number: %3, file system: %4, label: %5). Please remove the USB device.
+
+1122 = Unable to Create Share
+1122D = A share could not be created on a USB device (vendor: %1, model: %2, serial number: %3, file system: %4, label: %5, share name: %6)
+
+1123 = Unsafe Device Removal
+1123D = A USB device (vendor: %1, model: %2, serial number: %3) was removed without being ejected possibly affecting data on %2.
+
+1124 = Unable to Mount USB Device
+1124D = Unable to mount the USB device (vendor: %1, model: %2, serial number: %3). Please check the USB device.
+
+1127 = Cannot Backup Files from USB Device
+1127D = Cannot backup Files from USB device. Please check device connectivity.
+
+1130 = USB Backup Queued
+1130D = A previous backup job is still in progress. The USB backup will auto start when the previous job is finished.
+
+1400 = Remote Backup Error
+1400D = An error occurred for the remote backup job named %1. Please check the backup job detail.
+
+1401 = Remote Backup Restore Error
+1401D = An error occurred for the remote backup job named %1. Please check the backup job detail.
+
+2402 = Remote Backup Success
+2402D = Your remote backup job name: %1, successfully completed on the device: %2, to the share: %3
+
+1402 = Remote Backup Success
+1402D = Your remote backup job name: %1, successfully completed on the device: %2, to the share: %3
+
+2403 = Remote Backup Restore Success
+2403D = Your remote restore job name: %1, successfully completed on the device: %2, to the share: %3
+
+1403 = Remote Backup Restore Success
+1403D = Your remote restore job name: %1, successfully completed on the device: %2, to the share: %3
+
+2001 = System restart
+2001D = The system has restarted.
+
+1011 = New Firmware Available
+1011D = A new version of firmware has been released. Update your system.
+
+2002 = New Firmware Available
+2002D = A new version of firmware has been released. Update your system.
+
+2003 = Temperature Normal
+2003D = The system temperature is within the normal specified temperature range.
+
+2004 = Firmware Update Successful
+2004D = The firmware was successfully updated to %1.
+
+2005 = Factory Restore Succeeded
+2005D = Your system is restored to its factory defaults.
+
+2006 = You are eligible for a new software upgrade!
+2006D = Open your WD My Cloud Device Dashboard for more information.
+
+2024 = Downloading Firmware Update
+2024D = Downloading firmware update.
+
+2026 = Installing Firmware Update
+2026D = Installing firmware update.
+
+1028 = Reboot Required
+1028D = Reboot required.
+
+2028 = Reboot Required
+2028D = Reboot required.
+
+2032 = System is in standby mode
+2032D = System is in standby mode.
+
+1033 = System Rebooting
+1033D = System rebooting.
+
+2033 = System Rebooting
+2033D = System rebooting.
+
+1038 = Storage Quota Almost Full
+1038D = Storage quota for [%1] is almost full. Ensure that  files are backed up, then move files off the drive to create free space.
+
+2038 = Storage Quota Almost Full
+2038D = Storage quota for [%1] is almost full. Ensure that  files are backed up, then move files off the drive to create free space.
+
+1039 = Storage Quota Full
+1039D = Storage quota for [%1] has reached the limit. Ensure that  files are backed up, then move files off the drive to create free space.
+
+2039 = Storage Quota Full
+2039D = Storage quota for [%1] has reached the limit. Ensure that  files are backed up, then move files off the drive to create free space.
+
+2040 = Unsupported UPS device
+2040D = Unsupported UPS device
+
+2121 = Locked USB device
+2121D = A locked USB device has been detected (vendor: %1, model: %2, serial number: %3).
+
+2126 = Files Copied from USB device
+2126D = Files Copied from <%1> to <%2>.
+
+2128 = Copying Files
+2128D = Copying files from USB device.
+
+2129 = Files Moved from USB device
+2129D = Files moved from <%1> to <%2>.
+
+2131 = Moving Files
+2131D = Moving files from USB device.
+
+1200 = Unsupported Drive
+1200D = Unsupported drive in Bay %1. Replace the inserted drive with an approved drive. Approved drive list can be found at: www.wd.com
+
+2200 = Unsupported Drive
+2200D = Unsupported drive in Bay %1. Replace the inserted drive with an approved drive. Approved drive list can be found at: www.wd.com
+
+2202 = Drive too small
+2202D = Drive too small in location %1
+
+2203 = Drive is being initialized
+2203D = Drive is being initialized in location %1
+
+2211 = Checking Storage Integrity
+2211D = Checking storage integrity.
+
+2214 = Drive Inserted
+2214D = A new drive has been inserted into Bay %1. To add this drive to your system's RAID set, navigate to Storage >> RAID and click the Change RAID Mode button.
+
+0215 = Drive Removed
+0215D = Drive Removed from Bay %1
+
+2215 = Drive Removed
+2215D = Drive Removed from Bay %1. Please check your system.
+
+2217 = No Drives Installed
+2217D = There are no drives installed. Add drives to start using your system. You can purchase new drive at: www.wd.com
+
+2218 = Hot Spare Drive Added
+2218D = Hot Spare drive added into RAID Array.
+
+2219 = RAID Migration Completed
+2219D = RAID migration completed.
+
+2220 = RAID Rebuild Completed
+2220D = RAID rebuild completed.
+
+2221 = Non-WD Red NAS Drive Inserted
+2221D = Non-WD Red NAS Drive inserted. Please note that the WD My Cloud Device has been designed for optimal use with WD Red NAS Hard Drives.
+
+2222 = Volume Formatted
+2222D = Volume %1 is formatted.
+
+2223 = Expanding Volume Progress
+2223D = Volume %1 expanding progress: %2%
+
+2300 = Media Scan Stopped
+2300D = The device stopped scanning your media. As a result, some thumbnails will not display when you access them remotely. To resume scanning, please restart your WD My Cloud system.
+
+1501 = App Update Available
+1501D = %1 app has update available. Please update.
+
+1502 = Virus Found
+1502D = Anti-Virus Basics: Virus scan completed and there is virus found. Please check the virus scan report for details.
+
+2503 = Virus Scan Completed
+2503D = Anti-Virus Basics: Virus scan completed. No virus found.
+
+2504 = Scheduled Virus Scan Started
+2504D = Anti-Virus Basics: Scheduled virus scan started.
+
+2505 = Scheduled Virus Scan Stopped
+2505D = Anti-Virus Basics: Scheduled virus scan stopped due to stop time is met. Scan was unfinished. 
+
+1103 = An error occurred while recovering data from your safepoint
+1103D = %4 - There was an error recovering data from your safepoint %1 on the %2 share on %3.
+
+2103 = Your data was recovered successfully from your safepoint
+2103D = Your data was recovered successfully from your safepoint %1 on the %2 share on %3.

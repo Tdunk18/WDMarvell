@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><cki><ck fm=\"Sobre o gerenciamento da sua nuvem pessoal\" to=\"Ativando/desativando o servidor de mídia DLNA\" num=\"51\"/><ck fm=\"Modificando um download via FTP\" to=\"Bem-vindo\" num=\"52\"/><ck fm=\"O que são apps?\" to=\"O que é um armazenamento de RAID?\" num=\"4\"/></cki>";

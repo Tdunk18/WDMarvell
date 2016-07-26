@@ -1,0 +1,17 @@
+#!/bin/bash
+# envvars
+#
+# this script will set some env variables needed inside the apache server 
+# by the apache analytics logging component
+
+# Check if MYCL_ID is defined, if not, set it
+if [ -z ${MYCL_ID} ]; then
+	# Get the mycl_id from the below location
+	mycl_id_file="/usr/local/config/mycl_id"
+
+	[ -f ${mycl_id_file} ] && mycl_id=`cat ${mycl_id_file}`
+	if [ -n "${mycl_id}" ]; then
+		export MYCL_ID=${mycl_id}
+	fi
+fi
+

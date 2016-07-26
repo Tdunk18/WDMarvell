@@ -1,0 +1,799 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<!-- custom js and css-->
+<link rel="stylesheet" type="text/css" href="/web/css/cloud_backups.css?r=3">
+<link rel="stylesheet" type="text/css" href="/web/css/access_icon.css?r=3">
+<script language="javascript" src="/web/function/s3.js"></script>
+<script language="javascript" src="/web/function/s3_select.js"></script>
+<!-- custom end -->
+
+
+<style>
+.s3_stop {
+	float:left;
+	background: url('/web/images/icon/button_pause.png?r=20140922');
+	cursor: pointer;	
+	height: 30px
+}
+
+.s3_stop:hover {
+	background: url('/web/images/icon/button_pauseHover.png?r=20140922'); 
+}	
+	
+.s3_start {
+	float:left;
+	background: url('/web/images/icon/start.png?r=20140922');
+	cursor: pointer;	
+	height: 30px
+}
+
+.s3_start:hover {
+	background: url('/web/images/icon/startHover.png');
+}
+.s3_del {
+	float:left;
+	background: url('/web/images/icon/BackupDelete.png?r=20140922'); 
+	cursor: pointer;	
+	height: 30px	
+}
+
+.s3_del:hover {
+	background: url('/web/images/icon/BackupDeleteHover.png?r=20140922') ;
+}
+
+.s3_detail {
+	float:left;
+	background: url('/web/images/icon/BackupJobDetail.png?r=20140922');
+	cursor: pointer;	
+	height: 30px
+}
+.s3_detail:hover {
+	background: url('/web/images/icon/BackupJobDetailHover.png?r=20140922');
+}
+#s3_tb .edit {
+		float:left;
+     background: url('/web/images/icon/ButtonEdit.png?r=20140922');
+     cursor: pointer;	
+    height: 30px
+ }
+
+#s3_tb .edit:hover {
+     background: url('/web/images/icon/ButtonEditHover.png?r=20140922')
+}
+
+.no_img ,.no_img:hover{
+		background-image:none;	
+}
+
+#s3_tb .TooltipIcon {
+     width: 30px;
+ }
+ 
+ .s3_gray_out {
+    filter: alpha(opacity=30);
+    opacity: 0.3;    
+}
+
+.word_overflow
+{	 
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width:290px;        
+    word-wrap :normal !important;
+}
+</style>
+
+<script>
+var loop_s3 = "";
+var s3_index = -1;
+var loop_s3_tb = "";
+function page_load()
+{
+	var sys_time = (new Date()).getTime();
+	//initDiag("/web/backups/s3Diag.html?r=" + sys_time);
+
+	$("#s3_tb").flexigrid({
+		url: '/cgi-bin/s3.cgi',
+		dataType: 'xml',
+		cmd: 'cgi_get_s3',
+		colModel : [
+			{display: _T('_remote_backup','task'), name : 'job', width : 100, sortable : true, align: 'left'},
+			{display: _T('_remote_backup','schedule'), name : 'schedule', width : 150, sortable : true, align: 'left'},
+			{display: _T('_remote_backup','status'), name : 'status', width : 150, sortable : true, align: 'left'},
+			{display: _T('_remote_backup','now'), name : 'status', width :40, sortable : true, align: 'center'},
+			{display: _T('_button','restore'), name : 'reload', width : 40 , sortable : true, align: 'left'},
+			{display: _T('_smart','progress'), name : 'del', width : 40 , sortable : true, align: 'left'},
+			{display: _T('_smart','progress'), name : 'detail', width : 40 , sortable : true, align: 'left'}						
+			],
+		usepager: true,
+		useRp: true,
+		rp: 40,
+		showTableToggleBtn: true,
+		width: 660,
+		height: 'auto',
+		errormsg: _T('_common','connection_error'),
+		nomsg: _T('_common','no_items'),
+		singleSelect:true,	
+		resizable : false,
+		rpOptions: [40],
+		preProcess:function(r)
+		{		
+			var j = -1;	
+			$(r).find('row').each(function(index){
+			
+				 j =0;
+				 var name = $(this).find('cell:eq(0)').text();
+				 var sch = $(this).find('cell:eq(1)').text();				
+				 var status = $(this).find('cell:eq(2)').text();
+				 var backup = $(this).find('cell:eq(3)').text();
+				 var restore = $(this).find('cell:eq(4)').text();
+				 var progress = $(this).find('cell:eq(5)').text();
+				 var filename = $(this).find('cell:eq(6)').text();
+				 var percent = $(this).find('cell:eq(7)').text();	
+	
+				 if (name.length > 9)
+				 	var new_name = name.substr(0,9)+"...";
+				 else
+				 	var new_name = name;
+				 $(this).find('cell:eq(0)').text("<span id='backups_s3Name"+(index+1)+"_value' class='TooltipIcon no_img' title='"+name+"'>"+new_name+"</span>");
+				 
+				 if (sch == "Manual")
+				 		$(this).find('cell:eq(1)').text("")
+				 
+				 if (status == "1")//running
+				 {								
+				 	
+				 	var bar = '<div class="list_icon_bar" style="width: 120px !important;">' +
+										'<div class="bar_p" style="float: left; width: {0}%;"></div>' +
+						  '</div>' +
+									  '<div class="list_bar_text TooltipIcon" style="width: 120px !important;" title="{1}">{2}%  {3}</div>';
+									  
+				 	
+				 	
+				 					
+						if (percent == "") percent = 0;
+						$(this).find('cell:eq(2)').text(String.format(bar,  percent, translate_path_to_display(filename),percent, translate_path_to_display(filename)));
+					}
+					else
+					{
+						if (status == "0") //Ready
+							$(this).find('cell:eq(2)').text("<span id='backups_s3Status"+(index+1)+"_value'>"+_T('_usb_backups', 'status1')+"</span>")
+						else if (status == "2") //Finish
+							$(this).find('cell:eq(2)').text("<span id='backups_s3Status"+(index+1)+"_value'>"+_T('_usb_backups', 'status0')+"</span>")
+						else if (status == "3") //Disable
+							$(this).find('cell:eq(2)').text("<span id='backups_s3Status"+(index+1)+"_value'>"+_T('_common', 'disable')+"</span>")
+						else if (status == "4") //Error
+							$(this).find('cell:eq(2)').text("<span id='backups_s3Status"+(index+1)+"_value'>"+_T('_usb_backups', 'status_1')+"</span>")
+						else if (status == "5") //Cancel
+							$(this).find('cell:eq(2)').text("<span id='backups_s3Status"+(index+1)+"_value'>"+_T('_button', 'Cancel')+"</span>")
+						else if (status == "6") //Cancel...
+							$(this).find('cell:eq(2)').text("<span id='backups_s3Status"+(index+1)+"_value'>"+_T('_button', 'Cancel')+"...</span>")
+								
+					}	
+					
+					if (backup == "--")
+					{						
+							$(this).find('cell:eq(3)').text("<a id='backups_s3Start"+(index+1)+"_link' href='javascript:parent.backup_stop(\""+name+"\");'  class='s3_stop TooltipIcon' title=\""+_T("_usb_backups", "backup_cancel")+"\"></a>")
+					}
+					else
+					{
+						if (status == "6")
+							$(this).find('cell:eq(3)').text("<a id='backups_s3Start"+(index+1)+"_link' class='s3_start TooltipIcon s3_gray_out' title=\""+_T("_usb_backups", "backup_now")+"\"></a>")
+						else
+							$(this).find('cell:eq(3)').text("<a id='backups_s3Start"+(index+1)+"_link' href='javascript:parent.backup_now(\""+name+"\");'  class='s3_start TooltipIcon' title=\""+_T("_usb_backups", "backup_now")+"\"></a>")
+					}							
+					if (status == "1" || status == "6" ) //running,cancel...
+					{
+						$(this).find('cell:eq(4)').text("<a id='backups_s3Edit"+(index+1)+"_link' class='edit TooltipIcon s3_gray_out' title='"+_T("_usb_backups", "edit_job")+"'></a>"); 		   				   		  			   				   	
+		   			$(this).find('cell:eq(5)').text("<a id='backups_s3Delete"+(index+1)+"_link' class='s3_del TooltipIcon s3_gray_out' title='"+ _T("_usb_backups", "del_job")+"'></a>");
+					}
+					else
+					{				
+						$(this).find('cell:eq(4)').text("<a id='backups_s3Edit"+(index+1)+"_link' href='javascript:s3_edit(\""+name+"\");'  class='edit TooltipIcon' title='"+_T("_usb_backups", "edit_job")+"'></a>");		   		  			   				   	
+		   			$(this).find('cell:eq(5)').text("<a id='backups_s3Delete"+(index+1)+"_link' class='s3_del TooltipIcon' title='"+ _T("_usb_backups", "del_job")+"' href='javascript:s3_delete_job(\""+name+"\")'></a>");
+					}				
+					$(this).find('cell:eq(6)').text("<a id='backups_s3Detail"+(index+1)+"_link' class='s3_detail TooltipIcon' title='"+ _T("_usb_backups", "details")+"' href='javascript:open_detail(\""+name+"\",\""+restore+"\",\""+progress+"\")'></a>");
+			});
+			if (j == -1)
+			{
+				//	show('s3_list_info');
+					hide('s3_list_tb')
+			}		
+			else
+			{
+//					hide('s3_list_info');
+					show('s3_list_tb')
+			}				
+			
+			return r;
+		},
+		   onSuccess:function(index){		
+		   		init_tooltip();
+        }		   		   
+	});
+
+		//setTimeout(tb_reload,6000)
+	$("#s3_create").click(function(){		
+		init_s3_dialog();
+		s3_create_job();
+	});
+
+	$("#s3_delete").click(function(){
+		
+		s3_delete_job();
+	});	
+	$("#tip_s3").attr('title',_T('_tip','s3'));			
+	init_tooltip();	
+	
+	setTimeout(get_tb_info,10000);
+	
+}
+
+function s3_edit(name)
+{
+		init_s3_dialog();
+		s3_edit_job(name);
+}
+function page_unload()
+{
+	clearTimeout(loop_s3);
+	clearTimeout(loop_s3_tb);	
+}
+
+function get_tb_info()
+{
+	if (__RUN_WIZARD == false)
+	{		
+		$("#s3_tb").flexReload();
+	}
+	loop_s3 = setTimeout(get_tb_info,5000);
+}
+
+var HDD_INFO_ARRAY = new Array();
+
+function do_query_HD_Mapping_Info()
+{
+	HDD_INFO_ARRAY = new Array();
+	
+	wd_ajax({
+		type: "POST",
+		async: false,
+		cache: false,
+		url: "/cgi-bin/remote_backup.cgi",
+		data: "cmd=cgi_get_HD_Mapping_Info",	
+		dataType: "xml",
+		success: function(xml){
+			//alert(xml)	
+			$(xml).find('item').each(function(){
+				var info = $(this).find('data').text();	//Volume_1:/mnt/HD/HD_a2 
+				HDD_INFO_ARRAY.push(info);				
+				
+});
+		},
+		 error:function(xmlHttpRequest,error){   
+        		//alert("Error: " +error);   
+  		 }
+
+	});	
+}
+function onoff_job(job_name,enable)
+{	
+	var overlayObj=$("#overlay").overlay({expose: '#000',api:true,closeOnClick:false,closeOnEsc:false});
+	overlayObj.load();
+	
+	wd_ajax({	 			   
+		type: "POST",
+		async: true,
+		cache: false,
+		url: "/cgi-bin/remote_backup.cgi",
+		data:{cmd:"cgi_enable_disable_schedule",name:job_name,enable:enable},
+	   	success: function()
+	   	{
+	   		$("#schedule_tb").flexReload();
+	   		overlayObj.close();
+	   	}
+	 });
+}
+function backup_now(job_name)
+{	
+	jConfirm('M',_T('_remote_backup','msg25'),_T('_menu_title','backups'),function(r){
+		if(r)
+		{
+			jLoading(_T('_common','set') ,'loading' ,'s',""); 
+			
+			wd_ajax({
+				type: "POST",
+				async: true,
+				cache: false,
+				url: "/cgi-bin/s3.cgi",
+				data:{cmd:"cgi_s3_backup",f_job_name:job_name},
+			   	success: function()
+			   	{
+							jLoadingClose();
+							jQuery("#s3_tb").flexReload();
+			   	}
+			 });
+		}
+    });
+}
+function backup_stop(job_name)
+{
+			jLoading(_T('_common','set') ,'loading' ,'s',""); 			
+			wd_ajax({
+				type: "POST",
+				async: true,
+				cache: false,
+				url: "/cgi-bin/s3.cgi",
+				data:{cmd:"s3_backup_cancel",f_job_name:job_name},
+			   	success: function()
+			   	{
+							jLoadingClose();
+							setTimeout(function(){
+						jQuery("#s3_tb").flexReload();},1000);
+			   	}
+			 });	
+}
+
+</script>
+
+<body>
+<!-- content -->
+<!-- s3 -->
+<div class="h1_content header_2"><span class="_text" lang="_s3" datafld="title" ></span></div>
+<div class="tdfield_padding"><span class="_text" lang="_s3" datafld="desc" ></span></div>
+<table class="field_top" border="0" cellspacing="0" cellpadding="0" height="0">
+	<tr>
+		<td>
+			<button type="button" id="s3_create" ><span class="_text" lang="_button" datafld="create">Create</span></button>
+		</td>
+		<td style="padding-left:10px;display:none" >
+			<div class="TooltipIcon" id="tip_s3"></div>
+		</td>		
+	</tr>
+</table>
+
+<div class="hr_0_content"><div class="hr_1"></div></div>
+<div class="h1_content header_2"><span class="_text" lang="_s3" datafld="queue" ></span></div>
+
+<!-- <div class="field_top" id="s3_list_info" style="display:none"><span class="_text" lang="_s3" datafld="no_list" ></span></div>					-->
+
+<div class="field_top" id="s3_list_tb">
+	<table id="s3_tb"></table>
+</div>
+
+
+
+<div id="id_len" style="display:inline;width:'auto';visibility:hidden"></div>
+
+<!-- Scan Disk Dialog  -->
+<div id="s3Diag" class="WDLabelDiag" style="display:none;">
+<div class="WDLabelHeaderDialogue_s3 WDLabelHeaderDialogueMediaS3" id="s3Diag_title"><span class="_text" lang="_s3" datafld="s3_dialog_title"></span></div>
+<div align="center"><div class="hr"><hr></div></div>
+
+	<!-- 
+	<div id="s3_wizard_step0">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+			
+			<span class="_text" lang="_s3" datafld="wizard_desc"></span>	
+			
+			</div>	
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		
+		<button type="button" class="ButtonMarginLeft_40px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" id="s_next_button_0" ><span class="_text" lang="_button" datafld="Next"></span></button>						
+					
+	</div>
+		-->
+	<!-- step 2-->	
+<div id="s3_wizard_step1" style="display:none;" >
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content">
+		
+		<div class="_text maxwidth" lang="_s3" datafld="step1_desc"></div>
+		<br><br>
+		<table width="100%">
+			<tr>
+					<td width="30%"><span class="_text" lang="_s3" datafld="job_name"></span></td>
+					<td width="70%"><input type="text" id="backups_s3JobName_text" name="backups_s3JobName_text" maxlength="16" size="20"> </td>
+			</tr>	
+			<tr style="display:none">
+					<td>Username</td>
+					<td><input type="text" id="f_username" name="f_username"></td>
+			</tr>	
+		</table>	
+
+</div>	
+</div>					
+		
+		<div class="hrBottom2"><hr/></div>
+		
+		<button type="button" class="ButtonMarginLeft_40px close" id="backups_s3Cancel1_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" id="backups_s3Next1_button" ><span class="_text" lang="_button" datafld="Next"></span></button>																				
+</div>	
+
+	<!-- step 2-->	
+<div id="s3_wizard_step2" style="display:none;" >
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content">
+		
+		<!--	<span class="_text" lang="_s3" datafld="step2_desc"></span> -->
+
+			<table>		
+					<tr>
+							<td height=40><span class="_text" lang="_s3" datafld="region"></span></td>
+							<td class="tdfield_padding_left_10">
+<!--							
+								<select id="f_location" name="f_location">					
+								</select>
+-->
+
+				      <div class="select_menu" id="id_location_top_main"></div>
+				     
+				      
+				      
+				      
+				      								
+							</td>
+					</tr>					
+			<tr>
+							<td  height=40><span class="_text" lang="_s3" datafld="a_key"></span></td>
+							<td class="tdfield_padding_left_10"><input type="text" id="backups_s3AccessKey_text" name="backups_s3AccessKey_text" maxlength="64" size="64"></td>
+					</tr>
+					<tr>
+							<td height=40><span class="_text" lang="_s3" datafld="p_key"></span></td>
+							<td class="tdfield_padding_left_10"><input type="password" id="backups_s3SecretKey_text" name="backups_s3SecretKey_text" maxlength="64" size="64"></td>
+					</tr>
+					<tr>
+						<td height=40><span class="_text" lang="_s3" datafld="b_path"></span></td>
+							<td class="tdfield_padding_left_10">
+								<table border='0' cellspacing="0" cellpadding="0">
+								<tr>
+									<td>	
+										<input type="text" id="backups_s3RemotePath_text" name="backups_s3RemotePath_text" maxlength="63" size="32">
+									</td>	
+									<td class="tdfield_padding_left_10">
+										<div class="TooltipIcon" id="tip_b_path"></div>
+									</td>		
+								</tr>
+								</table>
+								</td>							
+					</tr>
+					
+				</table>
+
+</div>	
+</div>												
+			<div class="hrBottom2"><hr/></div>		
+			<button type="button" class="ButtonMarginLeft_40px" id="backups_s3Back2_button"><span class="_text" lang="_button" datafld="back"></span></button>
+			<button type="button" class="ButtonMarginLeft_20px close" id="backups_s3Cancel2_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>			
+			<button type="button" class="ButtonRightPos2"	 id="backups_s3Next2_button"><span class="_text" lang="_button" datafld="Next"></span></button>											
+</div>	
+<!-- step 2-1-->	
+<div id="s3_wizard_step3" style="display:none;" >
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content">
+		
+
+			<table width="100%">
+				<tr>
+				<td width="30%" height=40><span class="_text" lang="_wfs" datafld="type"></span></td>
+				<td width="70%">
+<!--				
+						     <select id="f_dir" name="f_dir" onchange="check_dir(this.value);">			
+							</select>
+-->
+				  <div class="select_menu" id="id_dir_top_main"></div>
+
+
+							
+					</td>
+			</tr>				
+					<tr>
+							<td height=40><span class="_text" lang="_s3" datafld="backup_type"></span></td>
+							<td>	
+<!--									
+								<select id="f_backuptype" name="f_backuptype">									
+								</select>
+-->
+
+				     <div class="select_menu" id="id_backuptype_top_main">				   
+				      </div>								
+								
+							</td>
+					</tr>	
+				</table>
+
+</div>	
+</div>	
+											
+			<div class="hrBottom2"><hr/></div>
+			
+			<button type="button" class="ButtonMarginLeft_40px" id="backups_s3Back3_button"><span class="_text" lang="_button" datafld="back"></span></button>
+			<button type="button" class="ButtonMarginLeft_20px close" id="backups_s3Cancel3_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>			
+			<button type="button" class="ButtonRightPos2"	 id="backups_s3Next3_button"><span class="_text" lang="_button" datafld="Next"></span></button>											
+					
+									
+</div>			
+<!-- step 3-->	
+<div id="s3_wizard_step4" style="display:none;" >
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content">
+		<!--
+			<span class="_text" lang="_s3" datafld="step4_desc"></span>
+			<br><br>
+			-->
+		<form name="form_s3">
+				<table width="100%">
+				<tr>
+						<td height=40><span class="_text" lang="_s3" datafld="local_path"></span></td>
+						<td class="tdfield_padding_left_10">
+							<table border="0"  cellspacing="0" cellpadding="0" height="0">
+								<tr>
+									<td>
+										<input type="text" id="backups_s3LocalPath_text" name="backups_s3LocalPath_text" maxlength="255" size="32" readonly>
+									</td>	
+									<td class="tdfield_padding_left_10">
+										&nbsp;&nbsp;<button type="button" id="backups_s3LocalPath_button" onclick="s3_create_tree_dialog('form_s3','backups_s3LocalPath_text');"><span class="_text" lang="_button" datafld="browse"></span></button>
+									</td>	
+								</tr>	
+							</table>																					
+							</td>
+					</tr>									
+				</table>	
+		</form>				
+</div>	
+</div>	
+											
+			<div class="hrBottom2"><hr/></div>
+			<button type="button" class="ButtonMarginLeft_40px" id="backups_s3Back4_button"><span class="_text" lang="_button" datafld="back"></span></button>
+			<button type="button" class="ButtonMarginLeft_20px close" id="backups_s3Cancel4_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>			
+			<button type="button" class="ButtonRightPos2"	 id="backups_s3Next4_button"><span class="_text" lang="_button" datafld="Next"></span></button>																	
+									
+</div>			
+		
+<!-- step 4-->	
+<div id="s3_wizard_step5" style="display:none;" >
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content">
+	
+	
+			<table border="0" cellspacing="0" cellpadding="0" height="0">					
+					<tr id="auto_update_tr">
+						<td class="tdfield_170"><span class="_text" lang="_remote_backup" datafld="auto">Autoupdate</span></td>
+						<td class="tdfield_padding">
+							<table border="0" cellspacing="0" cellpadding="0" height="0">
+								<tr>
+									<td>
+										<input id="backups_s3Auto_switch" name="backups_s3Auto_switch" class="onoffswitch" type="checkbox" value="true" >
+						</td>
+									<td style="padding-left:10px;">
+							<div class="TooltipIcon" id="tip_autoupdate"></div>
+						</td>
+					</tr>
+							</table>
+
+						</td>
+
+					</tr>
+					<tr id="schedule_tr" style="display:none">
+						<td class="tdfield_170"><span class="_text" lang="_remote_backup" datafld="auto_s">Autoupdate schedule</span></td>
+						<td class="tdfield_padding">
+							<div id="s_type" style="display:none"><button id="backups_s3BackupDaily_button" class="left_button" value="1"><span class="_text" lang="_mail" datafld="daily">Daily</span></button><button id="backups_s3BackupWeekly_button" class="middle_button" value="2"><span class="_text" lang="_mail" datafld="weekly">Weekly</span></button><button id="backups_s3Backup Monthly _button" class="right_button" value="3"><span class="_text" lang="_mail" datafld="monthly">Monthly</span></button></div>
+						</td>
+					</tr>
+				</table>
+				<div id="backup_now_div" style="margin-top:20px">
+					<table border="0" cellspacing="0" cellpadding="0" height="0">
+						<tr>
+							<td width="170" >
+								<span class="_text" lang="_remote_backup" datafld="backup_now"></span>
+							</td>
+							<td>
+								<div id="f_backup_now" style="display:none"><button id="backups_s3BackupNowYes_button" class="left_button" value="1"><span class="_text" lang="_remote_backup" datafld="yes"></span></button><button id="backups_s3BackupNowNo_button" class="right_button" value="0"><span class="_text" lang="_remote_backup" datafld="no"></span></div>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div id="schedule_div" style="margin-top:20px;display:none">
+
+					<table id="week_div" style="display:" border="0" cellspacing="0" cellpadding="0" height="0">
+						<tr>
+							<td width="170">
+								<span id="id_sch_word" class="_text" lang="_remote_backup" datafld="date_time">Autoupdate Date & Time</span>
+							</td>
+							<td>
+										<div id="id_week_div" style="display:none;padding-right:10px;">
+										<div class="select_menu" id="id_sch_week_top_main"></div>
+										</div>
+							</td>
+							<td>			
+										<div id="id_month_div" style="display:none;padding-right:10px;">
+											<div class="select_menu" id="id_sch_day_top_main"></div>
+										</div>	
+							</td>
+							<td>			
+										<div id="id_hour_div" style="display:">
+										<div class="select_menu" id="id_sch_hour_top_main"></div>
+										</div>
+							</td>
+							
+						</tr>
+					</table>			
+				</div>		
+
+</div>	
+</div>	
+											
+			<div class="hrBottom2"><hr/></div>
+			<button type="button" class="ButtonMarginLeft_40px" id="backups_s3Back5_button"><span class="_text" lang="_button" datafld="back"></span></button>
+			<button type="button" class="ButtonMarginLeft_20px close" id="backups_s3Cancel5_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+			<button type="button" class="ButtonRightPos2"	 id="backups_s3Next5_button"><span class="_text" lang="_button" datafld="Next"></span></button>									
+</div>			
+	
+<!-- finish-->	
+<div id="s3_wizard_finish" style="display:none;" >
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content">
+		
+	<!--	<span class="_text" lang="_s3" datafld="step6_desc"></span>
+		<br><br>
+	-->
+		<!--<span class="_text" lang="_remote_backup" datafld="msg2"></span><br><br> -->
+			<span class="_text" lang="_s3" datafld="msg29"></span><br><br>
+			<table width="100%">		
+					<tr>
+							<td width="50%" ><span class="_text" lang="_s3" datafld="job_name"></span></td>
+							<td width="50%" ><div id="show_jobname"></div>																
+							</td>
+					</tr>			
+					<tr>
+							<td width="50%"  ><span class="_text" lang="_s3" datafld="b_path"></span></td>
+							<td width="50%"  style='word-wrap : break-word; overflow:hidden;'><div id="show_b_path" ></div>																
+							</td>
+					</tr>			
+					<tr>
+							<td width="50%" ><span class="_text" lang="_s3" datafld="region"></span></td>
+							<td width="50%" ><div id="show_region"></div>																
+							</td>
+					</tr>			
+					<tr>
+							<td width="50%" ><span class="_text" lang="_wfs" datafld="type"></span></td>
+							<td width="50%" ><div id="show_type"></div>																
+							</td>
+					</tr>			
+					<tr>
+							<td width="50%" ><span class="_text" lang="_s3" datafld="backup_type"></span></td>
+							<td width="50%" ><div id="show_backup_type"></div>																
+							</td>
+					</tr>			
+					<tr>
+							<td width="50%"  ><span class="_text" lang="_s3" datafld="local_path" ></span></td>
+							<td width="50%"  style='word-wrap : break-word; overflow:hidden;'><div id="show_local_path"></div>																
+							</td>
+					</tr>		
+					<tr id="id_show_backup_now" style="display:none">
+							<td width="50%" ><span class="_text" lang="_s3" datafld="backup_now"></span></td>
+							<td width="50%" ><div id="show_backup_now"></div>																
+							</td>
+					</tr>		
+					<tr id="id_show_backup_sch" style="display:none">
+							<td width="50%" ><span class="_text" lang="_remote_backup" datafld="schedule2"></span></td>
+							<td width="50%" ><div id="show_backup_sch"></div>																
+							</td>
+					</tr>		
+			</table>
+															
+</div>													
+</div>											
+			<div class="hrBottom2"><hr/></div>
+		
+			
+			<button type="button" class="ButtonMarginLeft_40px" id="backups_s3Back6_button"><span class="_text" lang="_button" datafld="back"></span></button>
+			<button type="button" class="ButtonMarginLeft_20px close" id="backups_s3Cancel6_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>			
+			<button type="button" class="ButtonRightPos2"	 id="backups_s3Save_button"><span class="_text" lang="_button" datafld="finish"></span></button>																				
+		
+	
+</div><!-- end of Format HD Dialog -->
+
+
+</div>
+
+
+
+
+<div id="s3treeDiag" class="WDLabelDiag" style="display:">
+<div id="s3treeDiag_title" class="WDLabelHeaderDialogue_s3 WDLabelHeaderDialogueMediaS3"><span class="_text" lang="_remote_backup" datafld="msg22">Select Path</span></div>
+<div align="center"><div class="hr"><hr></div></div>
+	
+<!-- step1 -->
+<div id="s3tree_dialog" style="display:" >
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content">
+
+			<div id="s3tree_div"></div>
+</div>	
+</div>		
+			
+	<div class="hrBottom2"><hr/></div>		
+			<button type="button" class="ButtonMarginLeft_40px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+			<button type="button" class="ButtonRightPos2" id="s3_ok_button" ><span class="_text" lang="_button" datafld="Ok"></span></button>									
+</div>
+</div>
+
+<div id="s3Diag_reload" class="WDLabelDiag" style="display:none">
+	<div id="s3Diag_recovery_title" class="WDLabelHeaderDialogue_s3 WDLabelHeaderDialogueMediaS3">
+	<span class="_text" lang="_remote_backup" datafld="recovery">Recovery</span></div>
+	<div align="center"><div class="hr"><hr/></div></div>
+	<div class="WDLabelBodyDialogue">
+
+
+	<div class="dialog_content">
+	<div id="s3_reload_info"><img src="/web/images/spinner.gif" border=0></div>			
+	</div>
+	</div>
+	<div class="hrBottom2"><hr/></div>	
+	<button type="button" class="ButtonMarginLeft_40px" onclick="close_window('s3Diag_reload');open_s3_detail();"><span class="_text" lang="_button" datafld="back"></span></button>
+	<button type="button" class="ButtonRightPos2 close"><span class="_text" lang="_button" datafld="close"></span></button>	
+</div>	
+<div id="s3Diag_percent" class="WDLabelDiag" style="display:none">
+	<div id="s3Diag_percent_title" class="WDLabelHeaderDialogue_s3 WDLabelHeaderDialogueMediaS3">Progress</div>		
+	<div align="center"><div class="hr"><hr/></div></div>
+	<div id="s3_percent">
+	<div class="WDLabelBodyDialogue">
+	<div class="dialog_content">
+	<div id="s3_percent_info"><img src="/web/images/spinner.gif" border=0></div>			
+	</div>
+	</div>
+	
+	
+	<div class="hrBottom2"><hr></div>		
+	<button type="button" class="ButtonMarginLeft_40px" onclick="close_window('s3Diag_percent');open_s3_detail();"><span class="_text" lang="_button" datafld="back"></span></button>
+	<button type="button" class="ButtonRightPos2 close"><span class="_text" lang="_button" datafld="close"></span></button>	
+	</div><!-- s3_percent -->
+</div>	
+<!-- demo test -->
+<div id="s3DetailDiag" class="WDLabelDiag" style="display:">
+<div id="s3Diag_title" class="WDLabelHeaderDialogue_s3 WDLabelHeaderDialogueMediaS3"><span class="_text" lang="_s3" datafld="s3_config"></span></div>
+<div align="center"><div class="hr"><hr></div></div>
+<div id="s3_demo" style="display:" >
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content">
+		<table id='s3_detail_tb' border="0"  cellspacing="0" cellpadding="0" height="0">
+				 <tr>
+			<td width="150" height="40"><span class="_text" lang="_remote_backup" datafld="job_name"></span></td>
+						<td>
+							<div id='detail_job_name'></div>							
+						</td>
+					</tr>	
+					<tr>
+			<td width="150" height="40"><span class="_text" lang="_button" datafld="restore"></span></td>
+						<td>
+							<div id="detail_restore"></div>							
+						</td>
+					</tr>	
+						<tr>
+			<td width="150" height="40"><span class="_text" lang="_s3" datafld="progress"></span></td>
+						<td>
+							<div id="detail_progress"></div>		
+						</td>
+					</tr>						
+			</table>
+</div>	
+</div>		
+	<div class="hrBottom2"><hr/></div>	
+	<button type="button" class="ButtonRightPos2 close"	><span class="_text" lang="_button" datafld="close"></span></button>		
+</div>
+</div>
+<!-- dialog-- -->
+</body>
+</html>

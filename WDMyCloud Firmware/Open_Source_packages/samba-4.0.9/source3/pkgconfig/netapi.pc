@@ -1,0 +1,14 @@
+prefix=/home/ben/wdic-gpl/samba-4.0.9/source3/../../_xinstall/KingsCanyon
+exec_prefix=${prefix}
+libdir=/lib
+includedir=${prefix}/include
+
+Name: Samba libnetapi
+Description: A library to control CIFS servers
+Version: 0
+URL: http://www.samba.org/
+#Libs: -L/lib -lnetapi
+Libs: -lnetapi
+Libs.private: -lnetapi -L/home/ben/wdic-gpl/krb5-1.12.1/src/../../_xinstall/KingsCanyon/lib -Wl,--enable-new-dtags -Wl,-rpath -Wl,/home/ben/wdic-gpl/krb5-1.12.1/src/../../_xinstall/KingsCanyon/lib -L/home/ben/wdic-gpl/krb5-1.12.1/src/../../_xinstall/KingsCanyon/lib -L/home/ben/wdic-gpl/krb5-1.12.1/src/../../_xinstall/KingsCanyon/lib -Wl,--enable-new-dtags -Wl,-rpath -Wl,/home/ben/wdic-gpl/krb5-1.12.1/src/../../_xinstall/KingsCanyon/lib -L/home/ben/wdic-gpl/krb5-1.12.1/src/../../_xinstall/KingsCanyon/lib -lgssapi_krb5 -lkrb5 -lk5crypto -lcom_err -lldap -llber  -lresolv -lnsl -lssl -lcrypto -lz -ldl -lrt -liconv -lrt -lpthread
+Cflags: -I${prefix}/include
+

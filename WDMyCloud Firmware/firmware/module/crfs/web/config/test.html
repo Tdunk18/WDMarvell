@@ -1,0 +1,17 @@
+<html>
+<head>
+<script>
+if (getParameterByName('goBack') == '1'){
+        history.go(-1);
+}else{
+        window.close();
+}
+function getParameterByName(name) {
+    var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+}
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,128 @@
+#!/bin/sh
+# dhcp6c-script for Debian/Ubuntu. Jérémie Corbier, April, 2006.
+# resolvconf support by Mattias Guns, May 2006.
+
+RESOLVCONF="/sbin/resolvconf"
+
+[ -f /etc/default/wide-dhcpv6-client ] && . /etc/default/wide-dhcpv6-client
+
+
+#?
+echo "new_domain_name: ($new_domain_name)"                  > /tmp/dhcp6c-$interface_name.txt
+echo "new_domain_name_servers: ($new_domain_name_servers)" >> /tmp/dhcp6c-$interface_name.txt
+echo "new_ia_pd_prefix: ($new_ia_pd_prefix)"               >> /tmp/dhcp6c-$interface_name.txt
+echo "new_iaaddr: ($new_iaaddr)"                           >> /tmp/dhcp6c-$interface_name.txt
+echo "interface_name: ($interface_name)"                   >> /tmp/dhcp6c-$interface_name.txt
+echo "msgType: ($msgType)"                                 >> /tmp/dhcp6c-$interface_name.txt
+echo "dhcpServer: ($dhcpServer)"                           >> /tmp/dhcp6c-$interface_name.txt
+echo "state: ($state)"                                     >> /tmp/dhcp6c-$interface_name.txt
+# INIT, SOLICIT, INFOREQ, REQUEST, RENEW, REBIND, RELEASE, IDLE, "???"
+
+PORTNUM=$(echo $interface_name |  cut -d '.' -f 1 | sed 's/eth//g' | sed 's/egiga//g' | sed 's/bond//g')
+LAN=lan$PORTNUM
+
+if [ "$PORTNUM" == "" ]; then
+    exit 0
+fi
+
+DNS_MANUAL=$(xmldbc -g "/network_mgr/$LAN/ipv6/dns_manual")
+
+# domainname and nameserver
+if [ "$DNS_MANUAL" == "0" ] && [ -n "$new_domain_name" -o -n "$new_domain_name_servers" ]; then
+    new_resolv_conf=/etc/resolv.conf.dhcp6c-new
+    rm -f $new_resolv_conf
+    if [ -n "$new_domain_name" ]; then
+        for domainname in $new_domain_name; do
+            DOMAIN_NAME=`cat /etc/resolv.conf | grep "search $domainname$"`
+            if [ "$DOMAIN_NAME" == "" ]; then
+                echo "search $domainname" >> $new_resolv_conf
+            fi
+        done
+    fi
+    if [ -n "$new_domain_name_servers" ]; then
+        for nameserver in $new_domain_name_servers; do
+            DNS=`cat /etc/resolv.conf | grep "nameserver $nameserver$"`
+            if [ "$DNS" == "" ]; then
+                echo "nameserver $nameserver" >> $new_resolv_conf
+            fi
+        done
+    fi
+
+    # Use resolvconf if available
+    if [ -h "/etc/resolv.conf" -a -x "$RESOLVCONF" ]; then
+        for IFACE in $INTERFACES; do
+            cat $new_resolv_conf | $RESOLVCONF -a $IFACE
+        done
+    else
+        # To preserve IPv4 informations...
+        cat /etc/resolv.conf >> $new_resolv_conf
+        #chown --reference=/etc/resolv.conf $new_resolv_conf
+        #chmod --reference=/etc/resolv.conf $new_resolv_conf
+        mv -f $new_resolv_conf /etc/resolv.conf
+        
+    fi
+fi
+
+
+# INIT, SOLICIT, INFOREQ, REQUEST, RENEW, REBIND, RELEASE, IDLE, "???"
+if [ "$state" == "RELEASE" ]; then
+    xmldbc -s /network_mgr/$LAN/ipv6/dhcp_ipv6address ""
+    xmldbc -s /network_mgr/$LAN/ipv6/dhcp_prefix_length ""
+    xmldbc -D /etc/NAS_CFG/config.xml
+fi
+
+if [ "$state" != "REQUEST" -a "$state" != "RENEW" -a "$state" != "REBIND" -a "$state" != "SOLICIT" ]; then
+    return
+fi
+
+# save address
+  DHCP_IPV6_ADDR=$(xmldbc -g "/network_mgr/$LAN/ipv6/dhcp_ipv6address")
+  PREFIX_LENGTH=$(xmldbc -g "/network_mgr/$LAN/ipv6/dhcp_prefix_length")
+if [ -n "$new_iaaddr" ]; then
+    xmldbc -s /network_mgr/$LAN/ipv6/dhcp_ipv6address   $new_iaaddr
+
+    if [ -n "$DHCP_IPV6_ADDR" -a "$DHCP_IPV6_ADDR" != "$new_iaaddr" ]; then
+        ip -6 addr  del $DHCP_IPV6_ADDR/$PREFIX_LENGTH dev $interface_name
+    fi
+fi
+
+# default gateway
+if [ "$dhcpServer" != "" ]; then
+    xmldbc -s /network_mgr/$LAN/ipv6/gateway   $dhcpServer
+fi
+
+if [ "$new_ia_pd_prefix" == "" ]; then
+    xmldbc -s /network_mgr/$LAN/ipv6/dhcp_prefix_length     128
+
+    if [ -n "$new_iaaddr" -a "$DHCP_IPV6_ADDR" != "$new_iaaddr" ]; then
+        GATEWAY=$(xmldbc -g "/network_mgr/$LAN/ipv6/gateway")
+        if [ "$GATEWAY" != "" ]; then
+            #route -A inet6 del ::/0 via $GATEWAY 2>/dev/null        # delete default route
+			ip -6 route del default via $GATEWAY dev $IFACE		# delete default route
+        fi
+
+        route -A inet6 add ::/0 gw $dhcpServer dev $interface_name  # add 
+		ip -6 route add $new_iaaddr/64 dev $interface_name	#? for samba
+    fi
+fi
+
+# save dns
+if [ "$DNS_MANUAL" == "0" ] && [ -n "$new_domain_name_servers" ]; then
+    idx=1
+    for nameserver in $new_domain_name_servers; do
+        #echo $nameserver
+        xmldbc -s /network_mgr/$LAN/ipv6/dns$idx $nameserver
+        idx=`expr $idx + 1`
+    done
+fi
+
+if [ -n "$new_iaaddr" -a "$DHCP_IPV6_ADDR" != "$new_iaaddr" ]; then
+    # save
+    xmldbc -D /etc/NAS_CFG/config.xml
+    #save_mtd  /etc/NAS_CFG/config.xml
+
+    # reload lighty...
+    load_module network $PORTNUM &
+fi
+
+exit 0

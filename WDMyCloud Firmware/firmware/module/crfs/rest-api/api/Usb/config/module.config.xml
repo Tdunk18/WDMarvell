@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+    <name>Usb</name>
+    <version>2.1</version>
+    <description>Module has usb_drive, usb_drives.</description >
+
+    <components>
+        <component>
+            <name>usb_drive</name>
+            <module>Usb</module>
+            <controller_class>\Usb\Controller\UsbDrive</controller_class>
+            <auth_security>
+                <get>NO_AUTH_LAN_USER_WAN</get>
+                <put>USER_AUTH</put>
+                <delete>USER_AUTH</delete>
+            </auth_security>
+        </component>
+        <component>
+            <name>usb_drives</name>
+            <module>Usb</module>
+            <controller_class>\Usb\Controller\UsbDrives</controller_class>
+            <auth_security>
+                <get>NO_AUTH_LAN_USER_WAN</get>
+            </auth_security>
+        </component>
+    </components>
+
+</module>

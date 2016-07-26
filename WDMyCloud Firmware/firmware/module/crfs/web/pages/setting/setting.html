@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="PRAGMA" content="no-cache"> 
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+</head>
+
+<script type="text/javascript">
+function page_load(_sub_page, _sub_page_callback)
+{
+	switch(_sub_page)
+	{
+		case "firmware":	//App install error for fw issue
+			go_sub_page('/web/setting/firmware.html', 'firmware');
+		break;
+		
+		case "media":
+			go_sub_page('/web/setting/media.html', 'media', _sub_page_callback);
+			break;
+
+		default:
+			go_sub_page('/web/setting/general.php', 'general');
+	}
+
+	currentIndex=1;
+	$(".ButtonArrowTop").addClass('gray_out');
+	scrollDivTop_User('SubMenuDiv');
+
+	switch(parseInt(MULTI_LANGUAGE, 10))
+	{
+		case 9:
+			$("#firmware a").css('font-size','13px');
+			break;
+		case 13:
+		{			
+			$("#firmware a").css('font-size','13px');			
+			break;
+		}	
+//		case 15:
+//				var oBrowser = new detectBrowser();
+//				if (oBrowser.isGoogle)
+//				{						
+//					$("#firmware a").css('-webkit-transform','scale(0.80)').css('margin-left','-40px').css('font-size','9px');
+//				}
+//				else
+//				{	
+//					$("#firmware a").css('font-size','9px');
+//				}						
+//			break;		
+		case 16:
+			$("#firmware a").css('font-size','13px');
+			break;	
+	}	
+			
+}
+
+function page_unload()
+{
+}
+</script>
+
+<body>
+<!-- banner 2nd layout -->
+<table cellspacing=0 cellpadding=0 border=0 width="100%">
+	<tr valign="bottom">
+		<td align="left">
+			<div class="header_1" style="width: auto;"><span class="_text" lang="_menu_title" datafld="settings"></span></div>
+		</td>
+		<td style="padding-bottom:15px; text-align: right; font-size: 0px;" align="right" id="tab_buttons">
+		</td>
+	</tr>		
+</table>
+<div class="hr_0"><div class="hr_1"></div></div>
+<!-- banner 2nd layout -->
+
+<!-- left menu -->
+<table cellspacing=0 cellpadding=0 border=0>
+	<tr>
+		<td valign="top">
+			<!--
+			<ul id="settings_settingUp_link" class="ButtonArrowTop" onmousedown="scrollDivDown('SubMenuDiv')">
+				<li class="ButtonArrowUpListUp"></li>
+			</ul>
+			-->
+			<div id="SubMenuDiv" style="margin-top:32px">
+				<div class="LightningSubMenubg" style="height:300px;">
+					<ul class="LightningSubMenu">
+						<li class="LightningSubMenuFirst" id="general"><a id="settings_general_link" href="javascript:go_sub_page('/web/setting/general.php', 'general');"><span class="_text" lang="_menu" datafld="general"></span></a></li>
+						<li class="" id="network"><a id="settings_network_link" href="javascript:go_sub_page('/web/setting/network.php', 'network');"><span class="_text" lang="_menu" datafld="network"></span></a></li>
+						<li class="" id="media"><a id="settings_media_link" href="javascript:go_sub_page('/web/setting/media.html', 'media');"><span class="_text" lang="_menu" datafld="media"></span></a></li>
+						<li class="" id="diagnostics"><a id="settings_utilities_link" href="javascript:go_sub_page('/web/setting/diagnostics.html', 'diagnostics');"><span class="_text" lang="_menu" datafld="utilities"></span></a></li>
+						<li class="" id="notifications"><a id="settings_notifications_link" href="javascript:go_sub_page('/web/setting/notifications.html', 'notifications');"><span class="_text" lang="_menu" datafld="email"></span></a></li>
+						<li class="LightningSubMenuEnd" ondblclick="return false;" id="firmware"><a id="settings_firmware_link" href="javascript:go_sub_page('/web/setting/firmware.html', 'firmware');"><span class="_text" lang="_menu" datafld="firmware_update"></span></a></li>
+					</ul>
+				</div>
+			</div>
+			<!--
+			<ul id="settings_settingDown_link" class="ButtonArrowBottom" onmousedown="scrollDivUp('SubMenuDiv')">
+				<li class="ButtonArrowDownListUp"></li>
+			</ul>
+			-->
+			<div style="height: 0px; font-size: 0px;">&nbsp;</div>
+		</td>
+		<td valign="top">	
+			<div class="r_content mainbody" id="mainbody" style="border:0px solid red;"></div>
+		</td>
+	</tr>
+</table>
+
+</body>
+</html>	

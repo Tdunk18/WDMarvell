@@ -1,0 +1,114 @@
+#!/bin/sh
+
+DISPATCHER_PIPE=/tmp/WDMCDispatcher.pipe
+WDMC_NOTIFICATION_SOCKET=/tmp/WDMCNotification.socket
+INSTALL_DIR=/usr/local/wdmcserver
+export LC_ALL=en_US.UTF-8
+
+export LD_LIBRARY_PATH=$INSTALL_DIR/lib:$INSTALL_DIR/bin
+DAEMON=$INSTALL_DIR/bin/wdmcserver
+PIDFILE=/var/run/wdmcserver.pid
+
+ORION_DB=/usr/local/nas/orion/orion.db
+ADDVOLUMES=$INSTALL_DIR/bin/AddVolumes.py
+RMVOLUMESDB=$INSTALL_DIR/bin/RmVolumesDB.py
+GET_EXTERNAL_SCAN=/usr/local/sbin/getExternalStorageScan.sh
+
+test -x $DAEMON || exit 5
+
+# Use this function to launch the daemon w/ "share" group ownership
+launch_as_newgrp()
+{
+newgrp share <<FOO
+umask 0
+cd $INSTALL_DIR/bin
+$DAEMON $EXTERNALSCAN >& /dev/null &
+FOO
+}
+
+
+case $1 in
+	start)
+		echo "Starting wdmcserver"
+		renice 0 -p $$
+		mkfifo $DISPATCHER_PIPE
+		chmod 777 $DISPATCHER_PIPE
+		ulimit -s 256
+		export WDMC_CHILD_MEMSW_LIMIT=314572800
+		if [ -f $GET_EXTERNAL_SCAN ]; then
+			$GET_EXTERNAL_SCAN | grep 0 > /dev/null
+			if [ $? -eq 0 ]; then
+				EXTERNALSCAN="-x off"
+			else
+				EXTERNALSCAN="-x on"
+			fi
+		else
+			EXTERNALSCAN="-x off"
+		fi
+
+		export WD_HDD="/shares/Volume_1/.USB"
+		export MAGICK_CONFIGURE_PATH=$INSTALL_DIR/lib/ImageMagick-6.7.9/config
+		export MAGICK_TMPDIR=/shares/.wdmc
+		launch_as_newgrp
+		# Now wait for the socket to be ready
+		while [ ! -S $WDMC_NOTIFICATION_SOCKET ]; do
+			sleep 1
+		done
+		if [ -f $ORION_DB ] && [ -f $ADDVOLUMES ]; then
+			python $ADDVOLUMES
+		fi
+		;;
+	stop)
+		echo "Stopping wdmcserver"
+		kill -INT `pidof wdmcserver`
+		# Wait a little and remove stale IPC
+		sleep 5
+		pidofwdmcserver=`pidof wdmcserver`
+		if [ ! -z $pidofwdmcserver ]; then
+			kill -9 `pidof wdmcserver`
+			echo "Killing on second try"
+		fi
+		rm -f $WDMC_NOTIFICATION_SOCKET
+		;;
+	reset)
+		$0 stop
+		# Wait a little
+		sleep 1
+		export WD_HDD="/shares/Volume_1/.USB"
+
+		if [ -f $ORION_DB ] && [ -f $RMVOLUMESDB ]; then
+			python $RMVOLUMESDB
+		fi
+		$0 start
+		;;
+	restart)
+		$0 stop && sleep 1 && $0 start
+		;;
+	try-restart)
+		if $0 status >/dev/null; then
+			$0 restart
+		else
+			exit 0
+		fi
+		;;
+	status)
+		pidof wdmcserver >/dev/null
+		status=$?
+		if [ $status -eq 0 ]; then
+			echo "wdmcserver is running."
+		else
+			echo "wdmcserver is not running."
+		fi
+		exit $status
+		;;
+	info)
+		cd $INSTALL_DIR/bin
+		$DAEMON -i
+		exit 0
+		;;
+	*)
+		echo "Usage: $0 {start|stop|restart|reset|try-restart|status|info}"
+		exit 2
+		;;
+esac
+

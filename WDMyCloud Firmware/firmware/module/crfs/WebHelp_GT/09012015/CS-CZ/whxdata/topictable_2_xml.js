@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><ck><di ky=\"106\" rd=\"what_is_raid_storage.htm|Co je to úložiště RAID?\" ct=\"Co je to úložiště RAID RAID (Redundant Array of Independent Disks)  umožňuje  ukládat stejná data na ...\" bc=\"\"/></ck>";

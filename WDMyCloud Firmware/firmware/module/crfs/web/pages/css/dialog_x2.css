@@ -1,0 +1,47 @@
+.WDLabelDiag{
+	display:none;
+	width:750px;
+	height:600px;
+
+	position:absolute;
+	margin:5% 0% 0% 0%;
+	top:50%;
+	left:50%;
+	
+	/*margin-top:150px;
+	margin-left:-10px;*/
+	
+
+	background-color:#282828;
+	FONT-FAMILY: Helvetica;
+	color:#85939C;
+	
+	border-radius:10px 10px 10px 10px;
+	-webkit-border-top-left-radius:10px;
+	-webkit-border-top-right-radius:10px;
+	-moz-border-radius:10px 10px 10px 10px;
+}
+.WDLabelBodyDialogue{
+	position: relative;
+	font-size:14px;
+	color:#85939C;
+	width:650px;
+	height:420px;
+	top:40px;
+	left:42px;
+ 	word-wrap:break-word;
+	/*border: 1px solid #ffffff;*/
+}
+div.hr {
+  height: 3px;
+  width:690px;
+  background: #fff url(../images/dialog_line.png) repeat-x scroll center;
+  position: relative;
+  top:25px;
+}
+.dialog_content{
+	width:660px;
+	height:440px;
+	overflow:auto;
+	/*border: 1px solid red;*/
+}

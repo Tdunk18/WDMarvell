@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><cki><ck fm=\"Informacje o statusie dysku\" to=\"Formatowanie dysku urządzenia My Cloud\" num=\"55\"/><ck fm=\"Konfigurowanie opcji połączenia\" to=\"Tworzenie udziału\" num=\"56\"/><ck fm=\"Usuwanie udziału\" to=\"Co to jest pamięć masowa RAID?\" num=\"41\"/></cki>";

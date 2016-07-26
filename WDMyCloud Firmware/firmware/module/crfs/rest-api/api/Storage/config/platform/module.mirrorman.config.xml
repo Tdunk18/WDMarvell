@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<components>
+		<component>
+			<name>raid_drives_status</name>
+			<module>Storage</module>
+			<controller_class>\Storage\Raid\Controller\RaidDrivesStatus
+			</controller_class>
+			<auth_security>
+				<all>NO_ACCESS</all>
+			</auth_security>
+		</component>
+		<component>
+			<name>raid_configuration</name>
+			<module>Storage</module>
+			<controller_class>\Storage\Raid\Controller\RaidConfiguration
+			</controller_class>
+			<auth_security>
+				<all>NO_ACCESS</all>
+			</auth_security>
+		</component>
+		<component>
+			<name>user_raid_status</name>
+			<module>Storage</module>
+			<controller_class>\Storage\Raid\Controller\UserRaidStatus
+			</controller_class>
+			<auth_security>
+				<all>NO_ACCESS</all>
+			</auth_security>
+		</component>
+	</components>
+</module>

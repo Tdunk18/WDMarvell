@@ -1,0 +1,144 @@
+#!/bin/bash
+#
+# Common routines for all tests
+#
+
+_fail()
+{
+	echo "$*" | tee -a $RESULTS
+	exit 1
+}
+
+_not_run()
+{
+	echo "    [NOTRUN] $*"
+	exit 0
+}
+
+run_check()
+{
+	echo "############### $@" >> $RESULTS 2>&1
+	"$@" >> $RESULTS 2>&1 || _fail "failed: $@"
+}
+
+# same as run_check but the stderr+stdout output is duplicated on stdout and
+# can be processed further
+run_check_stdout()
+{
+	echo "############### $@" >> $RESULTS 2>&1
+	"$@" 2>&1 | tee -a $RESULTS || _fail "failed: $@"
+}
+
+check_prereq()
+{
+	if ! [ -f $TOP/$1 ]; then
+		_fail "Failed prerequisities: $1";
+	fi
+}
+
+check_image()
+{
+	local image
+
+	image=$1
+	echo "testing image $(basename $image)" >> $RESULTS
+	$TOP/btrfs check $image >> $RESULTS 2>&1
+	[ $? -eq 0 ] && _fail "btrfs check should have detected corruption"
+
+	run_check $TOP/btrfs check --repair $image
+	run_check $TOP/btrfs check $image
+}
+
+# Process all image dumps in a given directory,
+# - raw btrfs filesystem images, suffix .raw
+# - dtto compressed by XZ, suffix .raw.xz
+# - meta-dump images with suffix .img
+# - dtto compressed by XZ, suffix .img.xz
+check_all_images()
+{
+	dir=$1
+	for image in $(find $dir \( -iname '*.img' -o	\
+				-iname '*.img.xz' -o 	\
+				-iname '*.raw' -o 	\
+				-iname '*.raw.xz' \) | sort)
+	do
+		cleanme=
+		case "$image" in
+		*.img)
+			rm -f $image.restored
+			: ;;
+		*.img.xz)
+			xz --decompress --keep "$image" || \
+				_fail "failed to decompress image $image"
+			image=${image%%.xz}
+			rm -f $image.restored
+			cleanme=$image
+			;;
+		*.raw)
+			cp --sparse=auto $image $image.restored
+			;;
+		*.raw.xz)
+			xz --decompress --keep "$image" || \
+				_fail "failed to decompress image $image"
+			image=${image%%.xz}
+			mv "$image" "$image".restored
+			;;
+		esac
+
+		if ! [ -f $image.restored ]; then
+			echo "restoring image $(basename $image)" >> $RESULTS
+			$TOP/btrfs-image -r $image $image.restored || \
+				_fail "failed to restore image $image"
+		fi
+
+		check_image $image.restored
+
+		rm -f $image.restored $cleanme
+	done
+}
+
+# some tests need to mount the recovered image and do verifications call
+# 'setup_root_helper' and then check for have_root_helper == 1 if the test
+# needs to fail otherwise; using sudo by default for now
+SUDO_HELPER=
+NEED_SUDO_VALIDATE=unknown
+export SUDO_HELPER
+export NEED_SUDO_VALIDATE
+root_helper()
+{
+	if [ $UID -eq 0 ]; then
+		"$@"
+	else
+		if [ "$NEED_SUDO_VALIDATE" = 'yes' ]; then
+			sudo -v -n &>/dev/null || \
+				_not_run "Need to validate sudo credentials"
+			sudo -n "$@"
+		elif [ "$NEED_SUDO_VALIDATE" = 'no' ]; then
+			sudo -n /bin/true &> /dev/null || \
+				_not_run "Need to validate sudo user settings"
+			sudo -n "$@"
+		else
+			# should not happen
+			_not_run "Need to validate root privileges"
+		fi
+	fi
+}
+
+setup_root_helper()
+{
+	if [ $UID -eq 0 ]; then
+		return
+	fi
+
+	# Test for old sudo or special settings, which make sudo -v fail even
+	# if user setting is NOPASSWD
+	sudo -n /bin/true &>/dev/null && NEED_SUDO_VALIDATE=no
+
+	# Newer sudo or default sudo setting
+	sudo -v -n &>/dev/null && NEED_SUDO_VALIDATE=yes
+
+	if [ "$NEED_SUDO_VALIDATE" = 'unknown' ]; then
+		_not_run "Need to validate root privileges"
+	fi
+	SUDO_HELPER=root_helper
+}

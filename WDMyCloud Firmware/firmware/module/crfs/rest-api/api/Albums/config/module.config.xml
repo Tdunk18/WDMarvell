@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+    <name>Albums</name>
+    <version>2.1</version>
+    <description>Albums has album, album_demo, album_item, album_item_contents, album_access, album_contents, album_info, album_item_info, album_access_info, and album_item_new components.</description >
+
+    <components>
+        <component>
+            <name>albums</name>
+            <module>Albums</module>
+            <controller_class>Albums\Controller\AlbumController</controller_class>
+            <auth_security>
+                <all>USER_AUTH_ALL</all>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>album_items</name>
+            <module>Albums</module>
+            <controller_class>Albums\Controller\AlbumItems</controller_class>
+            <auth_security>
+                <all>USER_AUTH_ALL</all>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>album_item_contents</name>
+            <module>Albums</module>
+            <controller_class>Albums\Controller\AlbumItemContents</controller_class>
+            <auth_security>
+                <all>USER_AUTH_ALL</all>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>album_access</name>
+            <module>Albums</module>
+            <controller_class>Albums\Controller\AlbumAccess</controller_class>
+            <auth_security>
+                <all>USER_AUTH_ALL</all>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>album_contents</name>
+            <module>Albums</module>
+            <controller_class>Albums\Controller\AlbumContents</controller_class>
+            <auth_security>
+                <all>USER_AUTH_ALL</all>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>album_info</name>
+            <module>Albums</module>
+            <controller_class>Albums\Controller\AlbumInfo</controller_class>
+            <auth_security>
+                <get>USER_AUTH</get>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>album_item_info</name>
+            <module>Albums</module>
+            <controller_class>Albums\Controller\AlbumItemInfo</controller_class>
+            <auth_security>
+                <get>USER_AUTH</get>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>album_access_info</name>
+            <module>Albums</module>
+            <controller_class>Albums\Controller\AlbumAccessInfo</controller_class>
+            <auth_security>
+                <get>USER_AUTH</get>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>album_item_new</name>
+            <module>Albums</module>
+            <controller_class>Albums\Controller\AlbumItem</controller_class>
+            <auth_security>
+                <all>USER_AUTH_ALL</all>
+            </auth_security>
+        </component>
+    </components>
+</module>

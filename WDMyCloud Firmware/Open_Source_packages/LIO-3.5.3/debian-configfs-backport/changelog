@@ -1,0 +1,5 @@
+configfs-backport (0.0.2-1) unstable; urgency=low
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Nicholas A. Bellinger (nab) <nab@risingtidesystems.com>  Wed, 20 Jan 2010 01:54:25 -0800

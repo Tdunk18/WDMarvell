@@ -1,0 +1,177 @@
+<!-- dialog -->
+<div id="CloudDiag" class="WDLabelDiag" style="display:none">
+	<div class="WDLabelHeaderDialogue2 WDLabelHeaderDialogueCloudIcon" id="editCloudDiag_title"></div>
+	<div align="center"><div class="hr"><hr/></div></div>
+	
+	<!-- editCloudMailDiag -->
+	<div id="editCloudMailDiag">
+		<div class="WDLabelBodyDialogue">
+			<div class="_text" lang="_cloud" datafld="update_desc"></div>
+			<div style="margin-top:20px;">
+				<table border="0" cellspacing="0" cellpadding="0" height="0">
+					<tr>
+						<td class="tdfield"><span class="_text" lang="_cloud" datafld="old_mail"></span></td>
+						<td class="tdfield_padding tdfield_padding_left_10">
+							<div id="cloud_old_mail_address"></div>
+						</td>
+					</tr>
+					<tr>
+						<td class="tdfield"><span class="_text" lang="_cloud" datafld="new_mail"></span>*</td>
+						<td class="tdfield_padding tdfield_padding_left_10">
+							<input type="text" id="cloud_mail_text" name="cloud_mail_text">
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div style="float:right;">*<span class="_text" lang="_cloud" datafld="required"></span></div>
+		</div><!-- WDLabelBodyDialogue end -->
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonMarginLeft_40px close" id="cloud_editMailClose_button"><span class="_text" lang="_button" datafld="close"></span></button>
+		<button type="button" class="ButtonRightPos2" id="cloud_editMailSave_button" onclick="post_edit_email();"><span class="_text" lang="_button" datafld="save"></span></button>
+	</div>
+	
+	<!-- cloudAddAccessDiag (home.html)-->
+	<div id="cloudAddAccessDiag">
+		<div class="WDLabelBodyDialogue">
+			<div class="_text" lang="_cloud" datafld="desc"></div>
+			<div class="_text tdfield_padding_top_14" lang="_cloud" datafld="step_desc"></div>
+			<div class="hrBottom2"><hr/></div>
+			<table border="0" cellspacing="0" cellpadding="0" height="0">
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_cloud" datafld="sel_user">Select a User</span></td>
+					<td class="tdfield_padding">
+						<div class="select_menu" id="cloud_user_select"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonMarginLeft_40px close" id="home_cloudCancel_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" id="home_cloudGetCode_button" onclick="get_code($('#home_cloudUser_select').attr('rel'),'home');"><span class="_text" lang="_cloud" datafld="get"></span></button>
+	</div>
+					
+</div>
+<div id="CloudGetDiag" class="WDLabelDiag" style="display:none">
+	<div class="WDLabelHeaderDialogue2 WDLabelHeaderDialogueCloudIcon" id="CloudGetDiag_title"></div>
+	<div align="center"><div class="hr"><hr/></div></div>
+	<!-- cloudGetCodeDiag -->
+	<div id="cloudGetCodeDiag">
+		<div class="WDLabelBodyDialogue">
+			<div class="_text" lang="_cloud" datafld="add_desc"></div>
+			<br>
+			<table border="0" cellspacing="0" cellpadding="0" height="0">
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_cloud" datafld="code"></span></td>
+					<td class="tdfield_padding"><div id="code_info"></div></td>
+				</tr>
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_cloud" datafld="expiration"></span></td>
+					<td class="tdfield_padding"><div id="expiration_info" class="shortDateFormat"></div></td>
+				</tr>
+			</table>
+		</div>
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonRightPos2 close" id="cloud_getCodeOK_button"><span class="_text" lang="_button" datafld="Ok"></span></button>
+	</div>	
+</div>
+<div id="CloudOptionDiag" class="WDLabelDiag" style="display:none">
+	<div class="WDLabelHeaderDialogue2 WDLabelHeaderDialogueCloudIcon" id="CloudOptionDiag_title"></div>
+	<div align="center"><div class="hr"><hr/></div></div>
+	<!-- optionDiag -->
+	<div id="optionDiag">
+		<div class="WDLabelBodyDialogue">
+			<div class="_text tdfield_padding" lang="_cloud" datafld="option_desc"></div>
+			<div class="tdfield_padding"></div>
+			<div class="hrBottom2"><hr/></div>
+			<table border="0" cellspacing="0" cellpadding="0" height="0">
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_cloud" datafld="connectivity"></span></td>
+					<td class="tdfield_padding">
+						<table border="0" cellspacing="0" cellpadding="0" height="0">
+							<tr>
+								<td>
+									<span id="cloud_connectivity" style="display:none"><button class="left_button" value="auto"><span class="_text" lang="_cloud" datafld="auto">Auto</span></button><button class="middle_button" value="manual"><span class="_text" lang="_cloud" datafld="manual">Manual</span></button><button class="right_button" value="xp"><span class="_text" lang="_cloud" datafld="win">Win XP</span></button></span>
+								</td>
+								<td class="tdfield_padding_left_10"><div class="TooltipIcon" id="tip_connecitvity"></div></td>
+							</tr>
+						</table>						
+					</td>
+				</tr>
+				<tr>
+					<td class="tdfield"></td>
+                    <td class="tdfield_padding">
+                    	<div id="connectivity_desc"></div>
+                    </td>
+				</tr>
+				<tr id="port_tr" style="display:none">
+					<td colspan="2">
+						<table id="option_tb" border="0" cellspacing="0" cellpadding="0" height="0">
+							<tr>
+								<td class="tdfield">
+									<div class="_text" lang="_cloud" datafld="part1"></div>
+								</td>
+								<td class="tdfield_padding">
+									<input name="settings_generalCloudHTTPPort_text" id="settings_generalCloudHTTPPort_text" type="text" class="input_x2">
+								</td>
+							</tr>
+							<tr>
+								<td class="tdfield">
+									<div class="_text" lang="_cloud" datafld="part2"></div>
+								</td>
+								<td class="tdfield_padding">
+									<input name="settings_generalCloudHTTPSPort_text" id="settings_generalCloudHTTPSPort_text" type="text" class="input_x2">
+								</td>
+							</tr>
+						</table>	
+					</td>
+				</tr>
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_cloud" datafld="wd2go_db"></span></td>
+					<td class="tdfield_padding">
+						<table border="0" cellspacing="0" cellpadding="0" height="0">
+							<tr>
+								<td><button type="button" onclick="wd2go_db_rebuild()"><span class="_text" lang="_cloud" datafld="rebuild"></span></button></td>
+								<td class="tdfield_padding_left_10"><div class="TooltipIcon" id="tip_cloud_rebuild"></div></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<div style="float:right;display:none;margin-top: -15px;" id="required_div">*<span class="_text" lang="_cloud" datafld="required"></span></div>
+		</div>
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonMarginLeft_40px close" ><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" onclick="set_cloud_option()"><span class="_text" lang="_button" datafld="save"></span></button>
+	</div>	
+</div>
+
+<div id="DashboardCloudDiag" class="WDLabelDiag" style="display:none">
+	<div class="WDLabelHeaderDialogue2 WDLabelHeaderDialogueCloudIcon" id="DashboardCloudDiag_title"></div>
+	<div align="center"><div class="hr"><hr/></div></div>
+	<!-- DashboardCloudAccessDiag -->
+	<div id="DashboardCloudAccessDiag">
+		<div class="WDLabelBodyDialogue">
+			<table id="DashboardCloudAccess_tb" border="0" cellspacing="0" cellpadding="0" height="0">
+				<tr>
+					<td class="tdfield">
+						<div class="_text" lang="_cloud" datafld="part1"></div>
+					</td>
+					<td class="tdfield_padding">
+						<input name="settings_generalCloudHTTPPort_text" id="settings_generalCloudHTTPPort_text" type="text" class="input_x2">
+					</td>
+				</tr>
+				<tr>
+					<td class="tdfield">
+						<div class="_text" lang="_cloud" datafld="part2"></div>
+					</td>
+					<td class="tdfield_padding">
+						<input name="settings_generalCloudHTTPSPort_text" id="settings_generalCloudHTTPSPort_text" type="text" class="input_x2">
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonMarginLeft_40px close" ><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" onclick="set_port('#DashboardCloudAccess_tb')"><span class="_text" lang="_button" datafld="save"></span></button>
+	</div>
+</div>

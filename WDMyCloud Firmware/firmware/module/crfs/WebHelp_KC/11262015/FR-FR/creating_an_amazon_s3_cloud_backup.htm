@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="MS-HAID" content="Creating an Amazon S3 Cloud Backup" />
+<meta http-equiv="Content-Language" content="fr-FR" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Création d'une sauvegarde sur le cloud Amazon S3</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Sauvegarde de votre cloud personnel\nSauvegardes sur le cloud\nCréation d'une sauvegarde sur le cloud Amazon S3");
+addButton("show",BTN_TEXT,"Afficher","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left; background: #fafafa\"> ");
+AddMasterBreadcrumbs("index.htm", "", "&gt;", "Home", "welcome.htm");
+document.write("<a href=\"creating_a_usb_backup.htm\">Sauvegarde de votre cloud personnel<\/a> &gt; <a href=\"updates_about.htm\">Sauvegardes sur le cloud<\/a> &gt; Création d'une sauvegarde sur le cloud Amazon S3<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(0);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Création d'une sauvegarde sur le cloud Amazon S3</h1>
+<p class="Body"><span style="font-weight: bold;">Remarque&#160;</span>: 
+ avant de créer votre sauvegarde sur le cloud, inscrivez-vous au service 
+ Amazon&#160;S3 sur le site <a href="http://aws.amazon.com/" target="_blank">http://aws.amazon.com/</a>.</p>
+<p class="Body">Une fois votre compte Amazon&#160;S3 configuré, procédez 
+ comme suit pour créer une sauvegarde sur le cloud.</p>
+<ol style="list-style: square;">
+	<li style="list-style: none; display: inline;"><ol style="list-style: decimal;">
+		<li class="n1">Cliquez sur <b>Sauvegarde</b>.</li>
+		<li class="n1">Cliquez sur <b>Sauvegardes</b> sur le <span style="font-weight: bold;">cloud</span>.</li>
+		<li class="n1">Cliquez sur le bouton <b>Amazon S3</b> en haut de 
+		 l'écran.</li>
+		<li class="n1">Cliquez sur <b>Créer</b>.</li>
+		<li class="n1">Saisissez un nom de tâche pour votre sauvegarde 
+		 sur le cloud.</li>
+		<li class="n1">Cliquez sur <b>Suivant</b>.</li>
+		<li class="n1">Saisissez les informations suivantes fournies par 
+		 Amazon S3&#160;:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b>Région</b>&#160;: sélectionnez la région utilisée 
+		 pour votre cloud dans le menu déroulant.</li>
+		<li class="b1"><b style="font-weight: bold;">Clé d'accès</b>&#160;: 
+		 saisissez la clé d'accès fournie par Amazon S3.</li>
+		<li class="b1"><b style="font-weight: bold;">Clé privée</b>&#160;: 
+		 saisissez la clé privée fournie par Amazon S3.</li>
+		<li class="b1">Chemin d'accès distant&#160;: saisissez le chemin 
+		 d'accès distant de votre cloud. Il s'agit normalement de votre 
+		 nom de paquet.</li>
+	</ul>
+	<ol start="8" style="list-style: decimal;">
+		<li class="n1">Cliquez sur <b>Suivant</b>.</li>
+		<li class="n1">Dans le champ Type, sélectionnez l'une des options 
+		 suivantes&#160;:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b>Chargement&#160;:</b> sauvegarde vos données 
+		 My Cloud dans votre 
+		 compartiment Amazon S3.</li>
+		<li class="b1"><b>Téléchargement&#160;:</b> Sauvegarde votre compartiment 
+		 Amazon S3 sur votre serveur My Cloud.</li>
+	</ul>
+	<ol start="10" style="list-style: decimal;">
+		<li class="n1">Dans le champ Type de sauvegarde, sélectionnez le 
+		 type de sauvegarde que vous souhaitez réaliser dans le menu déroulant. 
+		 Les options incluent&#160;:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold;">Remplacer les fichiers 
+		 existants</b>&#160;: remplace les fichiers du dossier cible dont 
+		 les noms sont identiques à ceux des fichiers sources.</li>
+		<li class="b1"><span style="font-weight: bold;">Sauvegarde complète</span>&#160;: 
+		 à chaque sauvegarde, crée un dossier séparé contenant toutes les 
+		 données sauvegardées.</li>
+		<li class="b1"><span style="font-weight: bold;">Sauvegarde incrémentielle</span>&#160;: 
+		 remplace les fichiers dont les fichiers sources sont plus récents 
+		 que les fichiers cibles.</li>
+	</ul>
+	<ol start="11" style="list-style: decimal;">
+		<li class="n1">Cliquez sur <span style="font-weight: bold;">Suivant</span>.</li>
+		<li class="n1">Dans le champ Chemin d'accès local, saisissez le 
+		 chemin de la sauvegarde sur votre dispositif My Cloud.</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">Cliquez sur <span style="font-weight: bold;">Parcourir</span> 
+		 pour indiquer l'emplacement de votre sauvegarde sur le dispositif.<br />
+		(Volume_1/sauvegarde, par exemple)</li>
+	</ul>
+	<ol start="13" style="list-style: decimal;">
+		<li class="n1">Cliquez sur <img src="graphics/toggle_button.png" alt="" width="20" height="15" border="0" /> pour activer la 
+		 fonctionnalité Mise à jour auto. Cela permet de mettre automatiquement 
+		 votre sauvegarde à jour selon votre calendrier.</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">Si vous activez la fonctionnalité Mise à jour auto.&#160;:</li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: circle;">
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">Sélectionnez 
+			 la fréquence de mise à jour auto.&#160;: Quotidienne, Hebdomadaire 
+			 ou Mensuelle.</p></li>
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">Sélectionnez 
+			 l'heure de la mise à jour auto. dans le menu déroulant (option 
+			 Quotidienne).</p></li>
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">Sélectionnez 
+			 la date et l'heure de la mise à jour auto. dans le menu déroulant 
+			 (option Hebdomadaire ou Mensuelle).</p></li>
+		</ul></li>
+	</ul>
+	<ol start="14" style="list-style: decimal;">
+		<li class="n1">Si vous ne sélectionnez pas la mise à jour auto., 
+		 indiquez si vous souhaitez commencer la sauvegarde maintenant 
+		 dans le champ Sauvegarder maintenant.</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">Sélectionnez Oui pour commencer votre sauvegarde 
+		 maintenant.</li>
+	</ul>
+	<ol start="15" style="list-style: decimal;">
+		<li class="n1">Cliquez sur <b>Suivant</b>.</li>
+		<li class="n1">Révisez vos paramètres, puis cliquez sur <b>Terminer</b>. 
+		 Votre sauvegarde sur le cloud Amazon S3 est créée. La nouvelle 
+		 tâche s'affiche dans la section de la file d'attente sur la page 
+		 de sauvegarde Amazon S3.</li>
+	</ol>
+	<p class="Body" style="margin-left: 60px;"><span style="font-weight: bold;">Remarque&#160;</span>: 
+	 accédez à votre compartiment de sauvegarde sur le cloud Amazon S3 
+	 pour visualiser les sauvegardes de votre dispositif.</p>
+	<p class="ListContinue2CxSpLast">&#160;</p></li>
+</ol>
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt;">© 2015 Western Digital Technologies, Inc. 
+	 <span style="color: rgb(75, 90, 104); font-size: 10.6666669845581px; 
+			 line-height: 21.3333339691162px; orphans: auto; widows: 1; 
+			 -webkit-text-stroke-width: 0px; display: inline	 ! important ; 
+			 float: none; background-color: rgb(250, 250, 250);">Tous droits 
+	 réservés.</span> </p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>

@@ -1,0 +1,56 @@
+#!/bin/bash
+set -e
+
+BINARY_NAME="docker-$VERSION"
+BINARY_EXTENSION="$(binary_extension)"
+BINARY_FULLNAME="$BINARY_NAME$BINARY_EXTENSION"
+
+# WD: add CC_VAL, GO_BUILD_FLAGS 
+CC_VAL=
+GO_BUILD_FLAGS=
+
+if [ ! -z "${TOOLCHAIN_PATH}" ]; then
+    export PATH=${PATH}:${TOOLCHAIN_PATH}
+fi
+
+if [ "${GOARCH}" == "arm" ]; then
+    CC_VAL=${ARM_CC}
+    
+    # Get rid of apparmor selinux from buildtags for ARM
+    BUILDFLAGS=( "${BUILDFLAGS[@]/apparmor}" )
+    BUILDFLAGS=( "${BUILDFLAGS[@]/selinux}" )
+    CGO_LDFLAGS="$CGO_LDFLAGS -lsqlite3 -ldl"  ## Workaround for the sqlite3 linking issue
+    
+    GO_BUILD_FLAGS=" -x -v"  ## print more verbose messages
+    LDFLAGS+=" -w -R 32768"
+fi
+# End WD
+
+source "${MAKEDIR}/.go-autogen"
+
+echo "Building: $DEST/$BINARY_FULLNAME"
+
+echo "CGO_LDFLAGS: $CGO_LDFLAGS"
+echo "LDFLAGS: $LDFLAGS"
+echo "BUILDFLAGS: ${BUILDFLAGS[@]}"
+
+env
+
+CGO_LDFLAGS="$CGO_LDFLAGS" \
+CGO_ENABLED=1 \
+CC_FOR_TARGET=${CC_VAL} \
+CC=${CC_VAL} \
+go build \
+    ${GO_BUILD_FLAGS} \
+	-o "$DEST/$BINARY_FULLNAME" \
+	"${BUILDFLAGS[@]}" \
+	-ldflags "
+		$LDFLAGS
+		$LDFLAGS_STATIC_DOCKER
+	" \
+	./docker
+
+echo "Created binary: $DEST/$BINARY_FULLNAME"
+ln -sf "$BINARY_FULLNAME" "$DEST/docker$BINARY_EXTENSION"
+
+hash_files "$DEST/$BINARY_FULLNAME"

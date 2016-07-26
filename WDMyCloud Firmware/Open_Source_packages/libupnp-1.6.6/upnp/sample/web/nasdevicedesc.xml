@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<root xmlns="urn:schemas-upnp-org:device-1-0">
+	<specVersion>
+		<major>1</major>
+		<minor>0</minor>
+	</specVersion>
+	<device>
+		<deviceType>urn:schemas-wd-com:device:WdNAS:1</deviceType>
+		<friendlyName>WDMyCloudEX4</friendlyName>
+		<manufacturer>Western Digital Corporation</manufacturer>
+		<manufacturerURL>http://www.wdc.com</manufacturerURL>
+		<modelDescription>WD My Cloud 4-Bay Network Storage</modelDescription>
+		<modelName>WDMyCloudEX4</modelName>
+		<modelNumber>LT4A</modelNumber>
+		<modelURL>http://products.wd.com/WDMyCloudEX4</modelURL>
+		<UDN>uuid:73656761-7465-7375-636b-00114a666101</UDN>
+		<serviceList>
+			<service>
+				<serviceType>urn:schemas-microsoft-com:service:NULL:1</serviceType>
+				<serviceId>urn:microsoft-com:serviceId:NULL</serviceId>
+				<SCPDURL>/empty.xml</SCPDURL>
+				<controlURL>NULL/control</controlURL>
+				<eventSubURL />
+			</service>
+		</serviceList>
+	</device>
+</root>

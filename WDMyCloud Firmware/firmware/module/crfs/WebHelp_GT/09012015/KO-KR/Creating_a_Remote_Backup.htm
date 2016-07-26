@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>원격 백업 만들기</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("개인 클라우드 백업\n원격 백업\n원격 백업 만들기");
+addButton("show",BTN_TEXT,"표시","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("index.htm", "", ">", "홈", "welcome.htm");
+document.write("<a href=\"Creating_a_USB_Backup.htm\">개인 클라우드 백업<\/a> > <a href=\"Creating_a_Remote_Backup.htm\">원격 백업<\/a> > 원격 백업 만들기<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1 style="background-color: Transparent;">원격 백업 만들기</h1>
+<p class="Body">원격 백업을 사용하면 My Cloud Mirror 장치를 네트워크의 다른 서버나 네트워크 외부의 다른 서버에 백업할 수 있습니다.&#160;&#160;다음 단계를 사용하여 My Cloud Mirror 서버의 원격 백업을 만듭니다.</p>
+<ol style="list-style: decimal;">
+	<li style="list-style: none; display: inline;"><ol style="list-style: decimal;">
+		<li class="n1"><b><b>백업</b></b>을 클릭합니다.</li>
+		<li class="n1"><b>원격 백업</b>을 클릭합니다.</li>
+		<li class="n1"><span style="font-weight: bold;">작업 만들기</span> 버튼을 클릭합니다.</li>
+		<li class="n1">작업 이름을 입력합니다.</li>
+		<li class="n1">원격 서버 드롭다운에서 서버를 선택합니다.</li>
+		<li class="n1">&#160;원격 IP 필드에 원격 백업 장치의 IP 주소를 입력합니다.<br />(예: 192.168.1.16)</li>
+		<li class="n1">암호 필드에 원격 백업 장치의 암호를 입력합니다.</li>
+		<li class="n1">SSH 사용자 이름을 입력합니다.</li>
+		<li class="n1">SSH 암호 확인 필드에 암호 SSH 암호를 입력합니다.</li>
+		<li class="n1"><span style="font-weight: bold;">찾아보기</span>를 클릭하여 소스 폴더를 선택합니다.</li>
+		<li class="n1">원격 백업 폴더의 목록에서 보호하려는 하나 이상의 공유 디렉터리를 확인합니다.</li>
+		<li class="n1"><span style="font-weight: bold;">확인</span>을 클릭합니다.</li>
+		<li class="n1">원격 백업 디렉터리를 선택하려면 찾아보기를 클릭합니다.</li>
+		<li class="n1">디렉터리를 선택하고 확인을 클릭합니다.</li>
+		<li class="n1">드롭다운 메뉴에서 백업 유형을 선택합니다.</li>
+		<li class="n1">백업 일정을 설정하려면 반복 옆에 있는 토글 아이콘 <img alt="" src="Graphics/toggle_button.png" style="border: none;" 
+								 border="0" />을 클릭합니다.</li>
+		<li class="n1">전송 암호화를 설정하려면 토글 아이콘 <img src="Graphics/toggle_button.png" alt="" style="border: none;" 
+				 border="0" />을 클릭합니다.</li>
+		<li class="n1"><span style="font-weight: bold;"><b>만들기</b></span>를 클릭합니다.</li>
+	</ol></li>
+</ol>
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt;">© 2015 Western Digital Technologies, Inc. 
+	 All rights reserved.</p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>

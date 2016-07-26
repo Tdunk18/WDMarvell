@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="PRAGMA" content="no-cache"> 
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+<style>
+.StorageDiskStatusSMARTDataDiv{
+	background-color :#ECECEC;			
+}
+.StorageDiskStatusSMARTDataDiv .StorageDiskStatusSMARTDataUL{
+	margin-left:-40px;
+	margin-bottom:0px;		
+}
+.StorageDiskStatusSMARTDataDiv .StorageDiskStatusSMARTDataUL li{
+	width:922px;
+	height:40px;
+	/*border-top: 1px solid #2b2b2b;*/
+	/*border: 1px solid #0e0e0e;*/
+	list-style-type:none;
+	background-color :#ECECEC;			
+}
+
+.StorageDiskStatusSMARTDataDiv .StorageDiskStatusSMARTDataUL .DiskMgmt_ID,
+.StorageDiskStatusSMARTDataDiv .StorageDiskStatusSMARTDataUL .DiskMgmt_Now{
+	float:left;
+	margin-left:10px;
+	width:80px;
+	height:25px;
+	font-size: 16px;
+	padding: 15px 0px 0px 0px;
+	/*cursor: pointer;*/
+}
+.PL-PL .StorageDiskStatusSMARTDataDiv .StorageDiskStatusSMARTDataUL .DiskMgmt_ID{
+		width:90px;
+}
+.StorageDiskStatusSMARTDataDiv .StorageDiskStatusSMARTDataUL .DiskMgmt_Item{
+	float:left;
+	margin-left:10px;
+	width:240px;
+	height:25px;
+	font-size: 16px;
+	padding: 15px 0px 0px 0px;
+}
+.PL-PL .StorageDiskStatusSMARTDataDiv .StorageDiskStatusSMARTDataUL .DiskMgmt_Item{
+	width:230px;
+}
+.StorageDiskStatusSMARTDataDiv .StorageDiskStatusSMARTDataUL .DiskMgmt_Worst,
+.StorageDiskStatusSMARTDataDiv .StorageDiskStatusSMARTDataUL .DiskMgmt_Thresh{
+	float:left;
+	margin-left:10px;
+	width:100px;
+	height:25px;
+	font-size: 16px;
+	padding: 15px 0px 0px 0px;
+	/*cursor: pointer;*/
+}
+.DE-DE .StorageDiskStatusSMARTDataDiv .StorageDiskStatusSMARTDataUL li,
+.CS-CZ .StorageDiskStatusSMARTDataDiv .StorageDiskStatusSMARTDataUL li,
+.RU-RU .StorageDiskStatusSMARTDataDiv .StorageDiskStatusSMARTDataUL li{
+	height:60px;
+}
+.DE-DE .StorageDiskStatusSMARTDataDiv .StorageDiskStatusSMARTDataUL .DiskMgmt_ID,
+.DE-DE .StorageDiskStatusSMARTDataDiv .StorageDiskStatusSMARTDataUL .DiskMgmt_Now,
+.DE-DE .StorageDiskStatusSMARTDataDiv .StorageDiskStatusSMARTDataUL .DiskMgmt_Item,
+.DE-DE .StorageDiskStatusSMARTDataDiv .StorageDiskStatusSMARTDataUL .DiskMgmt_Worst,
+.DE-DE .StorageDiskStatusSMARTDataDiv .StorageDiskStatusSMARTDataUL .DiskMgmt_Thresh,
+.CS-CZ .StorageDiskStatusSMARTDataDiv .StorageDiskStatusSMARTDataUL .DiskMgmt_ID,
+.CS-CZ .StorageDiskStatusSMARTDataDiv .StorageDiskStatusSMARTDataUL .DiskMgmt_Now,
+.CS-CZ .StorageDiskStatusSMARTDataDiv .StorageDiskStatusSMARTDataUL .DiskMgmt_Item,
+.CS-CZ .StorageDiskStatusSMARTDataDiv .StorageDiskStatusSMARTDataUL .DiskMgmt_Worst,
+.CS-CZ .StorageDiskStatusSMARTDataDiv .StorageDiskStatusSMARTDataUL .DiskMgmt_Thresh,
+.RU-RU .StorageDiskStatusSMARTDataDiv .StorageDiskStatusSMARTDataUL .DiskMgmt_ID,
+.RU-RU .StorageDiskStatusSMARTDataDiv .StorageDiskStatusSMARTDataUL .DiskMgmt_Now,
+.RU-RU .StorageDiskStatusSMARTDataDiv .StorageDiskStatusSMARTDataUL .DiskMgmt_Item,
+.RU-RU .StorageDiskStatusSMARTDataDiv .StorageDiskStatusSMARTDataUL .DiskMgmt_Worst,
+.RU-RU .StorageDiskStatusSMARTDataDiv .StorageDiskStatusSMARTDataUL .DiskMgmt_Thresh{
+	height:50px;
+}
+
+.DE-DE .StorageDiskStatusSMARTDataDiv .StorageDiskStatusSMARTDataUL,
+.CS-CZ .StorageDiskStatusSMARTDataDiv .StorageDiskStatusSMARTDataUL,
+.RU-RU .StorageDiskStatusSMARTDataDiv .StorageDiskStatusSMARTDataUL{
+	margin-bottom:5px;
+}
+.DE-DE #DiskMgmt_smartdata_content,
+.CS-CZ #DiskMgmt_smartdata_content,
+.RU-RU #DiskMgmt_smartdata_content{
+	height:230px;
+}
+</style>
+</head>
+<script type="text/javascript" src="/web/function/disk_mgmt.js"></script>
+<script type="text/javascript">
+var timeoutId = 0;
+var DISK_MGNT_HD_INFO = new Array();	
+function page_load()
+{	
+	diskmgnt_hd_info();
+	
+	system_disks_list();
+	
+//	if (DISK_MGNT_HD_INFO.length == 0)
+//	{
+//		$("#disk_mgmt_state").html(_T('_disk_mgmt','desc11'));
+//		$("#icon_loading").hide();
+//	}	
+}
+
+function page_unload()
+{
+	DISK_MGNT_HD_INFO = new Array();	
+	//clearTimeout(timeoutId);
+}
+</script>
+
+<body>
+<!-- Block 1 : Disk Profile -->
+<div class="h1_content header_2"><span class="_text" lang="_disk_mgmt" datafld="title1">Disks Profile</span></div>																
+<div class="field_top" style="border:0px solid yellow;">
+	<table border="0"  cellspacing="0" cellpadding="0" width="auto">
+		<tr>
+			<td width="200px"><span class="_text field" lang="_disk_mgmt" datafld="desc2"></span></td>
+			<td width="200px" height="40px"><div id="disk_mgmt_state"><span class="_text" lang="_disk_mgmt" datafld="desc3"></span></div></td>
+			<td rowspan="2"><img border="0" width="90%" height="90%" src="/web/images/icon/dev_f.png"></td>
+		</tr>
+		<tr>
+			<td height="40px">&nbsp;</td>
+			<td></td>
+		</tr>	
+	</table>	
+</div>	
+
+<!-- Block 2 :  System Disks -->
+<div class="hr_0_content" style="margin-top:5px;margin-bottom:5px;border:0px solid yellow;"><div class="hr_1"></div></div>
+<div class="h1_content header_2" style="border:0px solid yellow;"><span class="_text" lang="_disk_mgmt" datafld="title2">System Disks</span></div>	
+<div class="field_top" id="icon_loading" style="margin-top:0px;border:0px solid yellow;">
+	<table border="0" cellSpacing="0" cellPadding="0" style="border-collapse: collapse" bordercolor="#000000" width="350px">
+    <tr>
+    	<td height="100" width="95%" align="center">
+    			<img src="/web/images/SpinnerSun.gif">&nbsp;<span class="_text" lang="_common" datafld="wait">Waiting...</span>
+    	</td>
+    </tr>
+	</table>
+</div>
+
+<div class="field_top" style="border:0px solid yellow;height:200px">
+	<table id="system_disks_list"></table>
+</div>
+	
+<!-- Disk Management Dialog  -->
+<div id="DiskMgmt_Diag" class="WDLabelDiag">
+<div class="WDLabelHeaderDialogue" id="DiskMgmt_Diag_title"></div>
+<div align="center"><div class="hr"><hr></div></div>
+
+<!-- 1.Disk Management Dialog : desc -->
+	<div id="DiskMgmt_details"  style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<table border="0"  cellspacing="0" cellpadding="0">
+					<tr>
+					<td class="tdfield"><span class="_text" lang="_disk_mgmt" datafld="desc4"></span></td>
+						<td class="tdfield_padding"></td>
+					</tr>	
+					<tr>
+					<td class="tdfield"><span class="_text" lang="_disk_mgmt" datafld="desc5"></span></td>
+						<td class="tdfield_padding"></td>
+					</tr>	
+					<tr>
+					<td class="tdfield"><span class="_text" lang="_disk_mgmt" datafld="desc6"></span></td>
+						<td class="tdfield_padding"></td>
+					</tr>	
+					<tr>
+					<td class="tdfield"><span class="_text" lang="_disk_mgmt" datafld="desc7"></span></td>
+						<td class="tdfield_padding"></td>
+					</tr>	
+					<tr>
+					<td class="tdfield"><span class="_text" lang="_disk_mgmt" datafld="desc12"></span></td>
+						<td class="tdfield_padding"></td>
+					</tr>	
+				</table>	
+			</div>
+		</div>
+		
+ 		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_diskstatusDriveClose1_button" class="ButtonRightPos1 close"><span class="_text" lang="_button" datafld="close"></span></button>
+	</div>
+	
+	<!-- 2.Disk Management Dialog : desc -->
+	<div id="DiskMgmt_smartdata"  style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content" >
+				<div id="StorageDiskStatusSMARTDataDiv" class="StorageDiskStatusSMARTDataDiv">
+				<ul class="StorageDiskStatusSMARTDataUL">
+					<li style="width:662px;">					
+						<div class="DiskMgmt_ID"><span class="_text" lang="_disk_mgmt" datafld="title6"></span></div>					
+						<div class="DiskMgmt_Item"><span class="_text" lang="_disk_mgmt" datafld="title7"></span></div>
+						<div class="DiskMgmt_Now"><span class="_text" lang="_disk_mgmt" datafld="title8"></span></div>
+						<div class="DiskMgmt_Worst"><span class="_text" lang="_disk_mgmt" datafld="title9"></span></div>
+						<div class="DiskMgmt_Thresh"><span class="_text" lang="_disk_mgmt" datafld="title10"></span></div>
+					</li>
+				</ul>
+				<div id="DiskMgmt_smartdata_content" style="height:240px;border: 0px solid red;">
+				<table id="DiskMgmt_SMART_Data"></table>	
+				</div>
+				</div>
+			</div>
+		</div>
+		
+ 		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_diskstatusSMARTClose2_button" class="ButtonRightPos1 close"><span class="_text" lang="_button" datafld="close"></span></button>
+	</div>	
+</div><!-- end of Disk Management Dialog -->	
+	
+</body>
+</html>
+	

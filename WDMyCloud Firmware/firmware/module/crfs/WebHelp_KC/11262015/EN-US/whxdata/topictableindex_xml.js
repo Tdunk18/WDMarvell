@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><cki><ck fm=\"About Managing Your Personal Cloud\" to=\"Turning Off Time Machine Backups\" num=\"52\"/><ck fm=\"Getting Product Info\" to=\"Shutting Down My Cloud\" num=\"55\"/><ck fm=\"Performing Diagnostic Tests\" to=\"What is RAID Storage?\" num=\"10\"/></cki>";

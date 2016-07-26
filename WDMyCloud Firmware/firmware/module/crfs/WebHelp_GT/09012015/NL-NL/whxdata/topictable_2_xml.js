@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><ck><di ky=\"106\" rd=\"what_is_raid_storage.htm|Wat is RAID-opslag?\" ct=\"Met RAID (Redundant Array of Independent Disks - redundante  rij onafhankelijke schijven)  kunt  u d ...\" bc=\"\"/></ck>";

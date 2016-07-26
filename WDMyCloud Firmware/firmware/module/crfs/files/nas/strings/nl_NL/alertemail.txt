@@ -1,0 +1,8 @@
+0001 = Waarschuwingsbericht van uw %1
+0002 = De volgende gebeurtenissen zijn gegenereerd op uw %2 %1
+0003 = Omschrijving gebeurtenis
+0004 = Ernst
+0005 = Code gebeurtenis
+0006 = Tijdstip gebeurtenis
+0007 = Titel gebeurtenis
+0008 = Firmwareversie

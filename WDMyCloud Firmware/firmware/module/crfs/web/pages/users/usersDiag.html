@@ -1,0 +1,431 @@
+<div id="createUserDiag" class="WDLabelDiag" style="display:none">
+	<div class="WDLabelHeaderDialogue2 WDLabelHeaderDialogueUsersIcon" id="createUserDiag_title"></div>
+	<div align="center"><div class="hr"><hr/></div></div>
+	
+	<!-- userDiag -->
+	<div id="userDiag">
+		<div class="WDLabelBodyDialogue" style="overflow:hidden;">
+			<div>
+				<table border="0" cellspacing="0" cellpadding="0" height="0" id="create_user_tb">
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_user" datafld="user_name"></span> *</td>
+					<td class="tdfield_padding"><input type="text" id="users_userName_text" name="users_userName_text" maxLength="16" class="lower"></td>
+					<td class="tdfield_padding tdfield_padding_left_10"><div class="TooltipIconError tip_user_error"></div></td>
+				</tr>
+				<tr>
+					<td class="tdfield"><span class="_text" lang="getting_start" datafld="first_name"></span></td>
+					<td class="tdfield_padding"><input type="text" id="users_firstName_text" name="users_firstName_text"></td>
+					<td class="tdfield_padding tdfield_padding_left_10"><div class="TooltipIconError tip_first_name_error"></div></td>
+				</tr>
+				<tr>
+					<td class="tdfield"><span class="_text" lang="getting_start" datafld="last_name"></span></td>
+					<td class="tdfield_padding"><input type="text" id="users_lastName_text" name="users_lastName_text"></td>
+					<td class="tdfield_padding tdfield_padding_left_10"><div class="TooltipIconError tip_last_name_error"></div></td>
+				</tr>
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_user" datafld="mail_addr"></span></td>
+					<td class="tdfield_padding"><input type="text" id="users_mail_text" name="users_mail_text"></td>
+						<td class="tdfield_padding tdfield_padding_left_10">
+							<span><div class="TooltipIcon tip_mail"></div></span>&nbsp;&nbsp;<span><div class="TooltipIconError tip_mail_error"></div></span>							
+						</td>
+				</tr>
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_user" datafld="pw"></span></td>
+					<td class="tdfield_padding"><input type="password" id="users_newPW_password" name="users_newPW_password"></td>
+					<td class="tdfield_padding tdfield_padding_left_10"><div class="TooltipIconError tip_pw_error"></div></td>
+				</tr>
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_user" datafld="confirm_password"></span></td>
+					<td class="tdfield_padding"><input type="password" id="users_comfirmPW_password" name="users_comfirmPW_password"></td>
+					<td class="tdfield_padding tdfield_padding_left_10"><div class="TooltipIconError tip_pw2_error"></div></td>
+				</tr>
+			</table>
+			</div>
+			<div style="float:right;margin-top:25px;">* <span class="_text" lang="_cloud" datafld="required"></span></div>
+		</div><!-- WDLabelBodyDialogue end -->
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonMarginLeft_40px close" id="users_addUserCancel1_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" id="users_addUserSave_button"><span class="_text" lang="_button" datafld="apply"></span></button>
+	</div>
+</div> <!-- createUserDiag end -->
+
+<div id="editUserDiag" class="WDLabelDiag" style="display:none">
+	<div class="WDLabelHeaderDialogue2 WDLabelHeaderDialogueUsersIcon" id="editDiag_title"></div>
+	<div align="center"><div class="hr"><hr/></div></div>
+	
+	<!-- groupDiag -->
+	<div id="m_groupDiag" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="_text" lang="_user" datafld="join_group"></div><br>
+			<div class="scroll-pane-group2">
+			<div id="m_group_div"></div>
+		</div>
+		</div>
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonMarginLeft_40px close" id="users_modGroupCancel_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" id="users_modGroupSave_button" onclick="modify_user('group')"><span class="_text" lang="_button" datafld="apply"></span></button>
+	</div> <!-- groupDiag end -->
+
+	<!-- pwDiag -->
+	<div id="m_pwDiag" style="display:none">
+		<div class="WDLabelBodyDialogue" style="width:568px;">
+			<div style="height:210px">
+			<div class="_text" lang="_user" datafld="user_description3" style="margin-bottom: 14px;"></div>
+			<table id="edit_pw_tb" border="0" cellspacing="0" cellpadding="0" height="0">
+					<tr id="admin_pw_tr" style="display:none">
+						<td class="tdfield"><span class="_text" lang="_user" datafld="old_pw"></span> *</td>
+						<td class="tdfield_padding"><input type="password" id="users_oldPW_password" name="users_oldPW_password" onkeyup="grayout_input(1)"></td>
+						<td class="tdfield_padding tdfield_padding_left_10"><div class="TooltipIconError tip_admin_pw_error"></div></td>
+					</tr>
+				<tr>
+						<td class="tdfield"><span class="_text" lang="_admin" datafld="new_pwd"></span> *</td>
+					<td class="tdfield_padding"><input type="password" id="users_editPW_password" name="users_editPW_password"></td>
+					<td class="tdfield_padding tdfield_padding_left_10"><div class="TooltipIconError tip_pw_error"></div></td>
+				</tr>
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_user" datafld="confirm_password"></span> *</td>
+					<td class="tdfield_padding"><input type="password" id="users_editComfirmPW_password" name="users_editComfirmPW_password"></td>
+					<td class="tdfield_padding tdfield_padding_left_10"><div class="TooltipIconError tip_pw2_error"></div></td>
+				</tr>
+			</table>
+			</div>
+			<div style="float:right;margin-top:-15px;"> * <span class="_text" lang="_user" datafld="pw_required"></span></div>
+		</div>
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonMarginLeft_40px close" id="users_editPWCancel_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" id="users_editPWSave_button" onclick="modify_user('pw',1)"><span class="_text" lang="_button" datafld="apply"></span></button>
+	</div> <!-- groupDiag end -->
+		
+	<!-- m_quotaDiag -->
+	<div id="m_quotaDiag" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<table border="0" cellspacing="0" cellpadding="0" height="0" id="edit_quota_tb" width="600">
+				<tr id="v_1" style="display:none">
+					<td class="tdfield"><div id="n1"></div></td>
+					<td class="tdfield_padding">
+						<table border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td><input name="users_v1Size_text" id="users_v1Size_text" type="text" class="input_x2"></td>
+								<!--<td><span id="max_quota_size_1"></span></td>-->
+								<td>
+									<div id="users_v1Unit_select" class="select_menu"></div>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr id="v_2" style="display:none">
+					<td class="tdfield"><div id="n2"></div></td>
+					<td class="tdfield_padding">
+						<table border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td><input name="users_v2Size_text" id="users_v2Size_text" type="text" class="input_x2"></td>
+								<!--<td><span id="max_quota_size_2"></span></td>-->
+								<td>
+									<div id="users_v2Unit_select" class="select_menu"></div>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr id="v_3" style="display:none">
+					<td class="tdfield"><div id="n3"></div></td>
+					<td class="tdfield_padding">
+						<table border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td><input name="users_v3Size_text" id="users_v3Size_text" type="text" class="input_x2"></td>
+								<!--<td><span id="max_quota_size_3"></span></td>-->
+								<td>
+									<div id="users_v3Unit_select" class="select_menu"></div>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr id="v_4" style="display:none">
+					<td class="tdfield"><div id="n4"></div></td>
+					<td class="tdfield_padding">
+						<table border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td><input name="users_v4Size_text" id="users_v4Size_text" type="text" class="input_x2"></td>
+								<!--<td><span id="max_quota_size_4"></span></td>-->
+								<td>
+									<div id="users_v4Unit_select" class="select_menu"></div>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			<br>
+			<div class="_text tdfield_padding" lang="_user" datafld="user_description7">
+			(The value for unlimited blocks/inodes is zero)</div>
+		</div>
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonMarginLeft_40px close" id="uesrs_modQuotaCancel_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" id="uesrs_modQuotaSave_button" onclick="modify_user('quota')"><span class="_text" lang="_button" datafld="apply"></span></button>
+	</div> <!-- m_quotaDiag end -->
+</div> <!-- editUserDiag end -->
+
+<div id="importDiag" class="WDLabelDiag" style="display:none">
+	<div class="WDLabelHeaderDialogue2 WDLabelHeaderDialogueUsersIcon" id="importDiag_title"></div>
+	<div align="center"><div class="hr"><hr/></div></div>
+	
+	<!-- impDiag_sel_type -->
+	<div id="impDiag_sel_type" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<table>
+				<tr>
+					<td>
+						<div id="f_type" style="display:none"><button id="users_createMultiUsers_button" class="left_button" value="1"><span class="_text" lang="_common" datafld="batch_create"></span></button><button id="users_importUsers_button" class="right_button" value="2"><span class="_text" lang="_common" datafld="import_users"></span></button></div>
+						
+						<!--
+						<div class="LightningLabelButtonSegmentControl" id="f_type" style="display:none">
+							<div class="bLeft" onclick="SetCreateType('#f_type','1','')"></div>
+							<div class="bBody bBody1" rel="1" onclick="SetCreateType('#f_type','1','')"><span class="_text" lang="_common" datafld="batch_create"></span></div>
+							<div class="LightningLabelButtonSegmentControlDivider"></div>
+							<div class="bBody bBody2" rel="2" onclick="SetCreateType('#f_type','2','')"><span class="_text" lang="_common" datafld="import_users"></span></div>
+							<div class="bRight" onclick="SetCreateType('#f_type','2','')"></div>
+						</div>-->
+					</td>
+				</tr>									
+			</table>
+		</div>
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonMarginLeft_40px close" id="users_multipleCancel_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" id="users_multipleNext1_button"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div>
+	
+	<!--bDiag_set-->
+	<div id="bDiag_set" style="display:none">
+		<div class="WDLabelBodyDialogue" style="width:568px">
+			<table id= "batch_set" border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td class="tdfield_170"><span class="_text" lang="_user" datafld="u_prefix"></span></td>
+					<td class="tdfield_padding"> 
+						<input type="text" name="users_userNamePrefix_text" id="users_userNamePrefix_text" maxlength="15" onblur="set_start_number(this.value)" class="lower">
+					</td>
+					<td class="tdfield_padding">
+						<div class="TooltipIcon" id="tip_prefix"></div>
+					</td>
+				</tr>
+				<tr>
+					<td class="tdfield_170"><span class="_text" lang="_user" datafld="start_num"></span></td>
+					<td class="tdfield_padding"> 
+						<input type="text" name="users_accountPrefix_text" id="users_accountPrefix_text" onkeyup="value=value.replace(/[^\d]/g,'')" onblur="chk_start_number(this.value)"><span id='s_number'></span>
+					</td>
+					<td class="tdfield_padding">
+						<div class="TooltipIcon" id="tip_account_prefix"></div>
+					</td>
+				</tr>
+				<tr>
+					<td class="tdfield_170"><span class="_text" lang="_user" datafld="create_num"></span></td>
+					<td class="tdfield_padding"> 
+						<input type="text" name="users_numberOfUsers_text" id="users_numberOfUsers_text" onkeyup="value=value.replace(/[^\d]/g,'')">
+					</td>
+					<td class="tdfield_padding" style="padding-left:5px">
+						<span id='u_number'></span>
+					</td>
+				</tr>
+				<tr>
+					<td class="tdfield_170"><span class="_text" lang="_user" datafld="pw"></span> *</td>
+					<td class="tdfield_padding"> 
+						<input type="password" name="users_batchPW_password" id="users_batchPW_password" maxlength="16">
+					</td>
+				</tr>
+				<tr>
+					<td class="tdfield_170"><span class="_text" lang="_admin" datafld="confirm_pwd"></span></td>
+					<td class="tdfield_padding"> 
+						<input type="password" name="users_batchComfirmPW_password" id="users_batchComfirmPW_password"  maxlength="16">
+					</td>
+				</tr>				
+			</table>
+			<table border="0" cellpadding="0" cellspacing="0" width="568" style="margin-top:10px;">
+				<tr>
+					<td width="10" tabindex="0" onKeyPress="overwriteEvent(event)"><input type="checkbox" name="users_batchOverwrite_chkbox" value="ON" id="users_batchOverwrite_chkbox"></td>
+					<td style="padding-left:5px"><label for="users_batchOverwrite_chkbox"><span class="_text" lang="_user" datafld="overwrite"></span></label></td>
+				</tr>
+			</table>
+			<div style="float:right;margin-top:-15px;">* <span class="_text" lang="_user" datafld="pw_required"></span></div>
+		</div>
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonMarginLeft_40px" id="users_batchBack2_button"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" class="ButtonMarginLeft_20px close" id="users_batchCancel2_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" id="users_batchNext2_button"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div>
+
+	<!-- bDiag_group -->
+	<div id="bDiag_group" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="_text" lang="_user" datafld="join_group"></div>
+        	<div class="scroll-pane-group">
+	        	<table border="0" cellspacing="0" cellpadding="0" height="0">
+	        		<tr>
+	        			<td height="24"><div id="batch_group_list_div"></div></td>
+	        			<td><div class="TooltipIcon" id="tip_group2" style="display:none"></div></td>
+	        		</tr>
+	        	</table>
+			</div>
+		</div>
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonMarginLeft_40px" id="users_batchBack3_button"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" class="ButtonMarginLeft_20px close" id="users_batchCancel3_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" id="users_batchNext3_button"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div>
+
+	<div id="bDiag_quota" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<table id="b_quota_tb" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="450" height="80"></table>
+			<br><br>
+			<span class="_text" lang="_user" datafld="user_description7">
+			(The value for unlimited blocks/inodes is zero)</span>
+		</div>
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonMarginLeft_40px" id="users_batchBack4_button"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" class="ButtonMarginLeft_20px close" id="users_batchCancel4_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" id="users_batchNext4_button"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div>
+		
+	<div id="bDiag_complited" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="scroll-pane-group">
+						<div id="b_create_div"></div>
+						<div id="b_create_info" style="margin-top:15px"></div>
+			        </div>
+			    </div>
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonMarginLeft_40px" id="users_batchBack5_button"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" class="ButtonMarginLeft_20px close" id="users_batchCancel5_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" id="users_batchSave_button"><span class="_text" lang="_button" datafld="apply"></span></button>
+	</div>
+				
+	<!-- impDiag_sel_file -->
+	<div id="impDiag_sel_file" style="display:none">
+		<div class="WDLabelBodyDialogue" >
+			<table border="0" width="650" cellspacing="0" cellpadding="0">
+				<tr>
+					<td width="230" class="str_nowrap">&nbsp;<span class="_text" lang="_user" datafld="reference"></span></td>
+					<td width="260" class="padding_td"><button id="users_downloadUserSample_button" onclick="download_sample()"><span class="_text" lang="_wfs" datafld="download"></span></button></td>
+				</tr>
+			</table>
+			<br>
+			<iframe id="upload_target" name="upload_target" src="" width="1" height="1" marginwidth="1" marginheight="1" scrolling="no" border="0" frameborder="0"></iframe>
+			
+			<table border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td><input type="checkbox" name="users_impOverwrite_chkbox" value="ON" id="users_impOverwrite_chkbox"></td>
+					<td style="padding-left:5px;"><label for="users_impOverwrite_chkbox"><span class="_text" lang="_user" datafld="overwrite"></span></label></td>
+				</tr>
+			</table>
+			<br><br>
+			<div style="width:auto;cursor: pointer;">
+				<form name="form_import" id="form_import" method="post" enctype="multipart/form-data" action="/web/php/upload.php" target="upload_target"> 
+					<input type="hidden" name="cmd" value="cgi_import_uesrs"> 
+                    <table border="0">
+                    	 <tr>
+                    		<td width="auto">
+					<div class="file_input_div">
+									<button onclick="open_uimport_dialog();"><span class="_text" lang="_user" datafld="sel_list"></span></button>
+						<input id="users_impUsersFile_text" class="file_input_hidden" type="file" onchange="show_filename();" name="users_impUsersFile_text">
+					</div>
+                    		</td>
+                   		 </tr>	
+                	</table>
+				</form>
+			</div>
+			<div id="file_name" style="margin-top:20px"></div>
+		</div>
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonMarginLeft_40px" id="users_impBack1_button"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" class="ButtonMarginLeft_20px close" id="users_impCancel1_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" id="users_impNext1_button"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div> <!-- impDiag_sel_file end-->
+
+	<!-- impDiag_apply_to -->
+	<div id="impDiag_apply_to" style="display:none">
+		<div class="WDLabelBodyDialogue" id="imp_share_tab">
+			<span class="_text" lang="_user" datafld="user_description4">
+			Allow the user to access following applications</span>
+			<br>
+			<br>
+			<table border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td><input type="checkbox" checked disabled value="ON" name="users_cifs_chkbox" id="users_cifs_chkbox"></td>
+					<td class="tdfield_padding_left_10"><span class="_text" lang="_user" datafld="cifs">CIFS</span></td>					
+				</tr>
+				<tr>
+					<td class="tdfield_padding"><input type="checkbox" checked disabled value="ON" name="users_afp_chkbox" id="users_afp_chkbox"></td>
+					<td class="tdfield_padding tdfield_padding_left_10"><span class="_text" lang="_user" datafld="afp">AFP</span></td>					
+				</tr>
+				<tr>
+					<td class="tdfield_padding"><input type="checkbox" value="ON" name="users_ftp_chkbox" id="users_ftp_chkbox"></td>
+					<td class="tdfield_padding tdfield_padding_left_10"><label for="users_ftp_chkbox"> <span class="_text" lang="_user" datafld="ftp">FTP</span> </label></td>					
+				</tr>
+			</table>
+		</div>
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonMarginLeft_40px" id="users_impBack2_button"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" class="ButtonMarginLeft_20px close" id="users_impCancel2_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" id="users_impNext2_button"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div>
+	
+	<!-- impDiag_complited -->
+	<div id="impDiag_complited" style="display:none">
+		<div class="WDLabelBodyDialogue" >
+			<div class="SpinnerSun" style="display:none"><span class="_text" lang="_common" datafld="loading"></span></div>
+			<div class="scroll-pane-group">
+			<div id="import_table" style="margin-top:-10px"></div>
+		</div>
+		</div>
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonMarginLeft_40px" id="users_impBack3_button"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" class="ButtonMarginLeft_20px close" id="users_impCancel3_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" id="users_impSave_button"><span class="_text" lang="_button" datafld="apply"></span></button>
+	</div>
+	
+	<!-- impDiag_detail -->
+	<div id="impDiag_detail" style="display:none">
+		<div class="WDLabelBodyDialogue" >
+			<div id="import_info" style="width:500px;height:300px;overflow-x:hidden;overflow-y:auto;"></div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonRightPos2" id="users_impClose_button"><span class="_text" lang="_button" datafld="close"></span></button>
+	</div>
+		
+</div><!-- end importDiag-->
+
+<div id="editExpiresDiag" class="WDLabelDiag" style="display:none">
+	<div class="WDLabelHeaderDialogue2 WDLabelHeaderDialogueUsersIcon" id="editExpiresDiag_title"></div>
+	<div align="center"><div class="hr"><hr/></div></div>
+	
+	<!-- expiresDiag -->
+	<div id="expiresDiag">
+		<div class="WDLabelBodyDialogue">
+			<table border="0" cellspacing="0" cellpadding="0" height="0" width="450">
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_user" datafld="end_of"></span></td>
+					<td class="tdfield_padding">
+						<table border="0" cellspacing="0" cellpadding="0" height="0">
+							<tr>
+								<td>
+									<input type="text" id="users_editDatepicker_text" class="datepicker" name="users_editDatepicker_text" onkeydown="return;">
+								</td>
+								<td style="padding-left:10px;">
+									<img id="users_editCalendar_link" src="/web/images/icon/Icon_Calendar_DrkGray_32x32.png" border=0 onclick="open_expires_date('#users_editDatepicker_text');" style="cursor:pointer" class="datepicker_img"> 
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonMarginLeft_40px close" id="users_expiresCancel_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" id="users_expiresSave_button" onclick="modify_user('expires',1)"><span class="_text" lang="_button" datafld="apply"></span></button>
+	</div> <!-- expiresDiag end -->
+</div> <!-- editExpiresDiag end -->
+
+<form action="/cgi-bin/account_mgr.cgi" method="post" name="form_download">
+	<input type="hidden" name="cmd" value="cgi_download_import_sample">
+</form>	

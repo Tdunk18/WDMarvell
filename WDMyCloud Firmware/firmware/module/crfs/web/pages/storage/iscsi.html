@@ -1,0 +1,544 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="PRAGMA" content="no-cache"> 
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+</head>
+
+<style>
+.iscsi_icon
+{
+	margin-top:-5px;
+}
+
+#ChapMode_detail .bBody2{
+	padding-left:22px;
+	height:30px;
+	line-height:30px;
+}
+#ChapMode .bBody2{
+	padding-left:22px;
+	height:30px;
+	line-height:30px;
+}
+</style>	
+<script language="javascript" src="/web/function/raid_define.js"></script>
+<script type="text/javascript" src="/web/function/raid_diag.js"></script>
+<script type="text/javascript" src="/web/function/iscsi.js"></script>
+<script type="text/javascript">
+function page_load()
+{
+	ready_iscsi();
+
+	HD_Status(0,function(hd_status){
+		if (hd_status == 0)
+		{
+			$("#id_iscsi_tb").html("<br><br><br>"+_T('_user','no_hdd')	)
+		}
+		else
+		{
+				//dialog
+				//var sys_time = (new Date()).getTime();
+				//initDiag("/web/storage/iscsiDiag.html?r=" + sys_time);
+					
+			   	
+				$("input:text").inputReset();	
+				$("input:password").inputReset();	
+				init_button();				
+				info();	
+				init_switch();
+				
+				wd_ajax({			
+				type: "POST",
+				url: "/cgi-bin/iscsi_mgr.cgi",
+				data:"cmd=cgi_get_iscsi_v",
+				async: true,
+				cache: false,
+				success: function(xml){																
+					$(xml).find('iscsi').each(function(index){			
+									var e = $(this).find('enable').text();		
+									var s_e = $(this).find('server_enable').text();		
+									var s = $(this).find('server').text();								
+									if (e == "1")
+									{
+										show('id_iscsi_server_tb');
+										show('id_iscsi_list_tb');							
+                                                                                //show('id_iscsi_lun_tb');
+										//show('id_iscsi_acl_tb');							
+									}
+									else
+									{
+										hide('id_iscsi_server_tb');
+										hide('id_iscsi_list_tb');									
+                                                                                //hide('id_iscsi_lun_tb');
+										//hide('id_iscsi_acl_tb');									
+									}	
+										
+									setSwitch('#storage_iscsi_switch',e)
+									setSwitch('#storage_iscsiClient_switch',s_e)
+									if (s_e == 1)    	
+						    		show("storage_iscsiClient_link")
+						    	else						    	
+						    		hide("storage_iscsiClient_link");
+						});
+				}  
+				});	
+				
+				 $("#storage_iscsi_switch").click(function(){
+			    	var v = getSwitch('#storage_iscsi_switch');
+			    	
+			    	jLoading(_T('_common','set') ,'loading' ,'s',""); 
+			    	
+			    	if (v == 1)
+			    		setTimeout(m_enable_iscsi,500);
+			    	else
+			    		setTimeout(m_disable_iscsi,500);
+			    		
+			    	
+			    			
+						if (v == "1")
+						{
+							show('id_iscsi_server_tb');
+							show('id_iscsi_list_tb');						
+							google_analytics_log('iscsi-en',v);
+						}
+						else
+						{
+							hide('id_iscsi_server_tb');
+							hide('id_iscsi_list_tb');							
+							google_analytics_log('iscsi-en',v);
+						}		    	
+					});
+				
+				
+				$("#storage_iscsiClient_switch").click(function(){
+			    	var v = getSwitch('#storage_iscsiClient_switch');
+			    	
+			    	if (v == 1)    	
+			    		setTimeout(enable_iscsi_server,500);    		    		    	    		
+			    	else
+			    	{
+			    		jLoading(_T('_common','set') ,'loading' ,'s',""); 
+			    		setTimeout(disable_iscsi_server,500);    		    		    	
+			    	}	
+				});
+		}			
+	 })
+}
+
+function page_unload()
+{
+	clearTimeout(timeoutId_iscsi);
+	//clearTimeout(timeoutId_snap);
+}
+
+function show_button(obj,flag)
+{
+	if(flag=="1")
+		$(obj).show();
+	else
+		$(obj).hide();
+}
+
+function open_img()
+{
+//alert("open img")
+}
+</script>
+<body>
+<!-- Network Profile -->
+<div class="h1_content header_2 _text"><span class="_text" lang="_iscsi" datafld="title"></span></div>		
+<div class="field_top">
+<span class="_text" lang="_iscsi" datafld="desc"></span>
+<br><br>
+		<table id="id_iscsi_tb" border="0"  cellspacing="0" cellpadding="0" height="0">
+		<tr>
+		<td height=40>
+				<span class="TD field"><span class="_text" lang="_iscsi" datafld="iscsi"></span></span>			
+		</td>
+		<td>
+			<input id="storage_iscsi_switch" name="storage_iscsi_switch" class="onoffswitch" type="checkbox" value="true" style="position: absolute; z-index: -1; visibility: hidden;" >						 							 
+		</td>					
+		<td>							
+		</td>	
+		</tr>
+		</table>
+		<table id="id_iscsi_server_tb" border="0"  cellspacing="0" cellpadding="0" height="0" style="display:none">
+		<tr>
+		<td height=40>
+				<span class="TD field"><span class="_text" lang="_iscsi" datafld="iscsi_server"></span></span>						
+		</td>
+		<td>
+			<input id="storage_iscsiClient_switch" name="storage_iscsiClient_switch" class="onoffswitch" type="checkbox" value="true" >						 							 
+		</td>					
+		<td>
+			<span onclick="set_iscsi_server();" style="margin-left:10px;display:none" id="storage_iscsiClient_link" class="edit_detail"><span class="_text" lang="_p2p" datafld="config"></span>>></span>
+		</td>	
+		</tr>
+	</table>
+	
+	<!-- Network Service-->
+	<span id="id_iscsi_list_tb" style="display:none">
+	<div class="hr_0_content"><div class="hr_1"></div></div>
+	<span class="h1_content header_2 _text"><span class="_text" lang="_iscsi" datafld="list_title"></span></span>
+	
+	<div class="field_top" id="iscsi_list_info" style="display:none"><span class="_text" lang="_iscsi" datafld="no_list"></span></div>				
+	<div class="field_top" id="iscsi_list_tb" style="display:none">
+		<div id="iscsi_list_scroll">
+			<table id="iscsi_tb"></table>		
+	</div>
+	</div>
+	<div class="field_top">
+		<button id="storage_iscsiCreateTarget_button" type="button" onclick="open_diag();" class="gray_out"><span class="_text" lang="_iscsi" datafld="create_iscsi_target"></span></button>				
+		</div>
+	</span>
+
+<!-- lun -->
+
+		<span id="id_iscsi_lun_tb" style="display:none">
+	<div class="hr_0_content"><div class="hr_1"></div></div>
+	<span class="h1_content header_2 _text"><span class="_text" lang="_iscsi" datafld="lun_list_title"></span></span>
+	
+	<div class="field_top" id="iscsi_lun_info" style="display:none"><span class="_text" lang="_iscsi" datafld="no_list"></span></div>
+	<div class="field_top" id="iscsi_lun_list_tb" style="display:none">
+			<div id="iscsi_lun_scroll">
+			<table id="iscsi_lun_tb"></table>		
+		</div>
+	</div>
+	<div class="field_top">
+		<button type="button" id="storage_iscsiCreateLun_button"  onclick="open_lun_diag();"><span class="_text" lang="_iscsi" datafld="create_iscsi_lun"></span></button>				
+		</div>
+	</span>
+<!-- acl -->	
+	<span id="id_iscsi_acl_tb" style="display:none">
+	<div class="hr_0_content"><div class="hr_1"></div></div>
+	<span class="h1_content header_2 _text"><span class="_text" lang="_iscsi" datafld="acl_list_title"></span></span>	
+	<div class="field_top" id="iscsi_acl_info" style="display:none"><span class="_text" lang="_iscsi" datafld="no_list"></span></div>
+	<div class="field_top" id="iscsi_acl_list_tb" style="display:none">
+			<div id="iscsi_acl_scroll">
+			<table id="iscsi_acl_tb"></table>		
+			</div>
+	</div>
+	<div class="field_top">
+		<button type="button" id="storage_iscsiCreateAcl_button" onclick="open_acl_diag();"><span class="_text" lang="_iscsi" datafld="create_iscsi_acl"></span></button>				
+		</div>
+	</span>
+
+<!-- acl end -->
+<!-- backup 
+	<span id="id_iscsi_snap_tb" style="display:none">
+	<div class="hr_0_content"><div class="hr_1"></div></div>
+	<span class="h1_content header_2 _text"><span class="_text" lang="_iscsi" datafld="acl_backup_title"></span></span>	
+	<div class="field_top" id="iscsi_snap_info" style="display:none"><span class="_text" lang="_iscsi" datafld="no_list"></span></div>
+	<div class="field_top" id="iscsi_snap_list_tb" style="display:none">
+		<div id="iscsi_snap_scroll">
+			<table id="iscsi_snap_tb"></table>		
+		</div>	
+	</div>
+	<div class="field_top">
+		<button type="button" onclick="open_snap_diag();"><span class="_text" lang="_iscsi" datafld="create_iscsi_backup"></span></button>				
+		</div>
+	</span>
+ backup end -->
+</div>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<div id="iscsiDiag" class="WDLabelDiag" style="display:">
+<div id="iscsiDiag_title" class="WDLabelHeaderDialogue WDLabelHeaderDialogueiSCSIIcon">
+<span class="_text" lang="_iscsi" datafld="create_iscsi_target"></span></div>
+<div align="center"><div class="hr"><hr></div></div>
+	
+<!-- step1 -->
+<div id="iscsi_step1" style="display:" >
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content" >		
+		<form name="form_s3">		
+		<table border="0" width="100%"  cellspacing="0" cellpadding="0" height="0">
+		<tr>
+			<td width="150" height="40">
+				<span class="_text" lang="_iscsi" datafld="alias"></span>
+			</td>	
+			<td>											
+				<input type="text" name="storage_iscsiTargetAlias_text" id="storage_iscsiTargetAlias_text" onkeyup="set_iqn();" maxlength="32" >
+			</td>
+		</tr>	
+		<tr>
+			<td width="150" height="40">
+				<span class="_text" lang="_iscsi" datafld="name"></span>
+			</td>	
+			<td>														
+				<div id="f_iqn"></div>
+			</td>
+		</tr>
+		<tr id="id_set_location">
+			<td width="150" height="40">
+				<span class="_text" lang="_iscsi" datafld="create_on"></span>
+			</td>
+			<td>
+				<table border="0"  cellspacing="1" cellpadding="0" height="0">
+					<tr>
+						<td>	
+				<div class="select_menu" id="id_volume_top_main"></div>
+			</td>
+						<td>&nbsp;
+							(<span id="id_volume_size"></span>)<span id="id_volume_size_byte" style="display:none"></span>
+						</td>	
+					</tr>
+				</table>		
+			</td>
+		</tr>
+		<tr id="id_set_size">
+			<td width="150" height="40">
+				<span class="_text" lang="_wfs" datafld="size"></span>
+			</td>	
+			<td>
+				<table border="0"  cellspacing="1" cellpadding="0" height="0">
+				<tr>
+					<td>				
+					<input type="text" name="storage_iscsiTargetSize_text" id="storage_iscsiTargetSize_text" class="input_x6">
+					</td>					
+					<td width="20">
+					</td>
+					<td>
+					<div class="select_menu" id="id_unit_top_main"></div>
+					</td>					
+				</tr>													
+				</table>								
+			</td>			
+		</tr>
+		<tr id="id_set_img" style="display:none">
+			<td width="150" height="40">				
+				<span class="_text" lang="_iscsi" datafld="image_file"></span>
+			</td>	
+			<td>										
+					<table border="0"  cellspacing="1" cellpadding="0" height="0">
+					<tr>
+						<td>
+						<input type="text" id="s3_tree" name="s3_tree" maxlength="255" size="32" readonly>
+						</td>
+						<td>
+							<button type="button" onclick="cancel_img_file();"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+						</td>
+					</tr>
+				</table>			
+			</td> 
+		</tr>	
+		</table>	
+		</form>												
+</div>	
+</div>			
+<div class="hrBottom2"><hr/></div>		
+<button class="ButtonMarginLeft_40px close" id="storage_iscsiTargetCancel1_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+<button class="ButtonRightPos2" id="storage_iscsiTargetNext1_button" ><span class="_text" lang="_button" datafld="Next"></span></button>
+</div>
+<!-- step 2-->	
+<div id="iscsi_step2" style="display:none;" >
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content">		
+		<table border="0"  cellspacing="0" cellpadding="0" height="0">		
+		<tr>
+			<td width="150" height="40">
+				<span class="_text" lang="_iscsi" datafld="security"></span>
+			</td>				
+			<td>														
+				<div id="ChapMode" style="display:none"><button class="left_button" value="0" id="storage_iscsiTargetSecurityNone_button"><span class="_text" lang="_common" datafld="none"></span></button><button id="storage_iscsiTargetSecurityChap_button" class="right_button" value="1"><span class="_text" lang="_iscsi" datafld="chap"></span></button></div>
+			</td>			
+		</tr>		
+		<tr id="id_b_username" style="display:none">
+			<td width="150" height="40">
+				<span class="_text" lang="_user" datafld="user_name"></span>
+			</td>				
+			<td>	
+					<input type="text" name="storage_iscsiTargetUsername_text" id="storage_iscsiTargetUsername_text" maxlength=16>
+			</td>	
+		</tr>	
+		<tr id="id_b_pwd" style="display:none">
+			<td width="150" height="40">
+				<span class="_text" lang="_user" datafld="pw"></span>				
+			</td>				
+			<td>
+				<input type="password" name="storage_iscsiTargetPwd_text" id="storage_iscsiTargetPwd_text" maxlength=16 > 	
+			</td>	
+		</tr>	
+		<tr id="id_confirm_b_pwd" style="display:none">
+			<td width="150" height="40">
+				<span class="_text" lang="_user" datafld="confirm_password"></span>				
+			</td>				
+			<td>
+				<input type="password" name="storage_iscsiTargetConfirmPwd_text" id="storage_iscsiTargetConfirmPwd_text" maxlength=16 > 	
+			</td>	
+		</tr>	
+		</table>
+</div>	
+</div>						
+<div class="hrBottom2"><hr/></div>
+<button class="ButtonMarginLeft_40px" id="storage_iscsiTargetBack2_button"><span class="_text" lang="_button" datafld="back">Back</span></button>
+<button class="ButtonMarginLeft_20px close" id="storage_iscsiTargetCancel2_button"><span class="_text" lang="_button" datafld="Cancel"></button>	
+<button class="ButtonRightPos2" id="storage_iscsiTargetSave2_button" onclick="create_iscsi();"><span class="_text" lang="_button" datafld="apply"></span></button>
+</div>
+
+
+</div>
+</div>
+
+
+
+<!-- detail-->
+<div id="iscsiDetailDiag" class="WDLabelDiag" style="display:">
+<div id="iscsiDetailDiag_title" class="WDLabelHeaderDialogue WDLabelHeaderDialogueiSCSIIcon">Ryanspace Details</div>
+<div align="center"><div class="hr"><hr></div></div>	
+<div id="iscsi_detail" style="display:" >
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content">
+<table border="0"  cellspacing="0" cellpadding="0" height="0">
+		<tr style="display:none">
+				<td width="150" height="40"><span class="_text" lang="_iscsi" datafld="alias"></span></td>
+				<td>														
+					<div id="id_iscsi_name"></div>
+				</td>							
+		</tr>
+		<tr> 
+				<td width="150" height="40"><span class="_text" lang="_iscsi" datafld="name"></span></td>
+				<td><div id="id_iscsi_iqn"></div></td>							
+		</tr>
+		<tr id="id_detail_location">
+			<td height="40" width="150"><span class="_text" lang="_iscsi" datafld="create_on"></span></td>
+			<td>
+						<div id="id_iscsi_location"></div>
+			</td>
+		</tr>		
+		<tr id="id_detail_img">
+			<td width="150" height="40"><span class="_text" lang="_iscsi" datafld="image_file"></span></td>
+			<td>		
+				<div id="id_iscsi_img"></div>			
+			</td>
+			<tr>
+			<td width="150" height="40">
+				<span class="_text" lang="_wfs" datafld="size"></span>
+			</td>	
+			<td>
+				<table border="0"  cellspacing="0" cellpadding="0" height="0">
+				<tr>
+					<td>				
+					<input type="text" name="storage_iscsiTargetEditSize_text" id="storage_iscsiTargetEditSize_text" class="input_x3">
+					</td>					
+					<td width="20">
+					</td>
+					<td>
+					<div class="select_menu" id="id_unit_modify_top_main"></div>
+					</td>
+					<td>
+						&nbsp;<span id="id_volume_detail_size_byte"></span>
+					</td>	
+				</tr>													
+				</table>								
+			</td>			
+		</tr>
+			<tr>
+			<td width="150" height="40"><span class="_text" lang="_iscsi" datafld="security"></span></td>
+			<td>
+				<div id="ChapMode_detail" style="display:none"><button id="storage_iscsiTargetEditSecurityNone_button" class="left_button" value="0"><span class="_text" lang="_common" datafld="none"></span></button><button id="storage_iscsiTargetEditSecurityChap_button" class="right_button" value="1"><span class="_text" lang="_iscsi" datafld="chap"></span></button></div>						
+			</td>
+		</tr>	
+		<tr id="id_detail_username" style="display:">
+		<td width="150" height="40">
+			<span class="_text" lang="_user" datafld="user_name"></span>
+		</td>				
+		<td>	
+				<input type="text" name="storage_iscsiTargetEditUsername_text" id="storage_iscsiTargetEditUsername_text" maxlength=16>
+		</td>	
+	</tr>	
+	<tr id="id_detail_pwd" style="display:">
+		<td width="150" height="40">
+			<span class="_text" lang="_user" datafld="pw"></span>
+		</td>				
+		<td>
+			<input type="password" name="storage_iscsiTargetEditPwd_text" id="storage_iscsiTargetEditPwd_text" maxlength=16>	
+		</td>	
+	</tr>	
+	<tr id="id_detail_confirm_pwd" style="display:">
+		<td width="150" height="40">
+			<span class="_text" lang="_user" datafld="confirm_password"></span>
+		</td>				
+		<td>
+			<input type="password" name="storage_iscsiTargetEditConfirmPwd_text" id="storage_iscsiTargetEditConfirmPwd_text" maxlength=16>	
+		</td>	
+	</tr>	
+		</tr>	
+			<tr>
+			<td width="150" height="40"><span class="_text" lang="_iscsi" datafld="address"></span></td>
+			<td>
+						<div id="id_iscsi_ip"></div>
+			</td>
+		</tr>	
+</table>
+</div>	
+</div>					
+<div class="hrBottom2"><hr/></div>				
+<button type="button" class="ButtonMarginLeft_40px close" id="storage_iscsiDetailCancel_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+<button type="button" onclick="on_off_iscsi();" class="ButtonMarginLeft_20px" id="storage_iscsiDetailEnable_button"><span class="_text" lang="_common" datafld="disable"></span></button>
+<button type="button" onclick="delete_iscsi();" class="ButtonMarginLeft_20px" id="storage_iscsiDetailDelete_button"><span class="_text" lang="_common" datafld="del"></span></button>
+<button type="button" class="ButtonRightPos2"	 onclick="modify_iscsi();" id="storage_iscsiDetailSave_button"><span class="_text" lang="_button" datafld="apply"></span></button>
+</div>
+</div>
+<!-- tree -->
+<div id="s3treeDiag" class="WDLabelDiag" style="display:">
+<div id="s3treeDiag_title" class="WDLabelHeaderDialogue WDLabelHeaderDialogueiSCSIIcon"><span class="_text" lang="_iscsi" datafld="create_iscsi_target"></span></div>
+<div align="center"><div class="hr"><hr></div></div>	
+<div id="iscsi_detail" style="display:" >
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content">
+<div id="s3tree_div" class="show_file"></div>
+</div>	
+</div>		
+<div class="hrBottom2"><hr/></div>	
+<button type="button" class="ButtonMarginLeft_40px" id="s3_back_button" onclick="clear_path();"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+<button type="button" class="ButtonRightPos2" id="s3_ok_button"><span class="_text" lang="_button" datafld="Ok"></span></button>
+</div>
+</div>
+<!-- lnitiatiors -->
+<div id="iscsiInitiatorsDiag" class="WDLabelDiag" style="display:">
+<div id="iscsiInitiatorsDiag_title" class="WDLabelHeaderDialogue WDLabelHeaderDialogueiSCSIIcon"><span class="_text" lang="_iscsi" datafld="initi_title"></span></div>
+<div align="center"><div class="hr"><hr></div></div>	
+<div id="iscsi_Initiators" style="display:" >
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content"><span class="_text" lang="_iscsi" datafld="initi_list"></span>
+<div id="id_ini_list"></div>				
+</div>	
+</div>		
+<div class="hrBottom2"><hr/></div>			
+	<button type="button" class="ButtonRightPos2 close"><span class="_text" lang="_button" datafld="close"></span></button>
+</div>
+</div>
+<!-- server -->
+<div id="iscsiServerDiag" class="WDLabelDiag" style="display:">
+<div id="iscsiServerDiag_title" class="WDLabelHeaderDialogue WDLabelHeaderDialogueiSCSIIcon"><span class="_text" lang="_iscsi" datafld="iscsi_server"></span></div>
+<div align="center"><div class="hr"><hr></div></div>	
+<div class="WDLabelBodyDialogue">	
+	<table border="0"  cellspacing="0" cellpadding="0" height="0">
+	<tr>
+			<td width="100" height="40"><span class="_text" lang="_iscsi" datafld="server"></span></td>
+			<td><input type="text" id="storage_iscsiServer_text" name="storage_iscsiServer_text" maxlength="254"></td>
+	</tr>	
+	</table>			
+</div>		
+<div class="hrBottom2"><hr/></div>				
+<button class="ButtonMarginLeft_40px close"><span id="storage_iscsiServerCancel_button" class="_text" lang="_button" datafld="Cancel"></span></button>		
+<button class="ButtonRightPos2 save" id="storage_iscsiServerSave_button" onclick="save_iscsi_server();" ><span class="_text" lang="_button" datafld="apply"></span></button>
+</div>
+
+
+
+</body>
+</html>
+

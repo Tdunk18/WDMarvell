@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><cki><ck fm=\"管理您個人雲端說明\" to=\"啟用 FTP 存取\" num=\"58\"/><ck fm=\"變更網路模式\" to=\"什麼是 RAID 儲存裝置？\" num=\"49\"/></cki>";

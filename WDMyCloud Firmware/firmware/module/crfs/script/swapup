@@ -1,0 +1,13 @@
+#!/bin/sh
+
+#Description : Swapon
+#Author : Wilson Chan
+#History : 	1)1.00 05/05/2006
+
+mkswap /dev/$1
+swapon /dev/$1		
+if [ -n "$2" ]; then
+	mkswap /dev/$2
+	swapon /dev/$2	
+fi
+exit 0

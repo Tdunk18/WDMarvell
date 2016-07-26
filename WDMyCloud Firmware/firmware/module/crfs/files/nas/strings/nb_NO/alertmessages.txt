@@ -1,0 +1,302 @@
+0001 = Overtemperatur på systemet
+0001D = Systemtemperaturen er over normal driftstemperatur. Flytt systemet til et kjøligere sted. Hvis ingenting blir gjort, vil systemet slå seg av når temperaturen når den kritiske grensen.
+
+0002 = Undertemperatur på systemet
+0002D = Systemtemperaturen er under den angitte minimumstemperaturen. Flytt systemet til et varmere sted.
+
+0003 = SMART-feil på stasjon
+0003D = Stasjonens %1 selvsjekk feilet. Kontakt WDs kundestøtte.
+
+0004 = Volumfeil
+0004D = Datavolumet %1 på stasjonen er ikke tilgjengelig. Kontakt WDs kundestøtte.
+
+0005 = Avventer termisk avslutning
+0005D = Systemet er overopphetet og slår seg snart av automatisk hvis ingenting blir gjort.
+
+0006 = Umiddelbar termisk avslutning
+0006D = Systemet er kritisk overopphetet og slås av umiddelbart for å unngå skade.
+
+2020 = Slår av systemet
+2020D = Systemet slås av.
+
+1020 = Slår av systemet
+1020D = Systemet slås av.
+
+0020 = Slår av systemet
+0020D = Systemet slås av.
+
+0029 = Vifte fungerer ikke
+0029D = Systemets vifte fungerer ikke. Kontakt WDs kundestøtte.
+
+0031 = På UPS-strøm
+0031D = Systemet kjører på UPS-strøm. %1% strøm igjen.
+
+0201 = Stasjon mislyktes
+0201D = Stasjon mislyktes i luke %1. Bytt den defekte stasjonen. Kontakt WDs kundestøtte.
+
+0207 = Stasjon svikter snart
+0207D = Stasjon %1 er i ferd med å svikte. Bytt den defekte stasjonen. Kontakt WDs kundestøtte.
+
+0208 = Volum degradert
+0208D = Volum %1 degradert Sjekk statusen til stasjonen ved å kjøre Disktest i Innstillinger >> Verktøy.
+
+0209 = Migrasjonsfremgang for volum
+0209D = Volum %1 Migrasjonsfremgang – %2 %
+
+2209 = Migrasjonsfremgang for volum
+2209D = Migrasjonsfremgang %1 for volum:  %2%
+
+0210 = Gjenoppretting av volum
+0210D = Tid på gjenoppretting av volum %1 pågår:  %2minutter
+
+2210 = Gjenoppretting av volum
+2210D = Tid på gjenoppretting av volum %1 pågår:  %2minutter
+
+0212 = Gjenoppretting av volum mislyktes
+0212D = Gjenoppretting av volum %1 mislyktes. Sjekk statusen til stasjonene ved å kjøre Disktest i Innstillinger >> Verktøy.
+
+0213 = Volumutvidelse mislyktes
+0213D = Volumutvidelse %1 mislyktes. Sjekk statusen til stasjonene ved å kjøre Disktest i Innstillinger >> Verktøy.
+
+0216 = RAID-roaming aktivert
+0216D = RAID-roaming aktivert.
+
+2216 = RAID-roaming aktivert
+2216D = RAID-roaming aktivert.
+
+0224 = Erstatningsstasjon med rødt lys
+0224D = Erstatningsstasjon med rød LED.
+
+2041 = Ethernet-port %1 tilkoblet på 10/100
+2041D = Tilkoblingshastighet begrenset til 10/100 Mbps.
+
+0042 = 50 % UPS-strøm igjen
+0042D = Systemet kjører på UPS-strøm med 50 % strøm igjen. Koble systemet til en ny strømkilde så snart som mulig.
+
+0043 = 15% UPS-strøm igjen
+0043D = Systemet kjører på UPS-strøm med 15 % strøm igjen. Koble systemet til en ny strømkilde umiddelbart.  Hvis ingenting blir gjort, vil systemet slå seg av når UPS-en går tom for strøm.
+
+0044 = UPS tom for strøm
+0044D = UPS-strøm har ikke strøm igjen. Systemet slås av umiddelbart for å unngå skade.
+
+1001 = Volumbruk er over 95 %
+1001D = Nesten hele volumkapasiteten %1 brukes, og du kan begynne å oppleve ytelsesproblemer. Forsikre deg om at filene dine er sikkerhetskopiert, og flytt deretter filer fra harddisken for å opprette ledig plass. Hvis papirkurven er aktivert, kan du prøve å tømme den for å få mer plass.
+
+1002 = Nettverkskobling er nede
+1002D = Nettverkskoblingen er %1 nede eller har blitt ustabil. Sjekk nettverkstilkoblingen.
+
+1010 = Nettverkskobling er nede
+1010D = Nettverkskoblingen er %1 nede eller har blitt ustabil. Sjekk nettverkstilkoblingen.
+
+1003 = Fastvareoppdatering mislyktes
+1003D = Fastvareoppdateringen mislyktes. Prøv igjen. Ta kontakt med WDs kundestøtte hvis feilen vedvarer.
+
+1004 = Høy systemtemperatur
+1004D = Enheten er for øyeblikket overopphetet. Kontroller at enheten har tilstrekkelig ventilasjon.
+
+1021 = Gjenoppretting av konfig. mislyktes
+1021D = Gjenoppretting av konfigurasjon mislyktes.
+
+0022 = Strømbrudd
+0022D = Strømbrudd %1.
+
+1022 = Strømbrudd
+1022D = Strømbrudd %1. Sjekk strømmen.
+
+1030 = Lagring under terskel
+1030D = Lagring under terskel.
+
+1035 = Produktforbedringsprogram
+1035D = Ønsker du å ta del i forbedringen av produktet vårt? Finn ut mer %1
+
+0036 = Systemkontroll mislyktes
+0036D = Filsystemkontrollen har oppdaget feil på konfigurasjonen. Sikkerhetskopier dataene dine, og opprett stasjonskonfigurasjonen på nytt for å løse disse feilene. Ta kontakt med WDs kundestøtte hvis problemet vedvarer.
+
+1036 = Systemkontroll mislyktes
+1036D = Filsystemkontrollen har oppdaget feil på konfigurasjonen. Sikkerhetskopier dataene dine, og opprett stasjonskonfigurasjonen på nytt for å løse disse feilene. Ta kontakt med WDs kundestøtte hvis problemet vedvarer.
+
+1045 = Filsystemfeil er rettet
+1045D = Filsystemkontrollen har oppdaget og rettet feil på konfigurasjonen.
+
+1037 = System ikke klart
+1037D = Systemet er opptatt. Vent til strøm-LED-en lyser blått før du setter inn en annen stasjon.
+
+1120 = USB-enhet som ikke støttes
+1120D = Det er registrert en USB-enhet som ikke støttes (leverandør: %1, modell: %2, serienummer: %3). Fjern USB-enheten.
+
+1121 = Filsystem som ikke støttes
+1121D = Et ustøttet filsystem har blitt registrert på en USB-enhet (leverandør %1, modell: %2, serienummer: %3, filsystem: %4, etikett: %5). Fjern USB-enheten.
+
+1122 = Kan ikke opprette delt ressurs
+1122D = En delt ressurs kunne ikke opprettes på en USB-enhet (leverandør: %1, modell: %2, serienummer: %3, filsystem: %4, etikett: %5, del navn: %6)
+
+1123 = Usikker fjerning av enhet
+1123D = En USB-enhet (leverandør: %1, modell: %2, serienummer: %3) ble fjernet uten å bli løst ut. Dette kan påvirke data på %2.
+
+1124 = Kunne ikke montere USB-enheten
+1124D = Kunne ikke montere USB-enheten (leverandør: %1, modell: %2, serienummer: %3). Sjekk USB-enheten.
+
+1127 = Kan ikke sikkerhetskopiere filer fra USB-enhet
+1127D = Kan ikke sikkerhetskopiere filer fra USB-enhet. Sjekk enhetens tilkobling.
+
+1130 = Sikkerhetskopieringskø til USB
+1130D = Forrige sikkerhetskopieringsjobb er fortsatt under behandling. Sikkerhetskopiering til USB starter automatisk når forrige jobb er ferdig.
+
+1400 = Feil ved ekstern sikkerhetskopiering
+1400D = Det oppstod en feil på jobbnavnet under ekstern sikkerhetskopiering: %1. Kontroller systeminnstillingene dine.
+
+1401 = Gjenopprettingsfeil ved ekstern sikkerhetskopiering
+1401D = Det oppstod en feil på jobbnavnet under ekstern gjenoppretting: %1. Kontroller systeminnstillingene dine.
+
+2402 = Vellykket ekstern sikkerhetskopiering
+2402D = Jobbnavnet på den eksterne sikkerhetskopieringen: %1, fullført på enheten: %2, til ressursen: %3
+
+1402 = Vellykket ekstern sikkerhetskopiering
+1402D = Jobbnavnet på den eksterne sikkerhetskopieringen: %1, fullført på enheten: %2, til ressursen: %3
+
+2403 = Vellykket gjenoppretting ved ekstern sikkerhetskopiering
+2403D = Jobbnavnet på den eksterne gjenopprettingen: %1, fullført på enheten: %2, til ressursen: %3
+
+1403 = Vellykket gjenoppretting ved ekstern sikkerhetskopiering
+1403D = Jobbnavnet på den eksterne gjenopprettingen: %1, fullført på enheten: %2, til ressursen: %3
+
+2001 = Systemomstart
+2001D = Systemet har startet på nytt.
+
+1011 = Ny fastvare tilgjengelig
+1011D = En ny versjon av fastvare har blitt utgitt. Oppdater systemet.
+
+2002 = Ny fastvare tilgjengelig
+2002D = En ny versjon av fastvare har blitt utgitt. Oppdater systemet.
+
+2003 = Normal temperatur
+2003D = Systemtemperaturen er innenfor det normale temperaturområdet.
+
+2004 = Fastvareoppdatering vellykket
+2004D = Fastvaren ble oppdatert til %1.
+
+2005 = Tilbakestilling til fabrikkinnstillinger vellykket
+2005D = Systemet er tilbakestilt til fabrikkinnstillingene.
+
+2006 = Du kan få en ny programvareoppgradering!
+2006D = Åpne WD My Cloud-enheten Dashboard for mer informasjon.
+
+2024 = Laster ned fastvareoppdatering
+2024D = Laster ned fastvareoppdatering.
+
+2026 = Installerer fastvareoppdatering
+2026D = Installerer fastvareoppdatering.
+
+1028 = Omstart nødvendig
+1028D = Omstart nødvendig.
+
+2028 = Omstart nødvendig
+2028D = Omstart nødvendig.
+
+2032 = Systemet er i standby-modus
+2032D = Systemet er i standby-modus.
+
+1033 = Systemet starter på nytt
+1033D = Systemet starter på nytt.
+
+2033 = Systemet starter på nytt
+2033D = Systemet starter på nytt.
+
+1038 = Lagringskvoten er nesten full
+1038D = Lagringskvoten for [%1] er nesten full. Forsikre deg om at filene er sikkerhetskopiert, og flytt deretter filer fra harddisken for å opprette ledig plass.
+
+2038 = Lagringskvoten er nesten full
+2038D = Lagringskvoten for [%1] er nesten full. Forsikre deg om at filene er sikkerhetskopiert, og flytt deretter filer fra harddisken for å opprette ledig plass.
+
+1039 = Lagringskvoten er full
+1039D = Lagringskvoten for [%1] har nådd grensen. Forsikre deg om at filene er sikkerhetskopiert, og flytt deretter filer fra harddisken for å opprette ledig plass.
+
+2039 = Lagringskvoten er full
+2039D = Lagringskvoten for [%1] har nådd grensen. Forsikre deg om at filene er sikkerhetskopiert, og flytt deretter filer fra harddisken for å opprette ledig plass.
+
+2040 = UPS-enhet som ikke støttes
+2040D = UPS-enhet som ikke støttes
+
+2121 = Låst USB-enhet
+2121D = Det er registrert en låst USB-enhet (leverandør: %1, modell: %2, serienummer: %3).
+
+2126 = Filer kopiert fra USB-enhet
+2126D = Filer kopiert fra <%1> til <%2>.
+
+2128 = Kopierer filer
+2128D = Kopierer filer fra USB-enhet.
+
+2129 = Filer flyttet fra USB-enhet
+2129D = Filer flyttet fra <%1> til <%2>.
+
+2131 = Flytte filer
+2131D = Flytter filer fra USB-enhet.
+
+1200 = Ustøttet stasjon
+1200D = Ustøttet stasjon i luke %1. Bytt den innsatte stasjonen med en godkjent stasjon. Du finner godkjent stasjonsliste på: www.wd.com
+
+2200 = Ustøttet stasjon
+2200D = Ustøttet stasjon i luke %1. Bytt den innsatte stasjonen med en godkjent stasjon. Du finner godkjent stasjonsliste på: www.wd.com
+
+2202 = Stasjon for liten
+2202D = Stasjon for liten på plasseringen %1
+
+2203 = Stasjon initialiseres
+2203D = Stasjon initialiseres på plasseringen %1
+
+2211 = Sjekker lagringsintegritet
+2211D = Sjekker lagringsintegritet.
+
+2214 = Stasjon satt inn
+2214D = En ny stasjon har blitt satt inn i luke %1. For å legge til denne stasjonen til systemets RAID-sett, naviger til Lagring >> RAID og klikk på Endre RAID-modus-knappen.
+
+0215 = Stasjon fjernet
+0215D = Stasjon fjernet fra luke %1
+
+2215 = Stasjon fjernet
+2215D = Stasjon fjernet fra luke %1. Kontroller systemet ditt.
+
+2217 = Ingen stasjoner installert
+2217D = Ingen stasjoner er installert. Legg til stasjoner for å begynne å bruke systemet ditt. Du kan kjøpe en ny stasjon på: www.wd.com
+
+2218 = Hot standby-stasjon lagt inn på RAID-matrise
+2218D = Hot standby-stasjon lagt inn på RAID-matrise.
+
+2219 = RAID-migrering fullført
+2219D = RAID-migrering fullført.
+
+2220 = RAID-gjenoppretting fullført
+2220D = RAID-gjenoppretting fullført.
+
+2221 = Red NAS-stasjon fra annen enn WD satt inn
+2221D = Red NAS-stasjon fra annen enn WD satt inn. Vær oppmerksom på at WD My Cloud-enheten er designet for optimal bruk med WD Red NAS-harddisker.
+
+2222 = Volum er formatert
+2222D = Volum %1 er formatert.
+
+2223 = Utvid volumfremgang
+2223D = Volum %1 utvide fremgang: %2%
+
+2300 = Skanning av mediefiler stoppet
+2300D = Enheten stoppet med å skanne dine mediefiler. På grunn av dette vil noen av miniatyrbildene ikke vises ved ekstern tilgang. Start WD My Cloud-systemet på nytt for å fortsette skanning.
+
+1501 = App-oppdatering tilgjengelig
+1501D = %1 app har tilgjengelig oppdatering. Vi ber deg oppdatere.
+
+1502 = Virus funnet
+1502D = Grunnleggende om anti-virus: Virusskanning fullført og virus oppdaget. Se virusskannerapporten for detaljer.
+
+2503 = Virusskanning fullført
+2503D = Grunnleggende om anti-virus: Virusskanning fullført. Ingen virus funnet.
+
+2504 = Planlagt virusskanning startet
+2504D = Grunnleggende om anti-virus: Planlagt virusskanning startet.
+
+2505 = Planlagt virusskanning stanset.
+2505D = Grunnleggende om anti-virus: Planlagt virusskanning stanset fordi stopptid er nådd. Skann ble ikke fullført. 
+
+1103 = En feil oppstod under gjenoppretting av data fra safepoint
+1103D = %4 - Det oppstod en feil under gjenoppretting av data fra safepoint %1 på delingsressurs %2 på %3.
+
+2103 = Gjenoppretting av dine data fra safepoint var vellykket
+2103D = Dataene dine ble vellykket gjenopprettet fra safepoint %1 på delingsressurs %2 på %3.

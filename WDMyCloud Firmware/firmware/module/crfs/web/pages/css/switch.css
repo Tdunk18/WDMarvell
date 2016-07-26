@@ -1,0 +1,326 @@
+
+/*---Toggle Box---*/
+.jquery-checkbox {
+    position: relative;
+    top: -2px;
+    display: inline-block;
+    font-size: 20px;
+    line-height: 20px;
+    cursor: pointer;
+    vertical-align: middle;
+    outline: 0;
+}
+.jquery-checkbox div.checkbox_container {
+    display: inline-block;
+    /*width: 125px;*/
+    height: 32px;
+    line-height: 32px;
+    margin-left: 0;
+    background: #eaeaea;
+    background: -moz-linear-gradient(top,  #ffffff 0%, #ffffff 2%, #e5e5e5 3%, #f0f0f0 97%, #c8c8c8 98%, #c8c8c8 98%, #c8c8c8 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(2%,#ffffff), color-stop(3%,#e5e5e5), color-stop(97%,#f0f0f0), color-stop(98%,#c8c8c8), color-stop(98%,#c8c8c8), color-stop(100%,#c8c8c8));
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#ffffff 2%,#e5e5e5 3%,#f0f0f0 97%,#c8c8c8 98%,#c8c8c8 98%,#c8c8c8 100%);
+    background: -o-linear-gradient(top,  #ffffff 0%,#ffffff 2%,#e5e5e5 3%,#f0f0f0 97%,#c8c8c8 98%,#c8c8c8 98%,#c8c8c8 100%);
+    background: -ms-linear-gradient(top,  #ffffff 0%,#ffffff 2%,#e5e5e5 3%,#f0f0f0 97%,#c8c8c8 98%,#c8c8c8 98%,#c8c8c8 100%);
+    background: linear-gradient(to bottom,  #ffffff 0%,#ffffff 2%,#e5e5e5 3%,#f0f0f0 97%,#c8c8c8 98%,#c8c8c8 98%,#c8c8c8 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c8c8c8',GradientType=0 );
+    color: #4b5a68;
+    vertical-align: middle;
+    cursor: pointer;
+    outline: 1px solid #c8c8c8;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/*
+.DE-DE .jquery-checkbox div.checkbox_container {
+    width: 126px !important;
+}
+.PL-PL .jquery-checkbox div.checkbox_container {
+    width: 132px !important;
+}
+.TR-TR .jquery-checkbox div.checkbox_container {
+    width: 138px !important;
+}
+.RU-RU .jquery-checkbox div.checkbox_container {
+    width: 139px !important;
+}
+.PT-BR .jquery-checkbox div.checkbox_container {
+    width: 159px !important;
+}
+.ES-ES .jquery-checkbox div.checkbox_container {
+    width: 166px !important;
+}
+.FR-FR .jquery-checkbox div.checkbox_container {
+    width: 167px !important;
+}
+.CS-CZ .jquery-checkbox div.checkbox_container {
+    width: 168px !important;
+}
+*/
+.jquery-checkbox div.checkbox_off {
+    display: inline-block;
+    font: 16px Arial,"Helvetica Neue",Helvetica,sans-serif;
+    text-align: right;
+    vertical-align: text-bottom;
+    color: #CCC;
+}
+label.checbox_off,
+label.checkbox_on {
+    width: auto;
+    height: 32px;
+    min-width: 12px;
+    line-height: 32px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    cursor: pointer;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+label.checkbox_off {
+    display: inline-block;
+    background-color: #eaeaea;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#e5e5e5),to(#f0f0f0));
+    background-image: -webkit-linear-gradient(top,#e5e5e5,#f0f0f0);
+    background-image: -moz-linear-gradient(top,#e5e5e5,#f0f0f0);
+    background-image: -o-linear-gradient(top,#e5e5e5,#f0f0f0);
+    background-image: -ms-linear-gradient(top,#e5e5e5,#f0f0f0);
+    background-image: linear-gradient(top,#e5e5e5,#f0f0f0);
+    border-left: 1px solid #c8c8c8;
+    cursor: pointer !important;
+}
+label.checkbox_on {
+    background-color: transparent;
+    cursor: pointer !important;
+}
+label.checkbox_on span { color: #f6f6f6 }
+.toggle_switch+label.checkbox_off {
+    height: 31px;
+    line-height: 32px;
+    padding: 0 20px;
+    background-color: #eaeaea;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#f0f0f0),to(#e5e5e5));
+    background-image: -webkit-linear-gradient(top,#f0f0f0,#e5e5e5);
+    background-image: -moz-linear-gradient(top,#f0f0f0,#e5e5e5);
+    background-image: -o-linear-gradient(top,#f0f0f0,#e5e5e5);
+    background-image: -ms-linear-gradient(top,#f0f0f0,#e5e5e5);
+    background-image: linear-gradient(top,#f0f0f0,#e5e5e5);
+}
+.FR-FR .toggle_switch+label.checkbox_off {
+    width: 72px;
+    text-align: center;
+}
+.NL-NL .toggle_switch+label.checkbox_off {
+    width: 28px;
+    text-align: center;
+}
+.ZH-CN .toggle_switch+label.checkbox_off {
+    width: 22px;
+    text-align: center;
+}
+.HU-HU .toggle_switch+label.checkbox_off {
+    width: 27px;
+    text-align: center;
+}
+.NB-NO .toggle_switch+label.checkbox_off {
+    width: 27px;
+    text-align: center;
+}
+.PL-PL .toggle_switch+label.checkbox_off {
+    width: 40px;
+    text-align: center;
+}
+.SV-SE .toggle_switch+label.checkbox_off {
+    width: 26px;
+    text-align: center;
+}
+.jquery-checkbox2 label.checkbox_on {
+    width: 26px!important;
+    height: 24px;
+}
+.jquery-checkbox2 label.checkbox_off {
+    display: inline;
+    width: 26px!important;
+    height: 24px;
+}
+.jquery-checkbox div.checkbox_on {
+    display: inline-block;
+    font: 16px Arial,"Helvetica Neue",Helvetica,sans-serif;
+    text-align: left;
+    vertical-align: text-bottom;
+    color: #CCC;
+}
+.jquery-checkbox-checked label.checkbox_on {
+    background-color: #018be3;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#027dc8),to(#09F));
+    background-image: -webkit-linear-gradient(top,#027dc8,#09F);
+    background-image: -moz-linear-gradient(top,#027dc8,#09F);
+    background-image: -o-linear-gradient(top,#027dc8,#09F);
+    background-image: -ms-linear-gradient(top,#027dc8,#09F);
+    background-image: linear-gradient(top,#027dc8,#09F);
+    display: inline-block;
+}
+.jquery-checkbox span.toggle_on,
+.jquery-checkbox span.toggle_off {
+    position: relative;
+    top: -1px;
+    display: none;
+    background: url('/web/img/main_sprite.png?v=1.3.0-546') no-repeat -175px -558px transparent;
+    width: 14px;
+    height: 16px;
+    margin: 0 20px;
+    line-height: 32px;
+    vertical-align: middle;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.jquery-checkbox span.toggle_on {
+    margin: 0 24px;
+}
+.JA-JP .jquery-checkbox span.toggle_on,
+.TR-TR .jquery-checkbox span.toggle_on,
+.ZH-TW .jquery-checkbox span.toggle_on,
+.KO-KR .jquery-checkbox span.toggle_on {
+    margin: 0 20px !important;
+}
+.CS-CZ .jquery-checkbox span.toggle_on {
+    margin: 0 21px !important;
+}
+.NL-NL .jquery-checkbox span.toggle_on,
+.PL-PL .jquery-checkbox span.toggle_on {
+    margin: 0 22px !important;
+}
+.DE-DE .jquery-checkbox span.toggle_on {
+    margin: 0 23px !important;
+}
+.RU-RU .jquery-checkbox span.toggle_on {
+    margin: 0 27px !important;
+}
+.ES-ES .jquery-checkbox span.toggle_on,
+.PT-BR .jquery-checkbox span.toggle_on {
+    margin: 0 33px !important;
+}
+.TR-TR .jquery-checkbox-checked label.checkbox_on{
+	width:81px;
+}
+.jquery-checkbox span.toggle_off { background-position: -189px -558px }
+.jquery-checkbox span.toggle_off { display: inline-block }
+.jquery-checkbox .toggle_switch { display: none }
+.jquery-checkbox2 {
+    position: relative;
+    left: -3px;
+    display: inline;
+    cursor: pointer;
+}
+.jquery-checkbox2 div.checkbox_container {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+.toggle_off,
+.toggle_on {
+    width: 20px;
+    height: 20px;
+    margin: 3px;
+    background-image: url("/web/img/main_sprite.png?v=1.3.0-546");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    cursor: pointer;
+}
+.toggle_off { background-position: -180px -575px }
+.toggle_off:hover { background-position: -200px -575px }
+.toggle_on { background-position: -160px -575px }
+.toggle_on:hover { background-position: -140px -575px }
+.jquery-checkbox2 .mark { display: inline }
+.jquery-checkbox2 img {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+.jquery-checkbox2 img { background: transparent url("/web/img/checkbox2.png?v=1.3.0-546") no-repeat }
+.jquery-checkbox2 div.checkbox_container { background-position: 0 0 }
+.jquery-checkbox2-hover div.checkbox_container { background-position: -24px 0 }
+.jquery-checkbox2-checked div.checkbox_container { background-position: 0 -24px }
+.jquery-checkbox2-checked .jquery-checkbox2-hover div.checkbox_container { background-position: -24px -24px }
+.jquery-checkbox2-disabled div.checkbox_container { background-position: 0 -48px }
+.jquery-checkbox2-checked .jquery-checkbox2-disabled div.checkbox_container { background-position: 0 -72px }
+
+.switchOff{
+	background: url('../images/ToggleSwitch/ButtonToggleSwitchOffUp.png') no-repeat;
+	width:80px;
+	height:30px;
+	cursor: pointer;
+}
+.switchOn{
+	background: url('../images/ToggleSwitch/ButtonToggleSwitchOnDown2.png') no-repeat;
+	width:80px;
+	height:30px;
+	cursor: pointer;
+}
+
+.switchOnOver{
+	background: url('../images/ToggleSwitch/ButtonToggleSwitchOnDown.png') no-repeat;
+	width:80px;
+	height:30px;
+	cursor: pointer;
+}
+.switchOffOver{
+	background: url('../images/ToggleSwitch/ButtonToggleSwitchOffOver.png') no-repeat;
+	width:80px;
+	height:30px;
+	cursor: pointer;
+}
+.switchOffThumb{
+	background: url('../images/ToggleSwitch/ThumbToggleSwitchUp.png') no-repeat;
+	width:40px;
+	height:30px
+}
+.switchOnThumb{
+	background: url('../images/ToggleSwitch/ThumbToggleSwitchOver.png') no-repeat;
+	width:40px;
+	height:30px
+}
+.switchOnThumbOver{
+	background: url('../images/ToggleSwitch/ThumbToggleSwitchOver.png') no-repeat;
+	width:40px;
+	height:28px;
+}
+.thumbLeft{
+	float:left;
+}
+.thumbRight{
+	float:right;
+}
+.switchDiv{
+	width:80px;
+	height:30px
+}
+
+/*.switchState:hover{
+	background: url('images/ToggleSwitch/ButtonToggleSwitchOffOver.png') no-repeat;
+}*/
+.switchobj{
+	position: relative;
+	line-height:29px;
+	color:#ccc;
+}
+.switchobj div{
+	/*border: 1px solid red;*/
+	width:34px;
+}
+.on_text , .off_text{
+	float:left;
+	border: 1px solid red;
+	width:38px;
+	/*height:29px;*/
+	color:#ccc;
+	line-height:29px;
+	text-align:center;
+	display:none;
+}

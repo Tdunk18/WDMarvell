@@ -1,0 +1,22 @@
+lib/crc64_module-crc64.o: lib/crc64.c ../include/grub/types.h ../config.h \
+ ../include/grub/cpu/types.h ../include/grub/dl.h \
+ ../include/grub/symbol.h ../include/grub/err.h ../include/grub/elf.h \
+ ../include/grub/crypto.h ../include/grub/mm.h
+
+../include/grub/types.h:
+
+../config.h:
+
+../include/grub/cpu/types.h:
+
+../include/grub/dl.h:
+
+../include/grub/symbol.h:
+
+../include/grub/err.h:
+
+../include/grub/elf.h:
+
+../include/grub/crypto.h:
+
+../include/grub/mm.h:

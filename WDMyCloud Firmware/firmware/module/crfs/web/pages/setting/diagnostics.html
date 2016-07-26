@@ -1,0 +1,819 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="PRAGMA" content="no-cache"> 
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+</head>
+
+<style>
+.file_input_div
+{	
+  padding:1px;		
+  position: relative;
+  width: auto; 
+  overflow: hidden;  
+ 
+}
+
+.file_input_hidden
+{
+  font-size: 30px; 
+  position: absolute; 
+  right: 0px; 
+  top: 0px; 
+  opacity: 0; 
+  filter: alpha(opacity=0); 
+	-ms-filter: "alpha(opacity=0)"; 
+	-khtml-opacity: 0; 
+	-moz-opacity: 0;	
+}
+
+/* [+] For S.M.A.R.T. Test / Scan Disk bar */
+
+.ui-widget-header {
+	background: #15ABFF;
+}
+
+.ui-widget-content {
+	height: 4px;
+        border: 0;
+	background: #C8C8C8 !important;;
+	border-radius: 0;
+}
+/* [-] For S.M.A.R.T. Test / Scan Disk bar */
+</style>
+
+<script type="text/javascript" src="/web/function/diagnosticsDiag.js"></script>
+<script type="text/javascript" src="/web/function/diagnostics.js"></script>
+<script language="javascript" src="/web/function/raid_define.js"></script>
+<script type="text/javascript" src="/web/function/raid_diag.js"></script>
+<script type="text/javascript" src="/web/function/system.js"></script>
+<script type="text/javascript" src="/web/function/share.js"></script>
+<script type="text/javascript" src="/web/function/iso_mount.js"></script>
+<script type="text/javascript" src="/web/function/iso_create.js"></script>
+
+<script type="text/javascript">
+var _SELECT_ITEMS  = new Array("settings_utilitiesScanDisk_select","settings_utilitiesFormatDisk_select");
+var timeoutId=0, systest_timeoutId = 0;;
+var intervalId = 0;	//for setInterval
+var fmt_timeoutId = 0;
+
+function page_load()
+{
+	ready_system();
+	init_switch();
+
+	var sys_time = (new Date()).getTime();
+	initDiag("/web/setting/diagnostics_diag.html?r="+sys_time);
+	
+	if (SHUTDOWN_FUNCTION == 0 )
+	{
+		$("#tip_dev").attr('title',_T('_tip','dev1'));
+		$("#id_shutdown_td").hide();
+	}	
+	else
+	   $("#tip_dev").attr('title',_T('_tip','dev'));
+	
+	$("#tip_scan").attr('title',_T('_tip','scan'));
+	$("#tip_reset").attr('title',_T('_tip','restore'));
+	$("#tip_config").attr('title',_T('_tip','config'));	
+	$("#tip_smart").attr('title', _T('_tip','smart'));
+	$("#tip_systest").attr('title',_T('_tip','system_test'));
+	$("#tip_wipe").attr('title',_T('_tip','wipe'));
+    $("#tip_extendedlog").attr('title',_T('_tip','extendedlog'));	
+
+	hide_select();
+	init_tooltip();		
+	get_extendedlog();
+    	
+	HD_Status(1,function(hd_state){
+
+	switch(parseInt(hd_state))
+	{
+		case 0://No Volume
+			diagnostics_button(2);
+			
+			wd_ajax({
+				url: "/cgi-bin/smart.cgi",
+				type: "POST",
+				async: false,
+				cache: false,
+				data:{cmd:'cgi_SMART_Test_Result'},	
+				dataType:"xml",
+				success: function(xml){
+					if ($(xml).find("res").text() == 1)
+					{
+						setTimeout(function(){
+					       	 	SMART_Test_Result_Diag(1);	}
+					    ,500);
+						
+						return false;
+					}
+				}//end of success: function(xml){
+			}); //end of wd_ajax({
+		break;
+		
+		case 2://S.M.A.R.T. Test
+			SMART_Test_ps();
+			
+			diagnostics_button(0);
+		break;
+		case 3://Formatting Disk
+			
+			wd_ajax({
+				url:"/xml/cgi_fmt_gui_log.xml",
+				type:"POST",
+				async:false,
+				cache:false,
+				dataType:"xml",
+				success: function(xml){
+					
+						if ( parseInt($(xml).find("my_type").text(),10) == 15 )
+						{
+							$("#format_state").html(_T('_format','initializing') + "...");
+							$("#format_progressbar").progressbar({value: 0});
+							$("#format_percent").html("&nbsp;&nbsp;0%&nbsp;&nbsp;");
+							
+							 fmt_timeoutId = setInterval('FormatDisk_state();', 3000);
+							 
+							$("#div_formatdisk_set").hide();
+							$("#div_formatdisk_state").show();
+						}
+				}
+			});		
+			
+			diagnostics_button(0);
+			
+		break;
+		case 4://Scan Disk
+			diagnostics_button(0);
+			$("#div_scandsk_set").hide();
+			$("#div_scandsk_state").show();
+			
+			$("#scandsk_progressbar").progressbar({value: 0});
+			$("#scandsk_percent").html("&nbsp;"+_T( '_format', 'initializing'));
+			
+			timeoutId = setInterval("Scandisk_Show_State()",3000);
+		break;
+		
+		case 5://No Disk
+			$("#settings_utilitiesFormatDiskWipe_chkbox").attr("disabled","disabled");
+			diagnostics_button(3);
+		break;
+		
+		default:
+			var my_html = Volume_Info_Selector("ScanDisk");
+			$("#scan_select").empty().append(my_html);
+			var my_html = Volume_Info_Selector("FormatDisk");
+			$("#format_vol_selector").empty().append(my_html);
+			init_select();
+			
+			if (parseInt(VOLUME_NUM,10) != 1)
+			{
+				$("#scan_select").show();
+				$("#format_vol_selector").show();
+			}
+			
+			wd_ajax({
+				url: "/cgi-bin/smart.cgi",
+				type: "POST",
+				async: false,
+				cache: false,
+				data:{cmd:'cgi_SMART_Test_Result'},	
+				dataType:"xml",
+				success: function(xml){
+					if ($(xml).find("res").text() == 1)
+					{
+						setTimeout(function(){
+					       	 	SMART_Test_Result_Diag(1);	}
+					    ,500);
+						
+						return false;
+					}
+				}//end of success: function(xml){
+			}); //end of wd_ajax({
+		break;
+	}//end of switch
+	
+	$("#settings_utilitiesQuickTest_button").click(function() {
+		if ($(this).hasClass('gray_out')) return;
+		
+		SMART_Test_Start('short');
+	});	
+	
+	$("#settings_utilitiesFullTest_button").click(function() {
+		if ($(this).hasClass('gray_out')) return;
+		
+		SMART_Test_Start('long');
+	});	
+	
+	$("#settings_utilitiesDiskTestCancel_button").click(function() {
+		
+		if (timeoutId != 0) clearTimeout(timeoutId);
+		
+		jLoading(_T('_common','set'), 'loading' ,'s',""); 
+		
+		setTimeout( "SMART_Test_Stop();" , 500);
+	});		
+	
+	$("#settings_utilitiesSystemTest_button").click(function() {
+		jLoading(_T('_common','set'), 'loading' , 's', ""); 
+		
+		System_Test_Diag();
+	});	
+		
+	$("#settings_utilitiesScanDisk_button").click(function() {
+		
+	 	if ($(this).hasClass('gray_out')) return;
+	 	
+		jConfirm( 'XL',_T('_scandsk','msg3'), _T('_diagnostic','desc6'), "scandisk", function(r){	//Text:All services will be stopped temporarily. Are you sure you want to continue?
+		if(r)
+	        {
+	        	stop_web_timeout();
+	        	
+	        	setTimeout('ScanDisk()' ,500);
+	        	jLoading(_T('_common','set'), 'loading' ,'s',""); 
+			}
+		});	//end of jConfirm
+	});	
+	
+	$("#settings_utilitiesFormatDisk_button").click(function() {	
+		
+		if ($(this).hasClass('gray_out')) return;
+		
+		var vol = $("#settings_utilitiesFormatDisk_volume").attr("rel");
+		WipeDisk_Diag(vol);
+	});	
+	
+	$("#settings_utilitiesImport_button").mouseover(function(){		
+		if($("#id_file").hasClass('gray_out')) return;
+                $("#id_file").addClass("upload_hover").removeClass("upload_button").removeClass("upload_active");
+	});
+	
+	$("#settings_utilitiesImport_button").mouseout(function(){
+		if($("#id_file").hasClass('gray_out')) return;
+		$("#id_file").addClass("upload_button").removeClass("upload_hover").removeClass("upload_active");		
+	});
+	
+	$("#settings_utilitiesImport_button").click(function(){
+		if($("#id_file").hasClass('gray_out')) return;	
+	        $("#id_file").addClass("upload_click").removeClass("upload_button").removeClass("upload_hover");	
+	});
+	
+		wd_ajax({
+		type: "POST",
+		async: true,
+		cache: false,
+		url: "/cgi-bin/status_mgr.cgi",
+		data: "cmd=cgi_get_status",
+		dataType: "xml",
+		success: function (xml) {			
+					$(xml).find('status').each(function (index) {			
+					var v = $(this).find('uptime').text();	
+					if (v.indexOf("days")!= -1)	
+						v = v.replace('days', _T('_common','days'));							
+					else
+					v = v.replace('day', _T('_common','day'));					
+					
+					if (v.indexOf("hours")!= -1)
+							v = v.replace('hours', _T('_common','hours'));
+					else
+						v = v.replace('hour', _T('_common','hour'));	
+						
+					if (v.indexOf("minutes")!= -1)
+					v = v.replace('minutes', _T('_common','minutes'));
+					else
+						v = v.replace('minute', _T('_common','minute'));	
+											
+					$("#settings_utilitiesUptime_value").text(v);					
+			});
+		}
+	});
+
+	if(ISO_FUNCTION==1)
+	{
+		$("#iso_div").show();
+	//iso 
+	//get iso share list
+	get_iso_list();
+	
+	var sys_time = (new Date()).getTime();
+	initDiag("/web/setting/isomountDiag.html?r=" + sys_time);
+	initDiag("/web/setting/isoCreateDiag.html?r=" + sys_time);
+
+    $("#settings_utilitiesISOShare_button").click(function(){
+ 		//check share's max number
+		if(_ISO_TOTAL==_ISO_MAX_TOTAL_SHARE)
+		{
+			jAlert(_T('_network_access','msg13'),  _T('_common','error'));
+			return;
+		}
+		
+		iso_create();
+	});
+
+    $("#iso_delete").click(function(){
+    	iso_del();
+	});
+	}
+	if (SYSTEM_TEST != 0 )	$("#id_sys_test_tr").show();
+	if (FLASH_LED_FUNCTION != 0 )	$("#id_flash_tr").show();	
+	if (EXTENDED_LOG != 0 )  $("#id_extendedlog_tr").show();	
+		
+	$("input:text").inputReset();
+
+    $("#media_switch").click(function(){
+		var v = getSwitch('#media_switch');
+		if( v==1)
+		{
+			modify_iso_share('media',1);
+		}
+		else
+		{
+			modify_iso_share('media',0);
+		}
+	});
+	
+    $("#ftp_switch").click(function(){
+		var v = getSwitch('#ftp_switch');
+		if( v==1)
+		{
+			$("#ftp_anonymous").show();
+		}
+		else
+		{
+			modify_iso_share('ftp','n');
+			$("#ftp_anonymous").hide();
+		}
+	});
+    $("#webdav_switch").click(function(){
+    	modify_iso_share('webdav');
+	});
+
+    $("#nfs_switch").click(function(){
+		var v = getSwitch('#nfs_switch');
+		if( v==1)
+		{
+			$("#nfs_conf_div").show();
+		}
+		else
+		{
+			$("#nfs_conf_div").hide();
+			modify_iso_share('nfs');
+		}
+	});
+	$("#nfs_conf_div").click(function() {			
+		init_nfs_dialog('iso');
+	});			
+	
+	$("#settings_utilitiesFlashLed_switch").click(function(){
+		var v = getSwitch('#settings_utilitiesFlashLed_switch');	
+		if (v == 1)
+		{
+			flash_led(1);
+			setTimeout("flash_led(0)",30000);
+		}
+		else
+			flash_led(0);		
+		
+	});
+    $("#settings_utilitiesExtendedLog_switch").click(function(){
+
+    	jConfirm('M', _T('_system','msg13'),_T('_system','extended_log'),'log',function(r){
+					if(r)
+					{							
+                                                                set_extendedlog();
+								setTimeout('stop_web_timeout();', 1000);	
+	
+								var overlayObj=$("#rebootDiag").overlay({expose: '#000',api:true,closeOnClick:false,closeOnEsc:false});
+								overlayObj.load();	
+								count();
+								wd_ajax({
+										type:"POST",
+										async: true,
+										cache: false,
+										url: "/cgi-bin/system_mgr.cgi",
+										data: "cmd=cgi_restart",
+										success: function(data){				
+														}			
+									});//end of .ajax...
+						
+					}//end of if(r)
+					else
+					{
+						get_extendedlog();
+					}	
+    	 });
+    	
+        
+    });
+    
+   })// end of HD_Status(1,function(hd_status){	 
+}
+function page_unload()
+{
+	clearTimeout(timeoutId);
+	if (fmt_timeoutId != 0) clearInterval(fmt_timeoutId);
+	if (intervalId != 0) clearInterval(intervalId);
+}
+function flash_led(v)
+{
+	wd_ajax({
+		type: "POST",
+		async: true,
+		cache: false,
+		dataType: "html",
+		url: "/cgi-bin/system_mgr.cgi",
+		data: "cmd=cgi_flash_led&switch="+v,
+		success: function () {
+		}
+	});
+}
+</script>
+<body>
+		<!-- Block  : System Diagnostics -->		
+				<div class="h1_content header_2 _text" lang="_diagnostic" datafld="title1"></div>	
+							<div id="DIV_SMART_Set">							
+									<!-- S.M.A.R.T. Test : Quick Test / Full Test -->
+									<table border="0" cellspacing="0" cellpadding="0" height="0">
+										<tr>
+										<td class="tdfield"><span class="_text" lang="_diagnostic" datafld="desc1"></span></td>
+										<td class="tdfield_padding"><button type="button" id="settings_utilitiesQuickTest_button"><span class="_text" lang="_diagnostic" datafld="button1"></span></button></td>
+										<td class="tdfield_padding tdfield_padding_left_10"><button type="button" id="settings_utilitiesFullTest_button"><span class="_text" lang="_diagnostic" datafld="button2"></span></button></td>																					
+										<td class="tdfield_padding tdfield_padding_left_10"><div class="TooltipIcon" id="tip_smart"></div></td>	
+									</tr>	
+									</table>	
+									<!-- System Test -->
+									<table border="0" cellspacing="0" cellpadding="0" height="0">
+										<tr id="id_sys_test_tr" style="display:none">
+                                            <td class="tdfield"><span class="_text" lang="_diagnostic" datafld="desc24"></span></td>											
+										<td class="tdfield_padding"><button type="button" id="settings_utilitiesSystemTest_button"><span class="_text" lang="_diagnostic" datafld="button4"></span></button></td>
+										<td class="tdfield_padding tdfield_padding_left_10"><div class="TooltipIcon" id="tip_systest"></div></td>	
+										<td></td>
+									</tr>
+									</table>	
+									<!-- System Log -->
+									<table border="0"  cellspacing="0" cellpadding="0" height="0">								
+									<tr>
+                                        <td class="tdfield"><span class="_text" lang="_logs" datafld="system_log"></span></td>											
+										<td class="tdfield_padding"><button type="button" id="settings_utilitiesLogs_button" onclick="view_log();"><span class="_text" lang="_logs" datafld="view_logs"></span></button></td>
+										<td class="tdfield_padding tdfield_padding_left_10"></td>	
+									</tr>
+									</table>	
+									
+									<!--Extended Logging and Flash System LED-->
+									<table border="0"  cellspacing="0" cellpadding="0" height="0">								
+						                  <tr id="id_extendedlog_tr" style="display:none">
+						                      <td class="tdfield"><span class="_text" lang="_system" datafld="extended_log"></span></td>
+						                      <td class="tdfield_padding"><input id="settings_utilitiesExtendedLog_switch" name="settings_utilitiesExtendedLog_switch" class="onoffswitch" type="checkbox" value="true" style="position: absolute; z-index: -1; visibility: hidden;"></td>                     
+						                      <td class="tdfield_padding tdfield_padding_left_10"><div class="TooltipIcon" id="tip_extendedlog"></div></td>	
+						                  </tr>
+										<tr id="id_flash_tr" style="display:none">
+										<td class="tdfield"><span class="_text" lang="_system" datafld="flash_system"></span></td>											
+										<td class="tdfield_padding"><input id="settings_utilitiesFlashLed_switch" name="settings_utilitiesFlashLed_switch" class="onoffswitch" type="checkbox" value="true" style="position: absolute; z-index: -1; visibility: hidden;"></td>
+										<td class="tdfield_padding tdfield_padding_left_10"></td>	
+									</tr>
+									</table>																											
+								</div>		
+								<div class="field_top" id="DIV_SMART_State" style="display:none;">
+									<table cellspacing="0" cellpadding="0" border="0">
+									<tr>
+										<td><span class="_text" lang="_diagnostic" datafld="desc2"></span></td>	
+										<td>
+											<table cellspacing="5" cellpadding="0" border="0" width="180px">
+											<tr>
+												<td><div id="DIV_SMART_Test_State"></div></td>
+											</tr>
+											</table>
+										</td>
+										<td width="5px">&nbsp;</td>											
+										<td><button type="button" id="settings_utilitiesDiskTestCancel_button"><span class="_text" lang="_button" datafld="Cancel"></span></button></td>																				
+									</tr>	
+									</table>	
+								</div>				
+								<!-- Restore to Default -->	
+								<div class="hr_0_content" style="margin-top:30px;margin-bottom:30px;"><div class="hr_1"></div></div>  
+								<div class="h1_content header_2"><span class="_text" lang="_utilities" datafld="restore"></span></div>	
+								<div>									
+									<table border="0"  cellspacing="0" cellpadding="0" height="0">
+									<tr>
+										<td class="tdfield">
+											<span class="_text" lang="_utilities" datafld="restore"></span>
+										</td>											
+										<td class="tdfield_padding">
+										<div class="select_menu">
+												<ul>
+													<li class="option_list">
+														<div id="settings_generalLanguage_select" class="edit_select wd_select option_selected">
+															<div class="sLeft wd_select_l"></div>
+															<div class="sBody text wd_select_m" id="id_utilitiesReset" rel="0"><span class="_text" lang="_utilities" datafld="restore_title"></span></div>
+															<div class="sRight wd_select_r"></div>
+														</div>
+														<ul class="ul_obj"  id='id_utilitiesReset_li'>
+															<div>
+																<li id="settings_utilitiesReset1_select" rel="0" ><a href="#"><span class="_text" lang="_utilities" datafld="restore_title"></span></a></li>
+																<li id="settings_utilitiesReset2_select" rel="1" ><a href="#"><span class="_text" lang="_utilities" datafld="quick_restore"></span></a></li>
+																<li id="settings_utilitiesReset3_select" rel="2" ><a href="#"><span class="_text" lang="_utilities" datafld="full_restore"></span></a></li>									
+															</div>
+														</ul>
+													</li>
+												</ul>
+											</div>											
+											
+											
+															
+<!--																	
+												<button id="settings_utilitiesRestore_button"><span class="_text" lang="_utilities" datafld="restore_title"></span></button>
+										</td>
+										<td class="tdfield_padding tdfield_padding_left_10">		
+												<button id="settings_utilitiesRestoreQuick_button"><span class="_text" lang="_utilities" datafld="quick_restore"></span></button>
+										</td>																				
+										<td class="tdfield_padding tdfield_padding_left_10">		
+												<button id="settings_utilitiesRestoreFull_button"><span class="_text" lang="_utilities" datafld="full_restore"></span></button>
+										</td>																				
+										<td class="tdfield_padding tdfield_padding_left_10">
+											<div class="TooltipIcon" id="tip_reset"></div>
+										</td>	
+		-->
+										</td>	
+										<td class="tdfield_padding tdfield_padding_left_10">
+											<button id="settings_utilitiesReset_button"><span class="_text" lang="_button" datafld="restore"></span></button>
+										</td>		
+										<td class="tdfield_padding tdfield_padding_left_10">
+												<div class="TooltipIcon" id="tip_reset"></div>
+										</td>																									
+									</tr>	
+									</table>																											
+								</div>
+<!-- -->
+<div class="hr_0_content" style="margin-top:30px;margin-bottom:30px;"><div class="hr_1"></div></div>  
+								<div class="h1_content header_2"><span class="_text" lang="_utilities" datafld="config_title"></span></div>					
+									<div>
+									<table border="0"  cellspacing="0" cellpadding="0" height="0">
+									<tr>
+										<td class="tdfield">
+											<span class="_text" lang="_utilities" datafld="config"></span>
+										</td>										
+										<td class="tdfield_padding">
+											<!-- backup conf -->
+<form method="post" action="/cgi-bin/system_mgr.cgi" name="form_backup" id="form_backup">	
+<input type="hidden" name="cmd" value="cgi_backup_conf">										
+
+													<button type="button" id="settings_utilitiesConfig_button" ><span class="_text" lang="_utilities" datafld="config_save"></span></button>&nbsp;&nbsp;
+</form>												
+													
+										</td>	
+										<td class="tdfield_padding">
+<iframe id="upload_target" name="upload_target" style="display:none;width:0;height:0"></iframe>											
+<form name="form_restore" id="form_restore" method="post" enctype="multipart/form-data" action="/cgi-bin/status_mgr.cgi" target="upload_target">  	
+		
+<input type="hidden" name="f_ip" value="">
+<input type="hidden" name="cmd" value="cgi_restore_conf"> 
+
+											
+											<div class="file_input_div">
+													<button type="button" id="id_file"><span class="_text" lang="_utilities" datafld="config_import"></span></button>																											
+													<input type="file" name="settings_utilitiesImport_button" id="settings_utilitiesImport_button" size="30" maxLength="256" class="file_input_hidden" onchange="start_upload();" style="cursor:pointer;" tabindex="-1">
+											</div>		
+													
+													
+</form>		
+													
+										</td>	
+										<td class="tdfield_padding tdfield_padding_left_10">
+											<div class="TooltipIcon" id="tip_config"></div>
+										</td>	
+									</tr>	
+									</table>																		
+									
+								</div>			
+<!-- -->
+				<div class="hr_0_content" style="margin-top:30px;margin-bottom:30px;"><div class="hr_1"></div></div>  
+								<div class="h1_content header_2"><span class="_text" lang="_utilities" datafld="device_title"></span></div>	
+								<div>
+									<table border="0"  cellspacing="0" cellpadding="0" height="0">
+									<tr>
+										<td class="tdfield">
+											<span class="_text"><span class="_text" lang="_utilities" datafld="device"></span></span>
+										</td>											
+										<td class="tdfield_padding" id="id_shutdown_td">
+											<button type="button" id="settings_utilitiesShutdown_button" ><span class="_text" lang="_utilities" datafld="shutdown"></span></button>&nbsp;&nbsp;
+										</td>										
+										<td class="tdfield_padding">	
+											<button type="button" id="settings_utilitiesReboot_button" ><span class="_text" lang="_utilities" datafld="reboot"></span></button>	
+										</td>			
+										<td class="tdfield_padding tdfield_padding_left_10">
+												<div class="TooltipIcon" id="tip_dev"></div>
+										</td>		
+									</tr>	
+									</table>
+									<table border="0"  cellspacing="0" cellpadding="0" height="0">									
+									<tr>
+										<td class="tdfield" style="width:165px;">
+												<span class="_text"><span class="_text" lang="_utilities" datafld="up_time"></span></span>									
+										</td>	
+										<td colspan="2" class="tdfield_padding" style="padding-left:5px;">
+											<div id="settings_utilitiesUptime_value"></div>
+										</td>	
+									</tr>	
+									</table>			
+				</div>	
+					
+				<div class="hr_0_content"><div class="hr_1"></div></div>
+											
+			<!-- Block  : Scan Disk -->
+				<div class="h1_content header_2 _text" lang="_diagnostic" datafld="desc6"></div>	
+				<div id="div_scandsk_set">															
+					<table cellspacing="0" cellpadding="0" border="0">
+						<tr>
+							<td class="tdfield"><span class="_text" lang="_scandsk" datafld="volume">Volume</span></td>
+							<td class="tdfield_padding"><div id="scan_select" class="select_menu" style="display:none"></div></td>
+							<td class="tdfield_padding tdfield_padding_left_10"><button type="button" id="settings_utilitiesScanDisk_button"><span class="_text" lang="_menu" datafld="disk"></span></button></td>	
+							<td class="tdfield_padding tdfield_padding_left_10">
+								<div class="TooltipIcon" id="tip_scan"></div>
+							</td>	
+						</tr>
+					</table>	
+				</div>
+				
+				<div id="div_scandsk_state" style="display:none">
+					<table cellspacing="0" cellpadding="0" border="0">
+					<tr>
+						<td class="tdfield"><span class="_text" lang="_diagnostic" datafld="desc6"></span></td>	
+						<td class="tdfield_padding">
+							<table cellspacing="0" cellpadding="0" border="0" width="180px">
+							<tr>
+								<td><div id="scandsk_progressbar"></div></td>
+							</tr>
+							</table>
+						</td>
+						<td class="tdfield_padding"><div id="scandsk_percent"></div></td>						
+					</tr>	
+					</table>
+				</div>	
+				
+				<div class="hr_0_content"><div class="hr_1"></div></div>
+				<!-- Block  : Format Disk -->
+				<div class="h1_content header_2 _text" lang="_diagnostic" datafld="desc10"></div>	
+				<div id="div_formatdisk_set">															
+					<table cellspacing="0" cellpadding="0" border="0">
+						<tr>
+							<td class="tdfield"><span class="_text" lang="_scandsk" datafld="volume">Volume</span></td>
+							<td class="tdfield_padding"><div id="format_vol_selector" class="select_menu" style="display:none"></div></td>
+							<td class="tdfield_padding tdfield_padding_left_10"><button type="button" id="settings_utilitiesFormatDisk_button"><span class="_text" lang="_diagnostic" datafld="desc10"></span></button></td>	
+							<td class="tdfield_padding tdfield_padding_left_10">
+								<div class="TooltipIcon" id="tip_wipe"></div>
+							</td>	
+						</tr>
+					</table>	
+				</div>
+				
+				
+				<div id="div_formatdisk_state" style="display:none">
+					<table cellspacing="0" cellpadding="0" border="0">
+					<tr>
+						<td class="tdfield"><span class="_text" lang="_diagnostic" datafld="desc10"></span></td>	
+						<td class="tdfield_padding">
+							<table cellspacing="0" cellpadding="0" border="0" width="180px">
+							<tr>
+								<td><div id="format_progressbar"></div></td>
+							</tr>
+							</table>
+						</td>
+						<td class="tdfield_padding"><div id="format_percent"></div></td>	
+						<td class="tdfield_padding"><div id="format_state"></div></td>
+					</tr>	
+					</table>
+				</div>	
+				
+				<div id="iso_div" style="display:none">
+				<div class="hr_0_content"><div class="hr_1"></div></div>
+				<div class="h1_content header_2 _text" lang="_iso_mount" datafld="iso_title"></div>
+				<div class="tdfield_padding_top_14 _text" lang="_iso_mount" datafld="desc">Mounting an ISO file located on your network shares provides file level access to the file and folder contents of the ISO file to users with access to the network share.</div>
+				<br>
+				<div class="h1_content header_2 _text" lang="_iso_mount" datafld="isoshare_list">ISO Share List</div>
+				<div class="tdfield_padding_top_14" id="iso_list_info" style="display:none"><span class="_text" lang="_iso_mount" datafld="no_list"></span></div>
+				<div class="tdfield_padding_top_14" id="iso_list" style="margin-left:-40px"></div>
+				
+				<div class="field_top">
+				<button id="settings_utilitiesIsoCreate_button" onclick="iso_create_job();"><span class="_text" lang="_iso_create" datafld="title">Create ISO Image</span></button>
+				<button id="settings_utilitiesISOShare_button" style="margin-left:5px"><span class="_text" lang="_iso_mount" datafld="create_iso_share">Create ISO Share</span></button>
+				</div>
+				</div>
+						
+				<div class="field_top" style="height:20px"></div>
+				
+													
+<!-- restart -->
+<form method="post" action="/cgi-bin/system_mgr.cgi" name="form_restart" id="form_restart">	
+<input type="hidden" name="cmd" value="cgi_restart">
+</form>
+
+<!-- system.html:restore to default -->
+<form method="post" action="/cgi-bin/system_mgr.cgi" name="form_default" id="form_default">	
+<input type="hidden" name="cmd" value="cgi_restore">
+</form>
+
+<!-- system.html:shutdown -->
+<form method="post" action="/cgi-bin/system_mgr.cgi" name="form_shutdown" id="form_shutdown">	
+<input type="hidden" name="cmd" value="cgi_shutdown">
+</form>
+
+
+<form name="form_log" id="form_log" method="post" action="/cgi-bin/system_mgr.cgi" style="display:none">
+	<input type="hidden" name="cmd" value="cgi_get_sys_log">
+</form>
+
+
+
+<!-- dialog -->
+
+<div id="rebootDiag" class="WDLabelDiag" style="display:none;">
+	<div class="WDLabelHeaderDialogue WDLabelHeaderDialogueInfoIcon">		
+		<span class="_text" lang="_utilities" datafld="reboot"></span>
+	</div>
+	<div align="center"><div class="hr"><hr/></div>
+	</div>
+	<div class="WDLabelBodyDialogue">		
+		<img src="/web/images/SpinnerSun.gif" border=0 style="margin-bottom:-10px;">	
+		<span class="_text" lang="_utilities" datafld="msg2"></span>
+	</div>	
+	<div class="hrBottom2"><hr/></div>	
+</div>
+
+<div id="shutdownDiag" class="WDLabelDiag" style="display:none;">
+	<div class="WDLabelHeaderDialogue WDLabelHeaderDialogueInfoIcon">
+			<span class="_text" lang="_utilities" datafld="shut_down"></span>
+	</div>
+	<div align="center"><div class="hr"><hr/></div>
+	</div>
+	<div class="WDLabelBodyDialogue">
+		<span class="_text" lang="_utilities" datafld="msg3"></span>
+	</div>	
+	<div class="hrBottom2"><hr/></div>	
+</div>
+
+<!-- dialog -->
+<div id="LogDiag" class="WDLabelDiag" style="display:">
+<div id="LogDiag_title" class="WDLabelHeaderDialogue WDLabelHeaderDialogueInfoIcon">
+<span class="_text" lang="_logs" datafld="view_logs"></span></div>
+<div align="center"><div class="hr"><hr></div></div>
+	<div id="iscsi_step1" style="display:">
+		<div class="WDLabelBodyDialogue">
+		<div class="dialog_content">		
+			<table border=0>
+				<tr>
+					<td ><span class="_text" lang="_logs" datafld="log_level"></span></td>
+					<td style="padding-left:10px;">
+							<div id="id_level_top_main" class="select_menu"></div>
+					</td>
+					<td width=30></td>
+					<td><span class="_text" lang="_logs" datafld="filter_by"></span></td><!--<input type="text" id="log_filter" name="log_filter" class="input_x5" size="40">--></td>										
+					<td style="padding-left:10px;">
+						
+						<div id="id_filter_top_main" class="select_menu"></div>
+					<!--	<button onclick="filter_log();"><span class="_text" lang="_button" datafld="apply"></button> -->
+							
+					</td>			
+					<td></td>	
+			</table>
+	<div id="id_page"><span id="settings_utilitiesLogNum_value"></span>/<span id="settings_utilitiesLogTotal_value"></span></div>
+	
+			<ul class="LogListDiv">
+				<li>					
+					<div class="level" onclick="sort_tb('','','level');"><span class="_text" lang="_logs" datafld="level"></span></div>					
+					<div class="time"  onclick="sort_tb('','','time');"><span class="_text" lang="_menu" datafld="time"></span></div>
+					<div class="class" onclick="sort_tb('','','class');"><span class="_text" lang="_wfs" datafld="type"></span></div>
+					<div class="log"><span class="_text" lang="_menu" datafld="logs"></span></div>
+				</li>
+			</ul>
+			<div class="scrollbar_log">					
+			<table id="log_tb" style="display:none"></table>
+			</div>
+			<div id="id_test" style="display:inline;width:'auto';visibility:hidden"></div>
+		</div>				
+		</div>
+		<div class="hrBottom2"><hr/></div>
+		<button class="ButtonMarginLeft_40px close" id="settings_utilitiesLogClear_button" onclick="log_clear();"><span class="_text" lang="_button" datafld="clear"></span></button>		
+		<button class="ButtonRightPos2 close" id="settings_utilitiesLogClose_button" onclick="log_close();"><span class="_text" lang="_button" datafld="close"></span></button>		
+	</div>
+</div>
+<!-- dialog end -->
+
+</body>
+</html>
+
+<style>
+	#id_page
+	{
+		position:absolute;
+		width:50;
+		height:30;
+		/*background-color: #D2D2D2;*/
+		right:0px;
+		top:30px;
+	}
+	
+</style>	

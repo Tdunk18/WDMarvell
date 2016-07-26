@@ -1,0 +1,97 @@
+<div id="topDiag" class="WDLabelDiag" style="display:none">
+	<div class="WDLabelHeaderDialogue WDLabelHeaderDialogueSupportIcon" id="topDiag_title"></div>
+	<div align="center"><div class="hr"><hr/></div></div>
+	
+	<!-- supportDiag -->
+	<div id="supportDiag">
+		<div class="WDLabelBodyDialogue sbody" style="overflow:hidden;">
+			<div id="request_automated">
+			<H2><span class="_text" lang="_support" datafld="title1"></span></H2>
+			<div class="_text field_top" lang="_support" datafld="desc1"></div>
+			<table border="0" cellspacing="0" cellpadding="0" height="0">
+				<tr>
+					<td class="tdfield_padding"><input type="checkbox" id="support_requestSupport_chkbox" name="support_requestSupport_chkbox" onclick="display_request_button(this)"></td>
+					<td class="tdfield_padding tdfield_padding_left_10"><span class="_text" lang="_support" datafld="sel_desc"></span></td>
+				</tr>
+			</table>
+			
+			<div class="field_top">
+				<button id="support_requestSupport_button" onclick="send_request_support();"><span class="_text" lang="_support" datafld="request_support"></span></button> 
+				<span class="edit_detail" style="margin-left:10px">
+					<a id="support_privacyPpolicy_link" href="#" target="_blank"><span class="_text" lang="_support" datafld="privacy"></span></a>
+				</span>
+			</div>
+			
+			
+			<div class="hr_0_content" style="margin-top:20px;margin-bottom:20px;"><div class="hr_1"></div></div> 
+			</div>
+			<H2><span class="_text" lang="_support" datafld="title2"></span></H2>
+			<div class="_text field_top" lang="_support" datafld="desc2"></div>
+			<div class="field_top"><button id="support_create_button" onclick="download_log();"><!--<button onclick="document.form_report.project_name.value=PROJECT_NAME;document.form_report.submit();">--><span class="_text" lang="_support" datafld="save"></span></button></div>
+			
+			<div id="support_productImprovement">
+			<div class="hr_0_content" style="margin-top:20px;margin-bottom:20px;"><div class="hr_1"></div></div> 
+			<H2><span class="_text" lang="_support" datafld="title4"></span></H2>
+			<div class="field_top">
+				<div class="_text" lang="_tip" datafld="improvement" style="width:800px;"></div>
+				<ul class="_text" id="UL14px" lang="_support" datafld="desc4" style="padding-top: 20px;margin-bottom:20px;"></ul>
+			</div>
+			<table border="0" cellspacing="0" cellpadding="0" height="0">
+				<tr>
+					<td>
+						<span class="_text" lang="_support" datafld="title5"></span>
+					</td>
+					<td class="tdfield_padding_left_10">
+						<input id="support_imp_switch" name="support_imp_switch" class="onoffswitch" type="checkbox" value="true" >
+					</td>
+				</tr>
+			</table>
+			</div>
+			
+			<div class="hr_0_content" style="margin-top:20px;margin-bottom:20px;"><div class="hr_1"></div></div> 
+			<H2><span class="_text" lang="_support" datafld="title3"></span></H2>
+			<div class="edit_detail" style="margin-top:10px;"><a id="support_doc_link" href="" target="_blank"><span class="_text" lang="_support" datafld="doc"></span></a></div>
+			<div class="edit_detail"><a id="support_faq_link" href="" target="_blank"><span class="_text" lang="_support" datafld="faq"></span></a></div>
+			<div class="edit_detail"><a id="support_forum_link" href="" target="_blank"><span class="_text" lang="_support" datafld="forum"></span></a></div>
+			<div class="edit_detail"><a id="support_contacts_link" href="" target="_blank"><span class="_text" lang="_support" datafld="contacts"></span></a></div>			
+			<form name="form_create_log" id="form_create_log" method="post" action="/cgi-bin/system_mgr.cgi" style="display:none">
+				<input type="hidden" name="cmd" value="cgi_create_sys_log">
+				<input type="hidden" name="project_name" value="">
+			</form>
+			<form name="form_report" id="form_report" method="post" action="/cgi-bin/system_mgr.cgi" style="display:none">
+				<input type="hidden" name="cmd" value="cgi_get_sys_log">
+				<input type="hidden" name="project_name" id="project_name" value="">
+			</form>			
+		</div><!-- WDLabelBodyDialogue end -->
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonRightPos2 close" id="support_ok_button"><span class="_text" lang="_button" datafld="Ok"></span></button>
+		<div style="display:none;">
+		    <form action="http://websupport.wdc.com/rn/nassupport.asp" method="post" target="_blank" id="quick_support_form">
+		        <input type="hidden" id="devlang" value="" name="devlang">
+		        <input type="hidden" id="devsn" value="" name="devsn">
+		        <input type="hidden" id="devmodel" value="" name="devmodel">
+		        <input type="hidden" id="devnastype" value="" name="devnastype">
+		        <input type="hidden" id="devfw" value="" name="devfw">
+		        <input type="hidden" id="devhash" value="" name="devhash">
+		    </form>
+		</div>
+	</div>	
+</div>
+
+<div id="topDiag2" class="WDLabelDiag" style="display:none;height:460px">
+	<div class="WDLabelHeaderDialogue atitle" id="topDiag2_title"></div>
+	<div align="center"><div class="hr _hr"><hr/></div></div>
+
+	<!-- aboutDiag -->
+	<div id="aboutDiag">
+		<div class="WDLabelBodyDialogue" style="overflow:hidden">
+			<p align="center"><img border="0" src="/web/images/icon/dev.png"></p>
+			<div id="fw_version" style="margin-top:20px"></div>
+			<div class="_text" lang="_about" datafld="copyright"></div>
+			<div style="margin-top:20px"><a id="about_copyright_link" href="/web/Copyright Info/Copyright Info.txt?v=2.00" target="_blank"><span class="_text" lang="_about" datafld="info"></span></a></div>
+			<div><a id="about_gpl_link" href="/web/GNU Public License/gpl-3.0.html" target="_blank"><span class="_text" lang="_about" datafld="gnu"></span></a></div>
+		</div>
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonRightPos2 close" id="about_ok_button"><span class="_text" lang="_button" datafld="Ok"></span></button>
+	</div>		
+</div>

@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><cki><ck fm=\"Kişisel Bulut Alanınızı Yönetme Hakkında\" to=\"FTP İndirmesini Değiştirme\" num=\"52\"/><ck fm=\"HTTP İndirmesini Değiştirme\" to=\"Bulut Yedekleme Nedir\" num=\"54\"/><ck fm=\"RAID Depolama nedir?\" to=\"RAID Depolama nedir?\" num=\"1\"/></cki>";

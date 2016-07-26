@@ -1,0 +1,6399 @@
+# LANGUAGE: Korean
+# Copyright 2013
+# Sequoia"
+# Date 6.10.2013"
+
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# -- Global note: All references to WD 2Go or WD2go.com have become WD My Cloud or WDMyCloud.com. Because we do not translate product names, you will see the difference from WD 2go to WD My Cloud or WD2go.com to WDMyCloud.com. Each key/string value is commented as well
+
+# --------- Safepoint specific codes and messages ---------
+
+#: string "Safepoint OK."
+msgid "SAFEPOINT_OK"
+msgstr "safepoint가 정상입니다."
+
+#: string "Safepoint operation in progress."
+msgid "SAFEPOINT_INPROGRESS"
+msgstr "safepoint 작업이 진행 중입니다."
+
+#: string "Failed request received during this safepoint operation."
+msgid "SAFEPOINT_FAILED"
+msgstr "이 safepoint 작업 중에 실패한 요청이 수신되었습니다."
+
+#: string "This safepoint was not found."
+msgid "SAFEPOINT_NOTFOUND"
+msgstr "이 safepoint는 없습니다."
+
+#: string "This safepoint operation failed due to an unauthorized request."
+msgid "SAFEPOINT_UNAUTHORIZED"
+msgstr "무단 요청 때문에 이 safepoint 작업에 실패했습니다."
+
+#: string "A safepoint operation is currently in progress."
+msgid "SAFEPOINT_BUSY"
+msgstr "현재 safepoint 작업이 진행 중입니다."
+
+#: string "This safepoint operation failed due to insufficient space."
+msgid "SAFEPOINT_NOSPACE"
+msgstr "공간이 충분하지 않아서 이 safepoint 작업에 실패했습니다."
+
+#: string "This safepoint operation failed due to an invalid request."
+msgid "SAFEPOINT_INVALID"
+msgstr "유효하지 않은 요청 때문에 이 safepoint 작업에 실패했습니다."
+
+#: string "This safepoint is incompatible."
+msgid "SAFEPOINT_INCOMPATIBLE"
+msgstr "이 safepoint는 호환되지 않습니다."
+
+#: string "This safepoint operation failed because it is currently unreachable."
+msgid "SAFEPOINT_UNREACHABLE"
+msgstr "현재 액세스할 수 없어서 이 safepoint 작업에 실패했습니다."
+
+#: string "This operation is not supported."
+msgid "SAFEPOINT_NOTSUPPORTED"
+msgstr "이 작업은 지원되지 않습니다."
+
+#: string "This safepoint operation failed due to a duplication error."
+msgid "SAFEPOINT_DUPLICATE"
+msgstr "중복 오류 때문에 이 safepoint 작업에 실패했습니다."
+
+#: string "This safepoint operation did not start."
+msgid "SAFEPOINT_NOTSTARTED"
+msgstr "이 safepoint 작업은 시작되지 않았습니다."
+
+#: string "This safepoint is was not created."
+msgid "SAFEPOINT_NOTCREATED"
+msgstr "이 safepoint는 만들어지지 않았습니다."
+
+#: string "A system resource is not available."
+msgid "SAFEPOINT_UNAVAILABLE"
+msgstr "시스템 자원을 사용할 수 없습니다."
+
+#: string "This safepoint operation failed due to a corrupted resource."
+msgid "SAFEPOINT_CORRUPTED"
+msgstr "손상된 자원 때문에 이 safepoint 작업에 실패했습니다."
+
+#: string "Safepoint operation aborted."
+msgid "SAFEPOINT_ABORTED"
+msgstr "safepoint 작업이 중단되었습니다."
+
+#: string "This safepoint operation was ignored."
+msgid "SAFEPOINT_IGNORE"
+msgstr "이 safepoint 작업이 무시되었습니다."
+
+#: string "This safepoint operation is not allowed."
+msgid "SAFEPOINT_NOTALLOWED"
+msgstr "이 safepoint 작업은 허용되지 않습니다."
+
+#: string "Your last safepoint operation timed out."
+msgid "SAFEPOINT_TIMEOUT"
+msgstr "마지막 safepoint 작업의 제한 시간이 초과되었습니다."
+
+
+#: string "A bad request was made."
+msgid "ERROR_BAD_REQUEST"
+msgstr "올바르지 않은 요청이 만들어졌습니다."
+
+#: string "You are not authorized to perform this task."
+msgid "ERROR_NOT_AUTHORIZED_TASK"
+msgstr "사용자는 이 작업을 수행하도록 인증되지 않았습니다."
+
+
+#: string "The requested service was not found."
+msgid "ERROR_SERVICE_NOT_FOUND"
+msgstr "요청된 서비스가 없습니다."
+
+
+#: string "Invalid firmware package."
+msgid "ERROR_INVALID_FW_PACKAGE"
+msgstr "유효하지 않은 펌웨어 패키지입니다."
+
+
+#: string "Device does not have enough space for upgrade."
+msgid "ERROR_OUT_OF_SPACE_FOR_UPGRADE"
+msgstr "장치에 업그레이드에 필요한 공간이 충분하지 않습니다."
+
+
+#: string "Upgrade unpack failure."
+msgid "ERROR_UPGRADE_UNPACK_FAILED"
+msgstr "업그레이드 압축 풀기 오류입니다."
+
+
+#: string "Upgrade copy failure."
+msgid "ERROR_UPGRADE_COPY_FAILED"
+msgstr "업그레이드 복사 오류입니다."
+
+
+#: string "Invalid IP address."
+msgid "ERROR_INVALID_IP_ADDRESS"
+msgstr "유효하지 않은 IP 주소입니다."
+
+
+#: string "Invalid gateway value."
+msgid "ERROR_INVALID_GATEWAY"
+msgstr "유효하지 않은 게이트웨이 값입니다."
+
+
+#: string "Invalid netmask value."
+msgid "ERROR_INVALID_NETMASK"
+msgstr "유효하지 않은 네트워크 마스크 값입니다."
+
+
+#: string "Invalid DNS server value."
+msgid "ERROR_INVALID_DNS_SERVER"
+msgstr "유효하지 않은 DNS 서버 값입니다."
+
+
+#: string "A minimum of one DNS server is required for Static Network Mode."
+msgid "ERROR_AT_LEAST_ONE_DNS_REQUIRED"
+msgstr "정적 네트워크 모드에 최소 1대의 DNS 서버가 필요합니다."
+
+
+#: string "Invalid config file type. Please select a .conf file."
+msgid "ERROR_INVALID_CONFIG_FILE_SELECTED"
+msgstr "유효하지 않은 구성 파일 유형입니다. .conf 파일을 선택하십시오."
+
+
+#: string "Invalid firmware file type. Please select a .deb file."
+msgid "ERROR_INVALID_FIRMWARE_FILE_SELECTED"
+msgstr "유효하지 않은 펌웨어 파일 유형입니다. .deb 파일을 선택하십시오."
+
+
+#: string "User name already in use. Please enter another user name."
+msgid "ERROR_USERNAME_ALREADY_EXISTS"
+msgstr "사용자 이름이 이미 사용 중입니다. 다른 사용자 이름을 입력하십시오."
+
+
+#: string "The system is currently busy; please try again in a few minutes."
+msgid "ERROR_EXCEPTION_DURING_USER_FIND"
+msgstr "현재 시스템이 사용 중입니다. 몇 분 후에 다시 시도하십시오."
+
+
+#: string "The system is currently busy; please try again in a few minutes."
+msgid "ERROR_EXCEPTION_DURING_USER_CREATION"
+msgstr "현재 시스템이 사용 중입니다. 몇 분 후에 다시 시도하십시오."
+
+
+#: string "The device name you are attempting to register is already in use. Please change the device name to successfully complete registration of this device."
+msgid "ERROR_EXCEPTION_DURING_REGISTRATION"
+msgstr "등록하려는 장치 이름이 이미 사용 중입니다. 이 장치를 정상적으로 등록하려면 장치 이름을 변경하십시오."
+
+
+#: string "The email entered is already registered to an account."
+msgid "ERROR_EMAIL_ALREADY_REGISTERED"
+msgstr "입력된 이메일이 등록된 계정이 이미 있습니다."
+
+
+#: string "Invalid account."
+msgid "ERROR_INVALID_ACCOUNT"
+msgstr "유효하지 않은 계정입니다."
+
+
+#: string "Restore file is either incorrect file format or corrupt."
+msgid "ERROR_RESTORE_FILE_IS_NOT_CORRECT_FORMAT"
+msgstr "복원 파일이 형식이 잘못되었거나 손상되었습니다."
+
+
+#: string "First Name must be between 1 and 20 characters."
+msgid "ERROR_FIRST_NAME_INVALID_SYNTAX"
+msgstr "이름은 1 ~ 20자 길이여야 합니다."
+
+
+#: string "Your Last Name must be between 1 and 20 characters."
+msgid "ERROR_LAST_NAME_INVALID_SYNTAX"
+msgstr "성은 1 ~ 20자 길이여야 합니다."
+
+
+#: string "Please provide a valid email address."
+msgid "ERROR_PROVIDE_VALID_EMAIL_ADDRESS"
+msgstr "유효한 이메일 주소를 입력하십시오."
+
+
+#: string "Your email addresses do not match."
+msgid "ERROR_EMAIL_ADDRESS_DONT_MATCH"
+msgstr "이메일 주소가 일치하지 않습니다."
+
+
+#: string "Registration failed. Please go to register.wdc.com to register your product."
+msgid "ERRORS_REGISTRATION_FAILED"
+msgstr "등록에 실패했습니다. register.wdc.com으로 접속하여 제품을 등록하십시오."
+
+
+#: string "Cancel"
+msgid "BUTTON_CANCEL"
+msgstr "취소"
+
+#: string "Continue?"
+msgid "BUTTON_CONTINUE"
+msgstr "계속 진행하시겠습니까?"
+
+
+#: string "Save"
+msgid "BUTTON_SAVE"
+msgstr "저장"
+
+
+#: string "Updating..."
+msgid "LABEL_DESCR_LOADER_UPDATING"
+msgstr "업데이트 중..."
+
+
+#: string "Reboot"
+msgid "PAGE_HEADER_REBOOT"
+msgstr "다시 부팅"
+
+
+#: string "Factory Restore successful."
+msgid "LABEL_DESCR_FACTORY_RESTORE_SUCCESS"
+msgstr "초기 설정 복원에 성공했습니다."
+
+
+#: string "Factory restore successful."
+msgid "LABEL_DESCR_PARTIAL_RESTORE_SUCCESS"
+msgstr "초기 설정 복원에 성공했습니다."
+
+
+#: string "Firmware update successful."
+msgid "LABEL_DESCR_FIRMWARE_UPDATE_SUCCESS"
+msgstr "펌웨어 업데이트에 성공했습니다."
+
+
+#: string "Full Restore is switching to Quick Restore."
+msgid "LABEL_DESCR_FACTORY_RESTORE_SWITCH_TO_QUICK_RESTORE"
+msgstr "전체 복원을 빠른 복원으로 전환하는 중입니다."
+
+
+#: string "Device is rebooting"
+msgid "LABEL_DESCR_DEVICE_REBOOTING"
+msgstr "장치 다시 부팅 중입니다."
+
+
+#: string "Initializing device"
+msgid "LABEL_DESCR_INTIALIZING_DEVICE"
+msgstr "장치 초기화 중입니다."
+
+
+#: string "iTunes Server:"
+msgid "LABEL_HEADER_ITUNES_SERVER"
+msgstr "iTunes 서버:"
+
+
+#: string "Rescan"
+msgid "BUTTON_RESCAN_MEDIA"
+msgstr "다시 검색"
+
+
+#: string "Version:"
+msgid "LABEL_HEADER_VERSION"
+msgstr "버전:"
+
+
+#: string "Music Tracks:"
+msgid "LABEL_HEADER_MUSIC_TRACKS"
+msgstr "음악 트랙:"
+
+
+#: string "Pictures:"
+msgid "LABEL_HEADER_PICTURES"
+msgstr "그림:"
+
+
+#: string "Videos:"
+msgid "LABEL_HEADER_VIDEOS"
+msgstr "비디오:"
+
+
+#: string "Rebuild"
+msgid "BUTTON_REBUILD"
+msgstr "복원"
+
+
+#: string "IP Address"
+msgid "LABEL_HEADER_IP_ADDRESS"
+msgstr "IP 주소"
+
+
+#: string "Network Mode"
+msgid "LABEL_HEADER_NETWORK_MODE"
+msgstr "네트워크 모드"
+
+
+#: string "Date &amp; Time"
+msgid "PAGE_HEADER_DATE_AND_TIME"
+msgstr "날짜 및 시간"
+
+
+#: string "Time Zone:"
+msgid "LABEL_HEADER_TIME_ZONE"
+msgstr "시간대:"
+
+
+#: string "(GMT-11:00) Midway Island, Samoa"
+msgid "GENERIC_TIME_ZONE_MIDWAY_ISLAND"
+msgstr "(GMT-11:00) 미드웨이 제도, 사모아"
+
+
+#: string "(GMT-10:00) Hawaii"
+msgid "GENERIC_TIME_ZONE_HAWAII"
+msgstr "(GMT-10:00) 하와이"
+
+
+#: string "(GMT-09:00) Alaska"
+msgid "GENERIC_TIME_ZONE_ALASKA"
+msgstr "(GMT-09:00) 알래스카"
+
+
+#: string "(GMT-08:00) Pacific Time (US & Canada)"
+msgid "GENERIC_TIME_ZONE_PACIFIC_TIME"
+msgstr "(GMT-08:00) 태평양 표준시(미국과 캐나다)"
+
+
+#: string "(GMT-08:00) Tijuana"
+msgid "GENERIC_TIME_ZONE_TIJUANA"
+msgstr "(GMT-08:00) 티후아나"
+
+
+#: string "(GMT-07:00) Arizona"
+msgid "GENERIC_TIME_ZONE_ARIZONA"
+msgstr "(GMT-07:00) 애리조나"
+
+
+#: string "(GMT-07:00) Chihuahua, La Paz, Mazatlan"
+msgid "GENERIC_TIME_ZONE_CHIHUAHUA_LA_PAZ_MAZATLAN"
+msgstr "(GMT-07:00) 치와와, 라파스, 마사틀란"
+
+
+#: string "(GMT-07:00) Mountain Time (US & Canada)"
+msgid "GENERIC_TIME_ZONE_MOUNTAIN_TIME"
+msgstr "(GMT-07:00) 산지 표준시(미국과 캐나다)"
+
+
+#: string "(GMT-06:00) Central America (Guatemala)"
+msgid "GENERIC_TIME_ZONE_CENTRAL_AMERICA"
+msgstr "(GMT-06:00) 중앙 아메리카(과테말라)"
+
+
+#: string "(GMT-06:00) Central Time (US & Canada)"
+msgid "GENERIC_TIME_ZONE_CENTRAL_TIME"
+msgstr "(GMT-06:00) 중부 표준시(미국과 캐나다)"
+
+
+#: string "(GMT-06:00) Guadalajara, Mexico City, Monterrey"
+msgid "GENERIC_TIME_ZONE_GUADALAJARA"
+msgstr "(GMT-06:00) 과달라하라, 멕시코시티, 몬테레이"
+
+
+#: string "(GMT-06:00) Saskatchewan"
+msgid "GENERIC_TIME_ZONE_SASKATCHEWAN"
+msgstr "(GMT-06:00) 서스캐처원"
+
+
+#: string "(GMT-05:00) Bogota, Lima, Quito"
+msgid "GENERIC_TIME_ZONE_BOGOTA_LIMA_QUITO"
+msgstr "(GMT-05:00) 보고타, 리마, 키토"
+
+
+#: string "(GMT-05:00) Eastern Time (US & Canada)"
+msgid "GENERIC_TIME_ZONE_EASTERN_TIME"
+msgstr "(GMT-05:00) 동부 표준시(미국과 캐나다)"
+
+
+#: string "(GMT-05:00) Indiana (East)"
+msgid "GENERIC_TIME_ZONE_INDIANA"
+msgstr "(GMT-05:00) 인디애나(동부)"
+
+
+#: string "(GMT-04:30) Caracas"
+msgid "GENERIC_TIME_ZONE_CARACAS"
+msgstr "(GMT-04:30) 카라카스"
+
+
+#: string "(GMT-04:00) Atlantic Time (Canada)"
+msgid "GENERIC_TIME_ZONE_ATLANTIC_TIME"
+msgstr "(GMT-04:00) 대서양 표준시(캐나다)"
+
+
+#: string "(GMT-04:00) La Paz"
+msgid "GENERIC_TIME_ZONE_LA_PAZ"
+msgstr "(GMT-04:00) 라파스"
+
+
+#: string "(GMT-04:00) Santiago"
+msgid "GENERIC_TIME_ZONE_SANTIAGO"
+msgstr "(GMT-04:00) 산티아고"
+
+
+#: string "(GMT-04:00) Manaus"
+msgid "GENERIC_TIME_ZONE_MANAUS"
+msgstr "(GMT-04:00) 마노스"
+
+
+#: string "(GMT-03:30) Newfoundland"
+msgid "GENERIC_TIME_ZONE_NEWFOUNDLAND"
+msgstr "(GMT-03:30) 뉴펀들랜드"
+
+
+#: string "(GMT-03:00) Brasilia"
+msgid "GENERIC_TIME_ZONE_BRASILIA"
+msgstr "(GMT-03:00) 브라질리아"
+
+
+#: string "(GMT-03:00) Buenos Aires, Georgetown"
+msgid "GENERIC_TIME_ZONE_BUENOS_AIRES_GEORGETOWN"
+msgstr "(GMT-03:00) 부에노스아이레스, 조지타운"
+
+
+#: string "(GMT-03:00) Greenland"
+msgid "GENERIC_TIME_ZONE_GREENLAND"
+msgstr "(GMT-03:00) 그린란드"
+
+
+#: string "(GMT-03:00) Montevideo"
+msgid "GENERIC_TIME_ZONE_MONTEVIDEO"
+msgstr "(GMT-03:00) 몬테비데오"
+
+
+#: string "(GMT-02:00) Mid-Atlantic (Noronha)"
+msgid "GENERIC_TIME_ZONE_MID_ATLANTIC"
+msgstr "(GMT-02:00) 대서양 중부(노로냐)"
+
+
+#: string "(GMT-01:00) Azores Is."
+msgid "GENERIC_TIME_ZONE_AZORES_IS"
+msgstr "(GMT-01:00) 아조레스"
+
+
+#: string "(GMT-01:00) Cape Verde Is."
+msgid "GENERIC_TIME_ZONE_CAPE_VERDE_IS"
+msgstr "(GMT-01:00) 카보베르데 제도"
+
+
+#: string "(GMT) Casablanca, Monrovia"
+msgid "GENERIC_TIME_ZONE_CASABLANCA_MONROVIA"
+msgstr "(GMT) 카사블랑카, 몬로비아"
+
+
+#: string "(GMT) Greenwich Mean Time: Dublin, Edinburgh, Lisbon, London"
+msgid "GENERIC_TIME_ZONE_GREENWICH_MEAN_TIME"
+msgstr "(GMT) 그리니치 표준시: 더블린, 에든버러, 리스본, 런던"
+
+
+#: string "(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna"
+msgid "GENERIC_TIME_ZONE_AMSTERDAM_BERLIN_BERN_ROME_STOCKHOLM_VIENNA"
+msgstr "(GMT+01:00) 암스테르담, 베를린, 베른, 로마, 스톡홀름, 빈"
+
+
+#: string "(GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague"
+msgid "GENERIC_TIME_ZONE_BELGRADE_BRATISLAVA_BUDAPEST_LIJUBLIJANA_PARGUE"
+msgstr "(GMT+01:00) 베오그라드, 브라티슬라바, 부다페스트, 류블랴나, 프라하"
+
+
+#: string "(GMT+01:00) Brussels, Copenhagen, Madrid, Paris"
+msgid "GENERIC_TIME_ZONE_BRUSSELS_COPENHAGEN_MADRID_PARIS"
+msgstr "(GMT+01:00) 브뤼셀, 코펜하겐, 마드리드, 파리"
+
+
+#: string "(GMT+01:00) Sarajevo, Skopje, Warsaw, Zagreb"
+msgid "GENERIC_TIME_ZONE_SARAJEVO_SKPOJE_WARSAW_ZAGREB"
+msgstr "(GMT+01:00) 사라예보, 스코페, 바르샤바, 자그레브"
+
+
+#: string "(GMT+01:00) West Central Africa"
+msgid "GENERIC_TIME_ZONE_WEST_CENTRAL_AFRICA"
+msgstr "(GMT+01:00) 서중앙 아프리카"
+
+
+#: string "(GMT+02:00) Amman"
+msgid "GENERIC_TIME_ZONE_AMMAN"
+msgstr "(GMT+02:00) 암만"
+
+
+#: string "(GMT+02:00) Beirut"
+msgid "GENERIC_TIME_ZONE_BEIRUT"
+msgstr "(GMT+02:00) 베이루트"
+
+
+#: string "(GMT+03:00) Minsk"
+msgid "GENERIC_TIME_ZONE_MINSK"
+msgstr "(GMT+03:00) 민스크"
+
+
+#: string "(GMT+02:00) Athens, Bucharest, Istanbul"
+msgid "GENERIC_TIME_ZONE_ATHENS_BUCHAREST_ISTANBUL"
+msgstr "(GMT+02:00) 아테네, 부카레스트, 이스탄불"
+
+
+#: string "(GMT+02:00) Cairo"
+msgid "GENERIC_TIME_ZONE_CAIRO"
+msgstr "(GMT+02:00) 카이로"
+
+
+#: string "(GMT+02:00) Harare, Pretoria"
+msgid "GENERIC_TIME_ZONE_HARARE_PRETORIA"
+msgstr "(GMT+02:00) 하라레, 프리토리아"
+
+
+#: string "(GMT+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius"
+msgid "GENERIC_TIME_ZONE_HELSINKI_KYIV_RIGA_SOFIA_TALLINN_VILNIUS"
+msgstr "(GMT+02:00) 헬싱키, 키예프, 리가, 소피아, 탈린, 빌뉴스"
+
+
+#: string "(GMT+02:00) Jerusalem"
+msgid "GENERIC_TIME_ZONE_JERUSALEM"
+msgstr "(GMT+02:00) 예루살렘"
+
+
+#: string "(GMT+03:00) Baghdad"
+msgid "GENERIC_TIME_ZONE_BAGHDAD"
+msgstr "(GMT+03:00) 바그다드"
+
+
+#: string "(GMT+03:00) Kuwait, Riyadh"
+msgid "GENERIC_TIME_ZONE_KUWAIT_RIYADH"
+msgstr "(GMT+03:00) 쿠웨이트, 리야드"
+
+# edit update 6-10-13
+#: string "(GMT+04:00) Moscow, St. Petersburg, Volgograd"
+msgid "GENERIC_TIME_ZONE_MOSCOW_ST_PETERSBURG_VOLGOGRAD"
+msgstr "(GMT+04:00) 모스크바, 상트페테르부르크, 볼고그라드"
+
+
+#: string "(GMT+03:00) Nairobi"
+msgid "GENERIC_TIME_ZONE_NAIROBI"
+msgstr "(GMT+03:00) 나이로비"
+
+
+#: string "(GMT+03:30) Tehran"
+msgid "GENERIC_TIME_ZONE_TEHRAN"
+msgstr "(GMT+03:30) 테헤란"
+
+
+#: string "(GMT+04:00) Abu Dhabi, Muscat"
+msgid "GENERIC_TIME_ZONE_ABU_DHABI_MUSCAT"
+msgstr "(GMT+04:00) 아부다비, 무스카트"
+
+
+#: string "(GMT+04:00) Baku, Tbilisi, Yerevan"
+msgid "GENERIC_TIME_ZONE_BAKU_TBILISI_YEREVAN"
+msgstr "(GMT+04:00) 바쿠, 트빌리시, 예레반"
+
+
+#: string "(GMT+04:00) Yerevan"
+msgid "GENERIC_TIME_ZONE_YEREVAN"
+msgstr "(GMT+04:00) 예레반"
+
+
+#: string "(GMT+04:30) Kabul"
+msgid "GENERIC_TIME_ZONE_KABUL"
+msgstr "(GMT+04:30) 카불"
+
+# edit update 6-10-13
+#: string "(GMT+06:00) Ekaterinburg"
+msgid "GENERIC_TIME_ZONE_EKATERINBURG"
+msgstr "(GMT+06:00) 예카테린부르크"
+
+
+#: string "(GMT+05:00) Islamabad, Karachi"
+msgid "GENERIC_TIME_ZONE_ISLAMABAD_KARACHI"
+msgstr "(GMT+05:00) 이슬라마바드, 카라치"
+
+
+#: string "(GMT+05:00) Tashkent"
+msgid "GENERIC_TIME_ZONE_TASHKENT"
+msgstr "(GMT+05:00) 타슈켄트"
+
+
+#: string "(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi"
+msgid "GENERIC_TIME_ZONE_CHENNAI_KOLKATA_MUMBAI_NEW_DELHI"
+msgstr "(GMT+05:30) 첸나이, 콜카타, 뭄바이, 뉴델리"
+
+
+#: string "(GMT+05:45) Katmandu"
+msgid "GENERIC_TIME_ZONE_KATMANDU"
+msgstr "(GMT+05:45) 카트만두"
+
+
+#: string "(GMT+06:00) Almaty, Novosibirsk"
+msgid "GENERIC_TIME_ZONER_ALMATY_NOVOSIBIRSK"
+msgstr "(GMT+06:00) 알마티, 노보시비르스크"
+
+
+#: string "(GMT+06:00) Astana, Dhaka"
+msgid "GENERIC_TIME_ZONE_ASTANA_DHAKA"
+msgstr "(GMT+06:00) 아스타나, 다카"
+
+
+#: string "(GMT+06:30) Rangoon"
+msgid "GENERIC_TIME_ZONE_RANGOON"
+msgstr "(GMT+06:30) 양곤"
+
+
+#: string "(GMT+07:00) Bangkok, Hanoi, Jakarta"
+msgid "GENERIC_TIME_ZONE_BANGKOK_HANOI_JAKARTA"
+msgstr "(GMT+07:00) 방콕, 하노이, 자카르타"
+
+# Edit update 6-10
+#: string "(GMT+08:00) Krasnoyarsk"
+msgid "GENERIC_TIME_ZONE_KRASNOYARSK"
+msgstr "(GMT+08:00) 크라스노야르스크"
+
+
+
+#: string "(GMT+08:00) Beijing, Chongqing, Hong Kong, Urumqi"
+msgid "GENERIC_TIME_ZONE_BEIJING_CHONGQING_HONG_KONG_URUMQI"
+msgstr "(GMT+08:00) 베이징, 충칭, 홍콩, 우루무치"
+
+# edit update 6-10
+#: string "(GMT+09:00) Irkutsk, Ulaan Bataar"
+msgid "GENERIC_TIME_ZONE_IRKUTSK_ULAAN_BATAAR"
+msgstr "(GMT+09:00) 이르쿠츠크, 울란바토르"
+
+
+#: string "(GMT+08:00) Kuala Lumpur, Singapore"
+msgid "GENERIC_TIME_ZONE_KUALA_LUMPUR_SINGAPORE"
+msgstr "(GMT+08:00) 콸라룸푸르, 싱가포르"
+
+
+#: string "(GMT+08:00) Perth"
+msgid "GENERIC_TIME_ZONE_PERTH"
+msgstr "(GMT+08:00) 퍼스"
+
+
+#: string "(GMT+08:00) Taipei"
+msgid "GENERIC_TIME_ZONE_TAIPEI"
+msgstr "(GMT+08:00) 타이베이"
+
+
+#: string "(GMT+09:00) Osaka, Sapporo, Tokyo"
+msgid "GENERIC_TIME_ZONE_OSAKA_SAPPORO_TOKYO"
+msgstr "(GMT+09:00) 오사카, 삿포로, 도쿄"
+
+
+#: string "(GMT+09:00) Seoul"
+msgid "GENERIC_TIME_ZONE_SEOUL"
+msgstr "(GMT+09:00) 서울"
+
+# edit update 6-10
+#: string "(GMT+10:00) Yakutsk"
+msgid "GENERIC_TIME_ZONE_YAKUTSK"
+msgstr "(GMT+10:00) 야쿠츠크"
+
+
+#: string "(GMT+09:30) Adelaide"
+msgid "GENERIC_TIME_ZONE_ADELAIDE"
+msgstr "(GMT+09:30) 애들레이드"
+
+
+#: string "(GMT+09:30) Darwin"
+msgid "GENERIC_TIME_ZONE_DARWIN"
+msgstr "(GMT+09:30) 다윈"
+
+
+#: string "(GMT+10:00) Brisbane"
+msgid "GENERIC_TIME_ZONE_BRISBANE"
+msgstr "(GMT+10:00) 브리즈번"
+
+
+#: string "(GMT+10:00) Canberra, Melbourne, Sydney"
+msgid "GENERIC_TIME_ZONE_CANBERRA_MELBOURNE_SYDNEY"
+msgstr "(GMT+10:00) 캔버라, 멜버른, 시드니"
+
+
+#: string "(GMT+10:00) Guam, Port Moresby"
+msgid "GENERIC_TIME_ZONE_GUAM_PORT_MORESBY"
+msgstr "(GMT+10:00) 괌, 포트모르즈비"
+
+
+#: string "(GMT+10:00) Hobart"
+msgid "GENERIC_TIME_ZONE_HOBART"
+msgstr "(GMT+10:00) 호바트"
+
+# edit update 6-8-13
+#: string "(GMT+11:00) Vladivostok"
+msgid "GENERIC_TIME_ZONE_VLADIVOSTOK"
+msgstr "(GMT+11:00) 블라디보스토크"
+
+
+#: string "(GMT+11:00) Magadan, Solomon Is., New Caledonia"
+msgid "GENERIC_TIME_ZONE_MAGADAN_SOLOMON_NEW_CALEDONIA"
+msgstr "(GMT+11:00) 마가단, 솔로몬 제도, 뉴칼레도니아"
+
+
+#: string "(GMT+12:00) Auckland, Wellington"
+msgid "GENERIC_TIME_ZONE_AUCKLAND_WELLINGTON"
+msgstr "(GMT+12:00) 오클랜드, 웰링턴"
+
+
+#: string "(GMT+12:00) Fiji, Kamchatka, Marshall Is."
+msgid "GENERIC_TIME_ZONE_FIJI_KAMCHATKA_MARSHALL_IS"
+msgstr "(GMT+12:00) 피지, 캄차카 반도, 마셜 제도"
+
+
+#: string "NTP Service:"
+msgid "LABEL_HEADER_NTP_SERVICE"
+msgstr "NTP 서비스:"
+
+
+#: string "January"
+msgid "GENERIC_MONTH_JANUARY"
+msgstr "1월"
+
+
+#: string "February"
+msgid "GENERIC_MONTH_FEBRUARY"
+msgstr "2월"
+
+
+#: string "March"
+msgid "GENERIC_MONTH_MARCH"
+msgstr "3월"
+
+
+#: string "April"
+msgid "GENERIC_MONTH_APRIL"
+msgstr "4월"
+
+
+#: string "May"
+msgid "GENERIC_MONTH_MAY"
+msgstr "5월"
+
+
+#: string "June"
+msgid "GENERIC_MONTH_JUNE"
+msgstr "6월"
+
+
+#: string "July"
+msgid "GENERIC_MONTH_JULY"
+msgstr "7월"
+
+
+#: string "August"
+msgid "GENERIC_MONTH_AUGUST"
+msgstr "8월"
+
+
+#: string "September"
+msgid "GENERIC_MONTH_SEPTEMBER"
+msgstr "9월"
+
+
+#: string "October"
+msgid "GENERIC_MONTH_OCTOBER"
+msgstr "10월"
+
+
+#: string "November"
+msgid "GENERIC_MONTH_NOVEMBER"
+msgstr "11월"
+
+
+#: string "December"
+msgid "GENERIC_MONTH_DECEMBER"
+msgstr "12월"
+
+
+#: string "I accept"
+msgid "GENERIC_LABEL_ACCEPT_EULA"
+msgstr "동의함"
+
+#: string "Click to confirm that you have read and agree to the firmware upgrade information."
+msgid "LABEL_FW_UPGRADE_EULA_ACCEPTANCE"
+msgstr "펌웨어 업그레이드 정보를 읽고 이에 동의했음을 확인하려면 클릭하십시오."
+
+
+
+#: string "Print"
+msgid "GENERIC_LABEL_PRINT"
+msgstr "인쇄"
+
+#: string "Retrieving..."
+msgid "GENERIC_LABEL_DESCR_RETRIEVE"
+msgstr "검색 중..."
+
+
+
+#: string "Time:"
+msgid "LABEL_HEADER_TIME"
+msgstr "시간:"
+
+
+#: string "AM"
+msgid "LABEL_DESCR_TIME_AM"
+msgstr "오전"
+
+
+#: string "PM"
+msgid "LABEL_DESCR_TIME_PM"
+msgstr "오후"
+
+# edit - removed colon after device name 6-10
+#: string "Device Name"
+msgid "LABEL_HEADER_DEVICE_NAME"
+msgstr "장치 이름"
+
+
+#: string "Description:"
+msgid "LABEL_HEADER_DESCRIPTION"
+msgstr "설명:"
+
+
+#: string "Language:"
+msgid "LABEL_HEADER_LANGUAGE"
+msgstr "언어:"
+
+
+#: string "Serial Number:"
+msgid "LABEL_HEADER_SERIAL_NUMBER"
+msgstr "일련 번호:"
+
+
+#: string "Register Now"
+msgid "BUTTON_REGISTER_NOW"
+msgstr "지금 등록"
+
+
+#: string "Update from File"
+msgid "BUTTON_UPDATE_FROM_FILE"
+msgstr "파일에서 업데이트"
+
+
+#: string "Auto Update:"
+msgid "LABEL_HEADER_AUTO_UPDATE"
+msgstr "자동 업데이트:"
+
+
+#: string "Daily"
+msgid "LABEL_DESCR_DAILY"
+msgstr "매일"
+
+
+#: string "Sunday"
+msgid "LABEL_DESCR_SUNDAY"
+msgstr "일요일"
+
+
+#: string "Monday"
+msgid "LABEL_DESCR_MONDAY"
+msgstr "월요일"
+
+
+#: string "Tuesday"
+msgid "LABEL_DESCR_TUESDAY"
+msgstr "화요일"
+
+
+#: string "Wednesday"
+msgid "LABEL_DESCR_WEDNESDAY"
+msgstr "수요일"
+
+
+#: string "Thursday"
+msgid "LABEL_DESCR_THURSDAY"
+msgstr "목요일"
+
+
+#: string "Friday"
+msgid "LABEL_DESCR_FRIDAY"
+msgstr "금요일"
+
+
+#: string "Saturday"
+msgid "LABEL_DESCR_SATURDAY"
+msgstr "토요일"
+
+#--- Calender Days of Week header, 3 characters MAX  ---
+
+#: string "Sun"
+msgid "CONTENT_SETTINGS_STRING_SUN"
+msgstr "일"
+
+#: string "Mon"
+msgid "CONTENT_SETTINGS_STRING_MON"
+msgstr "월"
+
+#: string "Tue"
+msgid "CONTENT_SETTINGS_STRING_TUE"
+msgstr "화"
+
+#: string "Wed"
+msgid "CONTENT_SETTINGS_STRING_WED"
+msgstr "수"
+
+#: string "Thu"
+msgid "CONTENT_SETTINGS_STRING_THU"
+msgstr "목"
+
+#: string "Fri"
+msgid "CONTENT_SETTINGS_STRING_FRI"
+msgstr "금"
+
+#: string "Sat"
+msgid "CONTENT_SETTINGS_STRING_SAT"
+msgstr "토"
+
+#: string "Generic Media Receiver"
+msgid "CONTENT_SETTINGS_STRING_GENERIC_MEDIA_RECEIVER"
+msgstr "일반 미디어 수신기"
+
+#: string "Factory restore in progress."
+msgid "CONTENT_SETTINGS_STRING_FACTORY_RESTORE_IN_PROGRESS"
+msgstr "초기 설정 복원이 진행 중입니다."
+
+#: string "Media"
+msgid "CONTENT_SETTINGS_STRING_MEDIA"
+msgstr "미디어"
+
+#: string "System Only Factory Restore"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_SYSTEM_ONLY_FACTORY_RESTORE"
+msgstr "시스템만 초기 설정 복원"
+
+#: string "Update Firmware"
+msgid "PAGE_HEADER_UPDATE_FIRMWARE"
+msgstr "펌웨어 업그레이드"
+
+
+#: string "Firmware Update Version found: "
+msgid "LABEL_DESCR_FIRMWARE_UPDATE_FOUND"
+msgstr "펌웨어 업그레이드 버전 있음:"
+
+
+#: string "Your firmware is up to date."
+msgid "LABEL_DESCR_FIRMWARE_UP_TO_DATE"
+msgstr "펌웨어가 최신 버전입니다."
+
+
+#: string "Importing File..."
+msgid "LABEL_DESCR_IMPORTING_FILE"
+msgstr "파일 가져오는 중..."
+
+
+#: string "Process is idle."
+msgid "LABEL_DESCR_UPDATE_PROCESS_IDLE"
+msgstr "프로세스가 유휴 상태입니다."
+
+
+#: string "Downloading..."
+msgid "LABEL_DESCR_DOWNLOADING"
+msgstr "다운로드 중..."
+
+
+#: string "Upgrading..."
+msgid "LABEL_DESCR_UPGRADING"
+msgstr "업그레이드 중..."
+
+
+#: string "Firmware Update Failed"
+msgid "LABEL_DESCR_UPDATE_PROCESS_FAILED"
+msgstr "펌웨어 업데이트에 실패했습니다."
+
+
+#: string "Diagnostic in progress."
+msgid "LABEL_DESCR_DIAGNOSTIC_IN_PROGRESS"
+msgstr "진단이 진행 중입니다."
+
+
+#: string "Quick Factory Restore"
+msgid "LABEL_DESCR_QUICK_FACTORY_RESTORE"
+msgstr "빠른 초기 설정 복원"
+
+#: string "Quick Factory Restore"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_QUICK_FACTORY_RESTORE"
+msgstr "빠른 초기 설정 복원"
+
+#: string "Full Factory Restore"
+msgid "LABEL_DESCR_FULL_FACTORY_RESTORE"
+msgstr "전체 초기 설정 복원"
+
+#: string "Your device configuration will be updated, followed by a reboot. "
+msgid "LABEL_DESCR_CONFIGURATION_UPDATE_REBOOT"
+msgstr "장치 구성이 업데이트되고 이어서 다시 부팅됩니다."
+
+#: string "Self Test passed."
+msgid "LABEL_DESCR_SELF_TEST_PASSED"
+msgstr "자체 테스트를 통과했습니다."
+
+
+#: string "Self Test incomplete."
+msgid "LABEL_DESCR_SELF_TEST_DID_NOT_COMPLETE"
+msgstr "자체 테스트가 완료되지 않았습니다."
+
+
+#: string "Self Test cancelled."
+msgid "LABEL_DESCR_SELF_TEST_CANCELLED"
+msgstr "자체 테스트가 취소되었습니다."
+
+
+#: string "Import Configuration File"
+msgid "PAGE_HEADER_IMPORT_CONFIGURATION_FILE"
+msgstr "구성 파일 가져오기"
+
+
+#: string "Login"
+msgid "BUTTON_LOGIN"
+msgstr "로그인"
+
+
+#: string "Western Digital Technologies, Inc.<br />License Agreement"
+msgid "PAGE_HEADER_WESTERN_DIGITAL_TECHNOLOGIES"
+msgstr "Western Digital Technologies, Inc.<br />사용권 계약"
+
+
+#: string "Please read the license agreement carefully."
+msgid "LABEL_DESCR_PLEASE_READ_LICENSE_AGREEMENT"
+msgstr "사용권 계약을 자세히 읽으십시오."
+
+
+#: string "Problem confirming acceptance of license agreement."
+msgid "LABEL_DESCR_PROBLEM_CONFIRMING_LICENSE_AGREEMENT_ACCEPETANCE"
+msgstr "사용권 계약 동의 확인 시 문제가 발생했습니다."
+
+
+#: string "Please accept the license agreement"
+msgid "LABEL_DESCR_PLEASE_ACCEPT_LICENSE_AGREEMENT"
+msgstr "사용권 계약에 동의하십시오."
+
+
+#: string "Device is shutting down. After the LED on the front of the device is off, you can safely unplug your drive. Please close your browser or browser tab."
+msgid "LABEL_DESCR_SHUTTING_DOWN"
+msgstr "장치 종료 중입니다. 장치 전면의 LED가 꺼진 후 안전하게 장치 플러그를 분리할 수 있습니다. 브라우저 또는 브라우저 탭을 닫으십시오."
+
+
+#: string "You are about to reboot your network device: any backups, file activity, or file transfers may be interrupted." 
+msgid "LABEL_DESCR_REBOOT_DEVICE"
+msgstr "네트워크 장치를 다시 부팅하려는 중입니다. 모든 백업, 파일 작업 또는 파일 전송이 손상될 수 있습니다."
+
+
+#: string "You are about to shut down your network device: any backups, file activity, or file transfers may be interrupted." 
+msgid "LABEL_DESCR_SHUTDOWN_DEVICE"
+msgstr "네트워크 장치를 종료하려는 중입니다. 모든 백업, 파일 작업 또는 파일 전송이 손상될 수 있습니다."
+
+
+#: string "You don't have permission to access a resource. Please try again."
+msgid "ERROR_FORBIDDEN"
+msgstr "자원에 액세스할 수 있는 권한이 없습니다. 다시 시도하십시오."
+
+
+#: string "Invalid Request."
+msgid "ERROR_DAC_INVALID"
+msgstr "유효하지 않은 요청입니다."
+
+
+#: string "Please check your network connection; then make sure that your router has the latest firmware installed and that UPnP is enabled.<br><br>For more information on how to enable UPnP, view your router's product documentation."
+msgid "LABEL_REMOTE_CONNECTION_FAILED"
+msgstr "네트워크 연결을 확인한 후 라우터에 최신 펌웨어가 설치되어 있고 UPnP가 활성화되어 있는지 확인하십시오.<br><br>UPnP 활성화에 대한 자세한 내용은 라우터의 제품 설명서를 참조하십시오."
+
+
+#: string "Disabled"
+msgid "LABEL_STATUS_DISABLED"
+msgstr "비활성화됨"
+
+
+#: string "Connecting"
+msgid "LABEL_STATUS_CONNECTING"
+msgstr "연결 중"
+
+
+#: string "Connected"
+msgid "LABEL_STATUS_PORTFORWARDED"
+msgstr "연결됨"
+
+
+#: string "Ready"
+msgid "LABEL_STATUS_READY"
+msgstr "준비"
+
+
+#: string "Connected (Relay connection established)"
+msgid "LABEL_STATUS_RELAYED"
+msgstr "연결됨(릴레이 연결 설정됨)"
+
+
+#: string "Failed"
+msgid "LABEL_STATUS_FAILED"
+msgstr "실패함"
+
+
+#: string "Your device could not be registered successfully. Please make sure you do not have network connectivity issues and try again."
+msgid "ERROR_DEVICE_REG_FAILED"
+msgstr "장치를 정상적으로 등록하지 못했습니다. 네트워크 연결 문제가 없는지 확인한 후 다시 시도하십시오."
+
+
+#: string "This action could not be completed because your device is not registered. Please register your device and try again."
+msgid "ERROR_DEVICE_NOT_REGISTERED"
+msgstr "장치가 등록되지 않아서 이 작업을 완료할 수 없습니다. 장치를 등록하고 다시 시도하십시오."
+
+
+#: string "The device status could not be updated due to an communication or internal software error."
+msgid "ERROR_DEVICE_UPDATE_FAILED"
+msgstr "통신 또는 내부 소프트웨어 오류 때문에 장치 상태를 업데이트할 수 없습니다."
+
+
+#: string "The web access account could not be located on the server. Please retry your last operation."
+msgid "ERROR_WEBACCOUNT_NOT_FOUND"
+msgstr "서버에서 웹 액세스 계정을 찾을 수 없습니다. 마지막 작업을 다시 시도하십시오."
+
+
+#: string "The registration email could not be re-sent. Please make sure your device is registered and you do not have any network connectivity issues and try again."
+msgid "ERROR_WEBACCOUNT_RESUBMIT_EMAIL_FAILED"
+msgstr "등록 이메일을 다시 보낼 수 없습니다. 장치가 등록되어 있고 네트워크 연결 문제가 없는지 확인한 후 다시 시도하십시오."
+
+# Edit - reworded - 5-21 Moravia, please update accordingly; see spreadsheet
+#: string "This email account cannot be deleted. Make sure your device is registered and your network connection is functioning properly, and then try again."
+msgid "ERROR_WEBACCOUNT_DELETE_FAILED"
+msgstr "이 이메일 계정은 삭제할 수 없습니다. 장치가 등록되어 있고 네트워크 연결이 올바르게 작동하는지 확인한 후 다시 시도하십시오."
+
+
+#: string "Your mobile device could not be located on the server. Please retry your last operation."
+msgid "ERROR_MOBILEACCESS_NOT_FOUND"
+msgstr "서버에서 모바일 장치를 찾을 수 없습니다. 마지막 작업을 다시 시도하십시오."
+
+
+#: string "Failed to generate code for your mobile device. Please make sure you do not have any network connectivity issues and try again."
+msgid "ERROR_MOBILEACCESS_CREATE_FAILED"
+msgstr "모바일 장치의 코드를 생성하지 못했습니다. 네트워크 연결 문제가 없는지 확인한 후 다시 시도하십시오."
+
+
+#: string "Mobile access for this device could not be removed. Please make sure your device is registered and you do not have any network connectivity issues and try again."
+msgid "ERROR_MOBILEACCESS_DELETE_FAILED"
+msgstr "이 장치에 대한 모바일 액세스를 제거할 수 없습니다. 장치가 등록되어 있고 네트워크 연결 문제가 없는지 확인한 후 다시 시도하십시오."
+
+
+#: string "Failed to locate user account. Please make sure your device is registered and you do not have any network connectivity issues and try again."
+msgid "ERROR_USER_NOT_FOUND"
+msgstr "사용자 계정을 찾지 못했습니다. 장치가 등록되어 있고 네트워크 연결 문제가 없는지 확인한 후 다시 시도하십시오."
+
+
+#: string "Failed to create user account. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_USER_CREATE_FAILED"
+msgstr "사용자 계정을 만들지 못했습니다. 이 작업에 필요한 권한과 충분한 디스크 공간이 있는지 확인한 후 다시 시도하십시오."
+
+
+#: string "Failed to update user account. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_USER_UPDATE_FAILED"
+msgstr "사용자 계정을 업데이트하지 못했습니다. 이 작업에 필요한 권한과 충분한 디스크 공간이 있는지 확인한 후 다시 시도하십시오."
+
+
+#: string "Failed to delete user account. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_USER_DELETE_FAILED"
+msgstr "사용자 계정을 삭제하지 못했습니다. 이 작업에 필요한 권한과 충분한 디스크 공간이 있는지 확인한 후 다시 시도하십시오."
+
+
+#: string "Unable to modify share access list. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_SHAREACCESS_NOT_FOUND"
+msgstr "공유 액세스 목록을 수정할 수 없습니다. 이 작업에 필요한 권한과 충분한 디스크 공간이 있는지 확인한 후 다시 시도하십시오."
+
+
+#: string "Failed to create share access list. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_SHAREACCESS_CREATE_FAILED"
+msgstr "공유 액세스 목록을 만들지 못했습니다. 이 작업에 필요한 권한과 충분한 디스크 공간이 있는지 확인한 후 다시 시도하십시오."
+
+
+#: string "Failed to update share access list. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_SHAREACCESS_UPDATE_FAILED"
+msgstr "공유 액세스 목록을 업데이트하지 못했습니다. 이 작업에 필요한 권한과 충분한 디스크 공간이 있는지 확인한 후 다시 시도하십시오."
+
+
+#: string "Failed to delete share access list. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_SHAREACCESS_DELETE_FAILED"
+msgstr "공유 액세스 목록을 삭제하지 못했습니다. 이 작업에 필요한 권한과 충분한 디스크 공간이 있는지 확인한 후 다시 시도하십시오."
+
+
+#: string "This operation could not succeed because the share resource no longer exists or is currently inaccessible. Please make sure you have sufficient disk space for this operation and try again."
+msgid "ERROR_SHARE_NOT_FOUND"
+msgstr "공유 자원이 더 이상 존재하지 않거나 현재 공유 자원에 액세스할 수 없는 상태여서 이 작업을 성공적으로 수행할 수 없습니다. 이 작업에 필요한 충분한 디스크 공간이 있는지 확인한 후 다시 시도하십시오."
+
+
+#: string "There was an error while updating a share resource. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_SHARE_UPDATE_FAILED"
+msgstr "공유 자원을 업데이트하는 중에 오류가 발생했습니다. 이 작업에 필요한 권한과 충분한 디스크 공간이 있는지 확인한 후 다시 시도하십시오."
+
+
+#: string "There was an error while deleting a share resource. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_SHARE_DELETE_FAILED"
+msgstr "공유 자원을 삭제하는 중에 오류가 발생했습니다. 이 작업에 필요한 권한과 충분한 디스크 공간이 있는지 확인한 후 다시 시도하십시오."
+
+
+#: string "Back"
+msgid "BUTTON_BACK"
+msgstr "뒤로"
+
+# Edit - changed from sentence case to title case
+#: string "Recovering Content with a Safepoint"
+msgid "HELP_LINK_RECOVERING_SAFEPOINT"
+msgstr "safepoint로 내용 복구 중"
+
+
+#: string "Weekly"
+msgid "LABEL_DESCR_WEEKLY"
+msgstr "매주"
+
+
+#: string "Monthly"
+msgid "LABEL_DESCR_MONTHLY"
+msgstr "매월"
+
+
+#: string "Name"
+msgid "LABEL_SAFEPOINT_NAME"
+msgstr "이름"
+
+
+#: string "Frequency:"
+msgid "LABEL_HEADER_FREQUENCY"
+msgstr "빈도:"
+
+
+#: string "Safepoint update process terminated. You can update your safepoint anytime using the Auto Update option, or manually by clicking the update icon on your safepoint in the Manage section."
+msgid "LABEL_SAFEPOINT_UPDATE_ABORTED"
+msgstr "safepoint 업데이트 프로세스가 종료되었습니다. 자동 업데이트 옵션을 사용하거나 수동으로 관리 섹션의 safepoint에 있는 업데이트 아이콘을 클릭하여 언제든지 safepoint를 업데이트할 수 있습니다."
+
+
+#: string "Your data was successfully restored. Your device will automatically restart shortly and can be used in place of your original WD My Cloud."
+msgid "LABEL_SAFEPOINT_RESTORE_COMPLETE"
+msgstr "데이터가 성공적으로 복원되었습니다. 곧 장치가 자동으로 다시 시작되어, 원래 WD My Cloud 대신 사용할 수 있게 됩니다."
+
+
+#: string "An error occurred while recovering data from your safepoint. Please try the Recovery option again.<br><br>If the error persists, please contact WD Support."
+msgid "ERROR_SAFEPOINT_RESTORE_FAILED"
+msgstr "safepoint의 데이터를 복구하는 중에 오류가 발생했습니다. 복구 옵션을 다시 시도하십시오.<br><br>이 오류가 지속되면 WD 지원 센터에 문의하십시오."
+
+
+#: string "To be created"
+msgid "LABEL_SAFEPOINT_TO_BE_CREATED"
+msgstr "만들 항목"
+
+
+#: string "Your safepoint cannot be created due to a failed request. Please try creating your safepoint again."
+msgid "ERROR_SAFEPOINT_CREATE_FAILED"
+msgstr "실패한 요청 때문에 safepoint를 만들 수 없습니다. safepoint를 다시 만드십시오."
+
+
+#: string "Your safepoint cannot be created due to an invalid request."
+msgid "ERROR_SAFEPOINT_CREATE_INVALID"
+msgstr "유효하지 않은 요청 때문에 safepoint를 만들 수 없습니다."
+
+
+#: string "Your safepoint cannot be created due to an unauthorized request. Please be sure to enter appropriate credentials for your device and/or shares, and try again."
+msgid "ERROR_SAFEPOINT_CREATE_UNAUTHORIZED"
+msgstr "무단 요청 때문에 safepoint를 만들 수 없습니다. 장치 또는 공유에 대한 적절한 자격 증명을 입력한 후 다시 시도하십시오."
+
+
+#: string "Your safepoint cannot be created due to a missing drive or share resource. Please try creating your safepoint again."
+msgid "ERROR_SAFEPOINT_CREATE_NOT_FOUND"
+msgstr "드라이브 또는 공유 자원이 누락되어서 safepoint를 만들 수 없습니다. safepoint를 다시 만드십시오."
+
+
+#: string "A safepoint operation is currently in progress. Please wait for the current operation to finish before initiating another."
+msgid "ERROR_SAFEPOINT_BUSY"
+msgstr "현재 safepoint 작업이 진행 중입니다. 다른 작업을 시작하기 전에 현재 작업이 완료될 때까지 기다리십시오."
+
+
+#: string "Your safepoint cannot be created due to insufficient space. Please make sure you have sufficient space on your destination device and/or shares, and then try again."
+msgid "ERROR_SAFEPOINT_CREATE_NOSPACE"
+msgstr "공간이 부족하여 safepoint를 만들 수 없습니다. 대상 장치 또는 공유에 충분한 공간을 확보한 후 다시 시도하십시오."
+
+
+#: string "Your safepoint cannot be updated due to a failed request. Please try again."
+msgid "ERROR_SAFEPOINT_UPDATE_FAILED"
+msgstr "실패한 요청 때문에 safepoint를 업데이트할 수 없습니다. 다시 시도하십시오."
+
+
+#: string "Your safepoint cannot be updated due to an invalid request."
+msgid "ERROR_SAFEPOINT_UPDATE_INVALID"
+msgstr "유효하지 않은 요청 때문에 safepoint를 업데이트할 수 없습니다."
+
+
+#: string "Your safepoint cannot be updated due to an unauthorized request. Please be sure to enter appropriate credentials for your device and/or shares, and and try again."
+msgid "ERROR_SAFEPOINT_UPDATE_UNAUTHORIZED"
+msgstr "무단 요청 때문에 safepoint를 업데이트할 수 없습니다. 장치 또는 공유에 대한 적절한 자격 증명을 입력한 후 다시 시도하십시오."
+
+
+#: string "Your safepoint cannot be updated due to a missing drive or share resource. Make sure the drive or resource is available; then try again."
+msgid "ERROR_SAFEPOINT_CREATE_UPDATE_NOTFOUND"
+msgstr "드라이브 또는 공유 자원이 누락되어서 safepoint를 업데이트할 수 없습니다. 드라이브 또는 자원이 사용 가능한지 확인한 후 다시 시도하십시오."
+
+
+#: string "Your safepoint cannot be updated due to insufficient space. Please make sure you have sufficient space on your destination device and/or shares, and try again."
+msgid "ERROR_SAFEPOINT_UPDATE_NOSPACE"
+msgstr "공간이 부족하여 safepoint를 업데이트할 수 없습니다. 대상 장치 또는 공유에 충분한 공간을 확보한 후 다시 시도하십시오."
+
+
+#: string "The discovery operation was not successful due to a failed request. Please retry by clicking Discover again."
+msgid "ERROR_NAS_DISCOVER_FAILED"
+msgstr "실패한 요청 때문에 검색 작업에 성공하지 못했습니다. 검색을 다시 클릭하여 다시 시도하십시오."
+
+
+#: string "This operation could not succeed due to an authentication failure. Please retry the operation to continue."
+msgid "ERROR_NAS_AUTHENTICATION_FAILED"
+msgstr "인증 실패 때문에 이 작업을 성공적으로 완료할 수 없습니다. 작업을 다시 시도하여 계속 진행하십시오."
+
+
+#: string "This operation could not succeed due to an invalid authentication request. Please retry the operation to continue."
+msgid "ERROR_NAS_AUTHENTICATION_INVALID"
+msgstr "유효하지 않은 인증 요청 때문에 이 작업을 성공적으로 완료할 수 없습니다. 작업을 다시 시도하여 계속 진행하십시오."
+
+
+#: string "Invalid username or password. Please enter your credentials again to continue."
+msgid "ERROR_NAS_AUTHENTICATION_UNAUTHORIZED"
+msgstr "유효하지 않은 사용자 이름 또는 암호입니다. 자격 증명을 다시 입력하여 계속 진행하십시오."
+
+
+#: string "Your device could not be found. Please try again to continue."
+msgid "ERROR_NAS_AUTHENTICATION_NOTFOUND"
+msgstr "장치를 찾을 수 없습니다. 다시 시도하여 계속 진행하십시오."
+
+
+#: string "The shares on the selected device could not be located due to a failed request. Please try again to continue."
+msgid "ERROR_SHARE_DISCOVER_FAILED"
+msgstr "실패한 요청 때문에 선택된 장치의 공유를 찾을 수 없습니다. 다시 시도하여 계속 진행하십시오."
+
+
+#: string "The shares on the selected device could not be located due to an invalid operation. Please try again to continue."
+msgid "ERROR_SHARE_DISCOVER_INVALID"
+msgstr "유효하지 않은 작업 때문에 선택된 장치의 공유를 찾을 수 없습니다. 다시 시도하여 계속 진행하십시오."
+
+
+#: string "The shares on the selected device could not be located due to an unauthorized request. Please make sure you enter appropriate credentials for your device and/or shares and try again."
+msgid "ERROR_SHARE_DISCOVER_UNAUTHORIZED"
+msgstr "무단 요청 때문에 선택된 장치의 공유를 찾을 수 없습니다. 장치 또는 공유에 대한 적절한 자격 증명을 입력한 후 다시 시도하십시오."
+
+
+#: string "Your device could not be found. Please try again to continue."
+msgid "ERROR_SHARE_DISCOVER_NOTFOUND"
+msgstr "장치를 찾을 수 없습니다. 다시 시도하여 계속 진행하십시오."
+
+
+#: string "This operation could not succeed due to an authentication failure. Please retry the operation to continue."
+msgid "ERROR_SHARE_AUTHENTICATION_FAILED"
+msgstr "인증 실패 때문에 이 작업을 성공적으로 완료할 수 없습니다. 작업을 다시 시도하여 계속 진행하십시오."
+
+
+#: string "This operation could not succeed due to an invalid request. Please retry the operation to continue."
+msgid "ERROR_SHARE_AUTHENTICATION_INVALID"
+msgstr "유효하지 않은 요청 때문에 이 작업을 성공적으로 완료할 수 없습니다. 작업을 다시 시도하여 계속 진행하십시오."
+
+
+#: string "Invalid username or password. Please enter your credentials again to continue."
+msgid "ERROR_SHARE_AUTHENTICATION_UNAUTHORIZED"
+msgstr "유효하지 않은 사용자 이름 또는 암호입니다. 자격 증명을 다시 입력하여 계속 진행하십시오."
+
+
+#: string "Your device or share could not be found. Please try again to continue."
+msgid "ERROR_SHARE_AUTHENTICATION_NOTFOUND"
+msgstr "장치 또는 공유를 찾을 수 없습니다. 다시 시도하여 계속 진행하십시오."
+
+
+#: string "Your safepoint(s) could not be found due to a failed request. Please try again to continue."
+msgid "ERROR_SAFEPOINT_DISCOVER_FAILED"
+msgstr "실패한 요청 때문에 safepoint를 찾을 수 없습니다. 다시 시도하여 계속 진행하십시오."
+
+
+#: string "This operation could not succeed due to an invalid request. Please retry the operation to continue."
+msgid "ERROR_SAFEPOINT_DISCOVER_INVALID"
+msgstr "유효하지 않은 요청 때문에 이 작업을 성공적으로 완료할 수 없습니다. 작업을 다시 시도하여 계속 진행하십시오."
+
+
+#: string "Your safepoint could not be found due to an unauthorized request. Please make sure you enter appropriate credentials for your device and/or shares and try again."
+msgid "ERROR_SAFEPOINT_DISCOVER_UNAUTHORIZED"
+msgstr "무단 요청 때문에 safepoint를 찾을 수 없습니다. 장치 또는 공유에 대한 적절한 자격 증명을 입력한 후 다시 시도하십시오."
+
+
+#: string "Your device or share could not be found. Please try again to continue."
+msgid "ERROR_SAFEPOINT_DISCOVER_NOTFOUND"
+msgstr "장치 또는 공유를 찾을 수 없습니다. 다시 시도하여 계속 진행하십시오."
+
+
+#: string "Your safepoint(s) could not be found due to a failed request. Please try again to continue."
+msgid "ERROR_SAFEPOINT_GET_LIST_FAILED"
+msgstr "실패한 요청 때문에 safepoint를 찾을 수 없습니다. 다시 시도하여 계속 진행하십시오."
+
+
+#: string "Your safepoint could not be deleted due to a failed request. Please try again."
+msgid "ERROR_SAFEPOINT_DESTROY_FAILED"
+msgstr "실패한 요청 때문에 safepoint를 삭제할 수 없습니다. 다시 시도하십시오."
+
+
+#: string "Your safepoint could not be deleted due to an invalid request. Please try again."
+msgid "ERROR_SAFEPOINT_DESTROY_INVALID"
+msgstr "유효하지 않은 요청 때문에 safepoint를 삭제할 수 없습니다. 다시 시도하십시오."
+
+
+#: string "Your safepoint could not be found. Please try again to continue."
+msgid "ERROR_SAFEPOINT_DESTROY_NOT_FOUND"
+msgstr "safepoint를 찾을 수 없습니다. 다시 시도하여 계속 진행하십시오."
+
+
+#: string "Your safepoint could not be deleted because it is currently unreachable. Please try again after some time."
+msgid "ERROR_SAFEPOINT_DESTROY_UNREACHABLE"
+msgstr "현재 액세스할 수 없어서 safepoint를 삭제할 수 없습니다. 잠시 후에 다시 시도하십시오."
+
+
+#: string "Your data could not be recovered due to an invalid request. Please try again."
+msgid "ERROR_SAFEPOINT_RESTORE_INVALID"
+msgstr "유효하지 않은 요청 때문에 데이터를 복구할 수 없습니다. 다시 시도하십시오."
+
+
+#: string "Your safepoint could not be found. Please try again to continue."
+msgid "ERROR_SAFEPOINT_RESTORE_NOTFOUND"
+msgstr "safepoint를 찾을 수 없습니다. 다시 시도하여 계속 진행하십시오."
+
+
+#: string "Your data could not be recovered due to insufficient space. Please make sure you have sufficient space on your destination device and/or shares and try again."
+msgid "ERROR_SAFEPOINT_RESTORE_NOSPACE"
+msgstr "공간이 충분하지 않아서 데이터를 복구할 수 없습니다. 대상 장치 또는 공유에 충분한 공간을 확보한 후 다시 시도하십시오."
+
+
+#: string "Your data could not be recovered because your safepoint is currently unreachable. Please try again after some time."
+msgid "ERROR_SAFEPOINT_RESTORE_UNREACHABLE"
+msgstr "현재 safepoint에 액세스할 수 없어서 데이터를 복구할 수 없습니다. 잠시 후에 다시 시도하십시오."
+
+
+#: string "The device you are recovering to does not appear to be in factory fresh state. Please navigate to Settings and perform a factory restore. Please note that you will lose all of your existing data on the device if you do so."
+msgid "ERROR_SAFEPOINT_RESTORE_NOT_FACTORY_FRESH"
+msgstr "복구할 대상 장치가 초기 설정 상태가 아닌 것으로 나타납니다. 설정으로 이동하여 초기 설정 복원을 수행하십시오. 복원을 수행하면 장치에 있는 모든 기존 데이터가 지워집니다."
+
+
+#: string "This operation could not succeed due to a failed request. Please try again."
+msgid "ERROR_SAFEPOINT_GET_STATUS_FAILED"
+msgstr "실패한 요청 때문에 이 작업을 성공적으로 완료할 수 없습니다. 다시 시도하십시오."
+
+
+#: string "Invalid request. Please try again."
+msgid "ERROR_SAFEPOINT_GET_STATUS_INVALID"
+msgstr "유효하지 않은 요청입니다. 다시 시도하십시오."
+
+
+#: string "Your device or share could not be found. Please try again to continue."
+msgid "ERROR_SAFEPOINT_GET_STATUS_NOTFOUND"
+msgstr "장치 또는 공유를 찾을 수 없습니다. 다시 시도하여 계속 진행하십시오."
+
+
+#: string "This operation could not succeed due to insufficient space. Please make sure you have sufficient space on your device and/or shares and try again."
+msgid "ERROR_SAFEPOINT_GET_STATUS_NOSPACE"
+msgstr "공간이 부족하여 이 작업을 성공적으로 완료할 수 없습니다. 장치 또는 공유에 충분한 공간을 확보한 후 다시 시도하십시오."
+
+
+#: string "Your safepoint is currently unreachable. Please try again after some time."
+msgid "ERROR_SAFEPOINT_GET_STATUS_UNREACHABLE"
+msgstr "현재 safepoint에 액세스할 수 없습니다. 잠시 후에 다시 시도하십시오."
+
+
+#: string "This operation could not succeed due to a failed request. Please try again."
+msgid "ERROR_SAFEPOINT_SET_INFO_FAILED"
+msgstr "실패한 요청 때문에 이 작업을 성공적으로 완료할 수 없습니다. 다시 시도하십시오."
+
+
+#: string "Invalid request. Please try again."
+msgid "ERROR_SAFEPOINT_SET_INFO_INVALID"
+msgstr "유효하지 않은 요청입니다. 다시 시도하십시오."
+
+
+#: string "There was an error due to an unauthorized request. Please make sure you enter appropriate credentials for your device and/or shares and try again."
+msgid "ERROR_SAFEPOINT_SET_INFO_UNAUTHORIZED"
+msgstr "무단 요청 때문에 오류가 발생했습니다. 장치 또는 공유에 대한 적절한 자격 증명을 입력한 후 다시 시도하십시오."
+
+
+#: string "Your safepoint could not be found. Please try again to continue."
+msgid "ERROR_SAFEPOINT_SET_INFO_NOTFOUND"
+msgstr "safepoint를 찾을 수 없습니다. 다시 시도하여 계속 진행하십시오."
+
+
+#: string "This operation could not succeed due to a failed request. Please try again."
+msgid "ERROR_SAFEPOINT_GET_SCHEDULE_FAILED"
+msgstr "실패한 요청 때문에 이 작업을 성공적으로 완료할 수 없습니다. 다시 시도하십시오."
+
+
+#: string "Invalid request. Please try again."
+msgid "ERROR_SAFEPOINT_GET_SCHEDULE_INVALID"
+msgstr "유효하지 않은 요청입니다. 다시 시도하십시오."
+
+
+#: string "Your safepoint could not be found. Please try again to continue."
+msgid "ERROR_SAFEPOINT_GET_SCHEDULE_NOT_FOUND"
+msgstr "safepoint를 찾을 수 없습니다. 다시 시도하여 계속 진행하십시오."
+
+
+#: string "This operation could not succeed due to a failed request. Please try again."
+msgid "ERROR_SAFEPOINT_SET_SCHEDULE_FAILED"
+msgstr "실패한 요청 때문에 이 작업을 성공적으로 완료할 수 없습니다. 다시 시도하십시오."
+
+
+#: string "Invalid request. Please try again."
+msgid "ERROR_SAFEPOINT_SET_SCHEDULE_INVALID"
+msgstr "유효하지 않은 요청입니다. 다시 시도하십시오."
+
+
+#: string "Your safepoint could not be found. Please try again to continue."
+msgid "ERROR_SAFEPOINT_SET_SCHEDULE_NOT_FOUND"
+msgstr "safepoint를 찾을 수 없습니다. 다시 시도하여 계속 진행하십시오."
+
+
+#: string "A safepoint with the same name already exists on this share. Please choose a different name for your safepoint and try again."
+msgid "ERROR_SAFEPOINT_CREATE_DUPLICATE"
+msgstr "이름이 동일한 safepoint가 이 공유에 이미 존재합니다. safepoint에 사용할 다른 이름을 선택한 후 다시 시도하십시오."
+
+
+#: string "This safepoint is corrupt and could not be deleted. Please fix the errors on this safepoint and try again."
+msgid "ERROR_SAFEPOINT_DESTROY_CORRUPTED"
+msgstr "이 safepoint는 손상되어 삭제할 수 없습니다. 이 safepoint의 오류를 수정한 후 다시 시도하십시오."
+
+
+#: string "The recovery operation failed due to an invalid safepoint state. Please wait for some time and try again."
+msgid "ERROR_SAFEPOINT_RESTORE_DUPLICATE"
+msgstr "유효하지 않은 safepoint 상태 때문에 복구 작업에 실패했습니다. 잠시 기다렸다가 다시 시도하십시오."
+
+
+#: string "The recovery operation could not succeed because this safepoint is currently being updated. Please wait for that operation to finish before attempting to recover your data from this safepoint."
+msgid "ERROR_SAFEPOINT_RESTORE_NOT_USABLE"
+msgstr "이 safepoint가 현재 업데이트 중이기 때문에 복구 작업을 성공적으로 완료할 수 없습니다. 이 safepoint에서 데이터 복구를 시도하기 전에 현재 작업이 완료될 때까지 기다리십시오."
+
+
+#: string "A safepoint with the same name already exists on this share. Please choose a different name for your safepoint and try again."
+msgid "ERROR_SAFEPOINT_SET_INFO_DUPLICATE"
+msgstr "이름이 동일한 safepoint가 이 공유에 이미 존재합니다. safepoint에 사용할 다른 이름을 선택한 후 다시 시도하십시오."
+
+
+#: string "A scheduling error occurred with your safepoint. Please set the auto-update schedule for your safepoint again. If your safepoint is yet to be created, please try creating the safepoint again."
+msgid "ERROR_SAFEPOINT_GET_SCHEDULE_CORRUPTED"
+msgstr "safepoint에 일정 오류가 발생했습니다. safepoint에 대한 자동 업데이트 일정을 다시 설정하십시오. 여전히 safepoint를 만들어야 하는 경우 다시 safepoint를 만들어보십시오."
+
+
+#: string "This operation could not succeed due to an scheduling conflict. Please ensure you have not enabled other safepoint operations for this time and try again."
+msgid "ERROR_SAFEPOINT_SET_SCHEDULE_DUPLICATE"
+msgstr "일정 충돌 때문에 이 작업을 성공적으로 완료할 수 없습니다. 지금은 다른 safepoint 작업을 활성화하지 말고 다시 시도하십시오."
+
+
+#: string "Size:"
+msgid "LABEL_DESCR_SIZE"
+msgstr "크기:"
+
+
+#: string "The safepoint cannot be created for a time occurring in the past. Please select a valid time from the drop-down and try again."
+msgid "ERROR_SAFEPOINT_CREATE_BAD_TIME_VALUE"
+msgstr "과거에 대한 safepoint를 만들 수 없습니다. 드롭다운에서 유효한 시간을 선택한 후 다시 시도하십시오."
+
+
+#: string "Error updating password. Please try again."
+msgid "ERROR_PASSWORD_UPDATE_FAILED"
+msgstr "암호 업데이트 오류입니다. 다시 시도하십시오."
+
+
+#: string "Failed to create the specified share. Please try again."
+msgid "ERROR_SHARE_CREATE_FAILED"
+msgstr "지정된 공유를 만들지 못했습니다. 다시 시도하십시오."
+
+
+#: string "The status of your safepoint(s) is currently unavailable. Please try again later."
+msgid "ERROR_SAFEPOINT_GET_STATUS_UNAVAILABLE"
+msgstr "safepoint를 현재 사용할 수 없는 상태입니다. 나중에 다시 시도하십시오."
+
+
+#: string "The web access account you requested already exists. Please enter a different email address."
+msgid "ERROR_WEBACCOUNT_DUPLICATE"
+msgstr "요청한 웹 액세스 계정이 이미 존재합니다. 다른 이메일 주소를 입력하십시오."
+
+
+#: string "Your last operation timed out. Make sure there are no network connectivity issues and try again."
+msgid "ERROR_TIMEOUT"
+msgstr "마지막 작업의 제한 시간이 초과되었습니다. 네트워크 연결 문제가 없는지 확인한 후 다시 시도하십시오."
+
+
+#: string "Your WD My Cloud IP address has changed; enter the new IP address in your browser."
+msgid "ERROR_TIMEOUT_IPADDRESS_CHANGED"
+msgstr "WD My Cloud IP 주소가 변경되었습니다. 브라우저에 새 IP 주소를 입력하십시오."
+
+
+#: string "The safepoint create operation is not allowed at this time."
+msgid "ERROR_SAFEPOINT_CREATE_NOT_ALLOWED"
+msgstr "지금은 safepoint 만들기 작업이 허용되지 않습니다."
+
+
+#: string "The safepoint delete operation is not allowed at this time."
+msgid "ERROR_SAFEPOINT_DESTROY_NOT_ALLOWED"
+msgstr "지금은 safepoint 삭제 작업이 허용되지 않습니다."
+
+
+#: string "The safepoint update operation is not allowed at this time."
+msgid "ERROR_SAFEPOINT_UPDATE_NOT_ALLOWED"
+msgstr "지금은 safepoint 업데이트 작업이 허용되지 않습니다."
+
+
+#: string "This operation is not supported."
+msgid "ERROR_NOT_SUPPORTED"
+msgstr "이 작업은 지원되지 않습니다."
+
+
+#: string "A system resource is not available."
+msgid "ERROR_UNAVAILABLE"
+msgstr "시스템 자원을 사용할 수 없습니다."
+
+
+#: string "An error occurred during the abort operation."
+msgid "ERROR_ABORTED"
+msgstr "중단 작업 중에 오류가 발생했습니다."
+
+
+#: string "A failed request was received during this operation."
+msgid "ERROR_FAILED"
+msgstr "이 작업 중에 실패한 요청이 수신되었습니다."
+
+
+#: string "Operation failed due to a duplication error."
+msgid "ERROR_DUPLICATE"
+msgstr "중복 오류 때문에 작업에 실패했습니다."
+
+
+#: string "Operation failed due to a corrupt resource."
+msgid "ERROR_CORRUPTED"
+msgstr "손상된 자원 때문에 작업에 실패했습니다."
+
+
+#: string "This operation is not allowed."
+msgid "ERROR_NOT_ALLOWED"
+msgstr "이 작업은 허용되지 않습니다."
+
+
+#: string "Upgrade was not successful."
+msgid "ERROR_UPGRADE_FAILED"
+msgstr "업그레이드에 성공하지 못했습니다."
+
+
+#: string "Conversion was not successful."
+msgid "ERROR_CONVERSION_FAILED"
+msgstr "변환에 성공하지 못했습니다."
+
+
+#: string "Manufacturer:"
+msgid "LABEL_MANUFACTURER"
+msgstr "제조업체:"
+
+
+#: string "Self-Assessment Test:"
+msgid "LABEL_SELF_ASSESSMENT_TEST"
+msgstr "자체 평가 테스트:"
+
+
+#: string "No Internet access. Check your network and try again."
+msgid "ERROR_NO_INTERNET_CONNECTIVITY"
+msgstr "인터넷에 액세스할 수 없습니다. 네트워크를 확인한 후 다시 시도하십시오."
+
+
+#: string "USB Device Details"
+msgid "LABEL_USB_DEVICE_DETAILS"
+msgstr "USB 장치 세부 정보"
+
+
+#: string "USB Device Name"
+msgid "LABEL_USB_DEVICE_NAME"
+msgstr "USB 장치 이름"
+
+
+#: string "Model:"
+msgid "LABEL_MODEL"
+msgstr "모델:"
+
+
+#: string "Provide a valid name."
+msgid "ERROR_PROVIDE_VALID_NAME"
+msgstr "유효한 이름을 입력하십시오."
+
+
+#: string "Password hint"
+msgid "LABEL_DESCR_SHOW_PASSWORD_HINT"
+msgstr "암호 힌트"
+
+
+#: string "The drive was not found. Please make sure the drive is connected and try again."
+msgid "ERROR_DRIVE_NOT_FOUND"
+msgstr "드라이브가 없습니다. 드라이브를 연결한 후 다시 시도하십시오."
+
+
+#: string "Connection Status:"
+msgid "LABEL_HEADER_CONNECTION_STATUS"
+msgstr "연결 상태:"
+
+
+#: string "Eject USB Drive?"
+msgid "HEADING_EJECT_USB"
+msgstr "USB 드라이브를 꺼내시겠습니까?"
+
+
+#: string "Unable to retrieve data. Make sure there are no network connectivity issues and try again."
+msgid "ERROR_GET_ERROR"
+msgstr "데이터를 검색할 수 없습니다. 네트워크 연결 문제가 없는지 확인한 후 다시 시도하십시오."
+
+
+#: string "Ejecting this device will remove all associated shares."
+msgid "LABEL_DESCR_CONFIRM_EJECT_USB_1"
+msgstr "이 장치를 꺼내면 연결된 모든 공유가 제거됩니다."
+
+
+#: string "Backup tasks in progress on this device will be interrupted."
+msgid "LABEL_DESCR_CONFIRM_EJECT_USB_2"
+msgstr "이 장치에서 진행 중인 백업 작업이 중단됩니다."
+
+#: string "If you are logged in remotely, you cannot access the device until it is plugged back in."
+msgid "LABEL_DESCR_CONFIRM_EJECT_USB_3"
+msgstr "원격으로 로그인한 경우 다시 연결하기 전에는 이 장치에 액세스할 수 없습니다."
+
+#: string "Username {0} is reserved. It is a case sensitive, alphanumeric value between 1 and 32 characters, and cannot contain spaces."
+msgid "ERROR_USERNAME_RESERVED"
+msgstr "사용자 이름 {0}은(는) 예약되어 있습니다. 이것은 대소문자가 구분되는 1 ~ 32자의 영숫자 값이며, 공백은 사용할 수 없습니다."
+
+#: string "First name {0} is reserved. It is a case sensitive, alphanumeric value between 1 and 32 characters and cannot contain spaces."
+msgid "ERROR_NAME_RESERVED"
+msgstr "이름 {0}은(는) 예약되어 있습니다. 이것은 대소문자가 구분되는 1 ~ 32자의 영숫자 값이며, 공백은 사용할 수 없습니다."
+
+#: string "First name must be an alphanumeric value between 1 and 32 characters and cannot contain spaces."
+msgid "ERROR_ADD_USER_FIRST_NAME_INCORRECT_SYNTAX"
+msgstr "이름은 1 ~ 32자의 영숫자 값이어야 하며, 공백은 사용할 수 없습니다."
+
+#: string "First name is a case-sensitive alphanumeric value up to 256 characters when combined with last name. Spaces and underscores are permitted when combining first and last name."
+msgid "ERROR_EDIT_USER_FIRST_NAME_INCORRECT_SYNTAX"
+msgstr "성과 결합될 경우 이름은 대소문자가 구분되는 최대 256자의 영숫자 값입니다. 이름과 성을 결합할 경우 공백과 밑줄을 사용할 수 있습니다."
+
+
+#: string "Last name is a case sensitive alphanumeric value that can be up to 256 characters when combined with first name. Spaces and underscores are permitted when combining last and first name."
+msgid "ERROR_LAST_NAME_INCORRECT_SYNTAX"
+msgstr "이름과 결합될 경우 성은 대소문자가 구분되는 최대 256자의 영숫자 값입니다. 성과 이름을 결합할 경우 공백과 밑줄을 사용할 수 있습니다."
+
+
+
+
+
+
+
+#: string "Failed to send test email. Please ensure you are not facing network connectivity issues and try again."
+msgid "ERROR_TEST_EMAIL_SEND_FAILED"
+msgstr "테스트 이메일을 보내지 못했습니다. 네트워크 연결 문제가 없는지 확인한 후 다시 시도하십시오."
+
+#: string "Local USB"
+msgid "BUTTON_LOCAL"
+msgstr "로컬 USB"
+
+#: string "Scan Network"
+msgid "BUTTON_NETWORK"
+msgstr "네트워크 검색"
+
+#: string "Not enough disk space available.<br><br>Please delete at least {0} on your drive and try again."
+msgid "ERROR_SPACE_LIMITATION"
+msgstr "사용 가능한 디스크 공간이 충분하지 않습니다.<br><br>드라이브에서 최소 {0}을(를) 삭제한 후 다시 시도하십시오."
+
+#: string "Upgrade download failure. Please try your upgrade again."
+msgid "ERROR_UPGRADE_DOWNLOAD_FAILED"
+msgstr "업그레이드 다운로드 오류입니다. 업그레이드를 다시 시도하십시오."
+
+#: string "Before updating your firmware, make sure that both drives are installed in your WD My Cloud."
+msgid "ERROR_UPGRADE_ALL_DRIVE_MUST_BE_PRESENT"
+msgstr "펌웨어를 업데이트하기 전에 두 드라이브가 WD My Cloud에 설치되어 있는지 확인하십시오."
+
+#: string "Are you sure you want to eject this USB drive?"
+msgid "LABEL_DESCR_EJECT_USB"
+msgstr "이 USB 드라이브를 꺼내시겠습니까?"
+
+#: string "Unknown error. Retry your last operation. If the error persists, contact WD Support for assistance."
+msgid "ERROR_UNKNOWN"
+msgstr "알 수 없는 오류입니다. 마지막 작업을 다시 시도하십시오. 이 오류가 지속되면 WD 지원 센터에 도움을 요청하십시오."
+
+#: string "Internal server error. Retry your last operation. If the error persists, contact WD Support for assistance."
+msgid "ERROR_INTERNAL_SERVER_ERROR"
+msgstr "내부 서버 오류입니다. 마지막 작업을 다시 시도하십시오. 이 오류가 지속되면 WD 지원 센터에 도움을 요청하십시오."
+
+#: string "Your safepoint operation could not be canceled due to a failed request. Try again."
+msgid "ERROR_SAFEPOINT_CANCEL_FAILED"
+msgstr "실패한 요청 때문에 safepoint 작업을 취소할 수 없습니다. 다시 시도하십시오."
+
+#: string "Your safepoint operation could not be canceled due to a missing drive or share resource. Try again."
+msgid "ERROR_SAFEPOINT_CANCEL_NOT_FOUND"
+msgstr "드라이브 또는 공유 자원이 누락되어서 safepoint 작업을 취소할 수 없습니다. 다시 시도하십시오."
+
+#: string "Your safepoint operation could not be canceled due to an unauthorized request. Enter appropriate credentials for your device and/or shares and try again."
+msgid "ERROR_SAFEPOINT_CANCEL_UNAUTHORIZED"
+msgstr "무단 요청 때문에 safepoint 작업을 취소할 수 없습니다. 장치 또는 공유에 대한 적절한 자격 증명을 입력한 후 다시 시도하십시오."
+
+#: string "Your safepoint operation could not be canceled due to an invalid request."
+msgid "ERROR_SAFEPOINT_CANCEL_INVALID"
+msgstr "유효하지 않은 요청 때문에 safepoint 작업을 취소할 수 없습니다."
+
+#: string "Canceling this safepoint operation is not allowed at this time."
+msgid "ERROR_SAFEPOINT_CANCEL_NOT_ALLOWED"
+msgstr "지금은 이 safepoint 작업의 취소가 허용되지 않습니다."
+
+#: string "Error changing Central Server:"
+msgid "LABEL_CHANGING_CENTRAL_SERVER"
+msgstr "중앙 서버 변경 오류:"
+
+#: string "Error retrieving Central Server information:"
+msgid "LABEL_GET_CENTRAL_SERVER"
+msgstr "중앙 서버 정보 검색 오류:"
+
+#: string "Error updating firmware:"
+msgid "LABEL_UPDATING_FIRMWARE"
+msgstr "펌웨어 업데이트 오류:"
+
+#: string "Error auto-updating firmware:"
+msgid "LABEL_AUTO_UPDATING_FIRMWARE"
+msgstr "펌웨어 자동 업데이트 오류:"
+
+#: string "Error retrieving firmware upgrade information:"
+msgid "LABEL_GET_FIRMWARE_UPDATE_PROGRESS"
+msgstr "펌웨어 업그레이드 정보 검색 오류:"
+
+#: string "Error retrieving usage values:"
+msgid "LABEL_GET_USAGE"
+msgstr "사용량 값 검색 오류:"
+
+#: string "Error configuring network settings:"
+msgid "LABEL_CONFIGURING_NETWORKS"
+msgstr "네트워크 설정 구성 오류:"
+
+
+#: string "Error in Network Connectivity test:"
+msgid "LABEL_NETWORK_CONNECTIVITY_TEST"
+msgstr "네트워크 연결 테스트 오류:"
+
+
+#: string "Error restoring factory defaults:"
+msgid "LABEL_RESTORING_FACTORY_DEFAULT"
+msgstr "초기 설정 기본값 복원 오류:"
+
+
+#: string "Error retrieving factory restore information:"
+msgid "LABEL_GET_FACTORY_RESTORE_PROGRESS"
+msgstr "초기 설정 복원 정보 검색 오류:"
+
+
+#: string "Error retrieving diagnostic test information:"
+msgid "LABEL_GET_DIAGNOSTIC_TEST_INFORMATION"
+msgstr "진단 테스트 정보 검색 오류:"
+
+
+#: string "Error starting diagnostic test:"
+msgid "LABEL_STARTING_DIAGNOSTIC_TEST"
+msgstr "진단 테스트 시작 오류:"
+
+
+#: string "Error canceling diagnostic test:"
+msgid "LABEL_CANCELLING_DIAGNOSTIC_TEST"
+msgstr "진단 테스트 취소 오류:"
+
+
+#: string "Error retrieving diagnostic test information:"
+msgid "LABEL_GET_SELFTEST_PROGRESS"
+msgstr "진단 테스트 정보 검색 오류:"
+
+
+#: string "Error configuring remote access:"
+msgid "LABEL_CONFIGURATING_REMOTE_ACCESS"
+msgstr "원격 액세스 구성 오류:"
+
+
+#: string "Error updating remote access:"
+msgid "LABEL_UPDATING_REMOTE_ACCESS"
+msgstr "원격 액세스 업데이트 오류:"
+
+
+#: string "Error adding mobile access:"
+msgid "LABEL_ADDING_REMOTE_DEVICE_ACCESS"
+msgstr "모바일 액세스 추가 오류:"
+
+
+#: string "Error registering web access account:"
+msgid "LABEL_REGISTERING_WEB_ACCESS"
+msgstr "웹 액세스 계정 등록 오류:"
+
+
+#: string "Error retrieving web access account:"
+msgid "LABEL_GET_WEB_ACCESS"
+msgstr "웹 액세스 계정 검색 오류:"
+
+
+#: string "Error resending registration email:"
+msgid "LABEL_RESUBMITTING_REGISTRATION_EMAIL"
+msgstr "등록 이메일 다시 보내기 오류:"
+
+
+#: string "Error deleting web access:"
+msgid "LABEL_DELETING_WEB_ACCESS"
+msgstr "웹 액세스 삭제 오류:"
+
+
+#: string "Error retrieving mobile devices:"
+msgid "LABEL_RETRIEVING_MOBILE_ACCESS"
+msgstr "모바일 장치 검색 오류:"
+
+
+#: string "Error generating code for your mobile device:"
+msgid "LABEL_GENERATING_CODE_FOR_MOBILE_ACCESS"
+msgstr "모바일 장치의 코드 생성 오류:"
+
+
+#: string "Error removing mobile access:"
+msgid "LABEL_REMOVING_MOBILE_ACCESS"
+msgstr "모바일 액세스 제거 오류:"
+
+
+#: string "Error rebuilding content database:"
+msgid "LABEL_REBUILDING_WD2GO_DATABASE"
+msgstr "콘텐츠 데이터베이스 복원 오류:"
+
+
+#: string "Error configuring connection options:"
+msgid "LABEL_CONFIGURATING_CONNECTION_OPTION"
+msgstr "연결 옵션 구성 오류:"
+
+
+#: string "Error blocking media player:"
+msgid "LABEL_BLOCKING_MEDIA_PLAYER"
+msgstr "미디어 플레이어 차단 오류:"
+
+
+#: string "Error rescanning media players:"
+msgid "LABEL_RESCANNING_MEDIA_PLAYERS"
+msgstr "미디어 플레이어 다시 검색 오류:"
+
+
+#: string "Error rescanning DLNA server:"
+msgid "LABEL_RESCANNING_DLNA_SERVER"
+msgstr "DLNA 서버 다시 검색 오류:"
+
+
+#: string "Error rebuilding DLNA server database:"
+msgid "LABEL_REBUILDING_DLNA_SERVER_DATABASE"
+msgstr "DLNA 서버 데이터베이스 복원 오류:"
+
+
+#: string "Error retrieving progress information from DLNA server:"
+msgid "LABEL_GET_DLNA_RESCAN_PROGRESS"
+msgstr "DLNA 서버에서 진행률 정보 검색 오류:"
+
+
+#: string "Error retrieving information from DLNA server:"
+msgid "LABEL_GET_DLNA_INFORMATION"
+msgstr "DLNA 서버에서 정보 검색 오류:"
+
+
+#: string "Error enabling DLNA service:"
+msgid "LABEL_ENABLING_DLNA_SERVICE"
+msgstr "DLNA 서비스 활성화 오류:"
+
+
+#: string "Error enabling iTunes service"
+msgid "LABEL_ENABLING_ITUNES_SERVICE"
+msgstr "iTunes 서비스 활성화 오류"
+
+
+#: string "Error rescanning iTunes server:"
+msgid "LABEL_RESCANNING_ITUNES_SERVER"
+msgstr "iTunes 서버 다시 검색 오류:"
+
+
+#: string "Error initiating storage conversion:"
+msgid "LABEL_STARTING_STORAGE_CONVERSION"
+msgstr "저장장치 전환 시작 오류:"
+
+
+#: string "Error retrieving progress information for storage conversion:"
+msgid "LABEL_GET_STORAGE_CONVERSION_PROGRESS"
+msgstr "저장장치 전환 진행률 정보 검색 오류:"
+
+
+#: string "Error unlocking USB:"
+msgid "LABEL_UNLOCKING_USB"
+msgstr "USB 잠금 해제 오류:"
+
+
+#: string "Error retrieving USB information:"
+msgid "LABEL_GET_USB_INFORMATION"
+msgstr "USB 정보 검색 오류:"
+
+
+#: string "Error ejecting USB device:"
+msgid "LABEL_EJECT_USB"
+msgstr "USB 장치 꺼내기 오류:"
+
+
+#: string "Error updating owner password:"
+msgid "LABEL_UPDATING_OWNER_PASSWORD"
+msgstr "소유자 암호 업데이트 오류:"
+
+
+#: string "Error updating password:"
+msgid "LABEL_UPDATING_PASSWORD"
+msgstr "암호 업데이트 오류:"
+
+
+#: string "Error retrieving user information:"
+msgid "LABEL_GET_USER_INFORMATION"
+msgstr "사용자 정보 검색 오류:"
+
+
+#: string "Error creating user:"
+msgid "LABEL_CREATING_USER"
+msgstr "사용자 만들기 오류:"
+
+
+#: string "Error updating user:"
+msgid "LABEL_UPDATING_USER"
+msgstr "사용자 업데이트 오류:"
+
+
+#: string "Error deleting user:"
+msgid "LABEL_DELETING_USER"
+msgstr "사용자 삭제 오류:"
+
+
+#: string "Error updating share access privileges:"
+msgid "LABEL_UPDATING_SHARE_ACCESS"
+msgstr "공유 액세스 권한 업데이트 오류:"
+
+
+#: string "Error creating share access privileges:"
+msgid "LABEL_CREATING_SHARE_ACCESS"
+msgstr "공유 액세스 권한 만들기 오류:"
+
+
+#: string "Error deleting share access privileges:"
+msgid "LABEL_DELETING_SHARE_ACCESS"
+msgstr "공유 액세스 권한 삭제 오류:"
+
+
+#: string "Error retrieving share information:"
+msgid "LABEL_GET_SHARE_INFORMATION"
+msgstr "공유 정보 검색 오류:"
+
+
+#: string "Error creating your share:"
+msgid "LABEL_CREATING_SHARE"
+msgstr "공유 만들기 오류:"
+
+
+#: string "Error updating your share:"
+msgid "LABEL_UPDATING_SHARE"
+msgstr "공유 업데이트 오류:"
+
+
+#: string "Error deleting your share:"
+msgid "LABEL_DELETING_SHARE"
+msgstr "공유 삭제 오류:"
+
+
+#: string "Error deleting computer backup:"
+msgid "LABEL_DELETING_BACKUP"
+msgstr "컴퓨터 백업 삭제 오류:"
+
+
+#: string "Error authenticating device on network:"
+msgid "LABEL_AUTHENTICATING_DEVICE_ON_NETWORK"
+msgstr "네트워크의 장치 인증 오류:"
+
+
+#: string "Error discovering shares on selected network device:"
+msgid "LABEL_DISCOVERING_SHARES_ON_NETWORK_DEVICE"
+msgstr "선택된 네트워크 장치의 공유 검색 오류:"
+
+
+#: string "Error authenticating share on selected network device:"
+msgid "LABEL_AUTHENTICATING_SHARE_ON_NETWORK_DEVICE"
+msgstr "선택된 네트워크 장치의 공유 인증 오류:"
+
+
+#: string "Error discovering safepoint(s) on selected network device:"
+msgid "LABEL_DISCOVERING_SAFEPOINT_ON_NETWORK_DEVICE"
+msgstr "선택된 네트워크 장치의 safepoint 검색 오류:"
+
+
+#: string "Error retrieving safepoint list on selected network device:"
+msgid "LABEL_RETRIEVING_SAFEPOINT_LIST_ON_NETWORK_DEVICE"
+msgstr "선택된 네트워크 장치의 safepoint 목록 검색 오류:"
+
+
+#: string "Error retrieving safepoint progress information:"
+msgid "LABEL_GET_SAFEPOINT_PROGRESS"
+msgstr "safepoint 진행률 정보 검색 오류:"
+
+
+#: string "Error retrieving scheduling information from safepoint:"
+msgid "LABEL_GET_SAFEPOINT_SCHEDULE_INFORMATION"
+msgstr "safepoint에서 일정 정보 검색 오류:"
+
+
+#: string "Error discovering network devices:"
+msgid "LABEL_DISCOVERING_NETWORK_DEVICES"
+msgstr "네트워크 장치 검색 오류:"
+
+
+#: string "Error canceling safepoint discovery process:"
+msgid "LABEL_CANCELLING_DISCOVERY"
+msgstr "safepoint 검색 프로세스 취소 오류:"
+
+
+#: string "Error creating your safepoint:"
+msgid "LABEL_CREATING_SAFEPOINT"
+msgstr "safepoint 만들기 오류:"
+
+
+#: string "Error deleting your safepoint:"
+msgid "LABEL_DELETING_SAFEPOINT"
+msgstr "safepoint 삭제 오류:"
+
+
+#: string "Error updating your safepoint:"
+msgid "LABEL_UPDATING_SAFEPOINT"
+msgstr "safepoint 업데이트 오류:"
+
+
+#: string "Error recovering from your safepoint:"
+msgid "LABEL_RESTORING_SAFEPOINT"
+msgstr "safepoint에서 복구 오류:"
+
+
+#: string "Error updating safepoint settings:"
+msgid "LABEL_UPDATING_SAFEPOINT_SETTINGS"
+msgstr "safepoint 설정 업데이트 오류:"
+
+
+#: string "Error updating safepoint schedule:"
+msgid "LABEL_UPDATING_SAFEPOINT_SCHEDULE"
+msgstr "safepoint 일정 업데이트 오류:"
+
+
+#: string "Error canceling safepoint operation:"
+msgid "LABEL_CANCELLING_SAFEPOINT_CREATE_UPDATE"
+msgstr "safepoint 작업 취소 오류:"
+
+
+#: string "Error canceling safepoint recovery:"
+msgid "LABEL_CANCELLING_SAFEPOINT_RESTORE"
+msgstr "safepoint 복구 취소 오류:"
+
+
+#: string "Do not unplug your device during the firmware update installation. After completing the update, your network drive will reboot automatically."
+msgid "LABEL_DESCR_FIRMWARE_UPDATE_PROGRESS"
+msgstr "펌웨어 업데이트 설치 중에 장치를 분리하지 마십시오. 업데이트가 완료된 후 네트워크 드라이브가 자동으로 다시 부팅됩니다."
+
+
+#: string "Do not unplug the device during the rebooting process."
+msgid "LABEL_DESCR_DO_NOT_UNPLUG_DEVICE_DURING_REBOOT"
+msgstr "다시 부팅 프로세스 중에 장치를 분리하지 마십시오."
+
+
+#: string "Your firmware will now be updated. Do not unplug your device during the firmware update installation. After completing the firmware update, your network drive will automatically reboot. It is also recommended that you install the latest updates for the operating system on your computer before you proceed.<br><br><b>Important:</b> Ensure you have multiple copies of your data (another backup) before updating your drive."
+msgid "LABEL_DESCR_UPDATE_FROM_FILE_REBOOT"
+msgstr "이제 펌웨어가 업데이트됩니다. 펌웨어 업데이트 설치 중에 장치를 분리하지 마십시오. 펌웨어 업데이트가 완료된 후 네트워크 드라이브가 자동으로 다시 부팅됩니다. 계속 진행하기 전에 컴퓨터에 운영 체제의 최신 업데이트도 설치하는 것이 좋습니다.<br><br><b>중요:</b> 드라이브를 업데이트하기 전에 데이터의 여러 사본(다른 백업)을 만들어 두십시오."
+
+
+#: string "The web access account you requested for could not be created. Ensure that you do not have any network connectivity issues and try again."
+msgid "ERROR_WEBACCOUNT_CREATE_FAILED"
+msgstr "요청한 웹 액세스 계정을 만들 수 없습니다. 네트워크 연결 문제가 없는지 확인한 후 다시 시도하십시오."
+
+
+#: string "Navigate to <a id='supportLink' href='#'>Support</a> and create a system report to troubleshoot or obtain automated customer support from WD."
+msgid "ERROR_DIAGNOSTIC_TEST_FAILED_SUPPORT"
+msgstr "<a id='supportLink' href='#'>지원</a>으로 이동하여 시스템 보고서를 만들어서 문제를 해결하거나 WD에서 자동화된 고객 지원을 이용하십시오."
+
+
+#: string "This safepoint is no longer available."
+msgid "ERROR_SAFEPOINT_NOT_CREATED"
+msgstr "이 safepoint는 더 이상 사용할 수 없습니다."
+
+
+#: string "Error updating Time Machine configuration:"
+msgid "LABEL_UPDATING_TIME_MACHINE"
+msgstr "Time Machine 구성 업데이트 오류:"
+
+
+#: string "The operation was aborted while the server was processing the request. The operation may or may not have been completed successfully. Please refresh the page and try again."
+msgid "ERROR_USER_ABORT"
+msgstr "서버가 요청을 처리하는 중에 작업이 중단되었습니다. 작업이 성공적으로 완료되었을 수도 있고 그렇지 않을 수도 있습니다. 페이지를 새로 고치고 다시 시도하십시오."
+
+
+#: string "Next"
+msgid "BUTTON_NEXT"
+msgstr "다음"
+
+
+#: string "Finish"
+msgid "BUTTON_FINISH"
+msgstr "마침"
+
+
+
+msgid "HEADING_USER_PROFILE"
+msgstr "사용자 프로파일"
+
+
+
+msgid "LABEL_USER_NAME"
+msgstr "사용자 이름"
+
+
+#: string "Password"
+msgid "LABEL_PASSWORD"
+msgstr "암호"
+
+
+#: string "Registered email:"
+msgid "LABEL_REGISTERED_EMAIL"
+msgstr "등록된 이메일"
+
+
+#: string "Share Access"
+msgid "HEADING_SHARE_ACCESS"
+msgstr "공유 액세스"
+
+
+#: string "Share details"
+msgid "HEADER_SHARE_PROFILE"
+msgstr "공유 프로파일"
+
+
+#: string "Share Name"
+msgid "LABEL_SHARE_NAME"
+msgstr "공유 이름"
+
+
+#: string "Share Description"
+msgid "LABEL_SHARE_DESCRIPTION"
+msgstr "공유 설명"
+
+
+#: string "Media Serving"
+msgid "LABEL_MEDIA_SERVING"
+msgstr "미디어 서비스 제공"
+
+
+#: string "User Access"
+msgid "HEADER_USER_ACCESS"
+msgstr "사용자 액세스"
+
+
+#: string "In the unlikely event your WD My Cloud fails, you can restore all content and configuration settings from a previously created safepoint. To recover data and configuration settings, click Start Recovery."
+msgid "LABEL_DESC_RECOVER_FROM_A_SAFEPOINT"
+msgstr "흔치 않지만 WD My Cloud가 실패하는 경우 이전에 만든 safepoint에서 모든 내용과 구성 설정을 복원할 수 있습니다. 데이터와 구성 설정을 복구하려면 복구 시작을 클릭하십시오."
+
+
+#: string "Start Recovery"
+msgid "LABEL_START_RECOVERY"
+msgstr "복구 시작"
+
+
+#: string "Device Profile"
+msgid "HEADER_DEVICE_PROFILE"
+msgstr "장치 프로파일"
+
+
+#: string "Primary server:"
+msgid "LABEL_PRIMARY_SERVER"
+msgstr "주 서버:"
+
+
+#: string "Registered to:"
+msgid "LABEL_REGISTERED_TO"
+msgstr "다음에 등록됨:"
+
+
+#: string "LCD Brightness:"
+msgid "LABEL_LCD_BRIGHTNESS"
+msgstr "LCD 밝기:"
+
+
+#: string "View"
+msgid "LABEL_VIEW"
+msgstr "보기"
+
+
+#: string "FTP Access"
+msgid "LABEL_FTP_ACCESS"
+msgstr "FTP 액세스"
+
+
+#: string "Factory restore:"
+msgid "LABEL_FACTORY_RESTORE"
+msgstr "초기 설정 복원:"
+
+
+#: string "Quickly erase data and configuration settings."
+msgid "LABEL_DESC_QUICK_RESTORE"
+msgstr "신속히 데이터와 구성 설정을 지웁니다."
+
+
+#: string "Shutdown"
+msgid "LABEL_SHUTDOWN"
+msgstr "종료"
+
+
+#: string "Reboot"
+msgid "LABEL_REBOOT"
+msgstr "다시 부팅"
+
+
+#: string "Alert emails:"
+msgid "LABEL_ALERT_EMAILS"
+msgstr "알림 이메일:"
+
+
+#: string "Event logs:"
+msgid "LABEL_EVENT_LOGS"
+msgstr "이벤트 로그:"
+
+
+#: string "Automated support:"
+msgid "LABEL_AUTOMATED_SUPPORT"
+msgstr "자동화된 지원:"
+
+
+#: string "Request support"
+msgid "LABEL_REQUEST_SUPPORT"
+msgstr "지원 요청"
+
+
+#: string "Updated On"
+msgid "LABEL_UPDATED_ON"
+msgstr "업데이트 날짜"
+
+
+#: string "Update Schedule"
+msgid "LABEL_UPDATE_SCHEDULE"
+msgstr "업데이트 일정"
+
+
+#: string "Available Updates"
+msgid "LABEL_AVAILABLE_UPDATES"
+msgstr "사용 가능한 업데이트"
+
+
+#: string "Creating a safepoint ensures that all of your data and configuration settings can be recovered in the unlikely event that your WD My Cloud fails."
+msgid "WIZARD_CREATE_SAFEPOINT_1"
+msgstr "safepoint를 만들면 흔치 않지만 WD My Cloud가 실패하는 경우 모든 데이터와 구성 설정을 복구할 수 있습니다."
+
+
+#: string "You can create a safepoint on a USB device connected to your WD My Cloud or on a compatible device on your network."
+msgid "WIZARD_CREATE_SAFEPOINT_2"
+msgstr "WD My Cloud에 연결된 USB 장치에 또는 네트워크의 호환 장치에 safepoint를 만들 수 있습니다."
+
+#: string "You will no longer have remote access from the Internet to your stored content on your drive."
+msgid "CONTENT_CLOUD_ACCESS_DIALOG_STRING_YOU_WILL_NO_LONGER_BE_ABLE_TO_ACCESS_REMOTELY"
+msgstr "더 이상 인터넷에서 원격으로 드라이브에 저장된 내용에 액세스할 수 없습니다."
+
+# Edit - from WD2go.com to WDMyCloud.com
+#: string "You will no longer be able to log into WDMyCloud.com."
+msgid "CONTENT_USER_DIALOG_STRING_YOU_WILL_NO_LONGER_BE_ABLE_TO_ACCESS_REMOTELY"
+msgstr "더 이상 WDMyCloud.com에 로그인할 수 없습니다."
+
+
+#: string "Scanning your network for devices...please wait"
+msgid "LABEL_SCANNING_YOUR_NETWORK_FOR_DEVICES"
+msgstr "네트워크에서 장치를 검색하는 중입니다... 기다려 주세요."
+
+
+#: string "Select a device"
+msgid "LABEL_SELECT_A_DEVICE"
+msgstr "장치 선택"
+
+
+#: string "Safepoint List"
+msgid "LABEL_SAFEPOINT_LIST"
+msgstr "safepoint 목록"
+
+
+#: string "Getting Started"
+msgid "LABEL_GETTING_STARTED_WIZARD"
+msgstr "시작"
+
+
+#: string "Saving...please wait"
+msgid "LABEL_SAVING_PLEASE_WAIT"
+msgstr "저장하는 중입니다... 기다려 주세요."
+
+
+#: string "User added successfully; email with instructions sent."
+msgid "LABEL_DESC_USER_ADDED_SUCCESSFULLY_EMAIL_SENT"
+msgstr "사용자가 정상적으로 추가되었으며, 지침에 들어 있는 이메일이 발송되었습니다."
+
+
+#: string "Update History"
+msgid "LABEL_UPDATE_HISTORY"
+msgstr "업데이트 이력"
+
+#: string "All"
+msgid "LABEL_DESCR_MEDIA_SERVING_ALL"
+msgstr "모두"
+
+#: string "Photos"
+msgid "LABEL_DESCR_MEDIA_SERVING_PHOTOS"
+msgstr "사진"
+
+#: string "Music"
+msgid "LABEL_DESCR_MEDIA_SERVING_MUSIC"
+msgstr "음악"
+
+#: string "Videos"
+msgid "LABEL_DESCR_MEDIA_SERVING_VIDEOS"
+msgstr "비디오"
+
+#: string "None"
+msgid "LABEL_DESCR_MEDIA_SERVING_NONE"
+msgstr "없음"
+
+#: string "Select a user from the drop-down list and click Get Code to generate an activation code."
+msgid "LABEL_DESCR_MOBILE_ACCESS_ACTIVATE_CODE_1"
+msgstr "드롭다운 목록에서 사용자를 선택하고, 코드 가져오기를 클릭하여 활성화 코드를 생성하십시오."
+
+# Edited string: WD 2go changed to WD My Cloud - 2013
+#: string "Install WD Photos and/or WD My Cloud on your tablet or mobile device."
+msgid "LABEL_DESCR_MOBILE_ACCESS_ACTIVATE_CODE_2"
+msgstr "태블릿 또는 모바일 장치에 WD Photos 또는 WD My Cloud를 설치하십시오."
+
+#: string "Launch app and tap Connect Now."
+msgid "LABEL_DESCR_MOBILE_ACCESS_ACTIVATE_CODE_3"
+msgstr "앱을 실행하고 지금 연결을 누르십시오. "
+
+#: string "Select your product."
+msgid "LABEL_DESCR_MOBILE_ACCESS_ACTIVATE_CODE_4"
+msgstr "제품을 선택하십시오."
+
+#: string "Enter Activation Code."
+msgid "LABEL_DESCR_MOBILE_ACCESS_ACTIVATE_CODE_5"
+msgstr "활성화 코드를 입력하십시오."
+
+#: string "Delete User"
+msgid "PAGE_HEADER_DELETE_USER"
+msgstr "사용자 삭제"
+
+#: string "Delete Share"
+msgid "PAGE_HEADER_DELETE_SHARE"
+msgstr "공유 삭제"
+
+#: string "Get Code"
+msgid "BUTTON_GET_CODE"
+msgstr "코드 가져오기"
+
+#: string "Port forwarding connection established."
+msgid "LABEL_STATUS_PORTFORWARDED_EXPLANATION"
+msgstr "포트 전달 연결이 설정되었습니다."
+
+#: string "MB"
+msgid "GENERIC_MB"
+msgstr "MB"
+
+#: string "GB"
+msgid "GENERIC_GB"
+msgstr "GB"
+
+#: string "TB"
+msgid "GENERIC_TB"
+msgstr "TB"
+
+#: string "Public"
+msgid "CONTENT_GENERIC_STRING_PUBLIC" 
+msgstr "공용"
+
+
+#: string "User Access"
+msgid "LABEL_HEADER_USER_ACCESS"
+msgstr "사용자 액세스"
+
+#: string "First Name"
+msgid "LABEL_FIRST_NAME"
+msgstr "이름"
+
+#: string "Last Name"
+msgid "LABEL_LAST_NAME"
+msgstr "성"
+
+#: string "OK"
+msgid "BUTTON_OK"
+msgstr "확인"
+
+# Edit to OK 6-7-13
+#: string "OK"
+msgid "STATUS_HEALTHY"
+msgstr "확인"
+
+#: string "Home"
+msgid "HEADER_NAV_HOME"
+msgstr "홈"
+
+#: string "Shares"
+msgid "NAV_PRIMARY_SHARES"
+msgstr "공유"
+
+#: string "Users"
+msgid "LABEL_USERS"
+msgstr "사용자"
+
+#: string "General"
+msgid "PAGE_HEADER_GENERAL"
+msgstr "일반"
+
+#: string "Network"
+msgid "NAV_SECOND_NETWORK"
+msgstr "네트워크"
+
+#: string "Media"
+msgid "NAV_MEDIA"
+msgstr "미디어"
+
+#: string "Diagnostics"
+msgid "NAV_DIAGNOSTICS"
+msgstr "진단"
+
+#: string "Utilities"
+msgid "NAV_UTILITIES"
+msgstr "유틸리티"
+
+#: string "Settings"
+msgid "NAV_PRIMARY_SETTINGS"
+msgstr "설정"
+
+#: string "Safepoints"
+msgid "LEARNING_CENTER_LABEL_HEADER_WD_SAFEPOINT"
+msgstr "safepoint"
+
+#: string "MAC Address"
+msgid "LABEL_HEADER_MAC_ADDRESS"
+msgstr "MAC 주소"
+
+#: string "Workgroup Name"
+msgid "LABEL_HEADER_WORKGROUP_NAME"
+msgstr "작업 그룹 이름"
+
+#: string "Gateway"
+msgid "LABEL_HEADER_GATEWAY"
+msgstr "게이트웨이"
+
+#: string "Netmask"
+msgid "LABEL_HEADER_NETMASK"
+msgstr "네트워크 마스크"
+
+#: string "Required"
+msgid "LABEL_DESCR_REQUIRED"
+msgstr "필수"
+
+#--- Cloud Access ---
+
+#: string "Cloud Access"
+msgid "PRI_NAV_CLOUD_ACCESS"
+msgstr "클라우드 액세스"
+
+#: string "Configure Access"
+msgid "CONTENT_CLOUD_ACCESS_HEAD1_CONFIGURE_DEVICE_ACCESS"
+msgstr "액세스 구성"
+
+# Edit from WD2go.com to WDMyCloud.com
+#: string "WDMyCloud.com Login for <span class='remote_access_username'></span>"
+msgid "CONTENT_CLOUD_ACCESS_HEAD2_MY_CLOUD_WEB_FOR"
+msgstr "<span class='remote_access_username'></span>의 WDMyCloud.com 로그인"
+
+
+#--- About Cloud Access section ---
+
+#: string "About Cloud Access"
+msgid "CONTENT_CLOUD_ACCESS_HEAD2_ABOUT_CLOUD_ACCESS"
+msgstr "클라우드 액세스 정보"
+
+#: string "Configure mobile device access to your cloud. Each user needs to download and install the WD mobile apps onto their smartphone or tablet."
+msgid "CONTENT_CLOUD_ACCESS_STRING_ABOUT_CLOUD_ACCESS"
+msgstr "클라우드에 대한 모바일 장치 액세스를 구성합니다. 모든 사용자는 WD 모바일 앱을 다운로드하여 자신의 스마트폰이나 태블릿에 설치해야 합니다."
+
+#--- Cloud Access Profile section ---
+
+#: string "Cloud Access Status"
+msgid "CONTENT_CLOUD_ACCESS_HEAD2_CLOUD_ACCESS_PROFILE"
+msgstr "클라우드 액세스 상태"
+
+#: string "Connection Status"
+msgid "CONTENT_CLOUD_ACCESS_LABEL_CONNECTION_STATUS"
+msgstr "연결 상태"
+
+#: string "Cloud Access is disabled."
+msgid "CONTENT_CLOUD_ACCESS_STRING_CLOUD_ACCESS_DISABLED_EXPLANATION"
+msgstr "클라우드 액세스가 비활성화되었습니다."
+
+#: string "To enable Cloud Access, navigate to Settings > General > Cloud Access."
+msgid "CONTENT_CLOUD_ACCESS_STRING_CLOUD_ACCESS_DISABLED_EXPLANATION_2"
+msgstr "클라우드 액세스를 활성화하려면 설정 > 일반 > 클라우드 액세스로 이동하십시오."
+
+
+#--- Cloud Access DAC section ---
+
+#: string "Cloud devices for <span class='remote_access_username'></span>"
+msgid "CONTENT_CLOUD_ACCESS_HEAD2_CLOUD_ACCESS_FOR"
+msgstr "<span class='remote_access_username'></span>의 클라우드 장치"
+
+
+#: string "There is no cloud device access configured for <span class='remote_access_username'></span>."
+msgid "CONTENT_CLOUD_ACCESS_STRING_NO_DAC_CONFIGURED_FOR"
+msgstr "<span class='remote_access_username'></span>이(가) 사용하도록 구성된 클라우드 장치 액세스가 없습니다."
+
+#: string "Click Get Code to generate an activation code for your cloud devices. Codes are valid for 48 hours and can only be used once."
+msgid "CONTENT_CLOUD_ACCESS_STRING_CLICK_TO_GET_CODE"
+msgstr "코드 가져오기를 클릭하여 클라우드 장치의 활성화 코드를 생성하십시오. 코드는 48시간 동안 유효하며, 한 번만 사용할 수 있습니다."
+
+#: string "New Unregistered Device"
+msgid "CONTENT_CLOUD_ACCESS_STRING_NEW_UNREGISTERED_DEVICE"
+msgstr "등록되지 않은 새 장치"
+
+#: string "Code:"
+msgid "CONTENT_CLOUD_ACCESS_STRING_CODE"
+msgstr "코드:"
+
+#--- Cloud Access Dialogs ---
+
+#: string "Delete Cloud Access?"
+msgid "CONTENT_CLOUD_ACCESS_DIALOG_TITLE_REMOVE_CLOUD_ACCESS"
+msgstr "클라우드 액세스를 삭제하시겠습니까?"
+
+#: string "Are you sure you want to remove cloud access for"
+msgid "CONTENT_CLOUD_ACCESS_DIALOG_STRING_REMOVE_CLOUD_ACCESS_FOR"
+msgstr "다음에 대한 클라우드 액세스를 제거하시겠습니까?"
+
+#: string "Are you sure you want to remove the device activation code"
+msgid "CONTENT_CLOUD_ACCESS_DIALOG_STRING_REMOVE_DAC"
+msgstr "장치 활성화 코드를 제거하시겠습니까?"
+
+# Edit - changed WD 2go to WD My Cloud - 5/2013
+#: string "Delete WD My Cloud Account?"
+msgid "CONTENT_CLOUD_ACCESS_DIALOG_TITLE_DELETE_WD2GO_ACCOUNT"
+msgstr "WD My Cloud 계정을 삭제하시겠습니까?"
+
+# Edit - changed WD 2go to WD My Cloud - 5/2013
+#: string "Are you sure you want to delete access to WDMyCloud.com?"
+msgid "CONTENT_CLOUD_ACCESS_DIALOG_STRING_DELETE_WD2GO_ACCOUNT"
+msgstr "WDMyCloud.com에 대한 액세스를 삭제하시겠습니까?"
+
+
+#: string "Registration Email Sent"
+msgid "CONTENT_CLOUD_ACCESS_DIALOG_TITLE_REGISTRATION_EMAIL_SENT"
+msgstr "등록 이메일 전송됨"
+
+#: string "A registration email has been sent successfully to the specified user."
+msgid "CONTENT_CLOUD_ACCESS_DIALOG_STRING_REGISTRATION_EMAIL_SENT"
+msgstr "등록 이메일이 지정된 사용자에게 성공적으로 전송되었습니다."
+
+#: string "Please allow a few minutes for the user to receive an email with instructions for accessing files remotely on your WD My Cloud."
+msgid "CONTENT_CLOUD_ACCESS_DIALOG_STRING_REGISTRATION_EMAIL_SENT_INSTRUCTION"
+msgstr "사용자가 WD My Cloud에서 원격으로 파일에 액세스하기 위한 지침이 들어 있는 이메일을 수신할 때까지 잠시 기다리십시오."
+
+# Edit - changed WD2go.com to WDMyCLoud.com
+#: string "Update WDMyCloud.com Login"
+msgid "CONTENT_DIALOG_CLOUD_ACCESS_TITLE_UPDATE_MY_CLOUD_WEB_ACCOUNT"
+msgstr "WDMyCloud.com 로그인 업데이트"
+
+# Edit - changed WD2go.com to WDMyCLoud.com
+#: string "Change the email address for your WDMyCLoud.com login."
+msgid "CONTENT_USERS_DIALOG_STRING_UPDATE_MY_CLOUD_ACCOUNT_DESC"
+msgstr "WDMyCloud.com 로그인을 위한 이메일 주소를 변경합니다."
+
+#: string "Old Email"
+msgid "CONTENT_DIALOG_CLOUD_ACCESS_STRING_OLD_EMAIL"
+msgstr "기존 이메일"
+
+#: string "New Email"
+msgid "CONTENT_DIALOG_CLOUD_ACCESS_STRING_NEW_EMAIL"
+msgstr "새 이메일"
+
+
+
+
+#--- Dashboard's Cloud Access ---
+
+#: string "Add Cloud Access"
+msgid "CONTENT_DASHBOARD_DIALOG_TITLE_ADD_CLOUD_ACCESS"
+msgstr "클라우드 액세스 추가"
+
+#: string "Generate an activation code to get remote access to the content on your drive."
+msgid "CONTENT_DASHBOARD_DIALOG_STRING_ADD_CLOUD_ACCESS_INTRO"
+msgstr "활성화 코드를 생성하여 드라이브의 내용에 대한 원격 액세스를 가져옵니다."
+
+#: string "Activation code successfully generated. Enter the code in your app on your mobile device."
+msgid "CONTENT_DASHBOARD_DIALOG_STRING_DAC_CREATE_SUCCESSFUL"
+msgstr "활성화 코드가 정상적으로 생성되었습니다. 모바일 장치의 앱에 코드를 입력합니다."
+
+#: string "Activation Code"
+msgid "CONTENT_DASHBOARD_DIALOG_LABEL_DAC"
+msgstr "활성화 코드"
+
+#: string "Select a User"
+msgid "CONTENT_DASHBOARD_DIALOG_LABEL_SELECT_A_USER"
+msgstr "사용자 선택"
+
+#: string "Expiration"
+msgid "CONTENT_DASHBOARD_DIALOG_LABEL_EXPIRATION"
+msgstr "만료"
+
+
+
+#--- Users related Cloud Access ---
+
+
+#: string "Email Address"
+msgid "CONTENT_USERS_DIALOG_LABEL_EMAIL_ADDRESS"
+msgstr "이메일 주소"
+
+#--- Settings > General ---
+
+#: string "Configure"
+msgid "CONTENT_SETTINGS_LINK_CONFIGURE"
+msgstr "구성"
+
+#: string "Edit"
+msgid "CONTENT_SETTINGS_LINK_EDIT"
+msgstr "편집"
+
+#--- Settings > General > Device Profile ---
+
+#: string "Device Profile"
+msgid "CONTENT_SETTINGS_HEAD2_DEVICE_PROFILE"
+msgstr "장치 프로파일"
+
+# Edit to title case from Device name to Device Name
+#: string "Device Name"
+msgid "CONTENT_SETTINGS_LABEL_DEVICE_NAME"
+msgstr "장치 이름"
+
+#: string "Description"
+msgid "CONTENT_SETTINGS_LABEL_DESCRIPTION"
+msgstr "설명"
+
+# Edit to title case from Serial number to Serial Number 
+#: string "Serial Number"
+msgid "CONTENT_SETTINGS_LABEL_SERIAL_NUMBER"
+msgstr "일련 번호"
+
+#--- Settings > General > Language & Clock ---
+
+#: string "Language &amp; Clock"
+msgid "CONTENT_SETTINGS_HEAD2_LANGUAGE_AND_CLOCK"
+msgstr "언어 및 시계"
+
+#: string "Language"
+msgid "CONTENT_SETTINGS_LABEL_LANGUAGE"
+msgstr "언어"
+
+#: string "Time Zone"
+msgid "CONTENT_SETTINGS_LABEL_TIME_ZONE"
+msgstr "시간대"
+
+#: string "NTP Service"
+msgid "CONTENT_SETTINGS_LABEL_NTP_SERVICE"
+msgstr "NTP 서비스"
+
+# Edit - title case from Primary server to Primary Server 
+#: string "Primary Server"
+msgid "CONTENT_SETTINGS_LABEL_PRIMARY_SERVER"
+msgstr "주 서버"
+
+#: string "Date &amp; Time"
+msgid "CONTENT_SETTINGS_LABEL_DATE_AND_TIME"
+msgstr "날짜 및 시간"
+
+#--- Settings > General > Language & Clock > Dialog ---
+
+#: string "NTP Settings"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_NTP_SETTINGS"
+msgstr "NTP 설정"
+
+#: string "The NTP service synchronizes with your network and automatically updates the date and time on your device."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_NTP_SERVICE_INTRO"
+msgstr "NTP 서비스는 네트워크와 동기화하여 장치의 날짜와 시간을 자동으로 업데이트합니다."
+
+#: string "Current NTP servers"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_CURRENT_NTP_SERVERS"
+msgstr "현재 NTP 서버"
+
+#: string "Add User NTP"
+msgid "CONTENT_SETTINGS_DIALOG_BUTTON_ADD_USER_NTP"
+msgstr "사용자 NTP 추가"
+
+#: string "User defined NTP server"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_USER_DEFINED_NTP_SERVER"
+msgstr "사용자 정의 NTP 서버"
+
+#: string "Microsoft NTP service"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_MICROSOFT_NTP_SERVICE"
+msgstr "Microsoft NTP 서비스"
+
+#: string "NTP pool service"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_NTP_POOL_SERVICE"
+msgstr "NTP 풀 서비스"
+
+#: string "Date &amp; Time Settings"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_DATE_AND_TIME_SETTINGS"
+msgstr "날짜 및 시간 설정"
+
+#: string "Please enter the current date and time."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_DATE_AND_TIME_SETTINGS_INTRO"
+msgstr "현재 날짜와 시간을 입력하십시오."
+
+#: string "Date"
+msgid "CONTENT_SETTINGS_DIALOG_LABEL_DATE"
+msgstr "날짜"
+
+#: string "Time"
+msgid "CONTENT_SETTINGS_DIALOG_LABEL_TIME"
+msgstr "시간"
+
+#: string "Calendar"
+msgid "CONTENT_SETTINGS_DIALOG_BUTTON_CALENDAR"
+msgstr "달력"
+
+#--- Settings > General > Cloud Access ---
+
+#: string "Cloud Access"
+msgid "CONTENT_SETTINGS_HEAD2_CLOUD_ACCESS"
+msgstr "클라우드 액세스"
+
+#: string "Remote Access"
+msgid "CONTENT_SETTINGS_LABEL_CLOUD_SERVICE"
+msgstr "원격 액세스"
+
+#: string "Connection Status"
+msgid "CONTENT_SETTINGS_LABEL_CONNECTION_STATUS"
+msgstr "연결 상태"
+
+#--- Settings > General > Cloud Access > Dialog ---
+
+#: string "Disable Cloud Service"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_DISABLE_CLOUD_SERVICE"
+msgstr "클라우드 서비스 비활성화"
+
+#: string "Are you sure you want to disable cloud access? Remote access to the files on your device will no longer be available, either over the Internet or from your mobile devices."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_DISABLE_CLOUD_ACCESS_CONFIRMATION"
+msgstr "클라우드 액세스를 비활성화하시겠습니까? 인터넷에서든 모바일 장치에서든 더 이상 장치의 파일에 원격으로 액세스할 수 없습니다."
+
+#: string "Disconnecting"
+msgid "CONTENT_SETTINGS_STRING_DISCONNECTING"
+msgstr "연결 끊는 중"
+
+#: string "Expired:"
+msgid "CONTENT_CLOUD_ACCESS_STRING_EXPIRED"
+msgstr "만료됨:"
+
+#: string "Expires:"
+msgid "CONTENT_CLOUD_ACCESS_STRING_EXPIRES"
+msgstr "만료:"
+
+#: string "Continue?"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_DO_YOU_WANT_TO_CONTINUE"
+msgstr "계속 진행하시겠습니까?"
+
+#: string "Port forwarding failed to connect on port"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_MANUAL_RELAYED_EXPLANATION_PART1"
+msgstr "포트 전달이 포트"
+
+#: string "and port"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_MANUAL_RELAYED_EXPLANATION_PART2"
+msgstr "과(와) 다음 포트에 연결하지 못했습니다."
+
+#: string "Cloud Access Connection Options"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_CLOUD_ACCESS_CONNECTION_OPTIONS"
+msgstr "클라우드 액세스 연결 옵션"
+
+#: string "Configure connection options for remote access to your device."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_CONFIGURES_CONNECTION_OPTION_FOR_CLOUD_ACCESS"
+msgstr "장치에 원격으로 액세스하기 위한 연결 옵션을 구성합니다."
+
+#: string "Connectivity"
+msgid "CONTENT_SETTINGS_DIALOG_LABEL_CONNECTIVITY"
+msgstr "연결"
+
+#: string "Auto"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_AUTO"
+msgstr "자동"
+
+#: string "Manual"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_MANUAL"
+msgstr "수동"
+
+#: string "Win XP"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_WINXP"
+msgstr "Win XP"
+
+#: string "Attempts to establish a direct connection between your device and the router."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_AUTO_EXPLANATION"
+msgstr "장치와 라우터 간 직접 연결 설정을 시도합니다."
+
+#: string "Manually configure your router to work with your device."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_MANUAL_EXPLANATION"
+msgstr "장치와 함께 작업하도록 수동으로 라우터를 구성합니다."
+
+#: string "Attempts to establish a direct or relay connection, as appropriate for Windows XP compatibility."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_WINXP_EXPLANATION"
+msgstr "Windows XP와 호환되는 직접 또는 릴레이 연결 설정을 시도합니다."
+
+#: string "Learn More"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_LEARN_MORE"
+msgstr "더 보기"
+
+#: string "External Port 1 (HTTP)"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_WD2GO_HTTP_PORT"
+msgstr "외부 포트 1(HTTP)"
+
+#: string "External Port 2 (HTTPS)"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_WD2GO_HTTPS_PORT"
+msgstr "외부 포트 2(HTTPS)"
+
+#: string "Content Database"
+msgid "CONTENT_SETTINGS_DIALOG_LABEL_WD2GO_DATABASE"
+msgstr "콘텐츠 데이터베이스"
+
+#: string "Rebuild"
+msgid "CONTENT_SETTINGS_DIALOG_LABEL_WD2GO_DATABASE_REBUILD"
+msgstr "복원"
+
+#--- Settings > General > Energy Saver ---
+
+#: string "Energy Saver"
+msgid "CONTENT_SETTINGS_HEAD2_ENERGY_SAVER"
+msgstr "절전"
+
+#: string "Drive Sleep"
+msgid "CONTENT_SETTINGS_LABEL_HDD_SLEEP"
+msgstr "드라이브 대기"
+
+#: string "LED"
+msgid "CONTENT_SETTINGS_LABEL_DEVICE_LED"
+msgstr "LED"
+
+#--- Settings > General > Mac Backups ---
+
+#: string "Mac Backups"
+msgid "CONTENT_SETTINGS_HEAD2_MAC_BACKUPS"
+msgstr "Mac 백업"
+
+#: string "Time Machine"
+msgid "CONTENT_SETTINGS_LABEL_TIME_MACHINE"
+msgstr "Time Machine"
+
+#--- Settings > General > Mac Backups > Dialog ---
+
+#: string "Time Machine Settings"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_TIME_MACHINE_SETTINGS"
+msgstr "Time Machine 설정"
+
+#: string "Configure settings for your Time Machine backups for your Mac."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_TIME_MACHINE_INTRO"
+msgstr "Mac용 Time Machine 백업 설정을 구성합니다."
+
+# Edited from sentence case to title case - Select a share is now Select a Share
+#: string "Select a Share"
+msgid "CONTENT_SETTINGS_DIALOG_LABEL_SELECT_A_SHARE"
+msgstr "공유 선택"
+
+#: string "Enabled on share:"
+msgid "CONTENT_SETTINGS_DIALOG_LABEL_ENABLED_ON_SHARE"
+msgstr "공유에 활성화됨:"
+
+# Edited from sentence case to title case - Maximum size is now Maximum Size
+#: string "Maximum Size"
+msgid "CONTENT_SETTINGS_DIALOG_LABEL_MAXIMUM_SIZE"
+msgstr "최대 크기"
+
+# Edit - this string has been reworded, and will require editing in all languages
+#: string "Increasing the maximum backup value after the initial backup has no effect on existing backups. WD recommends leaving this setting at the maximum value for your initial backup. After the first backup is complete, you can change the backup size by dragging the Maximum Size slider."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_MAXIMUM_SIZE_WARNING"
+msgstr "초기 백업 후에 최대 백업 값을 늘리면 기존 백업에는 이 값이 아무런 영향을 미치지 않습니다. WD에서는 이 설정을 초기 백업에 대해 최대값으로 유지할 것을 권장합니다. 최초 백업이 완료된 후 최대 크기 슬라이더를 끌어서 백업 크기를 변경할 수 있습니다."
+
+#--- Settings > Media > DMS ---
+
+#: string "DLNA Media Server"
+msgid "CONTENT_SETTINGS_HEAD2_DLNA_MEDIA_SERVER"
+msgstr "DLNA 미디어 서버"
+
+#: string "Media Streaming"
+msgid "CONTENT_SETTINGS_LABEL_MEDIA_STREAMING"
+msgstr "미디어 스트리밍"
+
+#: string "View Media Players"
+msgid "CONTENT_SETTINGS_LINK_VIEW_MEDIA_PLAYERS"
+msgstr "미디어 플레이어 보기"
+
+#: string "Version"
+msgid "CONTENT_SETTINGS_LABEL_VERSION"
+msgstr "버전"
+
+#: string "Last Update"
+msgid "CONTENT_SETTINGS_LABEL_LAST_VERSION"
+msgstr "마지막 업데이트"
+
+#: string "Updating database..."
+msgid "CONTENT_SETTINGS_STRING_UPDATING_DATABASE"
+msgstr "데이터베이스 업데이트 중..."
+
+#: string "DLNA Database"
+msgid "CONTENT_SETTINGS_LABEL_DLNA_DATABASE"
+msgstr "DLNA 데이터베이스"
+
+#--- Settings > Media > DMS > Dialog ---
+
+#: string "Media Streaming Options"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_MEDIA_STREAMING_OPTIONS"
+msgstr "미디어 스트리밍 옵션"
+
+#: string "Stream music, video, or photos to any compatible device through your home."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_MEDIA_STREAMING_OPTIONS_INTRO"
+msgstr "음악, 비디오 또는 사진을 홈을 통해 호환되는 장치에 스트리밍합니다."
+
+#: string "Media players"
+msgid "CONTENT_SETTINGS_STRING_MEDIA_PLAYERS"
+msgstr "미디어 플레이어"
+
+#--- Settings > Media > iTunes ---
+
+#: string "iTunes"
+msgid "CONTENT_SETTINGS_HEAD2_ITUNES"
+msgstr "iTunes"
+
+#: string "iTunes Server"
+msgid "CONTENT_SETTINGS_LABEL_ITUNES_SERVER"
+msgstr "iTunes 서버"
+
+#: string "iTunes Database"
+msgid "CONTENT_SETTINGS_LABEL_ITUNES_DATABASE"
+msgstr "iTunes 데이터베이스"
+
+#: string "Rescan"
+msgid "CONTENT_SETTINGS_BUTTON_RESCAN"
+msgstr "다시 검색"
+
+#--- Settings > Media > iTunes > Dialog ---
+
+#: string "Rescan iTunes"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_RESCAN_ITUNES"
+msgstr "iTunes 다시 검색"
+
+#: string "iTunes rescan has been initiated."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_ITUNES_RESCAN_STARTED"
+msgstr "iTunes 다시 검색이 시작되었습니다."
+
+#: string "iTunes rescan error."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_ITUNES_RESCAN_ERROR"
+msgstr "iTunes 다시 검색 오류입니다."
+
+#--- Settings > Utilities > Diagnostics ---
+
+#: string "System Diagnostics"
+msgid "CONTENT_SETTINGS_HEAD2_SYSTEM_DIAGNOSTICS"
+msgstr "시스템 진단"
+
+#: string "System Configuration"
+msgid "CONTENT_SETTINGS_HEAD2_SYSTEM_CONFIGURATION"
+msgstr "시스템 구성"
+
+#: string "Diagnostics Test"
+msgid "CONTENT_SETTINGS_LABEL_DIAGNOSTICS_TEST"
+msgstr "진단 테스트"
+
+#: string "Quick Test"
+msgid "CONTENT_SETTINGS_BUTTON_QUICK_TEST"
+msgstr "빠른 테스트"
+
+#: string "Full Test"
+msgid "CONTENT_SETTINGS_BUTTON_FULL_TEST"
+msgstr "전체 테스트"
+
+#: string "Test in progress"
+msgid "CONTENT_SETTINGS_LABEL_TEST_IN_PROGRESS"
+msgstr "테스트 진행 중"
+
+#: string "Factory Restore"
+msgid "CONTENT_SETTINGS_LABEL_FACTORY_RESTORE"
+msgstr "초기 설정 복원"
+
+#: string "System Only"
+msgid "CONTENT_SETTINGS_BUTTON_SYSTEM_ONLY"
+msgstr "시스템만"
+
+# edit - removed Restore from string to shorten 6-10
+#: string "Quick"
+msgid "CONTENT_SETTINGS_BUTTON_QUICK_RESTORE"
+msgstr "빠른 테스트"
+
+# edit - removed Restore from string to shorten 6-10
+#: string "Full"
+msgid "CONTENT_SETTINGS_BUTTON_FULL_RESTORE"
+msgstr "전체 테스트"
+
+#: string "System Config"
+msgid "CONTENT_SETTINGS_LABEL_SYSTEM_CONFIG"
+msgstr "시스템 구성"
+
+#: string "Save Config File"
+msgid "CONTENT_SETTINGS_BUTTON_SAVE_CONFIG_FILE"
+msgstr "구성 파일 저장"
+
+#: string "Import File"
+msgid "CONTENT_SETTINGS_BUTTON_IMPORT_FILE"
+msgstr "파일 가져오기"
+
+# --- Settings > Utilities > Diagnostics > Dialog ---
+
+#: string "Factory Restore"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_FACTORY_RESTORE"
+msgstr "초기 설정 복원"
+
+#: string "System Factory Restore"
+msgid "CONTENT_SETTINGS_HEAD2_FACTORY_RESTORE"
+msgstr "시스템 초기 설정 복원"
+
+#: string "System Only reverts system settings to their default values, but retains user data and shares."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_SYSTEM_ONLY_FACTORY_RESTORE_DESC"
+msgstr "'시스템만'은 시스템 설정을 기본값으로 되돌리지만, 사용자 데이터와 공유는 유지합니다."
+
+#: string "Quick Restore reverts all settings to their default values, erases all user data and shares, and retains default shares. Quick Restore creates a new file table on the device, but does not fully overwrite or erase the drive, so data recovery programs can be used to restore user data and shares."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_QUICK_FACTORY_RESTORE_DESC"
+msgstr "'빠른 복원'은 모든 설정을 기본값으로 되돌리고, 모든 사용자 데이터와 공유를 지우고, 기본 공유를 유지합니다. 빠른 복원은 장치에 새 파일 테이블을 만들지만 드라이브를 완전히 덮어쓰거나 지우지는 않으므로, 데이터 복구 프로그램을 사용하여 사용자 데이터와 공유를 복원할 수 있습니다."
+
+#: string "Full Restore reverts all settings to their default values, deletes all user data and shares permanently, and retains default shares. Data recovery programs cannot be used to restore data; all user data and shares, with the exception of the default shares, are permanently deleted."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_FULL_FACTORY_RESTORE_DESC"
+msgstr "'전체 복원'은 모든 설정을 기본값으로 되돌리고, 모든 사용자 데이터와 공유를 영구적으로 삭제하고, 기본 공유를 유지합니다. 데이터 복구 프로그램을 사용하여 데이터를 복원할 수는 없습니다. 기본 공유를 제외한 모든 사용자 데이터와 공유는 영구적으로 삭제됩니다."
+
+
+#: string "Continue?"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_FACTORY_RESTORE_CONFIRMATION"
+msgstr "계속 진행하시겠습니까?"
+
+#: string "Switch to Quick"
+msgid "CONTENT_SETTINGS_DIALOG_BUTTON_SWITCH_TO_QUICK"
+msgstr "빠른 모드로 전환"
+
+#--- Settings > Utilities > System Support ---
+
+#: string "System Support"
+msgid "CONTENT_SETTINGS_HEAD2_SYSTEM_SUPPORT"
+msgstr "시스템 지원"
+
+#: string "Request Support"
+msgid "BUTTON_REQUEST_SUPPORT"
+msgstr "지원 요청"
+
+#: string "Automated Support"
+msgid "CONTENT_SETTINGS_LABEL_AUTOMATED_SUPPORT"
+msgstr "자동화된 지원"
+
+#: string "Privacy Policy"
+msgid "CONTENT_SETTINGS_LINK_PRIVACY_POLICY"
+msgstr "개인정보보호정책"
+
+#: string "System report"
+msgid "CONTENT_SETTINGS_LABEL_SYSTEM_REPORT"
+msgstr "시스템 보고서"
+
+#: string "Create and Save"
+msgid "CONTENT_SETTINGS_BUTTON_CREATE_AND_SAVE"
+msgstr "만들기 및 저장"
+
+
+
+#--- Settings > Utilities > Device Maintenance ---
+
+#: string "Device Maintenance"
+msgid "CONTENT_SETTINGS_HEAD2_DEVICE_MAINTENANCE"
+msgstr "장치 유지 관리"
+
+#: string "Device Power"
+msgid "CONTENT_SETTINGS_LABEL_DEVICE_POWER"
+msgstr "장치 전원"
+
+#--- Settings > Utilities > Device Maintenance > Dialog ---
+
+#: string "Shutdown Device"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_SHUTDOWN_DEVICE"
+msgstr "장치 종료"
+
+#: string "Shutting Down"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_SHUTTING_DOWN"
+msgstr "종료 중"
+
+#: string "Reboot"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_REBOOT"
+msgstr "다시 부팅"
+
+#--- Settings > Firmware Update ---
+
+#: string "Auto Update"
+msgid "CONTENT_SETTINGS_HEAD2_AUTO_UPDATE"
+msgstr "자동 업데이트"
+
+#: string "Enable Auto Update"
+msgid "CONTENT_SETTINGS_LABEL_ENABLE_AUTO_UPDATE"
+msgstr "자동 업데이트 활성화"
+
+#: string "New Firmware"
+msgid "CONTENT_SETTINGS_LABEL_NEW_FIRMWARE"
+msgstr "새 펌웨어"
+
+#: string "Check for Update"
+msgid "CONTENT_SETTINGS_BUTTON_CHECK_FOR_UPDATE"
+msgstr "업데이트 확인"
+
+#: string "Update Now"
+msgid "CONTENT_SETTINGS_BUTTON_UPDATE_NOW"
+msgstr "지금 업데이트"
+
+#: string "Release Notes"
+msgid "CONTENT_SETTINGS_LINK_RELEASE_NOTES"
+msgstr "출시 정보"
+
+#: string "Current Version"
+msgid "CONTENT_SETTINGS_LABEL_CURRENT_VERSION"
+msgstr "현재 버전"
+
+#: string "Last Update"
+msgid "CONTENT_SETTINGS_LABEL_LAST_UPDATE"
+msgstr "마지막 업데이트"
+
+#: string "Manual Update"
+msgid "CONTENT_SETTINGS_HEAD2_MANUAL_UPDATE"
+msgstr "수동 업데이트"
+
+#: string "Firmware Image"
+msgid "CONTENT_SETTINGS_LABEL_FIRMWARE_IMAGE"
+msgstr "펌웨어 이미지"
+
+#--- Settings > Firmware Update > Dialog ---
+
+#: string "Install and Reboot"
+msgid "CONTENT_SETTINGS_DIALOG_BUTTON_INSTALL_AND_REBOOT"
+msgstr "설치 및 다시 부팅"
+
+#: string "New Firmware Available"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_NEW_FIRMWARE_AVAILABLE"
+msgstr "새 펌웨어 있음"
+
+#--- USB ---
+
+#: string "Unlock USB Device"
+msgid "GLOB_NAV_USB_DIALOG_TITLE_UNLOCK_USB_DRIVE"
+msgstr "USB 장치 잠금 해제"
+
+# Edit: removed - There are - and changed to No USB devices found.
+#: string "No USB devices found."
+msgid "GLOB_NAV_USB_STRING_NO_USB_FOUND"
+msgstr "발견된 USB 장치가 없습니다."
+
+#: string "Enter password to unlock the drive"
+msgid "GLOB_NAV_USB_STRING_UNLOCK_DRIVE_INTRO"
+msgstr "암호를 입력하여 드라이브 잠금 해제"
+
+#: string "Password"
+msgid "GLOB_NAV_USB_LABEL_PASSWORD"
+msgstr "암호"
+
+#: string "Save Password"
+msgid "GLOB_NAV_USB_LABEL_SAVE_PASSWORD"
+msgstr "암호 저장"
+
+#: string "Manufacturer"
+msgid "GLOB_NAV_USB_LABEL_MANUFACTURER"
+msgstr "제조업체"
+
+#: string "Model"
+msgid "GLOB_NAV_USB_LABEL_MODEL"
+msgstr "모델"
+
+#: string "Serial Number"
+msgid "GLOB_NAV_USB_LABEL_SERIAL_NUMBER"
+msgstr "일련 번호"
+
+#: string "Firmware Version"
+msgid "GLOB_NAV_USB_LABEL_FIRMWARE_VERSION"
+msgstr "펌웨어 버전"
+
+#: string "Size"
+msgid "GLOB_NAV_USB_LABEL_SIZE"
+msgstr "크기"
+
+#: string "Free of"
+msgid "GLOB_NAV_USB_STRING_FREE_OF"
+msgstr "여유"
+
+#: string "Device locked."
+msgid "GLOB_NAV_USB_STRING_DRIVE_LOCKED"
+msgstr "장치가 잠겼습니다."
+
+#--- Help ---
+
+#: string "Support"
+msgid "CONTENT_DIALOG_HELP_TITLE_SUPPORT"
+msgstr "지원"
+
+#: string "Request Automated Support"
+msgid "CONTENT_DIALOG_HELP_HEAD2_REQUEST_AUTOMATED_SUPPORT"
+msgstr "자동화된 지원 요청"
+
+#: string "Selecting Automated Customer Support generates and attaches a comprehensive diagnostic report to your support request, including your device's serial number, MAC address, and other status information. Your request is then routed to a team of experts to assist you as quickly and efficiently as possible."
+msgid "CONTENT_DIALOG_HELP_DESC_REQUEST_AUTOMATED_SUPPORT"
+msgstr "자동화된 고객 지원을 선택하면 장치의 일련 번호, MAC 주소, 기타 상태 정보를 포함한 지원 요청에 대한 포괄적인 진단 보고서가 생성되어 첨부됩니다. 그러면 최대한 빨리 그리고 효율적으로 지원이 이루어지도록 요청이 전문가팀에 전송됩니다."
+
+#: string "To include your report with your support request, select the Attach My Device Diagnostic Report and Request Support option; then click Request Support."
+msgid "CONTENT_DIALOG_HELP_STRING_CHECK_AND_CLICK_REQUEST_SUPPORT_DESC1"
+msgstr "지원 요청에 보고서를 포함시키려면 내 장치 진단 보고서 첨부 및 지원 요청 옵션을 선택한 후 지원 요청을 클릭하십시오."
+
+#: string "To submit a support request without attaching a device diagnostic report, please submit a request through our standard support page."
+msgid "CONTENT_DIALOG_HELP_STRING_CHECK_AND_CLICK_REQUEST_SUPPORT_DESC2"
+msgstr "장치 진단 보고서를 첨부하지 않고 지원 요청을 제출하려면 당사의 표준 지원 페이지를 통해 요청을 제출하십시오."
+
+#: string "Attach my device's diagnostic report and request support"
+msgid "CONTENT_DIALOG_HELP_STRING_ATTACH_MY_DIAGNOSTIC_REPORT"
+msgstr "내 장치 진단 보고서 첨부 및 지원 요청"
+
+#: string "Create and Save System Report"
+msgid "CONTENT_DIALOG_HELP_HEAD2_CREATE_AND_SAVE_SYSTEM_REPORT"
+msgstr "시스템 보고서 만들기 및 저장"
+
+#: string "Create and save a comprehensive system report to your drive."
+msgid "CONTENT_DIALOG_HELP_DESC_CREATE_AND_SAVE_SYSTEM_REPORT"
+msgstr "포괄적인 시스템 보고서를 만들어서 드라이브에 저장합니다."
+
+#: string "Support Resources"
+msgid "CONTENT_DIALOG_HELP_HEAD2_SUPPORT_RESOURCES"
+msgstr "지원 자원"
+
+#: string "Help"
+msgid "GLOB_NAV_HELP_LINK_HELP"
+msgstr "도움말"
+
+#: string "Support"
+msgid "GLOB_NAV_HELP_LINK_SUPPORT"
+msgstr "지원"
+
+#: string "About"
+msgid "GLOB_NAV_HELP_LINK_ABOUT"
+msgstr "정보"
+
+#: string "Product Documentation"
+msgid "GLOB_NAV_HELP_LINK_PRODUCT_DOCUMENTATION"
+msgstr "제품 문서"
+
+#: string "FAQs"
+msgid "GLOB_NAV_HELP_LINK_FAQS"
+msgstr "FAQ"
+
+#: string "Forum"
+msgid "GLOB_NAV_HELP_LINK_FORUM"
+msgstr "포럼"
+
+#: string "Contacts"
+msgid "GLOB_NAV_HELP_LINK_CONTACTS"
+msgstr "연락처"
+
+#: string "Copyright Info"
+msgid "GLOB_NAV_HELP_LINK_COPYRIGHT_INFO"
+msgstr "저작권 정보"
+
+#: string "GNU General Public License"
+msgid "GLOB_NAV_HELP_LINK_GNU_PUBLIC_LICENSE"
+msgstr "GNU 일반 공중 사용 허가서(GPL)"
+
+#--- Dashboard ---
+
+#: string "Error"
+msgid "CONTENT_HOME_STRING_ERROR"
+msgstr "오류"
+
+#--- Dashboard > Dialog ---
+
+#: string "Free Space"
+msgid "DASHBOARD_DIALOG_STRING_FREE_SPACE"
+msgstr "여유 공간"
+
+#--- Global Navigation & Global Dialogs ---
+
+#: string "Device Initializing"
+msgid "GLOB_NAV_DIALOG_TITLE_DEVICE_INITIALIZING"
+msgstr "장치 초기화 중"
+
+#: string "Error"
+msgid "GLOB_NAV_DIALOG_TITLE_ERROR"
+msgstr "오류"
+
+#: string "Logout"
+msgid "GLOB_NAV_LINK_LOGOUT"
+msgstr "로그아웃"
+
+#: string "Firmware Version"
+msgid "GLOB_NAV_HELP_STRING_FIRMWARE_VERSION"
+msgstr "펌웨어 버전"
+
+#: string "Copyright"
+msgid "GLOB_NAV_HELP_STRING_COPYRIGHT"
+msgstr "저작권"
+
+
+#--- Global > EULA & Login ---
+
+#: string "Choose your language"
+msgid "GLOB_NAV_EULA_LABEL_CHOOSE_YOUR_LANGUAGE"
+msgstr "언어 선택"
+
+#: string "I agree to the"
+msgid "GLOB_NAV_EULA_LABEL_I_AGREE_TO_THE"
+msgstr "동의:"
+
+#: string "WD End User License Agreement"
+msgid "GLOB_NAV_EULA_LABEL_WD_END_USER_LICENSE_AGREEMENT"
+msgstr "WD 최종 사용자 사용권 계약"
+
+#: string "Continue"
+msgid "GLOB_NAV_EULA_BUTTON_PROCEED"
+msgstr "계속"
+
+#: string "Login"
+msgid "GLOB_NAV_LOGIN_DIALOG_TITLE_LOGIN"
+msgstr "로그인"
+
+#: string "Please enter your username and password."
+msgid "GLOB_NAV_LOGIN_STRING_LOGIN_INTRO"
+msgstr "자신의 사용자 이름과 암호를 입력하십시오."
+
+#: string "Username"
+msgid "GLOB_NAV_LOGIN_LABEL_USERNAME"
+msgstr "사용자 이름"
+
+#: string "Password"
+msgid "GLOB_NAV_LOGIN_LABEL_PASSWORD"
+msgstr "암호"
+
+#: string "Invalid username or password"
+msgid "GLOB_NAV_LOGIN_STRING_INVALID_USERNAME_PASSWORD"
+msgstr "유효하지 않은 사용자 이름 또는 암호입니다."
+
+#: string "Unauthorized"
+msgid "GLOB_NAV_LOGIN_STRING_UNAUTHORIZED"
+msgstr "권한 없음"
+
+#: string "Notifications"
+msgid "NAV_NOTIFICATIONS"
+msgstr "알림"
+
+#: string "ON"
+msgid "CONTENT_GENERIC_TOGGLE_ON"
+msgstr "켜기"
+
+#: string "OFF"
+msgid "CONTENT_GENERIC_TOGGLE_OFF"
+msgstr "끄기"
+
+#: string "Firmware Update"
+msgid "NAV_FIRMWARE_UPDATE"
+msgstr "펌웨어 업데이트"
+
+#: string "Safepoint Restore Progress"
+msgid "CONTENT_SAFEPOINTS_DIALOG_TITLE_RESTORE_PROGRESS"
+msgstr "safepoint 복원 진행률"
+
+#: string "Safepoint Update Schedule"
+msgid "CONTENT_SAFEPOINTS_DIALOG_TITLE_UPDATE_SCHEDULE"
+msgstr "safepoint 업데이트 일정"
+
+#: string "Safepoint Progress"
+msgid "CONTENT_SAFEPOINTS_HEAD2_SAFEPOINT_PROGRESS"
+msgstr "safepoint 진행률"
+
+#: string "Currently Copying"
+msgid "CONTENT_SAFEPOINTS_LABEL_CURRENTLY_COPYING"
+msgstr "현재 복사 중"
+
+#: string "copied"
+msgid "CONTENT_SAFEPOINTS_LABEL_COPIED"
+msgstr "복사됨"
+
+#: string " No default application associated with the .{0} file extension."
+msgid "ERROR_ID_LABEL_NO_DEFAULT_EXTENSION"
+msgstr " .{0} 파일 확장자에 연결된 기본 응용프로그램이 없습니다."
+
+#: string "Safepoint Profile"
+msgid "CONTENT_SAFEPOINTS_HEAD2_SAFEPOINT_PROFILE"
+msgstr "safepoint 프로파일"
+
+#: string "Description"
+msgid "CONTENT_SAFEPOINTS_LABEL_DESCRIPTION"
+msgstr "설명"
+
+#: string "This safepoint is in an invalid state, try updating to fix the problem"
+msgid "CONTENT_SAFEPOINTS_LABEL_INVALID_SAFEPOINT_MESSAGE"
+msgstr "이 safepoint는 유효하지 않은 상태입니다. 업데이트하여 문제를 해결하십시오."
+
+#: string "Update now"
+msgid "CONTENT_SAFEPOINTS_LABEL_UPDATE_NOW"
+msgstr "지금 업데이트"
+
+#: string "Update"
+msgid "CONTENT_SAFEPOINTS_BUTTON_UPDATE"
+msgstr "업데이트"
+
+#: string "Auto Update"
+msgid "CONTENT_SAFEPOINTS_LABEL_AUTO_UPDATE"
+msgstr "자동 업데이트"
+
+#: string "Details"
+msgid "CONTENT_SAFEPOINTS_LINK_DETAILS"
+msgstr "세부 정보"
+
+#: string "Created On"
+msgid "CONTENT_SAFEPOINTS_LABEL_CREATED_ON"
+msgstr "만든 날짜"
+
+#: string "Size"
+msgid "CONTENT_SAFEPOINTS_LABEL_SIZE"
+msgstr "크기"
+
+#: string "No Safepoints"
+msgid "CONTENT_SAFEPOINTS_LABEL_GENERIC_NO_SAFEPOINTS" 
+msgstr "safepoint 없음"
+
+#: string "Waiting for safepoints"
+msgid "CONTENT_SAFEPOINTS_LABEL_LIST_WAIT_FOR_SAFEPOINTS"
+msgstr "safepoint 기다리는 중"
+
+#: string "About Safepoints"
+msgid "CONTENT_SAFEPOINTS_HEAD1_ABOUT_SAFEPOINTS"
+msgstr "safepoint 정보"
+
+#: string "A safepoint is a snapshot of the content on WD My Cloud at a specific point in time and stored on a different network drive or USB device. In the event your WD My Cloud content becomes corrupt or the drive fails, you can restore your content from your safepoint to your WD My Cloud drive."
+msgid "CONTENT_SAFEPOINTS_HEAD2_SAFEPOINT_INFO"
+msgstr "safepoint는 시간상 특정 시점의 WD My Cloud에 있는 내용의 스냅샷으로, 다른 네트워크 드라이브 또는 USB 장치에 저장되어 있습니다. WD My Cloud 내용이 손상되거나 드라이브가 고장이 나면 safepoint에서 WD My Cloud 드라이브로 내용을 복원할 수 있습니다."
+
+#: string "Delete Safepoint"
+msgid "CONTENT_SAFEPOINTS_DIALOG_TITLE_DELETE_CONFIRM"
+msgstr "safepoint 삭제"
+
+#: string "Are you sure you want to delete this safepoint?"
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_DELETE_CONFIRM_MESSAGE"
+msgstr "이 safepoint를 삭제하시겠습니까?"
+
+#: string "Day"
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_UPDATE_DAY"
+msgstr "일"
+
+#: string "Daily"
+msgid "CONTENT_SAFEPOINTS_DIALOG_BUTTON_DAILY"
+msgstr "매일"
+
+#: string "Weekly"
+msgid "CONTENT_SAFEPOINTS_DIALOG_BUTTON_WEEKLY"
+msgstr "매주"
+
+#: string "Monthly"
+msgid "CONTENT_SAFEPOINTS_DIALOG_BUTTON_MONTHLY"
+msgstr "매월"
+
+#: string "There were no devices found"
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_NO_DEVICES"
+msgstr "발견된 장치가 없습니다."
+
+#: string "Retrieving Shares"
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_GETTING_SHARES"
+msgstr "공유 검색 중"
+
+#: string "Please choose a safepoint"
+msgid "CONTENT_SAFEPOINTS_DIALOG_HEAD1_CHOOSE_SAFEPOINT"
+msgstr "safepoint를 선택하십시오."
+
+#: string "The following safepoints were found on the device/share you selected. Please choose a safepoint from the list below and click Finish to begin your restore."
+msgid "CONTENT_SAFEPOINTS_DIALOG_HEAD2_SAFEPOINTS_FOUND"
+msgstr "선택한 장치/공유에서 다음 safepoint가 발견되었습니다. 아래 목록에서 safepoint를 선택하고 마침을 클릭하여 복원을 시작하십시오."
+
+#: string "Retrieving Safepoints"
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_GETTING_SAFEPOINTS"
+msgstr "safepoint 검색 중"
+
+#: string "Safepoint details"
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_SAFEPOINT_DETAILS"
+msgstr "safepoint 세부 정보"
+
+#: string "Last updated"
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_LAST_UPDATED"
+msgstr "마지막 업데이트 날짜"
+
+#: string "Created for"
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_CREATED_FOR"
+msgstr "만들어짐"
+
+#: string "Create now or later"
+msgid "CONTENT_SAFEPOINTS_DIALOG_HEAD1_CREATE_NOW_LATER"
+msgstr "지금 또는 나중에 만들기"
+
+#: string "Because creating a safepoint can take a while and slightly impact performance, you may choose to create one now or schedule one for later."
+msgid "CONTENT_SAFEPOINTS_DIALOG_HEAD2_CREATE_NOW_LATER_MESSAGE"
+msgstr "safepoint를 만드는 데에는 시간이 다소 걸려서 성능이 영향이 미칠 수 있기 때문에 하나는 지금 만들도록 선택하거나 나중에 만들도록 일정을 설정할 수 있습니다."
+
+#: string "Now"
+msgid "CONTENT_SAFEPOINTS_DIALOG_BUTTON_NOW"
+msgstr "지금"
+
+#: string "Later"
+msgid "CONTENT_SAFEPOINTS_DIALOG_BUTTON_LATER"
+msgstr "나중에"
+
+#: string "Creates your safepoint immediately"
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_CREATE_IMMEDIATELY"
+msgstr "즉시 safepoint를 만듭니다."
+
+#: string "Create your safepoint"
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_CREATE_SAFEPOINT"
+msgstr "safepoint 만들기"
+
+#: string "Tomorrow"
+msgid "CONTENT_SAFEPOINTS_DIALOG_DROP_LIST_TOMORROW"
+msgstr "내일"
+
+#: string "Today"
+msgid "CONTENT_SAFEPOINTS_DIALOG_DROP_LIST_TODAY"
+msgstr "오늘"
+
+#: string "SSH"
+msgid "CONTENT_DIALOG_SETTINGS_SSH_TITLE_SSH_CONFIRMATION"
+msgstr "SSH"
+
+#: string "Static Network Mode"
+msgid "CONTENT_DIALOG_SETTINGS_NETWORK_TITLE_NETWORK_MODE"
+msgstr "정적 네트워크 모드"
+
+#: string "Change Network Mode"
+msgid "CONTENT_DIALOG_SETTINGS_NETWORK_TITLE_NETWORK_MODE_CONFIRMATION"
+msgstr "네트워크 모드 변경"
+
+#: string "Internet access"
+msgid "CONTENT_SETTINGS_NETWORK_STRING_INTERNET_ACCESS"
+msgstr "인터넷 액세스"
+
+#: string "No Internet access"
+msgid "CONTENT_SETTINGS_NETWORK_STRING_NO_INTERNET_ACCESS"
+msgstr "인터넷에 액세스할 수 없습니다."
+
+#: string "Network Profile"
+msgid "CONTENT_SETTINGS_NETWORK_HEAD1_NETWORK_PROFILE"
+msgstr "네트워크 프로파일"
+
+#: string "Status"
+msgid "CONTENT_SETTINGS_NETWORK_LABEL_STATUS"
+msgstr "상태"
+
+#: string "Network Services"
+msgid "CONTENT_SETTINGS_NETWORK_HEAD1_NETWORK_SERVICES"
+msgstr "네트워크 서비스"
+
+#: string "Static"
+msgid "CONTENT_SETTINGS_NETWORK_BUTTON_STATIC"
+msgstr "정적"
+
+#: string "DHCP"
+msgid "CONTENT_SETTINGS_NETWORK_BUTTON_DHCP"
+msgstr "DHCP"
+
+#: string "SSH"
+msgid "CONTENT_SETTINGS_NETWORK_LABEL_SSH"
+msgstr "SSH"
+
+#: string "Network Workgroup"
+msgid "CONTENT_SETTINGS_NETWORK_HEAD1_NETWORK_WORKGROUP"
+msgstr "네트워크 작업 그룹"
+
+#: string "Invalid email address"
+msgid "CONTENT_DIALOG_SETTINGS_STRING_INVALID_EMAIL"
+msgstr "유효하지 않은 이메일 주소입니다."
+
+# Edit string please 6-10-13
+#: string "Email limit met. Only five notification email addresses allowed."
+msgid "CONTENT_DIALOG_SETTINGS_STRING_EMAIL_LIMIT"
+msgstr "이메일 한도가 다 찼습니다. 알림 이메일 주소는 5개까지만 허용됩니다."
+
+#: string "DNS Server 1"
+msgid "CONTENT_DIALOG_SETTINGS_STRING_DNS_SERVER_1"
+msgstr "DNS 서버 1"
+
+#: string "DNS Server 2"
+msgid "CONTENT_DIALOG_SETTINGS_STRING_DNS_SERVER_2"
+msgstr "DNS 서버 2"
+
+#: string "DNS Server 3"
+msgid "CONTENT_DIALOG_SETTINGS_STRING_DNS_SERVER_3"
+msgstr "DNS 서버 3"
+
+#: string "Specify network parameters and configure your network manually."
+msgid "CONTENT_DIALOG_SETTINGS_STRING_NETWORK_MODE_MESSAGE"
+msgstr "네트워크 매개변수를 지정하고 수동으로 네트워크를 구성하십시오."
+
+#: string "Modifying your network settings can make your device unrecognizable on your network. If switching from DHCP to Static Mode, be sure to use a valid, available IP address; if switching from Static Mode to DHCP, you may need to relocate the device on your network."
+msgid "CONTENT_DIALOG_SETTINGS_LABEL_NETWORK_MODE_CONFIRMATION_MESSAGE"
+msgstr "네트워크 설정을 수정하면 네트워크에서 해당 장치가 인식되지 않을 수 있습니다. DHCP에서 정적 모드로 전환하는 경우 유효하고 사용 가능한 IP 주소를 사용하십시오. 정적 모드에서 DHCP로 전환하는 경우에는 네트워크에서 장치를 재배치해야 할 수 있습니다."
+
+#: string "Continue?"
+msgid "CONTENT_DIALOG_SETTINGS_LABEL_NETWORK_MODE_CONTINUE_MESSAGE"
+msgstr "계속 진행하시겠습니까?"
+
+# Edit sentence. Removed "in any way," and last part of sentence "...including but not limited to enabling SSH." 
+#: string "Please note that modifying or attempting to modify this device outside the normal operation of the product voids your WD warranty."
+msgid "CONTENT_DIALOG_SETTINGS_LABEL_NETWORK_SSH_MESSAGE"
+msgstr "이 제품의 정상적인 조작 범위를 벗어나는 정도로 이 장치를 수정하거나 수정을 시도하면 WD 보증이 무효화됩니다."
+
+#: string "I accept"
+msgid "CONTENT_DIALOG_SETTINGS_LABEL_NETWORK_SSH_I_ACCEPT"
+msgstr "동의함"
+
+#: string "Notifications"
+msgid "GLOB_NAV_NOTIFICATIONS_TITLE_NOTIFICATIONS"
+msgstr "알림"
+
+#: string "Notification"
+msgid "GLOB_NAV_NOTIFICATIONS_TITLE_NOTIFICATION"
+msgstr "알림"
+
+#: string "Notifications Configuration"
+msgid "CONTENT_DIALOG_SETTINGS_NOTIFICATIONS_TITLE_NOTIFICATIONS_CONFIG"
+msgstr "알림 구성"
+
+#: string "Notifications Email"
+msgid "CONTENT_SETTINGS_NOTIFICATION_HEAD1_NOTIFICATION_EMAIL"
+msgstr "알림 이메일"
+
+#: string "Alert Emails"
+msgid "CONTENT_SETTINGS_NOTIFICATION_LABEL_NOTIFICATION_EMAILS"
+msgstr "알림(경고) 이메일"
+
+#: string "Details"
+msgid "CONTENT_SETTINGS_NOTIFICATION_LABEL_DETAILS"
+msgstr "세부 정보"
+
+#: string "Notifications Display"
+msgid "CONTENT_SETTINGS_NOTIFICATION_HEAD1_NOTIFICATION_DISPLAY"
+msgstr "알림 디스플레이"
+
+#: string "Show notifications for the following messages"
+msgid "CONTENT_SETTINGS_NOTIFICATION_LABEL_SHOW_NOTIFICATIONS"
+msgstr "다음 메시지에 대해 알림 표시"
+
+#: string "Critical Only"
+msgid "CONTENT_SETTINGS_NOTIFICATION_LABEL_CRITICAL_ONLY"
+msgstr "중요만"
+
+#: string "Critical and Warning"
+msgid "CONTENT_SETTINGS_NOTIFICATION_LABEL_CRITICAL_AND_WARNING"
+msgstr "중요 및 경고"
+
+#: string "All"
+msgid "CONTENT_SETTINGS_NOTIFICATION_LABEL_ALL_NOTIFICATIONS"
+msgstr "모두"
+
+#: string "Set up notifications configuration to receive system notifications through the WD My Cloud interface or through email."
+msgid "CONTENT_DIALOG_SETTINGS_NOTIFICATIONS_HEAD2_SETUP_NOTIFICATIONS"
+msgstr "WD My Cloud 인터페이스 또는 이메일을 통해 시스템 알림을 수신하도록 알림 구성을 설정합니다."
+
+#: string "Send email notifications for the following messages:"
+msgid "CONTENT_DIALOG_SETTINGS_NOTIFICATIONS_LABEL_SETUP_NOTIFICATIONS_MESSAGE"
+msgstr "다음 메시지에 대해 이메일 알림 보내기:"
+
+#: string "New Email"
+msgid "CONTENT_DIALOG_SETTINGS_NOTIFICATIONS_BUTTON_NEW_EMAIL"
+msgstr "새 이메일"
+
+#: string "Send Test Email"
+msgid "CONTENT_DIALOG_SETTINGS_NOTIFICATIONS_BUTTON_SEND_TEST_EMAIL"
+msgstr "테스트 이메일 보내기"
+
+#: string "There are no notifications to view"
+msgid "GLOB_NAV_NOTIFICATIONS_STRING_NO_NOTIFICATIONS_FOUND"
+msgstr "볼 알림이 없습니다."
+
+#: string "There are no critical or warning notifications to view"
+msgid "GLOB_NAV_NOTIFICATIONS_STRING_NO_CRIT_WARN_NOTIFICATIONS_FOUND"
+msgstr "볼 중요 또는 경고 알림이 없습니다."
+
+#: string "There are no critical notifications to view"
+msgid "GLOB_NAV_NOTIFICATIONS_STRING_NO_CRIT_NOTIFICATIONS_FOUND"
+msgstr "볼 중요 알림이 없습니다."
+
+#: string "Info"
+msgid "GLOB_NAV_NOTIFICATIONS_LABEL_INFO"
+msgstr "정보"
+
+#: string "Warning"
+msgid "GLOB_NAV_NOTIFICATIONS_LABEL_WARNING"
+msgstr "경고"
+
+#: string "Critical"
+msgid "GLOB_NAV_NOTIFICATIONS_LABEL_CRITICAL"
+msgstr "중요"
+
+#: string "View All"
+msgid "GLOB_NAV_NOTIFICATIONS_BUTTON_VIEW_ALL"
+msgstr "보두 보기"
+
+#: string "Code"
+msgid "GLOB_NAV_NOTIFICATIONS_LABEL_CODE"
+msgstr "코드"
+
+#: string "Dismiss All"
+msgid "GLOB_NAV_NOTIFICATIONS_BUTTON_DISMISS_ALL"
+msgstr "모두 해제"
+
+#----Users----
+
+#----User's Bumper----
+
+#: string "About Users"
+msgid "CONTENT_USERS_BUMPER_TITLE_ABOUT_USERS"
+msgstr "사용자 정보"
+
+#: string "Control who can access your cloud and their type of access."
+msgid "CONTENT_USERS_STRING_ABOUT_USERS_DESC"
+msgstr "클라우드에 액세스할 수 있는 사용자와 액세스 유형을 제어합니다."
+
+#----User's Detail----
+#: string "Set Up Users"
+msgid "CONTENT_USERS_HEAD1_SET_UP_USERS"
+msgstr "사용자 설정"
+
+#: string "Username"
+msgid "CONTENT_GENERIC_TEXTBOX_LABEL_USERNAME"
+msgstr "사용자 이름"
+
+#----My Cloud Web----
+
+# Edit - changed WD2go.com to WDMyCloud.com
+#: string "<span class='remote_access_username'></span> does not have a WDMyCloud.com login. Enter an email address to sign up for a login."
+msgid "CONTENT_USERS_STRING_NO_ACCOUNTS_MY_CLOUD_WEB"
+msgstr "<span class='remote_access_username'></span>은(는) WDMyCloud.com 로그인을 갖고 있지 않습니다. 로그인을 등록할 이메일 주소를 입력하십시오."
+
+# Edit - changed WD2go.com to WDMyCloud.com
+#: string "Click Sign Up to get a WDMyCloud.com login."
+msgid "CONTENT_USERS_STRING_CLICK_REGISTER_MY_CLOUD_WEB"
+msgstr "WDMyCloud.com 로그인을 만들려면 등록을 클릭하십시오."
+
+#----Share Access----
+
+#: string "Full Access"
+msgid "CONTENT_GENERIC_STRING_RW_ACCESS"
+msgstr "전체 액세스"
+
+#: string "Read Access"
+msgid "CONTENT_GENERIC_STRING_RO_ACCESS"
+msgstr "읽기 액세스"
+
+#: string "No Access"
+msgid "CONTENT_GENERIC_STRING_NO_ACCESS"
+msgstr "액세스 권한 없음"
+
+#---- Create User Dialog ----
+
+#: string "Add User"
+msgid "CONTENT_USERS_DIALOG_TITLE_ADD_USER"
+msgstr "사용자 추가"
+
+#: string "Email"
+msgid "CONTENT_GENERIC_TEXTBOX_LABEL_EMAIL"
+msgstr "이메일"
+
+#: string "Confirm Password"
+msgid "CONTENT_GENERIC_TEXTBOX_LABEL_CONFIRM_PASSWORD"
+msgstr "암호 확인"
+
+#: string "Required"
+msgid "CONTENT_GENERIC_STRING_REQUIRED"
+msgstr "필수"
+
+#----Edit Password Dialog ----
+
+#: string "Edit Password"
+msgid "CONTENT_USERS_DIALOG_TITLE_EDIT_PASSWORD"
+msgstr "암호 편집"
+
+#: string "You can edit the password for this user by using the fields below:"
+msgid "CONTENT_USERS_DIALOG_STRING_EDIT_PASSWORD_DESC"
+msgstr "아래 필드를 사용하여 이 사용자의 암호를 편집할 수 있습니다."
+
+#: string "New Password"
+msgid "CONTENT_GENERIC_TEXTBOX_LABEL_NEW_PASSWORD"
+msgstr "새 암호"
+
+#----Delete User Dialog ----
+
+#: string "Are you sure you want to delete this user?"
+msgid "CONTENT_USERS_DIALOG_STRING_DELETE_USER_CONFIRM"
+msgstr "이 사용자를 삭제하시겠습니까?"
+
+#---- Register My Cloud Web Dialog ---- 
+
+# Edit - changed WD2go.com to WDMyCloud.com
+#: string "Sign Up for WDMyCloud.com Login"
+msgid "CONTENT_USERS_DIALOG_TITLE_REGISTER_MY_CLOUD"
+msgstr "WDMyCloud.com 로그인을 위한 등록"
+
+# Edit - changed WD2go.com to WDMyCloud.com
+#: string "Sign up to get a login for WDMyCloud.com."
+msgid "CONTENT_USERS_DIALOG_STRING_REGISTER_MY_CLOUD_DESC"
+msgstr "등록하여 WDMyCloud.com 로그인을 만듭니다."
+
+#: string "Your Name"
+msgid "CONTENT_USERS_DIALOG_TEXTBOX_LABEL_YOUR_NAME"
+msgstr "이름"
+
+#: string "Registration Email Sent"
+msgid "CONTENT_USERS_DIALOG_TITLE_REGISTRATION_EMAIL_SENT"
+msgstr "등록 이메일 전송됨"
+
+#: string "A registration email has been sent to the specified user."
+msgid "CONTENT_USERS_DIALOG_STRING_REGISTRATION_EMAIL_SENT"
+msgstr "등록 이메일이 지정된 사용자에게 전송되었습니다."
+
+# Edit: removed space between In and structions. Should be single word Instructions, not In structions 
+#: string "Please allow some time for the email to arrive in the user's inbox. Instructions for obtaining remote access to the content on your drive are provided."
+msgid "CONTENT_USERS_DIALOG_STRING_REGISTRATION_EMAIL_SENT_INSTRUCTION"
+msgstr "이 이메일이 사용자의 받은 편지함에 도착할 때까지 기다리십시오. 드라이브의 내용에 대한 원격 액세스를 얻는 지침이 제공되었습니다."
+
+#---- Delete WD My Cloud Account Dialog ----
+
+#: string "Delete Email Address"
+msgid "CONTENT_USERS_DIALOG_TITLE_DELETE_WD2GO_ACCOUNT"
+msgstr "이메일 주소 삭제"
+
+#: string "Are you sure you want to delete this email address?"
+msgid "CONTENT_USERS_DIALOG_STRING_DELETE_WD2GO_ACCOUNT_CONFIRM"
+msgstr "이 이메일 주소를 삭제하시겠습니까?"
+
+
+#----Shares Bumper ----
+
+#: string "About Shares"
+msgid "CONTENT_SHARES_BUMPER_TITLE_ABOUT_SHARES"
+msgstr "공유 정보"
+
+#: string "About Shares"
+msgid "CONTENT_SHARES_HEAD1_TITLE_ABOUT_SHARES"
+msgstr "공유 정보"
+
+#: string "A share is an area for storing files (like a folder). You can create multiple shares on a single storage device and control access to each share."
+msgid "CONTENT_SHARES_STRING_ABOUT_SHARES_DESC"
+msgstr "공유란 (폴더처럼) 파일을 저장하는 영역입니다. 단일 저장 장치에 여러 개의 공유를 만들고, 각 공유에 대한 액세스를 제어할 수 있습니다."
+
+#----Share Detail----
+
+#: string "Managing Shares"
+msgid "CONTENT_SHARES_HEAD1_MANAGE_SHARES"
+msgstr "공유 관리"
+
+#----Add Share Dialog----
+
+#: string "Add Share"
+msgid "CONTENT_SHARES_DIALOG_TITLE_ADD_SHARE"
+msgstr "공유 추가"
+
+#: string "Create Share"
+msgid "CONTENT_SHARES_DIALOG_STRING_CREATE_SHARE"
+msgstr "공유 만들기"
+
+#: string "Public Access"
+msgid "CONTENT_SHARES_TOGGLE_LABEL_PUBLIC_ACCESS" 
+msgstr "공용 액세스"
+
+
+#----Delete Share Dialog----
+
+#: string "Deleting this share will delete all content and configuration settings within the share."
+msgid "CONTENT_SHARES_DIALOG_STRING_DELETE_SHARE_DESC"
+msgstr "이 공유를 삭제하면 공유 내의 모든 내용과 구성 설정이 삭제됩니다."
+
+#: string "Are you sure you want to delete this share?"
+msgid "CONTENT_SHARES_DIALOG_STRING_DELETE_SHARE_CONFIRM"
+msgstr "이 공유를 삭제하시겠습니까?"
+
+
+# ----Dashboard/Home Nav----
+
+#: string "Capacity"
+msgid "CONTENT_HOME_BIG_BOX_TITLE_CAPACITY"
+msgstr "용량"
+
+#: string "Error retrieving capacity."
+msgid "ERROR_STRING_GET_STORAGE_USAGE"
+msgstr "용량 검색 오류입니다."
+
+#: string "Free"
+msgid "CONTENT_HOME_BIG_BOX_STRING_FREE"
+msgstr "여유"
+
+#: string "Device"
+msgid "CONTENT_HOME_BIG_BOX_TITLE_DEVICE"
+msgstr "장치"
+
+#: string "Diagnosis"
+msgid "CONTENT_HOME_SMALL_BOX_TITLE_DIAGNOSIS"
+msgstr "진단"
+
+#: string "Normal"
+msgid "CONTENT_HOME_DIALOG_STRING_DIAGNOSIS_NORMAL"
+msgstr "정상"
+
+#: string "Overheated"
+msgid "CONTENT_HOME_DIALOG_STRING_DIAGNOSIS_OVERHEATED"
+msgstr "과열됨"
+
+#: string "Sufficient"
+msgid "CONTENT_HOME_DIALOG_STRING_DIAGNOSIS_SUFFICIENT"
+msgstr "충분함"
+
+#: string "Low"
+msgid "CONTENT_HOME_DIALOG_STRING_DIAGNOSIS_LOW_FREE_SPACE"
+msgstr "낮음"
+
+# PLEASE DELETE THIS STRING 6-10-13
+#: string "Warning"
+msgid "CONTENT_HOME_STRING_SICK"
+msgstr "경고"
+
+#: string "Initializing"
+msgid "CONTENT_HOME_STRING_INITIALIZING"
+msgstr "초기화 중"
+
+#: string "Firmware"
+msgid "CONTENT_HOME_SMALL_BOX_TITLE_FIRMWARE"
+msgstr "펌웨어"
+
+#: string "Cloud Devices"
+msgid "CONTENT_HOME_MEDIUM_BOX_TITLE_CLOUD_DEVICES"
+msgstr "클라우드 장치"
+
+#: string "Users"
+msgid "CONTENT_HOME_MEDIUM_BOX_TITLE_USERS"
+msgstr "사용자"
+
+#: string "Shares"
+msgid "CONTENT_HOME_MEDIUM_BOX_TITLE_SHARES"
+msgstr "공유"
+
+#: string "Content Scan"
+msgid "CONTENT_HOME_MEDIUM_BOX_TITLE_MEDIA_SCAN"
+msgstr "내용 검색"
+
+#: string "Error retrieving content scan status."
+msgid "ERROR_STRING_GET_MEDIA_CRAWLER"
+msgstr "내용 검색 상태의 검색 오류입니다."
+
+#: string "Idle"
+msgid "CONTENT_HOME_STRING_IDLE"
+msgstr "유휴"
+
+#---- Capacity Usage Dialog ----
+
+#: string "Capacity Usage"
+msgid "CONTENT_HOME_DIALOG_TITLE_CAPACITY_USAGE"
+msgstr "용량 사용"
+
+#: string "Current usage of your system capacity."
+msgid "CONTENT_HOME_DIALOG_STRING_CAPACITY_USAGE_DESC"
+msgstr "현재 시스템 용량 사용량입니다."
+
+#: string "Free Space"
+msgid "CONTENT_HOME_DIALOG_LABEL_FREE_SPACE"
+msgstr "여유 공간"
+
+#: string "Music Tracks"
+msgid "CONTENT_HOME_DIALOG_LABEL_MUSIC_TRACKS"
+msgstr "음악 트랙"
+
+#: string "Photos"
+msgid "CONTENT_HOME_DIALOG_LABEL_PHOTOS"
+msgstr "사진"
+
+#: string "Other"
+msgid "CONTENT_HOME_DIALOG_LABEL_OTHER"
+msgstr "기타"
+
+#---- Diagnosis Dialog ----
+
+#: string "Diagnosis"
+msgid "CONTENT_HOME_DIALOG_TITLE_DIAGNOSIS"
+msgstr "진단"
+
+#: string "Display a snapshot of your system components to assess the overall health of your WD My Cloud."
+msgid "CONTENT_HOME_DIALOG_STRING_DIAGNOSIS_DESC"
+msgstr "WD My Cloud의 전체적인 상태를 평가하기 위한 시스템 구성 요소의 스냅샷을 표시합니다."
+
+#: string "Good"
+msgid "CONTENT_HOME_DIALOG_STRING_DIAGNOSIS_GOOD"
+msgstr "양호"
+
+#: string "Bad"
+msgid "CONTENT_HOME_DIALOG_STRING_DIAGNOSIS_BAD"
+msgstr "불량"
+
+#: string "Temperature"
+msgid "CONTENT_HOME_DIALOG_LABEL_TEMPERATURE"
+msgstr "온도"
+
+#: string "Drive Status"
+msgid "CONTENT_HOME_DIALOG_LABEL_DRIVE_STATUS"
+msgstr "드라이브 상태"
+
+#: string "Content Status"
+msgid "CONTENT_HOME_DIALOG_LABEL_SHARE_STATUS"
+msgstr "내용 상태"
+
+#: string "Temperature status"
+msgid "CONTENT_HOME_DIALOG_TOOLTIP_TEMPERATURE"
+msgstr "온도 상태"
+
+#: string "Drive SMART status"
+msgid "CONTENT_HOME_DIALOG_TOOLTIP_DRIVE_STATUS"
+msgstr "드라이브 SMART 상태"
+
+#: string "Data volume mounted or not mounted"
+msgid "CONTENT_HOME_DIALOG_TOOLTIP_SHARE_STATUS"
+msgstr "탑재된 또는 탑재되지 않은 데이터 볼륨"
+
+#: string "Amount of free space remaining"
+msgid "CONTENT_HOME_DIALOG_TOOLTIP_FREE_SPACE"
+msgstr "남은 여유 공간의 크기"
+
+#: string "Not Mounted"
+msgid "CONTENT_HOME_DIALOG_STRING_DIAGNOSIS_NOT_MOUNTED"
+msgstr "탑재되지 않음"
+
+#: string "Mounted"
+msgid "CONTENT_HOME_DIALOG_STRING_DIAGNOSIS_MOUNTED"
+msgstr "탑재됨"
+
+#---- Media Scan Dialog ----
+
+# Edit - changed to Content Scan Status - 5-21
+#: string "Content Scan Status"
+msgid "CONTENT_HOME_DIALOG_TITLE_MEDIA_SCAN"
+msgstr "내용 검색 상태"
+
+#: string "Snapshot of your current Media database scan."
+msgid "CONTENT_HOME_DIALOG_STRING_MEDIA_SNAPSHOT_DESC"
+msgstr "현재 미디어 데이터베이스 검색의 스냅샷입니다."
+
+#: string " (scan in progress...)"
+msgid "CONTENT_HOME_DIALOG_STRING_MEDIA_SCAN_IN_PROGRESS"
+msgstr " (검색 진행 중...)"
+
+#----Getting Started  ----
+
+#: string "Getting Started"
+msgid "GLOB_NAV_HELP_DIALOG_TITLE_GETTING_STARTED"
+msgstr "시작"
+
+#: string "Getting Started"
+msgid "DIALOG_TITLE_GETTING_STARTED"
+msgstr "시작"
+
+
+
+# --- NEW Getting Started Keys and strings from KM - START  ---
+
+#: string "WD My Cloud lets you create your personal cloud. Store your photos, videos, music, and files in one place, and access your content anywhere."
+msgid "STRING_INTRO_LEVEL1_GETTING_STARTED"
+msgstr "WD My Cloud를 통해 자신의 개인 클라우드를 만들 수 있습니다. 사진, 비디오, 음악, 파일을 한 곳에 보관하고, 어디에서든 이러한 내용에 액세스합니다."
+
+# Edited from WD2go.com to WDMyCloud.com
+#: string "Access requires a WDMyCloud.com login, and each user needs one."
+msgid "STRING_INTRO_LEVEL2_GETTING_STARTED"
+msgstr "액세스하려면 WDMyCloud.com 로그인이 필요하며, 모든 사용자에게 각각 로그인이 하나씩 필요합니다."
+
+# Edited from WD2go.com to WDMyCloud.com
+#: string "Sign up for a WDMyCloud.com login"
+msgid "STRING_INTRO_TABLE_HEAD_GETTING STARTED"
+msgstr "WDMyCloud.com 로그인을 위한 등록"
+
+
+#EDIT 6-10-13
+#: string ""Entering your email address registers your WD My Cloud device and sets you up to receive updates and info. Also, each time you add a user, WD My Cloud automatically creates a new share using the first name of the user.""
+msgid "STRING_INTRO_LEVEL3_GETTING_STARTED"
+msgstr "이메일 주소를 입력하면 WD My Cloud 장치가 등록되고, 운영자가 정보와 업데이트를 수신할 수 있도록 설정됩니다. 또한 사용자를 추가할 때마다, WD My Cloud가 해당 사용자의 이름을 사용하여 자동으로 새 공유를 만듭니다."
+
+#: string "That's it."
+msgid "STRING_INTRO2_LEVEL1_GETTING_STARTED"
+msgstr "이것이 전부입니다."
+
+# Edited from wd2go.com to WDMyCloud.com
+#: string "You'll receive an email from WDMyCloud.com with your login info."
+msgid "STRING_INTRO2_LEVEL2_GETTING_STARTED"
+msgstr "WDMyCloud.com으로부터 자신의 로그인 정보가 들어 있는 이메일이 발송됩니다."
+
+#: string "Click these links for additional software and info:"
+msgid "STRING_INTRO2_LEVEL3_GETTING_STARTED"
+msgstr "이러한 링크를 클릭하여 추가적인 소프트웨어와 정보를 볼 수 있습니다."
+
+#: string "Automatically update WD My Cloud when a firmware update is available."
+msgid "STRING_INTRO2_CHECKBOX1_GETTING_STARTED"
+msgstr "새 펌웨어 업데이트가 있으면 자동으로 WD My Cloud를 업데이트합니다."
+
+#: string "*"
+msgid "STRING_INTRO2_CHECKBOX2_GETTING_STARTED"
+msgstr "*"
+
+#: string "*"
+msgid "STRING_INTRO2_LINK1_GETTING_STARTED"
+msgstr "*"
+
+#: string "*"
+msgid "STRING_INTRO2_LINK2_GETTING_STARTED"
+msgstr "*"
+
+#: string "*"
+msgid "STRING_INTRO2_LINK3_GETTING_STARTED"
+msgstr "*"
+
+#: string "*"
+msgid "STRING_INTRO3_LEVEL1_GETTING_STARTED"
+msgstr "*"
+
+#: string "*"
+msgid "STRING_INTRO3_LEVEL2_GETTING_STARTED"
+msgstr "*"
+
+#: string "*"
+msgid "STRING_INTRO3_LEVEL3_GETTING_STARTED"
+msgstr "*"
+
+#: string "*"
+msgid "STRING_INTRO3_CHECKBOX1_GETTING_STARTED"
+msgstr "*"
+
+#: string "*"
+msgid "STRING_INTRO3_CHECKBOX2_GETTING_STARTED"
+msgstr "*"
+
+#: string "*"
+msgid "STRING_INTRO3_LINK1_GETTING_STARTED"
+msgstr "*"
+
+#: string "*"
+msgid "STRING_INTRO3_LINK2_GETTING_STARTED"
+msgstr "*"
+
+#: string "*"
+msgid "STRING_INTRO3_LINK3_GETTING_STARTED"
+msgstr "*"
+
+
+# --- NEW Getting Started Keys and strings from KM - END  ---
+
+
+
+
+
+#--- Old/vintage Gettings Started instructions ---
+
+#: string "Use the getting started instructions to get up and running on your WD My Cloud and maximize your WD experience."
+msgid "GLOB_NAV_HELP_DIALOG_STRING_GETTING_STARTED_DESC"
+msgstr "사작 지침을 사용하여 WD My Cloud를 실행하고 WD 사용 경험을 극대화하십시오."
+
+#: string "Add yourself and others to your personal cloud so everyone's connected to their content, all the time."
+msgid "GLOB_NAV_HELP_DIALOG_STRING_GETTING_STARTED_ADD_USERS_DESC"
+msgstr "항상 모든 사람들이 자신의 내용에 연결되어 있도록 자신과 다른 모든 사용자를 자신의 개인 클라우드에 추가하십시오."
+
+#: string "Set up your personal cloud"
+msgid "GLOB_NAV_HELP_DIALOG_HEAD2_GETTING_STARTED_SETUP_ADMIN"
+msgstr "개인 클라우드 설정"
+
+#: string "Your First Name"
+msgid "CONTENT_GENERIC_TEXTBOX_LABEL_YOUR_FIRST_NAME"
+msgstr "이름"
+
+#: string "Your Last Name"
+msgid "CONTENT_GENERIC_TEXTBOX_LABEL_YOUR_LAST_NAME"
+msgstr "성"
+
+#: string "Your Email Address"
+msgid "CONTENT_GENERIC_TEXTBOX_LABEL_YOUR_EMAIL_ADDRESS"
+msgstr "이메일 주소"
+
+#: string "Invite others to your personal cloud"
+msgid "GLOB_NAV_HELP_DIALOG_HEAD2_GETTING_STARTED_ADD_USERS"
+msgstr "개인 클라우드에 다른 사용자 초대"
+
+#: string "If you do not wish to add other users now, click Next to continue."
+msgid "GLOB_NAV_HELP_DIALOG_STRING_GETTING_STARTED_BYPASS_ADD_USERS"
+msgstr "지금 다른 사용자를 추가하지 않으려면 다음을 클릭하여 계속 진행하십시오."
+
+#: string "Email Address"
+msgid "CONTENT_GENERIC_TEXTBOX_LABEL_EMAIL_ADDRESS"
+msgstr "이메일 주소"
+
+#: string "Setup Complete"
+msgid "GLOB_NAV_HELP_DIALOG_HEAD2_SETUP_COMPLETE"
+msgstr "설정 완료"
+
+#: string "Learn more about what WD My Cloud can do for you."
+msgid "GLOB_NAV_HELP_DIALOG_STRING_GETTING_STARTED_LEARN_MORE"
+msgstr "WD My Cloud의 기능에 대해 자세히 알아보세요."
+
+#: string "Upload Content"
+msgid "GLOB_NAV_HELP_DIALOG_LINK_UPLOAD_CONTENT"
+msgstr "내용 업데이트"
+
+#: string "Backup PC/Mac"
+msgid "GLOB_NAV_HELP_DIALOG_LINK_BACKUP_PC_MAC"
+msgstr "백업 PC/Mac"
+
+#: string "Access Mobile Apps"
+msgid "GLOB_NAV_HELP_DIALOG_LINK_ACCESS_MOBILE_APPS"
+msgstr "모바일 앱 액세스"
+
+#: string "Automatically update WD My Cloud when a firmware update is available."
+msgid "GLOB_NAV_HELP_DIALOG_CHECKBOX_AUTO_UPDATE"
+msgstr "새 펌웨어 업데이트가 있으면 자동으로 WD My Cloud를 업데이트합니다."
+
+#: string "Register WD My Cloud to receive product support updates regularly."
+msgid "GLOB_NAV_HELP_DIALOG_CHECKBOX_REGISTER"
+msgstr "정기적으로 제품 지원 업데이트를 받으려면 WD My Cloud를 등록합니다."
+
+#: string "WiFi Setup"
+msgid "CONTENT_WIFI_DIALOG_TITLE_WIFISETUP"
+msgstr "WiFi 설정"
+
+#: string "SSID"
+msgid "BUTTON_SSID"
+msgstr "SSID"
+
+#: string "Unlock"
+msgid "BUTTON_UNLOCK"
+msgstr "잠금 해제"
+
+#: string "WPS Push"
+msgid "BUTTON_WPSPUSH"
+msgstr "WPS 누르기"
+
+#: string "WPS PIN"
+msgid "BUTTON_WPSPIN"
+msgstr "WPS PIN"
+
+#: string "Generate New PIN"
+msgid "BUTTON_GENERATE_NEW_PIN"
+msgstr "새 PIN 생성"
+
+#: string "Reset to Default PIN"
+msgid "BUTTON_RESET_TO_DEFAULT_PIN"
+msgstr "기본 PIN으로 재설정"
+
+#: string "Choose this method if your wireless router supports WPS configuration."
+msgid "CONTENT_WIFI_DIALOG_WPSPUSH_LABEL"
+msgstr "무선 라우터가 WPS 구성을 지원하는 경우 이 방법을 선택합니다."
+
+#: string "Push WPS button on your router to initiate connection."
+msgid "CONTENT_WIFI_DIALOG_WPSPUSH_LABEL1"
+msgstr "라우터의 WPS 버튼을 눌러서 연결을 시작합니다."
+
+#: string "Push and hold the WPS button on the WD My Cloud WiFi for 3 seconds."
+msgid "CONTENT_WIFI_DIALOG_WPSPUSH_LABEL2"
+msgstr "WD My Cloud WiFi의 WPS 버튼을 3초 동안 눌러줍니다."
+
+#: string "Connection status will be displayed when network setup is done. Blue LED status on WD My Cloud WiFi indicates successful connection."
+msgid "CONTENT_WIFI_DIALOG_WPSPUSH_LABEL3"
+msgstr "네트워크 설정이 완료되면 연결 상태가 표시됩니다. WD My Cloud WiFi의 파란색 LED 상태는 정상적으로 연결되었음을 나타냅니다."
+
+#: string "Enter this 8-digit PIN into your router configuration page."
+msgid "CONTENT_WIFI_DIALOG_WPSPIN_LABEL1"
+msgstr "이 8자리 PIN을 라우터 구성 페이지에 입력합니다."
+
+#: string "Click the connection button to initiate the network connection."
+msgid "CONTENT_WIFI_DIALOG_WPSPIN_LABEL2"
+msgstr "연결 버튼을 클릭하여 네트워크 연결을 시작합니다."
+
+#: string "WiFi Manual Setup"
+msgid "CONTENT_WIFI_DIALOG_TITLE_MANUALSETUP"
+msgstr "WiFi 수동 설정"
+
+#: string "Enetr SSID"
+msgid "CONTENT_WIFI_LABEL_SSID"
+msgstr "SSID 입력"
+
+#: string "Enter Password"
+msgid "CONTENT_WIFI_LABEL_PASSWORD"
+msgstr "암호 입력"
+
+#: string "Manual Connection"
+msgid "CONTENT_WIFI_LABEL_MANUALCONNECTION"
+msgstr "수동 연결"
+
+#: string "Create a Safepoint"
+msgid "CONTENT_SAFEPOINTS_DIALOG_TITLE_CREATE_SAFEPOINT"
+msgstr "safepoint 만들기"
+
+#: string "searching for USB devices"
+msgid "CONTENT_SAFEPOINTS_LABEL_SEARCHING_FOR_USB_DEVICES"
+msgstr "USB 장치 검색 중"
+
+#: string "Recover Content with a Safepoint"
+msgid "CONTENT_SAFEPOINTS_DIALOG_TITLE_RECOVER_SAFEPOINT"
+msgstr "safepoint로 내용 복구"
+
+#: string "Unable to discover available devices on your network."
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_NAS_DISCOVER_ERROR"
+msgstr "네트워크에서 사용 가능한 장치를 찾을 수 없습니다."
+
+
+#: string "Device name must be between 2 and 15 characters and can only contain letters, numbers, and dashes."
+msgid "ERROR_ENTER_ALPHANUMERIC_DEVICE_NAME"
+msgstr "장치 이름은 2 ~ 15자 길이여야 하며, 문자, 숫자, 대시만 이름에 사용할 수 있습니다."
+
+#: string "Invalid safepoint name. Valid safepoint names are between 1-32 characters, case sensitive and cannot contain special characters except underscores."
+msgid "ERROR_SAFEPOINT_INCORRECT_SYNTAX"
+msgstr "유효하지 않은 safepoint 이름입니다. 유효한 safepoint 이름은 대소문자가 구분되는 1-32자 길이이며, 밑줄을 제외한 특수 문자는 사용할 수 없습니다."
+
+#: string "The device name cannot start or end with a dash (-)."
+msgid "ERROR_ENTER_ALPHANUMERIC_DEVICE_NAME_DASH"
+msgstr "장치 이름은 대시(-)로 시작하거나 끝날 수 없습니다."
+
+#: string "The device name cannot start with a number."
+msgid "ERROR_ENTER_ALPHANUMERIC_DEVICE_NAME_NUMBER"
+msgstr "장치 이름은 숫자 시작할 수 없습니다."
+
+#: string "Invalid device name."
+msgid "ERROR_ENTER_ALPHANUMERIC_DEVICE_INVALID"
+msgstr "유효하지 않은 장치 이름입니다."
+
+# EDIT - remove duplicate word and reworded to shorten
+#: string "Timeout; waiting for reboot. Verify that the LED on the front of your device is not red; then find the device on the network and reinitialize the web user interface. If the LED is red, reboot your drive manually."
+msgid "ERROR_REBOOT_TIMEOUT"
+msgstr "제한 시간이 초과되었습니다. 다시 부팅을 기다리는 중입니다. 장치 앞쪽의 LED가 빨간색인지 확인하십시오. 빨간색이 아니면 네트워크에서 장치를 찾아서 웹 사용자 인터페이스를 다시 초기화하십시오. LED가 빨간색이면 드라이브를 수동으로 다시 부팅하십시오."
+
+#: string "Error ignoring alerts:"
+msgid "LABEL_IGNORING_ALERTS"
+msgstr "알림(경고) 무시 오류:"
+
+#: string "Start Update"
+msgid "CONTENT_DIALOG_ALERTS_STRING_BEGIN_UPDATE"
+msgstr "업데이트 시작"
+
+#: string "Error registering device:"
+msgid "LABEL_REGISTERING_DEVICE"
+msgstr "장치 등록 오류:"
+
+#: string "Error rebooting device:"
+msgid "LABEL_REBOOTING_DEVICE"
+msgstr "장치 다시 부팅 오류:"
+
+#: string "Error shutting down device:"
+msgid "LABEL_SHUTTING_DOWN_DEVICE"
+msgstr "장치 종료 오류:"
+
+#: string "Error sending test alert email:"
+msgid "LABEL_SENDING_TEST_ALERT_EMAIL"
+msgstr "알림(경고) 이메일 보내기 오류:"
+
+#: string "Error toggling SSH:"
+msgid "LABEL_TOGGLING_SSH"
+msgstr "SSH 전환 오류:"
+
+#: string "Error processing your configuration request:"
+msgid "LABEL_CONFIGURING_SETTINGS_GENERAL"
+msgstr "구성 요청 처리 오류:"
+
+#: string "Device description must start with an alphanumeric value and may contain spaces or underscores without exceeding 42 characters."
+msgid "ERROR_ENTER_ALPHANUMERIC_DEVICE_DESCRIPTION"
+msgstr "장치 설명은 영숫자 값으로 시작해야 하며, 42자를 초과하지 않는 한도로 공백이나 밑줄을 사용할 수 있습니다."
+
+#: string "Authorizations do not match."
+msgid "ERROR_AUTHORIZATION_DO_NOT_MATCH"
+msgstr "권한이 일치하지 않습니다."
+
+#: string "Workgroup name must start with an alphanumeric value, may contain dashes, exclamation points, at signs, pound signs, dollar signs, percent signs, carets, ampersands, parentheses, underscores, semicolons, colons, apostrophes, commas, periods, and be between 1 and 16 characters."
+msgid "ERROR_ENTER_ALPHANUMERIC_WORKGROUP"
+msgstr "작업 그룹 이름은 영숫자 값으로 시작해야 하며, 대시, 느낌표, @ 기호, 파운드 기호, 달러 기호, 퍼센트 기호, 캐럿, 앰퍼샌드, 둥근 괄호, 밑줄, 세미콜론, 콜론, 아포스트로피, 쉼표, 마침표를 사용할 수 있고, 1 ~ 16자 길이여야 합니다."
+
+#: string "Empty"
+msgid "ERROR_NETWORK_EMPTY"
+msgstr "비어 있음"
+
+#: string "The IP addresses 0.0.0.0 and 255.255.255.255 are reserved and cannot be used."
+msgid "ERROR_NETWORK_RESERVED_SPECIAL"
+msgstr "IP 주소 0.0.0.0과 255.255.255.255는 다른 용도로 예약되어 있으며, 사용할 수 없습니다."
+
+#: string "IP addresses in the 0.x.x.x format are reserved for self-identification purposes and cannot be used."
+msgid "ERROR_NETWORK_RESERVED_SELF_IDENTIFICATION"
+msgstr "0.x.x.x 형식의 IP 주소는 자체 식별용으로 예약되어 있으며, 사용할 수 없습니다."
+
+#: string "IP addresses in the 127.x.x.x format are reserved for host loopback purposes and cannot be used."
+msgid "ERROR_NETWORK_LOOPBACK"
+msgstr "127.x.x.x 형식의 IP 주소는 호스트 루프백용으로 예약되어 있으며, 사용할 수 없습니다."
+
+#: string "IP addresses in the 169.254.x.x format are reserved for use as link-local addresses and cannot be used."
+msgid "ERROR_NETWORK_LINKLOCAL"
+msgstr "169.254.x.x.x 형식의 IP 주소는 링크-로컬 주소로 사용하도록 예약되어 있으며, 사용할 수 없습니다."
+
+#: string "IP addresses in the 192.88.99.x format are reserved for 6to4 relay anycasting purposes and cannot be used."
+msgid "ERROR_NETWORK_ANYCAST"
+msgstr "192.88.99.x 형식의 IP 주소는 6to4 릴레이 애니캐스트용으로 예약되어 있으며, 사용할 수 없습니다."
+
+#: string "IP addresses ranging from 224.0.0.0 through 239.255.255.255 are reserved for multicasting purposes and cannot be used."
+msgid "ERROR_NETWORK_MULTICAST"
+msgstr "IP 주소 224.0.0.0 ~ 239.255.255.255는 멀티캐스트용으로 예약되어 있으며, 사용할 수 없습니다."
+
+#: string "IP addresses ranging from 240.0.0.0 through 255.255.255.254 are reserved for future use and cannot be used."
+msgid "ERROR_NETWORK_RESERVED"
+msgstr "IP 주소 240.0.0.0 ~ 255.255.255.254는 향후 용도로 예약되어 있으며, 사용할 수 없습니다."
+
+#: string "The host IP address is invalid."
+msgid "ERROR_INVALID_HOST_IPADDRESS_AND_WITH_NETMASK"
+msgstr "호스트 IP 주소가 유효하지 않습니다."
+
+#: string "The netmask is not contiguous and cannot be used."
+msgid "ERROR_NETMASK_NOT_CONTIGUOUS"
+msgstr "네트워크 마스크가 인접하여 사용할 수 없습니다."
+
+#: string "The gateway is not in the same subnet as the IP address."
+msgid "ERROR_GATEWAY_WRONG_SUBNET"
+msgstr "게이트웨이가 IP 주소와 동일한 서브넷에 없습니다."
+
+#: string "DNS Server:"
+msgid "LABEL_HEADER_DNS_SERVER"
+msgstr "DNS 서버:"
+
+#: string "Primary NTP Server:"
+msgid "LABEL_HEADER_PRIMARY_NTP_SERVER"
+msgstr "주 NTP 서버:"
+
+#: string "Error retrieving information from storage drive(s):"
+msgid "LABEL_GET_STORAGE_DRIVE_INFORMATION"
+msgstr "저장장치 드라이브에서 정보 검색 오류:"
+
+#: string "You must enter a password to unlock your USB drive."
+msgid "ERROR_PASSWORD_MISSING"
+msgstr "USB 드라이브의 잠금을 해제하려면 암호를 입력해야 합니다."
+
+#: string "The USB drive is not locked."
+msgid "ERROR_USB_DRIVE_NOT_LOCKED"
+msgstr "USB 드라이브가 잠기지 않았습니다."
+
+#: string "Unable to unlock the USB drive. Verify your password and try again."
+msgid "ERROR_USB_DRIVE_UNLOCK_FAILED"
+msgstr "USB 드라이브의 잠금을 해제할 수 없습니다. 암호를 확인한 후 다시 시도하십시오."
+
+#: string "Unable to unlock the USB drive; you have exceeded your unlock attempts."
+msgid "ERROR_USB_DRIVE_EXCEEDED_ATTEMPTS"
+msgstr "USB 드라이브의 잠금을 해제할 수 없습니다. 잠금 해제 시도 제한 횟수를 초과했습니다."
+
+#: string "User name already in use. Please enter another user name."
+msgid "ERROR_USER_SAME_NAME_EXISTS"
+msgstr "사용자 이름이 이미 사용 중입니다. 다른 사용자 이름을 입력하십시오."
+
+#: string "User has been renamed or deleted."
+msgid "ERROR_USER_RENAMED_DELETED"
+msgstr "사용자가 삭제되었거나 사용자의 이름이 변경되었습니다."
+
+#: string "Username must be an alphanumeric value between 1 and 32 characters and cannot contain spaces."
+msgid "ERROR_USERNAME_INCORRECT_SYNTAX"
+msgstr "사용자 이름은 1 ~ 32자의 영숫자 값이어야 하며, 공백은 사용할 수 없습니다."
+
+#: string "Full name is a case-sensitive alphanumeric value and may contain spaces or underscores without exceeding 256 characters."
+msgid "ERROR_FULL_NAME_INCORRECT_SYNTAX"
+msgstr "전체 이름은 대소문자가 구분되는 영숫자 값이며, 256자를 초과하지 않는 한도로 공백이나 밑줄을 사용할 수 있습니다."
+
+# Edit - 5.30 changed from 16 characters to 32
+#: string "Password is a case-sensitive, alphanumeric value up to 32 characters, and cannot contain double quotes."
+msgid "ERROR_PASSWORD_INCORRECT_SYNTAX"
+msgstr "암호는 대소문자가 구분되는 32자 이하의 영숫자 값이며, 따옴표는 사용할 수 없습니다."
+
+#: string "Passwords do not match."
+msgid "ERROR_PASSWORDS_DONT_MATCH"
+msgstr "암호가 일치하지 않습니다."
+
+#: string "Share name already in use. Please enter another share name."
+msgid "ERROR_SHARE_NAME_EXISTS"
+msgstr "공유 이름이 이미 사용 중입니다. 다른 공유 이름을 입력하십시오."
+
+#: string "Share name {0} is reserved. Share names are case sensitive, alphanumeric values between 1 and 32 characters, and cannot contain spaces."
+msgid "ERROR_SHARE_NAME_RESERVED"
+msgstr "공유 이름 {0}은(는) 예약되어 있습니다. 공유 이름은 대소문자가 구분되는 1 ~ 32자의 영숫자 값이며, 공백은 사용할 수 없습니다."
+
+#: string "Port number {0} invalid. Enter a valid port number between 1024-65535 or 80."
+msgid "ERROR_HTTP_PORTNUMBER"
+msgstr "포트 이름 {0}은(는) 유효하지 않습니다. 1024-65535 또는 80 중에서 유효한 포트 번호를 입력하십시오."
+
+#: string "Port number {0} invalid. Enter a valid port number between 1024-65535 or 443."
+msgid "ERROR_HTTPS_PORTNUMBER"
+msgstr "포트 이름 {0}은(는) 유효하지 않습니다. 1024-65535 또는 443 중에서 유효한 포트 번호를 입력하십시오."
+
+#: string "Duplicate port number."
+msgid "ERROR_DUPLICATE_HTTPS_PORTNUMBER"
+msgstr "중복 포트 번호입니다."
+
+
+#: string "Share has been renamed or deleted."
+msgid "ERROR_SHARE_RENAMED_DELETED"
+msgstr "공유가 삭제되었거나 공유의 이름이 변경되었습니다."
+
+#: string "Share names are case sensitive, alphanumeric values between 1 and 32 characters, and cannot contain spaces."
+msgid "ERROR_SHARE_NAME_INCORRECT_SYNTAX"
+msgstr "공유 이름은 대소문자가 구분되는 1 ~ 32자의 영숫자 값이며, 공백은 사용할 수 없습니다."
+
+#: string "Share description must start with an alphanumeric value and may contain spaces or underscores without exceeding 256 characters."
+msgid "ERROR_SHARE_DESCRIPTION_INCORRECT_SYNTAX"
+msgstr "공유 설명은 영숫자 값으로 시작해야 하며, 256자를 초과하지 않는 한도로 공백이나 밑줄을 사용할 수 있습니다."
+
+#: string "Share username cannot be blank. Please enter a valid share username and try again."
+msgid "ERROR_SHARE_USERNAME_INCORRECT_SYNTAX"
+msgstr "공유 사용자 이름은 비워둘 수 없습니다. 유효한 공유 사용자 이름을 입력한 후 다시 시도하십시오."
+
+#: string "Device username cannot be blank. Please enter a valid device username and try again."
+msgid "ERROR_DEVICE_USERNAME_INCORRECT_SYNTAX"
+msgstr "장치 사용자 이름은 비워둘 수 없습니다. 유효한 장치 사용자 이름을 입력한 후 다시 시도하십시오."
+
+#: string "Unknown error while retrieving data. Ensure there are no network connectivity issues and try again."
+msgid "ERROR_GET_UNKNOWN_ERROR"
+msgstr "데이터 검색 중에 알 수 없는 오류가 발생했습니다. 네트워크 연결 문제가 없는지 확인한 후 다시 시도하십시오."
+
+#: string "The requested service is not allowed."
+msgid "ERROR_SERVICE_NOT_ALLOWED"
+msgstr "요청된 서비스는 허용되지 않습니다."
+
+#: string "Cloud access is now available from your device."
+msgid "LABEL_STATUS_READY_EXPLANATION"
+msgstr "이제 장치에서 클라우드에 액세스할 수 있습니다."
+
+#: string "For best performance, enable UPnP on your router to establish a direct connection."
+msgid "LABEL_STATUS_RELAYED_EXPLANATION"
+msgstr "성능을 극대화하려면 라우터에서 UPnP를 활성화하여 직접 연결을 설정하십시오."
+
+#: string "Cannot establish remote access connection. Make sure you are connected to the Internet."
+msgid "LABEL_STATUS_FAILED_EXPLANATION"
+msgstr "원격 액세스 연결을 설정할 수 없습니다. 인터넷에 연결되어 있는지 확인하십시오."
+
+#: string "Trying to establish a remote access connection..."
+msgid "LABEL_STATUS_CONNECTING_EXPLANATION"
+msgstr "원격 액세스 연결 설정을 시도하는 중..."
+
+#: string "Retrieving information..."
+msgid "LABEL_STATUS_RETRIEVING_INFORMATION"
+msgstr "정보 검색 중..."
+
+#: string "Waiting"
+msgid "LABEL_CODE_WAITING"
+msgstr "대기 중"
+
+#: string "The activation code generated has expired. Please click Add Access to generate a new code."
+msgid "TOOLTIP_REMOTE_ACCESS_DAC_EXPIRED"
+msgstr "생성된 활성화 코드가 만료되었습니다. 액세스 추가를 클릭하여 새 코드를 생성하십시오."
+
+#: string "Indicates that an activation code has been generated but has not yet been entered on your mobile or tablet device."
+msgid "TOOLTIP_REMOTE_ACCESS_DAC_WAITING"
+msgstr "활성화 코드가 생성되었지만 아직 모바일 또는 태블릿 장치에 입력되지 않았음을 나타냅니다."
+
+#: string "Connected"
+msgid "LABEL_MOBILE_DEVICE_CONNECTED"
+msgstr "연결됨"
+
+#: string "Manual"
+msgid "LABEL_MANUAL"
+msgstr "수동"
+
+#: string "Drive"
+msgid "LABEL_DRIVE"
+msgstr "드라이브"
+
+#: string "Failed diagnostic test."
+msgid "LABEL_FAILED_DIAGNOSTIC_TEST"
+msgstr "진단 테스트에 실패했습니다."
+
+#: string "Invalid NTP server value."
+msgid "ERROR_INVALID_NTP_SERVER"
+msgstr "유효하지 않은 NTP 서버 값입니다."
+
+
+#: string "Sign Up"
+msgid "BUTTON_REGISTER"
+msgstr "등록"
+
+#: string "Share Access"
+msgid "PAGE_HEADER_SHARE_ACCESS"
+msgstr "공유 액세스"
+
+#: string "Steps:"
+msgid "LABEL_STEPS"
+msgstr "단계:"
+
+# --- Tooltips Global  ---
+
+#: string "Enable NTP service to sync with your network to automatically update the date and time."
+msgid "CONTENT_SETTINGS_GENERAL_TOOLTIP_NTP"
+msgstr "NTP 서비스를 활성화하여 네트워크와 동기화하고 날짜와 시간을 자동으로 업데이트합니다."
+
+#: string "Enables or disables cloud access to your device."
+msgid "CONTENT_SETTINGS_GENERAL_TOOLTIP_ENABLE_CLOUD_ACCESS"
+msgstr "장치에 대한 클라우드 액세스를 활성화하거나 비활성화합니다."
+
+#: string "Displays the current status of your cloud access connection."
+msgid "CONTENT_SETTINGS_GENERAL_TOOLTIP_CLOUD_CONNECT_STATUS"
+msgstr "클라우드 액세스 연결의 현재 상태를 표시합니다."
+
+#: string "Turn on sleep mode to save energy. "
+msgid "CONTENT_SETTINGS_GENERAL_TOOLTIP_HDD_SLEEP"
+msgstr "절전 모드를 켜서 에너지를 절약합니다."
+
+#: string "Sets the status of your drive's LED. "
+msgid "CONTENT_SETTINGS_GENERAL_TOOLTIP_LED_LIGHT"
+msgstr "드라이브의 LED 상태를 설정합니다."
+
+#: string "Enables Time Machine backups to this device."
+msgid "CONTENT_SETTINGS_GENERAL_TOOLTIP_ENABLE_TIME_MACHINE"
+msgstr "이 장치에 Time Machine 백업을 활성화합니다."
+
+#: string "Displays the current status of Internet connectivity."
+msgid "CONTENT_SETTINGS_NETWORK_TOOLTIP_INTERNET_ACCESS"
+msgstr "현재 인터넷 연결 상태를 표시합니다."
+
+#: string "Select Static to manually enter IP address, netmask, and gateway information. Select DHCP (Dynamic Host Configuration Protocol) to have the network retrieve IP address assignments and other configuration information."
+msgid "CONTENT_SETTINGS_NETWORK_TOOLTIP_NETWORK_MODE"
+msgstr "정적을 선택하여 수동으로 IP 주소, 네트워크 마스크, 게이트웨이 정보를 입력합니다. DHCP(Dynamic Host Configuration Protocol)를 선택하여 네트워크가 IP 주소 할당과 기타 구성 정보를 검색하도록 합니다."
+
+#: string "Enable SSH"
+msgid "CONTENT_SETTINGS_NETWORK_TOOLTIP_SSH"
+msgstr "SSH 활성화"
+
+
+#: string "File Transfer Protocol (FTP) is a standard network protocol used to transfer data from one computer to another over the Internet."
+msgid "CONTENT_SETTINGS_NETWORK_TOOLTIP_FTP"
+msgstr "FTP(파일 전송 프로토콜)는 인터넷을 통해 한 컴퓨터에서 다른 컴퓨터로 데이터를 전송하는 데 사용되는 표준 네트워크 프로토콜입니다."
+
+
+#: string "(Windows only) Workgroups let devices in the same workgroup access one another. Each time you add a device to your network, assign it the same workgroup name."
+msgid "CONTENT_SETTINGS_NETWORK_TOOLTIP_WORKGROUP"
+msgstr "(Windows만 해당) 작업 그룹을 사용하면 동일한 작업 그룹의 장치들이 서로에 액세스할 수 있습니다. 장치를 네트워크에 추가할 때마다, 장치에 동일한 작업 그룹 이름을 할당하십시오."
+
+
+#: string "Enable content streaming to various devices." 
+msgid "CONTENT_SETTINGS_MEDIA_TOOLTIP_STREAMING"
+msgstr "여러 장치로 콘텐츠 스트리밍을 활성화합니다."
+
+#: string "Rebuilds the media database. Use only for troubleshooting when database corruption is suspected."
+msgid "CONTENT_SETTINGS_MEDIA_TOOLTIP_DLNA_DATABASE"
+msgstr "미디어 데이터베이스를 복원합니다. 데이터베이스 손상이 의심되는 경우 문제 해결에만 사용합니다."
+
+# new string 5-21-13
+#: string "Rebuilds the media database. Use only for troubleshooting when database corruption is suspected."
+msgid "CONTENT_SETTINGS_MEDIA_TOOLTIP_DLNA_RESCAN"
+msgstr "미디어 데이터베이스를 복원합니다. 데이터베이스 손상이 의심되는 경우 문제 해결에만 사용합니다."
+
+
+#: string "Enable the iTunes server to access your media through your iTunes player."
+msgid "CONTENT_SETTINGS_MEDIA_TOOLTIP_ITUNES_SERVER"
+msgstr "iTunes 서버가 iTunes 플레이어를 통해 미디어에 액세스할 수 있도록 활성화합니다."
+
+#: string "Rescans all your content directories to find new media."
+msgid "CONTENT_SETTINGS_MEDIA_TOOLTIP_ITUNES_DATABASE"
+msgstr "모든 내용 디렉토리를 다시 검색하여 새 미디어를 찾습니다."
+
+
+#: string "Quick Test (about 2 minutes) quickly scans and tests areas of your network subject to potential failures. Full Test, which may take several hours, scans your entire device to detect bad sectors."
+msgid "CONTENT_SETTINGS_DIAGNOSTICS_TOOLTIP_DIAGNOSTICS_TEST"
+msgstr "'빠른 테스트(약 2분)'는 잠재적인 실패가 발생할 수 있는 네트워크의 영역을 신속히 검색하고 테스트합니다. 몇 시간 정도 걸릴 수 있는 '전체 테스트'는 장치 전체를 검색하여 불량 섹터를 찾습니다."
+
+#: string "Create a backup prior to using any restore option. Use System only to restore system data to the originial factory settings. Quick Restore erases content and system info but can be recovered with recovery software; Full Restore permanently deletes all content and system info, and cannot be recovered. Be sure to create a backup prior to using any restore option."
+msgid "CONTENT_SETTINGS_DIAGNOSTICS_TOOLTIP_FACTORY_RESTORE"
+msgstr "복원 옵션을 사용하기 전에 백업을 만듭니다. '시스템만'을 사용하여 시스템 데이터를 원래 초기 설정으로 복원합니다. '빠른 복원'은 내용과 시스템 정보를 지우지만 복구 소프트웨어로 복구할 수 있습니다. '전체 복원'은 모든 내용과 시스템 정보를 영구적으로 삭제하며, 복구할 수 없습니다. 복원 옵션을 사용하기 전에 백업을 만드십시오."
+
+#: string "Save current configuration settings or import stored configuration settings."
+msgid "CONTENT_SETTINGS_DIAGNOSTICS_TOOLTIP_SYSTEM_CONFIG"
+msgstr "현재 구성 설정을 저장하거나 저장된 구성 설정을 가져옵니다."
+
+
+#: string "Automatically generate a diagnostic system report. Once complete, you will be directed to our customer support form with your diagnostic report automatically attached."
+msgid "CONTENT_SETTINGS_DIAGNOSTICS_TOOLTIP_AUTOMATED_SUPPORT"
+msgstr "자동으로 진단 시스템 보고서를 생성합니다. 완료되면 고객 지원 양식으로 안내되고, 진단 보고서가 자동으로 첨부됩니다."
+
+
+#: string "Create a system report and save it to your drive to help identify and resolve network problems."
+msgid "CONTENT_SETTINGS_DIAGNOSTICS_TOOLTIP_SYSTEM_REPORT"
+msgstr "시스템 보고서를 만들고 드라이브에 저장하여 네트워크 문제를 식별하고 해결하는 데 도움이 되도록 합니다."
+
+#: string "Shut down or reboot your device."
+msgid "CONTENT_SETTINGS_DIAGNOSTICS_TOOLTIP_REBOOT_SHUTDOWN"
+msgstr "장치를 종료하거나 다시 부팅합니다."
+
+#: string "Send system notifications to up to 5 email addresses."
+msgid "CONTENT_SETTINGS_NOTIFICATION_TOOLTIP_EMAIL"
+msgstr "최대 5개 이메일 주소로 시스템 알림을 보냅니다."
+
+#: string "Enable automatic firmware updates."
+msgid "CONTENT_SETTINGS_UPDATE_TOOLTIP_ENABLE_AUTO"
+msgstr "자동 펌웨어 업데이트를 활성화합니다."
+
+#: string "Check for available firmware updates."
+msgid "CONTENT_SETTINGS_UPDATE_TOOLTIP_CHECK_FOR_UPDATE"
+msgstr "사용 가능한 펌웨어 업데이트가 있는지 확인합니다."
+
+#: string "Update firmware from a file."
+msgid "CONTENT_SETTINGS_UPDATE_TOOLTIP_UPDATE_FROM_FILE"
+msgstr "파일에서 펌웨어를 업데이트합니다."
+
+#: string "Automatic: Establishes a direct connection between your device and the router using uPnP. If the connection cannot open the ports on your router, a relay connection is established.Manual: Establishes a connection through the two selected ports. If either port is unavailable, a relay connection is established. Manual router configuration is required.Windows XP Compatibility: Establishes a connection through ports 80 and 443. If these ports are unavailable, a relay connection is established. Required for Windows XP."
+msgid "CONTENT_SETTINGS_DIALOG_TOOLTIP_CONNECTIVITY"
+msgstr "자동: uPnP를 사용하여 장치와 라우터 간 직접 연결을 설정합니다. 라우터의 포트에서 연결을 열 수 없는 경우 릴레이 연결이 설정됩니다. 수동: 선택된 두 포트를 통해서 연결을 설정합니다. 둘 중 어느 한 포트를 사용할 수 없는 경우 릴레이 연결이 설정됩니다. 수동 라우터 구성이 필요합니다. Windows XP 호환성: 포트 80~443을 통해 연결을 설정합니다. 이러한 포트를 사용할 수 없는 경우 릴레이 연결이 설정됩니다. Windows XP에 필요합니다."
+
+#: string "Rebuild your content database. Use only for troubleshooting when database corruption is suspected."
+msgid "CONTENT_SETTINGS_DIALOG_TOOLTIP_WD2GO_DATABASE"
+msgstr "내용 데이터베이스를 복원하십시오. 데이터베이스 손상이 의심되는 경우 문제 해결에만 사용합니다."
+
+
+#: string "The numeric value assigned to each device on your network."
+msgid "CONTENT_DIALOG_SETTINGS_TOOLTIP_NETWORK_MODE_IP"
+msgstr "네트워크의 각 장치에 할당된 숫자값입니다."
+
+#: string "Screens out (masks) the network portion of an IP address so that only the host portion of the IP address remains."
+msgid "CONTENT_DIALOG_SETTINGS_TOOLTIP_NETWORK_MODE_NETMASK"
+msgstr "IP 주소의 호스트 부분만 남도록 IP 주소의 네트워크 부분을 차단(마스크)합니다."
+
+#: string "A network point that acts as an entrance to another network."
+msgid "CONTENT_DIALOG_SETTINGS_TOOLTIP_NETWORK_MODE_GATEWAY"
+msgstr "다른 네트워크의 입구로 작용하는 네트워크 지점입니다."
+
+#: string "Enter a domain name."
+msgid "CONTENT_DIALOG_SETTINGS_TOOLTIP_NETWORK_MODE_DNS"
+msgstr "도메인 이름을 입력합니다."
+
+#: string "Set the schedule for the safepoint update."
+msgid "CONTENT_SAFEPOINTS_TOOLTIP_AUTO_UPDATE"
+msgstr "safepoint의 업데이트 일정을 설정합니다."
+
+#: string "Set the schedule for the safepoint update."
+msgid "CONTENT_SAFEPOINTS_DIALOG_TOOLTIP_AUTO_UPDATE"
+msgstr "safepoint의 업데이트 일정을 설정합니다."
+
+#: string "Create your safepoint now or later."
+msgid "CONTENT_SAFEPOINTS_DIALOG_TOOLTIP_CREATE_NOW_LATER"
+msgstr "지금 또는 나중에 safepoint를 만듭니다."
+
+#: string "2013 Western Digital Corporation. All Rights Reserved"
+msgid "GLOB_NAV_HELP_STRING_COPYRIGHT_2013_WD_ALL_RIGHT_RESERVED"
+msgstr "2013 Western Digital Corporation. All Rights Reserved"
+
+
+
+# --- Kathleen's new bumpers 4/16 --
+
+#: string "Help"
+msgid "CONTENT_GENERIC_BUMPER_TITLE_HELP_TOPICS"
+msgstr "도움말"
+
+#: string "Do one of the following:"
+msgid "CONTENT_GENERIC_STRING_DO_ONE_OF_THE_FOLLOWING"
+msgstr "다음 작업 중 하나를 수행합니다."
+
+#: string "Shares are content storage areas—like folders. You can create single or multiple shares on your storage device and control access to each of them."
+msgid "CONTENT_SHARES_STRING_ABOUT_SHARES_TEXT"
+msgstr "공유는 폴더와 같은 내용 저장 영역입니다. 저장 장치에 단일 또는 여러 공유를 만들고 각 공유에 대한 액세스를 제어할 수 있습니다."
+
+#: string "Select a share from the list on the left"
+msgid "CONTENT_SHARES_STRING_MANAGE_SHARES_1"
+msgstr "목록에서 왼쪽에 있는 공유를 선택합니다."
+
+#: string "Click the Add Share button below the list"
+msgid "CONTENT_SHARES_STRING_MANAGE_SHARES_2"
+msgstr "목록 아래에 있는 공유 추가 버튼을 클릭합니다."
+
+# Edit 5/8/13 change to Managing Shares 
+#: string "Managing Shares"
+msgid "CONTENT_SHARES_STRING_ABOUT_SHARES"
+msgstr "공유 관리"
+
+#: string "Creating a Share"
+msgid "CONTENT_SHARES_STRING_CREATING_A_SHARE"
+msgstr "공유 만들기"
+
+#: string "Changing Access to a Share"
+msgid "CONTENT_GENERIC_STRING_CHANGING_USER_ACCESS"
+msgstr "공유 액세스 변경"
+
+# Edit WD2go.com to WDMyCloud.com
+#: string "Control access to your personal cloud content by setting up user accounts and levels of access. Each user must have a WDMyCloud.com login."
+msgid "CONTENT_USERS_STRING_ABOUT_USERS_TEXT"
+msgstr "사용자 계정과 액세스 수준을 설정하여 개인 클라우드 내용에 대한 액세스를 제어합니다. 모든 사용자는 WDMyCloud.com 로그인을 가지고 있어야 합니다."
+
+#: string "Select a user from the list on the left"
+msgid "CONTENT_USERS_STRING_MANAGE_USERS_1"
+msgstr "목록에서 왼쪽에 있는 사용자를 선택합니다."
+
+#: string "Click the Add User button below the list"
+msgid "CONTENT_USERS_STRING_MANAGE_USERS_2"
+msgstr "목록 아래에 있는 사용자 추가 버튼을 클릭합니다."
+
+# edit 5/7/13 from About Users to Managing Users
+#: string "Managing Users"
+msgid "CONTENT_USERS_STRING_ABOUT_USERS"
+msgstr "사용자 관리"
+
+#: string "Adding a User"
+msgid "CONTENT_USERS_STRING_ADDING_A_USER"
+msgstr "사용자 추가"
+
+# Edit: from WD2go.com to WDMyCloud.com
+#: string "Set up your cloud for remote access. For every user you want on your cloud, you'll need to get them a WDMyCloud.com login, and they'll need to download the WD mobile apps. Once you've got that covered, you're ready to go!"
+msgid "CONTENT_CLOUD_STRING_ABOUT_CLOUDS_TEXT"
+msgstr "원격 액세스를 위한 클라우드를 설정합니다. 클라우드에 포함시킬 모든 사용자가 WDMyCloud.com 로그인을 가지고 있어야 하며, WD 모바일 앱을 다운로드해야 합니다. 이를 완료하면 진행 준비가 완료된 것입니다!"
+
+#: string "Download the mobile apps"
+msgid "CONTENT_USERS_STRING_MANAGE_CLOUD_ACCESS_1"
+msgstr "WD Learning Center에서"
+
+#: string " from the WD Learning Center."
+msgid "CONTENT_USERS_STRING_MANAGE_CLOUD_ACCESS_2"
+msgstr " 모바일 앱을 다운로드합니다."
+
+# MOravia, please leave this as-is. WD will change to correct address
+#: string "(http://setup.wd2go.com)"
+msgid "CONTENT_USERS_STRING_MANAGE_CLOUD_ACCESS_3"
+msgstr "(http://setup.wd2go.com)"
+
+#: string "Managing Cloud Access"
+msgid "CONTENT_USERS_STRING_ABOUT_CLOUD_ACCESS"
+msgstr "클라우드 액세스 관리"
+
+#: string "Remote Access Basics"
+msgid "CONTENT_USERS_STRING_CLOUD_ACCESS_BASICS"
+msgstr "원격 액세스 기본 사항"
+
+#: string "Setting Up Remote Access"
+msgid "CONTENT_GENERIC_STRING_SETTING_UP_CLOUD_ACCESS"
+msgstr "클라우드 액세스 설정"
+
+#: string "A safepoint is a snapshot of the data on your drive at a specific point in time. In the unlikely event your WD My Cloud fails, you can restore your content from a safepoint."
+msgid "CONTENT_SAFEPOINT_STRING_ABOUT_SAFEPOINTS_TEXT"
+msgstr "safepoint는 시간상 특정 시점에 드라이브에 있는 데이터의 스냅샷입니다. 흔치 않지만 WD My Cloud가 실패하는 경우 safepoint에서 내용을 복원할 수 있습니다."
+
+#: string "Select a safepoint from the list on the left"
+msgid "CONTENT_USERS_STRING_MANAGE_SAFEPOINTS_1"
+msgstr "목록에서 왼쪽에 있는 safepoint를 선택합니다."
+
+# Edit 5/10/13 Changed Add to Create in string 
+#: string "Click the Create Safepoint icon below the list"
+msgid "CONTENT_USERS_STRING_MANAGE_SAFEPOINTS_2"
+msgstr "목록 아래에 있는 safepoint 만들기 아이콘을 클릭합니다."
+
+#: string "Click Start Recovery to recover a previously saved safepoint"
+msgid "CONTENT_USERS_STRING_MANAGE_SAFEPOINTS_3"
+msgstr "복구 시작을 클릭하여 이전에 저장한 safepoint를 복구합니다."
+
+#: string "Managing Safepoints"
+msgid "CONTENT_USERS_STRING_ABOUT_SAFEPOINTS"
+msgstr "safepoint 관리"
+
+#: string "Creating a Safepoint"
+msgid "CONTENT_USERS_STRING_CREATING_A_SAFEPOINT"
+msgstr "safepoint 만들기"
+
+#: string "Restoring Data with a Safepoint"
+msgid "CONTENT_GENERIC_STRING_RESTORE_WITH_SAFEPOINT"
+msgstr "safepoint로 데이터 복원"
+
+# --- Error Section  ---
+
+
+#: string "Unknown error"
+msgid "ERROR_ID_0"
+msgstr "알 수 없는 오류입니다."
+
+#: string "Device ID not found."
+msgid "ERROR_ID_10"
+msgstr "장치 ID가 없습니다."
+
+#: string "Device is not registered."
+msgid "ERROR_ID_11"
+msgstr "장치가 등록되지 않았습니다."
+
+#: string "Failed to register device."
+msgid "ERROR_ID_12"
+msgstr "장치를 등록하지 못했습니다."
+
+#: string "Failed to update device."
+msgid "ERROR_ID_13"
+msgstr "장치를 업데이트하지 못했습니다."
+
+#: string "Device user ID missing."
+msgid "ERROR_ID_14"
+msgstr "장치 사용자 ID가 누락되었습니다."
+
+#: string "Device user not found."
+msgid "ERROR_ID_15"
+msgstr "장치 사용자가 없습니다."
+
+#: string "Device user failed."
+msgid "ERROR_ID_16"
+msgstr "장치 사용자 실패입니다."
+
+#: string "Failed to create directory."
+msgid "ERROR_ID_17"
+msgstr "디렉토리를 만들지 못했습니다."
+
+#: string "Failed to delete directory."
+msgid "ERROR_ID_18"
+msgstr "디렉토리를 삭제하지 못했습니다."
+
+#: string "Directory name missing."
+msgid "ERROR_ID_19"
+msgstr "디렉토리 이름이 누락되었습니다."
+
+#: string "Directory does not exist."
+msgid "ERROR_ID_20"
+msgstr "디렉토리가 존재하지 않습니다."
+
+#: string "Directory already exists."
+msgid "ERROR_ID_21"
+msgstr "디렉토리가 이미 존재합니다."
+
+#: string "Directory not empty."
+msgid "ERROR_ID_22"
+msgstr "디렉토리가 비어 있지 않습니다."
+
+#: string "Error code not found."
+msgid "ERROR_ID_23"
+msgstr "오류 코드가 없습니다."
+
+#: string "Error name not found."
+msgid "ERROR_ID_24"
+msgstr "오류 이름이 없습니다."
+
+#: string "File already exists."
+msgid "ERROR_ID_25"
+msgstr "파일이 이미 존재합니다."
+
+#: string "File not found."
+msgid "ERROR_ID_26"
+msgstr "파일이 없습니다."
+
+#: string "Failed to upload file."
+msgid "ERROR_ID_27"
+msgstr "파일을 업로드하지 못했습니다."
+
+#: string "Failed to get status."
+msgid "ERROR_ID_28"
+msgstr "상태를 가져오지 못했습니다."
+
+#: string "Failed to get user."
+msgid "ERROR_ID_29"
+msgstr "사용자를 가져오지 못했습니다."
+
+#: string "Invalid device user ID or authorization code."
+msgid "ERROR_ID_30"
+msgstr "유효하지 않은 장치 사용자 ID 또는 인증 코드입니다."
+
+#: string "Invalid login."
+msgid "ERROR_ID_31"
+msgstr "유효하지 않은 로그인입니다."
+
+#: string "Invalid username or password."
+msgid "ERROR_ID_32"
+msgstr "유효하지 않은 사용자 이름 또는 암호입니다."
+
+#: string "Invalid parameter."
+msgid "ERROR_ID_33"
+msgstr "유효하지 않은 매개변수입니다."
+
+#: string "Invalid path"
+msgid "ERROR_ID_34"
+msgstr "유효하지 않은 경로입니다."
+
+#: string "Failed to move file."
+msgid "ERROR_ID_35"
+msgstr "파일을 이동하지 못했습니다."
+
+#: string "Failed to move directory."
+msgid "ERROR_ID_36"
+msgstr "디렉토리를 이동하지 못했습니다."
+
+#: string "New path already exists."
+msgid "ERROR_ID_37"
+msgstr "새 경로가 이미 존재합니다."
+
+#: string "New path invalid."
+msgid "ERROR_ID_38"
+msgstr "새 경로가 유효하지 않습니다."
+
+#: string "New path missing."
+msgid "ERROR_ID_39"
+msgstr "새 경로가 누락되었습니다."
+
+#: string "New share is missing."
+msgid "ERROR_ID_40"
+msgstr "새 공유가 누락되었습니다."
+
+#: string "Parameter is missing."
+msgid "ERROR_ID_41"
+msgstr "매개변수가 누락되었습니다."
+
+#: string "Path is not a directory."
+msgid "ERROR_ID_42"
+msgstr "경로가 디렉토리가 아닙니다."
+
+#: string "Path is not a file."
+msgid "ERROR_ID_43"
+msgstr "경로가 파일이 아닙니다."
+
+#: string "Path not found."
+msgid "ERROR_ID_44"
+msgstr "경로가 없습니다."
+
+#: string "Path not valid."
+msgid "ERROR_ID_45"
+msgstr "경로가 유효하지 않습니다."
+
+#: string "Share is inaccessible."
+msgid "ERROR_ID_46"
+msgstr "공유에 액세스할 수 없습니다."
+
+#: string "Share name is missing."
+msgid "ERROR_ID_47"
+msgstr "공유 이름이 누락되었습니다."
+
+#: string "Failed to create user."
+msgid "ERROR_ID_48"
+msgstr "사용자를 만들지 못했습니다."
+
+#: string "Failed to delete user."
+msgid "ERROR_ID_49"
+msgstr "사용자를 삭제하지 못했습니다."
+
+#: string "Parameter user_id is missing."
+msgid "ERROR_ID_50"
+msgstr "매개변수 user_id가 누락되었습니다."
+
+#: string "Parameter user_id or username is missing."
+msgid "ERROR_ID_51"
+msgstr "매개변수 user_id 또는 사용자 이름이 누락되었습니다."
+
+#: string "User ID not found."
+msgid "ERROR_ID_52"
+msgstr "사용자 ID가 없습니다."
+
+#: string "Failed to update user."
+msgid "ERROR_ID_53"
+msgstr "사용자를 업데이트하지 못했습니다."
+
+#: string "User name already exists."
+msgid "ERROR_ID_54"
+msgstr "사용자 이름이 이미 존재합니다."
+
+#: string "Parameter username is missing."
+msgid "ERROR_ID_55"
+msgstr "매개변수 사용자 이름이 누락되었습니다."
+
+#: string "Username not found."
+msgid "ERROR_ID_56"
+msgstr "사용자 이름이 없습니다."
+
+#: string "User not authorized."
+msgid "ERROR_ID_57"
+msgstr "사용자가 인증되지 않았습니다."
+
+#: string "User not logged in."
+msgid "ERROR_ID_58"
+msgstr "사용자가 로그인하지 않았습니다."
+
+#: string "Failed to verify remote user."
+msgid "ERROR_ID_59"
+msgstr "원격 사용자를 확인하지 못했습니다."
+
+#: string "Remote login is not allowed."
+msgid "ERROR_ID_60"
+msgstr "원격 로그인은 허용되지 않습니다."
+
+#: string "Failed to get file contents."
+msgid "ERROR_ID_61"
+msgstr "파일 내용을 가져오지 못했습니다."
+
+#: string "New share not found."
+msgid "ERROR_ID_62"
+msgstr "새 공유가 없습니다."
+
+#: string "Start or end out of range."
+msgid "ERROR_ID_63"
+msgstr "시작 또는 끝이 범위를 벗어났습니다."
+
+#: string "Failed to append file."
+msgid "ERROR_ID_64"
+msgstr "파일을 추가하지 못했습니다."
+
+#: string "Failed to get album item contents."
+msgid "ERROR_ID_65"
+msgstr "앨범 항목 내용을 가져오지 못했습니다."
+
+#: string "Invalid device user ID."
+msgid "ERROR_ID_66"
+msgstr "유효하지 않은 장치 사용자 ID입니다."
+
+#: string "Album not found."
+msgid "ERROR_ID_67"
+msgstr "앨범이 없습니다."
+
+#: string "Failed to update device user."
+msgid "ERROR_ID_68"
+msgstr "장치 사용자를 업데이트하지 못했습니다."
+
+#: string "No share access."
+msgid "ERROR_ID_69"
+msgstr "공유에 액세스할 수 없습니다."
+
+#: string "Failed to verify remote user."
+msgid "ERROR_ID_70"
+msgstr "원격 사용자를 확인하지 못했습니다."
+
+#: string "Invalid character."
+msgid "ERROR_ID_71"
+msgstr "유효하지 않은 문자입니다."
+
+#: string "Failed to create device."
+msgid "ERROR_ID_72"
+msgstr "장치를 만들지 못했습니다."
+
+#: string "Failed to create device user."
+msgid "ERROR_ID_73"
+msgstr "장치 사용자를 만들지 못했습니다."
+
+#: string "Failed to get metadb info."
+msgid "ERROR_ID_74"
+msgstr "metadb 정보를 가져오지 못했습니다."
+
+#: string "Share not found."
+msgid "ERROR_ID_75"
+msgstr "공유가 없습니다."
+
+#: string "Invalid share."
+msgid "ERROR_ID_76"
+msgstr "유효하지 않은 공유입니다."
+
+#: string "Failed to delete file."
+msgid "ERROR_ID_77"
+msgstr "파일을 삭제하지 못했습니다."
+
+#: string "Failed to get user."
+msgid "ERROR_ID_78"
+msgstr "사용자를 가져오지 못했습니다."
+
+#: string "Failed to add user to share access list."
+msgid "ERROR_ID_79"
+msgstr "공유 액세스 목록에 사용자를 추가하지 못했습니다."
+
+#: string "Failed to update share access list."
+msgid "ERROR_ID_80"
+msgstr "공유 액세스 목록을 업데이트하지 못했습니다."
+
+#: string "No volumes found."
+msgid "ERROR_ID_81"
+msgstr "볼륨이 없습니다."
+
+#: string "Volume not found."
+msgid "ERROR_ID_82"
+msgstr "볼륨이 없습니다."
+
+#: string "Failed to create volume."
+msgid "ERROR_ID_83"
+msgstr "볼륨을 만들지 못했습니다."
+
+#: string "Volume already exists."
+msgid "ERROR_ID_84"
+msgstr "볼륨이 이미 존재합니다."
+
+#: string "Volume information missing."
+msgid "ERROR_ID_85"
+msgstr "볼륨 정보가 누락되었습니다."
+
+#: string "Failed to create volume share."
+msgid "ERROR_ID_86"
+msgstr "볼륨 공유를 만들지 못했습니다."
+
+#: string "Failed to update volume share."
+msgid "ERROR_ID_87"
+msgstr "볼륨 공유를 업데이트하지 못했습니다."
+
+#: string "Failed to delete volume share."
+msgid "ERROR_ID_88"
+msgstr "볼륨 공유를 삭제하지 못했습니다."
+
+#: string "Parameter is conflicting."
+msgid "ERROR_ID_89"
+msgstr "매개변수가 충돌합니다."
+
+#: string "User not found."
+msgid "ERROR_ID_90"
+msgstr "사용자가 없습니다."
+
+#: string "Source file missing."
+msgid "ERROR_ID_91"
+msgstr "소스 파일이 누락되었습니다."
+
+#: string "File path missing."
+msgid "ERROR_ID_92"
+msgstr "파일 경로가 누락되었습니다."
+
+#: string "Invalid parameter value."
+msgid "ERROR_ID_93"
+msgstr "유효하지 않은 매개변수 값입니다."
+
+#: string "Invalid start time."
+msgid "ERROR_ID_94"
+msgstr "유효하지 않은 시작 시간입니다."
+
+#: string "Device name missing."
+msgid "ERROR_ID_95"
+msgstr "장치 이름이 누락되었습니다."
+
+#: string "Invalid modified time."
+msgid "ERROR_ID_96"
+msgstr "유효하지 않은 수정 시간입니다."
+
+#: string "Failed to update modified time."
+msgid "ERROR_ID_97"
+msgstr "수정 시간을 업데이트하지 못했습니다."
+
+#: string "No matching shares were found."
+msgid "ERROR_ID_98"
+msgstr "일치하는 공유가 없습니다."
+
+#: string "Share function failed."
+msgid "ERROR_ID_99"
+msgstr "공유 기능에 실패했습니다."
+
+#: string "Operation is forbidden."
+msgid "ERROR_ID_100"
+msgstr "금지된 조작입니다."
+
+# Edit - error in msgstr - fixed 5-21 - dms
+#: string "Failed to create share; share name already exists."
+msgid "ERROR_ID_101"
+msgstr "공유를 만들지 못했습니다. 공유 이름이 이미 존재합니다."
+
+#: string "Failed to create share."
+msgid "ERROR_ID_102"
+msgstr "공유를 만들지 못했습니다."
+
+#: string "Failed to update share."
+msgid "ERROR_ID_103"
+msgstr "공유를 업데이트하지 못했습니다."
+
+#: string "Failed to delete share."
+msgid "ERROR_ID_104"
+msgstr "공유를 삭제하지 못했습니다."
+
+#: string "Invalid share name."
+msgid "ERROR_ID_105"
+msgstr "유효하지 않은 공유 이름입니다."
+
+#: string "Share access already exists."
+msgid "ERROR_ID_106"
+msgstr "공유 액세스가 이미 존재합니다."
+
+#: string "Share already exists."
+msgid "ERROR_ID_107"
+msgstr "공유가 이미 존재합니다."
+
+#: string "Share access not found."
+msgid "ERROR_ID_108"
+msgstr "공유 액세스가 없습니다."
+
+#: string "New directory not found."
+msgid "ERROR_ID_109"
+msgstr "새 디렉토리가 없습니다."
+
+#: string "Remote account conflict."
+msgid "ERROR_ID_110"
+msgstr "원격 계정이 충돌합니다."
+
+#: string "Failed to get SSL certificate from central server."
+msgid "ERROR_ID_111"
+msgstr "중앙 서버에서 SSL 인증서를 가져오지 못했습니다."
+
+#: string "Unauthenticated login."
+msgid "ERROR_ID_112"
+msgstr "인증되지 않은 로그인입니다."
+
+#: string "Album access not found."
+msgid "ERROR_ID_113"
+msgstr "앨범 액세스가 없습니다."
+
+#: string "Album access already exists."
+msgid "ERROR_ID_114"
+msgstr "앨범 액세스가 이미 존재합니다."
+
+#: string "Failed to delete user share access."
+msgid "ERROR_ID_115"
+msgstr "사용자 공유 액세스를 삭제하지 못했습니다."
+
+#: string "Failed to delete device users."
+msgid "ERROR_ID_116"
+msgstr "장치 사용자를 삭제하지 못했습니다."
+
+#: string "Failed to delete low-level OS user."
+msgid "ERROR_ID_117"
+msgstr "저급 OS 사용자를 삭제하지 못했습니다."
+
+#: string "Device name is invalid."
+msgid "ERROR_ID_118"
+msgstr "장치 이름이 유효하지 않습니다."
+
+#: string "Album item not found."
+msgid "ERROR_ID_119"
+msgstr "앨범 항목이 없습니다."
+
+#: string "No albums found."
+msgid "ERROR_ID_120"
+msgstr "앨범이 없습니다."
+
+#: string "No album items found."
+msgid "ERROR_ID_121"
+msgstr "앨범 항목이 없습니다."
+
+#: string "Album ID is missing."
+msgid "ERROR_ID_122"
+msgstr "앨범 ID가 누락되었습니다."
+
+#: string "Invalid album name."
+msgid "ERROR_ID_123"
+msgstr "유효하지 않은 앨범 이름입니다."
+
+#: string "Album already exists."
+msgid "ERROR_ID_124"
+msgstr "앨범이 이미 존재합니다."
+
+#: string "Image library not installed."
+msgid "ERROR_ID_125"
+msgstr "이미지 라이브러리가 설치되지 않았습니다."
+
+#: string "Database access failed."
+msgid "ERROR_ID_126"
+msgstr "데이터베이스 액세스에 실패했습니다."
+
+#: string "Deleting the Public share is forbidden."
+msgid "ERROR_ID_127"
+msgstr "공용 공유를 삭제하는 것은 허용되지 않습니다."
+
+#: string "Renaming the Public share is forbidden."
+msgid "ERROR_ID_128"
+msgstr "공용 공유의 이름을 바꾸는 것은 허용되지 않습니다."
+
+#: string "Failed to copy file."
+msgid "ERROR_ID_129"
+msgstr "파일을 복사하지 못했습니다."
+
+#: string "Failed to copy directory."
+msgid "ERROR_ID_130"
+msgstr "디렉토리를 복사하지 못했습니다."
+
+#: string "File list is empty."
+msgid "ERROR_ID_131"
+msgstr "파일 목록이 비어 있습니다."
+
+#: string "Both default ports and manual ports true."
+msgid "ERROR_ID_132"
+msgstr "기본 포트와 수동 포트가 모두 있습니다."
+
+#: string "No results found."
+msgid "ERROR_ID_133"
+msgstr "결과가 없습니다."
+
+#: string "Album item already exists."
+msgid "ERROR_ID_134"
+msgstr "앨범 항목이 이미 존재합니다."
+
+#: string "Social Network is missing."
+msgid "ERROR_ID_135"
+msgstr "소셜 네트워크가 누락되었습니다."
+
+#: string "Social Network not found."
+msgid "ERROR_ID_136"
+msgstr "소셜 네트워크가 없습니다."
+
+#: string "Social Network expired."
+msgid "ERROR_ID_137"
+msgstr "소셜 네트워크가 만료되었습니다."
+
+#: string "Social Network failed."
+msgid "ERROR_ID_138"
+msgstr "소셜 네트워크가 실패했습니다."
+
+#: string "Group not found."
+msgid "ERROR_ID_139"
+msgstr "그룹이 없습니다."
+
+#: string "EULA not accepted."
+msgid "ERROR_ID_140"
+msgstr "EULA가 수락되지 않았습니다."
+
+#: string "EULA bad request."
+msgid "ERROR_ID_141"
+msgstr "잘못된 EULA 요청입니다."
+
+#: string "EULA internal server error."
+msgid "ERROR_ID_142"
+msgstr "EULA 내부 서버 오류입니다."
+
+#: string "Device not registered."
+msgid "ERROR_ID_143"
+msgstr "장치가 등록되지 않았습니다."
+
+#: string "Device registration bad request."
+msgid "ERROR_ID_144"
+msgstr "잘못된 장치 등록 요청입니다."
+
+#: string "Device internal server error."
+msgid "ERROR_ID_145"
+msgstr "장치 내부 서버 오류입니다."
+
+#: string "System configuration internal server error."
+msgid "ERROR_ID_146"
+msgstr "시스템 구성 내부 서버 오류입니다."
+
+#: string "System configuration bad request."
+msgid "ERROR_ID_147"
+msgstr "잘못된 장치 구성 요청입니다."
+
+#: string "Device description bad request."
+msgid "ERROR_ID_148"
+msgstr "잘못된 장치 설명 요청입니다."
+
+#: string "Device description internal server error."
+msgid "ERROR_ID_149"
+msgstr "장치 설명 내부 서버 오류입니다."
+
+#: string "Media server configuration internal server error."
+msgid "ERROR_ID_150"
+msgstr "미디어 서버 구성 내부 서버 오류입니다."
+
+#: string "Media server configuration bad request."
+msgid "ERROR_ID_151"
+msgstr "잘못된 미디어 서버 구성 요청입니다."
+
+#: string "Media server blocked list internal server error."
+msgid "ERROR_ID_152"
+msgstr "미디어 서버 차단 목록 내부 서버 오류입니다."
+
+#: string "Media server blocked list bad request."
+msgid "ERROR_ID_153"
+msgstr "잘못된 미디어 서버 차단 목록 요청입니다."
+
+#: string "Disk status internal server error."
+msgid "ERROR_ID_154"
+msgstr "디스크 상태 내부 서버 오류입니다."
+
+#: string "HDD standby time internal server error."
+msgid "ERROR_ID_155"
+msgstr "HDD 대기 시간 내부 서버 오류입니다."
+
+#: string "HDD standby time bad request."
+msgid "ERROR_ID_156"
+msgstr "잘못된 HDD 대기 시간 요청입니다."
+
+#: string "Smart test bad request."
+msgid "ERROR_ID_157"
+msgstr "잘못된 스마트 테스트 요청입니다."
+
+#: string "Smart test internal server error."
+msgid "ERROR_ID_158"
+msgstr "스마트 테스트 내부 서버 오류입니다."
+
+#: string "Media server connected list internal server error."
+msgid "ERROR_ID_159"
+msgstr "미디어 서버 연결 목록 내부 서버 오류입니다."
+
+#: string "Media server connected list bad request."
+msgid "ERROR_ID_160"
+msgstr "잘못된 미디어 서버 연결 목록 요청입니다."
+
+#: string "Media server connected list not found."
+msgid "ERROR_ID_161"
+msgstr "미디어 서버 연결 목록이 없습니다."
+
+#: string "Media server database internal server error."
+msgid "ERROR_ID_162"
+msgstr "미디어 서버 데이터베이스 내부 서버 오류입니다."
+
+#: string "Media server database bad request."
+msgid "ERROR_ID_163"
+msgstr "잘못된 미디어 서버 데이터베이스 요청입니다."
+
+#: string "Copy status internal server error."
+msgid "ERROR_ID_164"
+msgstr "복사 상태 내부 서버 오류입니다."
+
+#: string "Storage usage by share internal server error."
+msgid "ERROR_ID_165"
+msgstr "공유의 저장장치 사용량 내부 서버 오류입니다."
+
+#: string "Storage usage internal server error."
+msgid "ERROR_ID_166"
+msgstr "저장장치 사용량 내부 서버 오류입니다."
+
+#: string "Shutdown bad request."
+msgid "ERROR_ID_167"
+msgstr "잘못된 종료 요청입니다."
+
+#: string "Shutdown internal server error."
+msgid "ERROR_ID_168"
+msgstr "종료 내부 서버 오류입니다."
+
+#: string "System factory restore bad request."
+msgid "ERROR_ID_169"
+msgstr "잘못된 시스템 초기 설정 복원 요청입니다."
+
+#: string "System factory restore internal server error."
+msgid "ERROR_ID_170"
+msgstr "시스템 초기 설정 복원 내부 서버 오류입니다."
+
+#: string "System information internal server error."
+msgid "ERROR_ID_171"
+msgstr "시스템 정보 내부 서버 오류입니다."
+
+#: string "System state internal server error."
+msgid "ERROR_ID_172"
+msgstr "시스템 상태 내부 서버 오류입니다."
+
+#: string "Firmware info internal server error."
+msgid "ERROR_ID_173"
+msgstr "펌웨어 정보 내부 서버 오류입니다."
+
+#: string "Firmware info bad request."
+msgid "ERROR_ID_174"
+msgstr "잘못된 펌웨어 정보 요청입니다."
+
+#: string "Firmware update configuration bad request."
+msgid "ERROR_ID_175"
+msgstr "잘못된 펌웨어 업데이트 구성 요청입니다."
+
+#: string "Firmware update configuration internal server error."
+msgid "ERROR_ID_176"
+msgstr "펌웨어 업데이트 구성 내부 서버 오류입니다."
+
+#: string "Firmware update bad request."
+msgid "ERROR_ID_177"
+msgstr "잘못된 펌웨어 업데이트 요청입니다."
+
+#: string "Firmware update internal server error."
+msgid "ERROR_ID_178"
+msgstr "펌웨어 업데이트 내부 서버 오류입니다."
+
+#: string "Network not found. Check your SSID and/or re-scan the networks."
+msgid "ERROR_ID_179"
+msgstr "네트워크가 없습니다. SSID를 확인하거나 네트워크를 다시 검색하십시오."
+
+#: string "HW or driver errors."
+msgid "ERROR_ID_180"
+msgstr "HW 또는 드라이버 오류입니다."
+
+#: string "User not authorized."
+msgid "ERROR_ID_181"
+msgstr "사용자가 인증되지 않았습니다."
+
+#: string "Not found"
+msgid "ERROR_ID_182"
+msgstr "없습니다."
+
+#: string "Owner configuration bad request."
+msgid "ERROR_ID_183"
+msgstr "잘못된 소유자 구성 요청입니다."
+
+#: string "Owner configuration internal server error."
+msgid "ERROR_ID_184"
+msgstr "소유자 구성 내부 서버 오류입니다."
+
+#: string "Incorrect password."
+msgid "ERROR_ID_185"
+msgstr "올바르지 않은 암호입니다."
+
+#: string "WPS-PBC session overlap."
+msgid "ERROR_ID_186"
+msgstr "WPS-PBC 세션이 겹칩니다."
+
+#: string "Firmware update bad request."
+msgid "ERROR_ID_187"
+msgstr "잘못된 펌웨어 업데이트 요청입니다."
+
+#: string "Firmware update internal server error."
+msgid "ERROR_ID_188"
+msgstr "펌웨어 업데이트 내부 서버 오류입니다."
+
+#: string "Network not found. Check your SSID and/or re-scan the networks."
+msgid "ERROR_ID_189"
+msgstr "네트워크가 없습니다. SSID를 확인하거나 네트워크를 다시 검색하십시오."
+
+#: string "Failed getting IP address."
+msgid "ERROR_ID_190"
+msgstr "IP 주소를 가져오지 못했습니다."
+
+#: string "Drive not found."
+msgid "ERROR_ID_191"
+msgstr "드라이브가 없습니다."
+
+#: string "Drive handle missing."
+msgid "ERROR_ID_192"
+msgstr "드라이브 핸들이 누락되었습니다."
+
+#: string "Password missing."
+msgid "ERROR_ID_193"
+msgstr "암호가 누락되었습니다."
+
+#: string "Invalid save value."
+msgid "ERROR_ID_194"
+msgstr "유효하지 않은 저장 값입니다."
+
+#: string "Drive not locked."
+msgid "ERROR_ID_195"
+msgstr "드라이브가 잠기지 않았습니다."
+
+#: string "Unlock failed"
+msgid "ERROR_ID_196"
+msgstr "잠금을 해제하지 못했습니다."
+
+#: string "Unlock failed - unlock attempts exceeded."
+msgid "ERROR_ID_197"
+msgstr "잠금을 해제하지 못했습니다. 잠금 해제 시도 제한 횟수가 초과되었습니다."
+
+#: string "Invalid encoding value."
+msgid "ERROR_ID_198"
+msgstr "유효하지 않은 인코딩 값입니다."
+
+#: string "Unsupported request."
+msgid "ERROR_ID_199"
+msgstr "지원되지 않는 요청입니다."
+
+#: string "Invalid standby timer value."
+msgid "ERROR_ID_200"
+msgstr "유효하지 않은 대기 타이머 값입니다."
+
+#: string "Standby timer is unsupported."
+msgid "ERROR_ID_201"
+msgstr "지원되지 않는 대기 타이머입니다."
+
+#: string "Invalid backup enabled parameter value."
+msgid "ERROR_ID_202"
+msgstr "유효하지 않은 백업 활성화 매개변수 값입니다."
+
+#: string "Invalid backup size limit parameter value."
+msgid "ERROR_ID_203"
+msgstr "유효하지 않은 백업 크게 한도 매개변수 값입니다."
+
+#: string "Unable to create Time Machine directory."
+msgid "ERROR_ID_204"
+msgstr "Time Machine 디렉토리를 만들 수 없습니다."
+
+#: string "Unable to configure Time Machine directory."
+msgid "ERROR_ID_205"
+msgstr "Time Machine 디렉토리를 구성할 수 없습니다."
+
+#: string "Backup share does not exist."
+msgid "ERROR_ID_206"
+msgstr "백업 공유가 존재하지 않습니다."
+
+#: string "Multiple interfaces on the same network."
+msgid "ERROR_ID_207"
+msgstr "동일한 네트워크에 여러 인터페이스가 있습니다."
+
+#: string "Internal error"
+msgid "ERROR_ID_208"
+msgstr "내부 오류입니다."
+
+#: string "Crawler is not running"
+msgid "ERROR_ID_209"
+msgstr "크롤러가 실행 중이지 않습니다."
+
+#: string "APC write failure"
+msgid "ERROR_ID_210"
+msgstr "APC 쓰기 오류입니다."
+
+#: string "Failed to get jobs"
+msgid "ERROR_ID_211"
+msgstr "작업을 가져오지 못했습니다."
+
+#: string "Failed to create jobs"
+msgid "ERROR_ID_212"
+msgstr "작업을 만들지 못했습니다."
+
+#: string "Failed to delete jobs"
+msgid "ERROR_ID_213"
+msgstr "작업을 삭제하지 못했습니다."
+
+#: string "Failed to update jobs"
+msgid "ERROR_ID_214"
+msgstr "작업을 업데이트하지 못했습니다."
+
+#: string "Jobs ID missing"
+msgid "ERROR_ID_215"
+msgstr "작업 ID가 누락되었습니다."
+
+#: string "Failed to get job ID"
+msgid "ERROR_ID_216"
+msgstr "작업 ID를 가져오지 못했습니다."
+
+#: string "Failed to create job ID"
+msgid "ERROR_ID_217"
+msgstr "작업 ID를 만들지 못했습니다."
+
+#: string "Failed to delete job ID"
+msgid "ERROR_ID_218"
+msgstr "작업 ID를 삭제하지 못했습니다."
+
+#: string "Failed to update job ID"
+msgid "ERROR_ID_219"
+msgstr "작업 ID를 업데이트하지 못했습니다."
+
+#: string "Jobs not found"
+msgid "ERROR_ID_220"
+msgstr "작업이 없습니다."
+
+#: string "Jobs operation type not found"
+msgid "ERROR_ID_221"
+msgstr "작업 유형이 없습니다."
+
+#: string "Transcoding scheduled"
+msgid "ERROR_ID_222"
+msgstr "코드 변환이 예정되었습니다."
+
+#: string "Unsupported operation"
+msgid "ERROR_ID_223"
+msgstr "지원되지 않는 작업입니다."
+
+#: string "Dropbox request parameter error"
+msgid "ERROR_ID_224"
+msgstr "드롭 상자 요청 매개변수 오류입니다."
+
+#: string "Dropbox file not found on server"
+msgid "ERROR_ID_225"
+msgstr "서버에 드롭 상자 파일이 없습니다."
+
+#: string "Dropbox HTTP error response"
+msgid "ERROR_ID_226"
+msgstr "드롭 상자 HTTP 오류 응답입니다."
+
+#: string "Dropbox server connection error"
+msgid "ERROR_ID_227"
+msgstr "드롭 상자 서버 연결 오류입니다."
+
+#: string "Destionation path already exists"
+msgid "ERROR_ID_228"
+msgstr "대상 경로가 이미 존재합니다."
+
+#: string "Invalid wdmc stage"
+msgid "ERROR_ID_229"
+msgstr "유효하지 않은 wdmc 단계입니다."
+
+#: string "Media server not running"
+msgid "ERROR_ID_230"
+msgstr "미디어 서버가 실행 중이지 않습니다."
+
+#: string "Invalid wdmc category"
+msgid "ERROR_ID_231"
+msgstr "유효하지 않은 wdmc 범주입니다."
+
+#: string "Source and destination files are identical."
+msgid "ERROR_ID_232"
+msgstr "소스 파일과 대상 파일이 동일합니다."
+
+#: string "Error opening source file handle."
+msgid "ERROR_ID_233"
+msgstr "소스 파일 핸들 열기 오류입니다."
+
+#: string "Error opening destination file handle."
+msgid "ERROR_ID_234"
+msgstr "대상 파일 핸들 열기 오류입니다."
+
+#: string "A Device User with the same email address already exists."
+msgid "ERROR_ID_235"
+msgstr "이메일 주소가 동일한 장치 사용자가 이미 있습니다."
+
+#: string "Requested resource not found."
+msgid "ERROR_ID_236"
+msgstr "요청된 자원이 없습니다."
+
+#: string "Request not supported"
+msgid "ERROR_ID_237"
+msgstr "지원되지 않는 요청입니다."
+
+#: string "Bad request"
+msgid "ERROR_ID_238"
+msgstr "잘못된 요청입니다."
+
+#: string "Error in internal server"
+msgid "ERROR_ID_239"
+msgstr "내부 서버 오류입니다."
+
+#: string "Not authorized to trigger send alert email."
+msgid "ERROR_ID_240"
+msgstr "알림 이메일 보내기를 트리거하도록 인증되지 않았습니다."
+
+#: string "Error generating system log."
+msgid "ERROR_ID_241"
+msgstr "시스템 로그 생성 오류입니다."
+
+#: string "Error in uploading system log."
+msgid "ERROR_ID_242"
+msgstr "시스템 로그 업로드 오류입니다."
+
+#: string "Error in reading getServiceStartUp.sh"
+msgid "ERROR_ID_243"
+msgstr "getServiceStartUp.sh 읽기 오류입니다."
+
+#: string "Error in reading getFixedNtpServer.sh"
+msgid "ERROR_ID_244"
+msgstr "getFixedNtpServer.sh 읽기 오류입니다."
+
+#: string "Error in reading getExtraNtpServer.sh"
+msgid "ERROR_ID_245"
+msgstr "getExtraNtpServer.sh 읽기 오류입니다."
+
+#: string "Internal error in datetime configuration"
+msgid "ERROR_ID_246"
+msgstr "날짜/시간 구성 내부 오류입니다."
+
+#: string "Bad request in datetime configuration"
+msgid "ERROR_ID_247"
+msgstr "잘못된 날짜/시간 구성 요청입니다."
+
+#: string "Internal Server error for Device User"
+msgid "ERROR_ID_248"
+msgstr "장치 사용자에 대한 내부 서버 오류입니다."
+
+#: string "iTunes configuration internal server error."
+msgid "ERROR_ID_249"
+msgstr "iTunes 구성 내부 서버 오류입니다."
+
+#: string "Bad request in iTunes configuration."
+msgid "ERROR_ID_250"
+msgstr "잘못된 iTunes 구성 요청입니다."
+
+#: string "Language configuration not found"
+msgid "ERROR_ID_251"
+msgstr "언어 구성이 없습니다."
+
+#: string "Language configuration internal server error."
+msgid "ERROR_ID_252"
+msgstr "언어 구성 내부 서버 오류입니다."
+
+#: string "MicroCrawler status failed."
+msgid "ERROR_ID_253"
+msgstr "MicroCrawler 상태 오류입니다."
+
+#: string "Media crawler internal server error."
+msgid "ERROR_ID_254"
+msgstr "미디어 크롤러 내부 서버 오류입니다."
+
+#: string "USB internal server error"
+msgid "ERROR_ID_255"
+msgstr "USB 내부 서버 오류입니다."
+
+#: string "Error in DB file location"
+msgid "ERROR_ID_256"
+msgstr "DB 파일 위치 오류입니다."
+
+#: string "Failed album access"
+msgid "ERROR_ID_257"
+msgstr "앨범에 액세스하지 못했습니다."
+
+#: string "Album is empty set"
+msgid "ERROR_ID_258"
+msgstr "앨범이 빈 세트입니다."
+
+#: string "Album name is missing"
+msgid "ERROR_ID_259"
+msgstr "앨범 이름이 누락되었습니다."
+
+#: string "Album name info failed"
+msgid "ERROR_ID_260"
+msgstr "앨범 이름 정보 오류입니다."
+
+#: string "Album item info failed"
+msgid "ERROR_ID_261"
+msgstr "앨범 항목 정보 오류입니다."
+
+#: string "Device already registered"
+msgid "ERROR_ID_262"
+msgstr "장치가 이미 등록되었습니다."
+
+#: string "Device registration pending"
+msgid "ERROR_ID_263"
+msgstr "장치 등록이 보류 중입니다."
+
+#: string "Device registration unsuccessful"
+msgid "ERROR_ID_264"
+msgstr "장치 등록에 성공하지 못했습니다."
+
+#: string "Network Configuration bad request"
+msgid "ERROR_ID_265"
+msgstr "잘못된 네트워크 구성 요청입니다."
+
+#: string "Network Configuration server error"
+msgid "ERROR_ID_266"
+msgstr "네트워크 구성 서버 오류입니다."
+
+#: string "Network Service Configuration Bad request"
+msgid "ERROR_ID_267"
+msgstr "잘못된 네트워크 서비스 구성 요청입니다."
+
+#: string "Network service configuration server error."
+msgid "ERROR_ID_268"
+msgstr "네트워크 서비스 구성 서버 오류입니다."
+
+#: string "Network workgroup bad request."
+msgid "ERROR_ID_269"
+msgstr "잘못된 네트워크 작업 그룹 요청입니다."
+
+#: string "Network workgroup server error."
+msgid "ERROR_ID_270"
+msgstr "네트워크 작업 그룹 서버 오류입니다."
+
+#: string "SSH configuration bad request."
+msgid "ERROR_ID_271"
+msgstr "잘못된 SSH 구성 요청입니다."
+
+#: string "SSH configuration server error."
+msgid "ERROR_ID_272"
+msgstr "SSH 구성 서버 오류입니다."
+
+#: string "Update counter not found."
+msgid "ERROR_ID_273"
+msgstr "업데이트 카운터가 없습니다."
+
+#: string "Time Machine parameter value missing."
+msgid "ERROR_ID_274"
+msgstr "Time Machine 매개변수 값이 누락되었습니다."
+
+#: string "Invalid file row offset."
+msgid "ERROR_ID_275"
+msgstr "유효하지 않은 파일 행 오프셋입니다."
+
+#: string "Invalid dir row offset."
+msgid "ERROR_ID_276"
+msgstr "유효하지 않은 디렉토리 행 오프셋입니다."
+
+#: string "Invalid file row count."
+msgid "ERROR_ID_277"
+msgstr "유효하지 않은 파일 행 개수입니다."
+
+#: string "Invalid dir row count."
+msgid "ERROR_ID_278"
+msgstr "유효하지 않은 디렉토리 행 개수입니다."
+
+#: string "Value of parameter http_range cannot be negative."
+msgid "ERROR_ID_279"
+msgstr "매개변수 http_range 값은 음수가 될 수 없습니다."
+
+#: string "Network interface does not exist."
+msgid "ERROR_ID_280"
+msgstr "네트워크 인터페이스가 존재하지 않습니다."
+
+#: string "File does not exist."
+msgid "ERROR_ID_281"
+msgstr "파일이 존재하지 않습니다."
+
+#--- new for Sequoia 282 forward 3/20/13 ---
+
+#: string "To copy, the destination directory path cannot be inside the source directory."
+msgid "ERROR_ID_282"
+msgstr "복사하려면 대상 디렉토리 경로가 소스 디렉토리 내부이면 안 됩니다."
+
+#: string "Local access point internal server error."
+msgid "ERROR_ID_283"
+msgstr "로컬 액세스 지점 내부 서버 오류입니다."
+
+#: string "LED configuration internal server error."
+msgid "ERROR_ID_284"
+msgstr "LED 구성 내부 서버 오류입니다."
+
+
+#: string "LED configuration bad request."
+msgid "ERROR_ID_285"
+msgstr "잘못된 LED 구성 요청입니다."
+
+#: string "Language configuration already exists."
+msgid "ERROR_ID_286"
+msgstr "언어 구성이 이미 존재합니다."
+
+#: string "Source and destination directory paths are identical."
+msgid "ERROR_ID_287"
+msgstr "소스 디렉토리와 대상 디렉토리 경로가 동일합니다."
+
+#: string "No Alert email has been sent."
+msgid "ERROR_ID_288"
+msgstr "전송된 알림 이메일이 없습니다."
+
+#: string "This call should be from localhost only."
+msgid "ERROR_ID_289"
+msgstr "localhost에서만 이 호출이 가능합니다."
+
+#: string "Value provided for start time is not valid."
+msgid "ERROR_ID_290"
+msgstr "시작 시간으로 제공된 값이 유효하지 않습니다."
+
+#: string "Value provided for modifed date is invalid."
+msgid "ERROR_ID_291"
+msgstr "수정 날짜로 제공된 값이 유효하지 않습니다."
+
+#: string "Country name is not valid"
+msgid "ERROR_ID_292"
+msgstr "국가 이름이 유효하지 않습니다."
+
+#: string "Language is not valid"
+msgid "ERROR_ID_293"
+msgstr "언어가 유효하지 않습니다."
+
+#: string "Invalid first name"
+msgid "ERROR_ID_294"
+msgstr "유효하지 않은 이름입니다."
+
+#: string "Invalid last name"
+msgid "ERROR_ID_295"
+msgstr "유효하지 않은 성입니다."
+
+#: string "Invalid email address"
+msgid "ERROR_ID_296"
+msgstr "유효하지 않은 이메일 주소입니다."
+
+#: string "Invalid option"
+msgid "ERROR_ID_297"
+msgstr "유효하지 않은 옵션입니다."
+
+#: string "HDD Standby Time Minutes Bad Request"
+msgid "ERROR_ID_298"
+msgstr "잘못된 HDD 대기 시간 분 요청입니다."
+
+#: string "Enable HDD Standby Time Bad Request"
+msgid "ERROR_ID_299"
+msgstr "잘못된 HDD 대기 시간 활성화 요청입니다."
+
+#: string "File does not exist"
+msgid "ERROR_ID_300"
+msgstr "파일이 존재하지 않습니다."
+
+#: string "Device Description Bad Request"
+msgid "ERROR_ID_301"
+msgstr "잘못된 장치 설명 요청입니다."
+
+#: string "Device Description Name Bad Request"
+msgid "ERROR_ID_302"
+msgstr "잘못된 장치 설명 이름 요청입니다."
+
+
+#: string "Destination share not accessible"
+msgid "ERROR_ID_303"
+msgstr "대상 공유에 액세스할 수 없습니다."
+
+#: string "Either shareall or share_name parameter has to be specified."
+msgid "ERROR_ID_304"
+msgstr "shareall 또는 share_name 매개변수를 지정해야 합니다."
+
+#: string "WDMC Server reset failed."
+msgid "ERROR_ID_305"
+msgstr "WDMC 서버를 재설정하지 못했습니다."
+
+# --------- New strings 5/16 (second round Moravia submission) ---------
+
+#: string "Retrieving Partitions"
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_GETTING_PARTITIONS"
+msgstr "파티션 검색 중"
+
+#: string "Select a drive"
+msgid "LABEL_SELECT_A_DRIVE"
+msgstr "드라이브 선택"
+
+#: string "KB"
+msgid "GENERIC_KB"
+msgstr "KB"
+
+#: string "Resends the registration email."
+msgid "TOOLTIP_RESEND_EMAIL_ICON"
+msgstr "등록 이메일을 다시 보냅니다."
+
+#: string "Update registration email."
+msgid "TOOLTIP_UPDATE_EMAIL_ICON"
+msgstr "등록 이메일 업데이트"
+
+#: string "Elapsed time"
+msgid "CONTENT_SETTINGS_STRING_ELAPSED_TIME"
+msgstr "경과된 시간"
+
+
+# --- NEW strings (for Moravia round 2) submitting 6-11  ---
+
+# New - 5-21-13
+#: string "Username cannot start with a dash (-)."
+msgid "ERROR_USERNAME_INCORRECT_SYNTAX_DASH"
+msgstr "사용자 이름은 대시(-)로 시작할 수 없습니다."
+
+# New - 5-21-13
+#: string "First name cannot start with a dash (-).
+msgid "ERROR_ADD_USER_FIRST_NAME_INCORRECT_SYNTAX_DASH"
+msgstr "이름은 대시(-)로 시작할 수 없습니다."
+
+# New - 5-21-13
+#: string "Secure Shell (SSH) is a security protocol that provides an encrypted connection for logging into a remote server to view, transfer files, and execute programs on the server. For this reason, SSH should only be enabled by users with advanced network and Linux knowledge. Failure to use SSH properly can render your network server inoperable. If you enable SSH, do not share the root password with anyone you do not want to have access to your network server."  
+msgid "SETTINGS_NETWORK_SERVICES_TOOLTIP_SSH"
+msgstr "보안 셸(SSH)은 원격 서버에 로그인하여 파일을 보고 전송하고 서버에서 프로그램을 실행하는 데 필요한 암호화된 연결을 제공하는 보안 프로토콜입니다. 이 때문에 SSH은 고급 네트워크 및 Linux 지식을 가진 사용자만 활성화해야 합니다. SSH를 올바르게 사용하지 못하면 네트워크 서버가 작동하지 않을 수 있습니다. SSH를 활성화하는 경우 네트워크 서버에 액세스하지 못하게 할 사람에게 루트 암호를 공개하지 마십시오."
+
+# New - 5-21-13
+#: string "Note: User successfully added."
+msgid "LABEL_DESC_USER_ADDED_SUCCESSFULLY"
+msgstr "참고: 사용자가 정상적으로 추가되었습니다."
+
+
+# New - 5-21-13
+#: string "Accessing WD My Cloud..."
+msgid "CONTENT_SPLASH_STRING_ACCESSING"
+msgstr "WD My Cloud에 액세스 중입니다..."
+
+# New - 5-21-13
+#: string "Reading configuration information..."
+msgid "CONTENT_SPLASH_STRING_CONFIGURATION"
+msgstr "구성 정보를 읽는 중입니다..."
+
+# New - 5-21-13
+#: string "Attempting to authenticate..."
+msgid "CONTENT_SPLASH_STRING_AUTHENTICATE"
+msgstr "인증 시도 중입니다..."
+
+# New - 5-21-13
+#: string "Scanning"
+msgid "CONTENT_HOME_STRING_SCANNING"
+msgstr "검색 중입니다"
+
+# New - 5-22-13
+#: string "Scan complete. {0} videos processed."
+msgid "CONTENT_HOME_DIALOG_TOOLTIP_VIDEOS_SCANNED"
+msgstr "검색이 완료되었습니다. {0} 비디오가 처리되었습니다."
+
+# New - 5-22-13
+#: string "Scan complete. {0} music tracks processed."
+msgid "CONTENT_HOME_DIALOG_TOOLTIP_MUSIC_SCANNED"
+msgstr "검색이 완료되었습니다. {0} 음악 트랙이 처리되었습니다."
+
+# New - 5-22-13
+#: string "Scan complete. {0} photos processed."
+msgid "CONTENT_HOME_DIALOG_TOOLTIP_PHOTOS_SCANNED"
+msgstr "검색이 완료되었습니다. {0} 사진이 처리되었습니다."
+
+# New - 5-22-13
+#: string "Scan complete. {0} other file types processed."
+msgid "CONTENT_HOME_DIALOG_TOOLTIP_OTHERS_SCANNED"
+msgstr "검색이 완료되었습니다. {0} 다른 파일 유형이 처리되었습니다."
+
+# --- New strings added May 30 
+
+# NEW - ITR 76099
+#: string "Delete this cloud access."
+msgid "TOOLTIP_DELETE_DAC_ICON"
+msgstr "이 클라우드 액세스를 삭제합니다."
+ 
+# NEW - ITR 76099
+#: string "Delete this alert."
+msgid "TOOLTIP_DELETE_ALERT_ICON"
+msgstr "이 알림을 삭제합니다."
+
+# NEW - ITR 76099
+#: string "Delete email."
+msgid "TOOLTIP_DELETE_EMAIL_ICON"
+msgstr "이메일을 삭제합니다."
+
+# NEW - ITR 76099
+#: string "Delete user-defined NTP server."
+msgid "TOOLTIP_DELETE_USER_NTP_SERVER_ICON"
+msgstr "사용자 정의 NTP 서버를 삭제합니다."
+
+# NEW - ITR 76099
+#: string "Delete this notification email."
+msgid "TOOLTIP_DELETE_NOTIFICATION_EMAIL_ICON"
+msgstr "이 알림 이메일을 삭제합니다."
+
+# NEW 5.30.13
+#: string "Please provide a valid email for the admin user."
+msgid "ERROR_PROVIDE_VALID_EMAIL_ADDRESS_ADMIN_USER"
+msgstr "관리 사용자에 대한 유효한 이메일을 제공하십시오."
+
+# NEW 5.30.13 for ITR 76273
+#: string "Firmware upgrade in progress."
+msgid "CONTENT_SETTINGS_STRING_FIRMWARE_UPGRADE_IN_PROGRESS"
+msgstr "펌웨어 업그레이드가 진행 중입니다."
+
+# NEW 5.30.13 for ITR 76273
+#: string "Timeout; waiting for firmware upgrade. Verify that the LED on the front of your device is not red; then find the device on the network and reinitialize the web user interface. If the LED is red, reboot your drive manually."
+msgid "ERROR_FIRMWARE_UPGRADE_TIMEOUT"
+msgstr "제한 시간이 초과되었습니다. 펌웨어 업그레이드를 기다리는 중입니다. 장치 앞쪽의 LED가 빨간색인지 확인하십시오. 빨간색이 아니면 네트워크에서 장치를 찾아서 웹 사용자 인터페이스를 다시 초기화하십시오. LED가 빨간색이면 드라이브를 수동으로 다시 부팅하십시오."
+
+# NEW 5-31 ---
+
+#: string "Please enable cookies in your browser."
+msgid "LABEL_DESCR_PLEASE_ENABLE_COOKIES"
+msgstr "브라우저에서 쿠키를 활성화하십시오."
+
+#: string "Please enable JavaScript in your browser."
+msgid "LABEL_DESCR_PLEASE_ENABLE_JAVASCRIPT"
+msgstr "브라우저에서 JavaScript를 활성화하십시오."
+
+#: string "Internet Explorer 8 and higher is supported; please update your browser."
+msgid "LABEL_DESCR_IE7_NOT_SUPPORTED"
+msgstr "Internet Explorer 8 이상이 지원됩니다. 브라우저를 업데이트하십시오."
+
+# New 6-4 ---
+#: string "Protect Your Stuff"
+msgid "CONTENT_SAFEPOINTS_BUMPER_TITLE_PROTECT_STUFF"
+msgstr "사용자 정보 보호"
+
+# New 6-6-13 (76506)
+#: string "Give user cloud access by entering their email. Login instructions are sent to the email address provided."
+msgid "CONTENT_USERS_DIALOG_TOOLTIP_EMAIL"
+msgstr "이메일을 입력하여 사용자 클라우드 액세스를 부여합니다. 로그인 지침이 제공된 이메일 주소로 전송됩니다."
+
+
+# NEW 6-7 ---
+#: string "Previous Password"
+msgid "CONTENT_GENERIC_TEXTBOX_LABEL_OLD_PASSWORD"
+msgstr "이전 암호"
+
+
+# new 6-10 --
+#: string "Self Test Results"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_SELF_TEST_RESULTS"
+msgstr "자체 테스트 결과"
+
+# new 6-10 --
+#: string "Invalid Email"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_INVALID_EMAIL"
+msgstr "유효하지 않은 이메일입니다."
+
+# new 6-10 --
+#: string "Alert Email Limit"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_ALERT_EMAIL_LIMIT_MET"
+msgstr "알림 이메일 한도"
+
+# new 6-10
+#: string "Previous password is a case-sensitive, alphanumeric value up to 32 characters, and cannot contain double quotes."
+msgid "ERROR_OLD_PASSWORD_INCORRECT_SYNTAX"
+msgstr "이전 암호는 대소문자가 구분되는 32자 이하의 영숫자 값이며, 따옴표는 사용할 수 없습니다."
+
+# new 6-10
+#: string "Usage"
+msgid " CONTENT_SHARES_LABEL_USAGE"
+msgstr "사용량"
+
+
+# new 6-20 (from Zermatt)
+#: string "Submit"
+msgid "BUTTON_SUBMIT"
+msgstr "제출"
+
+
+# new 6-21
+#: string "Share Login"
+msgid "CONTENT_SAFEPOINTS_LABEL_SHARE_AUTHENTICATION"
+msgstr "공유 로그인"
+ 
+#: string "Device Login"
+msgid "CONTENT_SAFEPOINTS_LABEL_DEVICE_AUTHENTICATION"
+msgstr "장치 로그인"
+
+#: string "Rescan searches for changes made to your media libraries."
+msgid "CONTENT_SETTINGS_MEDIA_TOOLTIP_DLNA_DATABASE_RESCAN"
+msgstr "다시 검색은 미디어 라이브러리의 변경 사항을 검색합니다."
+
+
+#new 6-25
+#: string "Click Rebuild to rebuild the media database, but do so only if database corruption is suspected."
+msgid "CONTENT_SETTINGS_MEDIA_TOOLTIP_DLNA_DATABASE_REBUILD"
+msgstr "미디어 데이터베이스를 복원하려면 '복원'을 클릭하십시오, 단, 데이터베이스가 손상된 것으로 의심되는 경우에만 복원 작업을 진행하십시오."
+

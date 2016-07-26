@@ -1,0 +1,66 @@
+#!/bin/sh
+
+PORTNUM=$(echo $interface |  cut -d '.' -f 1 | sed 's/eth//g' | sed 's/egiga//g' | sed 's/bond//g')
+LAN=lan$PORTNUM
+IP_NUM=`expr $PORTNUM + 1`
+
+# only for use as a "zcip" callback script
+if [ "x$interface" = x ]
+then
+	exit 1
+fi
+
+# zcip should start on boot/resume and various media changes
+case "$1" in
+init)
+	# for now, zcip requires the link to be already up,
+	# and it drops links when they go down.  that isn't
+	# the most robust model...
+	exit 0
+	;;
+
+config)
+	route add default dev $interface metric 99
+	
+	if [ "x$ip" = x ]
+	then
+		exit 1
+	fi
+	
+	OLDIP=`ip address show $interface | grep 'scope link' | sed 's/^.*inet //g' | sed 's/\/.*$//g'`
+	if [ "$OLDIP" == "$ip" ]; then
+		#echo "same ip" >> /tmp/aaa
+		exit 0
+	fi 
+	
+	# write into /etc/NAS_CFG/config.xml
+	network -x $interface -i "$ip" -n "255.255.0.0" -g '' -d '' -w
+	/sbin/ifconfig $interface $ip
+		
+  	#echo "zcip.script" >> /tmp/aaa
+  	#echo $ip >> /tmp/aaa
+
+	# remember $ip for $interface, to use on restart
+	if [ "x$IP" != x -a -w "$IP.$interface" ]
+	then
+		echo $ip > "$IP.$interface"
+	fi
+	ip address add dev $interface scope link local "$ip/16" broadcast +
+	
+	load_module network	$PORTNUM
+	up_send_ctl SysIP$IP_NUM $ip
+	
+	ip address del dev $interface local $OLDIP
+	;;
+
+deconfig)
+	if [ x$ip = x ]
+	then
+		exit 1
+	fi
+	#echo "defconfig" >> /tmp/aaa
+	exec ip address del dev $interface local $ip
+	;;
+	
+esac
+exit 1

@@ -1,0 +1,663 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="PRAGMA" content="no-cache"> 
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+</head>
+
+<script language="javascript" src="/web/function/share.js?v=4.00"></script>
+<script language="javascript" src="/web/function/ftp.js"></script>
+<script type="text/javascript">
+var SHARE_HDD_INFO = new Array();
+var All_Volume_Info = new Array();
+function page_load()
+{
+	help_link();
+	
+	SHARE_HDD_INFO = new Array();
+	All_Volume_Info = new Array();
+	
+	//var sys_time = (new Date()).getTime();
+	//initDiag("/web/shares/shareDiag.html?r=" + sys_time);
+	
+	do_query_HD_Mapping_Info();
+	var hdd_array = HDD_INFO_ARRAY;
+	
+	do_query_USB_Mapping_Info();
+	var usb_array = HDD_INFO_ARRAY;
+	
+	for(i in usb_array)
+	{
+		var usb_info = usb_array[i].split(":");
+		Default_Share.push(usb_info[0]);
+	}
+	
+	var volume_array = hdd_array.concat(usb_array); // Merges both arrays
+	volume_array.push("test:/mnt/media");	//for special case
+	All_Volume_Info = volume_array;
+	for (i in volume_array)
+	{
+		var hdd_info = volume_array[i].split(":");	//Volume_1:/mnt/HD/HD_a2
+		SHARE_HDD_INFO[i] = new Array();
+		SHARE_HDD_INFO[i].volume_x = hdd_info[0];
+		SHARE_HDD_INFO[i].rootpath = hdd_info[1];
+		SHARE_HDD_INFO[i].shareInfo = new Array();
+	}
+
+	api_get_service_info();
+	
+	$(".shareMenuList").html('<div class="waiting_msg"><img src="/web/images/SpinnerSun.gif?r=20150204" border=0>'+'</br></br>'+_T('_user','wait_shares')+"</div>");
+	get_account_xml('noLoading',function(){
+	api_get_user_list(function(){
+	get_share_list("","");
+	});
+	});
+	
+	$("#shares_createShare_button").click(function(){
+		if($(this).hasClass('gray_out')) return;
+		init_create_share_dialog();
+	});
+	$("#shares_createShare_button").keypress(function(e){
+    	if (e.keyCode=='13')
+			$("#shares_createShare_button").click();
+	});
+	
+	$("#shares_removeShare_button").click(function(){
+		if($(this).hasClass('gray_out')) return;
+		remove_share();
+	});
+
+	$("#shares_removeShare_button").keypress(function(e){
+    	if (e.keyCode=='13')
+			$("#shares_removeShare_button").click();
+	});
+	
+	setSwitch('#shares_media_switch',0);
+	setSwitch('#shares_ftp_switch',0);
+	setSwitch('#shares_webdav_switch',0);
+	setSwitch('#shares_nfs_switch',0);
+	setSwitch('#shares_recycle_switch',0);
+	setSwitch('#shares_remoteAccess_switch',0);
+	
+		
+	$("#shares_descSave_button").css('visibility', 'hidden');
+	$("#shares_ftpSave_button").css('visibility', 'hidden');
+	$("#shares_shareNameSave_button").css('visibility', 'hidden');
+		
+	init_switch();
+	init_button();
+	
+	$("input:text").inputReset();
+
+    $("#shares_remoteAccess_switch").click(function(){
+    	if($("#shares_remoteAccess_switch").hasClass("gray_out")) return;
+    	modify_share('remoteAccess');
+	});
+	
+    $("#shares_ftp_switch").click(function(){
+    	if($("#shares_ftp_switch").hasClass("gray_out")) return;
+		var v = getSwitch('#shares_ftp_switch');
+		if( v==1)
+		{
+			show1("shares_ftpSave_button");
+			$("#shares_ftpAnonymous_select").show();
+		}
+		else
+		{
+			modify_share('ftp','n');
+			$("#shares_ftpAnonymous_select").hide();
+		}
+	});
+		
+    $("#ftp_switch2").click(function(){
+    	if($("#ftp_switch2").hasClass("gray_out")) return;
+    	
+		var v = getSwitch('#ftp_switch2');
+		if( v==1)
+		{
+			$("#ftp_anonymous2").show();
+		}
+		else
+		{
+			$("#ftp_anonymous2").hide();
+		}
+	});
+	
+    $("#shares_webdav_switch").click(function(){
+    	if($("#shares_webdav_switch").hasClass("gray_out")) return;
+    	modify_share('webdav');
+	});
+	
+    $("#shares_nfs_switch").click(function(){
+    	if($("#shares_nfs_switch").hasClass("gray_out")) return;
+		var v = getSwitch('#shares_nfs_switch');
+		if( v==1)
+		{
+			$("#shares_editNFS_link").show();
+		}
+		else
+		{
+			modify_share('nfs');
+			$("#shares_editNFS_link").hide();
+		}
+	});
+    $("#nfs_switch2").click(function(){
+    	if($("#nfs_switch2").hasClass("gray_out")) return;
+		var v = getSwitch('#nfs_switch2');
+		if( v==1)
+		{
+			$("#nfs_conf_tb").show();
+		}
+		else
+		{
+			$("#nfs_conf_tb").hide();
+		}
+	});
+
+    $("#shares_recycle_switch").click(function(){
+    	modify_share('recycle');
+	});
+
+    $("#shares_media_switch").click(function(){
+    	if($("#shares_media_switch").hasClass("gray_out")) return;
+    	modify_share('media');
+	});
+	
+    $("#shares_public_switch").click(function(){
+    	if($("#shares_public_switch").hasClass("gray_out")) return;
+    	modify_share('public');
+	});
+
+    $("#shares_oplocks_switch").click(function(){
+    	if($("#shares_oplocks_switch").hasClass("gray_out")) return;
+    	modify_share('oplocks');
+	});
+	
+	$("#shares_editNFS_link").click(function() {			
+		init_nfs_dialog('smb');
+	});
+				
+	$("#shares_editNFS_link").keypress(function(e) {
+		if (e.keyCode=='13')		
+			$("#shares_editNFS_link").click();
+	});
+					
+	show_ftp_anonymous_options('#ftp_anonymous2','n','ftp_dev_main2','ftp_dev2',"");
+
+	currentIndex=1;
+	$(".ButtonArrowTop").addClass('gray_out');
+	scrollDivTop_User('SubMenuDiv');
+	
+//	if(NFS_FUNCTION==1 || MODEL_NAME=="GLCR" || MODEL_NAME=="BAGX")
+//	{
+//		$("#nfs_tr,#nfs_tr2").show();
+//	}
+	
+	if(WEBDAV_FUNCTION==1)
+	{
+		$("#webdav_tr").show();
+	}
+		
+	if(OPLOCKS_FUNCTION==1)		
+	{
+		$("#oplocks_tr").show();
+	}
+}
+
+function show_tip()
+{
+	var recycle_str=_T('_tip','recycle');
+	var webdav_str = _T('_tip','webdav');
+	var nfs_str = _T('_tip','nfs');
+	var host_str = _T('_tip','host');
+	var root_str = _T('_tip','root');
+	var write_str = _T('_tip','write');
+	var public = _T('_tip','public');
+	$("#tip_recycle2").attr('title',recycle_str);
+	$("#tip_host2").attr('title',host_str);
+	$("#tip_root2").attr('title',root_str);
+	$("#tip_write2").attr('title',write_str);
+	$("#tip_public").attr('title',public);
+	$("#tip_oplocks").attr('title',_T('_tip','oplocks'));
+	$("#tip_media").attr('title',_T('_tip','media_serving'));
+
+	var _ftpTip = "";
+	if(__SERVICE_INFO.ftp=="1")
+		_ftpTip = _T('_tip','ftp_enable'); 
+	else
+		_ftpTip = _T('_tip','ftp_disable');
+		
+	$("#tip_ftp").attr('title',_ftpTip);
+
+	var _nfsTip = "";
+	if(__SERVICE_INFO.nfs=="1")
+		_nfsTip = nfs_str; 
+	else
+		_nfsTip = _T('_tip','nfs_disable');
+	$("#tip_nfs2").attr('title',_nfsTip);
+		
+	var _webdavTip = "";
+	if(__SERVICE_INFO.webdav=="1")
+		_webdavTip = webdav_str; 
+	else
+		_webdavTip = _T('_tip','webdav_disable');
+	$("#tip_webdav2").attr('title',_webdavTip);
+			
+	init_tooltip();
+}
+function page_unload()
+{
+}
+</script>
+
+<body>
+
+<table cellspacing=0 cellpadding=0 border=0>
+	<tr valign="bottom">
+		<td align="left">
+			<div class="header_1" style="width: auto;"><span class="_text" lang="_network_access" datafld="title"></span></div>
+		</td>	
+	</tr>		
+</table>
+<div class="hr_0"><div class="hr_1"></div></div>
+
+<table cellspacing=0 cellpadding=0 border=0>
+<tr>
+	<td valign="top" class="unselect">
+		
+		<ul id="shares_shareUp_link" class="ButtonArrowTop disable" onmousedown="scrollDivDown('SubMenuDiv')">
+			<li class="ButtonArrowUpListUp"></li>
+		</ul>
+		<div id="SubMenuDiv" class="no_top_btns">
+			<div class="LightningSubMenubg">
+				<ul class="LightningSubMenu userMenu shareMenuList"></ul>
+			</div>
+		</div>
+		<ul id="shares_shareDown_link" class="ButtonArrowBottom disable" onmousedown="scrollDivUp('SubMenuDiv')">
+			<li class="ButtonArrowDownListUp"></li>
+		</ul>
+		<div>
+			<table border="0" width="180" height="50" cellspacing="0" cellpadding="0" height="0" align="right">
+				<tr>
+					<td width="90" align="right">
+						<div tabindex="0" id="shares_removeShare_button" class="VericalListButton LightningLabelButtonVericalListRemoveFolder"></div>
+					</td>
+					<td width="90" align="right">
+						<div tabindex="0" id="shares_createShare_button" class="VericalListButton LightningLabelButtonVericalListAddFolder"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</td>
+	<td valign="top">
+		<div class="r_content mainbody" id="mainbody">		
+
+			<div id="share_desc" class="field_top">
+				<table border="0" cellspacing="0" cellpadding="0" height="0" width="695">
+					<tr>
+						<td valign="top">
+				<div class="h1_content header_2"><span class="_text" lang="_network_access" datafld="about"></span></div>
+				<div class="_text tdfield_padding_top_14" lang="_network_access" datafld="desc"></div>
+							<div id="shares_help">
+							<div class="h1_content header_2 field_top"><span class="_text" lang="_top" datafld="help"></span></div>
+							<div class="bumper_link_container"><a class="bumper_help_link about_shares" href="#"><span class="_text" lang="_help" datafld="mshares"></span></a></div>
+							<div class="bumper_link_container"><a class="bumper_help_link share_add" href="#"><span class="_text" lang="_help" datafld="cshare"></span></a></div>
+							<div class="bumper_link_container"><a class="bumper_help_link user_change_access" href="#"><span class="_text" lang="_help" datafld="caccess"></span></a></div>
+							</div>
+						</td>
+						<td><div id="shares_img"></div></td>
+					</tr>
+				</table>
+			</div>
+			<div id="usb_share_detail" style="display:none">
+				<div class="h1_content header_2"><span class="_text" lang="_network_access" datafld="share_profile"></span></div>
+				<table border="0" cellspacing="0" cellpadding="0" height="0" width="700">
+					<tr>
+						<td class="tdfield"><span class="_text" lang="_network_access" datafld="share_name"></span></td>
+						<td class="tdfield_padding"><div id="usb_sharename_info"> - </div></td>
+						<td width="220"></td>
+					</tr>
+					<tr>
+						<td class="tdfield"><span class="_text" lang="_device" datafld="sdesc"></span></td>
+						<td class="tdfield_padding"><div id="usb_desc_info"> - </div></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="tdfield"><div valign="top" class="_text" lang="_network_access" datafld="recycle_bin"></div></td>
+						<td class="tdfield_padding"><div id="usb_recycle_info"> - </div></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="tdfield"><div valign="top" class="_text" lang="_user" datafld="media"></div></td>
+						<td class="tdfield_padding" id="usb_media_info"></td>
+						<td class="tdfield_padding" style="padding-left:10px"></td>
+					</tr>
+					<tr>
+						<td class="tdfield"><div class="_text" lang="_user" datafld="ftp"></div></td>
+						<td class="tdfield_padding" id="usb_ftp_info"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="tdfield"><div class="_text" lang="_user" datafld="webdav"></div></td>
+						<td class="tdfield_padding" id="usb_webdav_info"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="tdfield"><div class="_text" lang="_user" datafld="nfs"></div></td>
+						<td class="tdfield_padding" id="usb_nfs_info"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="tdfield"><div class="_text" lang="_shares" datafld="remote_access"></div></td>
+						<td class="tdfield_padding" id="usb_remote_info"></td>
+						<td></td>
+					</tr>
+				</table>
+			</div>
+			<div id="share_detail" style="display:none">
+					 	<div class="h1_content header_2"><span class="_text" lang="_network_access" datafld="share_profile"></span></div>
+				<table border="0" cellspacing="0" cellpadding="0" height="0" width="860" id="edit_share_tb">
+							<tr id="vinfo_tr">
+								<td class="tdfield"><span class="_text" lang="_scandsk" datafld="volume"></span></td>
+								<td class="tdfield_padding"><div id="volume_info"> - </div></td>
+								<td width="220"></td>
+							</tr>
+							<tr>
+								<td class="tdfield"><span class="_text" lang="_network_access" datafld="share_name"></span></td>
+						<td id="show_sharename_tb" class="tdfield_padding" style="display:none">
+							<table  border="0" cellspacing="0" cellpadding="0" >
+								<tr>
+									<td><span id="show_sharename_span"></span></td>
+									<td style="padding-left:10px;"></td>
+								</tr>
+							</table>
+						</td>
+						<td id="edit_sharename_tb" class="tdfield_padding" style="display:none">
+									<table border="0" cellspacing="0" cellpadding="0">
+										<tr>
+									<td><input type="text" id="shares_editShareName_text" name="shares_editShareName_text" onkeyup="smb_show_save_button(event,'shares_shareNameSave_button');"></td>
+											<td style="padding-left:10px;">
+										<button type="button" id="shares_shareNameSave_button" onclick="modify_share('sharename')"><span class="_text" lang="_button" datafld="apply"></span></button>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td class="tdfield"><span class="_text" lang="_device" datafld="sdesc"></span></td>
+								<td class="tdfield_padding">
+									<table border="0" cellspacing="0" cellpadding="0">
+										<tr>
+									<td><input tabindex="0" type="text" id="shares_editShareDesc_text" name="shares_editShareDesc_text" onkeyup="smb_show_save_button(event,'shares_descSave_button');"></td>
+											<td style="padding-left:10px;">
+										<button type="button" id="shares_descSave_button" onclick="modify_share('desc')"><span class="_text" lang="_button" datafld="apply"></span></button>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr id="poblic_tr">
+						<td class="tdfield"><div class="_text" lang="_network_access" datafld="public"></div></td>
+						<td class="tdfield_padding">
+							<table border="0" cellspacing="0" cellpadding="0" height="0">
+								<tr>
+									<td>
+										<input id="shares_public_switch" name="shares_public_switch" class="onoffswitch" type="checkbox" value="true" >
+									</td>
+									<td style="padding-left:10px;">
+										<div class="TooltipIcon" id="tip_public"></div>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr id="recycle_tr" style="display:none">
+								<td class="tdfield"><div valign="top" class="_text" lang="_network_access" datafld="recycle_bin"></div></td>
+								<td class="tdfield_padding">
+							<table border="0" cellspacing="0" cellpadding="0" height="0">
+								<tr>
+									<td>
+										<input id="shares_recycle_switch" name="shares_recycle_switch" class="onoffswitch" type="checkbox" value="true" >
+								</td>
+						<td style="padding-left:10px;">
+							<div class="TooltipIcon" id="tip_recycle2"></div>
+						</td>
+							</tr>
+							</table>
+						</td>
+					</tr>
+							<tr>
+								<td class="tdfield"><div valign="top" class="_text" lang="_user" datafld="media"></div></td>
+								<td class="tdfield_padding">
+							<table border="0" cellspacing="0" cellpadding="0" height="0">
+								<tr>
+									<td>
+									<input id="shares_media_switch" name="shares_media_switch" class="onoffswitch" type="checkbox" value="true">
+						</td>
+									<td style="padding-left:10px;">
+										<div class="TooltipIcon" id="tip_media"></div>
+									</td>
+								</tr>
+							</table>
+						</td>
+								<td class="tdfield_padding" style="padding-left:10px"></td>
+							</tr>
+					<tr id="oplocks_tr" style="display:none">
+						<td class="tdfield">Oplocks<!--<div valign="top" class="_text" lang="_network_access" datafld="oplocks"></div>--></td>
+						<td class="tdfield_padding">
+							<table border="0" cellspacing="0" cellpadding="0" height="0">
+								<tr>
+									<td>
+							<input id="shares_oplocks_switch" name="shares_oplocks_switch" class="onoffswitch" type="checkbox" value="true">
+						</td>
+									<td style="padding-left:10px;">
+										<div class="TooltipIcon" id="tip_oplocks"></div>
+									</td>
+								</tr>
+							</table>
+							
+						</td>
+						<td class="tdfield_padding" style="padding-left:10px"></td>
+					</tr>
+					<tr>
+						<td class="tdfield"><div valign="top" class="_text" lang="_network_access" datafld="usage"></div></td>
+						<td class="tdfield_padding"><span id="shares_usage_value"></span></td>
+					</tr>
+				</table>
+				
+				<div class="hr_0_content" style="margin-top:30px;margin-bottom:30px;"><div class="hr_1"></div></div>		
+				<div class="h1_content header_2"><span class="_text" lang="_user" datafld="share_access">Share Access</span></div>
+				<table width="860">
+							<tr style="display:none">
+								<td class="tdfield"><div class="_text" lang="_shares" datafld="remote_access">Remote Access</div></td>
+								<td class="tdfield_padding" colspan="2">
+									<table border="0" cellspacing="0" cellpadding="0" height="0" width="auto">
+										<tr>
+											<td>
+												<input id="shares_remoteAccess_switch" name="shares_remoteAccess_switch" class="onoffswitch" type="checkbox" value="true" >
+											</td>
+											<td style="padding-left:10px;display:none">
+												<div class="TooltipIcon" id="tip_remote" ></div>
+											</td>
+										</tr>
+									</table>									
+								</td>			
+							</tr>
+							<tr>
+								<td class="tdfield"><div class="_text" lang="_user" datafld="ftp"></div></td>
+								<td class="tdfield_padding" colspan="2">
+									<table border="0" cellspacing="0" cellpadding="0" height="0" width="auto">
+										<tr>
+											<td>
+												<input id="shares_ftp_switch" name="shares_ftp_switch" class="onoffswitch" type="checkbox" value="true" >
+											</td>
+											<td style="padding-left:10px;">
+												<div class="TooltipIcon" id="tip_ftp" ></div>
+											</td>
+											<td style="padding-left:20px;">
+												<div id="shares_ftpAnonymous_select" class="select_menu" style="display:none;"></div>
+											</td>
+											<td style="padding-left:10px;">
+												<button type="button" id="shares_ftpSave_button" onclick="modify_share('ftp')"><span class="_text" lang="_button" datafld="apply"></span></button>
+											</td>
+										</tr>
+									</table>									
+								</td>			
+							</tr>
+							<tr id="webdav_tr" style="display:none">
+								<td class="tdfield"><div class="_text" lang="_user" datafld="webdav"></div></td>
+								<td class="tdfield_padding" colspan="2">
+									<table border="0" cellspacing="0" cellpadding="0" height="0">
+										<tr>
+											<td>
+												<input id="shares_webdav_switch" name="shares_webdav_switch" class="onoffswitch" type="checkbox" value="true" >
+											</td>
+									<td style="padding-left:10px;">
+										<div class="TooltipIcon" id="tip_webdav2"></div>
+									</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr id="nfs_tr" style="display:none">
+								<td class="tdfield"><div class="_text" lang="_user" datafld="nfs"></div></td>
+								<td class="tdfield_padding">
+									<table border="0" cellspacing="0" cellpadding="0" height="0">
+										<tr>
+											<td>
+												<input id="shares_nfs_switch" name="shares_nfs_switch" class="onoffswitch" type="checkbox" value="true" >
+											</td>
+									<td style="padding-left:10px;">
+										<div class="TooltipIcon" id="tip_nfs2"></div>
+									</td>
+											<td style="padding-left:20px;">
+												
+												<div tabindex="0" class="edit_detail" id="shares_editNFS_link" style="display:none;float:left;margin-left:10px"><span class="_text" lang="_lan" datafld="ftp_config"></span> >></div>
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr id="nfs_tr2" style="display:none">
+								<td></td>
+								<td>
+									<div style="float:left" id="nfs_real_path"></div>
+								</td>
+							</tr>
+						</table>
+			</div><!-- share_detail -->
+				<div id="userlist_div" style="display:none">
+						<div class="hr_0_content" style="margin-top:30px;margin-bottom:30px;"><div class="hr_1"></div></div>
+						<div class="h1_content header_2"><span class="_text" lang="_network_access" datafld="user_access"></span></div>	
+					<div id="mask_id">
+						<div id="userlist" style="margin-left:-40px">
+							<ul class="ListDiv" id="userlist_ul"></ul>
+						</div>
+				</div>
+			</div>
+		</div>  <!-- mainbody end -->
+	</td>
+</tr>	
+</table>
+
+<div id="createShareDiag" class="WDLabelDiag" style="display:none">
+	<div class="WDLabelHeaderDialogue WDLabelHeaderDialogueFolderIcon" id="createShareDiag_title"></div>
+	<div align="center"><div class="hr"><hr/></div></div>
+	
+	<!--shareDiag-->
+	<div id="shareDiag">
+		<div class="WDLabelBodyDialogue" style="overflow:hidden" id="create_share_tb">
+			<table border="0" cellspacing="0" cellpadding="0" height="0">
+				<tr id="volume_select">
+					<td class="tdfield"><span class="_text" lang="_scandsk" datafld="volume"></span></td>
+					<td class="tdfield_padding">
+						<div id="select_menu2" class="select_menu"></div>
+					</td>
+				</tr>
+			</table>
+			<table border="0" cellspacing="0" cellpadding="0" height="0">
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_network_access" datafld="share_name"></span></td>
+					<td  colspan="2" class="tdfield_padding"><input type="text" id="shares_shareName_text" name="shares_shareName_text"></td>
+				</tr>
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_device" datafld="sdesc"></span></td>
+					<td colspan="2" class="tdfield_padding"><input type="text" id="shares_shareDesc_text" name="shares_shareDesc_text"></td>
+				</tr>
+				<tr style="display:none">
+					<td class="tdfield"><div valign="top" class="_text" lang="_network_access" datafld="recycle_bin"></div></td>
+					<td class="tdfield_padding">
+						<input id="recycle_switch2" name="recycle_switch2" class="onoffswitch" type="checkbox" value="true" >
+					</td>
+					<td class="tdfield_padding" style="padding-left:10px;" width="130">
+						<div class="TooltipIcon" id="tip_recycle" ></div>
+					</td>
+				</tr>
+			</table>
+		</div><!-- WDLabelBodyDialogue end -->
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonMarginLeft_40px close" id="shares_createCancel_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" id="shares_createSave_button"><span class="_text" lang="_button" datafld="apply"></span></button>
+	</div>
+</div> <!-- createShareDiag end -->
+
+<div id="modifyShareDiag" class="WDLabelDiag" style="display:none">
+	<div class="WDLabelHeaderDialogue WDLabelHeaderDialogueFolderIcon" id="modifyShareDiag_title"></div>
+	<div align="center"><div class="hr"><hr/></div></div>
+	
+	<!--nfsDiag-->
+	<div id="nfsDiag">
+		<div class="WDLabelBodyDialogue" style="overflow:hidden">
+			<table border="0" cellspacing="0" cellpadding="0" height="0" >
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_nfs" datafld="host"></span></td>
+					<td class="tdfield_padding">
+						<input type="text" id="shares_nfsHost_text" name="shares_nfsHost_text">
+					</td>
+					<td class="tdfield_padding" style="padding-left:10px;">
+						<div class="TooltipIcon" id="tip_host"></div>
+					</td>
+				</tr>
+				<tr style="display:none"><!--default is all squash-->
+					<td class="tdfield"><span class="_text" lang="_nfs" datafld="root_squash"></span></td>
+					<td class="tdfield_padding">
+						<table border="0" cellspacing="0" cellpadding="0" height="0" >
+							<tr>
+								<td>
+									<input id="shares_rootSquash_switch" name="shares_rootSquash_switch" class="onoffswitch" type="checkbox" value="true" >
+								</td>
+								<td style="padding-left:10px;">
+									<div class="TooltipIcon" id="tip_root"></div>
+								</td>
+							</tr>
+						</table>
+					</td>
+
+				</tr>
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_nfs" datafld="write"></span></td>
+					<td class="tdfield_padding">
+						<table border="0" cellspacing="0" cellpadding="0" height="0" >
+							<tr>
+								<td>
+									<input id="shares_write_switch" name="shares_write_switch" class="onoffswitch" type="checkbox" value="true" >
+								</td>
+								<td style="padding-left:10px;">
+									<div class="TooltipIcon" id="tip_write"></div>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>	
+		</div><!-- body end -->
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonMarginLeft_40px close" id="shares_nfsCancel_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" id="shares_editNFSSave_button"><span class="_text" lang="_button" datafld="apply"></span></button>	
+	</div><!--nfsDiag end-->
+</div>
+
+</body>
+</html>

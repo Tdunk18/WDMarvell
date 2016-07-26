@@ -1,0 +1,12 @@
+CWD=$(shell pwd)
+AUTOCONFIG=$(CWD)/autoconfig --write-to-file --current-directory=$(CWD)
+include $(shell $(AUTOCONFIG))
+
+all:
+	make -C kernel/drivers/lio-core all
+
+install: all
+	make -C kernel/drivers/lio-core install
+
+clean:
+	make -C kernel/drivers/lio-core clean

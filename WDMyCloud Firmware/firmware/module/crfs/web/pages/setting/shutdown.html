@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<META HTTP-EQUIV=Content-Type CONTENT="text/html; charset=utf-8">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">    
+<META HTTP-EQUIV="Expires" CONTENT="-1">
+<link rel="stylesheet" type="text/css" href="/web/css/style.css?v20">
+
+<link rel="stylesheet" type="text/css" href="/web/css/button.css">
+
+
+<!-- jQuery Lib -->
+<script language="javascript" src="/web/jquery/js/jquery_1.6.1.js"></script>
+
+<style>
+body, html {margin:0; padding:0; border:0;
+background-repeat: repeat-x;
+} /* Re-sets IE to "zero" for these values */
+
+</style>
+<script>
+var sys_time = (new Date()).getTime(); 
+
+//generic
+document.write("<script language=\"javascript\" src=\"/web/function/web_security.js?id="+sys_time+"\"><\/script>");
+
+</script>
+<script>
+function show_item()
+{
+    if (window.ActiveXObject)		//IE
+    {
+    	document.getElementById("close_button").style.display = "";
+    }
+    else if (window.XMLHttpRequest)	// Mozilla, Safari, ...	
+    {
+    	document.getElementById("close_button").style.display = "none";
+    }
+    else
+    {
+    	document.getElementById("close_button").style.display = "";
+    }
+}
+
+</script>
+</head>
+<body  topmargin="0" leftmargin="0" onload="show_item();" bgcolor="#DDDFE0">
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+  <div align="center">
+	  <table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#808080" width="411" height="241">
+	    <tr>
+	      <td width="411" height="241" style="border-style: solid; border-width: 1px">
+	      
+	      <p align="center">The Device has shutdown.</p>
+			<div align="center">
+			<table border="0" width="21" id="table1" cellspacing="0" cellpadding="0" height="0">
+				<tr>
+					<td><button id="close_button" onclick="window.close();">Close</button></td>
+				</tr>
+			</table>
+			</div>
+	     </td>
+	    </tr>
+	  </table>
+  </div>
+  <p></p>
+</body>
+<head>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">    
+<META HTTP-EQUIV="Expires" CONTENT="-1">
+</head>
+</html>
+
+<script>
+var sys_time = (new Date()).getTime();	
+document.write("<script language=\"javascript\" src=\"/web/function/language.js?id="+sys_time+"\"><\/script>");
+</script>

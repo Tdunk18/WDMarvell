@@ -1,0 +1,3 @@
+#!/bin/sh
+mkdir -p /usr/local/restsdk
+cp -a /usr/local/modules/localrestsdk/restsdk-server /usr/local/restsdk

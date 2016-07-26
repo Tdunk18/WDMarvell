@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="MS-HAID" content="What is RAID Storage?" />
+<meta http-equiv="Content-Language" content="hu-HU" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Mi a RAID típusú tárolás?</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Tárhely\nRAID típusú tárolás\nMi a RAID típusú tárolás?");
+addButton("show",BTN_TEXT,"Megjelenít","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("index.htm", "", ">", "Nyitóoldal", "welcome.htm");
+document.write("<a href=\"what_is_raid_storage.htm\">Tárhely<\/a> > <a href=\"what_is_raid_storage.htm\">RAID típusú tárolás<\/a> > Mi a RAID típusú tárolás?<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1 style="background-color: Transparent;">Mi a RAID típusú tárolás?</h1>
+<p class="Body">A RAID (Redundant Array of Independent Disks – független 
+ lemezek redundáns tömbje) <span style="mso-bidi-font-family: Arial;">segítségével 
+ ugyanazok az adatok különböző helyeken tárolhatók, több merevlemezen, 
+ ami megfelelő mértékű redundanciát, jobb teljesítményt és adatintegritást 
+ biztosít.</span> Több különböző szintű RAID létezik, amelyek esetén különböző 
+ módon oszthatók meg és terjeszthetők az adatok a meghajtók felé. A My Cloud Mirror eszköznél a következő 
+ tárolási módok közül választhat:</p>
+<ol style="list-style: square;">
+	<li style="list-style: none; display: inline;"><ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold; mso-bidi-font-weight: normal;">JBOD</b>: 
+		 <span style="font-size: 10.0pt; font-family: Arial, sans-serif; 
+				 mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+				 mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">&#160;Egy 
+		 vagy több meghajtó használata nem RAID-konfigurációban, hanem 
+		 önálló logikai kötetként.</font></span></li>
+		<li class="b1"><b>Áthidaló:</b> A meghajtók lineáris kombinációja 
+		 egy nagy logikai kötet létrehozása érdekében.</li>
+		<li class="b1"><b style="font-weight: bold; mso-bidi-font-weight: normal;">RAID 
+		 0</b>: A RAID 0 mód lemezösszefűzést biztosít a RAID meghajtócsoportban 
+		 lévő összes meghajtóhoz. A RAID 0 nem biztosít adatredundanciát, 
+		 viszont az összes RAID-szint közül a legjobb teljesítményt nyújtja. 
+		 A RAID 0 az adatokat kisebb szegmensekre bontja, és összefűzi 
+		 az adatszegmenseket a meghajtócsoportban található meghajtókon.</li>
+		<li class="b1"><b style="font-weight: bold; mso-bidi-font-weight: normal;">RAID 
+		 1</b>: A RAID 1 módban a RAID-vezérlő megkettőzi az összes adatot 
+		 az egyik meghajtóról egy másikra a meghajtócsoportban. A RAID 
+		 1 biztosít adatredundanciát, de használata esetén kétszer nagyobb 
+		 adattárolási kapacitásra van szükség.</li>
+	</ul></li>
+</ol>
+<br />
+
+
+<a href="javascript:void(0);" onclick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) &gt;=2 &amp;&amp; typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','A jelenlegi RAID-üzemmód megtekintése','Viewing_the_Current_RAID_Mode.htm','A RAID automatikus visszaállítása','Auto_Rebuilding_your_RAID.htm','A RAID-üzemmód módosítása','Changing_the_RAID_Mode.htm');return false;" title="Kapcsolódó témakörök"><img src="ss_btn_kapcsolódó_témakörök.gif" border="0" height="17" width="115" alt="Kapcsolódó témakörök" /></a>
+
+
+
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt;">© 2015 Western Digital Technologies, Inc. 
+	 <span lang="de-DE" xml:lang="de-DE"><b style="font-weight: normal;">Minden 
+	 jog fenntartva.</b></span></p>
+</div>
+<script type="text/javascript" language="JavaScript">//<![CDATA[
+if (parseInt(navigator.appVersion) >= 3 && typeof (WritePopupMenuLayer) == "function")
+  WritePopupMenuLayer();
+//]]></script><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>
+

@@ -1,0 +1,10 @@
+host notify.senvid.net
+port 58705
+auth cram-md5
+tls off
+user wdapc14ncmailv01@notify.senvid.net
+password mxx571mzb8g9iq4jxm7xzwce7d4vlc50
+protocol smtp
+from nas.alerts@wdc.com
+tls_certcheck off
+domain wdc.com

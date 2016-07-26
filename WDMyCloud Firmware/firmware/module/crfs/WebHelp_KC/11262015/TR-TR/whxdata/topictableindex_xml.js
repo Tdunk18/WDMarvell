@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><cki><ck fm=\"Disk Durumu Hakkında\" to=\"Bağlantı Seçeneklerini Yapılandırma\" num=\"56\"/><ck fm=\"Bulut Erişimini Açma/Kapatma\" to=\"WDMyCloud.com adresine Kaydolma\" num=\"58\"/><ck fm=\"Destek İsteme\" to=\"RAID Depolama nedir?\" num=\"38\"/></cki>";

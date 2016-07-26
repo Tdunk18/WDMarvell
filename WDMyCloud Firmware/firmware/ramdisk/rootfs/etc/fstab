@@ -1,0 +1,4 @@
+proc		/proc		proc	defaults	0	0
+/dev/ram0 	/		ext2    defaults	1	1
+sysfs	/sys		sysfs	defaults	0	0
+mdev /dev    tmpfs defaults 0 0

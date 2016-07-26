@@ -1,0 +1,35 @@
+<div id="sshDiag" class="WDLabelDiag" style="display:none">
+	<div class="WDLabelHeaderDialogue WDLabelHeaderDialogueSSHIcon" id="sshDiag_title"></div>
+	<div align="center"><div class="hr"><hr/></div></div>
+	
+	<!-- pwDiag -->
+	<div id="pwDiag">
+		<div class="WDLabelBodyDialogue" style="overflow:hidden">
+			<div style="height:190px">
+			<table border="0" cellspacing="0" cellpadding="0" height="0">
+				<tr>
+					<td colspan="2">
+						<table id="edit_ssh_pw_tb" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td class="tdfield"><span class="_text" lang="_admin" datafld="new_pwd"></span> *</td>
+								<td class="tdfield_padding"><input type="password" id="settings_SSHPW_password" name="settings_SSHPW_password"></td>
+								<td class="tdfield_padding tdfield_padding_left_10"><div class="TooltipIconError tip_pw_error"></div></td>
+							</tr>
+							<tr>
+								<td class="tdfield"><span class="_text" lang="_admin" datafld="confirm_pwd"></span></td>
+								<td class="tdfield_padding"><input type="password" id="settings_SSHConfirmPW_password" name="settings_SSHConfirmPW_password"></td>
+								<td class="tdfield_padding tdfield_padding_left_10"><div class="TooltipIconError tip_pw2_error"></div></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+			</div>
+			<div style="float:right;margin-top:25px;" id="create_required"> * <span class="_text" lang="_user" datafld="pw_required"></span></div>
+		</div><!-- WDLabelBodyDialogue end -->
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonMarginLeft_20px close" ><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" id="settings_SSHSave_button"><span class="_text" lang="_button" datafld="save"></span></button>
+	</div>
+
+</div> <!-- sshDiag end -->

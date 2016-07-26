@@ -1,0 +1,8 @@
+0001 = Výstražná zpráva ze zařízení %1
+0002 = Na zařízení %2 %1 jsou generovány následující události
+0003 = Popis události
+0004 = Závažnost
+0005 = Kód události
+0006 = Čas události
+0007 = Název události
+0008 = Verze firmwaru

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="MS-HAID" content="Creating an iSCSI Target" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+ <title>iSCSI Hedefi Oluşturma</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+ <meta http-equiv="Content-Language" content="tr-TR" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Depolama\nISCSI\niSCSI Hedefi Oluşturma");
+addButton("show",BTN_TEXT,"Göster","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left; background: #fafafa\"> ");
+AddMasterBreadcrumbs("index.htm", "", "&gt;", "Home", "welcome.htm");
+document.write("<a href=\"what_is_raid_storage.htm\">Depolama<\/a> &gt; <a href=\"what_is_iscsi_.htm\">ISCSI<\/a> &gt; iSCSI Hedefi Oluşturma<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(0);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1 style="background-color: Transparent;">iSCSI Hedefi Oluşturma</h1>
+<p class="Body">Bir iSCSI hedefi oluşturmak için aşağıdaki adımları uygulayın</p>
+<ol style="list-style: disc;">
+	<li style="list-style: none; display: inline;"><ol style="list-style: decimal;">
+		<li class="n1"><span style="font-weight: bold;">Depolama</span> butonuna tıklayın.</li>
+		<li class="n1"><span style="font-weight: bold;">iSCSI</span> butonuna tıklayın.</li>
+		<li class="n1"><img src="graphics/toggle_button.png" alt="" style="border: none;" width="20" height="12" border="0" /> butonuna tıklayarak iSCSI'yi etkinleştirin.</li>
+		<li class="n1">Ekranın alt kısmındaki <span style="font-weight: bold;">iSCSI Hedefi Oluştur</span> butonuna tıklayın.</li>
+		<li class="n1">iSCSI Hedefi Oluştur ekranında aşağıdaki bilgileri girin:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold;"><b>Diğer Ad</b></b>: Diğer ad, hedefiniz için açıklayıcı bir ad olmalıdır.</li>
+		<li class="b1"><span style="font-weight: bold;">Oluşturulan Birim</span>: iSCSI hedefinin bulunmasını istediğiniz Birimi seçin.</li>
+		<li class="b1"><b style="font-weight: bold;">Boyut</b>: Hedefinizin boyutu ve o boyutun bilgi birimi (örn. GB, TB)</li>
+	</ul>
+	<ol start="6" style="list-style: decimal;">
+		<li class="n1"><span style="font-weight: bold;">Sonraki</span> butonuna tıklayın.</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">Hedefinize güvenlik atamak isterseniz <span style="font-weight: bold;">CHAP</span> butonuna tıklayın.</li>
+		<li class="b1" :="" ;"="" style="circle: ;">Mevcut bir Kullanıcı Adı ve Parola girin.</li>
+	</ul></li>
+	<ol start="7" style="list-style: decimal;">
+		<li class="n1"><span style="font-weight: bold;">Uygula</span> butonuna tıklayın. Yeni iSCSI hedefi oluşturulur.</li>
+	</ol>
+</ol>
+<p>&nbsp;</p><?rh-placeholder type="footer" ?> <?rh-placeholder type="footer" ?>
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>

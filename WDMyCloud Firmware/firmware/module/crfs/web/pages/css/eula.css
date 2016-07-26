@@ -1,0 +1,111 @@
+/* EULA */
+
+#eula_container {
+	position:relative;
+	width:930px;
+    height:550px;
+    margin:0 auto 0 auto;
+    display:none;
+}
+
+
+#eula_content {
+    position:relative;
+    padding-top:190px;
+    padding-left:200px;
+}
+
+#eulaView {
+    display:none;
+    width:560px;
+    font-family:Tahoma,Geneva,sans-serif;
+    /*margin-top:55px;*/
+    color:#C3C3C3;
+}
+.eulaTitle{
+    font-size:18px;
+    font-family:"Helvetica Neue Light",Helvetica, sans-serif;
+    font-weight:bold;
+    color:#C3C3C3;
+    margin-bottom:10px;
+}
+.eulaSubtext {
+    font-size:12px;
+}
+#eulaHead {
+    margin-bottom:15px;
+}
+#eulaTextWrap {
+    /*
+    border-top:dotted 1px gray;
+    border-bottom:dotted 1px gray;
+    */
+    padding:5px 0;
+    height:211px;
+}
+#eulaText {
+    overflow:hidden;
+    height:211px;
+    width:600px;
+    font-family:Tahoma,Geneva,sans-serif;
+    font-size:11px;
+	background-color:#fff;
+}
+
+#eula_iframe{
+	width:100%;
+	height:100%;
+	border:none;
+}
+
+#eulaActions { margin-top:10px; }
+#eulaActions a { 
+    font-family:Helvetica,sans-serif;
+    font-weight:normal;
+    font-size:16px;
+    display:block; 
+}
+
+#eulaAgreeLink{
+    float:right;
+}
+
+#eulaTextWrap .jScrollPaneContainer {
+    width:100%;
+    height:100%;
+}
+
+#eula_forms_container {
+    display: block;
+}
+
+#eula_language_form label {
+    font-size:18px;
+    font-family:"Helvetica Neue Light",Helvetica, sans-serif;
+    font-weight:bold;
+    width:auto;
+    vertical-align:top;
+}
+#eula_agree_form label {
+    width: auto;
+}
+
+#eula_forms_container .ui-selectmenu {
+    margin-bottom:10px !important;
+}
+#eula_forms_container a, #eulaView a, #eulaSubmitContainer a {
+    /*color:#0085D2;*/
+}
+
+.eulaBigLink {
+    color:#0085D2;
+    text-decoration:none;
+    font-size:18px;
+    letter-spacing:1px;
+}
+
+
+#eula_acceptance_error, #eula_not_accepted_error {
+    display:none;
+}
+/* end EULA */

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+ <title>ユーザー割り当ての設定</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+ <meta http-equiv="Content-Language" content="ja-JP" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("パーソナル クラウドの管理\nユーザー\nユーザー割り当ての設定");
+addButton("show",BTN_TEXT,"表示","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left; background: #fafafa\"> ");
+AddMasterBreadcrumbs("index.htm", "", "&gt;", "Home", "welcome.htm");
+document.write("<a href=\"user_about.htm\">パーソナル クラウドの管理<\/a> &gt; <a href=\"user_about.htm\">ユーザー<\/a> &gt; ユーザー割り当ての設定<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(0);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>ユーザー割り当ての設定</h1>
+<p class="Body">割り当ては、My Cloud™ デバイスでユーザーに割り当てられるディスクの容量を指定します。以下では、ユーザー割り当ての指定についての規則と、ユーザー アカウントに割り当てを行う手順について解説しています。</p>
+<h3>割り当ての規則</h3>
+<p class="Body">ユーザー割り当てを指定すると、ユーザーやグループに割り当てられるディスク容量をよりよく管理できるようになります。割り当ての優先順を定める様々な規則があります。</p>
+<p class="Body"><span style="font-weight: bold;">注</span>：ユーザー権限とグループ権限が異なっている場合は、制限の多い方が優先されます。</p>
+<ul style="list-style: disc;">
+	<li><p class="Body">ユーザーの割り当ては、グループの割り当てと同一またはそれ未満に設定する必要があります (たとえば、グループの割り当てが 20GB の場合にユーザーの割り当てを 30GB に設定しようとすると、ユーザーの割り当てをグループの割り当てと同一またはそれ未満にするように指示するメッセージが表示されます)。</p></li>
+	<li><p class="Body">ユーザーの割り当てが設定されていない場合は、グループの割り当てがユーザーに適用されます。</p></li>
+	<li><p class="Body">ユーザーがグループに追加される前にユーザーの割り当てが設定されていた場合に、グループに割り当てられた場合：</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: square;">
+		<li><p class="Body">ユーザーの割り当てがグループの割り当てを超えている場合は、個別のユーザーの割り当てがグループの割り当てと同一量に自動的に削減されます。</p></li>
+		<li><p class="Body">ユーザーの割り当てがグループの割り当てと同一またはそれ未満の場合は、個別のユーザーの割り当ては変更されません。</p></li>
+	</ul></li>
+</ul>
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt;">© 2015 Western Digital Technologies, Inc. 
+	 All rights reserved.</p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>

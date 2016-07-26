@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+    <name>Filesystem</name>
+    <version>2.1</version>
+    <description>Module has filesystem, related components.</description >
+    
+    <components>
+        
+        <component>
+            <name>file</name>
+            <module>Filesystem</module>
+            <controller_class>\Filesystem\Controller\File</controller_class>
+            <auth_security>
+                <get>USER_OR_HMAC_AUTH</get>
+                <put>USER_AUTH</put>
+                <delete>USER_AUTH</delete>
+            </auth_security>
+            <async_methods>
+                <method>put</method>
+            </async_methods>
+        </component>
+
+        <component>
+            <name>file_contents</name>
+            <module>Filesystem</module>
+            <controller_class>\Filesystem\Controller\FileContents</controller_class>
+            <auth_security>
+                <get>USER_OR_HMAC_AUTH</get>
+                <put>USER_OR_HMAC_AUTH</put>
+                <post>USER_OR_HMAC_AUTH</post>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>dir</name>
+            <module>Filesystem</module>
+            <controller_class>\Filesystem\Controller\Dir</controller_class>
+            <auth_security>
+                <get>USER_OR_HMAC_AUTH</get>
+                <put>USER_AUTH</put>
+                <post>USER_AUTH</post>
+                <delete>USER_AUTH</delete>
+            </auth_security>
+            <async_methods>
+                <method>put</method>
+            </async_methods>
+        </component>
+
+        <component>
+            <name>dir_contents</name>
+            <module>Filesystem</module>
+            <controller_class>\Filesystem\Controller\DirContents</controller_class>
+            <auth_security>
+                <get>USER_OR_HMAC_AUTH</get>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>volumes</name>
+            <module>Filesystem</module>
+            <controller_class>\Filesystem\Controller\Volumes</controller_class>
+            <auth_security>
+                <all>USER_AUTH_ALL</all>
+            </auth_security>
+        </component>
+        
+        <component>
+            <name>links</name>
+            <module>Filesystem</module>
+            <controller_class>\Filesystem\Controller\Links</controller_class>
+            <auth_security>
+                <all>CLOUDHOLDER_AUTH_ALL</all>
+            </auth_security>
+        </component>
+        
+        <component>
+            <name>list_contents</name>
+            <module>Filesystem</module>
+            <controller_class>\Filesystem\Controller\ListContents</controller_class>
+            <auth_security>
+                <get>USER_OR_HMAC_AUTH</get>
+            </auth_security>
+        </component>
+        
+    </components>
+
+</module>

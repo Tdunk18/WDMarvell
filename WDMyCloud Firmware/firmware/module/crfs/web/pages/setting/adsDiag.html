@@ -1,0 +1,63 @@
+<!-- ads dialog -->
+<div id="adsDiag" class="WDLabelDiag" style="display:none">
+	<div class="WDLabelHeaderDialogue WDLabelHeaderDialogueAdsIcon" id="adsDiag_title"></div>
+	<div align="center"><div class="hr"><hr/></div></div>
+	
+	<!-- adsDiag_set-->
+	<div id="adsDiag_set" style="display:none">	
+		<div class="WDLabelBodyDialogue">
+			<div class="_text maxwidth" lang="_ads" datafld="time_desc"></div>
+			<div>
+		 	<table id="ads_tb" border="0" cellspacing="0" cellpadding="0" height="0">
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_ads" datafld="name"></span></td>
+					<td class="tdfield_padding">
+						<input type="text" maxLength="64" name="settings_networkADSName_text" id="settings_networkADSName_text">
+					</td>
+				</tr>
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_ads" datafld="pw"></span></td>
+					<td class="tdfield_padding">
+						<input type="password" maxLength="64" name="settings_networkASDPW_password" id="settings_networkASDPW_password">
+					</td>
+				</tr>
+				<!--
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_device" datafld="workgroup"></span></td>
+					<td class="tdfield_padding">
+						<input type="text" maxLength="64" name="f_group" id="f_group">
+					</td>
+				</tr>-->
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_ads" datafld="realm_name"></span></td>
+					<td class="tdfield_padding">
+						<input type="text" maxLength="64" name="settings_networkADSRealmName_text" id="settings_networkADSRealmName_text" onkeyup="CheckText();">
+					</td>
+					<td class="tdfield_padding" style="padding-left:10px;">
+						<div class="TooltipIcon" id="tip_domain_name2"></div>
+					</td>
+				</tr>
+				<!--
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_ads" datafld="server_name"></span></td>
+					<td class="tdfield_padding">
+						<input type="text" maxLength="64" name="f_server_name" id="f_server_name">
+					</td>
+				</tr>-->
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_lan" datafld="dns"></span></td>
+					<td class="tdfield_padding">
+						<input type="text" name="settings_networkADSDNS_text" id="settings_networkADSDNS_text">
+					</td>
+				</tr>
+				<tr style="display:none">
+					<td colspan="2"><div style="margin-top:20px;" id="ads_msg"></div></td>
+				</tr>
+			</table>							
+			</div>					
+		</div> <!-- body end -->
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonMarginLeft_40px close" id="settings_networkADSCancel2_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" id="settings_networkADSSave_button"><span class="_text" lang="_button" datafld="apply"></span></button>
+	</div> <!-- adsDiag_set end -->
+</div> <!-- adsDiag end -->

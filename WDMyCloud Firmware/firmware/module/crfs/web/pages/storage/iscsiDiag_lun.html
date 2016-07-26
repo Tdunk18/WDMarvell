@@ -1,0 +1,666 @@
+<!-- acl detail -->
+<!-- acel create -->
+<div id="iscsiAclDiag" class="WDLabelDiag" style="display:">
+<div id="iscsiAclDiag_title" class="WDLabelHeaderDialogue WDLabelHeaderDialogueiSCSIIcon"><span class="_text" lang="_iscsi" datafld="create_iscsi_acl"></span></div>
+<div align="center"><div class="hr"><hr></div></div>	
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content">
+	
+	<table border="0" width="100%"  cellspacing="0" cellpadding="0" height="0">
+			<tr>
+				<td width="150" height="40">
+					<span class="_text" lang="_iscsi" datafld="acl_name"></span>
+				</td>	
+				<td>											
+					<input type="text" name="storage_iscsiAclName_text" id="storage_iscsiAclName_text" maxlength="32">
+				</td>
+			</tr>	
+			<tr>
+				<td width="150" height="40">
+					<span class="_text" lang="_iscsi" datafld="iqn"></span>					
+				</td>	
+				<td>											
+					<input type="text" name="storage_iscsiAclIqn_text" id="storage_iscsiAclIqn_text" maxlength="128" class="input_x5">
+				</td>
+			</tr>	
+	</table>		
+	
+<div class="scrollbar_iscsi_dialog">
+				<div id="id_acl_create"></div>				
+		</div>		
+</div>	
+</div>					
+<div class="hrBottom2"><hr/></div>				
+<button class="ButtonMarginLeft_40px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+<button class="ButtonRightPos2" onclick="create_acl();"><span class="_text" lang="_button" datafld="apply"></span></button>
+</div>
+<!-- acl detail -->
+<!-- acl detail end -->
+<div id="iscsiAclDetailDiag" class="WDLabelDiag" style="display:">
+<div id="iscsiAclDetailDiag_title" class="WDLabelHeaderDialogue WDLabelHeaderDialogueiSCSIIcon"></div>
+<div align="center"><div class="hr"><hr></div></div>	
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content">
+	
+	<table border="0" width="100%"  cellspacing="0" cellpadding="0" height="0">
+			<tr>
+				<td width="150" height="40">					
+					<span class="_text" lang="_iscsi" datafld="acl_name"></span>
+				</td>	
+				<td>											
+					<input type="text" name="f_acl_name_edit" id="f_acl_name_edit" maxlength="32" class="gray_out" disabled="disabled">
+				</td>
+			</tr>	
+			<tr>
+				<td width="150" height="40">
+					<span class="_text" lang="_iscsi" datafld="iqn"></span>
+				</td>	
+				<td>											
+					<input type="text" name="f_acl_iqn_edit" id="f_acl_iqn_edit" maxlength="128" class="gray_out input_x5" disabled="disabled">
+				</td>
+			</tr>	
+	</table>		
+		<div class="scrollbar_iscsi_dialog">
+				<div id="id_acl_edit"></div>				
+		</div>		
+</div>	
+</div>					
+<div class="hrBottom2"><hr/></div>				
+<button class="ButtonMarginLeft_40px close" id="storage_iscsiAclDetailCancel_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+<!--<button type="button" id="storage_iscsiAclDetailDel_button" onclick="delete_acl();" class="ButtonMarginLeft_20px"><span class="_text" lang="_common" datafld="del"></span></button>-->
+<button class="ButtonRightPos2" id="storage_iscsiAclDetailSave_button" onclick="modify_acl();"><span class="_text" lang="_button" datafld="apply"></span></button>
+</div>
+<!--  lun mapping -->
+<div id="iscsiLUNMappingDiag" class="WDLabelDiag" style="display:">
+<div id="iscsiLUNMappingDiag_title" class="WDLabelHeaderDialogue WDLabelHeaderDialogueiSCSIIcon"><span class="_text" lang="_iscsi" datafld="lun_mapping"></span></div>
+<div align="center"><div class="hr"><hr></div></div>	
+<div id="iscsi_mapping" style="display:" >
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content">
+<div class="scrollbar_iscsi_lun_list">
+				<div id="id_lun_mapping_edit"></div>				
+		</div>		
+</div>	
+</div>					
+<div class="hrBottom2"><hr/></div>				
+<button class="ButtonMarginLeft_40px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+<button class="ButtonRightPos2" id="lun_mapping_edit_button" onclick="lun_mapping_edit();"><span class="_text" lang="_button" datafld="apply"></span></button>
+</div>
+</div>
+<!-- target mapping -->
+<div id="iscsiTargetMappingDiag" class="WDLabelDiag" style="display:">
+<div id="iscsiTargetMappingDiag_title" class="WDLabelHeaderDialogue WDLabelHeaderDialogueiSCSIIcon">
+	<span class="_text" lang="_iscsi" datafld="target_mapping"></span>
+</div>
+<div align="center"><div class="hr"><hr></div></div>	
+<div id="iscsi_target_mapping" style="display:" >
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content">
+<div class="scrollbar_iscsi_dialog">
+				<div id="id_target_mapping_edit"></div>				
+		</div>		
+</div>	
+</div>					
+<div class="hrBottom2"><hr/></div>				
+<button class="ButtonMarginLeft_40px" id="storage_iscsiLunDetailTargetBack_button" onclick="show_lun_window();"><span class="_text" lang="_button" datafld="back"></span></button>
+<button class="ButtonRightPos2" id="storage_iscsiLunDetailTargetSave_button" onclick="target_mapping_edit();"><span class="_text" lang="_button" datafld="apply"></span></button>
+</div>
+</div>
+<!-- target mapping end -->
+<!-- lun edit start -->
+<div id="iscsiLUNDetailDiag" class="WDLabelDiag" style="display:">
+<div id="iscsiLUNDetailDiag_title" class="WDLabelHeaderDialogue WDLabelHeaderDialogueiSCSIIcon"></div>
+<div align="center"><div class="hr"><hr></div></div>	
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content">
+			<table border="0" width="100%"  cellspacing="0" cellpadding="0" height="0">
+			<tr>
+				<td class="tdfield">
+					<span class="_text" lang="_iscsi" datafld="name"></span>
+				</td>	
+				<td class="tdfield_padding">											
+					<input type="text" name="f_lun_name_edit" id="f_lun_name_edit" maxlength="32" class="gray_out" disabled="disabled">
+				</td>
+			</tr>	
+			<tr>
+				<td class="tdfield">
+					<span class="_text" lang="_iscsi" datafld="pre_allocate"></span>
+				</td>	
+				<td class="tdfield_padding">																
+					<input id="lun_detail_allocate_switch" name="lun_detail_allocate_switch" type="checkbox" class="onoffswitch" value="true" style="position: absolute; z-index: -1; visibility: hidden;" disabled="disabled" >
+				</td>
+			</tr>
+			<tr>
+				<td class="tdfield">
+					<span class="_text" lang="_scandsk" datafld="volume"></span>
+				</td>
+				<td class="tdfield_padding">
+					<span id="lun_detail_volume"></span>
+					(<span id="id_lun_edit_size"></span>)<span id="id_lun_edit_size_byte" style="display:none"></span>
+				</td>
+			</tr>
+			<tr>
+				<td class="tdfield">
+					<span class="_text" lang="_wfs" datafld="size">
+				</td>	
+				<td class="tdfield_padding">
+					<table border="0"  cellspacing="1" cellpadding="0" height="0">
+					<tr>
+						<td>				
+						<input type="text" name="storage_iscsiLunDetailSize_text" id="storage_iscsiLunDetailSize_text" class="input_x3">
+						</td>
+						<td width="20">
+						</td>
+						<td>
+						<div class="select_menu" id="id_unit_lun_edit_top_main"></div>
+						</td>
+					</tr>													
+					</table>								
+				</td>			
+			</tr>			
+			<tr>
+				<td class="tdfield"><span class="_text" lang="_iscsi" datafld="target_mapping"></span></td>
+				<td class="tdfield_padding"><button type="button" id="storage_iscsiLunDetailTarget_button"  onclick="show_target_mapping();"><span class="_text" lang="_p2p" datafld="config"></span></button></td>
+			</tr>	
+			<tr>
+				<td class="tdfield"><span class="_text" lang="_iscsi" datafld="acl_mapping"></span></td>
+				<td class="tdfield_padding"><button type="button" id="storage_iscsiLunDetailAcl_button"  onclick="show_acl();"><span class="_text" lang="_iscsi" datafld="view"></span></button></td>
+			</tr>
+			<tr>
+				<td class="tdfield"><span class="_text" lang="_iscsi" datafld="snapshot"></span></td>
+				<td class="tdfield_padding"><button type="button" id="storage_iscsiLunDetailSnapshot_button"  onclick="show_lun_snap();"><span class="_text" lang="_iscsi" datafld="snapshot"></span></button></td>				
+			</tr>						
+			</table>				
+</div>	
+</div>					
+<div class="hrBottom2"><hr/></div>				
+<button class="ButtonMarginLeft_40px close" id="storage_iscsiLunDetailCancel_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+<!--<button type="button" id="storage_iscsiLunDetailDel_button" onclick="delete_lun();" class="ButtonMarginLeft_20px"><span class="_text" lang="_common" datafld="del"></span></button> -->
+<button class="ButtonRightPos2" id="storage_iscsiLunDetailSave_button" onclick="modify_lun();"><span class="_text" lang="_button" datafld="apply"></span></button>
+</div>
+</div>
+<!-- snap edit -->
+<div id="iscsiSnapDiag" class="WDLabelDiag" style="display:">
+<div id="iscsiSnapDiag_title" class="WDLabelHeaderDialogue WDLabelHeaderDialogueiSCSIIcon">
+	<span class="_text" lang="_iscsi" datafld="target_mapping"></span>
+</div>
+<div align="center"><div class="hr"><hr></div></div>	
+<div id="iscsi_target_mapping" style="display:" >
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content">
+<div class="scrollbar_iscsi_dialog">
+				<div id="id_snap"></div>				
+		</div>		
+</div>	
+</div>					
+<div class="hrBottom2"><hr/></div>				
+<button class="ButtonMarginLeft_40px close" id="storage_iscsSnapCancel_button" onclick="snap_close();show_lun_window();"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+<button class="ButtonRightPos2" id="storage_iscsiSnapCreate_button" onclick="snap_create();"><span class="_text" lang="_button" datafld="create"></span></button>
+</div>
+</div>
+<!-- lun edit end-->
+<!-- snap edit end-->
+
+<!-- lun acl start -->
+<div id="iscsiLUNAclDiag" class="WDLabelDiag" style="display:">
+<div id="iscsiLUNAclDiag_title" class="WDLabelHeaderDialogue WDLabelHeaderDialogueiSCSIIcon"><span class="_text" lang="_iscsi" datafld="acl_mapping"></span></div>
+<div align="center"><div class="hr"><hr></div></div>	
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content">
+<div class="scrollbar_iscsi_dialog">
+				<div id="id_lun_acl"></div>				
+		</div>		
+</div>
+</div>					
+<div class="hrBottom2"><hr/></div>			
+<button class="ButtonRightPos2" id="storage_iscsiLunDetailAclBack_button" onclick="show_lun_window();"><span class="_text" lang="_button" datafld="Ok"></span></button>
+</div>
+<!-- lun acl end -->
+<div id="iscsiDiag" class="WDLabelDiag" style="display:">
+<div id="iscsiDiag_title" class="WDLabelHeaderDialogue WDLabelHeaderDialogueiSCSIIcon">
+<span class="_text" lang="_iscsi" datafld="create_iscsi_target"></span></div>
+<div align="center"><div class="hr"><hr></div></div>
+	
+<!-- step1 -->
+<div id="iscsi_step1" style="display:" >
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content" >				
+		<table border="0" width="100%"  cellspacing="0" cellpadding="0" height="0">
+		<tr>
+			<td class="tdfield">
+				<span class="_text" lang="_iscsi" datafld="alias"></span>
+			</td>	
+			<td class="tdfield_padding">											
+				<input type="text" name="storage_iscsiTargetAlias_text" id="storage_iscsiTargetAlias_text" onkeyup="set_iqn('f_iqn','storage_iscsiTargetAlias_text');" maxlength="32" >
+			</td>
+		</tr>	
+		<tr>
+			<td class="tdfield">
+				<span class="_text" lang="_iscsi" datafld="name"></span>
+			</td>	
+			<td class="tdfield_padding">														
+				<div id="f_iqn"></div>
+			</td>
+		</tr>	
+		<tr>
+			<td class="tdfield">
+				<span class="_text" lang="_iscsi" datafld="security"></span>
+			</td>				
+			<td class="tdfield_padding">														
+				<div id="ChapMode" style="display:none"><button class="left_button" value="0" id="storage_iscsiTargetSecurityNone_button"><span class="_text" lang="_common" datafld="none"></span></button><button id="storage_iscsiTargetSecurityChap_button" class="right_button" value="1"><span class="_text" lang="_iscsi" datafld="chap"></span></button></div>
+			</td>			
+		</tr>				
+		<tr id="id_b_username" style="display:none">
+			<td class="tdfield">
+				<span class="_text" lang="_user" datafld="user_name"></span>
+			</td>				
+			<td class="tdfield_padding">	
+					<input type="text" name="storage_iscsiTargetUsername_text" id="storage_iscsiTargetUsername_text" maxlength=20>
+			</td>	
+		</tr>	
+		<tr id="id_b_pwd" style="display:none">
+			<td class="tdfield">
+				<span class="_text" lang="_user" datafld="pw"></span>				
+			</td>				
+			<td class="tdfield_padding">
+				<input type="password" name="storage_iscsiTargetPwd_text" id="storage_iscsiTargetPwd_text" maxlength=16 > 	
+			</td>	
+		</tr>	
+		<tr id="id_confirm_b_pwd" style="display:none">
+			<td class="tdfield">
+				<span class="_text" lang="_user" datafld="confirm_password"></span>				
+			</td>				
+			<td class="tdfield_padding">
+				<input type="password" name="storage_iscsiTargetConfirmPwd_text" id="storage_iscsiTargetConfirmPwd_text" maxlength=16 > 	
+			</td>	
+		</tr>				
+		<tr>
+			<td class="tdfield">
+				<span class="_text" lang="_iscsi" datafld="lun_mapping"></span>
+			</td>
+			<td class="tdfield_padding">
+				<div id="i_lun_mapping" style="display:none"><button type="button" class="left_button" value="1" id="storage_iscsiTargetLunMapNone_button">None</button><!--<button id="storage_iscsiTargetLunMapCreate_button" type="button" class="middle_button" value="2">Create LUN</button>--><button id="storage_iscsiTargetLunMapMap_button" type="button" class="right_button" value=3>Map Existing LUN</button></div>		
+			</td>
+		</tr>		
+		</table>													
+</div>	
+</div>			
+<div class="hrBottom2"><hr/></div>		
+<button class="ButtonMarginLeft_40px close" id="storage_iscsiTargetCancel1_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+<button class="ButtonRightPos2" id="storage_iscsiTargetSave1_button" onclick="create_iscsi();"><span class="_text" lang="_button" datafld="apply"></span></button>
+<button class="ButtonRightPos2" id="storage_iscsiTargetNext1_button" style="display:none"><span class="_text" lang="_button" datafld="Next"></span></button>
+</div>
+<!-- step 2-->	
+<div id="iscsi_step2" style="display:none;" >
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content">		
+		<table border="0"  cellspacing="0" cellpadding="0" height="0">		
+		<tr>
+			<td height="40">
+				<span class="_text" lang="_iscsi" datafld="lun_mapping"></span>
+				</td>				
+		</tr>
+		<tr>	
+			<td>								
+					<div id="id_lun_mapping_scroll">
+						<div id="id_lun_mapping_tb" style="display:none"></div>												
+					</div>
+		</td>			
+		</tr>					
+		</table>
+</div>	
+</div>						
+<div class="hrBottom2"><hr/></div>
+<button class="ButtonMarginLeft_40px" id="i_back_button_1"><span class="_text" lang="_button" datafld="back">Back</span></button>		
+<button class="ButtonMarginLeft_20px close" onclick="close_create_dialog();"><span class="_text" lang="_button" datafld="Cancel"></span></button>		
+<button class="ButtonRightPos2" id="i_next_button_2" onclick="create_iscsi();"><span class="_text" lang="_button" datafld="apply"></span></button>
+</div>
+<!-- step 3 -->
+<div id="iscsi_step3" style="display:none;" >
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content">		
+		<table border="0" width="100%"  cellspacing="0" cellpadding="0" height="0">
+			<tr>
+				<td width="150" height="40">
+					<span class="_text" lang="_iscsi" datafld="name"></span>
+				</td>	
+				<td>											
+					<input type="text" name="storage_iscsiTargetLunName_text" id="storage_iscsiTargetLunName_text" maxlength="32" >
+				</td>
+			</tr>	
+			<tr>
+				<td width="150" height="40">
+					<span class="_text" lang="_iscsi" datafld="pre_allocate"></span>
+				</td>	
+				<td>														
+					<input id="storage_iscsiTargetPreAllocate_switch" name="allocate_switch" class="onoffswitch" type="checkbox" value="true" style="position: absolute; z-index: -1; visibility: hidden;" >
+				</td>
+			</tr>
+			<tr>
+				<td width="150" height="40">
+					<span class="_text" lang="_scandsk" datafld="volume"></span>
+				</td>
+				<td>
+					<table border="0"  cellspacing="1" cellpadding="0" height="0">
+						<tr>
+							<td>	
+					<div class="select_menu" id="id_volume_target_lun_top_main"></div>
+				</td>
+							<td>&nbsp;
+								(<span id="id_volume_target_lun_size"></span>)<span id="id_volume_target_lun_size_byte" style="display:none"></span>
+							</td>	
+						</tr>
+					</table>		
+				</td>
+			</tr>
+			<tr>
+				<td width="150" height="40">
+					<span class="_text" lang="_wfs" datafld="size">
+				</td>	
+				<td>
+					<table border="0"  cellspacing="1" cellpadding="0" height="0">
+					<tr>
+						<td>				
+						<input type="text" name="storage_iscsiTargetSize_text" id="storage_iscsiTargetSize_text" class="input_x2">
+						</td>
+						<td width="20">
+						</td>
+						<td>
+						<div class="select_menu" id="id_unit_target_lun_top_main"></div>
+						</td>
+					</tr>													
+					</table>								
+				</td>			
+			</tr>			
+			</table>											
+</div>	
+</div>						
+<div class="hrBottom2"><hr/></div>
+<button class="ButtonMarginLeft_40px" id="storage_iscsiTargetBack2_button"><span class="_text" lang="_button" datafld="back">Back</span></button>		
+<button class="ButtonMarginLeft_20px close" id="storage_iscsiTargetCancel2_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>		
+<button class="ButtonRightPos2" id="storage_iscsiTargetSave2_button" onclick="create_iscsi();"><span class="_text" lang="_button" datafld="apply"></span></button>									
+</div>
+</div>
+
+
+
+<!-- detail-->
+<div id="iscsiDetailDiag" class="WDLabelDiag" style="display:">
+<div id="iscsiDetailDiag_title" class="WDLabelHeaderDialogue WDLabelHeaderDialogueiSCSIIcon">Ryanspace Details</div>
+<div align="center"><div class="hr"><hr></div></div>	
+<div id="iscsi_detail" style="display:" >
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content">
+<table border="0"  cellspacing="0" cellpadding="0" height="0">
+		<tr style="display:none">
+				<td class="tdfield"><span class="_text" lang="_iscsi" datafld="alias"></td>
+				<td class="tdfield_padding">														
+					<div id="id_iscsi_name"></div>
+				</td>							
+		</tr>
+		<tr> 
+				<td class="tdfield"><span class="_text" lang="_iscsi" datafld="name"></td>
+				<td class="tdfield_padding"><div id="id_iscsi_iqn"></div></td>							
+		</tr>
+		<tr id="id_detail_location">
+			<td class="tdfield"><span class="_text" lang="_iscsi" datafld="create_on"></td>
+			<td class="tdfield_padding">
+						<div id="id_iscsi_location"></div>
+			</td>
+		</tr>		
+			<tr>
+			<td class="tdfield"><span class="_text" lang="_iscsi" datafld="security"></td>
+			<td class="tdfield_padding">
+				<div id="ChapMode_detail" style="display:none"><button id="storage_iscsiDetailSecurityNone_button" class="left_button" value="0"><span><span class="_text" lang="_common" datafld="none"></span></span></button><button id="storage_iscsiDetailSecurityChap_button" class="right_button" value="1"><span><span class="_text" lang="_iscsi" datafld="chap"></span></button></div>		
+			</td>
+		</tr>	
+		<tr>
+			<td class="tdfield"><span class="_text" lang="_common" datafld="enable"></td>
+			<td class="tdfield_padding">				
+				<input id="settings_generalLcd_switch" name="storage_iscsiEnable_switch" class="onoffswitch" type="checkbox" value="true" style="position: absolute; z-index: -1; visibility: hidden;">
+			</td>
+		</tr>	
+		<tr id="id_detail_username" style="display:">
+		<td class="tdfield">
+			<span class="_text" lang="_user" datafld="user_name">
+		</td>				
+		<td class="tdfield_padding">	
+				<input type="text" name="storage_iscsiDetailusername_text" id="storage_iscsiDetailusername_text" maxlength=20>
+		</td>	
+	</tr>	
+	<tr id="id_detail_pwd" style="display:">
+		<td class="tdfield">
+			<span class="_text" lang="_user" datafld="pw">
+		</td>				
+		<td class="tdfield_padding">
+			<input type="password" name="storage_iscsiDetailpwd_text" id="storage_iscsiDetailpwd_text" maxlength=16>	
+		</td>	
+	</tr>	
+	<tr id="id_detail_confirm_pwd" style="display:">
+		<td class="tdfield">
+			<span class="_text" lang="_user" datafld="confirm_password"></span>
+		</td>				
+		<td class="tdfield_padding">
+			<input type="password" name="storage_iscsiDetailConfirmPwd_text" id="storage_iscsiDetailConfirmPwd_text" maxlength=16>	
+		</td>	
+	</tr>	
+		</tr>	
+			<tr>
+			<td class="tdfield"><span class="_text" lang="_iscsi" datafld="address"></td>
+			<td class="tdfield_padding">
+						<div id="id_iscsi_ip"></div>
+			</td>
+		</tr>	
+</table>
+</div>	
+</div>					
+<div class="hrBottom2"><hr/></div>				
+<button type="button" class="ButtonMarginLeft_40px close" id="storage_iscsiDetailCancel_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+<!--<button type="button" onclick="on_off_iscsi();" class="ButtonMarginLeft_20px" id="storage_iscsiDetailEnable_button"><span class="_text" lang="_common" datafld="disable"></span></button>
+<button type="button" onclick="delete_iscsi();" class="ButtonMarginLeft_20px" id="storage_iscsiDetailDelete_button"><span class="_text" lang="_common" datafld="del"></span></button>
+-->
+<button type="button" class="ButtonRightPos2"	 id="storage_iscsiDetailSave_button" onclick="modify_iscsi();"><span class="_text" lang="_button" datafld="apply"></span></button>
+</div>
+</div>
+
+<!-- lnitiatiors -->
+<div id="iscsiInitiatorsDiag" class="WDLabelDiag" style="display:">
+<div id="iscsiInitiatorsDiag_title" class="WDLabelHeaderDialogue WDLabelHeaderDialogueiSCSIIcon"><span class="_text" lang="_iscsi" datafld="initi_title"></span></div>
+<div align="center"><div class="hr"><hr></div></div>	
+<div id="iscsi_Initiators" style="display:" >
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content"><span class="_text" lang="_iscsi" datafld="initi_list"></span>
+<div id="id_ini_list"></div>				
+</div>	
+</div>		
+<div class="hrBottom2"><hr/></div>			
+	<button type="button" class="ButtonRightPos2 close"><span class="_text" lang="_button" datafld="close"></span></button>
+</div>
+</div>
+<!-- server -->
+<div id="iscsiServerDiag" class="WDLabelDiag" style="display:">
+<div id="iscsiServerDiag_title" class="WDLabelHeaderDialogue WDLabelHeaderDialogueiSCSIIcon"><span class="_text" lang="_iscsi" datafld="iscsi_server"></span></div>
+<div align="center"><div class="hr"><hr></div></div>	
+<div class="WDLabelBodyDialogue">	
+	<table border="0"  cellspacing="0" cellpadding="0" height="0">
+	<tr>
+			<td width="100" height="40"><span class="_text" lang="_iscsi" datafld="server"></td>
+			<td><input type="text" id="storage_iscsiServer_text" name="storage_iscsiServer_text"></td>
+	</tr>	
+	</table>			
+</div>		
+<div class="hrBottom2"><hr/></div>				
+<button class="ButtonMarginLeft_40px close" id="storage_iscsiServerCancel_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>		
+<button class="ButtonRightPos2 save" onclick="save_iscsi_server();" id="storage_iscsiServerSave_button"><span class="_text" lang="_button" datafld="apply"></span></button>
+</div>
+
+<!--  lun -->
+
+
+	<div id="iscsiLunDiag" class="WDLabelDiag" style="display:">
+	<div id="iscsiLunDiag_title" class="WDLabelHeaderDialogue WDLabelHeaderDialogueiSCSIIcon">
+	<span class="_text" lang="_iscsi" datafld="create_iscsi_lun"></span></div>
+	<div align="center"><div class="hr"><hr></div></div>
+		
+	<!-- step1 -->
+	<div id="iscsi_lun_step1" style="display:" >
+	<div class="WDLabelBodyDialogue">
+	<div class="dialog_content" >					
+			<table border="0" width="100%"  cellspacing="0" cellpadding="0" height="0">
+			<tr>
+				<td class="tdfield">
+					<span class="_text" lang="_iscsi" datafld="name">
+				</td>	
+				<td class="tdfield_padding">											
+					<input type="text" name="storage_iscsiLunName_text" id="storage_iscsiLunName_text" maxlength="32" >
+				</td>
+			</tr>	
+			<tr>
+				<td class="tdfield">
+					<span class="_text" lang="_iscsi" datafld="pre_allocate"></span>
+				</td>	
+				<td class="tdfield_padding">														
+					<input id="storage_iscsiLunPreAllocate_switch" name="storage_iscsiLunPreAllocate_switch" class="onoffswitch" type="checkbox" value="true" style="position: absolute; z-index: -1; visibility: hidden;" >
+				</td>
+			</tr>
+			<tr>
+				<td class="tdfield">
+						<span class="_text" lang="_scandsk" datafld="volume"></span>
+				</td>
+				<td class="tdfield_padding">
+					<table border="0"  cellspacing="1" cellpadding="0" height="0">
+						<tr>
+							<td>	
+					<div class="select_menu" id="id_volume_lun_top_main"></div>
+				</td>
+							<td>&nbsp;
+								(<span id="id_volume_lun_size"></span>)<span id="id_volume_lun_size_byte" style="display:none"></span>
+							</td>	
+						</tr>
+					</table>		
+				</td>
+			</tr>
+			<tr id="id_set_size">
+				<td class="tdfield">
+					<span class="_text" lang="_wfs" datafld="size">
+				</td>	
+				<td class="tdfield_padding">
+					<table border="0"  cellspacing="1" cellpadding="0" height="0">
+					<tr>
+						<td>				
+						<input type="text" name="storage_iscsiLunSize_text" id="storage_iscsiLunSize_text" class="input_x3">
+						</td>
+						<td width="20">
+						</td>
+						<td>
+						<div class="select_menu" id="id_unit_lun_top_main"></div>
+						</td>
+					</tr>													
+					</table>								
+				</td>			
+			</tr>		
+			<tr>
+				<td class="tdfield"><span class="_text" lang="_iscsi" datafld="target_mapping"></span></td>
+				<td class="tdfield_padding">
+					<div id="i_target_mapping" style="display:none"><button id="storage_iscsiLunTargetMapNone_button" type="button" class="left_button" value="1">None</button><!--<button id="storage_iscsiLunTargetMapCreate_button" type="button" class="middle_button" value="2">Create a New Target</button>--><button id="storage_iscsiLUnTargetMapMap_button" type="button" class="right_button" value=3>Map Existing Target</button></div>	
+				</td>
+			</tr>	
+			</table>												
+	</div>	
+	</div>			
+<div class="hrBottom2"><hr/></div>		
+<button class="ButtonMarginLeft_40px close" id="storage_iscsiLunCancel1_button"><span class="_text" lang="_button" datafld="Cancel"></button>
+<button class="ButtonRightPos2" id="storage_iscsiLunNext1_button"  style="display:none"><span class="_text" lang="_button" datafld="Next"></span></button>
+<button class="ButtonRightPos2" id="storage_iscsiLunSave1_button"  onclick="create_lun();"><span class="_text" lang="_button" datafld="apply"></span></button>
+</div>
+
+<!-- step 2-->	
+<div id="iscsi_lun_step2" style="display:none;" >
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content">		
+		<table border="0"  cellspacing="0" cellpadding="0" height="0">		
+		<tr>	
+			<td>		
+			    <div class="scrollbar_iscsi_target_list">
+					<div id="id_target_mapping_tb" style="display:none"></div>							
+				  </div>
+			</td>			
+		</tr>					
+		</table>
+</div>	
+</div>						
+<div class="hrBottom2"><hr/></div>
+<button class="ButtonMarginLeft_40px" id="i_lun_back_button_1"><span class="_text" lang="_button" datafld="back">Back</span></button>		
+<button class="ButtonMarginLeft_20px close" onclick="close_create_dialog();"><span class="_text" lang="_button" datafld="Cancel"></button>		
+<button class="ButtonRightPos2" id="i_lun_create"  onclick="create_lun();"><span class="_text" lang="_button" datafld="apply"></span></button>
+<button class="ButtonRightPos2" id="i_lun_next_button_2" style="display:none"><span class="_text" lang="_button" datafld="Next"></span></button>
+
+</div>
+<!-- step 3 -->
+
+<div id="iscsi_lun_step3" style="display:none;" >
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content">		
+		<table border="0"  cellspacing="0" cellpadding="0" height="0">		
+		<tr>
+			<td class="tdfield">
+				<span class="_text" lang="_iscsi" datafld="alias">
+			</td>	
+			<td class="tdfield_padding">											
+				<input type="text" name="storage_iscsiLunAlias_text" id="storage_iscsiLunAlias_text" onkeyup="set_iqn('f_lun_target_iqn','storage_iscsiLunAlias_text');" maxlength="32" >
+			</td>
+		</tr>	
+		<tr>
+			<td class="tdfield">
+				<span class="_text" lang="_iscsi" datafld="name">
+			</td>	
+			<td class="tdfield_padding">														
+				<div id="f_lun_target_iqn"></div>
+			</td>
+		</tr>
+		<tr>
+			<td class="tdfield">
+				<span class="_text" lang="_iscsi" datafld="security">
+			</td>				
+			<td class="tdfield_padding">														
+				<div id="ChapMode_lun" style="display:none"><button id="storage_iscsiLunSecurityNone_button" class="left_button" value="0"><span class="_text" lang="_common" datafld="none"></span></button><button id="storage_iscsiLunSecurityChap_button" class="right_button" value="1"><span class="_text" lang="_iscsi" datafld="chap"></span></button></div>
+			</td>			
+		</tr>		
+		<tr id="id_lun_username" style="display:none">
+			<td class="tdfield">
+				<span class="_text" lang="_user" datafld="user_name">
+			</td>				
+			<td class="tdfield_padding">	
+					<input type="text" name="storage_iscsiLunUsername_text" id="storage_iscsiLunUsername_text" maxlength=16>
+			</td>	
+		</tr>	
+		<tr id="id_lun_pwd" style="display:none">
+			<td class="tdfield">
+				<span class="_text" lang="_user" datafld="pw">				
+			</td>				
+			<td class="tdfield_padding">
+				<input type="password" name="storage_iscsiLunPwd_text" id="storage_iscsiLunPwd_text" maxlength=16 > 	
+			</td>	
+		</tr>	
+		<tr id="id_lun_confirm_pwd" style="display:none">
+			<td class="tdfield">
+				<span class="_text" lang="_user" datafld="confirm_password"></span>				
+			</td>				
+			<td class="tdfield_padding">
+				<input type="password" name="storage_iscsiLunConfirmPwd_text" id="storage_iscsiLunConfirmPwd_text" maxlength=16 > 	
+			</td>	
+		</tr>	
+		</table>
+</div>	
+</div>						
+<div class="hrBottom2"><hr/></div>
+<button class="ButtonMarginLeft_40px" id="storage_iscsiLunBack2_button"><span class="_text" lang="_button" datafld="back">Back</span></button>		
+<button class="ButtonMarginLeft_20px close" id="storage_iscsiLunCancel2_button"><span class="_text" lang="_button" datafld="Cancel"></button>		
+<button class="ButtonRightPos2" id="storage_iscsiLunSave2_button"  onclick="create_lun();"><span class="_text" lang="_button" datafld="apply"></span></button>
+</div>
+
+
+
+
+
+

@@ -1,0 +1,6 @@
+01 3 * * * root [ -f /usr/local/sbin/deviceInfoCollect.py ] &&  /usr/local/sbin/deviceInfoCollect.py -c
+01 3 * * 2 root [ -f /usr/local/sbin/deviceInfoCollect.py ] &&  /usr/local/sbin/deviceInfoCollect.py -s
+58 2 * * * root /usr/local/sbin/PullWdlogConfig.sh && /usr/local/sbin/LogDataSize.sh && [ -f /usr/local/sbin/rotateLogs.sh ] && /usr/local/sbin/rotateLogs.sh -f
+01 */8 * * * root [ -f /etc/init.d/atop ] && /etc/init.d/atop rotate
+@reboot root /usr/local/sbin/PullWdlogConfig.sh && [ -f /usr/local/sbin/rotateLogs.sh ] && /usr/local/sbin/rotateLogs.sh
+

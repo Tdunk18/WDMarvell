@@ -1,0 +1,59 @@
+btrfs-convert(8)
+================
+
+NAME
+----
+btrfs-convert - convert from ext2/3/4 filesystem to btrfs or rollback
+
+SYNOPSIS
+--------
+*btrfs-convert* [options] <device>
+
+DESCRIPTION
+-----------
+*btrfs-convert* is used to convert existed ext2/3/4 to btrfs filesystem,
+and the original filesystem image is accessible as from separate subvolume
+named 'ext2_saved' as file image.
+
+WARNING: If one hopes to rollback to ext2/3/4, they should not execute
+*btrfs balance* command on converted btrfs, since it will change the extent
+layout and make *btrfs-convert* unable to rollback.
+
+NOTE: If one is satisfied with converted btrfs, and not longer wants to
+rollback to ext2/3/4, it is highly recommended to remove 'ext2_saved' subvolume
+and execute *btrfs filesystem defragment* and *btrfs balance* command on the
+converted btrfs.
+
+OPTIONS
+-------
+-d|--no-datasum::
+Disable data checksum calculations and set NODATASUM file flag. This can speed
+up the conversion.
+-i|--no-xattr::
+Ignore xattrs and ACLs.
+-n|--no-inline::
+Disable inlining of small files to metadata blocks.
+-N|--nodesize <SIZE>::
+Set filesystem nodesize, the tree block size in which btrfs stores data.
+The default value is 16KB (16384) or the page size, whichever is bigger.
+Must be a multiple of the sectorsize, but not larger than 65536.
+-r|--rollback::
+Roll back to ext2fs.
+-l|--label <LABEL>::
+set filesystem label during conversion.
+-L|--copy-label::
+use label from the converted filesystem.
+-p|--progress::
+Show progress of conversion, on by default.
+--no-progress::
+Disable detailed progress and show only the main phases of conversion.
+
+EXIT STATUS
+-----------
+*btrfs-convert* will return 0 if no error happened.
+If any problems happened, 1 will be returned.
+
+SEE ALSO
+--------
+`mkfs.btrfs`(8)
+

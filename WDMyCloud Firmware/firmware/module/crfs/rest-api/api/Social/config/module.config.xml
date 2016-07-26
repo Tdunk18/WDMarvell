@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+    <name>Social</name>
+    <version>1.0</version>
+    <description>Module has social related components.</description >
+   
+    <components>
+        
+        <component>
+            <name>social_network</name>
+            <module>Social</module>
+            <controller_class>\Social\Controller\SocialNetwork</controller_class>
+            <auth_security>
+                <all>USER_AUTH_ALL</all>
+            </auth_security>
+        </component>
+        
+        <component>
+            <name>social_file_contents</name>
+            <module>Social</module>
+            <controller_class>\Social\Controller\SocialFileContents</controller_class>
+            <auth_security>
+                <all>USER_AUTH_ALL</all>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>social_album_item_contents</name>
+            <module>Social</module>
+            <controller_class>\Social\Controller\SocialAlbumItemContents</controller_class>
+            <auth_security>
+                <all>USER_AUTH_ALL</all>
+            </auth_security>
+        </component>
+      
+    </components>
+    
+</module>

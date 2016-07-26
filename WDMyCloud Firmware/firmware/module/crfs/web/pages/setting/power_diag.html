@@ -1,0 +1,137 @@
+<!-- Scan Disk Dialog  -->
+<div id="power_Diag" class="WDLabelDiag" style="display:none;">
+<div class="WDLabelHeaderDialogue WDLabelHeaderDialoguePowerIcon" id="hd_ntp_Diag_title">Power Setting</div>
+<div align="center"><div class="hr"><hr></div></div>
+
+	<!-- 1.Scan Disk Dialog : Bar -->
+	<div id="power_set">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content" style="overflow:hidden">
+
+				
+				<ul class="pListDiv">
+					<li>
+						<div class="div1"></div>
+						<div class="div2">Sun</div>
+						<div class="div3">
+							<span id="SliderMain7">
+								<span style="display: inline-block; width: 200px; padding: 0 5px;">
+					     	<input id="Slider7" type="slider" name="area" value="0;24" />
+					     	</span>   
+				    	</span>
+				     	<span id="Slider_desc7" style='display:none;padding-left:45px;'>Powered off all day</span>  							
+						</div>
+						<div class="div4">
+							<img id="img_off_7" src="/web/images/p_off.png" width="20" height="20" border=0 onclick="turn_on_power(7,'on')" style="display:none;margin-top:7px">	
+							<img id="img_on_7"  src="/web/images/p_on.png" width="20" height="20"  border=0 onclick="turn_on_power(7,'off')" style="margin-top:7px;">
+						</div>											
+					</li>
+					<li>
+						<div class="div1"></div>
+						<div class="div2">Mon</div>
+						<div class="div3">
+							<span id="SliderMain1">
+								<span style="display: inline-block; width: 200px; padding: 0 5px;">
+					     	<input id="Slider1" type="slider" name="area" value="0;24" />
+					     	</span>  
+					     </span>	
+				     	<span id="Slider_desc1" style='display:none;padding-left:45px;'>Powered off all day</span>  							   							
+						</div>
+						<div class="div4">
+							<img id="img_off_1" src="/web/images/p_off.png" width="20" height="20" border=0 onclick="turn_on_power(1,'on')" style='display:none;margin-top:7px;'>	
+							<img id="img_on_1"  src="/web/images/p_on.png"  width="20" height="20"  border=0 onclick="turn_on_power(1,'off')" style="margin-top:7px;" >	
+						</div>					
+					</li>
+					<li>
+						<div class="div1"></div>
+						<div class="div2">Tue</div>
+						<div class="div3">
+							<span id="SliderMain2">
+								<span style="display: inline-block; width: 200px; padding: 0 5px;">
+					     	<input id="Slider2" type="slider" name="area" value="0;24" />
+					     	</span> 
+					     </span>	
+				     	<span id="Slider_desc2" style='display:none;padding-left:45px;'>Powered off all day</span>  							   							    							
+						</div>
+						<div class="div4">
+							<img id="img_off_2" src="/web/images/p_off.png" width="20" height="20" border=0 onclick="turn_on_power(2,'on')" style="display:none;margin-top:7px;">	
+							<img id="img_on_2"  src="/web/images/p_on.png"  width="20" height="20" border=0 onclick="turn_on_power(2,'off')" style="margin-top:7px;">
+							</div>											
+					</li>
+					<li>
+						<div class="div1"></div>
+						<div class="div2">Wed</div>
+						<div class="div3">
+							<span id="SliderMain3">
+								<span style="display: inline-block; width: 200px; padding: 0 5px;">
+					     	<input id="Slider3" type="slider" name="area" value="0;24" />
+					     	</span>
+					     </span>	
+				     	<span id="Slider_desc3" style='display:none;padding-left:45px;'>Powered off all day</span>     							
+						</div>
+						<div class="div4">
+							<img id="img_off_3" src="/web/images/p_off.png" width="20" height="20"  border=0 onclick="turn_on_power(3,'on')" style="display:none;margin-top:7px;">	
+							<img id="img_on_3"  src="/web/images/p_on.png"  width="20" height="20" border=0 onclick="turn_on_power(3,'off')" style="margin-top:7px;">
+							</div>											
+					</li>
+					<li>
+						<div class="div1"></div>
+						<div class="div2">Thu</div>
+						<div class="div3">
+							<span id="SliderMain4">
+								<span style="display: inline-block; width: 200px; padding: 0 5px;">
+					     	<input id="Slider4" type="slider" name="area" value="0;24" />
+					     	</span>     					
+					     </span>	
+				     	<span id="Slider_desc4" style='display:none;padding-left:45px;'>Powered off all day</span>		
+						</div>
+						<div class="div4">
+							<img id="img_off_4" src="/web/images/p_off.png" width="20" height="20" border=0 onclick="turn_on_power(4,'on')" style="display:none;margin-top:7px;">	
+							<img id="img_on_4"  src="/web/images/p_on.png"  width="20" height="20" border=0 onclick="turn_on_power(4,'off')" style="margin-top:7px;">	
+						</div>																
+					</li>
+					<li>
+						<div class="div1"></div>
+						<div class="div2">Fri</div>
+						<div class="div3">
+							<span id="SliderMain5">
+								<span style="display: inline-block; width: 200px; padding: 0 5px;">
+					     	<input id="Slider5" type="slider" name="area" value="0;24" />
+					     	</span>
+					     </span>	
+				     	<span id="Slider_desc5" style='display:none;padding-left:45px;'>Powered off all day</span>     							
+						</div>
+						<div class="div4">
+							<img id="img_off_5" src="/web/images/p_off.png" width="20" height="20" border=0 onclick="turn_on_power(5,'on')" style="display:none;margin-top:7px;">	
+							<img id="img_on_5"  src="/web/images/p_on.png"  width="20" height="20" border=0 onclick="turn_on_power(5,'off')" style="margin-top:7px;">									
+						</div>										
+					</li>
+						<li>
+						<div class="div1"></div>
+						<div class="div2">Sat</div>
+						<div class="div3">
+							<span id="SliderMain6">
+								<span style="display: inline-block; width: 200px; padding: 0 5px;">
+					     	<input id="Slider6" type="slider" name="area" value="0;24" />
+					     	</span>
+					     </span>	
+				     	<span id="Slider_desc6" style='display:none;padding-left:45px;'>Powered off all day</span>     							
+						</div>
+						<div class="div4">
+							<img id="img_off_6" src="/web/images/p_off.png" width="20" height="20" border=0 onclick="turn_on_power(6,'on')" style="display:none;margin-top:7px;">	
+							<img id="img_on_6"  src="/web/images/p_on.png"  width="20" height="20" border=0 onclick="turn_on_power(6,'off')" style="margin-top:7px;">		
+						</div>										
+					</li>
+					
+				</ul>	
+				
+		
+			</div>	
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>							
+		<button class="ButtonMarginLeft_40px close" onclick="power_cancel();">Cancel</button>		
+		<button class="ButtonRightPos2" id="schedule_setting">Save</button>
+	
+</div>
+</div>

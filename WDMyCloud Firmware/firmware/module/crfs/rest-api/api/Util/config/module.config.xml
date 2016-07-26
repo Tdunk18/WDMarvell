@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+    <name>Util</name>
+    <version>2.1</version>
+    <description>Util Module.</description >
+    <class_factory>
+        <factory>Util\WebServerUtils</factory>
+        <implementation>
+            <class_name>Util\Linux\WebServerUtilsImpl</class_name>
+            <attributes osname="linux" />
+        </implementation>
+        <implementation>
+            <class_name>Util\Linux_oem\WebServerUtilsImpl</class_name>
+            <attributes osname="linuxoem" />
+        </implementation>
+        <implementation>
+            <class_name>Util\Windows\WebServerUtilsImpl</class_name>
+            <attributes osname="windows" />
+        </implementation>
+     </class_factory>
+     <class_factory>   
+        <factory>Util\ZipStream</factory>
+	        <implementation>
+	        	<class_name>Util\Linux\ZipStreamImpl</class_name>
+	        	<attributes osname="linux" />
+	        </implementation>
+	        <implementation>
+	        	<class_name>Util\Windows\ZipStreamImpl</class_name>
+	        	<attributes osname="windows" />
+	        </implementation>
+    </class_factory>
+</module>

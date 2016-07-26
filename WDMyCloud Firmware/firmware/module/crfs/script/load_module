@@ -1,0 +1,531 @@
+#!/bin/sh
+
+source /usr/local/modules/files/project_features
+#echo "PROJECT_FEATURE_MYSQL=$PROJECT_FEATURE_MYSQL"
+#echo "PROJECT_FEATURE_MYPHOTO=$PROJECT_FEATURE_MYPHOTO"
+find_volume=0
+PIDS=""
+create_systemfile()
+{
+	DSK_INDEX=abcdefghijklmnopqrstuvwxyz
+	dsknum=1
+	check_upload=0
+
+	echo "### create systemfile ###"
+	## hidden partiton ##
+	while [ $dsknum -le 26 ]
+	do
+		HIDDEN_PATH=/mnt/HD_`expr substr "$DSK_INDEX" "$dsknum" 1`4
+		if [ -d "$HIDDEN_PATH" ];then
+			#echo check $HIDDEN_PATH
+			if [ ! -d "$HIDDEN_PATH"/.systemfile ];then
+				mkdir $HIDDEN_PATH/.systemfile
+				chmod -R 700 $HIDDEN_PATH/.systemfile
+			fi
+		fi
+	dsknum=`expr $dsknum + 1`
+	done
+
+	## User Disk partition ##
+	dsknum=1
+	while [ $dsknum -le 26 ]
+	do
+		DISK_PATH=/mnt/HD/HD_`expr substr "$DSK_INDEX" "$dsknum" 1`2
+		if [ -d "$DISK_PATH" ];then
+			#echo check $DISK_PATH
+			find_volume=1
+			if [ ! -d "$DISK_PATH"/.systemfile ];then
+				mkdir $DISK_PATH/.systemfile
+				chmod -R 700 $DISK_PATH/.systemfile
+			fi
+
+			## for upload file
+			if [ ! -d "$DISK_PATH/.systemfile/upload" ];then
+				mkdir $DISK_PATH/.systemfile/upload
+				chmod -R 777 $DISK_PATH/.systemfile/upload
+			fi
+			if [ "$check_upload" -eq 0 ];then
+				check_upload=1
+				rm -f /usr/local/upload
+				rm -f /var/tmp
+				# Create upload link
+				ln -s $DISK_PATH/.systemfile/upload  /var/tmp
+				ln -s $DISK_PATH/.systemfile/upload  /usr/local/upload
+			fi
+		fi
+	dsknum=`expr $dsknum + 1`
+	done
+	
+	nas_model_name=`cat /usr/local/modules/files/model`
+	if [ "$nas_model_name" = "WDMyCloudEX2" ]; then
+		echo -e 1024 > /sys/block/sda/queue/read_ahead_kb
+		echo -e 1024 > /sys/block/sdb/queue/read_ahead_kb
+	fi
+	
+}
+
+sata_reload_application()
+{
+	echo "### sata_reload_application start ###"
+  nas_model_name=`cat /usr/local/modules/files/model`
+  usb_add=/tmp/wd_usb_volume_mount
+  
+	# UPnP-AV : by Roy: ** dont move/delete/modify this part **
+	smbcv
+	UPNPAV=`xmldbc -g '/app_mgr/upnpavserver/enable'`
+	if [ "$UPNPAV" = "1" ]; then
+		(twonky.sh stop; sleep 2; twonky.sh start)
+		sleep 3
+	fi
+	# Roy end
+
+	# WD NAS upnp - for Sprite
+	upnpnas.sh restart
+
+	# Start performance monitor
+	[ -f /etc/init.d/atop ] && /etc/init.d/atop start
+	
+	#create_volume_map
+
+	#smart_ch_hd_result alpha ibuki 2010/07/22
+	smart_ch_hd_result &
+
+	# mysql , set by system_int script
+	if [ "$PROJECT_FEATURE_MYSQL" = "1" ];then
+		killall mysqld_safe mysqld 2>/dev/null
+		startup-mysql&
+	fi
+
+	#check quota alpha ibuki 2009/08/13
+	chk_quota &
+	itune_tool --scan_media_serving &
+
+#	ITUNE=$(xmldbc -g "/app_mgr/itunesserver/enable")
+#	if [ "$ITUNE" = "1" ]; then
+#		itunes.sh restart
+#	fi
+
+	#+eve 2009/09/22
+	rm -f /var/www/xml/dm_info.xml 2>/dev/null
+
+	pid_apkg=`pidof apkg`
+	if [ -z "$pid_apkg" ]; then
+		apkg&
+	else
+		kill -SIGUSR1 `pidof apkg`
+	fi
+
+	# update photo center database , set by system_int script
+	if [ "$PROJECT_FEATURE_MYPHOTO" = "1" ];then
+		sqldb -a new /mnt/HD/ &
+	fi
+
+	##kill snmp##
+	killall snmpd 2>/dev/null
+
+	#must update smb.conf before call volume mount shell script
+	smbcom
+    # for sandbox 20131011
+
+	# Run wdnotifiered here, because updateWDDatabase will check 
+	# the process +VODKA.20150814
+	/etc/init.d/wdnotifierd start
+
+	
+	# update volume mount information to WD.
+	if [ ! -e /tmp/system_safing_mode ]; then
+	  /usr/sbin/updateWDDatabase -m all
+	fi
+  
+	# mount iso files
+	# didn't disconnect iso share for running load_module +20140724.VODKA
+	iso_mount -m
+	iso_mount -o
+  
+  if [ ! -e /tmp/system_ready ]; then
+    if [ -e /tmp/wd_usb_volume_mount ]; then
+      while read cmd
+    	do
+    		#echo "cmd=$cmd"
+    		`$cmd`
+    	done <$usb_add
+    	rm -f $usb_add
+    fi
+  fi
+  
+	# Start samba server, For WD will call curd_share_db.sh
+	#smbwddb
+
+	# Move crawler to here , because crawler will reference volumes information.
+	# +VODKA.20150814 JIRA-SKY-4176 no MountPoints if DUT is booted with USB drive
+	# WD Mediacrawler/Dispatcher/Notifier
+	rm -f /tmp/WDMCDispatcher.pipe
+	remoteAccess=`cat /usr/local/config/dynamicconfig_config.ini | grep REMOTEACCES | sed 's/"//g' | sed 's/REMOTEACCESS=//'`
+	if [ $remoteAccess == "TRUE" ]; then
+		/etc/init.d/wdmcserverd start
+		/etc/init.d/wdphotodbmergerd start
+	fi
+
+	#/etc/init.d/wddispatcherd start
+	# WD OnBoarding daemon +20150129.VODKA
+	/etc/init.d/onbrdnetloccommd  start
+
+	pid_smbd=`pidof smbd`
+	if [ -z "$pid_smbd" ]; then
+		smbcmd -r
+	else
+		smbcom -v -s
+	fi
+
+	P2P_ENABLE=`xmldbc -g '/download_mgr/p2p/enable'`
+	if [ "$P2P_ENABLE" = "1" ]; then
+		for HDidx in HD_a2 HD_b2 HD_c2 HD_d2; do
+			if [ -d /mnt/HD/${HDidx} ]; then
+				p2p.sh start >/dev/null
+				break;
+			fi
+		done
+		#p2p.sh start >/dev/null
+		#newp2p >/dev/null &
+	fi
+
+	#rsync daemon
+	RSYNC_ENABLE=`xmldbc -g '/backup_mgr/rsyncd/enable'`
+	if [ "$RSYNC_ENABLE" = "1" ]; then
+		/usr/sbin/rsyncom -x
+	fi
+
+	rsyncmd -a 2>/dev/null
+
+	#reload and restart ftp if necessary
+	ftp reload
+
+	#eable afp function Bing 2010/1/27
+	afpcom
+
+	#avahi timemachine service must run after apfcom has run
+	avahi_tm_serv --tm_start &
+
+	makedav start
+
+	##start snmp##
+	SNMPD=$(xmldbc -g "/network_mgr/snmp/enable")
+	if [ $SNMPD = "1" ]; then
+		snmpd -C -c /etc/snmpd.conf
+	fi
+  
+  if [ "$nas_model_name" != "WDMyCloudEX4" ]; then
+  	NFS=$(xmldbc -g "/system_mgr/nfs/enable")
+  	if [ "$NFS" = "1" ]; then
+  		nfs restart
+  	else
+  		nfs stop
+  	fi
+  fi
+  
+	# tell sysinfod to update info.
+	killall -SIGUSR1 sysinfod ; sleep 3
+
+	killall scheddler 2>/dev/null
+	sleep 1
+	scheddler >/dev/null 2>&1 &
+
+	# iSCSI target
+	# xmldbc -s "/system_mgr/iscsi/enable" "1" # force enable iSCSI target feature
+	if [ "${PROJECT_FEATURE_ISCSI}" = "1" ] ; then
+		iSCSI_TARGET=$(xmldbc -g "/system_mgr/iscsi/enable")
+		if [ "$iSCSI_TARGET" = "1" ] ; then
+			iscsictl --deinit
+			iscsictl --init
+		fi
+	fi
+
+	# Elephant Drive
+	elephant_drive --restart-daemon
+    
+    # Start docker
+    if [ "${PROJECT_FEATURE_DOCKER}" = "1" ]; then
+        docker_daemon.sh setup
+        if [ $? -eq 0 ]; then
+            docker_daemon.sh stop
+            wdappmgr_auto_start.py --prepare
+            docker_daemon.sh start
+        fi
+
+	if [ -x /etc/init.d/wdappmgrd ]; then
+	    /etc/init.d/wdappmgrd stop
+	    /etc/init.d/wdappmgrd start
+	fi
+    fi
+
+  sync
+
+	echo "### sata_reload_application end ###"
+}
+
+usb_reload_application()
+{
+	echo "### usb hotplug start ###"
+  nas_model_name=`cat /usr/local/modules/files/model`
+  
+	#create_volume_map
+
+	##kill snmp##
+	killall snmpd 2>/dev/null
+
+	### usb and sata hotplug start ###
+	# mount iso files
+    # didn't disconnect iso share for running load_module +20140724.VODKA
+	iso_mount -m
+	iso_mount -o
+	#rsync daemon
+	RSYNC_ENABLE=`xmldbc -g '/backup_mgr/rsyncd/enable'`
+	if [ "$RSYNC_ENABLE" = "1" ]; then
+		/usr/sbin/rsyncom -x
+	fi
+
+	rsyncmd -a 2>/dev/null
+
+	#reload and restart ftp if necessary
+	ftp reload
+
+	##start snmp##
+	SNMPD=$(xmldbc -g "/network_mgr/snmp/enable")
+	if [ $SNMPD = "1" ]; then
+		snmpd -C -c /etc/snmpd.conf
+	fi
+	
+	killall scheddler 2>/dev/null
+	sleep 1
+	scheddler >/dev/null 2>&1 &
+
+	# tell sysinfod to update info.
+	#SKY-6662: Improve USB detection performance for x86 MyCloud
+	#remove run sysinfod , because chk_hotplug will run.
+	#killall -SIGUSR1 sysinfod
+
+	# Elephant Drive
+	elephant_drive --restart-daemon
+
+	update_usb_volume_database.sh
+
+	#eable afp function Bing 2010/1/27
+	afpcom
+#	afp_enable_usb=$(xmldbc -g "/system_mgr/afp/enable")
+#	if [ "$afp_enable_usb" = "1" ]; then
+#		afpcom
+#	fi
+
+	makedav start
+	
+	if [ "$nas_model_name" != "WDMyCloudEX4" ]; then
+  	NFS=$(xmldbc -g "/system_mgr/nfs/enable")
+  	if [ "$NFS" = "1" ]; then
+  		nfs restart
+  	else
+  		nfs stop
+  	fi
+  fi
+  
+	#avahi timemachine service must run after apfcom has run
+	avahi_tm_serv --tm_start &
+  sync
+	echo "### usb hotplug end ###"
+}
+
+get_process_pids() {
+    PIDS=`pidof "$1"`
+    retstat=$?
+    if [ $retstat -ne 0 ]; then
+        if [ ! -f /bin/busybox ]; then
+                PIDS=`pidof -x "$1"`
+        fi
+     fi
+}
+
+network()
+{
+# system booting don't run
+	if [ -e /tmp/load_module_network ]; then
+		# WD NAS upnp
+		upnpnas.sh restart
+
+		lighty_ssl
+
+		smbcom -v -s
+		smb restart
+
+	#	BONDING=$(xmldbc -g "/network_mgr/bonding/enable")
+	#	if [ "$BONDING" = "1" -a ! -e /etc/server_v4_bond0.pem ]; then
+	#		echo "link bond0.pem"
+	#		ln -s /etc/server_v4_egiga0.pem /etc/server_v4_bond0.pem
+	#	fi
+	#	if [ "$lanindex" != "" ]; then
+	#		echo "in default.script to load lltd.sh"
+	#		lltd.sh $lanindex restart
+			lltd.sh restart
+	#	fi
+	#	if [ "$norestart" = "" ]; then
+	#		lighty_ssl
+	#	fi
+	#	ftp restart	#patrick testing
+
+	itune_tool --scan_media_serving &
+#		ITUNE=$(xmldbc -g "/app_mgr/itunesserver/enable")
+#		if [ $ITUNE = "1" ]; then
+#			itunes.sh restart
+
+	#		mt-daapd -k
+	#		sleep 2
+	#		mt-daapd
+	#	else
+	#		itunes.sh stop
+	#		mt-daapd -k
+#		fi
+
+		UPNPAV=`xmldbc -g '/app_mgr/upnpavserver/enable'`
+		if [ "$UPNPAV" = "1" ]; then
+			(twonky.sh stop; sleep 2; twonky.sh start) &
+		fi
+
+		# iSCSI target
+		if [ "${PROJECT_FEATURE_ISCSI}" = "1" ] ; then
+			iSCSI_TARGET=$(xmldbc -g "/system_mgr/iscsi/enable")
+			[ "$iSCSI_TARGET" = "1" ] && iscsictl --change_ipaddr
+		fi
+
+		#auto_fw get FW and APPs status
+		auto_fw -c 0 &
+		auto_fw -a -c &
+		
+		remoteAccess=`cat /usr/local/config/dynamicconfig_config.ini | grep REMOTEACCES | sed 's/"//g' | sed 's/REMOTEACCESS=//'`
+		if [ $remoteAccess == "TRUE" ]; then
+			# restart communicationmanager for WD
+			/usr/local/orion/communicationmanager/communicationmanagerd stop 
+			#sleep 5 
+			#SKY-4240 Webfile access no longer available after NAS IP address change +VODKA.20150811
+			#--------Check communication pid----------#
+			TIMEOUT=0
+			get_process_pids "communicationmanager"
+			while [ -n "$PIDS" ]
+			do
+				echo "CM pid : [$PIDS]  Count : [$TIMEOUT]"
+				sleep 1
+				TIMEOUT=`expr "$TIMEOUT" + 1`
+				if [ 30 = "$TIMEOUT" ]; then
+					break
+				fi	
+				get_process_pids "communicationmanager"
+			done
+			#--------Check communication pid----------#			
+			/usr/local/orion/communicationmanager/communicationmanagerd start
+		fi
+			
+
+
+	else
+		touch /tmp/load_module_network
+	fi
+
+
+}
+
+load_module_check()
+{
+	if [ -e /tmp/load_module_start ]; then
+		exit 0
+	fi
+	touch /tmp/load_module_start
+	rm -f /tmp/load_module_finished
+}
+
+load_module_finished()
+{
+	rm -f /tmp/load_module_start
+	touch /tmp/load_module_finished
+	touch  /var/www/system_ready.html
+}
+
+cmd=$1
+lanindex=$2
+norestart=$3
+#if [ $3 ]; then
+#	norestart=$3
+#fi
+
+MODEL=$(cat "/usr/local/modules/files/model")
+
+case $1 in
+	usb)
+	echo "call load_module usb"
+	load_module_check
+	pending_thermal_shutdown=$(xmldbc -i -g "/runtime/pending_thermal_shutdown")
+	if [ "$pending_thermal_shutdown" = "1" ]; then
+	  echo "Pending thermal shutdown"
+	else
+	  usb_reload_application
+	fi
+	load_module_finished
+	;;
+
+	network)
+	echo "call load_module network"
+	if [ -e /tmp/load_module_pid ]; then
+		LAST_RUN=`cat /tmp/load_module_pid`
+    	if [ "$LAST_RUN" = "" ]; then
+	    	echo `pidof load_module` > /tmp/load_module_pid
+			sleep 3
+			network
+			rm -f /tmp/load_module_pid
+	    else
+		    MATCHX=`ls /proc | grep "$LAST_RUN"`
+			if [ "$MATCHX" = "" ]; then
+				echo `pidof load_module` > /tmp/load_module_pid
+				sleep 3
+				network
+				rm -f /tmp/load_module_pid
+			else
+				while [ 1 ]; do
+					LAST_RUN=`cat /tmp/load_module_pid`
+    				if [ "$LAST_RUN" = "" ]; then
+						echo `pidof load_module` > /tmp/load_module_pid
+						sleep 3
+						network
+						rm -f /tmp/load_module_pid
+						break;
+					else
+						MATCHX=`ls /proc | grep "$LAST_RUN"`
+						if [ "$MATCHX" = "" ]; then
+							echo `pidof load_module` > /tmp/load_module_pid
+							network
+							rm -f /tmp/load_module_pid
+							break;
+						else
+							sleep 1
+						fi
+					fi
+			    done
+		    fi
+		fi
+	else
+	    echo `pidof load_module` > /tmp/load_module_pid
+		network
+		rm -f /tmp/load_module_pid
+	fi
+
+	exit 0
+	;;
+
+	*)
+	echo "call load_module"
+	load_module_check
+	create_systemfile
+	pending_thermal_shutdown=$(xmldbc -i -g "/runtime/pending_thermal_shutdown")
+	if [ "$pending_thermal_shutdown" = "1" ]; then
+		echo "Pending thermal shutdown"
+	else
+		sata_reload_application
+	fi
+	load_module_finished
+	;;
+esac

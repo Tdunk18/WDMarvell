@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="PRAGMA" content="no-cache"> 
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+</head>
+
+<script type="text/javascript">
+
+function page_load()
+{
+	if(FTP_DOWNLOADS_FUNCTION==1) $("#ftp_downloads").show();
+	if(P2P_DOWNLOADS_FUNCTION==1) $("#p2p").show();
+	
+	switch(go_sub_page_direct)
+	{
+		case "ftp_downloads":
+			go_sub_page('/web/addons/ftp_downloads.html', 'ftp_downloads');
+			break;
+		case "p2p_download":
+			go_sub_page('/web/addons/p2p.html', 'p2p');
+			break;
+
+		default:
+			go_sub_page('/web/addons/http_downloads.html', 'http_downloads');
+	}
+}
+
+function page_unload()
+{
+}
+</script>
+
+<body>
+<!-- banner 2nd layout -->
+<table cellspacing=0 cellpadding=0 border=0>
+	<tr valign="bottom">
+		<td width="28"></td>
+		<td align="left">
+			<div class="header_1"><span class="_text" lang="_p2p" datafld="download_title"></span></div>
+		</td>
+	</tr>		
+</table>
+<div class="hr_0"><div class="hr_1"></div></div>
+<!-- banner 2nd layout -->
+
+<!-- left menu -->			
+<table cellspacing=0 cellpadding=0 border=0>
+	<tr>
+		<td valign="top">
+			<div id="SubMenuDiv">
+				<div class="LightningSubMenubg">
+					<ul class="LightningSubMenu">
+						<li id="http_downloads" class="LightningSubMenuFirst" onClick="go_sub_page('/web/addons/http_downloads.html', 'http_downloads'); return false;"><span class="_text" lang="_menu" datafld="http_downloads"></span></li>
+						<li id="ftp_downloads" style="display:none" onClick="go_sub_page('/web/addons/ftp_downloads.html', 'ftp_downloads'); return false;" ><span class="_text" lang="_menu" datafld="ftp_downloads"></span></li>
+						<li id="p2p" style="display:none" class="LightningSubMenuEnd" onClick="go_sub_page('/web/addons/p2p.html', 'p2p'); return false;" ><span class="_text" lang="_menu" datafld="p2p_downloads"></span></li>
+					</ul>
+				</div>
+			</div>
+		</td>
+		<td valign="top">	
+			<div class="r_content mainbody" id="mainbody" style="border:0px solid red;"></div>
+		</td>
+	</tr>
+</table>
+
+</body>
+	<div id="apkg_template" style="display: none;">
+		<table cellspacing=0 cellpadding=0 border=0 height="100%" id="apps_info">
+			<tr>
+				<td style="padding-right: 7px; width: 47px;" id="app_icon">
+				</td>
+				<td>
+					<div class="h1_content header_2">
+						<span id="app_show_name"></span>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="tdfield_padding" colspan="2">
+					<span id="app_description"></span>
+				</td>
+			</tr>
+			<tr>
+				<td class="tdfield_padding" colspan="2">
+					<span id="app_link"></span>
+				</td>
+			</tr>
+		</table>
+	<div>
+</div>
+
+</body>
+</html>	

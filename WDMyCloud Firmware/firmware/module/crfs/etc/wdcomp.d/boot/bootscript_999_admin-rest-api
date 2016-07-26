@@ -1,0 +1,155 @@
+#!/bin/bash
+# bootscript_999_admin-rest-api
+##
+PKG="admin-rest-api"
+. /etc/system.conf
+. /etc/nas/config/wd-nas.conf 2>/dev/null
+. /etc/nas/config/${PKG}.conf 2>/dev/null
+# boot type and pkg version
+boot="${1}"
+pkg_version="${2}"
+
+logtag="[`basename $0`] `date -u +"%D %T"`"
+logger -s -t "${logtag}" "( $@ ) begin"
+
+runOnce ()
+{
+    # create entry in apache device users group list for 'admin' user
+    admin=$(/usr/local/sbin/getOwner.sh)
+    /usr/local/sbin/addUser_apache.sh 1 "${admin}"
+}
+
+runBoot ()
+{
+    # start trusted cert job in background
+    certjob="/usr/local/sbin/ssl_cert_job.sh"
+    if [ -f "$certjob" ]
+    then
+        $certjob start
+    fi
+ 
+    # create and populate cloudholders group
+    egrep -q -i "^cloudholders" /etc/group
+    if [ $? == 1 ]; then
+        logger -s -p local2.debug "$0: DEBUG: adding cloudholders group"
+        groupadd --gid 2000 cloudholders
+
+        # add users into cloudholders group
+        awk -F: '$3 >= 999 && $3 <= 9999 {
+            cmd=sprintf("usermod -a -G cloudholders %s", $1);
+            system(cmd);
+        }' /etc/passwd
+    fi
+    
+    # send firmware version information
+    /usr/local/sbin/send_info.sh
+}
+
+
+initOrionDB ()
+{
+        rm -f "${INIT_DB_TOUCHFILE}"
+        return 0
+        ##
+        ## no longer needed after version 3.4G
+        ##        
+        logger -s " initializing orion db from OS settings.." 
+        # ensure that the /etc/password file contains only one owner
+        /usr/local/sbin/getOwner.sh > /tmp/owners.txt
+        declare -a owners
+        declare -i i=0
+        while read ownerline; do
+           owners[i]=${ownerline}
+            i=i+1
+        done < /tmp/owners.txt
+        rm -f /tmp/owners.txt
+        logger -s "owners: ${owners[0]}, ${owners[1]}"
+        numOwners=${#owners[@]}
+        if [ "${numOwners}" == "2" ]; then
+            if [ "${owners[1]}" == "admin-dfalias-wd" ]; then
+                    logger -s "deleting admin-dfalias-wd"
+                    userdel "admin-dfalias-wd"
+            elif [ "${owners[0]}" == "admin" ]; then
+                    logger -s "deleting admin"
+                    userdel "admin"
+            # the next set of cases is not expected but handled for completeness
+            elif [ "${owners[0]}" == "admin-dfalias-wd" ]; then
+                    logger -s "deleting admin-dfalias-wd"
+                    userdel "admin-dfalias-wd"
+            elif [ "${owners[1]}" == "admin" ]; then
+                    logger -s "deleting admin"
+                    userdel "admin"
+            fi
+        fi
+        logger -s "$0: running script /usr/local/sbin/db_init.php"
+        php /usr/local/sbin/db_init.php
+        # create entry in apache device users group list for 'admin' user
+        admin=$(/usr/local/sbin/getOwner.sh)
+        chfn -r "1" "${admin}"
+        /usr/local/sbin/addUser_apache.sh 1 "${admin}"
+        # regenerate apache group access config files
+        /usr/local/sbin/genApacheAccessRules.sh
+        apache2ctl -k graceful
+        rm -f "${INIT_DB_TOUCHFILE}"
+}
+
+configure ()
+{
+    # regenerate apache group access config files
+    /usr/local/sbin/genApacheAccessRules.sh
+    apache2ctl -k graceful
+    touch /tmp/allow.conf
+    sleep 1
+    ### ITR No. 33652 Abstract: Pointing to production server, create DAC, kills Apache
+    /etc/init.d/apache2 status | grep -q running;
+    if [ $? -ne 0 ]; then
+        echo "Apache not started: retrying with SSL disabled..";
+        apache2ctl -D SSL_DISABLE -k restart;
+        sleep 3
+        etc/init.d/apache2 status | grep -q running;
+        if [ $? -ne 0 ]; then
+            echo "Failed to restart Apache.";
+        fi
+    fi
+}
+
+freshboot ()
+{
+    runOnce
+    runBoot
+    configure
+}
+
+updateboot ()
+{
+    runOnce
+    runBoot
+    configure
+    [ -f "${INIT_DB_TOUCHFILE}" ] && initOrionDB
+
+    # Migrate shares database to samba config file only once after updating NAS firmware.
+    chmod -R 775 "/var/www/rest-api/api/Shares/src/Shares/Cli/migrate_shares.php"
+    /var/www/rest-api/api/Shares/src/Shares/Cli/migrate_shares.php /etc/samba/overall_share
+    php_exit_code=$?
+    if [ $php_exit_code -ne 0 ]; then
+        logger -s -t "${logtag}" "Error $php_exit_code migrating shares during FW update. Continue anyway."
+        echo "Error $php_exit_code migrating shares during FW update. Continue anyway."
+    fi
+}
+
+systemboot ()
+{
+    runBoot
+    configure
+    [ -f "${INIT_DB_TOUCHFILE}" ] && initOrionDB
+}
+
+case "${boot}" in
+    boot-update ) updateboot ;;
+    boot-fresh  ) freshboot  ;;
+    boot-system ) systemboot ;;    
+    *           ) ;;
+esac
+
+logtag="[`basename $0`] `date -u +"%D %T"`"
+logger -s -t "${logtag}" "done."

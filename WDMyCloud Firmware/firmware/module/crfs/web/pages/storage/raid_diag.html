@@ -1,0 +1,103 @@
+﻿<!-- Format Disk Dialog  -->
+<div id="RAID_Diag" class="WDLabelDiag">
+<div class="WDLabelHeaderDialogue WDLabelHeaderDialogueHDDIcon" id="RAID_Diag_title"><span class="_text" lang="_raid" datafld="title4"></span></div>
+<div align="center"><div class="hr"><hr></div></div>
+	
+<!-- 1.RAID Dialog :  Manually_Rebuild Set1-->	
+<div id="RAID_Manually_Rebuild_Set1" style="display:none">
+		<div class="WDLabelBodyDialogue" style="border:0px solid red;">
+			<div class="dialog_content" style="width: 650px;border:0px solid red;">
+				<div id="RAID_Manually_Rebuild_desc1" style="color:#FF0000;font-weight: bold;display:none"><span class="_text" lang="_raid" datafld="desc111"></span></div><br>
+				<div id="RAID_Manually_Rebuild_desc2" style="color:#FF0000;font-weight: bold;display:none"><span class="_text" lang="_raid" datafld="desc113"></span></div><br>
+				<span class="_text" lang="_raid" datafld="desc112"></span><br>				
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr></div>
+		<button type="button" id="storage_raidManuallyRebuildCancel1_button" class="ButtonLeftPos close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidManuallyRebuildNext1_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div>
+
+<!-- 2.RAID Dialog :  Manually_Rebuild Set2-->	
+<div id="RAID_Manually_Rebuild_Set2" style="display:none">
+		<div class="WDLabelBodyDialogue" style="border:0px solid red;">
+			<div class="dialog_content">
+					<div class="flexigrid" style="width: 650px;">
+						<div class="hDiv">
+							<div class="hDivBox" style="width: 650px;">
+									<th align="center" abbr="f_icon" axis="col0"><div style="text-align: center; width: 40px;">--</div></th>
+									<th align="center" abbr="f_drive" axis="col1"><div style="text-align: left; width: 150px;">Drive</div></th>
+									<th align="center" abbr="f_size" axis="col2"><div style="text-align: left; width: 240px;">Size</div></th>
+									<th align="left" abbr="f_state" axis="col3"><div style="text-align: right; width: 150px;">State</div></th>
+							</div><!-- hDivBox -->
+						</div><!-- hDiv -->
+						<div class="bDiv" id="diag_create_hdinfo_bDiv">
+							<table cellspacing="0" cellpadding="0" border="0">
+								<tbody id="manually_rebuild_hd_info"></tbody>
+							</table>
+						</div><!-- bDiv -->
+						</div><!-- flexigrid -->
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr></div>
+		<button type="button" id="storage_raidManuallyRebuildBack2_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidManuallyRebuildCancel2_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidManuallyRebuildNext2_button" class="ButtonRightPos1"><span class="_text" lang="_raid" datafld="button4"></span></button>
+	</div>
+	
+<!-- 3.RAID Dialog :  disks sequence are not valid. -->
+<div id="RAID_Disk_Sequence" style="display:none">
+		<div class="WDLabelBodyDialogue" style="height:460px;border:0px solid yellow;overflow:hidden;">
+			<div class="dialog_content" style="height:430px;border:0px solid red;">
+				
+				<span class="_text" lang="_raid" datafld="desc88"></span><br>
+				<div class="flexigrid" style="width: 520px;">
+				<div class="hDiv">
+					<div class="hDivBox">
+						<table cellspacing="0" cellpadding="0">
+							<thead>
+								<tr>
+									<th align="center" abbr="f_slot" axis="col0"><div style="text-align: left; width: 100px;">Disk</div></th>
+									<th align="center" abbr="f_size" axis="col1"><div style="text-align: left; width: 100px;">Size</div></th>
+									<th align="left" abbr="f_version_sn" axis="col2"><div style="text-align: left; width: 300px;">Model/Serial Number</div></th>
+								</tr>
+							</thead>
+						</table>
+					</div><!-- hDivBox -->
+				</div><!-- hDiv -->
+				<div class="bDiv" style="height:auto;">
+					<table cellspacing="0" cellpadding="0" border="0">
+						<tbody id="Seq_Current_Disk_Info"></tbody>
+					</table>
+				</div><!-- bDiv -->
+				</div><!-- flexigrid -->
+				<span class="_text" lang="_raid" datafld="desc87"></span><br>
+				<div class="flexigrid" style="width: 520px;">
+				<div class="hDiv">
+					<div class="hDivBox">
+						<table cellspacing="0" cellpadding="0">
+							<thead>
+								<tr>
+									<th align="center" abbr="f_slot" axis="col0"><div style="text-align: left; width: 100px;">Disk</div></th>
+									<th align="center" abbr="f_size" axis="col1"><div style="text-align: left; width: 100px;">Size</div></th>
+									<th align="left" abbr="f_version_sn" axis="col2"><div style="text-align: left; width: 300px;">Model/Serial Number</div></th>
+								</tr>
+							</thead>
+						</table>
+					</div><!-- hDivBox -->
+				</div><!-- hDiv -->
+				<div class="bDiv" style="height:auto;">
+					<table cellspacing="0" cellpadding="0" border="0">
+						<tbody id="Seq_Corrent_Disk_Info"></tbody>
+					</table>
+				</div><!-- bDiv -->
+				</div><!-- flexigrid -->
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr></div>
+		<!--<button type="button" id="storage_raidDiskSequenceSkip3_button" class="ButtonMarginLeft_40px close"><span class="_text" lang="_button" datafld="Skip"></span></button>-->
+		<button type="button" id="storage_raidDiskSequenceCancel3_button" class="ButtonRightPos1 close"><span class="_text" lang="_button" datafld="close"></span></button>
+	</div>		
+</div><!-- end of RAID Dialog -->

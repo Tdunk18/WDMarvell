@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Távoli hozzáférés beállítása</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Saját felhő kezelése\nFelhőalapú hozzáférés\nTávoli hozzáférés beállítása");
+addButton("show",BTN_TEXT,"Megjelenít","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("index.htm", "", ">", "Nyitóoldal", "welcome.htm");
+document.write("<a href=\"about_managing_cloud.htm\">Saját felhő kezelése<\/a> > <a href=\"remote_access_setup_general.htm\">Felhőalapú hozzáférés<\/a> > Távoli hozzáférés beállítása<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<h1>Felhőalap&uacute; hozz&aacute;f&eacute;r&eacute;s be&aacute;ll&iacute;t&aacute;sa</h1>
+<p class="Body">A felhő okostelefonr&oacute;l, t&aacute;blag&eacute;pről vagy sz&aacute;m&iacute;t&oacute;g&eacute;pről val&oacute; t&aacute;voli el&eacute;r&eacute;s&eacute;hez sz&uuml;ks&eacute;g van a My Cloud bejelentkez&eacute;si adatokra. (Az eszk&ouml;z&ouml;kről val&oacute; t&aacute;voli hozz&aacute;f&eacute;r&eacute;st tulajdonk&eacute;ppen a My Cloud k&ouml;zponti kiszolg&aacute;l&oacute; teszi lehetőv&eacute; az&aacute;ltal, hogy hozz&aacute;f&eacute;r&eacute;st biztos&iacute;t az otthoni h&aacute;l&oacute;zathoz csatlakoztatott NAS-eszk&ouml;z&ouml;kh&ouml;z.) A felhőh&ouml;z val&oacute; t&aacute;voli hozz&aacute;f&eacute;r&eacute;s azonban a mobileszk&ouml;z&ouml;k (okostelefonok &eacute;s t&aacute;blag&eacute;pek) eset&eacute;ben n&eacute;mileg m&aacute;sk&eacute;ppen t&ouml;rt&eacute;nik, mint a sz&aacute;m&iacute;t&oacute;g&eacute;pek eset&eacute;ben. Ettől f&uuml;ggetlen&uuml;l minden felhaszn&aacute;l&oacute;nak rendelkeznie kell My Cloud bejelentkez&eacute;si adatokkal.</p>
+<p class="Body">Az al&aacute;bbi l&eacute;p&eacute;sek k&ouml;vet&eacute;s&eacute;vel &aacute;ll&iacute;thatja be a t&aacute;voli hozz&aacute;f&eacute;r&eacute;st.</p>
+<ol style="list-style: decimal;">
+	<li style="list-style: none; display: inline;"><ol style="list-style: decimal;">
+		<li class="n1">Győződj&ouml;n meg arr&oacute;l, hogy a felhő hozz&aacute;f&eacute;r&eacute;s enged&eacute;lyezve van az eszk&ouml;z&eacute;n. &#160;&#160;<a class="dropspot" href="javascript:TextPopup(this)" id="a2">A folyamat le&iacute;r&aacute;sa.<img class="Twisties" alt="" style="border: none;" src="Graphics/arrow_right_orange.png" /><img class="Twisties" alt="" style="border: none; display: none;" src="Graphics/arrow_down_orange.png" /></a>
+<div class="droptext" id="POPUP421495562" style="display: none;"><hr style="margin-bottom: -20px; color: #0067a6; background-color: #0067a6;" 
+				 size="1" align="center" />
+			<p>&#160;</p>
+			<p>Felhőalap&uacute; hozz&aacute;f&eacute;r&eacute;s enged&eacute;lyez&eacute;se:</p>
+			<ol style="list-style: decimal;">
+				<li class="n3">Kattintson a <span style="font-weight: bold;">Be&aacute;ll&iacute;t&aacute;sok</span> elemre.</li>
+				<li class="n3">A bal oldali ablakt&aacute;bl&aacute;ban kattintson az <span style="font-weight: bold;">&Aacute;ltal&aacute;nos</span> lehetős&eacute;gre.</li>
+				<li class="n3">A Felhőalap&uacute; hozz&aacute;f&eacute;r&eacute;s ter&uuml;leten a <img src="toggle_button.png" 
+				 alt="" style="border: none;" width="20" height="15" border="0" /> ikonra kattintva enged&eacute;lyezze a Felhőalap&uacute; szolg&aacute;ltat&aacute;st.</li>
+			</ol>
+			<hr style="margin-bottom: -20px; color: #0067a6; background-color: #0067a6;" 
+				 size="1" align="center" />
+			<p>&#160;</p>
+</div></li>
+		<li class="n1">Kattintson a <span style="font-weight: bold;">Felhőalap&uacute; hozz&aacute;f&eacute;r&eacute;s</span> elemre.</li>
+		<li class="n1">A bal oldali ablakt&aacute;bl&aacute;ban kattintson arra a felhaszn&aacute;l&oacute;ra, akinek enged&eacute;lyezni szeretn&eacute; a felhőalap&uacute; hozz&aacute;f&eacute;r&eacute;st.</li>
+		<li class="n1">A My Cloud szolg&aacute;ltat&aacute;sban a Bejelentkez&eacute;s: &lt;felhaszn&aacute;l&oacute;n&eacute;v&gt; szakaszban &iacute;rja be az e-mail c&iacute;m&eacute;t, ha m&eacute;g nincs be&iacute;rva, majd kattintson a <img src="Graphics/send_email_wdCloud.png" alt="" style="border: none;" 
+				 width="30" height="23" border="0" /> ikonra. A rendszer ekkor egy e-mailt k&uuml;ld a felhaszn&aacute;l&oacute;nak, amelyben megtal&aacute;lhat&oacute; a My Cloud webhelyen t&ouml;rt&eacute;nő regisztr&aacute;ci&oacute; ismertet&eacute;se.</li>
+	</ol>
+	<ol start="5" style="list-style: decimal;">
+		<li class="n1">V&eacute;gezze el az al&aacute;bbi műveletek valamelyik&eacute;t:</li>
+	</ol>
+	<ul style="list-style: disc;">
+		<li class="b1">Folytassa a saj&aacute;t fi&oacute;kja regisztr&aacute;ci&oacute;j&aacute;t. <a class="dropspot" href="javascript:TextPopup(this)" id="a1">A folyamat le&iacute;r&aacute;sa.<img class="Twisties" alt="" style="border: none;" src="Graphics/arrow_right_orange.png" /><img class="Twisties" alt="" style="border: none; display: none;" src="Graphics/arrow_down_orange.png" /></a>
+<div class="droptext" id="POPUP421503264" style="display: none;"><hr style="margin-bottom: -20px; color: #0067a6; background-color: #0067a6;" 
+				 size="1" align="center" />
+			<p>&#160;</p>
+			<p>A regisztr&aacute;ci&oacute; folytat&aacute;sa:</p>
+			<ol style="list-style: decimal;">
+				<li class="n3">Ellenőrizze az 4. l&eacute;p&eacute;sben megadott e-mail fi&oacute;kot, &eacute;s olvassa el az e-mail &eacute;rtes&iacute;t&eacute;st.</li>
+				<li class="n3">Kattintson az e-mailben l&eacute;vő hivatkoz&aacute;sra, &eacute;s k&ouml;vesse az utas&iacute;t&aacute;sokat a regisztr&aacute;ci&oacute; befejez&eacute;s&eacute;hez.</li>
+			</ol>
+			<hr style="margin-bottom: -20px; color: #0067a6; background-color: #0067a6;" 
+				 size="1" align="center" />
+			<p>&#160;</p>
+</div></li>
+		<li class="b1">&Eacute;rtes&iacute;tse az adott felhaszn&aacute;l&oacute;t, hogy l&eacute;trehozott sz&aacute;m&aacute;ra egy webfi&oacute;kot, &eacute;s k&eacute;rje meg, hogy folytassa a regisztr&aacute;ci&oacute;t. <a class="dropspot" href="javascript:TextPopup(this)" id="a3">A folyamat le&iacute;r&aacute;sa.<img class="Twisties" alt="" style="border: none;" src="Graphics/arrow_right_orange.png" /><img class="Twisties" alt="" style="border: none; display: none;" src="Graphics/arrow_down_orange.png" /></a><br /><span style="font-weight: bold;">MEGJEGYZ&Eacute;S</span>: Van egy m&aacute;sik lehetős&eacute;g is arra, hogy t&aacute;voli hozz&aacute;f&eacute;r&eacute;st biztos&iacute;tson egy mobileszk&ouml;znek a My Cloud Mirror meghajt&oacute;hoz. L&aacute;sd: T&aacute;voli hozz&aacute;f&eacute;r&eacute;s biztos&iacute;t&aacute;sa mobileszk&ouml;znek (alternat&iacute;v m&oacute;dszer). 
+<div class="droptext" id="POPUP421549556" style="display: none;"><hr style="margin-bottom: -20px; color: #0067a6; background-color: #0067a6;" 
+				 size="1" align="center" />
+			<p>&#160;</p>
+			<p>K&ouml;z&ouml;lje a felhaszn&aacute;l&oacute;val, hogy t&aacute;volr&oacute;l el&eacute;rhető tartalmat &aacute;ll&iacute;tott be a sz&aacute;m&aacute;ra, amelyhez &uacute;gy f&eacute;rhet hozz&aacute;, hogy folytatja a regisztr&aacute;ci&oacute;t, m&eacute;gpedig a k&ouml;vetkezők&eacute;ppen:</p>
+			<ol style="list-style: decimal;">
+				<li class="n3">Ellenőrizze az e-mail fi&oacute;kj&aacute;t (ez azonos az 4. l&eacute;p&eacute;sben megadott e-mail c&iacute;mmel).</li>
+				<li class="n3">Nyissa meg a My Cloud szolg&aacute;ltat&aacute;st&oacute;l kapott e-mail &eacute;rtes&iacute;t&eacute;st.</li>
+				<li class="n3">Kattintson az e-mailben l&eacute;vő hivatkoz&aacute;sra, &eacute;s k&ouml;vesse az utas&iacute;t&aacute;sokat a regisztr&aacute;ci&oacute; befejez&eacute;s&eacute;hez.</li>
+			</ol>
+			<hr style="margin-bottom: -20px; color: #0067a6; background-color: #0067a6;" 
+				 size="1" align="center" />
+			<p>&#160;</p>
+</div></li>
+	</ul></li>
+</ol>
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt;">© 2015 Western Digital Technologies, Inc. 
+	 <span lang="de-DE" xml:lang="de-DE"><b style="font-weight: normal;">Minden 
+	 jog fenntartva.</b></span></p>
+</div>
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a2','POPUP421495562');
+	TextPopupInit('a1','POPUP421503264');
+	TextPopupInit('a3','POPUP421549556');
+//]]></script>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>

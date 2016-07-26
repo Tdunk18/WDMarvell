@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><cki><ck fm=\"Zarządzanie chmurą osobistą — informacje\" to=\"Ustawienia multimediów — informacje\" num=\"50\"/><ck fm=\"Włączanie/wyłączanie serwera multimediów DLNA\" to=\"Wyświetlanie bieżącego trybu RAID\" num=\"52\"/><ck fm=\"Witamy\" to=\"Co to jest pamięć masowa RAID?\" num=\"5\"/></cki>";

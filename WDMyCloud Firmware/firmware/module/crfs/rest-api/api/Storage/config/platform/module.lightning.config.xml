@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+   <components>
+        <component>
+            <name>hdd_standby_time</name>
+            <module>Storage</module>
+            <controller_class>\Storage\Disk\Controller\HddStandbyTime</controller_class>
+            <auth_security>
+            	 <get>USER_AUTH</get>            
+                 <put>NO_ACCESS</put>   
+            </auth_security>
+        </component>
+   </components>
+</module>

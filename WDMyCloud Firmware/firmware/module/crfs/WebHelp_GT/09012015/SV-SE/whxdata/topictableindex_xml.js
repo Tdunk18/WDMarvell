@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><cki><ck fm=\"Så här hanterar du ditt eget moln\" to=\"Ändra en FTP-hämtning\" num=\"52\"/><ck fm=\"Ändra en HTTP-hämtning\" to=\"Vad är en molnsäkerhetskopia\" num=\"54\"/><ck fm=\"Vad är RAID-lagringsutrymme?\" to=\"Vad är RAID-lagringsutrymme?\" num=\"1\"/></cki>";

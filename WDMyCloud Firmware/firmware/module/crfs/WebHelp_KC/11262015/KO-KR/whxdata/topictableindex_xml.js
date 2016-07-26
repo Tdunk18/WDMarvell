@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><cki><ck fm=\"디스크 상태 정보\" to=\"Time Machine 백업 끄기\" num=\"64\"/><ck fm=\"제품 정보 확인\" to=\"사용자 계정 삭제\" num=\"65\"/><ck fm=\"사용자 정보 보기\" to=\"RAID 스토리지란?\" num=\"23\"/></cki>";

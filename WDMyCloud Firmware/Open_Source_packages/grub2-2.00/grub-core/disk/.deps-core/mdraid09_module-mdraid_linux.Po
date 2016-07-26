@@ -1,0 +1,38 @@
+disk/mdraid09_module-mdraid_linux.o: disk/mdraid_linux.c \
+ ../include/grub/dl.h ../include/grub/symbol.h ../config.h \
+ ../include/grub/err.h ../include/grub/types.h \
+ ../include/grub/cpu/types.h ../include/grub/elf.h ../include/grub/disk.h \
+ ../include/grub/device.h ../include/grub/mm.h ../include/grub/misc.h \
+ /opt_gccarm/x86_64-intel-linux-gnu/lib/gcc/x86_64-intel-linux-gnu/4.8.2/include/stdarg.h \
+ ../include/grub/i18n.h ../include/grub/diskfilter.h \
+ ../include/grub/list.h
+
+../include/grub/dl.h:
+
+../include/grub/symbol.h:
+
+../config.h:
+
+../include/grub/err.h:
+
+../include/grub/types.h:
+
+../include/grub/cpu/types.h:
+
+../include/grub/elf.h:
+
+../include/grub/disk.h:
+
+../include/grub/device.h:
+
+../include/grub/mm.h:
+
+../include/grub/misc.h:
+
+/opt_gccarm/x86_64-intel-linux-gnu/lib/gcc/x86_64-intel-linux-gnu/4.8.2/include/stdarg.h:
+
+../include/grub/i18n.h:
+
+../include/grub/diskfilter.h:
+
+../include/grub/list.h:

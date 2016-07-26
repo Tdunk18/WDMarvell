@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="MS-HAID" content="Creating an Amazon S3 Cloud Backup" />
+<meta http-equiv="Content-Language" content="ja-JP" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Amazon S3 クラウド バックアップの作成</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("パーソナルクラウドのバックアップ\nクラウド バックアップ\nAmazon S3 クラウド バックアップの作成");
+addButton("show",BTN_TEXT,"表示","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("index.htm", "", ">", "ホーム", "welcome.htm");
+document.write("<a href=\"Creating_a_USB_Backup.htm\">パーソナルクラウドのバックアップ<\/a> > <a href=\"What_is_a_Cloud_Backup.htm\">クラウド バックアップ<\/a> > Amazon S3 クラウド バックアップの作成<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Amazon S3 クラウド バックアップの作成</h1>
+<p class="Body"><span style="font-weight: bold;">注記</span>：クラウド バックアップを作成する前に、<a 
+	 href="http://aws.amazon.com/s3" target="_blank">http://aws.amazon.com/s3</a> 
+ から Amazon S3 サービスに登録します。</p>
+<p class="Body">Amazon S3 アカウントが設定されたら、次の手順に従い、クラウド バックアップを作成します。</p>
+<ol style="list-style: square;">
+	<li style="list-style: none; display: inline;"><ol style="list-style: decimal;">
+		<li class="n1">[<b>バックアップ</b>] をクリックします。</li>
+		<li class="n1">[<span style="font-weight: bold;">クラウド バックアップ</span>] 
+		 をクリックします。</li>
+		<li class="n1">画面の上部にある [<b>Amazon S3</b>] ボタンをクリックします。<img src="Graphics/image016.png" 
+		 alt="" width="90" height="18" border="0" /></li>
+		<li class="n1">[<b>作成</b>] をクリックします。</li>
+		<li class="n1">クラウド バックアップのジョブ名を入力します。</li>
+		<li class="n1">[<b>次へ</b>] をクリックします。</li>
+		<li class="n1">Amazon S3 から提供された次の情報を入力します。</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b>地域</b>：ドロップダウン メニューからクラウドで使用される [地域] を選択します。</li>
+		<li class="b1"><b style="font-weight: bold;">アクセス キー</b>：Amazon 
+		 S3 から提供されたアクセス キーを入力します。</li>
+		<li class="b1"><b style="font-weight: bold;">プライベート キー</b>：Amazon 
+		 S3 から提供されたプライベート キーを入力します。</li>
+		<li class="b1"><b>リモート パス</b>：クラウドのリモート パスを入力します。通常はバケット名です。</li>
+	</ul>
+	<ol start="8" style="list-style: decimal;">
+		<li class="n1">[<b>次へ</b>] をクリックします。</li>
+		<li class="n1">[タイプ] フィールドで、次のオプションのいずれかを選択します。</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold;">アップロード：</b>My Cloud 
+		 Mirror データを Amazon S3 バケットにバックアップします。</li>
+		<li class="b1"><b style="font-weight: bold;">ダウンロード：</b>Amazon 
+		 S3 バケットを My Cloud Mirror サーバーにバックアップします。</li>
+	</ul>
+	<ol start="10" style="list-style: decimal;">
+		<li class="n1">[バックアップ タイプ] フィールドのドロップダウン メニューから、実行するバックアップのタイプを選択します。オプション：</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold;">既存のファイルを上書きする</b>：バックアップ元ファイルと同じ名前のファイルがバックアップ先フォルダにある場合は上書きします。</li>
+		<li class="b1"><b>完全バックアップ</b>：バックアップを実行するたびに、すべてのバックアップ データが格納される個別のフォルダを作成します。</li>
+		<li class="b1"><b>増分バックアップ</b>：バックアップ元ファイルがバックアップ先ファイルよりも新しい場合にファイルを上書きします。</li>
+	</ul>
+	<ol start="11" style="list-style: decimal;">
+		<li class="n1">[<span style="font-weight: bold;">次へ</span>] をクリックします。</li>
+		<li class="n1">[ローカル パス] フィールドで、My Cloud Mirror デバイスのバックアップ パスを入力します。</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">[<span style="font-weight: bold;">参照</span>] をクリックし、デバイスのバックアップ場所を参照します。<br />
+		(例 Volume_1/backup)</li>
+	</ul>
+	<ol start="13" style="list-style: decimal;">
+		<li class="n1"><img src="Graphics/toggle_button.png" alt="" width="20" 
+							 height="15" border="0" /> をクリックし、自動更新機能を有効にします。作成したスケジュールに基づいて、自動的にバックアップが更新されます。</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">自動更新機能を有効にする場合:</li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: circle;">
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">次の中から自動更新スケジュールを選択します。毎日、毎週、毎月</p></li>
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">ドロップダウン 
+			 メニューから [自動更新時刻] を選択します ([毎日] オプション)。</p></li>
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">ドロップダウン 
+			 メニューから [自動更新日時] を選択します ([毎週] または [毎月] オプション)。</p></li>
+		</ul></li>
+	</ul>
+	<ol start="14" style="list-style: decimal;">
+		<li class="n1">[<b>次へ</b>] をクリックします。</li>
+		<li class="n1">設定を確認し、[<b>完了</b>] をクリックします。Amazon S3 クラウド バックアップが作成されます。</li>
+	</ol></li>
+</ol>
+<p class="Body" style="margin-left: 60px;"><span style="font-weight: bold;">注</span>:Amazon 
+ S3 クラウド バックアップ バケットにアクセスし、デバイス バックアップを確認します。</p>
+<p class="ListContinue2CxSpLast">&#160;</p>
+<p>
+<a href="javascript:void(0);" onclick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) &gt;=2 &amp;&amp; typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','ElephantDrive クラウド バックアップの有効化','Enabling_an_ElephantDrive_Cloud_Backup.htm','クラウド バックアップの概要','What_is_a_Cloud_Backup.htm');return false;" title="参照"><img src="ss_btn_参照.gif" border="0" height="17" width="30" alt="参照" /></a>
+
+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt;">© 2015 Western Digital Technologies, Inc. 
+	 All rights reserved.</p>
+</div>
+<script type="text/javascript" language="JavaScript">//<![CDATA[
+if (parseInt(navigator.appVersion) >= 3 && typeof (WritePopupMenuLayer) == "function")
+  WritePopupMenuLayer();
+//]]></script><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>
+

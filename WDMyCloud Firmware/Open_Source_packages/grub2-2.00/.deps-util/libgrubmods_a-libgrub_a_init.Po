@@ -1,0 +1,16 @@
+libgrubmods_a-libgrub_a_init.o: libgrub_a_init.c include/grub/emu/misc.h \
+ config.h config-util.h \
+ /usr/lib/gcc/i686-redhat-linux/4.4.5/include/stdarg.h \
+ include/grub/symbol.h include/grub/types.h
+
+include/grub/emu/misc.h:
+
+config.h:
+
+config-util.h:
+
+/usr/lib/gcc/i686-redhat-linux/4.4.5/include/stdarg.h:
+
+include/grub/symbol.h:
+
+include/grub/types.h:

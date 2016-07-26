@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><cki><ck fm=\"Om Diskstatus\" to=\"Slå skytilgang på/av\" num=\"57\"/><ck fm=\"Endre enhetsbeskrivelsen\" to=\"Slå av/på skytilgang til dashboard\" num=\"59\"/><ck fm=\"Slå på/av NSF-tjenesten\" to=\"Hva er RAID-lagring?\" num=\"36\"/></cki>";

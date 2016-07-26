@@ -1,0 +1,378 @@
+/*
+ * CSS Styles that are needed by jScrollPane for it to operate correctly.
+ *
+ * Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
+ * may not operate correctly without them.
+ */
+.home_diagnostics_scroll{
+	width: 660px;
+	height: 205px;
+	overflow: auto;
+} 
+.media_itunes_scroll{
+	width: 158px;
+	height: 100px;
+	overflow: auto;	
+}
+.media_language_scroll{
+	width: 350px;
+	height: 190px;
+	overflow: auto;	
+}
+.codepage_language_scroll{
+	width: 250px;
+	height: 150px;
+	overflow: auto;	
+}
+.cloud_time_machine_scroll{
+	width: 210px;
+	height: 223px;
+	overflow: auto;	
+}
+.cloud_user_access_scroll{
+	width: 210px;
+	height: 250px;
+	overflow: auto;
+}
+.language_scroll
+{
+	height: 250px;
+	overflow: auto;		
+}
+.cloud_user_scroll
+{
+	width: 865px;
+	height: 300px;
+	overflow: auto;
+}
+.ftp_min_scroll{
+	width: 158px;
+	height: 160px;
+	overflow: auto;	
+}
+.httpdownloads_url_scroll{
+	width: 500px;
+	height: 160px;
+	overflow: auto;	
+}	
+#upload_scroll{
+	width:580px;
+	height: 230px;
+	overflow: auto;	
+}
+/*
+#scrollbar_wfs{
+	width:700px;
+	height: 500px;
+	overflow: auto;		
+}*/
+.scrollbar_timezone{
+	width: 423px;
+	height: 300px;
+	overflow: auto;	
+}
+
+.scrollbar_time{
+	width: 158px;
+	height: 250px;
+	overflow: auto;	
+}
+.scrollbar_fw{
+	width: 155px;
+	height: 160px;
+	overflow: auto;	
+}
+.scrollbar_idle{
+	height: 160px;
+	overflow: auto;
+    overflow-x: hidden;
+}
+#scrollbar_portforward{
+	width: 570px;
+	height: 188px;
+	overflow: auto;		
+}
+.scrollbar_snmp{
+	width: 650px;
+	height: 205px;
+	overflow: auto;	
+}
+
+#scrollbar_s3_percent{
+	width: 670px;
+	height: 230px;
+	overflow: auto;		
+}
+#scrollbar_sms_main{
+		width: 570px;
+	height: 300px;
+	overflow: auto;		
+}
+#scrollbar_s3_reload{
+	width: 570px;
+	height: 240px;
+	overflow: auto;		
+}
+.scrollbar_active{
+	width: 750px;
+	height: 220px;
+	overflow: auto;		
+}
+.local_share_scrollbar{
+	width: 570px;
+	height: 230px;
+	overflow: auto;		
+}
+.remote_scrollbar{
+	width: 650px;
+	height: 300px;
+	overflow: auto;		
+}
+.iso_user_scroll{
+	width: 570px;
+	height: 230px;
+	overflow: auto;	
+}
+.scrollbar_autofw{
+	width: 320px;
+	height: 160px;
+	overflow: auto;		
+}
+.scrollbar_alert
+{
+	width: 540px;
+	height: 240px;
+	overflow: auto;	
+}
+
+.scrollbar_time_hour,
+.scrollbar_time_day,
+.scrollbar_time_week{
+	width: 155px;
+	height: 75px;
+	overflow: auto;	
+}
+.scrollbar_home_applist
+{
+	width: 600px;
+	height: 230px;
+	overflow: auto;
+}
+.scroll-pane
+{
+	width: 570px;
+	height: 230px;
+	overflow: auto;
+}
+.remoteBackup_scroll_pane
+{
+	width: 650px;
+	height: 270px;
+	overflow: auto;
+}
+.isoCreate_scroll_pane
+{
+	width: 320px;
+	height: 240px;
+	overflow: auto;
+}
+.isoCreate_scroll_pane_right
+{
+	width: 320px;
+	height: 190px;
+	overflow: auto;
+}
+.scrollbar_iscsi_dialog
+{
+	/*width: 570px;*/
+	height: 240px;
+	overflow: auto;
+}
+.scrollbar_iscsi_target_list
+{
+	width:680px;
+	height: 240px;
+	overflow: auto;
+}
+.scrollbar_iscsi_lun_list
+{
+	width:600px;
+	height: 240px;
+	overflow: auto;
+}
+.scrollbar_iscsi_lun
+{
+	/*width: 570px;*/
+	height: 240px;
+	overflow: auto;
+}
+.scrollbar_iscsi_lun_list
+{
+	/*width: 570px;*/
+	height: 230px;
+	overflow: auto;
+}
+.scrollbar_iscsi
+{
+	width: 700px;
+	height:auto;
+	overflow: auto;
+}
+
+.scrollbar_iscsi_acl
+{
+	width: 700px;
+	height: 250px;
+	overflow: auto;
+}
+.scrollbar_log
+{
+	width: 930px;
+	height: 355px;
+	overflow: auto;
+}
+.RU-RU .scrollbar_log,
+.HU-HU .scrollbar_log,
+.NB-NO .scrollbar_log,
+.SV-SE .scrollbar_log
+{
+	height: 340px;
+}
+
+.scroll-pane-group
+{
+	width: 570px;
+	height: 230px;
+	overflow: auto;
+}
+.scroll-pane-group2
+{
+	width: 570px;
+	height: 250px;
+	overflow: auto;
+}
+.select_scroll_h300px{
+	height: 300px;
+	overflow: auto;	
+}
+.jspContainer
+{
+	overflow: hidden;
+	position: relative;
+}
+
+.jspPane
+{
+	position: absolute;
+}
+
+.jspVerticalBar
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 4px;
+	height: 100%;
+	z-index:9999;
+}
+
+.jspHorizontalBar
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 80%;
+	height: 14px;
+	background: #191919;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+
+.jspVerticalBar *,
+.jspHorizontalBar *
+{
+	margin: 0;
+	padding: 0;
+}
+
+.jspCap
+{
+	display: none;
+}
+
+.jspHorizontalBar .jspCap
+{
+	float: left;
+}
+
+.jspTrack
+{
+    width: 4px;
+    background: #DCDCDC;
+	position: relative;
+}
+
+.jspDrag
+{
+	width: 4px;
+	background: #85939C;
+	position: relative;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag
+{
+	float: left;
+	height: 100%;
+}
+
+.jspArrow
+{
+	background: #50506d;
+	text-indent: -20000px;
+	display: block;
+	cursor: pointer;
+}
+
+.jspArrow.jspDisabled
+{
+	cursor: default;
+	background: #80808d;
+}
+
+.jspVerticalBar .jspArrow
+{
+	height: 15px;
+}
+
+.jspHorizontalBar .jspArrow
+{
+	width: 15px;
+	float: left;
+	height: 100%;
+}
+
+.jspVerticalBar .jspArrow:focus
+{
+	outline: none;
+}
+
+.jspCorner
+{
+	background: #282828;
+	float: left;
+	height: 100%;
+	-webkit-border-radius: -8px;
+	-moz-border-radius: -8px;
+	border-radius: -8px;
+}
+
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner
+{
+	margin: 0 -3px 0 0;
+}

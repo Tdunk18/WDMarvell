@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><cki><ck fm=\"Informace o stavu disku\" to=\"Zapnutí nebo vypnutí přístupu do cloudu\" num=\"57\"/><ck fm=\"Změna popisu zařízení\" to=\"Žádost o podporu\" num=\"58\"/><ck fm=\"Zapnutí, nebo vypnutí ovládacího panelu přístupu ke cloudu\" to=\"Co je to úložiště RAID?\" num=\"37\"/></cki>";

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="MS-HAID" content="What is RAID Storage?" />
+<meta http-equiv="Content-Language" content="cs-CZ" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Co je to úložiště RAID?</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Úložiště\nÚložiště RAID\nCo je to úložiště RAID?");
+addButton("show",BTN_TEXT,"Zobrazit","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("index.htm", "", ">", "Home (Výchozí)", "welcome.htm");
+document.write("<a href=\"what_is_raid_storage.htm\">Úložiště<\/a> > <a href=\"what_is_raid_storage.htm\">Úložiště RAID<\/a> > Co je to úložiště RAID?<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1 style="background-color: Transparent;">Co je to úložiště RAID</h1>
+<p class="Body">RAID (Redundant Array of Independent Disks) <span style="mso-bidi-font-family: Arial;">umožňuje 
+ ukládat stejná data na různých místech ve více pevných discích, a&#160;zajišťuje 
+ tak nezbytné zálohování, vyšší výkon a&#160;integritu dat.</span> Existuje 
+ několik různých úrovní RAID, z&#160;nichž každé zajišťuje odlišnou metodu 
+ sdílení nebo distribuce dat mezi disky. Vaše zařízení My Cloud Mirror 
+ vám umožňuje vybrat z&#160;následujících režimů úložiště:</p>
+<ol style="list-style: square;">
+	<li style="list-style: none; display: inline;"><ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold; mso-bidi-font-weight: normal;">JBOD</b>: 
+		 <span style="font-size: 10.0pt; font-family: Arial, sans-serif; 
+				 mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+				 mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">&#160;Použití 
+		 jednoho nebo více disků nikoliv v&#160;konfiguraci RAID, ale řízených 
+		 jako samostatné logické jednotky.</font></span></li>
+		<li class="b1"><b style="font-weight: bold; mso-bidi-font-weight: normal;">Rozložení</b>: 
+		 Kombinace disků lineárním způsobem za účelem vytvoření velkého 
+		 logického svazku.</li>
+		<li class="b1"><b style="font-weight: bold; mso-bidi-font-weight: normal;">RAID 
+		 0</b>: Režim RAID 0 umožňuje prokládání disků napříč všemi disky 
+		 ve skupině disků RAID. Režim RAID 0 nezajišťuje zálohování dat, 
+		 ale umožňuje nejlepší výkon ze všech úrovní RAID. Režim RAID 0 
+		 rozděluje data do menších segmentů a&#160;prokládá datové segmenty 
+		 napříč všemi disky ve skupině disků.</li>
+		<li class="b1"><b style="font-weight: bold; mso-bidi-font-weight: normal;">RAID 
+		 1</b>: V&#160;režimu RAID 1 kontrolér RAID duplikuje všechna data 
+		 z&#160;jednoho disku na druhý disk ve skupině disků. Režim RAID 
+		 1 zajišťuje kompletní zálohování dat, ale zdvojnásobuje požadovanou 
+		 kapacitu datového úložiště.</li>
+	</ul></li>
+</ol>
+<br />
+
+
+<a href="javascript:void(0);" onclick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) &gt;=2 &amp;&amp; typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','Automatická obnova diskového pole RAID','Auto_Rebuilding_your_RAID.htm','Změna režimu diskového pole RAID','Changing_the_RAID_Mode.htm','Zobrazení aktuálního režimu diskového pole RAID','Viewing_the_Current_RAID_Mode.htm');return false;" title="Viz také"><img src="ss_btn_viz_také.gif" border="0" height="17" width="47" alt="Viz také" /></a>
+
+
+
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt;">© 2015 Western Digital Technologies, Inc. 
+	 <span style="line-height: 100%;"><b style="font-weight: normal;">Všechna 
+	 práva vyhrazena</b>.</span></p>
+</div>
+<script type="text/javascript" language="JavaScript">//<![CDATA[
+if (parseInt(navigator.appVersion) >= 3 && typeof (WritePopupMenuLayer) == "function")
+  WritePopupMenuLayer();
+//]]></script><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>
+

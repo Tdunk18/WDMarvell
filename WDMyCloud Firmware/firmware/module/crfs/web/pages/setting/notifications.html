@@ -1,0 +1,433 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="PRAGMA" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+</head>
+<style>
+	.field {
+		width:200px;
+		display: inline-block;
+		/*border:1px solid red;*/
+	}
+	.ui-widget-content {
+		background: #DCDCDC;
+	}
+	
+</style>
+
+<script type="text/javascript">
+var SMS_MAX_LENGTH = 64;
+var init_google = 0;	//0: init slider, so not call google
+	function page_load() {
+		_SMS_INIT_DIALOG = 0;		
+		init_google = 0;
+		str1 = "";
+		__URL = "";
+		__PHONE_ARG_NAME = "";
+		__TEXT_ARG_NAME = "";
+		__phone_flag = 0;
+
+		$("#tip_mail").attr('title', _T('_tip', 'notification'));
+		$("#tip_sms").attr('title', _T('_tip', 'sms'));
+		init_tooltip();
+
+		init_switch();
+
+		var sys_time = (new Date()).getTime();
+		initDiag("/web/setting/notification_diag.html?r=" + sys_time);
+		//initDiag("/web/setting/smsDiag.html?r=" + sys_time);
+
+		$("#settings_notificationsDisplay_slider").slider({
+			//o: true,
+			min: 0,
+			max: 2,
+			step: 1
+		});
+		mail_load();
+
+		$("#settings_notificationsAlert_switch").click(function () {
+			jLoading(_T('_common', 'set'), 'loading', 's', "");
+			var v = getSwitch('#settings_notificationsAlert_switch');
+			if (v == 1)
+			{
+				show('settings_notificationsAlert_link');
+				wd_ajax({
+					type:"POST",
+					url:"/cgi-bin/system_mgr.cgi",
+					data:{cmd:"cgi_get_mail_addr"},
+					cache:false,
+					async:true,
+					success:function(xml){			
+						if ($(xml).find('mail_1').text() != "")
+						{
+							set_mail_enable(v,1);
+							MAIL_ENABLE = 1;					
+						}
+					}					
+				});									
+			}	
+			else
+			{	
+				MAIL_ENABLE = 0;
+				set_mail_enable(v,1);
+				hide('settings_notificationsAlert_link');
+			}
+			setTimeout(jLoadingClose, 500);
+		});
+
+		$("#settings_notificationsSms_switch").click(function () {
+			jLoading(_T('_common', 'set'), 'loading', 's', "");
+			var v = getSwitch('#settings_notificationsSms_switch');		
+			if (v == 1)
+			{												
+				show('settings_notificationsSms_link');
+				$.ajax({			
+						type: "GET",
+						url: "/xml/sms_conf.xml",
+						dataType:"xml",
+						async: false,
+						cache: true,
+						success: function(xml){																									
+							if( $(xml).find('url_arg1').text() != "")
+							{
+								sms_save(1);
+							}
+													
+						}  
+					});		     			         	
+			}	
+			else
+			{
+				sms_save(0);
+				hide('settings_notificationsSms_link');
+			}	
+
+			setTimeout(jLoadingClose, 500);
+		});
+		
+		
+		$("#settings_notificationsDisplay_slider").slider({
+			change: function (event, ui) {
+				var v = $("#settings_notificationsDisplay_slider").slider('value');
+				set_mail_type(v);
+				
+				//var v = $("#settings_notificationsAlert_slider").slider('value');
+				_send_level = v;
+				set_mail_send_type(v);
+				if (init_google == 1)
+					google_notificationsDisplay();
+				init_google = 1;	
+			}
+
+		});
+		xml_sms_load_info();
+	}
+
+	function open_sms_diag()
+	{		
+		var obj=$("#smsDiag").overlay({expose: '#000',api:true,closeOnClick:false,closeOnEsc:false});				
+		adjust_dialog_size("#smsDiag","680","480")
+		obj.load();						
+		sms_init_dialog();	
+				$.ajax({			
+						type: "GET",
+						url: "/xml/sms_conf.xml",
+						dataType:"xml",
+						async: false,
+						cache: false,
+						success: function(xml){																																										
+							var station = 0;
+								$(xml).find('item').each(function(){
+										var item_name = $(this).attr("item_name");												
+										$("#f_service").val(item_name);										
+										station = 1;
+								});		
+								
+								if (station == 0 )
+								{
+										$("#smsDiag_desc").hide();
+										$("#smsDiag_set").show();
+										$("#smsDiag_url").hide();		
+										$("#f_provide").val("");
+										$("#f_content").val("");
+										$("#f_service").val("");									
+										ui_tab("#smsDiag","#settings_notificationsSmsName_text","#settings_notificationsSmsNext1_button");
+								}
+								else
+								{	
+										$("#smsDiag_desc").show();
+										$("#smsDiag_set").hide();
+										$("#smsDiag_url").hide();					
+										ui_tab("#smsDiag","#settings_notificationsSmsService_text","#settings_notificationsSmsSetSave_button");	
+								}	
+							
+						}  
+					});		
+			
+		setTimeout(function(){						
+					$("#scrollbar_sms_main").jScrollPane();
+				},200);
+//			$.ajax({			
+//			type: "GET",
+//			url: "/xml/sms_conf.xml",
+//			dataType:"xml",
+//			async: false,
+//			cache: false,
+//			success: function(xml){							
+//				var station = 0;
+//					$(xml).find('station').each(function () {
+//						station = 1;
+//					});				
+//					if (station == 0 )
+//					{
+//							$("#smsDiag_desc").hide();
+//							$("#smsDiag_set").show();
+//							$("#smsDiag_url").hide();						
+//					}
+//					else
+//					{	
+//							$("#smsDiag_desc").show();
+//							$("#smsDiag_set").hide();
+//							$("#smsDiag_url").hide();
+//							$("#scrollbar_sms_main").jScrollPane();
+//					}													
+//				}
+//		});
+		
+	}
+	function sms_add_profile()
+	{
+		$("#smsDiag_desc").hide();
+		$("#smsDiag_set").show();
+		$("#smsDiag_url").hide();
+		$("#smsDiag_phone").hide();
+
+		var len = $("#f_service option").length;
+		if (len >= SMS_MAX_LENGTH )
+		{
+			jAlert(_T('_sms','msg1'), _T('_common','error'));
+			return;
+		}
+
+		$("#f_provide").val("");
+		$("#f_content").val("");
+		__URL = ""
+		__PHONE_ARG_NAME = ""
+		__TEXT_ARG_NAME = "";			  	
+	}
+
+
+	function page_unload() {}
+</script>
+<style>
+	#f_content
+	{
+			FONT-SIZE: 12px; 
+			FONT-FAMILY: Arial;
+			padding-top:10px;
+			padding-bottom:10px;
+			resize: none;
+	}
+	.ui-slider-handle
+	{
+		cursor:pointer !important;
+	}
+</style>
+<body>
+	<!-- ddns -->
+	<div class="h1_content header_2"><span class="_text" lang="_notification" datafld="title1"></span></div>
+	<div style="margin-top:20px;">
+		<table border="0" cellspacing="0" cellpadding="0" height="0">
+			<tr>				
+				<td><span class="field _text" lang="_notification" datafld="alert_email"></span></td>				
+				<td height="40">
+					<input id="settings_notificationsAlert_switch" name="settings_notificationsAlert_switch" class="onoffswitch" type="checkbox" value="true" style="position: absolute; z-index: -1; visibility: hidden;">
+				</td>
+				<td style="padding-left:10px;">
+					<div class="TooltipIcon" id="tip_mail"></div>
+				</td>
+				<td style="padding-left:10px;">	<a href="javascript:open_mail_diag();" id="settings_notificationsAlert_link" class="edit_detail" style="margin-left:10px;" style="display:none" tabindex="0"><span class="_text" lang="_p2p" datafld="config"></span>>></a>	
+				</td>
+			</tr>
+			<tr>
+				<td height=40><span class="_text" lang="_sms" datafld="sms" style="color: #85939C;"></span></td>				
+				<td>
+					<input id="settings_notificationsSms_switch" name="settings_notificationsSms_switch" class="onoffswitch" type="checkbox" value="true" style="position: absolute; z-index: -1; visibility: hidden;">
+				</td>
+
+				<td style="padding-left:10px;">
+					<div class="TooltipIcon" id="tip_sms"></div>
+				</td>
+				<td style="padding-left:10px;">	<a href="javascript:open_sms_diag();" id="settings_notificationsSms_link" class="edit_detail" style="margin-left:10px;" style="display:none" tabindex="0"><span class="_text" lang="_p2p" datafld="config"></span>>></a>	
+				</td>
+			</tr>	
+		</table>
+	</div>
+	<div style="margin-top:20px;">
+		<div class="hr_0_content" style="margin-top:30px;margin-bottom:30px;">
+			<div class="hr_1"></div>
+		</div>
+		<div class="h1_content header_2"><span class="_text" lang="_notification" datafld="title2"></span></div>
+		<div style="margin-top:20px;">
+			<table border="0" cellspacing="0" cellpadding="0" height="0">
+				<tr>
+					<td colspan="4"><span class="_text" lang="_notification" datafld="title2_msg"></span>:</td>
+				</tr>
+				<tr>
+					<td width="217" height="40" style="padding-top: 17px;"><span class="_text" lang="_notification" datafld="critical_only"></span></td>
+					<td width="240" align="center" style="padding-top: 17px;"><span class="_text" lang="_notification" datafld="c_warning"></span></td>
+					<td width="130"></td>
+					<td width="60" style="padding-top: 17px;"><span class="_text" lang="_notification" datafld="all" style="position: relative;left: -10px;z-index: 10;"></span></td>
+				</tr>
+				<tr>
+					<td colspan="4" style="background:#C8C8C8;cursor:pointer">
+						<div id="settings_notificationsDisplay_slider" style="margin-left:0;width:630px;cursor:pointer"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<!-- end -->
+	<br>
+	<br>
+	<br>
+	<br>
+	
+<!-- dialog -->
+<div id="smsDiag" class="WDLabelDiag" style="display:none;">
+<div class="WDLabelHeaderDialogue WDLabelHeaderDialogueMailIcon" id="smsDiag_title"><span class="_text" lang="_sms" datafld="title"></span></div>
+<div align="center"><div class="hr"><hr></div></div>
+
+<div id="smsDiag_desc">
+		<div class="WDLabelBodyDialogue">
+		<div class="dialog_content" style="overflow:hidden">
+			<div id="scrollbar_sms_main">
+					<table id="id_table1" border="0" width="100%">
+							<tr>
+								<td width="300" height=35><span class="_text" lang="_sms" datafld="provider">SMS service provider</span>*</td>
+								<td>	
+										<input type="text" id="settings_notificationsSmsService_text" name="settings_notificationsSmsService_text">																										
+								</td>
+							</tr>
+							<tr>
+								<td height=35><span class="_text" lang="_sms" datafld="url">URL</span>*</td>
+								<td><input type="text" id="settings_notificationsSmsSetUrl_text" name="settings_notificationsSmsSetUrl_text" size=60 maxlength="256"></td>
+							</tr>	
+							<tr>
+								<td height=35><span class="_text" lang="_sms" datafld="replace">Replace space character with default</span></td>
+								<td>
+									<input type="text" id="settings_notificationsSmsSpace_text" name="settings_notificationsSmsSpace_text" maxlength="5" size="5" class="input_x2">													
+							</tr>
+							<tr>
+								<td height=35><span class="_text" lang="_sms" datafld="phone1">Phone number1</span>(<span id="id_phone_alias1"></span>)*</td>
+								<td><span style="display:none"><input type='text' name='settings_notificationsSmsPhoneCountry1_text' id='settings_notificationsSmsPhoneCountry1_text' size='5' maxlength=5 ><img src='../images/phone.gif' border=0 onclick='parent.open_phone_list(1);' style="cursor:pointer;">-</span>
+										<input type='text' name='settings_notificationsSmsPhone1_text' id='settings_notificationsSmsPhone1_text' size='30' maxlength=20>
+								</td>
+							</tr>							
+							<tr>
+								<td height=35><span class="_text" lang="_sms" datafld="phone2">Phone number2</span>(<span id="id_phone_alias2"></span>)</td>
+								<td><span style="display:none"><input type='text' name='settings_notificationsSmsPhoneCountry2_text' id='settings_notificationsSmsPhoneCountry2_text' size='5' maxlength=5 ><img src='../images/phone.gif' border=0 onclick='parent.open_phone_list(2);' style="cursor:pointer;">-</span><input type='text' name='settings_notificationsSmsPhone2_text' id='settings_notificationsSmsPhone2_text' size='30' maxlength=20></td>
+							</tr>								
+							<span id="id_text_arg_name" style="display:none"></span>						
+						</table>					
+			</div>	
+				<div style="float:right;margin-top:15px;">
+							      * 
+							    <span class="_text" lang="_cloud" datafld="required"></span></div>
+		<!--
+			<button id="sms_test_button">Test SMS</button>				
+				<br><div id="sms_msg" style="color:red">	(<span class="_text" lang="_sms" datafld="note">Note: Please press "Save Settings" to decide which SMS service provider to sent SMS.</span>) </div><br>
+				
+				-->
+		</div>
+		</div>		
+		
+		<div class="hrBottom2"><hr></div>		
+		
+										
+<!-- -->
+<button type="button" class="ButtonMarginLeft_40px close" id="settings_notificationsSmsSetCancel_button" onclick="sms_reset();"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+<button type="button" onclick="sms_test();" class="ButtonMarginLeft_20px" id="settings_notificationsSmsTest_button"><span class="_text" lang="_sms" datafld="test"></span></button>
+<button type="button" onclick="sms_del();" class="ButtonMarginLeft_20px" id="settings_notificationsSmsDel_button"><span class="_text" lang="_common" datafld="del"></span></button>
+<button type="button" class="ButtonRightPos2"	 onclick="sms_close();" id="settings_notificationsSmsSetSave_button"><span class="_text" lang="_button" datafld="save"></span></button>
+										
+										
+										
+</div>
+
+	<div id="smsDiag_set" style="display:none">
+	<div class="WDLabelBodyDialogue">
+		<div class="dialog_content" style="overflow:hidden">
+				<table width="100%" cellspacing="0" cellpadding="0" height="159">	
+					<tr>
+						<td width="20%" height="25"><span class="_text" lang="_sms" datafld="name">Provider Name</span></td>
+						<td width="80%" height="25"><input type="text" name="settings_notificationsSmsName_text" id="settings_notificationsSmsName_text" maxlength="20"></td>
+					<tr>						
+						<td colspan="2" height="25"><span class="_text" lang="_sms" datafld="url2">Enter a SMS URL with the message content set to be "Hello world":</span></td>
+					</tr>	
+					</tr>		
+					<tr>
+						<td width="20%" height="79"><span class="_text" lang="_sms" datafld="sms_url">SMS URL*</span></td>
+						<td width="80%" height="79">
+						<textarea name="settings_notificationsSmsUrl_text" id="settings_notificationsSmsUrl_text" style="width: 430px; height: 50px;" cols="40"  rows="6"></textarea></td>
+					</tr>
+					<tr>						
+						<td colspan="2" height="126">	
+						<div style="height:200px;overflow-y:auto;width:100%">
+							<span class="_text" lang="_sms" datafld="sms_description">					
+						*This SMS URL is only for setup 
+						purposes. No SMS message will be sent after setup is 
+						completed. The format of this URL is provided by the SMS 
+						service provider, and the URL must include the following 
+						parameters: username, password, destination phone, and 
+						message content. Using Clickatell as an example, a 
+						possible URL is: https://api.clickatell.com/http/sendmsg?user=TestUser&amp;password=TestPassword&amp;api_id=3148203&amp;to=886123456789&amp;text=Hello.
+						</span>
+					</div>
+						</td>
+						
+					</tr>		
+				</table>
+		</div>
+		</div>		
+		<div class="hrBottom2"><hr></div>				
+		<button type="button" class="ButtonMarginLeft_40px close" id="settings_notificationsSmsCancel1_button" onclick="sms_reset();"><span class="_text" lang="_button" datafld="Cancel"></span></button>			
+		<button type="button" class="ButtonRightPos2" id="settings_notificationsSmsNext1_button"><span class="_text" lang="_button" datafld="Next"></span></button>  													
+	</div>
+	
+	<div id="smsDiag_url" style="display:none">
+		<div class="WDLabelBodyDialogue">
+		<div class="dialog_content">		
+		<span class="_text" lang="_sms" datafld="parameter">URL parameter definition</span></p>								
+			
+			<table width="100%" border='0' cellspacing="0" cellpadding="0">	
+				<tr>
+					<td colspan="2" height=30><span class="_text" lang="_sms" datafld="sel">Select the corresponding category for each parameter</span></td>					
+				<tr>
+				<tr>						
+					<td colspan="2" height=5></td>
+				</tr>		
+				<tr>						
+					<td colspan="2">						
+						<table id="id_content" width="100%" border='0' cellspacing="0" cellpadding="0">
+						</table>						
+					</td>
+				</tr>
+			</table>			
+		</div>
+		</div>
+		
+		<div class="hrBottom2"><hr></div>						
+			<button type="button" class="ButtonMarginLeft_40px" id="settings_notificationsSmsBack2_button"><span class="_text" lang="_button" datafld="back"></span></button>
+			<button type="button" class="ButtonMarginLeft_20px close" id="settings_notificationsSmsCancel2_button" onclick="sms_reset();"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+			<button type="button" class="ButtonRightPos2" id="settings_notificationsSmsSave_button"><span class="_text" lang="_button" datafld="finish"></span></button>  					
+			
+	</div>		
+</div><!-- end smsDiag -->
+
+<!-- dialog end -->	
+</body>
+</html>

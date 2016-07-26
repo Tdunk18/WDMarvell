@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><cki><ck fm=\"パーソナル クラウドの管理について\" to=\"デバイスの MAC および IP アドレスの確認\" num=\"56\"/><ck fm=\"ネットワークへの WD My Cloud Mirror デバイスの接続\" to=\"RAID ストレージの概要\" num=\"51\"/></cki>";

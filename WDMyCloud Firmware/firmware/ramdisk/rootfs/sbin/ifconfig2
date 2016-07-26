@@ -1,0 +1,26 @@
+#!/bin/sh
+num=$#
+if [ $num -eq 0 ]; then
+  #busybox ifconfig | sed -e '9,24d'
+  renum=$
+  setenum=0
+  ifconfig_info=`busybox ifconfig | grep -n '^[a-z]' | awk '{ print $1 }'`
+  for netname in $ifconfig_info ;do
+        if [ `echo $netname| grep ":egiga1" 2>/dev/null` ];then
+          rsnum=${netname%:*}
+          setenum=1
+          continue
+        elif [ `echo $netname| grep ":egiga2" 2>/dev/null` ];then
+          setenum=2
+          continue
+        elif [ "$setenum" != "0" ];then
+          renum=${netname%:*}
+          renum=$( expr $renum - 1 )
+          break
+        fi
+  done
+  
+  busybox ifconfig | sed -e "${rsnum},${renum}d"
+else
+  busybox ifconfig "$@"
+fi

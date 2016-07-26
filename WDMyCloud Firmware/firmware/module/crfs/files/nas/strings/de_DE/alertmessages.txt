@@ -1,0 +1,302 @@
+0001 = System-Übertemperatur
+0001D = Die Systemtemperatur liegt über der normalen Betriebstemperatur. Verlagern Sie das System an einen kühleren Standort. Wenn keine Maßnahmen ergriffen werden, wird das System bei Erreichen des kritischen Grenzwerts heruntergefahren.
+
+0002 = System-Untertemperatur
+0002D = Die Systemtemperatur ist niedriger als die spezifische Mindesttemperatur. Verlagern Sie das System an einen wärmeren Standort.
+
+0003 = Ausfall des SMART-Laufwerks
+0003D = Der Selbsttest des Laufwerks %1 ist fehlgeschlagen. Wenden Sie sich an den Support von WD.
+
+0004 = Ausfall des Datenträgers
+0004D = Auf den Datenträger %1 im Laufwerk kann nicht zugegriffen werden. Wenden Sie sich an den Support von WD.
+
+0005 = Bevorstehende temperaturbedingte Systemabschaltung
+0005D = Es besteht die Gefahr der Systemüberhitzung. Das System wird automatisch heruntergefahren, wenn Sie keine Maßnahmen ergreifen.
+
+0006 = Unmittelbar bevorstehende Systemabschaltung
+0006D = Ihr System ist stark überhitzt und wird sofort heruntergefahren, um Schäden zu verhindern.
+
+2020 = Systemabschaltung
+2020D = Das System wird heruntergefahren
+
+1020 = Systemabschaltung
+1020D = Das System wird heruntergefahren
+
+0020 = Systemabschaltung
+0020D = Das System wird heruntergefahren
+
+0029 = Die Lüftung funktioniert nicht
+0029D = Die Systemlüftung funktioniert nicht. Wenden Sie sich an den Support von WD.
+
+0031 = Unter UPS-Stromversorgung
+0031D = Das System wird von der unterbrechungsfreien Stromversorgung versorgt. %1% Restkapazität.
+
+0201 = Laufwerk-Ausfall
+0201D = Das Laufwerk in Schacht %1 ist ausgefallen. Ersetzen Sie das fehlerhafte Laufwerk. Wenden Sie sich an den Support von WD.
+
+0207 = Drohender Laufwerk-Ausfall
+0207D = Laufwerk %1 ist im Begriff auszufallen. Ersetzen Sie das fehlerhafte Laufwerk. Wenden Sie sich an den Support von WD.
+
+0208 = Datenträger fehlerhaft
+0208D = Datenträger %1 ist fehlerhaft. Prüfen Sie den Status des Laufwerks mit dem Laufwerkstest unter 'Einstellungen' > 'Dienstprogramme'.
+
+0209 = Fortschritt der Datenträger-Migration
+0209D = Fortschritt der Migration des Datenträgers %1 - %2 %
+
+2209 = Fortschritt der Datenträger-Migration
+2209D = Fortschritt der Migration von Datenträger %1: %2 %
+
+0210 = Wiederherstellung des Datenträgers
+0210D = Bereits verstrichene Zeit zur Wiederherstellung von Datenträger %1: %2 Minuten
+
+2210 = Wiederherstellung des Datenträgers
+2210D = Bereits verstrichene Zeit zur Wiederherstellung von Datenträger %1: %2 Minuten
+
+0212 = Wiederherstellung des Datenträgers fehlgeschlagen
+0212D = Die Wiederherstellung des Datenträgers %1 ist fehlgeschlagen. Prüfen Sie den Status der Laufwerke mit dem Laufwerkstest unter 'Einstellungen' > 'Dienstprogramme'.
+
+0213 = Erweiterung des Datenträgers fehlgeschlagen
+0213D = Die Erweiterung des Datenträgers %1 ist fehlgeschlagen. Prüfen Sie den Status der Laufwerke mit dem Laufwerkstest unter 'Einstellungen' > 'Dienstprogramme'.
+
+0216 = RAID-Roaming aktiviert
+0216D = RAID-Roaming aktiviert.
+
+2216 = RAID-Roaming aktiviert
+2216D = RAID-Roaming aktiviert.
+
+0224 = Laufwerk mit roter Leuchte ersetzen
+0224D = Ersetzen Sie das Laufwerk mit der roten LED.
+
+2041 = Verbindung zu Ethernet-Port %1 mit 10/100 hergestellt
+2041D = Die Verbindungsgeschwindigkeit ist auf 10/100 Mbps beschränkt.
+
+0042 = 50 % UPS-Strom übrig
+0042D = Das System läuft mit UPS-Strom; 50 % Restkapazität. Schließen Sie Ihr System möglichst bald an eine neue Stromquelle an.
+
+0043 = 15% UPS-Strom übrig
+0043D = Das System läuft mit UPS-Strom; 15% Restkapazität. Schließen Sie Ihr System sofort an eine neue Stromquelle an.  Wenn Sie nichts unternehmen, wird das System heruntergefahren, sobald der UPS-Strom aufgebraucht ist.
+
+0044 = UPS-Strom aufgebraucht
+0044D = Die Kapazität der unterbrechungsfreien Stromversorgung ist erschöpft. Das System wird sofort heruntergefahren, um Schäden zu verhindern.
+
+1001 = Die Auslastung des Datenträgers beträgt über 95 %
+1001D = Die Kapazität von Datenträger %1 ist nahezu vollständig erschöpft und es kann möglicherweise zu Leistungsbeeinträchtigungen kommen. Vergewissern Sie sich, dass Ihre Dateien gesichert sind. Entfernen Sie dann die Dateien vom Laufwerk, um Speicherplatz freizugeben. Wenn die Papierkorbfunktion aktiviert ist, können Sie den Papierkorb leeren, um Speicherplatz freizugeben.
+
+1002 = Netzwerkverbindung unterbrochen
+1002D = Die Netzwerkverbindung %1 wurde getrennt oder unterbrochen. Überprüfen Sie die Netzwerkverbindung.
+
+1010 = Netzwerkverbindung unterbrochen
+1010D = Die Netzwerkverbindung %1 wurde getrennt oder unterbrochen. Überprüfen Sie die Netzwerkverbindung.
+
+1003 = Fehler bei der Firmware-Aktualisierung
+1003D = Die Firmware-Aktualisierung ist fehlgeschlagen. Versuchen Sie es erneut. Wenden Sie sich bei Fortbestehen des Problems an den Support von WD.
+
+1004 = Hohe Systemtemperatur
+1004D = Ihr Gerät ist momentan überhitzt. Stellen Sie sicher, dass Ihr Gerät ausreichend belüftet wird.
+
+1021 = Fehler bei der Wiederherstellung der Konfiguration.
+1021D = Die Wiederherstellung der Konfiguration ist fehlgeschlagen.
+
+0022 = Ausfall der Stromversorgung
+0022D = Die Stromversorgung %1 ist ausgefallen.
+
+1022 = Ausfall der Stromversorgung
+1022D = Die Stromversorgung %1 ist ausgefallen. Prüfen Sie die Stromversorgung.
+
+1030 = Speicherplatz unter dem Grenzwert
+1030D = Speicherplatz unter dem Grenzwert.
+
+1035 = Programm zur Produktverbesserung
+1035D = Möchten Sie zur Produktverbesserung beitragen? Weitere Informationen %1
+
+0036 = Überprüfung des Dateisystems fehlgeschlagen
+0036D = Bei der Überprüfung des Dateisystems wurden Fehler in Ihrer Konfiguration festgestellt. Sichern Sie Ihre Daten und konfigurieren Sie die Laufwerke neu, um diese Probleme zu beheben. Sollte das Problem weiter bestehen, wenden Sie sich bitte an den Support von WD.
+
+1036 = Überprüfung des Dateisystems fehlgeschlagen
+1036D = Bei der Überprüfung des Dateisystems wurden Fehler in Ihrer Konfiguration festgestellt. Sichern Sie Ihre Daten und konfigurieren Sie die Laufwerke neu, um diese Probleme zu beheben. Sollte das Problem weiter bestehen, wenden Sie sich bitte an den Support von WD.
+
+1045 = Dateisystemfehler behoben
+1045D = Bei der Überprüfung des Dateisystems wurden Fehler in Ihrer Konfiguration festgestellt und behoben.
+
+1037 = System nicht bereit
+1037D = Das System ist ausgelastet. Bitte warten Sie, bis die Ein/Aus-LED dauerhaft blau leuchtet, bevor Sie ein anderes Laufwerk einsetzen.
+
+1120 = Nicht unterstütztes USB-Gerät
+1120D = Ein nicht unterstütztes USB-Gerät wurde ermittelt (Hersteller: %1, Modell: %2, Seriennummer: %3). Entfernen Sie das USB-Gerät.
+
+1121 = Nicht unterstütztes Dateisystem
+1121D = Ein nicht unterstütztes Dateisystem wurde auf einem USB-Gerät ermittelt (Hersteller %1, Modell: %2, Seriennummer: %3, Dateisystem: %4, Bezeichnung: %5). Entfernen Sie das USB-Gerät.
+
+1122 = Fehler beim Erstellen der Freigabe
+1122D = Auf einem USB-Gerät konnte keine Freigabe erstellt werden (Hersteller: %1, Modell: %2, Seriennummer: %3, Dateisystem: %4, Bezeichnung: %5, Freigabename: %6)
+
+1123 = Unsichere Entfernung eines Geräts
+1123D = Ein USB-Gerät (Hersteller: %1, Modell: %2, Seriennummer: %3) wurde entfernt, ohne dass es ausgeworfen wurde. Möglicherweise wurden Daten auf %2 beschädigt.
+
+1124 = USB-Gerät kann nicht bereitgestellt werden
+1124D = Ein USB-Gerät kann nicht bereitgestellt werden (Hersteller: %1, Modell: %2, Seriennummer: %3). Überprüfen Sie das USB-Gerät.
+
+1127 = Dateien können vom USB-Gerät nicht gesichert werden
+1127D = Es können keine Dateien vom USB-Gerät gesichert werden. Prüfen Sie die Geräteverbindungen.
+
+1130 = USB-Sicherung in Warteschlange
+1130D = Ein vorheriger Sicherungsauftrag wird zurzeit noch ausgeführt. Die USB-Sicherung startet automatisch, sobald der vorherige Auftrag abgeschlossen wurde.
+
+1400 = Fehler bei der Remotesicherung
+1400D = Bei der Remotesicherung ist ein Fehler aufgetreten. Auftragsname: %1. Überprüfen Sie die Systemeinstellungen.
+
+1401 = Fehler bei der Wiederherstellung der Remotesicherung
+1401D = Bei der Wiederherstellung der Remotesicherung ist ein Fehler aufgetreten. Auftragsname: %1. Überprüfen Sie die Systemeinstellungen.
+
+2402 = Erfolgreiche Remotesicherung
+2402D = Die Remotesicherung wurde durchgeführt. Auftragsname: %1, auf dem Gerät: %2, zur Freigabe: %3
+
+1402 = Erfolgreiche Remotesicherung
+1402D = Die Remotesicherung wurde durchgeführt. Auftragsname: %1, auf dem Gerät: %2, zur Freigabe: %3
+
+2403 = Erfolgreiche Wiederherstellung der Remotesicherung
+2403D = Die Remotewiederherstellung wurde durchgeführt. Auftragsname: %1, auf dem Gerät: %2, zur Freigabe: %3
+
+1403 = Erfolgreiche Wiederherstellung der Remotesicherung
+1403D = Die Remotewiederherstellung wurde durchgeführt. Auftragsname: %1, auf dem Gerät: %2, zur Freigabe: %3
+
+2001 = Neustart des Systems
+2001D = Das System wurde neu gestartet.
+
+1011 = Neue Firmware verfügbar
+1011D = Eine neue Version der Firmware ist verfügbar. Aktualisieren Sie Ihr System.
+
+2002 = Neue Firmware verfügbar
+2002D = Eine neue Version der Firmware ist verfügbar. Aktualisieren Sie Ihr System.
+
+2003 = Temperatur normal
+2003D = Die Systemtemperatur liegt innerhalb des normalen angegebenen Temperaturbereichs.
+
+2004 = Firmware-Aktualisierung erfolgreich
+2004D = Die Firmware wurde auf %1 aktualisiert.
+
+2005 = Werkseinstellungen wiederhergestellt
+2005D = Die Standardwerte der Werkseinstellungen wurden in ihrem System wiederhergestellt.
+
+2006 = Sie sind zu einer Software-Aktualisierung berechtigt!
+2006D = Öffnen Sie das Dashboard Ihres WD My Cloud-Geräts für weitere Informationen.
+
+2024 = Firmware-Aktualisierung wird heruntergeladen
+2024D = Firmware-Aktualisierung wird heruntergeladen.
+
+2026 = Firmware-Aktualisierung wird installiert
+2026D = Firmware-Aktualisierung wird installiert.
+
+1028 = Neustart erforderlich
+1028D = Neustart erforderlich.
+
+2028 = Neustart erforderlich
+2028D = Neustart erforderlich.
+
+2032 = Das System befindet sich im Standby-Modus.
+2032D = Das System befindet sich im Standby-Modus.
+
+1033 = Das System wird neu gestartet
+1033D = System wird neu gestartet.
+
+2033 = Das System wird neu gestartet
+2033D = System wird neu gestartet.
+
+1038 = Speicherkontingent fast erschöpft
+1038D = Das Speicherkontingent für [%1] ist beinahe erschöpft. Vergewissern Sie sich, dass Ihre Dateien gesichert sind. Entfernen Sie dann die Dateien vom Laufwerk, um Speicherplatz freizugeben.
+
+2038 = Speicherkontingent fast erschöpft
+2038D = Das Speicherkontingent für [%1] ist beinahe erschöpft. Vergewissern Sie sich, dass Ihre Dateien gesichert sind. Entfernen Sie dann die Dateien vom Laufwerk, um Speicherplatz freizugeben.
+
+1039 = Speicherkontingent erschöpft
+1039D = Das Speicherkontingent für [%1] ist erschöpft. Vergewissern Sie sich, dass Ihre Dateien gesichert sind. Entfernen Sie dann die Dateien vom Laufwerk, um Speicherplatz freizugeben.
+
+2039 = Speicherkontingent erschöpft
+2039D = Das Speicherkontingent für [%1] ist erschöpft. Vergewissern Sie sich, dass Ihre Dateien gesichert sind. Entfernen Sie dann die Dateien vom Laufwerk, um Speicherplatz freizugeben.
+
+2040 = Nicht unterstütztes UPS-Gerät
+2040D = Nicht unterstütztes UPS-Gerät
+
+2121 = Gesperrtes USB-Gerät
+2121D = Ein gesperrtes USB-Gerät wurde ermittelt (Hersteller: %1, Modell: %2, Seriennummer: %3).
+
+2126 = Dateien von USB-Gerät kopiert
+2126D = Dateien wurden von <%1> nach <%2> kopiert.
+
+2128 = Dateien werden kopiert
+2128D = Dateien werden vom USB-Gerät kopiert.
+
+2129 = Dateien vom USB-Gerät verschoben
+2129D = Dateien wurden von <%1> nach <%2> verschoben.
+
+2131 = Dateien werden verschoben
+2131D = Dateien werden vom USB-Gerät verschoben.
+
+1200 = Nicht unterstütztes Laufwerk
+1200D = Nicht unterstütztes Laufwerk in Schacht %1. Ersetzen Sie das eingesetzte Laufwerk durch ein zugelassenes Laufwerk. Eine Liste der zugelassenen Laufwerke finden Sie unter: www.wd.com
+
+2200 = Nicht unterstütztes Laufwerk
+2200D = Nicht unterstütztes Laufwerk in Schacht %1. Ersetzen Sie das eingesetzte Laufwerk durch ein zugelassenes Laufwerk. Eine Liste der zugelassenen Laufwerke finden Sie unter: www.wd.com
+
+2202 = Laufwerk zu klein
+2202D = Zu kleines Laufwerk am Ort %1
+
+2203 = Laufwerk wird initialisiert
+2203D = Initialisierung des Laufwerks am Ort %1
+
+2211 = Überprüfung der Speicherintegrität
+2211D = Speicherintegrität wird überprüft.
+
+2214 = Laufwerk eingesetzt
+2214D = Ein neues Laufwerk wurde in Schacht %1 eingesetzt. Um dieses Laufwerk dem RAID-Set des Systems hinzuzufügen, navigieren Sie zu 'Speicher' > 'RAID' und klicken Sie auf die Schaltfläche 'RAID-Modus ändern'.
+
+0215 = Laufwerk entfernt
+0215D = Laufwerk entfernt aus Schacht %1
+
+2215 = Laufwerk entfernt
+2215D = Laufwerk wurde aus Schacht %1 entfernt. Überprüfen Sie das System.
+
+2217 = Keine Laufwerke installiert
+2217D = Es wurden keine Laufwerke installiert. Fügen Sie Laufwerke hinzu, um das System nutzen zu können. Neue Laufwerke können Sie unter folgender Adresse erwerben: www.wd.com
+
+2218 = Hot-Spare-Laufwerk zu RAID-Array hinzugefügt
+2218D = Dem RAID-Array wurde ein Hot-Spare-Laufwerk hinzugefügt.
+
+2219 = RAID-Migration vollständig
+2219D = Die RAID-Migration ist abgeschlossen.
+
+2220 = RAID-Wiederherstellung vollständig
+2220D = Die RAID-Wiederherstellung ist abgeschlossen.
+
+2221 = Eingesetztes Laufwerk ist kein WD Red NAS-Laufwerk
+2221D = Das eingesetzte Laufwerk ist kein WD Red NAS-Laufwerk. Bitte beachten Sie, dass das WD My Cloud-Gerät für die Verwendung mit WD Red NAS-Festplatten optimiert wurde.
+
+2222 = Datenträger ist formatiert
+2222D = Datenträger %1 ist formatiert.
+
+2223 = Fortschritt der Datenträger-Erweiterung
+2223D = Fortschritt der Erweiterung von Datenträger %1: %2%
+
+2300 = Medienprüfung gestoppt
+2300D = Das Gerät hat die Prüfung Ihrer Medien gestoppt. Daher werden beim Remotezugriff einige Miniaturansichten nicht angezeigt. Starten Sie das WD My Cloud-System neu, um die Prüfung fortzusetzen.
+
+1501 = App-Update verfügbar
+1501D = %1 Ein Update für die App %1 ist verfügbar. Bitte führen Sie das Update durch.
+
+1502 = Virus gefunden
+1502D = Antivirus-Übersicht: Der Virenscan ist abgeschlossen. Es wurden Viren gefunden. Details finden Sie im Virenscan-Bericht.
+
+2503 = Virenscan abgeschlossen
+2503D = Antivirus-Übersicht: Der Virenscan ist abgeschlossen. Kein Virus gefunden.
+
+2504 = Geplanter Virenscan gestartet
+2504D = Antivirus-Übersicht: Der geplante Virenscan wurde gestartet.
+
+2505 = Geplanter Virenscan angehalten
+2505D = Antivirus-Übersicht: Der geplante Virenscan wurde wegen Erreichens der Stoppzeit angehalten. Der Scan wurde nicht abgeschlossen. 
+
+1103 = Beim Wiederherstellen von Daten von Ihrem Sicherungspunkt ist ein Fehler aufgetreten
+1103D = %4 - Bei der Wiederherstellung von Daten von Ihrem Sicherungspunkt %1 auf der Freigabe %2 auf %3 ist ein Fehler aufgetreten.
+
+2103 = Ihre Daten wurden erfolgreich von Ihrem Sicherungspunkt wiederhergestellt
+2103D = Ihre Daten wurden erfolgreich von Ihrem Sicherungspunkt %1 auf der Freigabe %2 auf %3 wiederhergestellt.

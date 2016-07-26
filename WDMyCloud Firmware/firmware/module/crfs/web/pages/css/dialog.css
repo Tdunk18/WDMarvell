@@ -1,0 +1,255 @@
+.WDLabelDiag {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 9999;
+    display: none;
+    min-width: 534px;
+    min-height: 264px;
+    padding-bottom: 30px;
+    margin: 5% 0 0;
+    font: 14px Arial,"Helvetica Neue",Helvetica,sans-serif;
+    color: #4b5a68;
+    background-color: #eee;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f0f0f0), to(#ececec));
+    background-image: -webkit-linear-gradient(top, #f0f0f0, #ececec);
+    background-image: -moz-linear-gradient(top, #f0f0f0, #ececec);
+    background-image: -ms-linear-gradient(top, #f0f0f0, #ececec);
+    background-image: linear-gradient(top, #f0f0f0, #ececec);
+    border: 1px solid #e6e6e6;
+    overflow: visible;
+    border-radius: 0;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.maxwidth{
+	max-width:534px;
+}
+.WDLabelHeaderDialogue {
+    font-size: 22px;
+    height: 48px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    line-height: 48px;
+}
+
+.WDLabelHeaderDialogue2 {
+    font-size: 22px;
+    height: 36px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    line-height: 36px;
+}
+
+.WDLabelHeaderDialogue_s3 {
+    font-size: 22px;
+    height: 48px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    line-height: 36px;
+}
+
+.WDLabelHeader2 { font-size: 18px }
+
+.WDLabelBodyDialogue {
+    position: relative;
+    font-size: 14px;
+    min-width: 494px;
+    min-height: 136px;
+    word-wrap: break-word;
+    display: block;
+    background: #fafafa;
+    padding: 20px 20px 30px;
+    margin: 20px 20px 0 20px;
+    color: #4b5a68;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+WDLabelBodyDialogue > table {
+	width: 100% !important;
+}
+
+table#id_alert_all_tb { width: 520px !important; }
+
+.WDBodyDialogEnd {
+    clear: both;
+    padding-top: 15px;
+}
+
+.WDButtonSecondaryNormal {
+    position: relative;
+    cursor: pointer;
+    width: 112px;
+    height: 40px;
+    background: url(../images/button/button.png) no-repeat;
+    text-align: center;
+    line-height: 40px;
+    font-size: 12pt;
+    color: #85939C;
+}
+
+.WDButtonSecondaryNormal:hover {
+    cursor: pointer;
+    width: 112px;
+    height: 40px;
+    background: url(../images/button/obutton.png) no-repeat;
+}
+
+.WDButtonSecondaryNormalLeftPos {
+    top: 15px;
+    left: 40px;
+}
+
+.WDButtonSecondaryNormalRightPos {
+    right: 40px;
+    top: -25px;
+    float: right;
+}
+
+.ButtonLeftPos {
+    position: relative;
+    margin-left: 20px;
+    top: 15px;
+}
+
+.ButtonMarginLeft_40px {
+    position: relative;
+    float: left;
+    margin-left: 20px;
+    top: 15px;
+}
+
+.ButtonMarginLeft_20px {
+    float: left;
+    position: relative;
+    margin-left: 20px;
+    top: 15px;
+}
+
+.ButtonLeftPos1 {
+    position: relative;
+    margin-left: 480px;
+    top: 15px;
+}
+
+.ButtonRightPos1 {
+    position: relative;
+    margin-right: 20px;
+    float: right;
+    top: 15px;
+}
+
+.ButtonRightPos2 {
+    position: relative;
+    margin-right: 20px;
+    float: right;
+    top: 15px;
+}
+
+.ButtonRightPos_Top_0px {
+    position: relative;
+    margin-right: 40px;
+    float: right;
+}
+
+.ButtonRightAlert {
+    position: relative;
+    margin-right: 30px;
+    float: right;
+    top: 15px;
+}
+
+div.hr {
+    height: 3px;
+    width: 590px;
+    background: #fff url(../images/dialog_line.png) repeat-x scroll center;
+    position: relative;
+    top: 25px;
+    display: none;
+}
+
+div.hr hr { display: none }
+
+div.hr2 {
+    height: 3px;
+    width: 680px;
+    background: #fff url(../images/dialog_line.png) repeat-x scroll center;
+    position: relative;
+    top: 25px;
+    display: none;
+}
+
+div.hr2 hr { display: none }
+
+div.hrBottom {
+    position: relative;
+    /*top: 40px;*/
+    height: 3px;
+    background: #fff url(../images/dialog_line.png) repeat-x scroll center;
+    margin-top: 2px;
+    /*margin-buttom: 25px;*/
+    /*border: 1px solid blue;*/
+}
+
+div.hrBottom hr { display: none }
+
+div.hrBottom2 {
+    position: relative;
+    /*top: 40px;*/
+    height: 3px;
+    background: #fff url(../images/dialog_line.png) repeat-x scroll center;
+    display: none;
+    /*    margin-top: 65px;    */
+}
+
+div.hrBottom2 hr { display: none }
+
+.inputBox {
+    width: 225px;
+    height: 26px;
+    padding-left: 12px;
+    padding-right: 12px;
+    background-color: #ccc;
+    font-size: 12pt;
+    border-radius: 4px;
+}
+
+.inputBox:hover { border: 1px solid #ff921a }
+
+.inputBox:focus { border: 1px solid #ff921a }
+
+/*.dialog_content {
+    width: 560px;;
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+}*/
+
+.PersonalCloudLabelDiag {
+    /*width: 300px;;
+    height: 50px;*/
+    width: 650px;
+    position: relative;
+    /*margin: 5% 0% 0% 0%;*/
+    padding: 10px;
+    /*top: 50%;;
+    left: 50%;*/
+    /*margin-top: 150px;;
+    margin-left: -10px;*/
+    /*background-color: #282828;*/
+    color: #85939C;
+    border: 1px solid #85939C;
+    border-radius: 10px;
+}
+
+#dDiag_create_group table { margin-top: 10px }
+
+#dDiag_create_group td > span._text { margin-right: 15px }
+
+div.bDiv #DLNA_View_Players_List td div { overflow: visible !important }

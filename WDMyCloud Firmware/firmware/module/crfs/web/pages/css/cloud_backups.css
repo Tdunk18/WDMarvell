@@ -1,0 +1,39 @@
+
+.b_elephantdrive,
+.b_elephantdrive:hover,
+.b_s3,
+.b_s3:hover {
+	margin: 0px;
+	padding-left: 0px;
+}
+
+.b_elephantdrive .icon {
+	display: inline-block;
+	background: url(/web/images/elephant_drive/ElephantDrive_display_32x23.png) no-repeat 5px center;
+	width: 32px;
+	height: 23px;
+	margin-top: 3px;
+}
+
+.b_elephantdrive ._text {
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: top;
+}
+
+.b_s3 .icon {
+	display: inline-block;
+	background: url(/web/images/amazon/AWS_logo_poweredby_70x23.png?r=20140901) no-repeat #FFFFFF 5px center; 
+	width: 70px;
+	height: 23px;
+	margin-top: 3px;
+	margin-left: 5px;
+}
+
+.b_s3 ._text {
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: top;
+}

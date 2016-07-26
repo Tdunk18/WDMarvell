@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+   <components>
+        <component>
+            <name>alerts</name>
+            <module>Alerts</module>
+            <controller_class>\Alerts\Controller\Alerts</controller_class>
+            <auth_security>
+                <post>NO_ACCESS</post>
+               	<get>NO_AUTH_LAN</get>
+				<put>USER_AUTH_LAN</put>
+				<delete>ADMIN_AUTH_LAN</delete>
+            </auth_security>
+        </component>
+   </components>
+</module>

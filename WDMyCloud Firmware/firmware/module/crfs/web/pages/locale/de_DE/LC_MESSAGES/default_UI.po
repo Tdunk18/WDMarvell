@@ -1,0 +1,2139 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# No version information was available in the source files.
+# 
+#, fuzzy
+#: string ""
+msgid ""
+msgstr ""
+
+"Project-Id-Version: PROJECT VERSION\n"
+"Project Code Name: Zermatt"
+"POT-Creation-Date: 2010-07-02 10:00-0700\n"
+"PO-Revision-Date: 2013-01-09  4:00 PM PST\n"
+"Addition of three keys: I accept; Print; and License Agreemeent\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: GERMAN <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: string "A bad request was made."
+msgid "ERROR_BAD_REQUEST"
+msgstr "Es wurde eine unzulässige Anforderung gestellt."
+
+
+#: string "You are not authorized to perform this task."
+msgid "ERROR_NOT_AUTHORIZED_TASK"
+msgstr "Sie sind nicht zum Durchführen dieser Aufgabe berechtigt."
+
+
+#: string "The requested service was not found."
+msgid "ERROR_SERVICE_NOT_FOUND"
+msgstr "Der angeforderte Dienst wurde nicht gefunden."
+
+
+#: string "Invalid firmware package."
+msgid "ERROR_INVALID_FW_PACKAGE"
+msgstr "Ungültiges Firmware-Paket."
+
+
+#: string "Device does not have enough space for upgrade."
+msgid "ERROR_OUT_OF_SPACE_FOR_UPGRADE"
+msgstr "Auf dem Gerät ist nicht genügend Speicherplatz für das Upgrade vorhanden."
+
+
+#: string "Upgrade unpack failure."
+msgid "ERROR_UPGRADE_UNPACK_FAILED"
+msgstr "Fehler beim Entpacken des Upgrades."
+
+
+#: string "Upgrade copy failure."
+msgid "ERROR_UPGRADE_COPY_FAILED"
+msgstr "Fehler beim Kopieren des Upgrades."
+
+
+#: string "Invalid IP address."
+msgid "ERROR_INVALID_IP_ADDRESS"
+msgstr "Ungültige IP-Adresse."
+
+
+#: string "Invalid gateway value."
+msgid "ERROR_INVALID_GATEWAY"
+msgstr "Ungültiger Gateway-Wert."
+
+
+#: string "Invalid netmask value."
+msgid "ERROR_INVALID_NETMASK"
+msgstr "Ungültiger Netzmaskenwert."
+
+
+#: string "Invalid DNS server value."
+msgid "ERROR_INVALID_DNS_SERVER"
+msgstr "Ungültiger DNS-Serverwert."
+
+
+#: string "A minimum of one DNS server is required for Static Network Mode."
+msgid "ERROR_AT_LEAST_ONE_DNS_REQUIRED"
+msgstr "Für den statischen Netzwerkmodus ist mindestens ein DNS-Server erforderlich."
+
+
+#: string "Invalid config file type. Please select a .nas file."
+msgid "ERROR_INVALID_CONFIG_FILE_SELECTED"
+msgstr "Ungültiger Konfigurationsdateityp. Wählen Sie eine .nas-Datei aus."
+
+
+#: string "Invalid firmware file type. Please select a .deb file."
+msgid "ERROR_INVALID_FIRMWARE_FILE_SELECTED"
+msgstr "Dateityp der Firmware ungültig. Wählen Sie eine .deb-Datei aus."
+
+
+#: string "You must enter your MioNet username."
+msgid "ERROR_ENTER_MIONET_USERNAME"
+msgstr "Sie müssen Ihren MioNet-Benutzernamen eingeben."
+
+
+#: string "You must enter your MioNet password."
+msgid "ERROR_ENTER_MIONET_PASSWORD"
+msgstr "Sie müssen Ihr MioNet-Kennwort eingeben."
+
+
+#: string "You must enter your first name for MioNet."
+msgid "ERROR_ENTER_FIRST_NAME_FOR_MIONET"
+msgstr "Sie müssen Ihren Vornamen für MioNet eingeben."
+
+
+#: string "You must enter your last name for MioNet."
+msgid "ERROR_ENTER_LAST_NAME_FOR_MIONET"
+msgstr "Sie müssen Ihren Nachnamen für MioNet eingeben."
+
+
+#: string "Your MioNet username must be an alphanumeric value between 1 and 32 characters."
+msgid "ERROR_MIONET_USERNAME_INCORRECT_SYNTAX"
+msgstr "Ihr MioNet-Benutzername muss ein alphanumerischer Wert aus 1 bis 32 Zeichen sein."
+
+
+#: string "Your MioNet password must be 8 to 20 characters in length."
+msgid "ERROR_MIONET_PASSWORD_INCORRECT_SYNTAX"
+msgstr "Ihr MioNet-Kennwort muss 8 bis 20 Zeichen enthalten."
+
+
+#: string "Your MioNet passwords do not match."
+msgid "ERROR_MIONET_PASSWORDS_DONT_MATCH"
+msgstr "Ihre MioNet-Kennwörter stimmen nicht überein."
+
+
+#: string "You must enter a valid email address for MioNet."
+msgid "ERROR_INVALID_EMAIL_ADDRESS_FOR_MIONET"
+msgstr "Sie müssen eine gültige E-Mail-Adresse für MioNet eingeben."
+
+
+#: string "Your MioNet email addresses do not match."
+msgid "ERROR_MIONET_EMAIL_ADDRESESS_DONT_MATCH"
+msgstr "Ihre E-Mail-Adressen von MioNet stimmen nicht überein."
+
+
+#: string "User name already in use. Please enter another user name."
+msgid "ERROR_USERNAME_ALREADY_EXISTS"
+msgstr "Der Benutzername wird bereits verwendet. Geben Sie einen anderen Benutzernamen ein."
+
+
+#: string "The system is currently busy; please try again in a few minutes."
+msgid "ERROR_EXCEPTION_DURING_USER_FIND"
+msgstr "Das System ist derzeit ausgelastet; versuchen Sie es in ein paar Minuten noch einmal."
+
+
+#: string "The system is currently busy; please try again in a few minutes."
+msgid "ERROR_EXCEPTION_DURING_USER_CREATION"
+msgstr "Das System ist derzeit ausgelastet; versuchen Sie es in ein paar Minuten noch einmal."
+
+
+#: string "The device name you are attempting to register is already in use. Please change the device name to successfully complete registration of this device."
+msgid "ERROR_EXCEPTION_DURING_REGISTRATION"
+msgstr "Der Gerätename, den Sie versuchen zu registrieren, wird bereits verwendet. Ändern Sie den Gerätenamen, um die Registrierung dieses Geräts erfolgreich abzuschließen."
+
+
+#: string "The email entered is already registered to an account."
+msgid "ERROR_EMAIL_ALREADY_REGISTERED"
+msgstr "Die eingegebene E-Mail-Adresse ist bereits bei einem Konto registriert."
+
+
+#: string "Invalid account."
+msgid "ERROR_INVALID_ACCOUNT"
+msgstr "Ungültiges Konto"
+
+
+#: string "Your MioNet password contains invalid characters; please enter an alphanumeric value between 8 and 20 characters."
+msgid "ERROR_MIONET_PASSWORD_CONTAINS_INVALID_CHARACTERS"
+msgstr "Ihr MioNet-Kennwort enthält ungültige Zeichen; geben Sie einen alphanumerischen Wert aus 8 bis 20 Zeichen ein."
+
+
+#: string "Error Node name conflict"
+msgid "ERROR_MIONET_NODE_NAME_CONFLICT"
+msgstr "Fehler - Knotennamenkonflikt"
+
+
+#: string "Restore file is either incorrect file format or corrupt."
+msgid "ERROR_RESTORE_FILE_IS_NOT_CORRECT_FORMAT"
+msgstr "Die Wiederherstellungsdatei ist entweder beschädigt oder es handelt sich nicht um die richtige Datei."
+
+
+#: string "First Name must be between 1 and 20 characters."
+msgid "ERROR_FIRST_NAME_INVALID_SYNTAX"
+msgstr "Der Vorname muss zwischen 1 und 20 Zeichen haben."
+
+
+#: string "Your Last Name must be between 1 and 20 characters."
+msgid "ERROR_LAST_NAME_INVALID_SYNTAX"
+msgstr "Ihr Nachname muss zwischen 1 und 20 Zeichen haben."
+
+
+#: string "Please provide a valid email address."
+msgid "ERROR_PROVIDE_VALID_EMAIL_ADDRESS"
+msgstr "Geben Sie bitte eine gültige E-Mail-Adresse ein."
+
+
+#: string "Your email addresses do not match."
+msgid "ERROR_EMAIL_ADDRESS_DONT_MATCH"
+msgstr "Ihre E-Mail-Adressen stimmen nicht überein."
+
+
+#: string "Registration failed. Please go to register.wdc.com to register your product."
+msgid "ERRORS_REGISTRATION_FAILED"
+msgstr "Registrierung fehlgeschlagen. Rufen Sie register.wdc.com auf, um Ihr Produkt zu registrieren."
+
+
+#: string "Cancel"
+msgid "BUTTON_CANCEL"
+msgstr "Abbrechen"
+
+
+#: string "Save"
+msgid "BUTTON_SAVE"
+msgstr "Speichern"
+
+
+#: string "Please Wait..."
+msgid "LABEL_DESCR_LOADER_PLEASE_WAIT"
+msgstr "Bitte warten..."
+
+
+#: string "Reboot"
+msgid "PAGE_HEADER_REBOOT"
+msgstr "Neu starten"
+
+
+#: string "Factory Restore successful."
+msgid "LABEL_DESCR_FACTORY_RESTORE_SUCCESS"
+msgstr "Wiederherstellen der Werkseinstellungen erfolgreich."
+
+
+#: string "Factory restore was successful."
+msgid "LABEL_DESCR_PARTIAL_RESTORE_SUCCESS"
+msgstr "Wiederherstellen der Werkseinstellungen war erfolgreich."
+
+
+#: string "Firmware update was successful."
+msgid "LABEL_DESCR_FIRMWARE_UPDATE_SUCCESS"
+msgstr "Firmware-Update war erfolgreich."
+
+
+#: string "Factory restore is changing to a quick restore."
+msgid "LABEL_DESCR_FACTORY_RESTORE_SWITCH_TO_QUICK_RESTORE"
+msgstr "Wiederherstellung der Werkseinstellungen wird in schnelle Wiederherstellung geändert."
+
+
+#: string "Device is rebooting"
+msgid "LABEL_DESCR_DEVICE_REBOOTING"
+msgstr "Gerät wird neu gestartet"
+
+
+#: string "Initializing device"
+msgid "LABEL_DESCR_INTIALIZING_DEVICE"
+msgstr "Gerät wird initialisiert"
+
+
+#: string "iTunes Server:"
+msgid "LABEL_HEADER_ITUNES_SERVER"
+msgstr "iTunes-Server:"
+
+
+#: string "Rescan"
+msgid "BUTTON_RESCAN_MEDIA"
+msgstr "Erneut durchsuchen"
+
+
+#: string "Version:"
+msgid "LABEL_HEADER_VERSION"
+msgstr "Version:"
+
+
+#: string "Music Tracks:"
+msgid "LABEL_HEADER_MUSIC_TRACKS"
+msgstr "Musiktitel:"
+
+
+#: string "Pictures:"
+msgid "LABEL_HEADER_PICTURES"
+msgstr "Bilder:"
+
+
+#: string "Videos:"
+msgid "LABEL_HEADER_VIDEOS"
+msgstr "Videos:"
+
+
+#: string "Rebuild"
+msgid "BUTTON_REBUILD"
+msgstr "Neu erstellen"
+
+
+#: string "IP Address:"
+msgid "LABEL_HEADER_IP_ADDRESS"
+msgstr "IP-Adresse:"
+
+
+#: string "Network Mode:"
+msgid "LABEL_HEADER_NETWORK_MODE"
+msgstr "Netzwerkmodus:"
+
+
+#: string "Date &amp; Time"
+msgid "PAGE_HEADER_DATE_AND_TIME"
+msgstr "Datum und Uhrzeit"
+
+
+#: string "Time Zone:"
+msgid "LABEL_HEADER_TIME_ZONE"
+msgstr "Zeitzone:"
+
+
+#: string "(GMT-11:00) Midway Island, Samoa"
+msgid "GENERIC_TIME_ZONE_MIDWAY_ISLAND"
+msgstr "(GMT-11:00) Midway-Inseln, Samoa"
+
+
+#: string "(GMT-10:00) Hawaii"
+msgid "GENERIC_TIME_ZONE_HAWAII"
+msgstr "(GMT-10:00) Hawaii"
+
+
+#: string "(GMT-09:00) Alaska"
+msgid "GENERIC_TIME_ZONE_ALASKA"
+msgstr "(GMT-09:00) Alaska"
+
+
+#: string "(GMT-08:00) Pacific Time (US & Canada)"
+msgid "GENERIC_TIME_ZONE_PACIFIC_TIME"
+msgstr "(GMT-08:00) Pacific (USA, Kanada)"
+
+
+#: string "(GMT-08:00) Tijuana"
+msgid "GENERIC_TIME_ZONE_TIJUANA"
+msgstr "(GMT-08:00) Tijuana"
+
+
+#: string "(GMT-07:00) Arizona"
+msgid "GENERIC_TIME_ZONE_ARIZONA"
+msgstr "(GMT-07:00) Arizona"
+
+
+#: string "(GMT-07:00) Chihuahua, La Paz, Mazatlan"
+msgid "GENERIC_TIME_ZONE_CHIHUAHUA_LA_PAZ_MAZATLAN"
+msgstr "(GMT-07:00) Chihuahua, La Paz, Mazatlan"
+
+
+#: string "(GMT-07:00) Mountain Time (US & Canada)"
+msgid "GENERIC_TIME_ZONE_MOUNTAIN_TIME"
+msgstr "(GMT-07:00) Mountain (USA, Kanada)"
+
+
+#: string "(GMT-06:00) Central America (Guatemala)"
+msgid "GENERIC_TIME_ZONE_CENTRAL_AMERICA"
+msgstr "(GMT-06:00) Mittelamerika (Guatemala)"
+
+
+#: string "(GMT-06:00) Central Time (US & Canada)"
+msgid "GENERIC_TIME_ZONE_CENTRAL_TIME"
+msgstr "(GMT-06:00) Central (USA, Kanada)"
+
+
+#: string "(GMT-06:00) Guadalajara, Mexico City, Monterrey"
+msgid "GENERIC_TIME_ZONE_GUADALAJARA"
+msgstr "(GMT-06:00) Guadalajara, Mexiko-Stadt, Monterrey"
+
+
+#: string "(GMT-06:00) Saskatchewan"
+msgid "GENERIC_TIME_ZONE_SASKATCHEWAN"
+msgstr "(GMT-06:00) Saskatchewan"
+
+
+#: string "(GMT-05:00) Bogota, Lima, Quito"
+msgid "GENERIC_TIME_ZONE_BOGOTA_LIMA_QUITO"
+msgstr "(GMT-05:00) Bogota, Lima, Quito"
+
+
+#: string "(GMT-05:00) Eastern Time (US & Canada)"
+msgid "GENERIC_TIME_ZONE_EASTERN_TIME"
+msgstr "(GMT-05:00) Eastern (USA, Kanada)"
+
+
+#: string "(GMT-05:00) Indiana (East)"
+msgid "GENERIC_TIME_ZONE_INDIANA"
+msgstr "(GMT-05:00) Indiana (Ost)"
+
+
+#: string "(GMT-04:30) Caracas"
+msgid "GENERIC_TIME_ZONE_CARACAS"
+msgstr "(GMT-04:30) Caracas"
+
+
+#: string "(GMT-04:00) Atlantic Time (Canada)"
+msgid "GENERIC_TIME_ZONE_ATLANTIC_TIME"
+msgstr "(GMT-04:00) Atlantic (Kanada)"
+
+
+#: string "(GMT-04:00) La Paz"
+msgid "GENERIC_TIME_ZONE_LA_PAZ"
+msgstr "(GMT-04:00) La Paz"
+
+
+#: string "(GMT-04:00) Santiago"
+msgid "GENERIC_TIME_ZONE_SANTIAGO"
+msgstr "(GMT-04:00) Santiago"
+
+
+#: string "(GMT-04:00) Manaus"
+msgid "GENERIC_TIME_ZONE_MANAUS"
+msgstr "(GMT-04:00) Manaus"
+
+
+#: string "(GMT-03:30) Newfoundland"
+msgid "GENERIC_TIME_ZONE_NEWFOUNDLAND"
+msgstr "(GMT-03:30) Neufundland"
+
+
+#: string "(GMT-03:00) Brasilia"
+msgid "GENERIC_TIME_ZONE_BRASILIA"
+msgstr "(GMT-03:00) Brasilia"
+
+
+#: string "(GMT-03:00) Buenos Aires, Georgetown"
+msgid "GENERIC_TIME_ZONE_BUENOS_AIRES_GEORGETOWN"
+msgstr "(GMT-03:00) Buenos Aires, Georgetown"
+
+
+#: string "(GMT-03:00) Greenland"
+msgid "GENERIC_TIME_ZONE_GREENLAND"
+msgstr "(GMT-03:00) Grönland"
+
+
+#: string "(GMT-03:00) Montevideo"
+msgid "GENERIC_TIME_ZONE_MONTEVIDEO"
+msgstr "(GMT-03:00) Montevideo"
+
+
+#: string "(GMT-02:00) Mid-Atlantic (Noronha)"
+msgid "GENERIC_TIME_ZONE_MID_ATLANTIC"
+msgstr "(GMT-02:00) Mittelatlantik (Noronha)"
+
+
+#: string "(GMT-01:00) Azores Is."
+msgid "GENERIC_TIME_ZONE_AZORES_IS"
+msgstr "(GMT-01:00) Azoren"
+
+
+#: string "(GMT-01:00) Cape Verde Is."
+msgid "GENERIC_TIME_ZONE_CAPE_VERDE_IS"
+msgstr "(GMT-01:00) Kap Verde"
+
+
+#: string "(GMT) Casablanca, Monrovia"
+msgid "GENERIC_TIME_ZONE_CASABLANCA_MONROVIA"
+msgstr "(GMT) Casablanca, Monrovia"
+
+
+#: string "(GMT) Greenwich Mean Time: Dublin, Edinburgh, Lisbon, London"
+msgid "GENERIC_TIME_ZONE_GREENWICH_MEAN_TIME"
+msgstr "(GMT) Dublin, Edinburgh, Lissabon, London"
+
+
+#: string "(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna"
+msgid "GENERIC_TIME_ZONE_AMSTERDAM_BERLIN_BERN_ROME_STOCKHOLM_VIENNA"
+msgstr "(GMT+01:00) Amsterdam, Berlin, Bern, Rom, Stockholm, Wien"
+
+
+#: string "(GMT+01:00) Belgrade, Bratislava, Budapest, Lijublijana, Prague"
+msgid "GENERIC_TIME_ZONE_BELGRADE_BRATISLAVA_BUDAPEST_LIJUBLIJANA_PARGUE"
+msgstr "(GMT+01:00) Belgrad, Bratislava, Budapest, Ljubljana, Prag"
+
+
+#: string "(GMT+01:00) Brussels, Copenhagen, Madrid, Paris"
+msgid "GENERIC_TIME_ZONE_BRUSSELS_COPENHAGEN_MADRID_PARIS"
+msgstr "(GMT+01:00) Brüssel, Kopenhagen, Madrid, Paris"
+
+
+#: string "(GMT+01:00) Sarajevo, Skopje, Warsaw, Zagreb"
+msgid "GENERIC_TIME_ZONE_SARAJEVO_SKPOJE_WARSAW_ZAGREB"
+msgstr "(GMT+01:00) Sarajevo, Skopje, Warschau, Zagreb"
+
+
+#: string "(GMT+01:00) West Central Africa"
+msgid "GENERIC_TIME_ZONE_WEST_CENTRAL_AFRICA"
+msgstr "(GMT+01:00) West-Zentralafrika"
+
+
+#: string "(GMT+02:00) Amman"
+msgid "GENERIC_TIME_ZONE_AMMAN"
+msgstr "(GMT+02:00) Amman"
+
+
+#: string "(GMT+02:00) Beirut"
+msgid "GENERIC_TIME_ZONE_BEIRUT"
+msgstr "(GMT+02:00) Beirut"
+
+
+#: string "(GMT+02:00) Minsk"
+msgid "GENERIC_TIME_ZONE_MINSK"
+msgstr "(GMT+02:00) Minsk"
+
+
+#: string "(GMT+02:00) Athens, Bucharest, Istanbul"
+msgid "GENERIC_TIME_ZONE_ATHENS_BUCHAREST_ISTANBUL"
+msgstr "(GMT+02:00) Athen, Bukarest, Istanbul"
+
+
+#: string "(GMT+02:00) Cairo"
+msgid "GENERIC_TIME_ZONE_CAIRO"
+msgstr "(GMT+02:00) Kairo"
+
+
+#: string "(GMT+02:00) Harare, Pretoria"
+msgid "GENERIC_TIME_ZONE_HARARE_PRETORIA"
+msgstr "(GMT+02:00) Harare, Pretoria"
+
+
+#: string "(GMT+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius"
+msgid "GENERIC_TIME_ZONE_HELSINKI_KYIV_RIGA_SOFIA_TALLINN_VILNIUS"
+msgstr "(GMT+02:00) Helsinki, Kiew, Riga, Sofia, Tallinn, Wilna"
+
+
+#: string "(GMT+02:00) Jerusalem"
+msgid "GENERIC_TIME_ZONE_JERUSALEM"
+msgstr "(GMT+02:00) Jerusalem"
+
+
+#: string "(GMT+03:00) Baghdad"
+msgid "GENERIC_TIME_ZONE_BAGHDAD"
+msgstr "(GMT+03:00) Bagdad"
+
+
+#: string "(GMT+03:00) Kuwait, Riyadh"
+msgid "GENERIC_TIME_ZONE_KUWAIT_RIYADH"
+msgstr "(GMT+03:00) Kuwait, Riad"
+
+
+#: string "(GMT+03:00) Moscow, St. Petersburg, Volgograd"
+msgid "GENERIC_TIME_ZONE_MOSCOW_ST_PETERSBURG_VOLGOGRAD"
+msgstr "(GMT+03:00) Moskau, St. Petersburg, Wolgograd"
+
+
+#: string "(GMT+03:00) Nairobi"
+msgid "GENERIC_TIME_ZONE_NAIROBI"
+msgstr "(GMT+03:00) Nairobi"
+
+
+#: string "(GMT+03:30) Tehran"
+msgid "GENERIC_TIME_ZONE_TEHRAN"
+msgstr "(GMT+03:30) Teheran"
+
+
+#: string "(GMT+04:00) Abu Dhabi, Muscat"
+msgid "GENERIC_TIME_ZONE_ABU_DHABI_MUSCAT"
+msgstr "(GMT+04:00) Abu Dhabi, Muskat"
+
+
+#: string "(GMT+04:00) Baku, Tbilisi, Yerevan"
+msgid "GENERIC_TIME_ZONE_BAKU_TBILISI_YEREVAN"
+msgstr "(GMT+04:00) Baku, Tiflis, Eriwan"
+
+
+#: string "(GMT+04:00) Yerevan"
+msgid "GENERIC_TIME_ZONE_YEREVAN"
+msgstr "(GMT+04:00) Eriwan"
+
+
+#: string "(GMT+04:30) Kabul"
+msgid "GENERIC_TIME_ZONE_KABUL"
+msgstr "(GMT+04:30) Kabul"
+
+
+#: string "(GMT+05:00) Ekaterinburg"
+msgid "GENERIC_TIME_ZONE_EKATERINBURG"
+msgstr "(GMT+05:00) Jekaterinburg"
+
+
+#: string "(GMT+05:00) Islamabad, Karachi"
+msgid "GENERIC_TIME_ZONE_ISLAMABAD_KARACHI"
+msgstr "(GMT+05:00) Islamabad, Karatschi"
+
+
+#: string "(GMT+05:00) Tashkent"
+msgid "GENERIC_TIME_ZONE_TASHKENT"
+msgstr "(GMT+05:00) Taschkent"
+
+
+#: string "(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi"
+msgid "GENERIC_TIME_ZONE_CHENNAI_KOLKATA_MUMBAI_NEW_DELHI"
+msgstr "(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi"
+
+
+#: string "(GMT+05:45) Katmandu"
+msgid "GENERIC_TIME_ZONE_KATMANDU"
+msgstr "(GMT+05:45) Katmandu"
+
+
+#: string "(GMT+06:00) Almaty, Novosibirsk"
+msgid "GENERIC_TIME_ZONER_ALMATY_NOVOSIBIRSK"
+msgstr "(GMT+06:00) Almaty, Nowosibirsk"
+
+
+#: string "(GMT+06:00) Astana, Dhaka"
+msgid "GENERIC_TIME_ZONE_ASTANA_DHAKA"
+msgstr "(GMT+06:00) Astana, Dakka"
+
+
+#: string "(GMT+06:30) Rangoon"
+msgid "GENERIC_TIME_ZONE_RANGOON"
+msgstr "(GMT+06:30) Rangun"
+
+
+#: string "(GMT+07:00) Bangkok, Hanoi, Jakarta"
+msgid "GENERIC_TIME_ZONE_BANGKOK_HANOI_JAKARTA"
+msgstr "(GMT+07:00) Bangkok, Hanoi, Jakarta"
+
+
+#: string "(GMT+07:00) Krasnoyarsk"
+msgid "GENERIC_TIME_ZONE_KRASNOYARSK"
+msgstr "(GMT+07:00) Krasnojarsk"
+
+
+#: string "(GMT+08:00) Beijing, Chongqing, Hong Kong, Urumqi"
+msgid "GENERIC_TIME_ZONE_BEIJING_CHONGQING_HONG_KONG_URUMQI"
+msgstr "(GMT+08:00) Peking, Chongqing, Hongkong, Urumchi"
+
+
+#: string "(GMT+08:00) Irkutsk, Ulaan Bataar"
+msgid "GENERIC_TIME_ZONE_IRKUTSK_ULAAN_BATAAR"
+msgstr "(GMT+08:00) Irkutsk, Ulan-Bator"
+
+
+#: string "(GMT+08:00) Kuala Lumpur, Singapore"
+msgid "GENERIC_TIME_ZONE_KUALA_LUMPUR_SINGAPORE"
+msgstr "(GMT+08:00) Kuala Lumpur, Singapur"
+
+
+#: string "(GMT+08:00) Perth"
+msgid "GENERIC_TIME_ZONE_PERTH"
+msgstr "(GMT+08:00) Perth"
+
+
+#: string "(GMT+08:00) Taipei"
+msgid "GENERIC_TIME_ZONE_TAIPEI"
+msgstr "(GMT+08:00) Taipeh"
+
+
+#: string "(GMT+09:00) Osaka, Sapporo, Tokyo"
+msgid "GENERIC_TIME_ZONE_OSAKA_SAPPORO_TOKYO"
+msgstr "(GMT+09:00) Osaka, Sapporo, Tokio"
+
+
+#: string "(GMT+09:00) Seoul"
+msgid "GENERIC_TIME_ZONE_SEOUL"
+msgstr "(GMT+09:00) Seoul"
+
+
+#: string "(GMT+09:00) Yakutsk"
+msgid "GENERIC_TIME_ZONE_YAKUTSK"
+msgstr "(GMT+09:00) Jakutsk"
+
+
+#: string "(GMT+09:30) Adelaide"
+msgid "GENERIC_TIME_ZONE_ADELAIDE"
+msgstr "(GMT+09:30) Adelaide"
+
+
+#: string "(GMT+09:30) Darwin"
+msgid "GENERIC_TIME_ZONE_DARWIN"
+msgstr "(GMT+09:30) Darwin"
+
+
+#: string "(GMT+10:00) Brisbane"
+msgid "GENERIC_TIME_ZONE_BRISBANE"
+msgstr "(GMT+10:00) Brisbane"
+
+
+#: string "(GMT+10:00) Canberra, Melbourne, Sydney"
+msgid "GENERIC_TIME_ZONE_CANBERRA_MELBOURNE_SYDNEY"
+msgstr "(GMT+10:00) Canberra, Melbourne, Sydney"
+
+
+#: string "(GMT+10:00) Guam, Port Moresby"
+msgid "GENERIC_TIME_ZONE_GUAM_PORT_MORESBY"
+msgstr "(GMT+10:00) Guam, Port Moresby"
+
+
+#: string "(GMT+10:00) Hobart"
+msgid "GENERIC_TIME_ZONE_HOBART"
+msgstr "(GMT+10:00) Hobart"
+
+
+#: string "(GMT+10:00) Vladivostok"
+msgid "GENERIC_TIME_ZONE_VLADIVOSTOK"
+msgstr "(GMT+10:00) Wladiwostok"
+
+
+#: string "(GMT+11:00) Magadan, Solomon Is., New Caledonia"
+msgid "GENERIC_TIME_ZONE_MAGADAN_SOLOMON_NEW_CALEDONIA"
+msgstr "(GMT+11:00) Magadan, Salomonen, Neu-Kaledonien"
+
+
+#: string "(GMT+12:00) Auckland, Wellington"
+msgid "GENERIC_TIME_ZONE_AUCKLAND_WELLINGTON"
+msgstr "(GMT+12:00) Auckland, Wellington"
+
+
+#: string "(GMT+12:00) Fiji, Kamchatka, Marshall Is."
+msgid "GENERIC_TIME_ZONE_FIJI_KAMCHATKA_MARSHALL_IS"
+msgstr "(GMT+12:00) Fidschi, Kamtschatka, Marshallinseln"
+
+
+#: string "NTP Service:"
+msgid "LABEL_HEADER_NTP_SERVICE"
+msgstr "NTP-Dienst:"
+
+
+#: string "January"
+msgid "GENERIC_MONTH_JANUARY"
+msgstr "Januar"
+
+
+#: string "February"
+msgid "GENERIC_MONTH_FEBRUARY"
+msgstr "Februar"
+
+
+#: string "March"
+msgid "GENERIC_MONTH_MARCH"
+msgstr "März"
+
+
+#: string "April"
+msgid "GENERIC_MONTH_APRIL"
+msgstr "April"
+
+
+#: string "May"
+msgid "GENERIC_MONTH_MAY"
+msgstr "Mai"
+
+
+#: string "June"
+msgid "GENERIC_MONTH_JUNE"
+msgstr "Juni"
+
+
+#: string "July"
+msgid "GENERIC_MONTH_JULY"
+msgstr "Juli"
+
+
+#: string "August"
+msgid "GENERIC_MONTH_AUGUST"
+msgstr "August"
+
+
+#: string "September"
+msgid "GENERIC_MONTH_SEPTEMBER"
+msgstr "September"
+
+
+#: string "October"
+msgid "GENERIC_MONTH_OCTOBER"
+msgstr "Oktober"
+
+
+#: string "November"
+msgid "GENERIC_MONTH_NOVEMBER"
+msgstr "November"
+
+
+#: string "December"
+msgid "GENERIC_MONTH_DECEMBER"
+msgstr "Dezember"
+
+
+#: string "I accept"
+msgid "GENERIC_LABEL_ACCEPT_EULA"
+msgstr "Ich stimme zu"
+
+
+#: string "Print"
+msgid "GENERIC_LABEL_PRINT"
+msgstr "Drucken"
+
+
+#: string "Time:"
+msgid "LABEL_HEADER_TIME"
+msgstr "Uhrzeit:"
+
+
+#: string "AM"
+msgid "LABEL_DESCR_TIME_AM"
+msgstr "AM"
+
+
+#: string "PM"
+msgid "LABEL_DESCR_TIME_PM"
+msgstr "PM"
+
+
+#: string "Device Name:"
+msgid "LABEL_HEADER_DEVICE_NAME"
+msgstr "Gerätename:"
+
+
+#: string "Description:"
+msgid "LABEL_HEADER_DESCRIPTION"
+msgstr "Beschreibung:"
+
+
+#: string "Language:"
+msgid "LABEL_HEADER_LANGUAGE"
+msgstr "Sprache:"
+
+
+#: string "Serial Number:"
+msgid "LABEL_HEADER_SERIAL_NUMBER"
+msgstr "Seriennummer:"
+
+
+#: string "Register Now"
+msgid "BUTTON_REGISTER_NOW"
+msgstr "Jetzt registrieren"
+
+
+#: string "Update from File"
+msgid "BUTTON_UPDATE_FROM_FILE"
+msgstr "Update aus Datei"
+
+
+#: string "Auto Update:"
+msgid "LABEL_HEADER_AUTO_UPDATE"
+msgstr "Automatisches Update:"
+
+
+#: string "Daily"
+msgid "LABEL_DESCR_DAILY"
+msgstr "Täglich"
+
+
+#: string "Sunday"
+msgid "LABEL_DESCR_SUNDAY"
+msgstr "Sonntag"
+
+
+#: string "Monday"
+msgid "LABEL_DESCR_MONDAY"
+msgstr "Montag"
+
+
+#: string "Tuesday"
+msgid "LABEL_DESCR_TUESDAY"
+msgstr "Dienstag"
+
+
+#: string "Wednesday"
+msgid "LABEL_DESCR_WEDNESDAY"
+msgstr "Mittwoch"
+
+
+#: string "Thursday"
+msgid "LABEL_DESCR_THURSDAY"
+msgstr "Donnerstag"
+
+
+#: string "Friday"
+msgid "LABEL_DESCR_FRIDAY"
+msgstr "Freitag"
+
+
+#: string "Saturday"
+msgid "LABEL_DESCR_SATURDAY"
+msgstr "Samstag"
+
+
+#: string "Update Firmware"
+msgid "PAGE_HEADER_UPDATE_FIRMWARE"
+msgstr "Firmware aktualisieren"
+
+
+#: string "Firmware Update Version found :"
+msgid "LABEL_DESCR_FIRMWARE_UPDATE_FOUND"
+msgstr "Firmware-Update-Version gefunden: "
+
+
+#: string "Your firmware is up to date."
+msgid "LABEL_DESCR_FIRMWARE_UP_TO_DATE"
+msgstr "Ihre Firmware ist auf dem neuesten Stand."
+
+
+#: string "Importing File..."
+msgid "LABEL_DESCR_IMPORTING_FILE"
+msgstr "Datei wird importiert..."
+
+
+#: string "Process is idle."
+msgid "LABEL_DESCR_UPDATE_PROCESS_IDLE"
+msgstr "Prozess im Leerlauf."
+
+
+#: string "Downloading..."
+msgid "LABEL_DESCR_DOWNLOADING"
+msgstr "Download wird ausgeführt..."
+
+
+#: string "Upgrading..."
+msgid "LABEL_DESCR_UPGRADING"
+msgstr "Upgrade wird durchgeführt..."
+
+
+#: string "Firmware Update Failed"
+msgid "LABEL_DESCR_UPDATE_PROCESS_FAILED"
+msgstr "Firmware-Update fehlgeschlagen"
+
+
+#: string "Diagnostic in progress."
+msgid "LABEL_DESCR_DIAGNOSTIC_IN_PROGRESS"
+msgstr "Diagnose wird durchgeführt"
+
+
+#: string "Quick Factory Restore"
+msgid "LABEL_DESCR_QUICK_FACTORY_RESTORE"
+msgstr "Schnelle Wiederherstellung der Werkseinstellungen"
+
+
+#: string "Full Factory Restore"
+msgid "LABEL_DESCR_FULL_FACTORY_RESTORE"
+msgstr "Vollständige Wiederherstellung der Werkseinstellungen"
+
+
+#: string "Your device configuration will be updated, followed by a reboot. Click OK to continue or Cancel to exit."
+msgid "LABEL_DESCR_CONFIGURATION_UPDATE_REBOOT"
+msgstr "Die Konfiguration Ihres Geräts wird aktualisiert; danach wird ein Neustart durchgeführt. Klicken Sie zum Fortfahren auf 'OK' oder zum Beenden auf 'Abbrechen'."
+
+
+#: string "Self Test passed."
+msgid "LABEL_DESCR_SELF_TEST_PASSED"
+msgstr "Selbsttest erfolgreich."
+
+
+#: string "Self Test incomplete."
+msgid "LABEL_DESCR_SELF_TEST_DID_NOT_COMPLETE"
+msgstr "Selbsttest unvollständig."
+
+
+#: string "Self Test cancelled."
+msgid "LABEL_DESCR_SELF_TEST_CANCELLED"
+msgstr "Selbsttest abgebrochen."
+
+
+#: string "Import Configuration File"
+msgid "PAGE_HEADER_IMPORT_CONFIGURATION_FILE"
+msgstr "Konfigurationsdatei importieren"
+
+
+#: string "Login"
+msgid "BUTTON_LOGIN"
+msgstr "Anmelden"
+
+
+#: string "Western Digital Technologies, Inc.<br />License Agreement"
+msgid "PAGE_HEADER_WESTERN_DIGITAL_TECHNOLOGIES"
+msgstr "Western Digital Technologies, Inc.<br />Lizenzvereinbarung"
+
+
+#: string "Please read the license agreement carefully."
+msgid "LABEL_DESCR_PLEASE_READ_LICENSE_AGREEMENT"
+msgstr "Lesen Sie die Lizenzvereinbarung sorgfältig."
+
+
+#: string "Problem confirming acceptance of license agreement."
+msgid "LABEL_DESCR_PROBLEM_CONFIRMING_LICENSE_AGREEMENT_ACCEPETANCE"
+msgstr "Problem beim Bestätigen der Annahme der Lizenzvereinbarung."
+
+
+#: string "Please accept the license agreement."
+msgid "LABEL_DESCR_PLEASE_ACCEPT_LICENSE_AGREEMENT"
+msgstr "Akzeptieren Sie die Lizenzvereinbarung."
+
+
+#: string "Device is shutting down. After the LED on the front of the device is off, you can safely unplug your drive. Please close your browser or browser tab."
+msgid "LABEL_DESCR_SHUTTING_DOWN"
+msgstr "Das Gerät wird heruntergefahren. Sie können Ihr Laufwerk sicher entfernen, wenn die LED auf der Frontseite erloschen ist. Schließen Sie Ihren Browser oder die Registerkarte im Browser."
+
+
+#: string "Failed to connect to the MioNet server. Please check your network setup or contact your network administrator."
+msgid "ERROR_MIONET_CONNECTION_FAILED"
+msgstr "Es konnte keine Verbindung zum MioNet-Server hergestellt werden. Überprüfen Sie Ihre Netzwerkeinrichtung oder wenden Sie sich an Ihren Netzwerkadministrator."
+
+
+#: string "You are about to reboot your network device: any backups, file activity, or file transfers may be interrupted."
+msgid "LABEL_DESCR_REBOOT_DEVICE"
+msgstr "Sie fahren Ihr Netzwerkgerät herunter: alle Sicherungen, Dateiaktivitäten oder Dateiübertragungen werden unterbrochen."
+
+
+#: any backups, file activity, or file transfers may be interrupted."
+msgid "LABEL_DESCR_SHUTDOWN_DEVICE"
+msgstr "Sie fahren Ihr Netzwerkgerät herunter: alle Sicherungen, Dateiaktivitäten oder Dateiübertragungen werden unterbrochen."
+
+
+#: string "You don't have permission to access a resource. Please try again."
+msgid "ERROR_FORBIDDEN"
+msgstr "Sie haben keine Berechtigung zum Zugriff auf eine Ressource. Versuchen Sie es erneut."
+
+
+#: string "Invalid Request."
+msgid "ERROR_DAC_INVALID"
+msgstr "Ungültige Anforderung."
+
+
+#: string "Please check your network connection; then make sure that your router has the latest firmware installed and that UPnP is enabled.<br><br>For more information on how to enable UPnP, view your router's product documentation."
+msgid "LABEL_REMOTE_CONNECTION_FAILED"
+msgstr "Überprüfen Sie Ihre Netzwerkverbindung und stellen Sie sicher, dass in Ihrem Router die neueste Firmware installiert und UPnP aktiviert ist.<br><br>Weitere Informationen zum Aktivieren von UPnP finden Sie in der Produktdokumentation des Routers."
+
+
+#: string "Disabled"
+msgid "LABEL_STATUS_DISABLED"
+msgstr "Deaktiviert"
+
+
+#: string "Connecting"
+msgid "LABEL_STATUS_CONNECTING"
+msgstr "Verbindung wird hergestellt"
+
+
+#: string "Connected"
+msgid "LABEL_STATUS_PORTFORWARDED"
+msgstr "Verbunden"
+
+
+#: string "Ready"
+msgid "LABEL_STATUS_READY"
+msgstr "Bereit"
+
+
+#: string "Connected (Relay connection established)"
+msgid "LABEL_STATUS_RELAYED"
+msgstr "Verbunden (Relay-Verbindung wurde hergestellt)"
+
+
+#: string "Failed"
+msgid "LABEL_STATUS_FAILED"
+msgstr "Fehlgeschlagen"
+
+
+#: string "Your device could not be registered with the server. Please make sure you do not have network connectivity issues and try again."
+msgid "ERROR_DEVICE_REG_FAILED"
+msgstr "Ihr Gerät konnte nicht erfolgreich registriert werden. Stellen Sie sicher, dass keine Netzwerkverbindungsprobleme bestehen und versuchen Sie es erneut."
+
+
+#: string "This action could not be completed because your device is not registered. Please register your device and try again."
+msgid "ERROR_DEVICE_NOT_REGISTERED"
+msgstr "Dieser Vorgang konnte nicht abgeschlossen werden, da Ihr Gerät nicht registriert ist. Registrieren Sie Ihr Gerät und versuchen Sie es erneut."
+
+
+#: string "The device status could not be updated due to an communication or internal software error."
+msgid "ERROR_DEVICE_UPDATE_FAILED"
+msgstr "Der Gerätestatus konnte aufgrund eines Kommunikationsfehlers oder eines internen Softwarefehlers nicht aktualisiert werden."
+
+
+#: string "The web access account could not be located on the server. Please retry your last operation."
+msgid "ERROR_WEBACCOUNT_NOT_FOUND"
+msgstr "Das Webzugriffskonto wurde auf dem Server nicht gefunden. Wiederholen Sie den letzten Vorgang."
+
+
+#: string "The registration email could not be re-sent. Please make sure your device is registered and you do not have any network connectivity issues and try again."
+msgid "ERROR_WEBACCOUNT_RESUBMIT_EMAIL_FAILED"
+msgstr "Die Registrierungs-E-Mail konnte nicht erneut gesendet werden. Stellen Sie sicher, dass Ihr Gerät registriert ist und keine Netzwerkverbindungsprobleme bestehen, und versuchen Sie es erneut."
+
+
+#: string "This web account could not be deleted. Please make sure your device is registered and you do not have any network connectivity issues and try again."
+msgid "ERROR_WEBACCOUNT_DELETE_FAILED"
+msgstr "Das Webkonto konnte nicht gelöscht werden. Stellen Sie sicher, dass Ihr Gerät registriert ist und keine Netzwerkverbindungsprobleme bestehen, und versuchen Sie es erneut."
+
+
+#: string "Your mobile device could not be located on the server. Please retry your last operation."
+msgid "ERROR_MOBILEACCESS_NOT_FOUND"
+msgstr "Ihr mobiles Gerät wurde auf dem Server nicht gefunden. Wiederholen Sie den letzten Vorgang."
+
+
+#: string "Failed to generate code for your mobile device. Please make sure you do not have any network connectivity issues and try again."
+msgid "ERROR_MOBILEACCESS_CREATE_FAILED"
+msgstr "Code für Ihr mobiles Gerät konnte nicht erstellt werden. Stellen Sie sicher, dass keinerlei Netzwerkverbindungsprobleme bestehen und versuchen Sie es erneut."
+
+
+#: string "Mobile access for this device could not be removed. Please make sure your device is registered and you do not have any network connectivity issues and try again."
+msgid "ERROR_MOBILEACCESS_DELETE_FAILED"
+msgstr "Der mobile Zugriff für das Gerät konnte nicht entfernt werden. Stellen Sie sicher, dass Ihr Gerät registriert ist und keine Netzwerkverbindungsprobleme bestehen, und versuchen Sie es erneut."
+
+
+#: string "Failed to locate user account. Please make sure your device is registered and you do not have any network connectivity issues and try again."
+msgid "ERROR_USER_NOT_FOUND"
+msgstr "Benutzerkonto konnte nicht gefunden werden. Stellen Sie sicher, dass Ihr Gerät registriert ist und keine Netzwerkverbindungsprobleme bestehen, und versuchen Sie es erneut."
+
+
+#: string "Failed to create user account. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_USER_CREATE_FAILED"
+msgstr "Benutzerkonto konnte nicht erstellt werden. Stellen Sie sicher, dass Sie die erforderlichen Berechtigungen und ausreichend freien Speicherplatz für diesen Vorgang haben und versuchen Sie es erneut."
+
+
+#: string "Failed to update user account. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_USER_UPDATE_FAILED"
+msgstr "Benutzerkonto konnte nicht aktualisiert werden. Stellen Sie sicher, dass Sie die erforderlichen Berechtigungen und ausreichend freien Speicherplatz für diesen Vorgang haben und versuchen Sie es erneut."
+
+
+#: string "Failed to delete user account. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_USER_DELETE_FAILED"
+msgstr "Benutzerkonto konnte nicht gelöscht werden. Stellen Sie sicher, dass Sie die erforderlichen Berechtigungen und ausreichend freien Speicherplatz für diesen Vorgang haben und versuchen Sie es erneut."
+
+
+#: string "Unable to modify share access list. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_SHAREACCESS_NOT_FOUND"
+msgstr "Die Freigabezugriffsliste konnte nicht gelöscht werden. Stellen Sie sicher, dass Sie die erforderlichen Berechtigungen und ausreichend freien Speicherplatz für diesen Vorgang haben und versuchen Sie es erneut."
+
+
+#: string "Failed to create share access list. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_SHAREACCESS_CREATE_FAILED"
+msgstr "Die Freigabezugriffsliste konnte nicht erstellt werden. Stellen Sie sicher, dass Sie die erforderlichen Berechtigungen und ausreichend freien Speicherplatz für diesen Vorgang haben und versuchen Sie es erneut."
+
+
+#: string "Failed to update share access list. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_SHAREACCESS_UPDATE_FAILED"
+msgstr "Die Freigabezugriffsliste konnte nicht aktualisiert werden. Stellen Sie sicher, dass Sie die erforderlichen Berechtigungen und ausreichend freien Speicherplatz für diesen Vorgang haben und versuchen Sie es erneut."
+
+
+#: string "Failed to delete share access list. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_SHAREACCESS_DELETE_FAILED"
+msgstr "Freigabezugriffsliste konnte nicht gelöscht werden. Stellen Sie sicher, dass Sie die erforderlichen Berechtigungen und ausreichend freien Speicherplatz für diesen Vorgang haben und versuchen Sie es erneut."
+
+
+#: string "This operation could not succeed because the share resource no longer exists or is currently inaccessible. Please make sure you have sufficient disk space for this operation and try again."
+msgid "ERROR_SHARE_NOT_FOUND"
+msgstr "Dieser Vorgang konnte nicht ausgeführt werden, weil eine Freigabe-Ressource nicht mehr vorhanden ist oder derzeit kein Zugriff möglich ist. Stellen Sie sicher, dass Sie ausreichend freien Speicherplatz für diesen Vorgang haben und versuchen Sie es erneut."
+
+
+#: string "There was an error while updating a share resource. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_SHARE_UPDATE_FAILED"
+msgstr "Beim Aktualisieren einer Freigabe-Ressource ist ein Fehler aufgetreten. Stellen Sie sicher, dass Sie die erforderlichen Berechtigungen und ausreichend freien Speicherplatz für diesen Vorgang haben und versuchen Sie es erneut."
+
+
+#: string "There was an error while deleting a share resource. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_SHARE_DELETE_FAILED"
+msgstr "Beim Löschen einer Freigabe-Ressource ist ein Fehler aufgetreten. Stellen Sie sicher, dass Sie die erforderlichen Berechtigungen und ausreichend freien Speicherplatz für diesen Vorgang haben und versuchen Sie es erneut."
+
+
+#: string "Back"
+msgid "BUTTON_BACK"
+msgstr "Zurück"
+
+
+#: string "Recovering from a safepoint"
+msgid "HELP_LINK_RECOVERING_SAFEPOINT"
+msgstr "Wiederherstellen von einem Sicherungspunkt"
+
+
+#: string "Weekly"
+msgid "LABEL_DESCR_WEEKLY"
+msgstr "Wöchentlich"
+
+
+#: string "Monthly"
+msgid "LABEL_DESCR_MONTHLY"
+msgstr "Monatlich"
+
+
+#: string "Name"
+msgid "LABEL_SAFEPOINT_NAME"
+msgstr "Name"
+
+
+#: string "Frequency:"
+msgid "LABEL_HEADER_FREQUENCY"
+msgstr "Frequenz:"
+
+
+#: string "The safepoint update process was aborted. You may update your safepoint anytime using the auto update feature or manually by clicking the update icon on your safepoint in the Manage section."
+msgid "LABEL_SAFEPOINT_UPDATE_ABORTED"
+msgstr "Der Update-Vorgang für den Sicherungspunkt wurde abgebrochen. Sie können Ihren Sicherungspunkt jederzeit mithilfe der Funktion für automatisches Updates oder manuell im Abschnitt Verwalten durch Klick auf das Aktualisieren-Symbol auf Ihrem Sicherungspunkt aktualisieren."
+
+
+#: string "Your data was recovered successfully. Your device will automatically restart in a few minutes and can be used in place of your original My Book Live."
+msgid "LABEL_SAFEPOINT_RESTORE_COMPLETE"
+msgstr "Ihre Daten wurden erfolgreich wiederhergestellt. Ihr Gerät wird in wenigen Minuten automatisch neu gestartet und kann anstelle Ihres ursprünglichen My Book Live-Geräts verwendet werden."
+
+
+#: string "An error occurred while recovering data from your safepoint. You may choose to retry the recovery operation.<br><br>If the error persists, please contact WD Support for assistance."
+msgid "ERROR_SAFEPOINT_RESTORE_FAILED"
+msgstr "Beim Wiederherstellen von Daten von Ihrem Sicherungspunkt ist ein Fehler aufgetreten. Sie können den Wiederherstellungsvorgang wiederholen.<br><br>Wenn der Fehler weiterhin auftritt, wenden Sie sich bitte an den WD Support, um Hilfe zu erhalten."
+
+
+#: string "To be created"
+msgid "LABEL_SAFEPOINT_TO_BE_CREATED"
+msgstr "Zu erstellen"
+
+
+#: string "Your safepoint could not be created due to a failed request. Please try creating your safepoint again."
+msgid "ERROR_SAFEPOINT_CREATE_FAILED"
+msgstr "Ihr Sicherungspunkt konnte wegen einer fehlgeschlagenen Anforderung nicht erstellt werden. Versuchen Sie erneut, den Sicherungspunkt zu erstellen."
+
+
+#: string "Your safepoint could not be created due to an invalid request."
+msgid "ERROR_SAFEPOINT_CREATE_INVALID"
+msgstr "Ihr Sicherungspunkt konnte wegen einer ungültigen Anforderung nicht erstellt werden."
+
+
+#: string "Your safepoint could not be created due to an unauthorized request. Please make sure you enter appropriate credentials for your device and/or shares and try again."
+msgid "ERROR_SAFEPOINT_CREATE_UNAUTHORIZED"
+msgstr "Ihr Sicherungspunkt konnte wegen einer unautorisierten Anforderung nicht erstellt werden. Stellen Sie sicher, dass Sie die korrekten Anmeldeinformationen für Ihr Gerät und/oder die Freigaben eingegeben haben und versuchen Sie es erneut."
+
+
+#: string "Your safepoint could not be created due to a missing drive or share resource. Please try creating your safepoint again."
+msgid "ERROR_SAFEPOINT_CREATE_NOT_FOUND"
+msgstr "Ihr Sicherungspunkt konnte wegen eines fehlenden Laufwerks oder einer fehlenden Freigabe-Ressource nicht erstellt werden. Versuchen Sie erneut, den Sicherungspunkt zu erstellen."
+
+
+#: string "A safepoint operation is currently in progress. Please wait for that operation to finish before initiating a new one."
+msgid "ERROR_SAFEPOINT_BUSY"
+msgstr "Derzeit wird ein Sicherungspunktvorgang ausgeführt. Warten Sie auf den Abschluss dieses Vorgangs, bevor Sie einen neuen initiieren."
+
+
+#: string "Your safepoint could not be created due to insufficient space. Please make sure you have sufficient space on your destination device and/or shares and try again."
+msgid "ERROR_SAFEPOINT_CREATE_NOSPACE"
+msgstr "Ihr Sicherungspunkt konnte mangels Speicherplatz nicht erstellt werden. Stellen Sie sicher, dass Sie über ausreichend Speicherplatz auf Ihrem Zielgerät und/oder Ihren Freigaben verfügen, und versuchen Sie es erneut."
+
+
+#: string "Your safepoint could not be updated successfully due to a failed request. Please try updating your safepoint again."
+msgid "ERROR_SAFEPOINT_UPDATE_FAILED"
+msgstr "Ihr Sicherungspunkt konnte wegen einer fehlgeschlagenen Anforderung nicht erfolgreich aktualisiert werden. Versuchen Sie erneut, den Sicherungspunkt zu aktualisieren."
+
+
+#: string "Your safepoint could not be updated due to an invalid request."
+msgid "ERROR_SAFEPOINT_UPDATE_INVALID"
+msgstr "Ihr Sicherungspunkt konnte wegen einer ungültigen Anforderung nicht erfolgreich aktualisiert werden."
+
+
+#: string "Your safepoint could not be updated due to an unauthorized request. Please make sure you enter appropriate credentials for your device and/or shares and try again."
+msgid "ERROR_SAFEPOINT_UPDATE_UNAUTHORIZED"
+msgstr "Ihr Sicherungspunkt konnte wegen einer unautorisierten Anforderung nicht erfolgreich aktualisiert werden. Stellen Sie sicher, dass Sie die korrekten Anmeldeinformationen für Ihr Gerät und/oder die Freigaben eingegeben haben und versuchen Sie es erneut."
+
+
+#: string "Your safepoint could not be updated due to a missing drive or share resource. Please try updating your safepoint again."
+msgid "ERROR_SAFEPOINT_CREATE_UPDATE_NOTFOUND"
+msgstr "Ihr Sicherungspunkt konnte wegen eines fehlenden Laufwerks oder einer fehlenden Freigabe-Ressource nicht aktualisiert werden. Versuchen Sie erneut, den Sicherungspunkt zu aktualisieren."
+
+
+#: string "Your safepoint could not be updated due to insufficient space. Please make sure you have sufficient space on your destination device and/or shares and try again."
+msgid "ERROR_SAFEPOINT_UPDATE_NOSPACE"
+msgstr "Ihr Sicherungspunkt konnte mangels Speicherplatz nicht erfolgreich aktualisiert werden. Stellen Sie sicher, dass Sie über ausreichend Speicherplatz auf Ihrem Zielgerät und/oder Ihren Freigaben verfügen, und versuchen Sie es erneut."
+
+
+#: string "The discovery operation was not successful due to a failed request. Please retry by clicking Discover again."
+msgid "ERROR_NAS_DISCOVER_FAILED"
+msgstr "Der Erkennungsvorgang war wegen einer fehlgeschlagenen Anforderung nicht erfolgreich. Wiederholen Sie den Vorgang, indem Sie erneut auf Erkennen klicken."
+
+
+#: string "This operation could not succeed due to an authentication failure. Please retry the operation to continue."
+msgid "ERROR_NAS_AUTHENTICATION_FAILED"
+msgstr "Dieser Vorgang konnte wegen eines Authentifizierungsfehlers nicht ausgeführt werden. Wiederholen Sie den letzten Vorgang, um fortzufahren."
+
+
+#: string "This operation could not succeed due to an invalid authentication request. Please retry the operation to continue."
+msgid "ERROR_NAS_AUTHENTICATION_INVALID"
+msgstr "Dieser Vorgang konnte wegen einer ungültigen Authentifizierungsanforderung nicht ausgeführt werden. Wiederholen Sie den letzten Vorgang, um fortzufahren."
+
+
+#: string "Invalid username or password. Please enter your credentials again to continue."
+msgid "ERROR_NAS_AUTHENTICATION_UNAUTHORIZED"
+msgstr "Ungültiger Benutzername oder ungültiges Kennwort. Geben Sie Ihre Anmeldeinformationen erneut ein, um fortzufahren."
+
+
+#: string "Your device could not be found. Please try again to continue."
+msgid "ERROR_NAS_AUTHENTICATION_NOTFOUND"
+msgstr "Ihr Gerät wurde nicht gefunden. Versuchen Sie es erneut, um fortzufahren."
+
+
+#: string "The shares on the selected device could not be located due to a failed request. Please try again to continue."
+msgid "ERROR_SHARE_DISCOVER_FAILED"
+msgstr "Die Freigaben auf dem ausgewählten Gerät wurden wegen einer fehlgeschlagenen Anforderung nicht gefunden. Versuchen Sie es erneut, um fortzufahren."
+
+
+#: string "The shares on the selected device could not be located due to an invalid operation. Please try again to continue."
+msgid "ERROR_SHARE_DISCOVER_INVALID"
+msgstr "Die Freigaben auf dem ausgewählten Gerät wurden wegen eines ungültigen Vorgangs nicht gefunden. Versuchen Sie es erneut, um fortzufahren."
+
+
+#: string "The shares on the selected device could not be located due to an unauthorized request. Please make sure you enter appropriate credentials for your device and/or shares and try again."
+msgid "ERROR_SHARE_DISCOVER_UNAUTHORIZED"
+msgstr "Die Freigaben auf dem ausgewählten Gerät wurden wegen einer unautorisierten Anforderung nicht gefunden. Stellen Sie sicher, dass Sie die korrekten Anmeldeinformationen für Ihr Gerät und/oder die Freigaben eingegeben haben und versuchen Sie es erneut."
+
+
+#: string "Your device could not be found. Please try again to continue."
+msgid "ERROR_SHARE_DISCOVER_NOTFOUND"
+msgstr "Ihr Gerät wurde nicht gefunden. Versuchen Sie es erneut, um fortzufahren."
+
+
+#: string "This operation could not succeed due to an authentication failure. Please retry the operation to continue."
+msgid "ERROR_SHARE_AUTHENTICATION_FAILED"
+msgstr "Dieser Vorgang konnte wegen eines Authentifizierungsfehlers nicht ausgeführt werden. Wiederholen Sie den letzten Vorgang, um fortzufahren."
+
+
+#: string "This operation could not succeed due to an invalid request. Please retry the operation to continue."
+msgid "ERROR_SHARE_AUTHENTICATION_INVALID"
+msgstr "Dieser Vorgang konnte wegen einer ungültigen Anforderung nicht ausgeführt werden. Wiederholen Sie den letzten Vorgang, um fortzufahren."
+
+
+#: string "Invalid username or password. Please enter your credentials again to continue."
+msgid "ERROR_SHARE_AUTHENTICATION_UNAUTHORIZED"
+msgstr "Ungültiger Benutzername oder ungültiges Kennwort. Geben Sie Ihre Anmeldeinformationen erneut ein, um fortzufahren."
+
+
+#: string "Your device or share could not be found. Please try again to continue."
+msgid "ERROR_SHARE_AUTHENTICATION_NOTFOUND"
+msgstr "Ihr Gerät bzw. Ihre Freigabe wurde nicht gefunden. Versuchen Sie es erneut, um fortzufahren."
+
+
+#: string "Your safepoint(s) could not be found due to a failed request. Please try again to continue."
+msgid "ERROR_SAFEPOINT_DISCOVER_FAILED"
+msgstr "Ihr(e) Sicherungspunkt(e) wurde(n) wegen einer fehlgeschlagenen Anforderung nicht gefunden. Versuchen Sie es erneut, um fortzufahren."
+
+
+#: string "This operation could not succeed due to an invalid request. Please retry the operation to continue."
+msgid "ERROR_SAFEPOINT_DISCOVER_INVALID"
+msgstr "Dieser Vorgang konnte wegen einer ungültigen Anforderung nicht ausgeführt werden. Wiederholen Sie den letzten Vorgang, um fortzufahren."
+
+
+#: string "Your safepoint could not be found due to an unauthorized request. Please make sure you enter appropriate credentials for your device and/or shares and try again."
+msgid "ERROR_SAFEPOINT_DISCOVER_UNAUTHORIZED"
+msgstr "Ihr Sicherungspunkt konnte wegen einer unautorisierten Anforderung nicht gefunden werden. Stellen Sie sicher, dass Sie die korrekten Anmeldeinformationen für Ihr Gerät und/oder die Freigaben eingegeben haben und versuchen Sie es erneut."
+
+
+#: string "Your device or share could not be found. Please try again to continue."
+msgid "ERROR_SAFEPOINT_DISCOVER_NOTFOUND"
+msgstr "Ihr Gerät bzw. Ihre Freigabe wurde nicht gefunden. Versuchen Sie es erneut, um fortzufahren."
+
+
+#: string "Your safepoint(s) could not be found due to a failed request. Please try again to continue."
+msgid "ERROR_SAFEPOINT_GET_LIST_FAILED"
+msgstr "Ihr(e) Sicherungspunkt(e) wurde(n) wegen einer fehlgeschlagenen Anforderung nicht gefunden. Versuchen Sie es erneut, um fortzufahren."
+
+
+#: string "Your safepoint could not be deleted due to a failed request. Please try again."
+msgid "ERROR_SAFEPOINT_DESTROY_FAILED"
+msgstr "Ihr Sicherungspunkt konnte wegen einer fehlgeschlagenen Anforderung nicht gelöscht werden. Versuchen Sie es erneut."
+
+
+#: string "Your safepoint could not be deleted due to an invalid request. Please try again."
+msgid "ERROR_SAFEPOINT_DESTROY_INVALID"
+msgstr "Ihr Sicherungspunkt konnte wegen einer ungültigen Anforderung nicht gelöscht werden. Versuchen Sie es erneut."
+
+
+#: string "Your safepoint could not be found. Please try again to continue."
+msgid "ERROR_SAFEPOINT_DESTROY_NOT_FOUND"
+msgstr "Ihr Sicherungspunkt wurde nicht gefunden. Versuchen Sie es erneut, um fortzufahren."
+
+
+#: string "Your safepoint could not be deleted because it is currently unreachable. Please try again after some time."
+msgid "ERROR_SAFEPOINT_DESTROY_UNREACHABLE"
+msgstr "Ihr Sicherungspunkt konnte nicht gelöscht werden, weil er derzeit nicht erreichbar ist. Versuchen Sie es nach einiger Zeit erneut."
+
+
+#: string "Your data could not be recovered due to an invalid request. Please try again."
+msgid "ERROR_SAFEPOINT_RESTORE_INVALID"
+msgstr "Ihre Daten konnten wegen einer ungültigen Anforderung nicht wiederhergestellt werden."
+
+
+#: string "Your safepoint could not be found. Please try again to continue."
+msgid "ERROR_SAFEPOINT_RESTORE_NOTFOUND"
+msgstr "Ihr Sicherungspunkt wurde nicht gefunden. Versuchen Sie es erneut, um fortzufahren."
+
+
+#: string "Your data could not be recovered due to insufficient space. Please make sure you have sufficient space on your destination device and/or shares and try again."
+msgid "ERROR_SAFEPOINT_RESTORE_NOSPACE"
+msgstr "Ihre Daten konnten mangels Speicherplatz nicht wiederhergestellt werden. Stellen Sie sicher, dass Sie über ausreichend Speicherplatz auf Ihrem Zielgerät und/oder Ihren Freigaben verfügen, und versuchen Sie es erneut."
+
+
+#: string "Your data could not be recovered because your safepoint is currently unreachable. Please try again after some time."
+msgid "ERROR_SAFEPOINT_RESTORE_UNREACHABLE"
+msgstr "Ihren Daten konnten nicht wiederhergestellt werden, weil Ihr Sicherungspunkt derzeit nicht erreichbar ist. Versuchen Sie es nach einiger Zeit erneut."
+
+
+#: string "The device you are recovering to does not appear to be in factory fresh state. Please navigate to Settings and perform a factory restore. Please note that you will lose all of your existing data on the device if you do so."
+msgid "ERROR_SAFEPOINT_RESTORE_NOT_FACTORY_FRESH"
+msgstr "Das Gerät, auf das Sie wiederherstellen möchten, scheint nicht in einem werksneuen Zustand vorzuliegen. Führen Sie durch Aufruf der Einstellungen eine Wiederherstellung der Werkseinstellungen durch. Dabei gehen sämtliche auf dem Gerät vorhandene Daten verloren."
+
+
+#: string "This operation could not succeed due to a failed request. Please try again."
+msgid "ERROR_SAFEPOINT_GET_STATUS_FAILED"
+msgstr "Dieser Vorgang konnte wegen einer fehlgeschlagenen Anforderung nicht ausgeführt werden. Versuchen Sie es erneut."
+
+
+#: string "Invalid request. Please try again."
+msgid "ERROR_SAFEPOINT_GET_STATUS_INVALID"
+msgstr "Ungültige Anforderung. Versuchen Sie es erneut."
+
+
+#: string "Your device or share could not be found. Please try again to continue."
+msgid "ERROR_SAFEPOINT_GET_STATUS_NOTFOUND"
+msgstr "Ihr Gerät bzw. Ihre Freigabe wurde nicht gefunden. Versuchen Sie es erneut, um fortzufahren."
+
+
+#: string "This operation could not succeed due to insufficient space. Please make sure you have sufficient space on your device and/or shares and try again."
+msgid "ERROR_SAFEPOINT_GET_STATUS_NOSPACE"
+msgstr "Dieser Vorgang konnte mangels Speicherplatz nicht ausgeführt werden. Stellen Sie sicher, dass Sie über ausreichend Speicherplatz auf Ihrem Gerät und/oder Ihren Freigaben verfügen, und versuchen Sie es erneut."
+
+
+#: string "Your safepoint is currently unreachable. Please try again after some time."
+msgid "ERROR_SAFEPOINT_GET_STATUS_UNREACHABLE"
+msgstr "Ihr Sicherungspunkt ist derzeit nicht erreichbar. Versuchen Sie es nach einiger Zeit erneut."
+
+
+#: string "This operation could not succeed due to a failed request. Please try again."
+msgid "ERROR_SAFEPOINT_SET_INFO_FAILED"
+msgstr "Dieser Vorgang konnte wegen einer fehlgeschlagenen Anforderung nicht ausgeführt werden. Versuchen Sie es erneut."
+
+
+#: string "Invalid request. Please try again."
+msgid "ERROR_SAFEPOINT_SET_INFO_INVALID"
+msgstr "Ungültige Anforderung. Versuchen Sie es erneut."
+
+
+#: string "There was an error due to an unauthorized request. Please make sure you enter appropriate credentials for your device and/or shares and try again."
+msgid "ERROR_SAFEPOINT_SET_INFO_UNAUTHORIZED"
+msgstr "Aufgrund einer unautorisierten Anforderung ist ein Fehler aufgetreten. Stellen Sie sicher, dass Sie die korrekten Anmeldeinformationen für Ihr Gerät und/oder die Freigaben eingegeben haben und versuchen Sie es erneut."
+
+
+#: string "Your safepoint could not be found. Please try again to continue."
+msgid "ERROR_SAFEPOINT_SET_INFO_NOTFOUND"
+msgstr "Ihr Sicherungspunkt wurde nicht gefunden. Versuchen Sie es erneut, um fortzufahren."
+
+
+#: string "This operation could not succeed due to a failed request. Please try again."
+msgid "ERROR_SAFEPOINT_GET_SCHEDULE_FAILED"
+msgstr "Dieser Vorgang konnte wegen einer fehlgeschlagenen Anforderung nicht ausgeführt werden. Versuchen Sie es erneut."
+
+
+#: string "Invalid request. Please try again."
+msgid "ERROR_SAFEPOINT_GET_SCHEDULE_INVALID"
+msgstr "Ungültige Anforderung. Versuchen Sie es erneut."
+
+
+#: string "Your safepoint could not be found. Please try again to continue."
+msgid "ERROR_SAFEPOINT_GET_SCHEDULE_NOT_FOUND"
+msgstr "Ihr Sicherungspunkt wurde nicht gefunden. Versuchen Sie es erneut, um fortzufahren."
+
+
+#: string "This operation could not succeed due to a failed request. Please try again."
+msgid "ERROR_SAFEPOINT_SET_SCHEDULE_FAILED"
+msgstr "Dieser Vorgang konnte wegen einer fehlgeschlagenen Anforderung nicht ausgeführt werden. Versuchen Sie es erneut."
+
+
+#: string "Invalid request. Please try again."
+msgid "ERROR_SAFEPOINT_SET_SCHEDULE_INVALID"
+msgstr "Ungültige Anforderung. Versuchen Sie es erneut."
+
+
+#: string "Your safepoint could not be found. Please try again to continue."
+msgid "ERROR_SAFEPOINT_SET_SCHEDULE_NOT_FOUND"
+msgstr "Ihr Sicherungspunkt wurde nicht gefunden. Versuchen Sie es erneut, um fortzufahren."
+
+
+#: string "A safepoint with the same name already exists on this share. Please choose a different name for your safepoint and try again."
+msgid "ERROR_SAFEPOINT_CREATE_DUPLICATE"
+msgstr "Ein Sicherungspunkt mit demselben Namen ist auf dieser Freigabe bereits vorhanden. Wählen Sie einen anderen Namen für Ihren Sicherungspunkt aus und versuchen Sie es erneut."
+
+
+#: string "This safepoint is corrupt and could not be deleted. Please fix the errors on this safepoint and try again."
+msgid "ERROR_SAFEPOINT_DESTROY_CORRUPTED"
+msgstr "Dieser Sicherungspunkt ist beschädigt und konnte nicht gelöscht werden. Beheben Sie die Fehler auf diesem Sicherungspunkt und versuchen Sie es erneut."
+
+
+#: string "The recovery operation failed due to an invalid safepoint state. Please wait for some time and try again."
+msgid "ERROR_SAFEPOINT_RESTORE_DUPLICATE"
+msgstr "Der Wiederherstellungsvorgang ist aufgrund eines ungültigen Sicherungspunktstatus fehlgeschlagen. Warten Sie einige Augenblicke und versuchen Sie es dann erneut."
+
+
+#: string "The recovery operation could not succeed because this safepoint is currently being updated. Please wait for that operation to finish before attempting to recover your data from this safepoint."
+msgid "ERROR_SAFEPOINT_RESTORE_NOT_USABLE"
+msgstr "Der Wiederherstellungsvorgang ist fehlgeschlagen, weil der Sicherungspunkt derzeit aktualisiert wird. Warten Sie, bis dieser Vorgang abgeschlossen wurde, bevor Sie versuchen, Ihre Daten von diesem Sicherungspunkt wiederherzustellen."
+
+
+#: string "A safepoint with the same name already exists on this share. Please choose a different name for your safepoint and try again."
+msgid "ERROR_SAFEPOINT_SET_INFO_DUPLICATE"
+msgstr "Ein Sicherungspunkt mit demselben Namen ist auf dieser Freigabe bereits vorhanden. Wählen Sie einen anderen Namen für Ihren Sicherungspunkt aus und versuchen Sie es erneut."
+
+
+#: string "A scheduling error occurred with your safepoint. Please set the auto-update schedule for your safepoint again. If your safepoint is yet to be created, please try creating the safepoint again."
+msgid "ERROR_SAFEPOINT_GET_SCHEDULE_CORRUPTED"
+msgstr "Im Zusammenhang mit Ihrem Sicherungspunkt ist ein Zeitplanungsfehler aufgetreten. Legen Sie die Planung automatischer Updates für Ihren Sicherungspunkt erneut fest. Wenn Ihr Sicherungspunkt noch nicht erstellt wurde, versuchen Sie, den Sicherungspunkt erneut zu erstellen."
+
+
+#: string "This operation could not succeed due to an scheduling conflict. Please ensure you have not enabled other safepoint operations for this time and try again."
+msgid "ERROR_SAFEPOINT_SET_SCHEDULE_DUPLICATE"
+msgstr "Dieser Vorgang konnte wegen eines Planungskonflikts nicht ausgeführt werden. Stellen Sie sicher, dass Sie für diesen Zeitpunkt keine anderen Sicherungspunktvorgänge aktiviert haben, und versuchen Sie es erneut."
+
+
+#: string "Size:"
+msgid "LABEL_DESCR_SIZE"
+msgstr "Größe:"
+
+
+#: string "The safepoint cannot be created for a time occurring in the past. Please select a valid time from the drop-down and try again."
+msgid "ERROR_SAFEPOINT_CREATE_BAD_TIME_VALUE"
+msgstr "Ein Sicherungspunkt kann nicht für einen Zeitpunkt in der Vergangenheit erstellt werden. Bitte wählen Sie einen gültigen Zeitpunkt aus dem Dropdown-Menü aus und versuchen Sie es erneut."
+
+
+#: string "Error updating password. Please try again."
+msgid "ERROR_PASSWORD_UPDATE_FAILED"
+msgstr "Fehler bei Kennwortaktualisierung. Versuchen Sie es erneut."
+
+
+#: string "Failed to create the specified share. Please try again."
+msgid "ERROR_SHARE_CREATE_FAILED"
+msgstr "Die spezielle Freigabe konnte nicht erstellt werden. Versuchen Sie es erneut."
+
+
+#: string "The status of your safepoint(s) is currently unavailable. Please try again later."
+msgid "ERROR_SAFEPOINT_GET_STATUS_UNAVAILABLE"
+msgstr "Der Status Ihrer Sicherungspunkte ist aktuell nicht verfügbar. Versuchen Sie es später erneut."
+
+
+#: string "The web access account you requested already exists. Please enter a different email address."
+msgid "ERROR_WEBACCOUNT_DUPLICATE"
+msgstr "Das von Ihnen angeforderte Webzugriffskonto ist bereits vorhanden. Geben Sie bitte eine andere E-Mail-Adresse ein."
+
+
+#: string "Your last operation timed out. Make sure there are no network connectivity issues and try again."
+msgid "ERROR_TIMEOUT"
+msgstr "Ihr letzter Vorgang hat das Zeitlimit überschritten. Stellen Sie sicher, dass keine Netzwerkverbindungsprobleme bestehen und versuchen Sie es erneut."
+
+
+#: string "Your My Book Live IP address has changed. Enter the new IP address in your browser."
+msgid "ERROR_TIMEOUT_IPADDRESS_CHANGED"
+msgstr "Die IP-Adresse Ihres My Book Live hat sich geändert. Geben Sie die neue IP-Adresse in Ihren Browser ein."
+
+
+#: string "The safepoint create operation is not allowed at this time."
+msgid "ERROR_SAFEPOINT_CREATE_NOT_ALLOWED"
+msgstr "Der Vorgang Sicherungspunkt erstellen ist zu diesem Zeitpunkt nicht erlaubt."
+
+
+#: string "The safepoint delete operation is not allowed at this time."
+msgid "ERROR_SAFEPOINT_DESTROY_NOT_ALLOWED"
+msgstr "Der Vorgang „Sicherungspunkt löschen“ ist zu diesem Zeitpunkt nicht erlaubt."
+
+
+#: string "The safepoint update operation is not allowed at this time."
+msgid "ERROR_SAFEPOINT_UPDATE_NOT_ALLOWED"
+msgstr "Der Vorgang „Sicherungspunkt Aktualisieren“ ist zu diesem Zeitpunkt nicht erlaubt."
+
+
+#: string "This operation is not supported."
+msgid "ERROR_NOT_SUPPORTED"
+msgstr "Dieser Vorgang wird nicht unterstützt."
+
+
+#: string "A system resource is not available."
+msgid "ERROR_UNAVAILABLE"
+msgstr "Eine Systemressource ist nicht verfügbar."
+
+
+#: string "An error occurred during the abort operation."
+msgid "ERROR_ABORTED"
+msgstr "Während des Abbruchvorgangs ist ein Fehler aufgetreten."
+
+
+#: string "A failed request was received during this operation."
+msgid "ERROR_FAILED"
+msgstr "Während des Vorgangs wurde eine fehlgeschlagene Anforderung erhalten. "
+
+
+#: string "Operation failed due to a duplication error."
+msgid "ERROR_DUPLICATE"
+msgstr "Vorgang aufgrund eines Duplizierungsfehlers fehlgeschlagen."
+
+
+#: string "Operation failed due to a corrupt resource."
+msgid "ERROR_CORRUPTED"
+msgstr "Vorgang aufgrund einer korrupten Ressource fehlgeschlagen."
+
+
+#: string "This operation is not allowed."
+msgid "ERROR_NOT_ALLOWED"
+msgstr "Dieser Vorgang ist nicht erlaubt."
+
+
+#: string "Upgrade was not successful."
+msgid "ERROR_UPGRADE_FAILED"
+msgstr "Das Upgrade war nicht erfolgreich."
+
+
+#: string "Conversion was not successful."
+msgid "ERROR_CONVERSION_FAILED"
+msgstr "Die Konvertierung war nicht erfolgreich."
+
+
+#: string "Manufacturer:"
+msgid "LABEL_MANUFACTURER"
+msgstr "Hersteller:"
+
+
+#: string "Self-Assessment Test:"
+msgid "LABEL_SELF_ASSESSMENT_TEST"
+msgstr "Selbsttest:"
+
+
+#: string "No Internet access. Check your network and try again."
+msgid "ERROR_NO_INTERNET_CONNECTIVITY"
+msgstr "Kein Internetzugang. Überprüfen Sie Ihr Netzwerk und versuchen Sie es erneut."
+
+
+#: string "USB Device Details"
+msgid "LABEL_USB_DEVICE_DETAILS"
+msgstr "Details zum USB-Gerät"
+
+
+#: string "USB Device Name"
+msgid "LABEL_USB_DEVICE_NAME"
+msgstr "Name des USB-Geräts"
+
+
+#: string "Model:"
+msgid "LABEL_MODEL"
+msgstr "Modell:"
+
+
+#: string "Provide a valid name."
+msgid "ERROR_PROVIDE_VALID_NAME"
+msgstr "Geben Sie einen gültigen Namen an."
+
+
+#: string "Password hint"
+msgid "LABEL_DESCR_SHOW_PASSWORD_HINT"
+msgstr "Kennworthinweis"
+
+
+#: string "The drive was not found. Please make sure the drive is connected and try again."
+msgid "ERROR_DRIVE_NOT_FOUND"
+msgstr "Das Laufwerk wurde nicht gefunden. Stellen Sie sicher, dass das Laufwerk angeschlossen ist und versuchen Sie es erneut."
+
+
+#: string "Connection Status:"
+msgid "LABEL_HEADER_CONNECTION_STATUS"
+msgstr "Verbindungsstatus:"
+
+
+#: string "Eject USB Drive?"
+msgid "HEADING_EJECT_USB"
+msgstr "USB-Laufwerk auswerfen?"
+
+
+#: string "Unable to retrieve data. Make sure there are no network connectivity issues and try again."
+msgid "ERROR_GET_ERROR"
+msgstr "Daten können nicht abgerufen werden. Stellen Sie sicher, dass keine Netzwerkverbindungsprobleme bestehen und versuchen Sie es erneut."
+
+
+#: string "Ejecting this device will remove all associated shares."
+msgid "LABEL_DESCR_CONFIRM_EJECT_USB_1"
+msgstr "Durch Auswerfen dieses Geräts werden alle zugeordneten Freigaben entfernt."
+
+
+#: string "Backup tasks in progress on this device will be interrupted."
+msgid "LABEL_DESCR_CONFIRM_EJECT_USB_2"
+msgstr "Auf diesem Gerät ausgeführte Backup-Aufgaben werden unterbrochen."
+
+
+#: string "If you are logged in remotely, you cannot access the device until it is plugged back in."
+msgid "LABEL_DESCR_CONFIRM_EJECT_USB_3"
+msgstr "Wenn Sie sich per Remote-Login angemeldet haben, können Sie nicht auf das Gerät zugreifen, bis es wieder eingesteckt ist."
+
+
+#: string "Username <span id=\"reserved_username\"></span> is reserved. Please try again and make sure Username is an alphanumeric value between 1 and 32 characters and cannot contain spaces."
+msgid "ERROR_USERNAME_RESERVED"
+msgstr "Der Benutzername <span id=\"reserved_username\"></span> ist reserviert. Versuchen Sie es erneut und achten Sie darauf, dass der Benutzername aus 1 bis 32 alphanumerischen Zeichen besteht und keine Leerzeichen enthält."
+
+
+#: string "Failed to send test email. Please ensure you are not facing network connectivity issues and try again."
+msgid "ERROR_TEST_EMAIL_SEND_FAILED"
+msgstr "Test-E-Mail konnte nicht gesendet werden. Stellen Sie sicher, dass keine Netzwerkverbindungsprobleme bestehen, und versuchen Sie es erneut."
+
+
+#: string "Local USB"
+msgid "BUTTON_LOCAL"
+msgstr "USB lokal"
+
+
+#: string "Scan Network"
+msgid "BUTTON_NETWORK"
+msgstr "Netzwerk durchsuchen"
+
+
+#: string "Not enough disk space to complete the operation.<br><br>Please delete at least <span id=\"remove_nbytes_size\"></span> on your drive and try again."
+msgid "ERROR_SPACE_LIMITATION"
+msgstr "Die freie Platz auf dem Laufwerk reicht zum Abschluss des Vorgangs nicht aus.<br><br>Löschen Sie mindestens <span id=\"remove_nbytes_size\"></span> auf Ihrem Laufwerk und versuchen Sie es erneut."
+
+
+#: string "Upgrade download failure. Please try your upgrade again."
+msgid "ERROR_UPGRADE_DOWNLOAD_FAILED"
+msgstr "Fehler beim Herunterladen des Upgrades. Versuchen Sie das Upgrade bitte erneut."
+
+
+#: string "Before updating your firmware, make sure both drives are installed in your My Book Live."
+msgid "ERROR_UPGRADE_ALL_DRIVE_MUST_BE_PRESENT"
+msgstr "Stellen Sie sicher. dass beide Laufwerke in Ihrem My Book Live installiert sind, ehe Sie die Firmware aktualisieren."
+
+
+#: string "Are you sure you want to eject this USB drive?"
+msgid "LABEL_DESCR_EJECT_USB"
+msgstr "Sind Sie sicher, dass Sie dieses USB-Laufwerk auswerfen wollen?"
+
+
+#: string "Unknown error. Retry your last operation. If the error persists, contact WD Support for assistance."
+msgid "ERROR_UNKNOWN"
+msgstr "Unbekannter Fehler. Wiederholen Sie den letzten Vorgang. Wenden Sie sich an WD Support, wenn der Fehler fortdauert."
+
+
+#: string "Internal server error. Retry your last operation. If the error persists, contact WD Support for assistance."
+msgid "ERROR_INTERNAL_SERVER_ERROR"
+msgstr "Interner Serverfehler. Wiederholen Sie den letzten Vorgang. Wenden Sie sich an WD Support, wenn der Fehler fortdauert."
+
+
+#: string "Your safepoint operation could not be canceled due to a failed request. Try again."
+msgid "ERROR_SAFEPOINT_CANCEL_FAILED"
+msgstr "Der Sicherungspunkt-Vorgang konnte wegen einer fehlgeschlagenen Anforderung nicht abgebrochen werden. Versuchen Sie es erneut."
+
+
+#: string "Your safepoint operation could not be canceled due to a missing drive or share resource. Try again."
+msgid "ERROR_SAFEPOINT_CANCEL_NOT_FOUND"
+msgstr "Der Sicherungspunkt-Vorgang konnte nicht abgebrochen werden, da ein Laufwerk oder eine Freigabe-Ressource fehlt. Versuchen Sie es erneut."
+
+
+#: string "Your safepoint operation could not be canceled due to an unauthorized request. Enter appropriate credentials for your device and/or shares and try again."
+msgid "ERROR_SAFEPOINT_CANCEL_UNAUTHORIZED"
+msgstr "Der Sicherungspunkt-Vorgang konnte wegen einer nicht autorisierter Anforderung nicht abgebrochen werden. Geben Sie geeignete Zugangsdaten für Ihr Gerät und/oder Ihre Freigaben ein und versuchen Sie es erneut."
+
+
+#: string "Your safepoint operation could not be canceled due to an invalid request."
+msgid "ERROR_SAFEPOINT_CANCEL_INVALID"
+msgstr "Der Sicherungspunkt-Vorgang konnte wegen einer ungültigen Anforderung nicht abgebrochen werden."
+
+
+#: string "Canceling this safepoint operation is not allowed at this time."
+msgid "ERROR_SAFEPOINT_CANCEL_NOT_ALLOWED"
+msgstr "Der Abbruch dieses Sicherungspunkt-Vorgangs löschen ist zu diesem Zeitpunkt nicht erlaubt."
+
+
+#: string "Error changing Central Server:"
+msgid "LABEL_CHANGING_CENTRAL_SERVER"
+msgstr "Fehler beim Wechseln des zentralen Servers:"
+
+
+#: string "Error retrieving Central Server information:"
+msgid "LABEL_GET_CENTRAL_SERVER"
+msgstr "Fehler beim Abruf von Daten des zentralen Servers:"
+
+
+#: string "Error updating firmware:"
+msgid "LABEL_UPDATING_FIRMWARE"
+msgstr "Fehler beim Update der Firmware:"
+
+
+#: string "Error auto-updating firmware:"
+msgid "LABEL_AUTO_UPDATING_FIRMWARE"
+msgstr "Fehler beim Auto-Update der Firmware:"
+
+
+#: string "Error retrieving firmware upgrade information:"
+msgid "LABEL_GET_FIRMWARE_UPDATE_PROGRESS"
+msgstr "Fehler beim Abruf von Daten zum Firmware-Upgrade:"
+
+
+#: string "Error retrieving usage values:"
+msgid "LABEL_GET_USAGE"
+msgstr "Fehler beim Abruf von Nutzungsdaten:"
+
+
+#: string "Error configuring network settings:"
+msgid "LABEL_CONFIGURING_NETWORKS"
+msgstr "Fehler beim Konfigurieren von Netzwerkeinstellungen:"
+
+
+#: string "Error in Network Connectivity test:"
+msgid "LABEL_NETWORK_CONNECTIVITY_TEST"
+msgstr "Fehler im Netzwerk-Verbindungstest:"
+
+
+#: string "Error restoring factory defaults:"
+msgid "LABEL_RESTORING_FACTORY_DEFAULT"
+msgstr "Fehler beim Wiederherstellen der Werkseinstellungen:"
+
+
+#: string "Error retrieving factory restore information:"
+msgid "LABEL_GET_FACTORY_RESTORE_PROGRESS"
+msgstr "Fehler beim Abruf der Daten zum Wiederherstellen der Werkseinstellungen:"
+
+
+#: string "Error retrieving diagnostic test information:"
+msgid "LABEL_GET_DIAGNOSTIC_TEST_INFORMATION"
+msgstr "Fehler beim Abruf von Diagnose-Testdaten:"
+
+
+#: string "Error starting diagnostic test:"
+msgid "LABEL_STARTING_DIAGNOSTIC_TEST"
+msgstr "Fehler beim Starten des Diagnosetests:"
+
+
+#: string "Error canceling diagnostic test:"
+msgid "LABEL_CANCELLING_DIAGNOSTIC_TEST"
+msgstr "Fehler beim Abbruch des Diagnosetests:"
+
+
+#: string "Error retrieving diagnostic test information:"
+msgid "LABEL_GET_SELFTEST_PROGRESS"
+msgstr "Fehler beim Abruf von Diagnose-Testdaten:"
+
+
+#: string "Error configuring remote access:"
+msgid "LABEL_CONFIGURATING_REMOTE_ACCESS"
+msgstr "Fehler beim Konfigurieren des Remote-Zugangs:"
+
+
+#: string "Error updating remote access:"
+msgid "LABEL_UPDATING_REMOTE_ACCESS"
+msgstr "Fehler beim Aktualisieren des Remote-Zugangs:"
+
+
+#: string "Error adding mobile access:"
+msgid "LABEL_ADDING_REMOTE_DEVICE_ACCESS"
+msgstr "Fehler beim Hinzufügen des Mobilzugangs:"
+
+
+#: string "Error registering web access account:"
+msgid "LABEL_REGISTERING_WEB_ACCESS"
+msgstr "Fehler beim Registrieren eines Webzugriffskontos:"
+
+
+#: string "Error retrieving web access account:"
+msgid "LABEL_GET_WEB_ACCESS"
+msgstr "Fehler beim Abruf eines Webzugriffskontos:"
+
+
+#: string "Error resending registration email:"
+msgid "LABEL_RESUBMITTING_REGISTRATION_EMAIL"
+msgstr "Fehler beim erneuten Absenden der Registrierungs-E-Mail:"
+
+
+#: string "Error deleting web access:"
+msgid "LABEL_DELETING_WEB_ACCESS"
+msgstr "Fehler beim Entfernen des Webzugangs:"
+
+
+#: string "Error retrieving mobile devices:"
+msgid "LABEL_RETRIEVING_MOBILE_ACCESS"
+msgstr "Fehler beim Abruf mobiler Geräte:"
+
+
+#: string "Error generating code for your mobile device:"
+msgid "LABEL_GENERATING_CODE_FOR_MOBILE_ACCESS"
+msgstr "Fehler beim Erzeugen des Codes für Ihr mobiles Gerät:"
+
+
+#: string "Error removing mobile access:"
+msgid "LABEL_REMOVING_MOBILE_ACCESS"
+msgstr "Fehler beim Entfernen des Mobilzugangs:"
+
+
+#: string "Error rebuilding WD 2go database:"
+msgid "LABEL_REBUILDING_WD2GO_DATABASE"
+msgstr "Fehler beim Neuaufbau der WD 2go-Datenbank:"
+
+
+#: string "Error configuring connection options:"
+msgid "LABEL_CONFIGURATING_CONNECTION_OPTION"
+msgstr "Fehler bei der Konfigurierung der Verbindungsoptionen:"
+
+
+#: string "Error blocking media player:"
+msgid "LABEL_BLOCKING_MEDIA_PLAYER"
+msgstr "Fehler beim Blockieren des Media Players:"
+
+
+#: string "Error rescanning media players:"
+msgid "LABEL_RESCANNING_MEDIA_PLAYERS"
+msgstr "Fehler beim erneuten Suchen von Media Playern:"
+
+
+#: string "Error rescanning DLNA server:"
+msgid "LABEL_RESCANNING_DLNA_SERVER"
+msgstr "Fehler beim erneuten Durchsuchen des DLNA-Servers:"
+
+
+#: string "Error rebuilding DLNA server database:"
+msgid "LABEL_REBUILDING_DLNA_SERVER_DATABASE"
+msgstr "Fehler beim Neuaufbau der DLNA-Serverdatenbank:"
+
+
+#: string "Error retrieving progress information from DLNA server:"
+msgid "LABEL_GET_DLNA_RESCAN_PROGRESS"
+msgstr "Fehler beim Abruf von Fortschrittsinformationen vom DLNA-Server:"
+
+
+#: string "Error retrieving information from DLNA server:"
+msgid "LABEL_GET_DLNA_INFORMATION"
+msgstr "Fehler beim Abruf von Informationen vom DLNA-Server:"
+
+
+#: string "Error enabling DLNA service:"
+msgid "LABEL_ENABLING_DLNA_SERVICE"
+msgstr "Fehler beim Aktivieren des DLNA-Dienstes:"
+
+
+#: string "Error enabling iTunes service:"
+msgid "LABEL_ENABLING_ITUNES_SERVICE"
+msgstr "Fehler beim Aktivieren des iTunes-Dienstes:"
+
+
+#: string "Error rescanning iTunes server:"
+msgid "LABEL_RESCANNING_ITUNES_SERVER"
+msgstr "Fehler beim erneuten Durchsuchen des iTunes-Servers:"
+
+
+#: string "Error initiating storage conversion:"
+msgid "LABEL_STARTING_STORAGE_CONVERSION"
+msgstr "Fehler beim Einleiten der Speicherumwandlung:"
+
+
+#: string "Error retrieving progress information for storage conversion:"
+msgid "LABEL_GET_STORAGE_CONVERSION_PROGRESS"
+msgstr "Fehler beim Abruf von Fortschrittsinformationen für die Speicherumwandlung:"
+
+
+#: string "Error unlocking USB:"
+msgid "LABEL_UNLOCKING_USB"
+msgstr "Fehler beim Entsperren von USB:"
+
+
+#: string "Error retrieving USB information:"
+msgid "LABEL_GET_USB_INFORMATION"
+msgstr "Fehler beim Abruf von USB-Daten:"
+
+
+#: string "Error ejecting USB device:"
+msgid "LABEL_EJECT_USB"
+msgstr "Fehler beim Auswurf des USB-Geräts:"
+
+
+#: string "Error updating owner password:"
+msgid "LABEL_UPDATING_OWNER_PASSWORD"
+msgstr "Fehler bei der Aktualisierung des Besitzerpassworts:"
+
+
+#: string "Error updating password:"
+msgid "LABEL_UPDATING_PASSWORD"
+msgstr "Fehler bei der Passwortaktualisierung:"
+
+
+#: string "Error retrieving user information:"
+msgid "LABEL_GET_USER_INFORMATION"
+msgstr "Fehler beim Abruf von Benutzerdaten:"
+
+
+#: string "Error creating user:"
+msgid "LABEL_CREATING_USER"
+msgstr "Fehler bei der Benutzererstellung:"
+
+
+#: string "Error updating user:"
+msgid "LABEL_UPDATING_USER"
+msgstr "Fehler bei der Benutzeraktualisierung:"
+
+
+#: string "Error deleting user:"
+msgid "LABEL_DELETING_USER"
+msgstr "Fehler beim Löschen des Benutzers:"
+
+
+#: string "Error updating share access privileges:"
+msgid "LABEL_UPDATING_SHARE_ACCESS"
+msgstr "Fehler bei der Aktualisierung von Zugriffsrechten für Freigaben:"
+
+
+#: string "Error creating share access privileges:"
+msgid "LABEL_CREATING_SHARE_ACCESS"
+msgstr "Fehler bei der Festlegung von Zugriffsrechten für Freigaben:"
+
+
+#: string "Error deleting share access privileges:"
+msgid "LABEL_DELETING_SHARE_ACCESS"
+msgstr "Fehler beim Löschen von Zugriffsrechten für Freigaben:"
+
+
+#: string "Error retrieving share information:"
+msgid "LABEL_GET_SHARE_INFORMATION"
+msgstr "Fehler beim Abruf von Freigabedaten:"
+
+
+#: string "Error creating your share:"
+msgid "LABEL_CREATING_SHARE"
+msgstr "Fehler bei der Freigabeerstellung:"
+
+
+#: string "Error updating your share:"
+msgid "LABEL_UPDATING_SHARE"
+msgstr "Fehler bei der Aktualisierung der Freigabe:"
+
+
+#: string "Error deleting your share:"
+msgid "LABEL_DELETING_SHARE"
+msgstr "Fehler beim Löschen der Freigabe:"
+
+
+#: string "Error deleting computer backup:"
+msgid "LABEL_DELETING_BACKUP"
+msgstr "Fehler beim Löschen der Computersicherung:"
+
+
+#: string "Error authenticating device on network:"
+msgid "LABEL_AUTHENTICATING_DEVICE_ON_NETWORK"
+msgstr "Fehler beim Authentisieren des Geräts im Netzwerk:"
+
+
+#: string "Error discovering shares on selected network device:"
+msgid "LABEL_DISCOVERING_SHARES_ON_NETWORK_DEVICE"
+msgstr "Fehler beim Auffinden von Freigaben auf dem ausgewählten Netzwerkgerät:"
+
+
+#: string "Error authenticating share on selected network device:"
+msgid "LABEL_AUTHENTICATING_SHARE_ON_NETWORK_DEVICE"
+msgstr "Fehler beim Authentifizieren der Freigabe auf dem ausgewählten Netzwerkgerät:"
+
+
+#: string "Error discovering safepoint(s) on selected network device:"
+msgid "LABEL_DISCOVERING_SAFEPOINT_ON_NETWORK_DEVICE"
+msgstr "Fehler beim Auffinden des/der Sicherungspunkts/e auf dem ausgewählten Netzwerkgerät:"
+
+
+#: string "Error retrieving safepoint list on selected network device:"
+msgid "LABEL_RETRIEVING_SAFEPOINT_LIST_ON_NETWORK_DEVICE"
+msgstr "Fehler beim Abrufen der Sicherungspunktliste auf dem ausgewählten Netzwerkgerät:"
+
+
+#: string "Error retrieving safepoint progress information:"
+msgid "LABEL_GET_SAFEPOINT_PROGRESS"
+msgstr "Fehler beim Abrufen der Sicherungspunkt-Fortschrittsinformationen:"
+
+
+#: string "Error retrieving scheduling information from safepoint:"
+msgid "LABEL_GET_SAFEPOINT_SCHEDULE_INFORMATION"
+msgstr "Fehler beim Abruf von Zweitplaninformationen vom Sicherungspunkt:"
+
+
+#: string "Error discovering network devices:"
+msgid "LABEL_DISCOVERING_NETWORK_DEVICES"
+msgstr "Fehler beim Auffinden von Netzwerkgeräten:"
+
+
+#: string "Error canceling safepoint discovery process:"
+msgid "LABEL_CANCELLING_DISCOVERY"
+msgstr "Fehler beim Abbruch des Vorgangs zum Auffinden von Sicherungspunkten:"
+
+
+#: string "Error creating your safepoint:"
+msgid "LABEL_CREATING_SAFEPOINT"
+msgstr "Fehler beim Erstellen des Sicherungspunkts:"
+
+
+#: string "Error deleting your safepoint:"
+msgid "LABEL_DELETING_SAFEPOINT"
+msgstr "Fehler beim Löschen des Sicherungspunkts:"
+
+
+#: string "Error updating your safepoint:"
+msgid "LABEL_UPDATING_SAFEPOINT"
+msgstr "Fehler bei der Aktualisierung des Sicherungspunkts:"
+
+
+#: string "Error recovering from your safepoint:"
+msgid "LABEL_RESTORING_SAFEPOINT"
+msgstr "Fehler beim Wiederherstellen von Ihrem Sicherungspunkt:"
+
+
+#: string "Error updating safepoint settings:"
+msgid "LABEL_UPDATING_SAFEPOINT_SETTINGS"
+msgstr "Fehler beim Aktualisieren der Sicherungspunkte-Einstellungen:"
+
+
+#: string "Error updating safepoint schedule:"
+msgid "LABEL_UPDATING_SAFEPOINT_SCHEDULE"
+msgstr "Fehler beim Aktualisieren der Sicherungspunkte-Einstellungen:"
+
+
+#: string "Error canceling safepoint operation:"
+msgid "LABEL_CANCELLING_SAFEPOINT_CREATE_UPDATE"
+msgstr "Fehler beim Abbruch des Sicherungspunkt-Vorgangs:"
+
+
+#: string "Error canceling safepoint recovery:"
+msgid "LABEL_CANCELLING_SAFEPOINT_RESTORE"
+msgstr "Fehler beim Abbruch der Sicherungspunkt-Wiederherstellung:"
+
+
+#: string "Do not unplug your device during the firmware update installation. After completing the update, your network drive will reboot automatically."
+msgid "LABEL_DESCR_FIRMWARE_UPDATE_PROGRESS"
+msgstr "Trennen Sie Ihr Gerät nicht während der Installation des Firmware-Updates. Nach Abschluss des Updates wird Ihr Netzlaufwerk automatisch neu gestartet."
+
+
+#: string "Do not unplug the device during the rebooting process."
+msgid "LABEL_DESCR_DO_NOT_UNPLUG_DEVICE_DURING_REBOOT"
+msgstr "Trennen Sie das Gerät nicht während des Neustart-Vorgangs."
+
+
+#: string "Your firmware will now be updated. Do not unplug your device during the firmware update installation. After completing the firmware update, your network drive will automatically reboot. It is also recommended that you install the latest updates for the operating system on your computer before you proceed.<br><br><b>Important:</b> Ensure you have multiple copies of your data (another backup) before updating your drive."
+msgid "LABEL_DESCR_UPDATE_FROM_FILE_REBOOT"
+msgstr "Ihre Firmware wird nun aktualisiert. Trennen Sie Ihr Gerät nicht während der Installation des Firmware-Updates. Nach Abschluss des Firmware-Updates wird Ihr Netzlaufwerk automatisch neu gestartet. Es wird auch empfohlen, die neuesten Updates des Betriebssystem auf Ihrem Computer zu installieren, ehe Sie fortfahren.<br><br><b>Wichtig:</b> Stellen Sie sicher, dass Sie über mehrere Kopien Ihrer Daten (eine weitere Sicherung) verfügen, bevor Sie das Laufwerk aktualisieren."
+
+
+#: string "The web access account you requested for could not be created. Ensure that you do not have any network connectivity issues and try again."
+msgid "ERROR_WEBACCOUNT_CREATE_FAILED"
+msgstr "Das angeforderte Webzugriffskonto konnte nicht erstellt werden. Stellen Sie sicher, dass keine Netzwerkverbindungsprobleme bestehen, und versuchen Sie es erneut."
+
+
+#: string "Navigate to <a id=\"supportLink\" href=\"#\">Support</a> and create a system report to troubleshoot or obtain automated customer support from WD."
+msgid "ERROR_DIAGNOSTIC_TEST_FAILED_SUPPORT"
+msgstr "Wechseln Sie zur Fehlersuche oder zum Einholen von automatischem Kundensupport von WD zu <a id=\"supportLink\" href=\"#\">Support</a> und erstellen Sie einen Systembericht."
+
+
+#: string "This safepoint is no longer available."
+msgid "ERROR_SAFEPOINT_NOT_CREATED"
+msgstr "Dieser Sicherungspunkt ist nicht mehr verfügbar."
+
+
+#: string "Error updating Time Machine configuration:"
+msgid "LABEL_UPDATING_TIME_MACHINE"
+msgstr "Fehler beim Ändern der Konfiguration von Time Machine:"
+
+
+#: string "The operation was aborted while the server was processing the request. The operation may or may not have been completed successfully. Please refresh the page and try again."
+msgid "ERROR_USER_ABORT"
+msgstr "Der Vorgang wurde abgebrochen, während der Server die Anforderung bearbeitete. Der Vorgang kann erfolgreich abgeschlossen worden sein oder auch nicht. Erneuern Sie bitte die Seite und versuchen Sie es erneut."

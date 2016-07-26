@@ -1,0 +1,32 @@
+Source: target-core-mod
+Section: unknown
+Priority: extra
+Maintainer: Nicholas A. Bellinger (nab) <nab@risingtidesystems.com>
+Build-Depends: debhelper (>= 5), bzip2
+Standards-Version: 3.7.2
+
+Package: target-core-mod-source
+Architecture: all
+Depends: module-assistant, debhelper (>= 5), make, bzip2
+Description: Source for the LIO target_core_mod kernel module
+ This package provides the source code for the target_core_mod kernel module.
+ The target package is also required in order to make use of this module.
+ Kernel source or headers are required to compile this module.
+
+Package: target-core-mod-module
+Architecture: any
+Description: The LIO target_core_mod kernel module package
+
+Package: target-core-mod-module-2.6.28-15-server
+Architecture: any
+Provides: target-core-mod-module
+Description: target_core_mod module for Linux (kernel _KVERS_).
+ This package contains the loadable kernel module for the
+ LIO target_core_mod generic target engine
+ .
+ This package contains the compiled kernel module for _KVERS_
+ .
+ If you have compiled your own kernel, you will most likely need to build
+ your own target-core-mod-modules The target-core-mod-source package has been
+ provided for use with the Debian's module-assistant or kernel-package
+ utilities to produce a version of target-core-mod-module for your kernel.

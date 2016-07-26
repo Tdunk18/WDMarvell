@@ -1,0 +1,8 @@
+0001 = Varselmelding fra %1
+0002 = Følgende hendelser er generert på %2 %1
+0003 = Beskrivelse av hendelse
+0004 = Alvorlighetsgrad
+0005 = Hendelseskode
+0006 = Hendelsestidspunkt
+0007 = Hendelsestittel
+0008 = Fastvareversjon

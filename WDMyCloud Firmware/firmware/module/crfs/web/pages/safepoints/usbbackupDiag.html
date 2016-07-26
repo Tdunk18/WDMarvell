@@ -1,0 +1,114 @@
+<div id="USBBackupsDiag" class="WDLabelDiag" style="display:none;">
+	<div id="USB_BackupsDiag_title" class="WDLabelHeaderDialogue WDLabelHeaderDialogueTitleUSBIcon">
+		<span class="_text" lang="_menu" datafld="schedule_backups"></span>
+	</div>
+
+	<div align="center">
+		<div class="hr"><hr></div>
+	</div>
+
+	<!-- USB - STEP 1 Start -->
+	<div id="usbDiag_step1" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="550" height="100">
+				<tr>
+					<td width="120" height="30" class="tdfield"><span class="_text" lang="_usb_backups" datafld="_usb_backups">USB Backups</span></td>
+					<td class="tdfield_padding">
+						<input id="usb_server_switch" name="usb_server_switch" class="onoffswitch" type="checkbox" value="true" >
+					</td>
+				</tr>
+				<tr>
+					<td width="120" height="30" class="tdfield"><span class="_text" lang="_usb_backups" datafld="category">Category</span></td>
+					<td class="tdfield_padding">
+						<input type="radio" name="f_usb_direction" value="0" checked><span class="_text" lang="_usb_backups" datafld="usb_to_nas">USB to NAS</span>
+						<input type="radio" name="f_usb_direction" value="1"><span class="_text" lang="_usb_backups" datafld="nas_to_usb">NAS to USB</span>
+					</td>
+				</tr>
+				<tr>
+					<td width="120" height="30" class="tdfield"><span class="_text" lang="_usb_backups" datafld="backup_type">Type</span></td>
+					<td class="tdfield_padding">
+						<div class="select_menu" style="height:25px">
+							<ul>
+								<li class="option_list">
+									<div id="USB_Backup_f_type_main" class="wd_select option_selected">
+										<div class="sLeft wd_select_l"></div>
+										<div class="sBody text wd_select_m" id="USB_Backup_f_type" rel="0"><span class="_text" lang="_usb_backups" datafld="copy">Copy</span></div>
+										<div class="sRight wd_select_r"></div>	
+									</div>		
+
+									<ul class="ul_obj" id="USB_Backup_f_type_li">
+										<li rel="0" class="li_start"><a href="#"><span class="_text" lang="_usb_backups" datafld="copy">Copy</span></a></li>
+										<li rel="1" class="li_end"><a href="#"><span class="_text" lang="_usb_backups" datafld="synchronize">Synchronize</span></a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="120" height="30" class="tdfield"><span class="_text" lang="_backup" datafld="Status">Status</span></td>
+					<td class="tdfield_padding">
+						--
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="hrBottom2"><hr/></div>
+		<div class="LightningButton ButtonMarginLeft_40px" id="usb_back_button_1" lang="_button" datafld="back"></div>
+		<div class="LightningButton ButtonMarginLeft_20px close" lang="_button" datafld="Cancel"></div>
+		<div class="LightningButton ButtonRightPos2" id="usb_next_button_1" lang="_button" datafld="Next"></div>
+	</div>
+	<!-- USB - STEP 1 End -->
+
+	<!-- USB - STEP 2 Start -->
+	<div id="usbDiag_step2" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="550" height="100">
+					<tr>
+						<td height="40px"><span class="_text" lang="_usb_backups" datafld="source_dir">Source</span></td>
+						<td><input type="text" class="input_x3" name="USB_Backup_f_usb_source_dir" id="USB_Backup_f_usb_source_dir"></td>
+					</tr>	
+					<tr>
+						<td colspan="2">
+							<div id="USB_Backup_Source_Selector"></div>
+						</td>
+					</tr>
+				</table>
+		</div>
+
+		<div class="hrBottom2"><hr/></div>
+		<div class="LightningButton ButtonMarginLeft_40px" id="usb_back_button_2" lang="_button" datafld="back"></div>
+		<div class="LightningButton ButtonMarginLeft_20px close" lang="_button" datafld="Cancel"></div>
+		<div class="LightningButton ButtonRightPos2 " id="usb_next_button_2" lang="_button" datafld="Next"></div>
+	</div>
+	<!-- USB - STEP 2 End -->
+	
+	<!-- USB - STEP 3 Start -->
+	<div id="usbDiag_step3" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="550" height="100">
+					<tr>
+						<td height="40px"><span class="_text" lang="_usb_backups" datafld="dest_dir">Destination</span></td>
+						<td><input type="text" class="input_x3" name="USB_Backup_f_usb_dest_dir" id="USB_Backup_f_usb_dest_dir"></td>
+					</tr>	
+					<tr>
+						<td colspan="2">
+							<div id="USB_Backup_Dest_Selector"></div>
+						</td>
+					</tr>
+				</table>
+		</div>
+
+		<div class="hrBottom2"><hr/></div>
+		<div class="LightningButton ButtonMarginLeft_40px" id="usb_back_button_3" lang="_button" datafld="back"></div>
+		<div class="LightningButton ButtonMarginLeft_20px close" lang="_button" datafld="Cancel"></div>
+		<div class="LightningButton ButtonRightPos2 " id="usb_next_button_3" lang="_button" datafld="save"></div>
+	</div>
+	<!-- USB - STEP 2 End -->
+
+</div><!--BackupsDiag-->
+
+
+
+
+

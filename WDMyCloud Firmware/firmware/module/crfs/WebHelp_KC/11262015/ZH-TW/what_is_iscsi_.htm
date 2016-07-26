@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="MS-HAID" content="What is ISCSI?" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+ <title>什麼是 ISCSI？</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+ <meta http-equiv="Content-Language" content="zh-TW" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("儲存裝置\nISCSI\n什麼是 ISCSI？");
+addButton("show",BTN_TEXT,"顯示","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left; background: #fafafa\"> ");
+AddMasterBreadcrumbs("index.htm", "", "&gt;", "Home", "welcome.htm");
+document.write("<a href=\"what_is_raid_storage.htm\">儲存裝置<\/a> &gt; <a href=\"what_is_iscsi_.htm\">ISCSI<\/a> &gt; 什麼是 ISCSI？<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(0);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1 style="background-color: Transparent;">什麼是 ISCSI？</h1>
+<p>網際網路 SCSI (iSCSI) 是一種工業標準，可以使用 TCP/IP 通訊協定透過現有 IP 網路傳輸 iSCSI 區塊儲存命令和資料。封裝的 iSCSI 命令和資料可以透過區域網路 (LAN) 或廣域網路 (WAN) 傳輸。與傳統 SCSI 相同，iSCSI 儲存解決方案要求用戶端電腦上至少有一個「啟動器」，且儲存設備上至少有一個「目標」。</p>
+<p>iSCSI 啟動器和 iSCSI 目標之間的連線建立後，iSCSI 啟動器上的作業系統就會將儲存設備視為可透過一般方法來格式化、讀取和寫入的本機儲存裝置。</p>
+<p class="Body">您的 My Cloud™  設備可讓您建立和管理 iSCSI 目標。iSCSI 目標提供類似於本機硬碟的儲存裝置，但可透過網路存取，而非本機存取。iSCSI 目標受到 My Cloud 装置基礎 RAID 結構的保護。</p>
+<h2>iSCSI 角色</h2>
+<ul style="list-style: square;">
+	<li class="b1"><p><span style="font-weight: bold;">啟動器</span>：使用 iSCSI 命令，透過 IP 網路存取儲存裝置的用戶端電腦。</p></li>
+	<li class="b1"><p><span style="font-weight: bold;">目標</span>：連接網路的儲存裝置，可提供對邏輯磁碟 (此可建立在 My Cloud 装置上) 的存取。</p></li>
+</ul>&#160; <br />&#160; 
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt;">© 2015 Western Digital Technologies, Inc. 
+	 All rights reserved.<span class="Apple-converted-space">&#160;</span><span 
+	 style="color: rgb(75, 90, 104); font-size: 10.6666669845581px; line-height: 21.3333339691162px; 
+	 orphans: auto; widows: 1; -webkit-text-stroke-width: 0px; display: inline	 ! important ; 
+	 float: none; background-color: rgb(250, 250, 250);">版權所有。</span></p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>

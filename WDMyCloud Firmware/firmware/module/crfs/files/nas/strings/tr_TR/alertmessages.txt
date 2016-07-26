@@ -1,0 +1,302 @@
+0001 = Aşırı Yüksek Sistem Sıcaklığı
+0001D = Sistem sıcaklığı normal çalışma sıcaklığı değerinin üzerinde. Sistemi daha serin bir yere taşıyın. Bir işlem yapılmazsa, sıcaklık kritik sınıra ulaştığında sistem kapatılacak.
+
+0002 = Yetersiz Sistem Sıcaklığı
+0002D = Sistem sıcaklığı belirtilen en düşük sıcaklıktan düşük. Sistemi daha sıcak bir yere taşıyın.
+
+0003 = Sürücü SMART hatası
+0003D = Sürücü %1 otomatik denetimi başarısız. WD Destek Hattı ile iletişime geçin.
+
+0004 = Birim Hatası
+0004D = Sürücüdeki veri birimi %1 erişilebilir değil. WD Destek Hattı ile iletişime geçin.
+
+0005 = Termal kapanma bekliyor
+0005D = Sisteminiz aşırı ısınıyor ve hiçbir işlem yapılmazsa kısa süre sonra otomatik olarak kapatılacak.
+
+0006 = Termal Kapanma Yakın
+0006D = Sisteminiz kritik derecede aşırı ısındı ve hasarın önlenmesi için hemen kapanacak.
+
+2020 = Sistem Kapatılıyor
+2020D = Sisteminiz kapatılıyor.
+
+1020 = Sistem Kapatılıyor
+1020D = Sisteminiz kapatılıyor.
+
+0020 = Sistem Kapatılıyor
+0020D = Sisteminiz kapatılıyor.
+
+0029 = Fan Çalışmıyor
+0029D = Sistem fanı çalışmıyor. WD Destek Hattı ile iletişime geçin.
+
+0031 = UPS Gücü ile Çalışıyor
+0031D = Sistem UPS gücü ile çalışıyor. %1% güç kaldı.
+
+0201 = Sürücü Arızası
+0201D = Yuva %1 içinde sürücü arızası oldu. Arızalı sürücüyü değiştirin. WD Destek Hattı ile iletişime geçin.
+
+0207 = Sürücü Arıza Yapmak Üzere
+0207D = Sürücü %1 arıza yapmak üzere. Arızalı sürücüyü değiştirin. WD Destek Hattı ile iletişime geçin.
+
+0208 = Birim Düşürüldü
+0208D = Birim %1 düşürüldü. Ayarlar >> Yardımcı Programlar kısımlarındaki Disk Testini başlatarak sürücünün durumunu kontrol edin.
+
+0209 = Birim Geçiş İlerlemesi
+0209D = Birim %1 Geçiş İlerlemesi %2 %
+
+2209 = Birim Geçiş İlerlemesi
+2209D = Birim %1 geçiş ilerlemesi: %2 %
+
+0210 = Birim Yenileniyor
+0210D = Birim %1 yenileme devam ediyor, süre: %2 dakika
+
+2210 = Birim Yenileniyor
+2210D = Birim %1 yenileme devam ediyor, süre: %2 dakika
+
+0212 = Birim Yenileme Başarısız Oldu
+0212D = Birim %1 yenilemesi başarısız oldu. Ayarlar  >> Yardımcı Programlar kısımlarındaki Disk Testini başlatarak sürücülerin durumunu kontrol edin.
+
+0213 = Birim Genişletme Başarısız Oldu
+0213D = Birim %1 Genişletmesi başarısız oldu. Ayarlar  >> Yardımcı Programlar kısımlarındaki Disk Testini başlatarak sürücülerin durumunu kontrol edin.
+
+0216 = RAID Dolaşımı Etkinleştirildi
+0216D = RAID Dolaşımı etkinleştirildi.
+
+2216 = RAID Dolaşımı Etkinleştirildi
+2216D = RAID dolaşımı etkinleştirildi.
+
+0224 = Kırmızı Işıklı Sürücüyü Değiştir
+0224D = Kırmızı LED'li sürücüyü değiştir.
+
+2041 = 10/100'de Bağlı Ethernet Portu %1
+2041D = Bağlantı hızı 10/100 Mbps hız ile sınırlandırıldı.
+
+0042 = %50 UPS Gücü Kaldı
+0042D = Sistem %50 gücü kalan UPS ile çalışıyor. Sisteminizi en kısa sürede yeni bir güç kaynağına bağlayın.
+
+0043 = %15 UPS Gücü Kaldı
+0043D = Sistem %15 gücü kalan UPS ile çalışıyor. Sisteminizi en kısa sürede yeni bir güç kaynağına bağlayın.  Eğer bir işlem yapılmazsa UPS'in gücü bittiğinde sistem kapatılacaktır.
+
+0044 = UPS Gücü Bitti
+0044D = UPS'de güç kalmadı. Hasarı önlemek için sistem hemen kapatılıyor.
+
+1001 = Birim Kullanımı %95'in Üzerinde
+1001D = Sürücü %1 kullanımınız tam kapasiteye yaklaştı, performans sorunları yaşamaya başlayabilirsiniz. Dosyalarınızın yedeklendiğinden emin olun; ardından dosyaları sürücünüzden kaldırarak boş alan oluşturun. Eğer geri dönüşüm kutusu etkinleştirilmiş ise, alanı boşaltmak için temizlemeyi deneyin.
+
+1002 = Ağ Bağlantısı Bozuk
+1002D = Ağ bağlantısı %1 arızalı veya kesintili. Ağ bağlantınızı denetleyin.
+
+1010 = Ağ Bağlantısı Bozuk
+1010D = Ağ bağlantısı %1 arızalı veya kesintili. Ağ bağlantınızı denetleyin.
+
+1003 = Bellenim Güncelleştirme Başarısız
+1003D = Bellenim güncelleştirme başarısız oldu. Lütfen tekrar deneyin. Hata devam ederse, WD Destek ile iletişim kurun.
+
+1004 = Yüksek sistem sıcaklığı
+1004D = Aygıtınız şu anda aşırı ısındı. Aygıtınızın yeterince havalandırıldığından emin olun.
+
+1021 = Yapılandırmayı Geri Yükle
+1021D = Yapılandırma geri yüklenemedi.
+
+0022 = Güç Kaynağı Hatası
+0022D = Güç kaynağı %1 başarısız oldu.
+
+1022 = Güç Kaynağı Hatası
+1022D = Güç kaynağı %1 başarısız oldu. Güç kaynağını kontrol edin.
+
+1030 = Depolama Eşiğin Altında
+1030D = Depolama eşiğin altında.
+
+1035 = Ürün Geliştirme Programı
+1035D = Ürünümüzü geliştirmeye katkı yapmak ister misiniz? Daha Fazla Bilgi %1
+
+0036 = Dosya Sistem Denetleme Başarısız
+0036D = Dosya sistem denetleme yapılandırmanızda hatalar tespit etti. Verilerinizi yedekleyin ve sürücü yapılandırmanızı yeniden oluşturarak bu hataları çözümleyin. Hala sorun yaşıyorsanız, WD Destek ile iletişime geçin.
+
+1036 = Dosya Sistem Denetleme Başarısız
+1036D = Dosya sistem denetleme yapılandırmanızda hatalar tespit etti. Verilerinizi yedekleyin ve sürücü yapılandırmanızı yeniden oluşturarak bu hataları çözümleyin. Hala sorun yaşıyorsanız, WD Destek ile iletişime geçin.
+
+1045 = Dosya Sistem Hataları Düzeltildi
+1045D = Dosya sistem denetleme, yapılandırmanızdaki hataları tespit etti ve düzeltti.
+
+1037 = Sistem Hazır Değil
+1037D = Sistem meşgul. Başka bir sürücü takmadan önce lütfen güç LED'inin kesintisiz mavi renkte yanmasını bekleyin.
+
+1120 = Desteklenmeyen USB Aygıtı
+1120D = Desteklenmeyen bir USB aygıtı algılandı (satıcı: %1, model: %2, seri numarası: %3). Lütfen USB aygıtını kaldırın.
+
+1121 = Desteklenmeyen Dosya Sistemi
+1121D = Bir USB aygıtında desteklenmeyen bir dosya sistemi algılandı (satıcı %1, model: %2, seri numarası: %3, dosya sistemi: %4, etiket: %5). Lütfen USB aygıtını kaldırın.
+
+1122 = Paylaşım Oluşturulamıyor
+1122D = Bir USB aygıtında paylaşım oluşturulamadı (satıcı: %1, model: %2, seri numarası: %3, dosya sistemi: %4, etiket: %5, paylaşım adı: %6)
+
+1123 = Güvenli Olmayan Aygıt Kaldırma
+1123D = Bir USB aygıtı (satıcı: %1, model: %2, seri numarası: %3) çıkarılmadan kaldırıldı ve bu da %2 üzerindeki verileri etkilemiş olabilir.
+
+1124 = USB Aygıtı Kaldırılamıyor
+1124D = USB Aygıtı kaldırılamıyor (satıcı: %1, model: %2, seri numarası: %3). Lütfen USB aygıtını kontrol edin.
+
+1127 = Dosyalar USB Aygıtından Yedeklenemiyor
+1127D = Dosyalar USB aygıtından yedeklenemiyor. Lütfen aygıt bağlanabilirliğini kontrol edin.
+
+1130 = USB Yedekleme Sıraya Eklendi
+1130D = Önceki yedekleme işlemi hala devam ediyor. Önceki görev sona erdiğinde USB yedekleme işlemi otomatik olarak başlatılacak.
+
+1400 = Uzaktan Yedekleme Hatası
+1400D = Uzaktan yedekleme sırasında bir hata oluştu; iş adı: %1. Lütfen sistem ayarlarınızı denetleyin.
+
+1401 = Uzaktan Yedekleme Geri Yükleme Hatası
+1401D = Uzaktan yedekleme geri yüklemesi sırasında bir hata oluştu; iş adı: %1. Lütfen sistem ayarlarınızı denetleyin.
+
+2402 = Uzaktan Yedekleme Başarılı
+2402D = Uzaktan yedekleme iş adı: %1, şu aygıt üzerinde başarıyla tamamlandı: %2, paylaşım: %3
+
+1402 = Uzaktan Yedekleme Başarılı
+1402D = Uzaktan yedekleme iş adı: %1, şu aygıt üzerinde başarıyla tamamlandı: %2, paylaşım: %3
+
+2403 = Uzaktan Yedekleme Geri Yükleme Başarılı
+2403D = Uzaktan geri yükleme iş adı: %1, şu aygıt üzerinde başarıyla tamamlandı: %2, paylaşım: %3
+
+1403 = Uzaktan Yedekleme Geri Yükleme Başarılı
+1403D = Uzaktan geri yükleme iş adı: %1, şu aygıt üzerinde başarıyla tamamlandı: %2, paylaşım: %3
+
+2001 = Sistemi yeniden başlatma
+2001D = Sistem yeniden başlatıldı.
+
+1011 = Yeni Bellenim Mevcut
+1011D = Bellenimin yeni bir sürümü piyasaya sürüldü. Sisteminizi güncelleştirin.
+
+2002 = Yeni Bellenim Mevcut
+2002D = Bellenimin yeni bir sürümü piyasaya sürüldü. Sisteminizi güncelleştirin.
+
+2003 = Sıcaklık Normal
+2003D = Sistem sıcaklığı belirtilen normal sıcaklık aralığında.
+
+2004 = Bellenim Güncelleştirme Başarılı
+2004D = Bellenim başarılı bir şekilde %1'e güncelleştirildi.
+
+2005 = Fabrika Ayarlarını Geri Yükleme Başarılı
+2005D = Sisteminiz fabrika ayarlarına geri yüklendi.
+
+2006 = Yeni bir yazılım yükseltmesine hak kazandınız!
+2006D = Daha fazla bilgi için WD My Cloud Aygıtı Panosunu açın.
+
+2024 = Bellenim Güncelleştirmesi İndiriliyor
+2024D = Bellenim güncelleştirmesi indiriliyor.
+
+2026 = Bellenim Güncelleştirmesi Yükleniyor
+2026D = Bellenim güncelleştirmesi yükleniyor.
+
+1028 = Yeniden Başlatma Gerekli
+1028D = Yeniden başlatma gerekli.
+
+2028 = Yeniden Başlatma Gerekli
+2028D = Yeniden Başlatma gerekli.
+
+2032 = Sistem bekleme modunda
+2032D = Sistem bekleme modunda.
+
+1033 = Sistem Yeniden Başlatılıyor
+1033D = Sistem yeniden başlatılıyor.
+
+2033 = Sistem Yeniden Başlatılıyor
+2033D = Sistem yeniden başlatılıyor.
+
+1038 = Depolama Kotası Neredeyse Dolu
+1038D = [%1] için depolama kotası neredeyse dolu. Dosyaların yedeklendiğinden emin olun, ardından dosyaları sürücünüzden kaldırarak boş alan oluşturun.
+
+2038 = Depolama Kotası Neredeyse Dolu
+2038D = [%1] için depolama kotası neredeyse dolu. Dosyaların yedeklendiğinden emin olun, ardından dosyaları sürücünüzden kaldırarak boş alan oluşturun.
+
+1039 = Depolama Kotası Dolu
+1039D = Depolama kotası [%1] sınıra ulaştı. Dosyaların yedeklendiğinden emin olun, ardından dosyaları sürücünüzden kaldırarak boş alan oluşturun.
+
+2039 = Depolama Kotası Dolu
+2039D = Depolama kotası [%1] sınıra ulaştı. Dosyaların yedeklendiğinden emin olun, ardından dosyaları sürücünüzden kaldırarak boş alan oluşturun.
+
+2040 = Desteklenmeyen UPS aygıtı
+2040D = Desteklenmeyen UPS aygıtı
+
+2121 = Kilitli USB aygıtı
+2121D = Kilitli bir USB aygıtı algılandı (satıcı: %1, model: %2, seri numarası: %3).
+
+2126 = Dosyalar USB aygıtından Kopyalandı
+2126D = Dosyalar <%1>den <%2>e Kopyalandı.
+
+2128 = Dosyalar Kopyalanıyor
+2128D = Dosyalar USB aygıtından kopyalanıyor.
+
+2129 = Dosyalar USB Aygıtından Taşındı
+2129D = Dosyalar <%1>den <%2>e Taşındı.
+
+2131 = Dosyalar Taşınıyor
+2131D = Dosyalar USB aygıtından taşınıyor.
+
+1200 = Desteklenmeyen Sürücü
+1200D = Yuva %1 içinde desteklenmeyen sürücü. Takılı sürücüyü onaylanan bir sürücüyle değiştirin. Onaylanan sürücü listesi şu adreste bulunabilir: www.wd.com
+
+2200 = Desteklenmeyen Sürücü
+2200D = Yuva %1 içinde desteklenmeyen sürücü. Takılı sürücüyü onaylanan bir sürücüyle değiştirin. Onaylanan sürücü listesi şu adreste bulunabilir: www.wd.com
+
+2202 = Sürücü çok küçük
+2202D = Konum %1 içindeki sürücü çok küçük %1
+
+2203 = Sürücü başlatılıyor
+2203D = Konum %1 içindeki sürücü başlatılıyor %1
+
+2211 = Depolama Bütünlüğü Denetleniyor
+2211D = Depolama bütünlüğü denetleniyor.
+
+2214 = Sürücü Takıldı
+2214D = Yuva %1 içine yeni bir sürücü takıldı. Bu sürücüyü sisteminizin RAID kümesine eklemek için Depolama >> RAID öğesine gidin ve RAID Modunu Değiştir düğmesini tıklatın.
+
+0215 = Sürücü Kaldırıldı
+0215D = Sürücü Yuva konumundan kaldırıldı %1
+
+2215 = Sürücü Kaldırıldı
+2215D = Sürücü Yuva %1 konumundan kaldırıldı. Lütfen sisteminizi denetleyin.
+
+2217 = Takılı Sürücü Yok
+2217D = Takılmış bir sürücü yok. Sisteminizi kullanmaya başlamak için sürücü ekleyin. Yeni sürücüyü şu adresten satın alabilirsiniz: www.wd.com
+
+2218 = RAID Dizisine Dinamik Yedek Sürücü eklendi
+2218D = RAID Dizisine Dinamik Yedek Sürücü eklendi.
+
+2219 = RAID Geçişi tamamlandı
+2219D = RAID geçişi tamamlandı.
+
+2220 = RAID Yenileme tamamlandı
+2220D = RAID yenileme tamamlandı.
+
+2221 = WD Olmayan Red NAS Sürücüsü takıldı
+2221D = WD Olmayan Red NAS Sürücüsü takıldı. WD My Cloud Aygıtı, WD Red NAS Sabit Sürücüleriyle en iyi şekilde çalışmak üzere tasarlanmıştır.
+
+2222 = Birim biçimlendirildi
+2222D = Birim %1 biçimlendirildi.
+
+2223 = Birim Genişletme İlerlemesi
+2223D = Birim %1 genişletme ilerlemesi: %2%
+
+2300 = Medya Taraması Durduruldu
+2300D = Aygıt, medyanızı taramayı durdurdu. Bunun sonucunda, uzaktan erişim sağladığınızda bazı küçük resimler gösterilmeyecek. Taramayı sürdürmek için lütfen WD My Cloud sisteminizi yeniden başlatın.
+
+1501 = Uygulama Güncellemesi Mevcut
+1501D = %1 uygulama güncellemesi var. Lütfen güncelleyin.
+
+1502 = Virüs Bulundu
+1502D = Antivirüsle İlgili Temel Bilgiler: Virüs taraması tamamlandı ve virüs bulundu. Detaylar için lütfen virüs tarama raporuna göz atın.
+
+2503 = Virüs Taraması Tamamlandı
+2503D = Antivirüsle İlgili Temel Bilgiler: Virüs taraması tamamlandı. Virüs bulunmadı.
+
+2504 = Planlanan Virüs Taraması Başlatıldı
+2504D = Antivirüsle İlgili Temel Bilgiler: Planlanan Virüs taraması başlatıldı.
+
+2505 = Planlanan Virüs Taraması Durduruldu
+2505D = Antivirüsle İlgili Temel Bilgiler: Planlanan virüs taraması durdurulma zamanına ulaştığından durduruldu. Tarama tamamlanmadı. 
+
+1103 = Verilerinizi kayıt noktanızdan kurtarma esnasında bir hata oluştu
+1103D = %4 - Verilerinizi %3 üzerindeki %2 paylaşımı üzerindeki kayıt noktanızdan %1 kurtarada bir hata oluştu.
+
+2103 = Verileriniz kayıt noktanızdan başarılı şekilde kurtarıldı
+2103D = Verileriniz %3 üzerindeki %2 paylaşımı üzerindeki kayıt noktanızdan %1 başarılı şekilde kurtarıldı. 

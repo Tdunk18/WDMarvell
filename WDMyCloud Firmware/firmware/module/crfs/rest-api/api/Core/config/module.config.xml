@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<core>
+    <name>Core</name>
+    <version>2.1</version>
+    <description>Module has errorcodes, errors, compcodes components.</description >
+    <components>
+        <component>
+            <name>errors</name>
+            <module>Core</module>
+            <controller_class>\Core\Controller\Errors</controller_class>
+            <auth_security>
+                <all>USER_AUTH_ALL</all>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>apc_cc</name>
+            <module>Core</module>
+            <controller_class>\Core\Controller\ApcClearCache</controller_class>
+            <auth_security>
+                <put>ADMIN_AUTH_LAN</put>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>error_codes</name>
+            <module>Core</module>
+            <controller_class>\Core\Controller\ErrorCodes</controller_class>
+            <auth_security>
+                <all>USER_AUTH_ALL</all>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>comp_codes</name>
+            <module>Core</module>
+            <controller_class>\Core\Controller\CompCodes</controller_class>
+            <auth_security>
+                <all>USER_AUTH_ALL</all>
+            </auth_security>
+        </component>
+
+    </components>
+</core>

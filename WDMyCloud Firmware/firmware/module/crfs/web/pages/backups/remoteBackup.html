@@ -1,0 +1,544 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="PRAGMA" content="no-cache"> 
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+</head>
+<style>
+#f_share_name a{
+	cursor: default;
+}
+#f_share_name A:focus,
+#f_share_name .tree_click_focus {
+	color: #4B5A68 !important;
+	background-color:#FAFAFA !important;
+}
+#f_share_name A:hover
+{
+	color: #4B5A68 !important;
+	background-color:#FAFAFA !important;
+}
+#new_folder_li a{
+	cursor: pointer;
+}
+
+.list_icon_bar {
+	padding: 0 !important;
+    margin: 10px 0 0 0 !important;
+	border:0;
+    width: 260px;
+    height: 4px !important;
+    background-color: #C8C8C8;
+	position: relative;
+    
+}
+.list_icon_bar .bar_p {
+     height: 4px !important;
+	background-color: #15ABFF;
+	margin:0 !important;
+	padding: 0 !important;
+	width: 0%;
+}
+
+.list_icon_bar_text {
+	overflow: hidden !important;
+	color: #85939C;
+	width: 260px;
+	font-size: 12px !important;
+	text-overflow: ellipsis;
+	height: 12px;
+	line-height: 12px;
+	margin-top: 10px;
+	margin-left: -5px;
+}
+.bar_text{
+	position:absolute !important;
+	overflow: hidden !important;
+	color: #4B5A68;
+	width: 35px;
+	padding: 0 3px !important;
+	font-size: 12px !important;
+}
+</style>
+<script language="javascript" src="/web/function/remote.js?v=WDV1.02"></script>
+<script language="javascript" src="/web/function/safepoints.js?v=WDV1.02"></script>
+<script type="text/javascript">
+function page_load()
+{
+	page_unload();
+	
+	//var sys_time = (new Date()).getTime();
+	//initDiag("/web/backups/remoteDiag.html?r=" + sys_time);
+	
+	show_info();//show server info
+	init_switch();
+	
+	do_query_HD_Mapping_Info();
+	if(HDD_INFO_ARRAY.length==0)
+	{
+		$("#backups_rCreateJob_button").addClass('gray_out');
+		return;
+	}
+		
+	$("#backups_rCreateJob_button").click(function(){
+		create_job();
+	});
+
+    $("#backups_rEncryption_switch").click(function(){
+    	if($("#backups_rEncryption_switch").hasClass("gray_out")) return;
+		var v = getSwitch('#backups_rEncryption_switch');
+		if( v==1)
+		{
+			$("#enc1_tr,#enc2_tr").show();
+			var h = $("#remoteDiag").height()+80;
+						
+			adjust_dialog_size("#remoteDiag",750,h);
+		}
+		else
+		{
+			$("#enc1_tr,#enc2_tr").hide();
+			var h = $("#remoteDiag").height()-80;
+						
+			adjust_dialog_size("#remoteDiag",750,h);
+		}
+	});
+
+	$("#tip_ip,#tip_ip2").attr('title',_T('_tip','remote_ip'));
+	$("#tip_autoupdate").attr('title',_T('_tip','autoupdate_remote'));
+	$("#tip_name").attr('title',_T('_tip','remote_ssh'));
+	
+	init_tooltip();	
+
+	get_remote_backup_list();	
+}
+var RemoteTimeoutId=-1;
+function page_unload()
+{
+	clearTimeout(RemoteTimeoutId);
+}	
+</script>
+<style>
+.ui-progressbar {
+    border: 0;
+    background-color: #DCDCDC;
+}
+.ui-widget-header {
+    background: #15ABFF;
+}
+
+.ui-widget-content {
+    background: #15ABFF;
+}
+
+.ui-progressbar .ui-progressbar-value {
+    border: 0;
+    border-radius: 0 !important;
+    margin: 0;
+}
+</style>
+<body>
+ 	<div class="h1_content header_2 _text" lang="_remote_backup" datafld="about"></div>
+	<div class="field_top _text" lang="_remote_backup" datafld="desc" id="remote_desc_div"></div>
+	<div class="hr_0_content"><div class="hr_1"></div></div>
+	<button type="button" id="backups_rCreateJob_button"><span class="_text" lang="_remote_backup" datafld="create"></span></button>
+	<div id="backups_rList_value" style="display:none">
+	<div class="hr_0_content"><div class="hr_1"></div></div>
+	<div class="h1_content header_2 _text" lang="_remote_backup" datafld="remote_title1"></div>
+		<div class="field_top _text" lang="_remote_backup" datafld="desc2" style="display:none"></div>
+	<div class="field_top" id="remote_list"></div>
+	<div class="field_top" id="remote_list_info" style="display:none"></div>	
+	</div>
+<p></p>
+<!-- dialog-->
+<div id="rDetailDiag" class="WDLabelDiag">
+	<div class="WDLabelHeaderDialogue WDLabelHeaderDialogueBackupIcon" id="rDetailDiag_title"></div>
+	<div align="center"><div class="hr"><hr/></div></div>
+	
+	<!-- detailDiag -->
+	<div id="detailDiag" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<table width="580" border="0" cellspacing="0" cellpadding="0" height="0" style='table-layout:fixed'>
+				<tr>
+					<td width="170"><span class="_text field" lang="_remote_backup" datafld="task"></span></td>
+					<td id="job_name"></td>
+				</tr>
+				<tr>
+					<td class="tdfield_170"><span class="_text" lang="_remote_backup" datafld="ip"></span></td>
+					<td class="tdfield_padding" id="detail_remote_ip"></td>
+				</tr>
+				<tr>
+					<td class="tdfield_170" id="detail_source_label"><span class="_text" lang="_usb_backups" datafld="source_dir"></span></td>
+					<td class="tdfield_padding">
+						<table border="0" cellspacing="0" cellpadding="0" height="0">
+							<tr>
+								<td id="detail_source_td" width="247">
+									<div id="detail_local_share_div"></div>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td class="tdfield_170"><span class="_text" lang="_usb_backups" datafld="dest_dir"></span></td>
+					<td class="tdfield_padding" id="detail_remote_share"></td>
+				</tr>
+				<tr style="display:none">
+					<td class="tdfield_170"><span class="_text" lang="_monitor" datafld="bandwidth"></span></td>
+					<td class="tdfield_padding" id="detail_bandwidth"></td>
+				</tr>
+				<tr>
+					<td class="tdfield_170"><span class="_text" lang="_remote_backup" datafld="backup_status"></span></td>
+					<td class="tdfield_padding" id="last_updated"></td>
+				</tr>
+				<tr style="display:none">
+					<td class="tdfield_170"><span class="_text" lang="_remote_backup" datafld="recover_status"></span></td>
+					<td class="tdfield_padding" id="recover_last_update"></td>
+				</tr>
+				<tr style="display:none">
+					<td class="tdfield_170"><span class="_text" lang="_remote_backup" datafld="size"></span></td>
+					<td class="tdfield_padding" id="detail_size"></td>
+				</tr>
+				<tr>
+					<td class="tdfield_170"><span class="_text" lang="_usb_backups" datafld="backup_type"></span></td>
+					<td class="tdfield_padding" id="detail_type"></td>
+				</tr>
+				<tr>
+					<td class="tdfield_170"><span class="_text" lang="_remote_backup" datafld="recurrence"></span></td>
+					<td class="tdfield_padding" id="detail_schedule"></td>
+				</tr>
+				<tr>
+					<td class="tdfield_170"><span class="_text" lang="_remote_backup" datafld="transfer_encryption"></span></td>
+					<td class="tdfield_padding" id="detail_remote_backup_with_ssh"></td>
+				</tr>
+			</table>
+		</div>
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonRightPos2 close" id="backups_rDetailClose_button"><span class="_text" lang="_button" datafld="close"></span></button>
+	</div>
+</div>
+				
+<div id="remoteDiag" class="WDLabelDiag">
+	<div class="WDLabelHeaderDialogue WDLabelHeaderDialogueBackupIcon" id="remoteDiag_title"><span class="_text" lang="_remote_backup" datafld="remote_title4"></span></div>
+	<div align="center"><div class="hr"><hr/></div></div>
+		<!-- rDiag_mainPage -->
+		<div id="rDiag_mainPage" style="display:none">
+			<div class="WDLabelBodyDialogue">
+				<table border="0" cellspacing="0" cellpadding="0" height="0">
+					<tr>
+						<td><span class="_text field" lang="_remote_backup" datafld="job_name"></span></td>
+						<td>
+							<input style="width: 200px;" type="text" name="backups_rJobName_text" id="backups_rJobName_text" maxlength="16" value="">
+						</td>
+					</tr>
+					<tr>
+						<td class="tdfield"><span class="_text" lang="_remote_backup" datafld="server"></span></td>
+						<td class="tdfield_padding">
+							<div id="backups_rServerType" class="select_menu"></div>
+						</td>
+					</tr>
+					<tr>
+						<td class="tdfield"><span class="_text" lang="_remote_backup" datafld="ip"></span></td>
+						<td class="tdfield_padding">
+							<table border="0" cellspacing="0" cellpadding="0" height="0">
+								<tr>
+									<td><input style="width: 200px;" type="text" name="backups_rIP_text" id="backups_rIP_text" value=""></td>
+									<td style="padding-left:10px;"><div class="TooltipIcon" id="tip_ip"></div></td>
+								</tr>
+							</table>
+							
+						</td>
+						<td style="padding-left:10px;">
+						</td>
+					</tr>
+					<tr id="backups_userName" style="display:none">
+						<td class="tdfield"><span class="_text" lang="_user" datafld="user_name"></span></td>
+						<td class="tdfield_padding"><input value="" style="width: 200px;" type="password" name="backups_rsyncName_text" id="backups_rsyncName_text" maxlength="16"></td>
+					</tr>
+					<tr>
+						<td class="tdfield"><span class="_text" lang="_remote_backup" datafld="pw"></span></td>
+						<td class="tdfield_padding"><input value="" style="width: 200px;" type="password" name="backups_rpw_password" id="backups_rpw_password" maxlength="16"></td>
+					</tr>
+					<tr id="backups_encryption" style="display:none">
+						<td class="tdfield"><span class="_text" lang="_remote_backup" datafld="encryption"></span></td>
+						<td class="tdfield_padding">
+							<input id="backups_rEncryption_switch" name="backups_rEncryption_switch" class="onoffswitch" type="checkbox" value="true" >
+						</td>
+					</tr>
+					<tr id="enc1_tr">
+						<td class="tdfield"><span class="_text" lang="_remote_backup" datafld="ssh_account"></span></td>
+						<td class="tdfield_padding">
+							<input style="width: 200px;" type="text" name="backups_rSSHAccount_text" id="backups_rSSHAccount_text" size="20" maxlength="16">
+						</td>
+						<td class="tdfield_padding" style="padding-left:10px;"></td>
+					</tr>
+					<tr id="enc2_tr">
+						<td class="tdfield"><span class="_text" lang="_remote_backup" datafld="ssh_pw"></span></td>
+						<td class="tdfield_padding">
+							<input value="" style="width: 200px;" type="password" name="backups_rSSHPW_password" id="backups_rSSHPW_password" maxlength="16">
+						</td>
+					</tr>
+					<tr>
+						<td class="tdfield" id="backups_source_label"><span class="_text" lang="_usb_backups" datafld="source_dir"></span></td>
+						<td class="tdfield_padding">
+							<table border="0" cellspacing="0" cellpadding="0" height="0">
+								<tr>
+									<td id="source_td" width="247">
+										<div id="backups_rSourceMulti_div" class="source_listDiv" style="width:247px">
+											<ul></ul>
+										</div>
+									</td>
+									<td id="backups_browse_label">
+										<button style="margin-left:10px;" type="button" id="backups_rBrowseSource_button"><span class="_text" lang="_button" datafld="browse"></span></button>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td class="tdfield"><span class="_text" lang="_usb_backups" datafld="dest_dir"></span></td>
+						<td class="tdfield_padding">
+							<table border="0" cellspacing="0" cellpadding="0" height="0">
+								<tr>
+									<td width="247">
+										<div id="backups_rDesc_div" class="source_listDiv" style="width:247px">
+											<ul><li><div class="select_text" id="backups_rDesc_text" style="width:240px"></div></li></ul>
+										</div>
+									</td>
+									<td>
+										<button style="margin-left:10px;" type="button" id="backups_rBrowseDest_button"><span class="_text" lang="_button" datafld="browse"></span></button>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr style="display:none">
+						<td class="tdfield"><span class="_text" lang="_remote_backup" datafld="bandwidth"></span></td>
+						<td class="tdfield_padding">
+							<div id="backups_rBandwidth" class="select_menu"></div>
+						</td>
+					</tr>
+					<tr>
+						<td class="tdfield"><span class="_text" lang="_usb_backups" datafld="backup_type"></span></td>
+						<td class="tdfield_padding">
+							<div id="backups_rType" class="select_menu"></div>
+						</td>
+					</tr>
+					<tr id="auto_update_tr">
+						<td class="tdfield" id="auto_update_td_1"><span class="_text" lang="_remote_backup" datafld="recurrence"></span></td>
+						<td class="tdfield_padding" id="auto_update_td_2">
+							<table border="0" cellspacing="0" cellpadding="0" height="0">
+								<tr>
+									<td>
+										<input id="backups_rAutoupdate_switch" name="backups_rAutoupdate_switch" class="onoffswitch" type="checkbox" value="true">
+									</td>
+									<td style="padding-left:10px;">
+										<div class="TooltipIcon" id="tip_autoupdate" style="display:none"></div>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr id="schedule_tr" style="display:none">
+						<td class="tdfield"></td>
+						<td class="tdfield_padding">
+							<div id="s_type" style="display:none"><button id="backups_rDaily_button" class="left_button" value="3"><span class="_text" lang="_mail" datafld="daily">Daily</span></button><button id="backups_rWeekly_button" class="middle_button" value="2"><span class="_text" lang="_mail" datafld="weekly">Weekly</span></button><button id="backups_rMonthly_button" class="right_button" value="1"><span class="_text" lang="_mail" datafld="monthly">Monthly</span></button></div>
+						</td>
+					</tr>
+				</table>
+				<div id="schedule_div" style="margin-top:20px">
+					<table id="daily_div" style="display:none" border="0" cellspacing="0" cellpadding="0" height="0">
+						<tr>
+							<td width="170" >
+							</td>
+							<td>
+								<div id="hour_select" class="select_menu"></div>
+							</td>
+							<td class="am_pm_td" style="display:none;padding-left:5px;">
+								<div id="daily_am_pm_select" class="select_menu"></div>
+							</td>
+						</tr>
+					</table>
+		
+					<table id="week_div" style="display:none" border="0" cellspacing="0" cellpadding="0" height="0">
+						<tr>
+							<td width="170">
+							</td>
+							<td>
+								<div id="weekly_select" class="select_menu"></div>
+							</td>
+							<td style="padding-left:5px;">
+								<div id="hour_select2" class="select_menu"></div>
+							</td>
+							<td class="am_pm_td" style="display:none;padding-left:5px;">
+								<div id="weekly_am_pm_select" class="select_menu"></div>
+							</td>
+						</tr>
+					</table>					
+
+					<table id="month_div" style="display:none" border="0" cellspacing="0" cellpadding="0" height="0">
+						<tr>
+							<td width="170">
+							</td>
+							<td>
+								<div id="day_select" class="select_menu"></div>
+							</td>
+							<td style="padding-left:5px;">
+								<div id="hour_select3" class="select_menu"></div>
+							</td>
+							<td class="am_pm_td" style="display:none;padding-left:5px;">
+								<div id="monthly_am_pm_select" class="select_menu"></div>
+							</td>
+						</tr>
+					</table>
+				</div><!-- end schedule_div-->
+				<table border="0" cellspacing="0" cellpadding="0" height="0">
+					<tr>
+						<td class="tdfield"><span class="_text" lang="_remote_backup" datafld="transfer_encryption"></span></td>
+						<td class="tdfield_padding">
+							<input id="backups_rBackupWithSSH_switch" name="backups_rBackupWithSSH_switch" class="onoffswitch" type="checkbox" value="true">
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="hrBottom2"><hr/></div>
+			<button type="button" class="ButtonMarginLeft_40px close" id="backups_rCancel_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+			<button type="button" class="ButtonRightPos2" id="backups_rCreateJobSave_button"><span class="_text" lang="_button" datafld="create"></span></button>			
+		</div>
+				
+		<!-- rDiag_folder -->
+		<div id="rDiag_folder" style="display:none">
+			<div class="WDLabelBodyDialogue">
+				<div id="shareinfo" style="display:none;margin-top:20px"></div>
+				<div style="margin-bottom:20px" class="_text" lang="_remote_backup" datafld="create_desc"></div>
+				<div id="rsync_tree_div"></div>
+			</div>
+			<div class="hrBottom2"><hr/></div>
+			<button type="button" class="ButtonMarginLeft_40px" id="backups_rCancel2_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+			<button type="button" class="ButtonRightPos2" id="backups_rNext2_button"><span class="_text" lang="_button" datafld="Ok"></span></button>
+		</div><!-- rDiag_folder end  -->	
+
+		<!-- rDiag_mycloud -->
+		<div id="rDiag_mycloud" style="display:none">
+			<div class="WDLabelBodyDialogue">
+				<div class="h1_content header_2 _text" lang="_remote_backup" datafld="remote_title6"></div>
+				<br><br>
+				<table border="0" width="630" cellspacing="0" cellpadding="0" height="0">
+					<tr>
+						<td class="tdfield"><span class="_text" lang="_user" datafld="mail_addr"></span></td>
+						<td class="tdfield_padding">
+							<input style="width: 200px;" type="text" name="backups_rCloudMail_text" id="backups_rCloudMail_text" value="">
+						</td>
+					</tr>
+					<tr>
+						<td class="tdfield"><span class="_text" lang="_login" datafld="pw"></span></td>
+						<td class="tdfield_padding">
+							<input style="width: 200px;" type="password" name="backups_rCloudPw_password" id="backups_rCloudPw_password" value="">
+						</td>
+					</tr>
+					<tr>
+						<td class="tdfield"></td>
+						<td class="tdfield_padding">
+							<div id="backups_rForgotPassword_link" class="_text" lang="_elephant_drive" datafld="forgot_password"></div>
+						</td>
+					</tr>		
+				</table>
+			</div>
+			<div class="hrBottom2"><hr/></div>
+			<button type="button" class="ButtonMarginLeft_40px" id="backups_rBack10_button"><span class="_text" lang="_button" datafld="back"></span></button>
+			<button type="button" class="ButtonMarginLeft_20px close" id="backups_rCancel10_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+			<button type="button" class="ButtonRightPos2" id="backups_rNext10_button"><span class="_text" lang="_button" datafld="Ok"></span></button>
+		</div><!-- rDiag_mycloud end  -->
+
+		<!-- rDiag_mycloud_list -->
+		<div id="rDiag_mycloud_list" style="display:none">
+			<div class="WDLabelBodyDialogue">
+				<div class="h1_content header_2 _text" lang="_remote_backup" datafld="remote_title7"></div>
+				<br><br>
+				
+				<table border="0" cellspacing="0" cellpadding="0" height="0">
+					<tr>
+						<td>
+							<div id="backups_rLeft_link" class="CButtonArrowLeft gray_out" onmousedown="scrollDivLeft('main_cloud')">
+							    <div class="ButtonArrowLeftListUp"></div>
+							</div>
+						</td>
+						<td>
+							<div style="width:554px;overflow:hidden">
+								<div id="cloud_container" class="cloud_container">
+									<nav class="cloud_nav" id="main_cloud">
+										<ul style="width: 1258px;margin-top: 0px;padding-left: 0px;" class="cloud_container_ul"></ul>
+									</nav>
+								</div>
+							</div>
+						</td>
+						<td>
+							<div id="backups_rRight_link" class="CButtonArrowRight" onmousedown="scrollDivRight('main_cloud')">
+							    <div class="ButtonArrowRightListUp"></div>
+							</div>
+						</td>
+					</tr>
+					
+				</table>				
+
+			</div>
+			<div class="hrBottom2"><hr/></div>
+			<button type="button" class="ButtonMarginLeft_40px" id="backups_rBack12_button"><span class="_text" lang="_button" datafld="back"></span></button>
+			<button type="button" class="ButtonMarginLeft_20px close" id="backups_rCancel12_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+			<button type="button" class="ButtonRightPos2" id="backups_rNext12_button"><span class="_text" lang="_button" datafld="Next"></span></button>
+		</div><!-- rDiag_mycloud_list end  -->
+
+		<!-- rDiag_mycloud_list_error -->
+		<div id="rDiag_mycloud_list_error" style="display:none">
+			<div class="WDLabelBodyDialogue">
+				<div class="h1_content header_2 _text" lang="_remote_backup" datafld="remote_title8"></div>
+				<br><br>				
+				<div class="_text" lang="_remote_backup" datafld="desc6"></div>
+			</div>
+			<div class="hrBottom2"><hr/></div>
+			<button type="button" class="ButtonMarginLeft_40px" id="backups_rBack11_button"><span class="_text" lang="_button" datafld="back"></span></button>
+		</div><!-- rDiag_mycloud_list_error end  -->
+		
+		<!-- rDiag_share_set -->
+		<div id="rDiag_share_set" style="display:none">
+			<div class="WDLabelBodyDialogue">
+				<div id="size_info" style="display:none"></div>
+				<div id="rsync_test_info"></div>
+				<table border="0" cellspacing="0" cellpadding="0" height="0">
+					<tr>
+						<td>
+							<div id="remote_shareinfo" style="display:none;margin-top:20px"></div>
+							<br>
+							<div class="remote_scrollbar" id="r_share_info">
+								<div id="f_share_name"></div>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="hrBottom2"><hr/></div>
+			<button type="button" class="ButtonMarginLeft_40px" id="backups_rCancel5_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+			<button type="button" class="ButtonRightPos2" id="backups_rNext5_button"><span class="_text" lang="_button" datafld="Ok"></span></button>
+			
+		</div><!-- rDiag_share_set end  -->
+</div>	<!-- remoteDiag end -->
+
+<div id="recoverDiag" class="WDLabelDiag">
+	<div class="WDLabelHeaderDialogue WDLabelHeaderDialogueBackupIcon" id="rDiag_title"><span class="_text" lang="_remote_backup" datafld="remote_title9"></span></div>
+	<div align="center"><div class="hr"><hr/></div></div>
+	<!-- rDiag -->
+	<div id="rDiag">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<div id="restore_listDiv"></div>
+			</div>
+		</div>
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" class="ButtonRightPos2 close" id="backups_rRcoverCancel_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+	</div>
+</div>
+
+
+</body>
+</html>

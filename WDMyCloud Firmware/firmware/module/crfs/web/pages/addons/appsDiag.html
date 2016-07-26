@@ -1,0 +1,186 @@
+<!-- Apps Dialog  -->
+<div id="Apps_Diag" class="WDLabelDiag">
+<div class="WDLabelHeaderDialogue" id="AppsDiag_title"><span class="_text" lang="_module" datafld="desc22">Apps Details</span></div>
+<div align="center"><div class="hr"><hr></div></div>
+	
+	<!-- 2.Apps Install Dialog -->
+	<div id="AppsDiag_install" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content" id="Apps_Install">
+				<span class="_text" lang="_module" datafld="msg2"></span>
+			</div>
+		</div>	
+	</div><!-- 2.Apps Install Dialog -->
+	
+	<!-- 3.Browse Apps Dialog : List -->
+	<div id="AppsDiag_Browse_List" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<table cellspacing="0" cellpadding="0" border="0" width="550px">
+				<tr><td><span class="_text" lang="_module" datafld="desc18"></span></td></tr>
+				<tr><td height="10px"></td></tr>
+				<tr id="TR_AppsDiag_Browse_title1" style="display:none"><td><b><span class="_text" lang="_module" datafld="desc11"></span></b></td></tr>
+				<tr id="TR_AppsDiag_Browse_Flexgrid" style="display:none">
+					<td>
+						<div class="flexigrid scroll-pane" style="width: 550px;height:180px;border: 0px solid red;">
+								<div class="hDiv">
+									<div class="hDivBox">
+										<table cellspacing="0" cellpadding="0">
+											<thead>
+												<tr>
+													<th align="left" abbr="f_idx" axis="col0"><div style="text-align: left; width: 40px;">--</div></th>
+													<th align="left" abbr="f_lun" axis="col1"><div style="text-align: left; width: 300px;">--</div></th>
+													<th align="left" abbr="f_size" axis="col2"><div style="text-align: left; width: 200px;">--</div></th>
+												</tr>
+											</thead>
+										</table>
+									</div><!-- hDivBox -->
+								</div><!-- hDiv -->
+								<div class="bDiv" style="height: 100%;">
+									<table cellspacing="0" cellpadding="0" border="0">
+										<tbody id="Apps_Browse_List"></tbody>
+									</table>
+								</div><!-- bDiv -->
+						</div><!-- flexigrid -->
+					</td>
+				</tr>
+				<tr id="SPAN_no_available_apps_desc" style="display:none;">	
+					<td valign="top"><span class="_text" lang="_module" datafld="desc31"></span></td>				
+				</tr>
+				<tr>	
+					<td  id="TR_AppsDiag_Browse_Manually_Install">
+						<table border="0" width="100%" style="border-collapse: separate; border-spacing: 5px;position: relative; left: -8px;">
+							<tr>
+								<td align="right">
+									<div id="AppsDiag_Manually_Install"></div>
+								</td>
+							</tr>
+						</table>
+					</td>				
+				</tr>		
+				</table>
+			</div>
+		</div>	
+		
+		<div class="hrBottom2"><hr></div>
+		<button type="button" id="Apps_Cancel1_button" class="ButtonLeftPos close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="Apps_next_button_3" class="ButtonRightPos1 grayout"><span class="_text"  lang="_module" datafld="desc12"></span></button>
+	</div><!-- 3.Apps Install Dialog -->
+	
+	
+	<!-- 4.Browse Apps Dialog : Install State -->
+	<div id="AppsDiag_InstallApps_State" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<div style="margin: 0px auto;text-align:center;line-height:25px;width:80%;" id="Apps_InstallApps_State" class="_text" lang="_module" datafld="desc13"></div>
+				<div style="margin: 0px auto;width:80%;" id="Apps_InstallApps_parogressbar"></div>
+				<div style="margin: 0px auto;text-align:center;line-height:25px;width:80%;" id="Apps_InstallApps_Desc"></div>
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="apps_cancel_button_4" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+	</div>
+	
+	<!-- 5.Apps Upgrade Dialog : -->
+	<div id="AppsDiag_Upgrade" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content  scroll-pane">
+				<div id="app_update_desc"></div>
+				<table border="0"  cellspacing="0" cellpadding="0" height="0" width="100%">
+				<tr>
+					<td class="tdfield" style="width:100px;"><span class="_text" lang="_menu" datafld="addon"></span> :</td>
+					<td class="tdfield_padding"><div id="apps_upgrade_apps"></div></td>	
+				</tr>
+				<tr>
+					<td class="tdfield" style="width:100px;"><span class="_text" lang="_module" datafld="version">Version</span>:</td>
+					<td class="tdfield_padding"><div id="apps_upgrade_version"></div></td>	
+				</tr>
+				<tr>
+					<td class="tdfield" style="width:100px;vertical-align:top;"><span class="_text" lang="_module" datafld="desc24"></span>:</td>
+					<td class="tdfield_padding"><div id="apps_upgrade_releasenote" style="border:0px solid red;"></div></td>	
+				</tr>	
+				</table> 
+				
+			</div>
+		</div>	
+		
+		<div class="hrBottom2"><hr></div>
+		<button type="button" id="Apps_Cancel5_button" class="ButtonLeftPos close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="apps_back_button_5" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="back"></span></button>
+	</div><!-- 5.Apps Install Dialog -->
+	
+	
+	<!-- 6.Apps Upgrade List Dialog : -->
+	<div id="AppsDiag_Upgrade_List" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content scroll-pane">
+				<table cellspacing="0" cellpadding="0" border="0">
+				<tr><td><span class="_text" lang="_module" datafld="desc30"></span></td></tr>
+				<tr>
+					<td>
+						<div class="flexigrid" style="width: 550px;">
+								<div class="hDiv">
+									<div class="hDivBox">
+										<table cellspacing="0" cellpadding="0">
+											<thead>
+												<tr>
+													<th align="left" abbr="f_idx" axis="col0"><div style="text-align: left; width: 40px;">idx</div></th>
+													<th align="left" abbr="f_lun" axis="col1"><div style="text-align: left; width: 300px;">Apps Name</div></th>
+													<th align="left" abbr="f_size" axis="col2"><div style="text-align: left; width: 200px;">Details</div></th>
+												</tr>
+											</thead>
+										</table>
+									</div><!-- hDivBox -->
+								</div><!-- hDiv -->
+								<div class="bDiv" style="height: 100%;">
+									<table cellspacing="0" cellpadding="0" border="0">
+										<tbody id="Apps_Upgrade_List"></tbody>
+									</table>
+								</div><!-- bDiv -->
+						</div><!-- flexigrid -->
+					</td>
+				</tr>
+				</table>
+			</div>
+		</div>	
+		
+		<div class="hrBottom2"><hr></div>
+		<button type="button" id="Apps_Cancel6_button" class="ButtonLeftPos close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="apps_next_button_6" class="ButtonRightPos1"><span class="_text" lang="_module" datafld="desc25"></span></button>
+	</div><!-- 6.Apps Install Dialog -->
+	
+	<!-- 7.Apps Eula Dialog : -->
+	<div id="AppsDiag_Eula" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<table cellspacing="0" cellpadding="0" border="0">
+					<tr><td><span class="_text" lang="_module" datafld="desc34"></span></td></tr>
+					<tr>
+						<td class="tdfield" >
+							<div id="AppsEulaText" style="width:600px;height:250px">
+									<iframe id="AppsEula_iframe" ></iframe>
+							</div>
+						</td>
+					</tr>
+				</table>	
+			</div>
+		</div>	
+		
+		<div class="hrBottom2"><hr></div>
+		<button type="button" id="Apps_Cancel7_button" class="ButtonLeftPos close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="apps_next_button_7" class="ButtonRightPos1"><span class="_text" lang="_module" datafld="button2"></span></button>
+	</div><!-- 7.Apps Eula Dialog  -->
+	
+	<!-- 8.Error Msg for Apps install: fw version issue -->
+	<div id="AppsDiag_ErrorMSG_FW" style="display:none">
+		<div class="WDLabelBodyDialogue" style="width:300px;height:85px;">
+			<div class="dialog_content">
+				<span class="_text" lang="_module" datafld="msg17"></span>
+			</div>
+		</div>	
+		
+		<div class="hrBottom2"><hr></div>
+		<button type="button" id="Apps_UpdateFirmware8_button" class="ButtonLeftPos"><span class="_text" lang="_firmware" datafld="title"></span></button>
+		<button type="button" id="Apps_OK8_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Ok"></span></button>
+</div><!-- end of Apps Dialog -->

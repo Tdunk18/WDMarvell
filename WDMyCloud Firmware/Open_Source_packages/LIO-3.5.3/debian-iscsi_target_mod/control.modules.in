@@ -1,0 +1,20 @@
+Source: iscsi-target-mod
+Section: unknown
+Priority: optional
+Maintainer: Nicholas A. Bellinger (nab) <nab@risingtidesystems.com>
+Build-Depends: debhelper (>= 5)
+Standards-Version: 3.7.2
+
+Package: iscsi-target-mod-module-_KVERS_
+Architecture: any
+Provides: iscsi-target-mod-module
+Description: iscsi_target_mod kernel module for Linux (kernel _KVERS_).
+ This package contains the loadable kernel module for the
+ LIO iscsi_target_mod fabric module.
+ .
+ This package contains the compiled kernel module for _KVERS_
+ .
+ If you have compiled your own kernel, you will most likely need to build
+ your own iscsi-target-mod-module. The iscsi-target-mod-source package has been
+ provided for use with the Debian's module-assistant or kernel-package
+ utilities to produce a version of iscsi-target-mod-module for your kernel.

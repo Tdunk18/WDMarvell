@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="MS-HAID" content="Creating an Amazon S3 Cloud Backup" />
+<meta http-equiv="Content-Language" content="es-ES" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Crear una copia de seguridad en la nube con Amazon S3</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Hacer una copia de seguridad en la nube personal\nCopias de seguridad en la nube\nCrear una copia de seguridad en la nube con Amazon S3");
+addButton("show",BTN_TEXT,"Mostrar","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("index.htm", "", ">", "Inicio", "welcome.htm");
+document.write("<a href=\"Creating_a_USB_Backup.htm\">Hacer una copia de seguridad en la nube personal<\/a> > <a href=\"What_is_a_Cloud_Backup.htm\">Copias de seguridad en la nube<\/a> > Crear una copia de seguridad en la nube con Amazon S3<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Crear una copia de seguridad en la nube con Amazon S3</h1>
+<p class="Body"><span style="font-weight: bold;">Nota</span>: Antes de 
+ crear la copia de seguridad en la nube, regístrese en el servicio Amazon 
+ S3 en <a href="http://aws.amazon.com/s3" target="_blank">http://aws.amazon.com/s3</a>.</p>
+<p class="Body">Cuando su cuenta de Amazon S3 esté configurada, siga estos 
+ pasos para crear una copia de seguridad en la nube.</p>
+<ol style="list-style: square;">
+	<li style="list-style: none; display: inline;"><ol style="list-style: decimal;">
+		<li class="n1">Haga clic en <b>Copias de seguridad</b>.</li>
+		<li class="n1">Haga clic en <span style="font-weight: bold;">Copias 
+		 de seguridad en la nube</span>.</li>
+		<li class="n1">Haga clic en el botón <b>Amazon S3</b> situado en 
+		 la parte superior de la pantalla.<img src="Graphics/image016.png" 
+												 alt="" width="90" height="18" 
+												 border="0" /></li>
+		<li class="n1">Haga clic en <b>Crear</b>.</li>
+		<li class="n1">Introduzca un nombre de trabajo para la copia de 
+		 seguridad en la nube.</li>
+		<li class="n1">Haga clic en <b>Siguiente</b>.</li>
+		<li class="n1">Introduzca la siguiente información suministrada 
+		 por Amazon S3:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold;">Región</b>: Seleccione 
+		 la región utilizada en su nube en el menú desplegable.</li>
+		<li class="b1"><b style="font-weight: bold;">Clave de acceso</b>: 
+		 Introduzca la clave de acceso suministrada por Amazon S3.</li>
+		<li class="b1"><b style="font-weight: bold;">Clave privada</b>: 
+		 Introduzca la clave privada suministrada por Amazon S3.</li>
+		<li class="b1"><b style="font-weight: bold;">Ruta de acceso remota</b>: 
+		 Introduzca la ruta de acceso remota para su nube. Normalmente 
+		 es el nombre del depósito.</li>
+	</ul>
+	<ol start="8" style="list-style: decimal;">
+		<li class="n1">Haga clic en <b>Siguiente</b>.</li>
+		<li class="n1">En el campo Tipo, seleccione una de las siguientes 
+		 opciones:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold;">Cargar:</b> hace una 
+		 copia de seguridad de los datos de My Cloud Mirror en el depósito 
+		 de Amazon S3.</li>
+		<li class="b1"><b style="font-weight: bold;">Descargar:</b> hace 
+		 una copia de seguridad del depósito de Amazon S3 en el servidor 
+		 My Cloud Mirror.</li>
+	</ul>
+	<ol start="10" style="list-style: decimal;">
+		<li class="n1">En el campo Tipo de copia de seguridad, seleccione 
+		 el tipo de copia de seguridad que desea realizar mediante el menú 
+		 desplegable. Entre las opciones se incluyen:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b>Sobrescribir archivos existentes</b>: Sobrescribe 
+		 los archivos de la carpeta de destino que tengan nombres idénticos 
+		 a los del archivo de origen.</li>
+		<li class="b1"><b style="font-weight: bold;">Copia de seguridad 
+		 completa</b>: Crea una carpeta independiente que contiene todos 
+		 los datos de la copia de seguridad cada vez que se realiza una 
+		 copia de seguridad.</li>
+		<li class="b1"><b style="font-weight: bold;">Copia de seguridad 
+		 incremental</b>: Sobrescribe los archivos cuyos archivos de origen 
+		 son más recientes que los archivos de destino.</li>
+	</ul>
+	<ol start="11" style="list-style: decimal;">
+		<li class="n1">Haga clic en <span style="font-weight: bold;">Siguiente</span>.</li>
+		<li class="n1">En el campo Ruta de acceso local, introduzca una 
+		 ruta para la copia de seguridad en el dispositivo My Cloud Mirror.</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">Haga clic en <span style="font-weight: bold;">Examinar</span> 
+		 para buscar una ubicación para la copia de seguridad en el dispositivo.<br />
+		(Ejemplo: Volume_1/backup)</li>
+	</ul>
+	<ol start="13" style="list-style: decimal;">
+		<li class="n1">Haga clic en <img src="Graphics/toggle_button.png" 
+										 alt="" width="20" height="15" 
+										 border="0" />&#160;&#160;para 
+		 activar la función Actualización automática. Esto actualiza automáticamente 
+		 la copia de seguridad según un programa creado por usted.</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">Si activa la función Actualización automática:</li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: circle;">
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">Seleccione 
+			 la programación de la actualización automática: A diario, 
+			 Cada semana o Cada mes.</p></li>
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">Seleccione 
+			 la hora de actualización automática en el menú desplegable 
+			 (opción A diario).</p></li>
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">Seleccione 
+			 la fecha y la hora de actualización automática en los menús 
+			 desplegables (opciones Cada semana o Cada mes).</p></li>
+		</ul></li>
+	</ul>
+	<ol start="14" style="list-style: decimal;">
+		<li class="n1">Haga clic en <b>Siguiente</b>.</li>
+		<li class="n1">Revise la configuración y, a continuación, haga 
+		 clic en <b>Finalizar</b>. Se ha creado la copia de seguridad en 
+		 la nube de Amazon S3.</li>
+	</ol></li>
+</ol>
+<p class="Body" style="margin-left: 60px;"><span style="font-weight: bold;">NOTA</span>: 
+ Acceda al depósito de la copia de seguridad en la nube de Amazon S3 para 
+ ver las copias de seguridad de su dispositivo.</p>
+<p class="ListContinue2CxSpLast">&#160;</p>
+<p>
+<a href="javascript:void(0);" onclick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) &gt;=2 &amp;&amp; typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','Habilitar una copia de seguridad en la nube con ElephantDrive','Enabling_an_ElephantDrive_Cloud_Backup.htm','Qué es una copia de seguridad en la nube','What_is_a_Cloud_Backup.htm');return false;" title="Ver también"><img src="ss_btn_ver_también.gif" border="0" height="17" width="68" alt="Ver también" /></a>
+
+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt;">© 2015 Western Digital Technologies, Inc. 
+	 <span style="line-height: 115%; mso-ascii-theme-font: minor-latin; 
+			 mso-fareast-font-family: SimSun; mso-fareast-theme-font: minor-fareast; 
+			 mso-hansi-theme-font: minor-latin; mso-bidi-font-family: Arial; 
+			 mso-bidi-theme-font: minor-bidi; mso-ansi-language: ES; mso-fareast-language: ZH-CN; 
+			 mso-bidi-language: AR-SA; font-family: Arial, sans-serif;">Todos 
+	 los derechos reservados.</span></p>
+</div>
+<script type="text/javascript" language="JavaScript">//<![CDATA[
+if (parseInt(navigator.appVersion) >= 3 && typeof (WritePopupMenuLayer) == "function")
+  WritePopupMenuLayer();
+//]]></script><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>
+

@@ -1,0 +1,1354 @@
+#!/bin/sh
+
+source /usr/local/modules/files/project_features
+SUPPORT_BONDING=$PROJECT_FEATURE_BONDING
+#echo "PROJECT_FEATURE_MYPHOTO=$PROJECT_FEATURE_MYPHOTO"
+
+lan_init()
+{
+  local MODEL=`xmldbc -g /hw_ver`
+
+  if [ "$MODEL" = "WDMyCloud" ]; then
+   phy_link_led.sh
+  fi
+
+  if [ ! -e /usr/sbin/ipv6.sh ]; then
+    echo "*** execute rc.init.sh"
+    ip.sh booting
+  else
+    ipv6_install.sh		# for ipv6
+
+    echo "*** execute rc.init.sh"
+    ip.sh booting
+
+    # for ipv6
+    IPV6_MODE0=`xmldbc -g '/network_mgr/lan0/ipv6/mode'`
+    if [ "$IPV6_MODE0" != "off" ]; then
+    	ipv6.sh 0 start &
+    fi
+
+    if [ "$SUPPORT_BONDING" == "1" ]; then
+    	BOND_ENABLE=$(xmldbc -g "/network_mgr/bonding/enable")
+    else
+    	BOND_ENABLE=0
+    fi
+
+    if [ "$BOND_ENABLE" == "1" ]; then
+    	IPV6_MODE1="off"
+    else
+    	IPV6_MODE1=`xmldbc -g '/network_mgr/lan1/ipv6/mode'`
+    fi
+
+    if [ "$IPV6_MODE1" != "off" ]; then
+    	ipv6.sh 1 start &
+    fi
+
+    if [ "$IPV6_MODE0" = "dhcp" -o "$IPV6_MODE1" = "dhcp" ]; then
+    	dhcp6c.sh 0 start &
+    fi
+
+    ENABLE=`xmldbc -g '/network_mgr/lan0/tunnel_broker/enable'`
+    if [ "$ENABLE" = "1" ]; then
+    	tunl_broker.sh 0 start &
+    fi
+    ENABLE=`xmldbc -g '/network_mgr/lan1/tunnel_broker/enable'`
+    if [ "$ENABLE" = "1" ]; then
+    	tunl_broker.sh 1 start &
+    fi
+    # for ipv6 (end)
+
+    # enable QoS for DLNA CTT
+    if [ "$MODEL" = "WDMyCloudEX4" ]; then
+    	vconfig add bond0 0
+    fi
+	fi
+}
+
+one_bay_init()
+{
+  cp /usr/local/modules/usrsbin/memory_rw /usr/sbin/
+  cp /usr/local/modules/usrlib/libshare.so /lib/
+  cp /usr/local/modules/lib/libxmldbc.so /lib/
+  cp /usr/local/modules/usrsbin/lbr /usr/sbin/
+  cp /usr/local/modules/script/led_brloop.sh /usr/sbin/
+  cp /usr/local/modules/bin/hdparm /usr/bin/
+  cp /usr/local/modules/usrsbin/rlog /usr/sbin/
+  #cp /usr/local/modules/usrsbin/offl_chk /usr/sbin/
+  cp /usr/local/modules/usrlib/libalert.so /lib/
+  cp /usr/local/modules/lib/libxml2.so.2.7.4 /lib/
+  cp /usr/local/modules/usrlib/libtemperature.so /lib/
+  cp /usr/local/modules/usrlib/libmipc.so /lib/
+  cp /usr/local/modules/usrlib/libalpha_common.so /lib/
+
+}
+
+copy_ipv6_config()
+{
+	mkdir /etc/wide-dhcpv6
+	cp /usr/local/config/dhcp6c.conf /etc/wide-dhcpv6
+	cp /usr/local/config/gogoc.conf /etc
+}
+
+# mount tmpfs and make system directories
+cp -a /tmp /tmp1
+busybox mount -t tmpfs -o size=1m,nr_inodes=0 tmpfs /mnt
+busybox mount -t tmpfs -o size=40m,nr_inodes=0 tmpfs /var/log
+busybox mount -t tmpfs -o size=100m,nr_inodes=20000 tmpfs /tmp
+sh /usr/local/modules/script/init_dir.sh
+cp -af /tmp1/* /tmp
+rm -rf /tmp1
+
+ln -s /usr/local/modules/lib/* /lib/. 2>/dev/null
+ln -s /usr/local/modules/bin/* /usr/bin/.
+ln -s /usr/local/modules/sbin/* /usr/sbin/.
+ln -s /usr/local/modules/script/* /usr/sbin/.
+rm /usr/sbin/pre_usb.sh
+linkfile /usr/local/modules/rsync/ /usr/sbin/
+linkfile /usr/local/modules/cgi/ /var/www/cgi-bin/
+linkfile /usr/local/modules/cgi/backup_mgr/ /var/www/cgi-bin/
+linkfile /usr/local/modules/cgi/app_mgr/ /var/www/cgi-bin/
+linkfile /usr/local/modules/cgi/download_mgr/ /var/www/cgi-bin/
+linkfile /usr/local/modules/cgi/disk_mgr/ /var/www/cgi-bin/
+ln -s /usr/local/modules/usrsbin/* /usr/sbin/.
+rm -f /bin/sync # /usr/sbin/sync is a script that avoid some situation to call sync to cause system hang
+ln -s /usr/local/modules/usrlib/* /lib/.
+if [ -d /usr/local/modules/usrlib/php ]; then
+    ln -s /usr/local/modules/usrlib/php /usr/local/lib/php
+fi
+ln -s /usr/local/modules/web/modules /usr/lighty_lib
+mkdir /usr/local/sbin
+ln -s /usr/local/modules/localsbin/* /usr/local/sbin/.
+ln -s /usr/local/sbin/incUpdateCount.pm /usr/local/sbin/inc_update_counts.sh
+
+mkdir /usr/local/bin
+ln -s /usr/local/modules/localbin/* /usr/local/bin/.
+
+mkdir /etc/nas/
+ln -s /usr/local/modules/files/nas/* /etc/nas/.
+
+#for support WD app
+mkdir /usr/local/etc/
+
+if [ -e /usr/bin/bash ]; then
+	rm /usr/bin/bash
+fi
+
+ln -s /usr/local/modules/bin/bash /bin/
+
+## special case ##
+ln -s  /usr/local/modules/web/pages /var/www/web
+#ln -s  /usr/local/modules/web/photo_center /var/www/photo_center
+#ln -s  /usr/local/modules/web/share /var/www/share
+
+#ln -s  /usr/local/modules/htdocs /var/www/htdocs
+cp -a /usr/local/modules/htdocs /var/www/
+#ln -s  /usr/local/modules/rest-api /var/www/rest-api
+cp -a /usr/local/modules/rest-api /var/www/
+#ln -s  /usr/local/modules/localnas /usr/local/nas
+cp -a /usr/local/modules/localnas /usr/local/nas
+#ln -s  /usr/local/modules/localorion /usr/local/orion
+cp -a  /usr/local/modules/localorion /usr/local/orion
+chmod 644 /usr/local/orion/communicationmanager/comm_mgr_wd.sh
+#ln -s  /usr/local/modules/apache2 /etc/apache2
+cp -a  /usr/local/modules/apache2 /etc/
+cp -a /usr/local/modules/etc/* /etc/
+#ln -s  /usr/local/modules/wdcomp.d /etc/wdcomp.d
+cp -a  /usr/local/modules/wdcomp.d /etc/
+ln -s /var/www/rest-api/api/Shares/src/Shares/Cli/crud_share_db.php /usr/local/sbin/crud_share_db.sh
+ln -s /var/www/rest-api/api/Remote/src/Remote/Cli/send_invite_email.php /usr/local/sbin/send_invite_email.sh
+ln -s /var/www/rest-api/api/Alerts/src/Alerts/Cli/alert_email_config.php /usr/local/sbin/alert_email_config.sh
+
+
+if [ -e /usr/bin/dmesg ]; then
+	rm /bin/dmesg
+	mv /usr/bin/dmesg /bin/
+fi
+
+#Add the link +20140715.VODKA
+ln -s /usr/local/orion/ /usr/
+
+ln -s /var/www/rest-api/api/Filesystem/src/Filesystem/Cli/volume_mount.php /usr/local/sbin/volume_mount.sh
+
+#ADD the link +20140716.VODKA
+ln -s /var/www/rest-api/api/System/src/System/Device/Cli/update_count_get.php /usr/local/sbin/update_count_get.sh
+ln -s /var/www/rest-api/api/System/src/System/Device/Cli/update_count_set.php /usr/local/sbin/update_count_set.sh
+
+ln -s /usr/local/modules/web/config/crossdomain.xml /var/www/crossdomain.xml
+#ln -s  /usr/local/modules/web/MyMusic /var/www/MyMusic
+ln -s /usr/local/modules/default /usr/local/default
+ln -s /usr/local/modules/script/default.script /usr/share/udhcpc/
+ln -s /usr/local/modules/script/zcip.script /usr/share/udhcpc/
+ln -s /usr/local/modules/files/terminfo /usr/share/
+[ ! -d /usr/share/doc ] && mkdir -p /usr/share/doc
+ln -s /usr/local/modules/files/admin-rest-api /usr/share/doc/
+ln -s /usr/local/modules/script/language.sh /usr/sbin/
+mkdir /opt
+ln -s /usr/local/modules/perl5.10 /opt/perl5.10
+ln -s /usr/local/modules/firefly/firefly /usr/local/
+#ln -s /usr/local/modules/firefly/libid3tag.so.0 /usr/local/lib
+#ln -s /usr/local/modules/firefly/libsqlite3.so.0 /usr/local/lib
+#ln -s /usr/local/modules/firefly/chardetect.so /usr/local/lib
+ln -s /usr/local/firefly /opt/
+ln -s /usr/local/firefly/sbin/mt-daapd /usr/bin/mt-daapd
+#ln -s /usr/local/modules/firefly/firefly/sbin/mt-daapd /usr/bin/mt-daapd
+ln -s /usr/local/firefly/bin/wavstreamer /usr/bin/wavstreamer
+#ln -s /usr/local/modules/firefly/firefly/bin/wavstreamer /usr/bin/wavstreamer
+#ln -s /usr/local/firefly /opt/
+
+# WD HWLib
+if [ "$PROJECT_FEATURE_USE_WD_HWLIB" = "1" ] || [ "$PROJECT_FEATURE_WD_CUSTOME_HWLIB" = "1" ] ; then
+	ln -s /usr/local/modules/opt/wd /opt/
+fi
+
+#Set UTF-8 locale environment
+mkdir -p /usr/lib/locale
+ln -s /usr/local/modules/web/config/locale-archive /usr/lib/locale
+
+if [ "$PROJECT_FEATURE_64BIT_PLATFORM" = "1" ]; then
+	ln -s /usr/lib /usr/lib64
+fi
+
+#link xmldbc
+ln -s /usr/local/modules/sbin/xmldb /usr/sbin/xmldbc
+
+#for ads
+ln -s /usr/local/modules/lib/libnss_winbind.so /lib/libnss_winbind.so.2
+
+#for libxml, +alpha.jimmy05222009
+ln -s /usr/local/modules/lib/libxml.so /lib/libxml.so.1
+#include perl Compatible Regular Expressions library alpha.tim.07302009
+if [ -e /usr/local/modules/lib/libpcre.so.0.0.1 ]; then
+	ln -s /usr/local/modules/lib/libpcre.so.0.0.1 /lib/libpcre.so.0
+	ln -s /usr/local/modules/lib/libpcre.so.0.0.1 /lib/libpcre.so
+fi
+
+if [ -e /usr/local/modules/lib/libpcre.so.1.2.3 ]; then
+	ln -s /usr/local/modules/lib/libpcre.so.1.2.3 /lib/libpcre.so.1
+	ln -s /usr/local/modules/lib/libpcre.so.1.2.3 /lib/libpcre.so
+fi
+
+if [ -e /usr/local/modules/lib/libpcrecpp.so.0.0.0 ]; then
+	ln -s /usr/local/modules/lib/libpcrecpp.so.0.0.0 /lib/libpcrecpp.so.0
+	ln -s /usr/local/modules/lib/libpcrecpp.so.0.0.0 /lib/libpcrecpp.so
+fi
+
+if [ -e /usr/local/modules/lib/libpcreposix.so.0.0.2 ]; then
+	ln -s /usr/local/modules/lib/libpcreposix.so.0.0.2 /lib/libpcreposix.so.0
+	ln -s /usr/local/modules/lib/libpcreposix.so.0.0.2 /lib/libpcreposix.so
+fi
+
+#include e2fsprogs library - alpha.tim.110307
+ln -s /usr/local/modules/lib/libext2fs.so.2.4 /lib/libext2fs.so.2 2>/dev/null
+ln -s /usr/local/modules/lib/libext2fs.so.2.4 /lib/libext2fs.so 2>/dev/null
+#ln -s /usr/local/modules/lib/libcom_err.so.2.1 /lib/libcom_err.so
+ln -s /usr/local/modules/lib/libe2p.so.2.3 /lib/libe2p.so.2 2>/dev/null
+ln -s /usr/local/modules/lib/libe2p.so.2.3 /lib/libe2p.so 2>/dev/null
+
+if [ -e /usr/local/modules/lib/libuuid.so.1.3.0 ]; then
+	ln -s /usr/local/modules/lib/libuuid.so.1.3.0 /lib/libuuid.so.1 2>/dev/null
+	ln -s /usr/local/modules/lib/libuuid.so.1.3.0 /lib/libuuid.so 2>/dev/null
+elif [ -e /usr/local/modules/lib/libuuid.so.1.2 ]; then
+	ln -s /usr/local/modules/lib/libuuid.so.1.2 /lib/libuuid.so.1 2>/dev/null
+	ln -s /usr/local/modules/lib/libuuid.so.1.2 /lib/libuuid.so 2>/dev/null
+fi
+
+#include htpasswd
+if [ -e /usr/local/modules/lib/libapr-1.so.0.4.6 ]; then
+	ln -s /usr/local/modules/lib/libapr-1.so.0.4.6 /lib/libapr-1.so.0
+	ln -s /usr/local/modules/lib/libapr-1.so.0.4.6 /lib/libapr-1.so
+fi
+
+if [ -e /usr/local/modules/lib/libaprutil-1.so.0.4.1 ]; then
+	ln -s /usr/local/modules/lib/libaprutil-1.so.0.4.1 /lib/libaprutil-1.so.0
+	ln -s /usr/local/modules/lib/libaprutil-1.so.0.4.1 /lib/libaprutil-1.so
+fi
+
+if [ -e /usr/local/modules/lib/libapr-1.so.0.5.1 ]; then
+	ln -s /usr/local/modules/lib/libapr-1.so.0.5.1 /lib/libapr-1.so.0
+	ln -s /usr/local/modules/lib/libapr-1.so.0.5.1 /lib/libapr-1.so
+fi
+
+if [ -e /usr/local/modules/lib/libaprutil-1.so.0.5.3 ]; then
+	ln -s /usr/local/modules/lib/libaprutil-1.so.0.5.3 /lib/libaprutil-1.so.0
+	ln -s /usr/local/modules/lib/libaprutil-1.so.0.5.3 /lib/libaprutil-1.so
+fi
+#ln -s /usr/local/modules/lib/libexpat.so.0.1.0 /lib/libexpat.so.0
+#ln -s /usr/local/modules/lib/libexpat.so.0.1.0 /lib/libexpat.so
+ln -s /usr/local/modules/lib/libxml2.so.2.7.4 /lib/libxml2.so.2
+ln -s /usr/local/modules/lib/libxml2.so.2.7.4 /lib/libxml2.so
+#UPS Lib
+#ln -s /usr/local/modules/lib/libusb-0.1.so.4.4.4 /lib/libusb-0.1.so
+#ln -s /usr/local/modules/lib/libupsclient.so.0.0.0 /lib/libupsclient.so
+#ln -s /usr/local/modules/lib/libupsclient.so.0.0.0 /lib/libupsclient.so.0
+
+#php alpha.tim
+ln -s /usr/local/modules/lib/libmcrypt.so.4.4.8 /lib/libmcrypt.so.4
+ln -s /usr/local/modules/lib/libmcrypt.so.4.4.8 /lib/libmcrypt.so
+ln -s /usr/local/modules/lib/libmhash.so.2.0.1 /lib/libmhash.so.2
+if [ -e /usr/local/modules/lib/libncurses.so.5.7 ]; then
+  ln -s /usr/local/modules/lib/libncurses.so.5.7 /lib/libncurses.so.5
+elif [ -e /usr/local/modules/lib/libncurses.so.5.5 ]; then
+  ln -s /usr/local/modules/lib/libncurses.so.5.5 /lib/libncurses.so.5
+fi
+
+if [ -e /usr/local/modules/lib/libpanel.so.5.7 ]; then
+  ln -s /usr/local/modules/lib/libpanel.so.5.7 /lib/libpanel.so.5
+elif [ -e /usr/local/modules/lib/libpanel.so.5.5 ]; then
+  ln -s /usr/local/modules/lib/libpanel.so.5.5 /lib/libpanel.so.5
+fi
+
+#p2p_server alpha.patrick
+#ln -s /usr/local/modules/lib/libtorrent-rasterbar.so.5.0.0 /lib/libtorrent-rasterbar.so.5
+#ln -s /usr/local/modules/lib/libtorrent-rasterbar.so.6.0.0 /lib/libtorrent-rasterbar.so.6
+
+#netatalk
+#ln -s /etc/netatalk/uams/uams_passwd.so /etc/netatalk/uams/uams_clrtxt.so
+#ln -s /etc/netatalk/uams/uams_dhx_passwd.so /etc/netatalk/uams/uams_dhx.so
+
+rm /usr/sbin/blazer_usb
+rm /usr/sbin/tripplite_usb
+rm /usr/sbin/usbhid-ups
+rm /usr/sbin/bcmxcp_usb
+rm /usr/sbin/richcomm_usb
+ln -s /usr/local/modules/sbin/blazer_usb /usr/local/ups/bin/blazer_usb
+ln -s /usr/local/modules/sbin/tripplite_usb /usr/local/ups/bin/tripplite_usb
+ln -s /usr/local/modules/sbin/usbhid-ups /usr/local/ups/bin/usbhid-ups
+ln -s /usr/local/modules/sbin/bcmxcp_usb /usr/local/ups/bin/bcmxcp_usb
+ln -s /usr/local/modules/sbin/richcomm_usb /usr/local/ups/bin/richcomm_usb
+
+# link quota off
+ln -s /usr/local/modules/bin/quotaon /usr/bin/quotaoff
+
+#link ssh to /usr/sbin/ to support old version fw
+ln -s /usr/local/modules/bin/ssh /usr/sbin/ssh
+ln -s /usr/local/modules/bin/ssh-keygen /usr/sbin/ssh-keygen
+
+# mysql
+ln -s /usr/local/modules/mysql/libexec /usr/
+ln -s /usr/local/modules/mysql/share/mysql /usr/share/
+
+#sms
+ln -s /etc/sms_conf.xml /var/www/xml/
+
+#language
+#ln -s /usr/local/modules/language/english.xml /var/www/xml/lang.xml
+ln -s /usr/local/modules/language/en-US/english_en-us.xml /var/www/xml/english.xml
+
+#snmp
+ln -s /usr/local/modules/files/snmp /usr/local/share/
+
+#send alert mail
+#ln -s /usr/local/modules/files/smtp.conf /etc/
+
+ln -s /usr/local/modules/zoneinfo /usr/sbin/
+
+chmod 755 /var/www/rest-api/api/Remote/src/Remote/Cli/ssl_cert_job.php
+ln -s /var/www/rest-api/api/Remote/src/Remote/Cli/ssl_cert_job.php /usr/local/sbin/ssl_cert_job.sh
+
+#send fw version +20150529.VODKA
+chmod 755 /var/www/rest-api/api/Remote/src/Remote/Cli/send_info.php
+ln -s /var/www/rest-api/api/Remote/src/Remote/Cli/send_info.php /usr/local/sbin/send_info.sh
+
+#for performance
+cp -f /usr/local/modules/usrlib/libshare.so /lib
+cp -f /usr/local/modules/usrlib/libmipc.so /lib
+cp -f /usr/local/modules/usrlib/libtemperature.so /lib
+
+cp -f /usr/local/modules/script/rc.init.sh /etc/rc.d/ 2>/dev/null
+
+kernel_ver=`cat /proc/version | grep "3.2.40"`
+if [ -n "$kernel_ver" ]; then
+  rm /usr/sbin/do_printer_ups.sh
+  rm /usr/sbin/do_printer_ups_kernel_3240.sh
+  ln -s /usr/local/modules/script/do_printer_ups_kernel_3240.sh /usr/sbin/do_printer_ups.sh
+fi
+
+if [ "$PROJECT_FEATURE_BAYS" = "1" ]; then
+   one_bay_init
+fi
+
+#
+# run this for P2P Service
+#
+if [ -x /etc/sysinit.d/wddirect ]; then
+/etc/sysinit.d/wddirect
+fi
+
+# Generate /etc/ld.so.cache to include /opt/wd/lib/ ... etc
+# This is needed by programs linked with wdhwlib.
+# DO THIS AFTER ALL SHLIBS BEEN SETUP
+# ITR: 99167 , let ldconfig for all project +20141030.VODKA
+ldconfig
+
+# To protect from user _easily_ accessing reserved part7 and part8,
+# we remove the device nodes.
+# Anyone who want to access them must create the nodes itself.
+for dn in `blkid | grep wdnas_reserve | awk -F ":" '{ print $1 }'`; do
+	rm -f $dn
+done
+
+# slow down rebuild speed
+md_sync_speed.sh min
+
+if [ -e /usr/local/modules/driver/igb.ko ]; then
+	insmod /usr/local/modules/driver/igb.ko
+fi
+
+model_code=`cat /usr/local/modules/files/model`
+#echo "$model_code"
+
+# If egiga0 and egiga1 is OK,
+# Do Lan Port's Name Switch, only for Sprite.
+if [ "$PROJECT_FEATURE_LAN_PORT_SWITCH" = "1" ]; then
+
+	# Test for egiga0
+	ifconfig egiga0
+	TEST_LAN0=$? 
+	if [ "$TEST_LAN0" != "0" ]; then
+		echo "egiga0 is broken"
+	fi
+
+	# Test for egiga1
+	ifconfig egiga1
+	TEST_LAN1=$? 
+	if [ "$TEST_LAN1" != "0" ]; then
+		echo "egiga1 is broken"
+	fi
+
+  if [ "$TEST_LAN0" == "0" ] && [ "$TEST_LAN1" == "0" ] ; then
+    echo "Do Lan Port Switch"
+    LAN0_MAC=`ifconfig egiga0 | grep -o -E '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'`
+    LAN1_MAC=`ifconfig egiga1 | grep -o -E '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'`
+    ip link set dev egiga0 name not_egiga0 address 00:00:00:00:00:01
+    ip link set dev egiga1 name egiga0 address $LAN0_MAC
+    ip link set dev not_egiga0 name egiga1 address $LAN1_MAC
+  fi
+elif [ -e /usr/local/modules/files/switch_lan ]; then
+  #only SGMII
+  # Test for LAN0
+  lan0_interface=`cat /usr/local/modules/files/switch_lan | awk '{print $1}'`
+  lan1_interface=`cat /usr/local/modules/files/switch_lan | awk '{print $2}'`
+  
+	ifconfig $lan0_interface
+	TEST_LAN0=$? 
+	if [ "$TEST_LAN0" != "0" ]; then
+		echo "$lan0_interface is broken"
+	fi
+
+	# Test for LAN1
+	ifconfig $lan1_interface
+	TEST_LAN1=$? 
+	if [ "$TEST_LAN1" != "0" ]; then
+		echo "$lan1_interface is broken"
+	fi
+
+  if [ "$TEST_LAN0" == "0" ] && [ "$TEST_LAN1" == "0" ] ; then
+    echo "Do Lan Port Switch"
+    LAN0_MAC=`ifconfig $lan0_interface | grep -o -E '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'`
+    LAN1_MAC=`ifconfig $lan1_interface | grep -o -E '([[:xdigit:]]{1,2}:){5}[[:xdigit:]]{1,2}'`
+    ip link set dev $lan0_interface name not_egiga0 address 00:00:00:00:00:01
+    ip link set dev $lan1_interface name $lan0_interface address $LAN0_MAC
+    ip link set dev not_egiga0 name $lan1_interface address $LAN1_MAC
+  fi
+fi
+
+#for read/write cpu register
+#if [ ! -e /dev/REG ]; then
+#	mknod -m  777 /dev/REG c 88 0
+#fi
+
+#if [ -e /usr/local/modules/driver/reg.ko ]; then
+#  insmod /usr/local/modules/driver/reg.ko
+#fi
+
+# cryptodev for HW CESA engine support
+if [ -e /usr/local/modules/driver/cryptodev.ko ]; then
+	insmod /usr/local/modules/driver/cryptodev.ko
+fi
+
+if [ -e /usr/local/modules/driver/jnl.ko ]; then
+	insmod /usr/local/modules/driver/jnl.ko
+fi
+
+if [ -e /usr/local/modules/driver/ufsd.ko ]; then
+	insmod /usr/local/modules/driver/ufsd.ko
+fi
+
+# btrfs filesystem
+if [ -e /usr/local/modules/driver/btrfs.ko ]; then
+	insmod /usr/local/modules/driver/btrfs.ko
+fi
+
+[ -d /dev/net ] || mkdir /dev/net
+mknod -m 644 /dev/net/tun c 10 200 2>/dev/null
+insmod /usr/local/modules/driver/tun.ko 2>/dev/null
+
+# Odie added
+diskmgr --genlink /usr/sbin/
+
+hardware_init.sh
+
+if [ -e /usr/sbin/tune_performance ]; then
+  tune_performance
+fi
+
+if [ "$model_code" = "WDMyCloudEX2" ]; then
+  #KC/Zion
+	echo 1 > /sys/devices/platform/neta/gbe/skb
+fi
+
+fvc -t
+
+mtd_check
+
+if [ ! -e /tmp/firmware_error ]; then
+  #check in normal firmware 
+  echo "** copy config files"
+  if [ -e /usr/local/config/reset_default ]; then
+    reset_default_value=`cat /usr/local/config/reset_default`
+    echo "reset default value: $reset_default_value"
+    if [ "$reset_default_value" = "1" ]; then
+      echo "copy default config to /usr/local/config"
+      cp -f /usr/local/default/config.xml /usr/local/config/
+      rm -f /usr/local/config/CacheVolume/.wd-alert/wd-alert-desc.db
+      rm -f /usr/local/config/CacheVolume/.wd-alert/wd-alert.db
+      rm -f /usr/local/config/CacheVolume/last_firmware_info_sent
+      rm -f /usr/local/config/alert.xml
+      sync
+    fi
+  fi
+fi
+cp -f /usr/local/config/hosts  /etc/ 2>/dev/null
+cp -f /usr/local/config/resolv.conf /etc/ 2>/dev/null
+cp -f /usr/local/config/passwd /etc/ 2>/dev/null
+cp -f /usr/local/config/shadow /etc/ 2>/dev/null
+cp -f /usr/local/config/group /etc/ 2>/dev/null
+cp -f /usr/local/config/smbpasswd /etc/samba/ 2>/dev/null
+cp -f /usr/local/config/passwd.webdav /etc/passwd.webdav 2>/dev/null #alpha.tim.add.for.webdav.100126
+cp -f /usr/local/config/mt-daapd.conf /etc/ 2>/dev/null
+cp -f /usr/local/config/config.xml /etc/NAS_CFG/ 2>/dev/null
+cp -f /usr/local/config/rtc.conf /etc/ 2>/dev/null
+cp -f /usr/local/config/udhcpd.conf /etc/ 2>/dev/null
+cp -f /usr/local/config/udhcpd.conf.def /etc/ 2>/dev/null
+cp -f /usr/local/config/syslog.conf /etc/ 2>/dev/null
+cp -f /usr/local/config/mdadm.conf /etc/ 2>/dev/null
+cp -f /usr/local/config/blockip /etc/blockip 2>/dev/null
+cp -f /usr/local/config/p2psettings.xml /etc/NAS_CFG/ 2>/dev/null
+cp -f /usr/local/config/rxclient_schedule.sh /usr/sbin/ 2>/dev/null
+cp -f /usr/local/config/sms_conf.xml /etc/ 2>/dev/null
+cp -f /usr/local/config/gui.xml /etc/NAS_CFG/ 2>/dev/null
+cp -f /usr/local/config/gui_*.xml /etc/NAS_CFG/ 2>/dev/null
+cp -f /usr/local/config/mail_event_conf.xml /etc/ 2>/dev/null
+cp -f /usr/local/config/uid /etc/ 2>/dev/null
+cp -f /usr/local/config/gid /etc/ 2>/dev/null
+cp -f /usr/local/config/iconv_table /etc/ 2>/dev/null
+cp -f /usr/local/config/routeap.conf /etc/ 2>/dev/null
+cp -f /usr/local/config/snmpd.conf /etc/ 2>/dev/null
+cp -f /usr/local/config/smbdfs.xml /etc/NAS_CFG/ 2>/dev/null
+cp -f /usr/local/config/smbdfs_group.xml /etc/NAS_CFG/ 2>/dev/null
+cp -f /usr/local/config/routeap.conf /etc/ 2>/dev/null
+cp -f /usr/local/config/upisorootpath /tmp/ 2>/dev/null
+cp -f /usr/local/config/vv.xml /etc/NAS_CFG/ 2>/dev/null
+cp -f /usr/local/config/version.update /etc/ 2>/dev/null
+cp -f /usr/local/config/version_info /etc/ 2>/dev/null
+mv /usr/local/config/firmwareupdate /tmp/ 2>/dev/null
+rm -f /usr/local/config/udhcpd.leases 2>/dev/null
+cp -f /usr/local/config/usb_backup.xml /var/www/xml/ 2>/dev/null
+cp -f /usr/local/config/internal_backup.xml /var/www/xml/ 2>/dev/null
+cp -f /usr/local/config/ftp_download.xml /var/www/xml/ 2>/dev/null
+if [ ! -e /tmp/firmware_error ]; then
+  mv /usr/local/config/reset_default /tmp/ 2>/dev/null
+fi
+mv /usr/local/config/rescue_firmware_be_started /tmp/ 2>/dev/null
+cp /usr/local/config/tmp_wd_serial.txt /tmp/ 2>/dev/null
+cp /usr/local/config/dbg_* /tmp/ 2>/dev/null
+cp /usr/local/config/hw_mode /tmp/ 2>/dev/null
+cp /usr/local/config/power_status /tmp/ 2>/dev/null
+mv /usr/local/config/want_to_shutdown /tmp/ 2>/dev/null
+cp /usr/local/config/ga_tracking_id /etc/ga_tracking_id 2>/dev/null
+
+# for mke2fs
+cp -f /usr/local/modules/files/mke2fs.conf /etc/
+
+# for build 58 only
+sed -i s/^shares:/share:/g /etc/group
+
+#elephant drive
+cp -f /usr/local/config/elephant_drive.xml /etc/NAS_CFG/ 2>/dev/null
+mkdir -p /etc/elephantdrive
+cp -f /usr/local/config/elephantdrive.config /etc/elephantdrive/ 2>/dev/null
+
+# for CUSTOM WD
+cp -f /usr/local/config/usr_pw.xml /etc/ 2>/dev/null
+cp -f /usr/local/config/alert.xml /var/log/alert.xml 2>/dev/null
+cp -f /usr/local/config/usb_unlocking_passwd.conf /etc/ 2>/dev/null
+cp -f /usr/local/config/hdd_white_list.xml /tmp/ 2>/dev/null
+cp -f /usr/local/config/alert_email.conf /etc/alert_email.conf 2>/dev/null
+cp -f /usr/local/config/GAnalytics.xml-backup /var/log/GAnalytics.xml 2>/dev/null
+
+#cp -f /usr/local/config/user.log /tmp/tmp_var_userlog.log
+#cp -f /usr/local/config/user.log /var/log/user.log
+#cp -f /usr/local/config/user.log.old /var/log/user.log.old
+/usr/sbin/rlog -r /usr/local/modules/files/syslog_rotate.conf
+
+if [ -e /tmp/firmware_error ]; then
+  touch /usr/local/config/rescue_firmware_be_started
+fi
+
+xmldb -n config &
+sleep 2
+xmldbc -l /etc/NAS_CFG/config.xml
+xmldb -n config -s /var/run/xmldb_sock_wto &
+
+cp -f /usr/local/config/s3.conf /etc/ 2>/dev/null
+s3 schedule check &
+
+#gui mgr
+cp -f /usr/local/config/gui_*.xml /var/www/xml/ 2>/dev/null
+
+copy_ipv6_config
+
+sync
+
+if [ "$PROJECT_FEATURE_ACPI" = "1" ]; then
+	# ACPID: /etc/acpi/, /var/run/acpid.pid, /var/run/acpid.socket
+	acpid
+fi
+
+# for run wd2go.sh in chk_fw_ver - KC2A/LT4A +20150212.VODKA
+# WD orion.db
+if [ -e "/usr/local/config/orion.db" ]; then
+  echo "*** Copy orion.db from flash ****"
+  rm -rf /usr/local/nas/orion/orion.db
+  ln -s /usr/local/config/orion.db /usr/local/nas/orion/orion.db
+else
+  cp -rf /usr/local/nas/orion/orion.db /usr/local/config/orion.db
+  rm -rf /usr/local/nas/orion/orion.db
+  ln -s /usr/local/config/orion.db /usr/local/nas/orion/orion.db
+fi
+
+if [ -e /usr/local/config/dynamicconfig_config.ini ]; then
+        rm -rf /var/www/rest-api/config/dynamicconfig.ini
+        #cp -rf /usr/local/config/dynamicconfig_config.ini /var/www/rest-api/config/dynamicconfig.ini
+		ln -sn /usr/local/config/dynamicconfig_config.ini /var/www/rest-api/config/dynamicconfig.ini
+fi
+
+#special case
+mkdir -p /etc/php/lib
+cp -f /usr/local/modules/web/config/default_php.ini /etc/php/php.ini
+# alpha.lock mark it
+#if [ -e /usr/local/config/php.ini ]; then
+#	cp -f /usr/local/config/php.ini /etc/php/php.ini
+#fi
+
+# alpha.lock create for netatalk 3.0.5
+mkdir -p /var/netatalk
+
+if [ -e /usr/local/modules/lib/php_extension ]; then
+	ln -s /usr/local/modules/lib/php_extension/* /etc/php/lib/
+fi
+
+if [ -e /usr/local/modules/web/config/php-fpm.conf ]; then
+	cp -f /usr/local/modules/web/config/php-fpm.conf /etc/php/php-fpm.conf
+fi
+
+cp -f /usr/local/modules/web/config/php.locale /etc/php/php.locale
+cp -f /usr/local/modules/web/config/default_lighttpd.conf /etc/lighttpd/lighttpd.conf
+cp -f /usr/local/modules/web/config/mimetypes /etc/lighttpd/mimetypes
+chmod 777 /etc/mt-daapd.conf
+
+cp -f /usr/local/modules/files/codepage /etc/
+cp -f /usr/local/modules/files/model /etc/
+cp -f /usr/local/modules/files/mediatype.spec /etc/
+
+cp  -f /usr/local/modules/files/fan_temperature.txt /etc
+
+#add ca-certificates.crt
+mkdir -p /etc/ssl/certs
+cp  -f /usr/local/modules/files/ca-certificates.crt /etc/ssl/certs/
+
+cp  -f /usr/local/modules/files/ups/* /usr/local/ups/etc/
+cp  -f /usr/local/modules/files/openssl.cnf /usr/local/ssl/
+cp  -f /usr/local/modules/files/openssl.cnf /usr/local
+cp  -f /usr/local/modules/files/openssl.cnf /etc/ssl
+
+# WD Mediacrawler
+mkdir /usr/local/wdmcserver
+ln -s /usr/local/modules/localwdmcserver/lib /usr/local/wdmcserver/
+cp -a /usr/local/modules/localwdmcserver/bin /usr/local/wdmcserver/
+chown -R root:share /usr/local/wdmcserver/bin
+chmod -R 775 /usr/local/wdmcserver
+
+# WD onbrdnetloc-comm component +20150224.VODKA
+mkdir /usr/local/onboarding
+cp -rf /usr/local/modules/localonboarding/* /usr/local/onboarding/
+chmod -R 775 /usr/local/onboarding
+if [ -e "/usr/local/config/onbrd.ini" ]; then
+  echo "*** symlink onbrd.ini from flash ****"
+  ln -sf /usr/local/config/onbrd.ini /usr/local/onboarding/onbrd.ini
+else
+  echo "*** symlink onbrd.ini from flash ****"
+  cp -rf /usr/local/onboarding/onbrd.ini /usr/local/config/onbrd.ini
+  ln -sf /usr/local/config/onbrd.ini /usr/local/onboarding/onbrd.ini
+fi
+
+# ITR 102986 add test.html to /var/www +20150224.VODKA
+if [ -e /usr/local/modules/web/config/test.html ]; then
+	cp -f /usr/local/modules/web/config/test.html /var/www/test.html
+fi
+
+chmod 775 /usr/local/orion/openvpnclient/updateremote.sh
+
+# WD restsdk . SKY-2620. Ed T.
+ln -s /usr/local/modules/localrestsdk /usr/local/restsdk
+
+### Ed T. this is where run-parts for external components' init scripts to be executed
+### for now the implementation is only for 'wdlog' component
+if [ -f /etc/sysinit.d/wdlog ]; then
+	bash /etc/sysinit.d/wdlog
+fi
+
+#restsdk-server start according to Ed +20150721.VODKA
+if [ -f /etc/init.d/restsdk-serverd ]; then
+	/etc/init.d/restsdk-serverd start
+fi
+
+#For LIGHTNING Perl
+if [ -e /usr/local/modules/script/creat_perl_link.sh ]; then
+	sh /usr/local/modules/script/creat_perl_link.sh
+fi
+
+# Python 2.7
+ln -s /usr/local/modules/python27/bin/python /usr/bin/python
+ln -s /usr/local/modules/python27/lib/python2.7 /usr/lib/python2.7
+if [ -e /usr/include ]; then
+	ln -s /usr/local/modules/python27/include/python2.7 /usr/include/python2.7
+else
+	ln -s /usr/local/modules/python27/include /usr/include
+fi
+
+#check rescue fw update status
+if [ -e /usr/local/config/rescue_fw_info.txt ]; then
+  cp /usr/local/config/rescue_fw_info.txt /tmp/
+fi
+
+#Only for LT4A/KC/Zino/
+if [ $model_code = "WDMyCloudEX2" -o $model_code = "WDMyCloudEX4" ]; then
+  if [ -e /usr/local/config/update_rescue_fw ]; then
+    rescue_fw -c
+    rescue_fw_status=`cat /tmp/rescue_fw_status`
+    if [ "$rescue_fw_status" = "0" ]; then
+      rm /usr/local/config/rescue_fw_info.txt
+      rm /tmp/rescue_fw_info.txt
+    fi
+    rm /usr/local/config/update_rescue_fw
+  fi
+fi
+
+#create fuse device    alpha.tim
+mknod /dev/fuse -m 0666 c 10 229 2>/dev/null
+
+#insmod /usr/local/modules/driver/sd_mod.ko
+
+#iSCSI
+#/usr/local/modules/iscsi/iscsi-target init
+
+echo "** set loopback interface"
+/sbin/ifconfig lo 127.0.0.1 netmask 255.0.0.0
+
+#create file in /tmp/flash_update_firmware ,
+#1:ever auto update firmware , 0:No
+chk_update_firmware -r
+
+if [ "$PROJECT_FEATURE_ROOTFS_ON_EMMC" = "1" ]; then
+  tool_emmc -i
+elif [ "$PROJECT_FEATURE_MFG_CFG_IN_UBI" = "1" ]; then
+  tool_ubi -i
+fi
+
+if [ "$PROJECT_FEATURE_MV_TCP_WORKAROUND" = "1" ]; then
+	echo 1 > /proc/sys/net/ipv4/tcp_low_latency
+	#ethtool -K egiga0 tso off
+	#if [ "$PROJECT_FEATURE_LAN_PORT" = "2" ]; then
+	#	ethtool -K egiga1 tso off
+	#fi
+fi
+
+mac_read
+
+ifconfig egiga0 up
+
+if [ "$PROJECT_FEATURE_LAN_PORT" = "2" ]; then
+  ifconfig egiga1 up
+fi
+
+set_lan_speed -c
+
+# for CUSTOM WD
+wd_read_serial
+
+# fast boot for MFG
+
+if [ -e /tmp/firmware_error ]; then
+  #rescue fw hasn't fvc program
+  #rescue fw don't run crond
+  killall crond
+  rm -f /usr/sbin/crond
+  fvc -s # for show product id
+  fvc
+  #if [ "$PROJECT_FEATURE_COLOR_CHECK" = "1" ]; then
+  #  nas_model_name=`xmldbc -g /hw_ver`
+  #  mkdir -p /usr/local/model/web/pages/function
+  #  chmod 777 -R /usr/local/model
+  #  cp -s /usr/local/modules/web/pages_${nas_model_name}/function/define.js /usr/local/model/web/pages/function/
+  #fi
+else
+  fvc -s # for show product id (KC, Zion, Glacier, Black ICE)
+  fvc
+fi
+rm -f /tmp/model_id
+
+if [ -e /tmp/reset_default -a -e /usr/sbin/change_config_setting.sh ]; then
+  change_config_setting.sh
+fi
+
+nas_model_name=`xmldbc -g /hw_ver`
+#echo "$nas_model_name"
+
+# read hidden encryption flag
+# if 1 , write to /var/www/xml/hidden_encryption.xml
+if [ -e /usr/sbin/read_hidden_encryption ]; then
+  read_hidden_encryption
+fi
+
+if [ -e /usr/sbin/up_read_daemon ]; then
+  up_read_daemon &
+  up_send_daemon &
+  sleep 1
+fi
+
+#check sata detect
+if [ -e /usr/sbin/chk_sata ]; then
+  chk_sata
+fi
+
+if [ "$PROJECT_FEATURE_REMOVE_REBOOT" = "1" ]; then
+   rm /sbin/reboot
+fi
+
+chk_fw_ver
+
+if [ "$PROJECT_FEATURE_CHIP_INTEL" == "1" ]; then # For intel platform
+  # egiga0/1 needs time to link up.
+  x=0
+  while [ "$x" -lt 6 ]
+  do
+    LAN0_STATE=`cat /sys/class/net/egiga0/operstate`
+    LAN1_STATE=`cat /sys/class/net/egiga1/operstate`
+    if [ "$LAN0_STATE" == "up" -o "$LAN1_STATE" == "up" ]; then
+      break
+    else
+      x=`expr $x + 1`
+      sleep 1
+    fi
+  done
+fi
+
+lan_init
+
+set_jumbo_frame.sh
+
+#chg_hostname
+
+network -r -s 0 -o
+
+# get hdd white list
+getHddWhiteList.sh &
+
+#utelnetd -d
+
+#Twonky
+#ln -s /usr/local/modules/twonky /usr/local/twonky
+if [ "$model_code" = "WDMyCloudEX2" -o  "$model_code" = "WDMyCloud" -o "$model_code" = "MyCloudEX2Ultra" ]; then
+  #KC/Zion Glacier/BlackIce
+  install_twonky.sh
+else
+  ln -s /usr/local/modules/twonky /usr/local/twonky
+fi
+ln -s /usr/local/twonky/twonky.sh /usr/sbin/twonky.sh
+
+# WD NAS upnp
+upnpnas.sh start
+
+#remove rlog old config in config.xml
+/usr/sbin/rlog -x
+
+#/usr/sbin/syslogd -r -m 0 --rt_line 800
+/usr/sbin/log_conf --default
+
+sleep 1
+
+# Create WD CacheVolume folder
+if [ -d "/usr/local/config/CacheVolume" ]; then
+  echo "*** Copy CacheVolume data from flash ****"
+  if [ -d "/CacheVolume" ]; then
+    rm -rf /CacheVolume
+  fi
+  cp -rf /usr/local/config/CacheVolume /.
+else
+  echo "*** Create brand new CacheVolume folder ****"
+  mkdir /CacheVolume
+fi
+createAlertDb.sh
+
+#adjtimex -t 9960
+
+echo "*** set Time Zone ****"
+SetTimeZone
+date
+
+echo "*** get Time from rtc and set it into system ****"
+rtc -b
+date
+
+#save log "System Time Is Updated By RTC." , becasue set incorrect timezone#
+rtc -l
+
+#remove rtc -a 2014/03/20
+
+stime booting&
+
+#write firmware version to /var/log/usr.log 20131125.VODKA
+/usr/bin/logger -t "SYSTEM" -p user.6 "Firmware Version : " `xmldbc -g /sw_ver_1`
+
+#init WD updatecount database 20131128.VODKA
+incUpdateCount.pm alert
+incUpdateCount.pm WDSAFE
+incUpdateCount.pm data_volume_write
+incUpdateCount.pm firmware_update
+incUpdateCount.pm share
+incUpdateCount.pm system_state
+incUpdateCount.pm usb
+incUpdateCount.pm raid
+
+mserver&
+
+mkdir /tmp/samba
+samba_tmpfs.sh
+
+#hiddenmount
+
+#Apache server files .
+if [ -e /usr/local/modules/lib/libapr-1.so.0.5.1 ]; then
+	mkdir -p /usr/local/apache2/
+	mkdir -p /usr/local/apache2_dav/
+
+	cp -r /usr/local/modules/web/apache2/* /usr/local/apache2/
+	cp -r /usr/local/modules/web/apache2_dav/* /usr/local/apache2_dav/
+	mkdir -p /usr/local/apache2/modules
+	mkdir -p /usr/local/apache2_dav/modules
+	mkdir -m 777 -p /usr/local/apache2_dav/var
+
+
+	ln -s /lib/apache_modules/* /usr/local/apache2/modules/
+	ln -s /lib/apache_modules/* /usr/local/apache2_dav/modules/
+else
+	mkdir -p /usr/local/apache2/
+	mkdir -p /usr/local/apache2/cgi-bin
+	mkdir -p /usr/local/apache2/conf
+	mkdir -p /usr/local/apache2/error
+	mkdir -p /usr/local/apache2/htdocs
+	mkdir -p /usr/local/apache2/logs
+
+	mkdir -p /usr/local/apache2/modules
+	mkdir -p /usr/local/apache2/var
+
+	ln -s /usr/local/modules/web/apache2/modules/* /usr/local/apache2/modules/
+	ln -s /usr/local/modules/web/apache2/error/* /usr/local/apache2/error/
+	cp -r /usr/local/modules/web/apache2/conf/* /usr/local/apache2/conf/
+	cp -r /usr/local/modules/web/apache2/htdocs/* /usr/local/apache2/htdocs/
+fi
+# REST-API config for Self-signed and Trusted Certificated solution of Apache
+# Added by Rance 2015/04/23
+	cp -f /usr/local/modules/web/apache2/certconf/* /etc/apache2/sites-available
+if [ ! -f /usr/local/config/wdnas-rest-api.conf ]; then
+# Copy a default wdnas-rest-api.conf(Self-Signed) to prevent Apache fail to start
+	cp /etc/apache2/sites-available/wdnas-rest-api.conf /usr/local/config/
+fi
+	mkdir -p /etc/apache2/sites-enabled
+	ln -s /usr/local/config/wdnas-rest-api.conf /etc/apache2/sites-enabled/wdnas-rest-api.conf
+	ln -s /usr/local/config/wdnas-rest-api.conf /usr/local/apache2/conf/sites-enabled/wdnas-rest-api.conf
+
+# Recover certificated files on system startup
+# server.key, server.crt, server.csr and server.ca-bundle
+# Added by Rance 2015/05/01
+if [ -f /usr/local/config/server.key ]; then
+	cp -f /usr/local/config/server.* /var/www/rest-api/config
+fi
+#
+#move place by Bing 2011/06/02
+#DDNS
+
+mail_daemon &
+
+sleep 1
+#hd_verify
+if [ ! -e /tmp/firmware_error ]; then
+  hdVerify -f -s
+fi
+
+#cp /proc/scsi/scsi /etc		#+Wilson04282006, backup scsi file for hotswap
+
+mount -t usbfs none /proc/bus/usb
+chmod 777 /dev/null
+mknod -m 755 /dev/usblp0 c 180 0
+
+#alpha.jack.09162006+ for no hd restore config
+ln -s /usr/local/tmp /usr/local/upload
+ln -s /usr/local/tmp /var/tmp
+
+#don't move place of hwlib starting to avoiding "fan not working" issue
+#create /etc/system.conf for HWLIB get model number +20141022.VODKA
+wd_compinit -i
+if [ "$PROJECT_FEATURE_USE_WD_HWLIB" = "1" ]; then
+	if [ -e /tmp/firmware_error ]; then
+		# when we enter rescue mode, we need copy those lib to /lib.
+		cp -avf /usr/local/modules/opt/wd/lib/libwdhw.so* /lib
+		cp -avf /usr/local/modules/opt/wd/lib/liblcd_management.so* /lib
+	 	cp -avf /usr/local/modules/opt/wd/lib/boost/libboost_system.so.1.55.0 /lib
+	fi
+	
+  if [ "$PROJECT_FEATURE_DEVELOP_STAGE" != "1" ]; then
+    # Start WD HWLib services, by order
+    /etc/init.d/S14hwinit start
+    /etc/init.d/S14wdhws start
+    if [ "$PROJECT_FEATURE_OLED" = "1" ]; then
+      /etc/init.d/S15wdlcd start
+    fi
+    /etc/init.d/S20wdpms start
+    /etc/init.d/S20wdtmsd start
+    
+    if [ "$PROJECT_FEATURE_OLED" = "1" ]; then
+      # LCD Management Daemon using wdhwlib
+      # Added by Casper Huang
+      wdlcd_sub_daemon &
+    fi
+  fi
+elif [ "$PROJECT_FEATURE_WD_CUSTOME_HWLIB" = "1" ]; then
+	/etc/init.d/wdtmsd start &
+	echo "WD hwlib start.............."
+fi
+
+#/usr/sbin/upscan
+#if [ -e /tmp/upsin ]; then
+#rm /tmp/upsin
+#sh /sbin/hotplug usb add &
+#fi
+
+#send_sms --chk_sms_enable > /dev/null 2>&1
+
+# support airplay
+if [ "$PROJECT_FEATURE_MYPHOTO" = "1" ];then
+	rc.messagebus start
+fi
+avahi-daemon -D
+
+#move sshd start from load_module
+SSH_ENABLE=`xmldbc -g '/network_mgr/ssh/enable'`
+if [ "$SSH_ENABLE" = "1" ]; then
+	/usr/sbin/ssh_daemon -s
+fi
+
+##start snmp##
+SNMPD=$(xmldbc -g "/network_mgr/snmp/enable")
+if [ $SNMPD = "1" ]; then
+	snmp_tool -s
+#	snmpd -C -c /etc/snmpd.conf
+fi
+
+#make authentication
+#make_auth.sh
+
+#get external IP
+#getexip & #move to stime
+#lltd
+(lltd.sh start) &
+
+# for CUSTOM WD
+random_check -c
+random_check -s
+auto_fw reboot &
+auto_fw -c 1 &
+auto_fw -a -c &
+auto_fw check
+internal_backup -t
+ftp_download -n
+
+avahi_tm_serv -m &
+avahi_tm_serv --wd_2go &
+
+traceroute_wd.sh &
+
+echo 131072 > /proc/sys/fs/inotify/max_user_watches
+
+# generate ini file for REST API  @VODKA
+wd_compinit -a
+# add check user expire to cron table +20140718.VODKA
+wd_compinit -p
+# create "cloudholders" group to default, move this part to chk_fw_ver +20150114.VODKA
+#if [ -e /usr/sbin/add_group_wd.sh ]; then
+#  add_group_wd.sh
+#fi
+
+# For dpkg test
+if [ ! -d /var/lib/dpkg ]; then
+	mkdir -p /var/lib/dpkg
+fi
+touch /var/lib/dpkg/status
+
+if [ -e /usr/sbin/fan_control ]; then
+#======================
+#	Fan Control
+#======================
+  fan_control b c
+  if [ -e /tmp/hw_mode ]; then
+    hw_mode_test_temper=`cat /tmp/hw_mode | grep temperature`
+    if [ -n "$hw_mode_test_temper" ]; then
+      fan_control -w c&
+    else
+      fan_control 0 c&
+    fi
+  else
+    fan_control 0 c&
+  fi
+fi
+
+pwm_ctl=$(xmldbc -g "/system_mgr/power_management/hdd_hibernation_enable")
+if [ "$pwm_ctl" = "1" ]; then
+	set_pwm&
+fi
+
+rm -rf /tmp/usb_*
+# scan sata disk information
+sata_disk scan&
+
+#/sbin/hotplug usb renew > /dev/null 2>&1 &
+#check usb device and mount it
+#Bing add 2011/03/31
+for DEV in /sys/block/sd*
+do
+	if readlink $DEV | grep -q usb
+	then
+		DEV=`basename $DEV`
+		/usr/sbin/usbmount $DEV
+		touch /tmp/usb_mount_finished
+	fi
+done
+
+for i in `ls /mnt/USB/`
+do
+	#echo "/mnt/USB/${i}/mfg_${nas_model_name}"
+	#echo "/mnt/USB/${i}/fun_plug"
+	if [ -e /mnt/USB/${i}/mfg_${nas_model_name} -a -e /mnt/USB/${i}/fun_plug ]; then
+	  #echo "Into MFG mode"
+	  touch /tmp/mfg_mode
+	fi
+done
+
+ln -s /usr/local/modules/script/pre_usb.sh /usr/sbin/
+
+# for scan usb storage information
+usb_disk scan&
+
+#/usr/sbin/do_printer_ups.sh renew & #move to system_daemon
+
+# sysinfod: collect disks, RAIDs, volumes information
+# update sysinfo, here start sysinfod when it not running
+sysinfo_update.sh
+
+# reload service for REST-API +20150311.VODKA
+sevcd &
+
+#for mtp
+mtp_init.sh &
+cp -f -p /usr/local/config/mtp_status.xml /var/www/xml/ 2>/dev/null
+
+#lighty_check_function.sh >/dev/null 2>&1
+
+if [ -e /usr/local/config/certificate_https_all.pem ]; then
+	access_mtd "cp /usr/local/config/certificate_https_all.pem /etc/"
+	access_mtd "cp /usr/local/config/server.crt /var/www/rest-api/config/"
+	access_mtd "cp /usr/local/config/server.key /var/www/rest-api/config/"
+else
+	lighty_check_function.sh >/dev/null 2>&1
+fi
+
+
+# To beta server -b for KC 2013.10.24 vodka
+#if [ "`xmldbc -g hw_ver`" = "WDMyCloudEX2" ]; then
+#	/usr/local/sbin/wd2go.sh -b
+#fi
+
+
+# clear all items of volumes & usershares WD orion.db
+sqlite3 /usr/local/nas/orion/orion.db "delete from volumes"
+sqlite3 /usr/local/nas/orion/orion.db "delete from usershares"
+
+
+#/usr/sbin/lighttpd -m /usr/local/lib/ -f /etc/lighttpd/lighttpd.conf
+if [ -e /usr/local/tmp/image.cfs ]; then
+	crfs_image=`du /usr/local/tmp/image.cfs`
+	image_size=${crfs_image%%/*}
+	if [ $image_size -ge 6000 ]; then
+		lighty_ssl	# patrick testing 2011/06/27
+	else
+		lighty start #jack20120924 for rescue firmware
+	fi
+elif
+	[ -e /boot/boot/image.cfs ]; then
+	crfs_image=`du /boot/boot/image.cfs`
+	image_size=${crfs_image%%/*}
+	if [ $image_size -ge 6000 ]; then
+		lighty_ssl
+	else
+		lighty start
+	fi
+elif [ -e /image.cfs ]; then
+  #Yellowstone/Yosemite
+  lighty start #jack20140808 for rescue firmware
+fi
+
+if [ -e /usr/sbin/up_send_ctl ]; then
+	up_send_ctl MCUVer &
+fi
+
+# To check /etc/alert_email.conf 2014.07.17 Brian
+/usr/sbin/modify_alert_email_config.sh
+
+# Replace strings for Mirror Man 2015.04.02 Curry
+if [ -e /usr/local/sbin/replaceAlertMsg.sh ]; then
+	/usr/local/sbin/replaceAlertMsg.sh
+fi
+
+# Remove %1 for KC, Glacier 2015.05.19 Curry
+if [ -e /usr/local/sbin/removePercent.sh ]; then
+  	/usr/local/sbin/removePercent.sh
+fi
+
+#"************* language *********"
+language.sh &
+
+custom_booting_init.sh
+
+chk_io
+
+sleep 1
+
+if [ "$model_code" = "WDMyCloud" ]; then
+	if [ -e /usr/sbin/sprb ]; then
+		/usr/sbin/sprb -x
+	fi
+fi
+
+# when power failure happen, touch a file to notify system_daemon to do scandisk
+if [ -e /tmp/power_failure ] ; then
+touch /tmp/scandisk_for_power_failure
+usb_backup -c config_reboot &
+internal_backup -c config_reboot &
+ftp_download -c config_reboot &
+fi
+
+# poll central server Ed.T
+/usr/local/sbin/PullWdlogConfig.sh &
+
+#/usr/local/sbin/ssl_cert_job.sh start &
+
+#### please don't add anything start ####
+# after hard disk mount ok , system_daemon will call load_module script file
+
+system_daemon&
+
+#/usr/sbin/info.sh & #move to system_daemon
+
+if [ -e /usr/sbin/temperature_monitor ]; then
+  temperature_monitor&
+fi
+
+#======================
+#	UPS Start
+#======================
+/usr/sbin/Network_UPS -B &
+
+#======================
+#	port forwarding action
+#======================
+portforwarding.sh add&
+
+#fish+ for gui upload function
+#loadphp add gui &
+
+if [ -e /tmp/php_rc.log ]; then
+	loadphp add DEFAULT
+else
+	echo 0001 > /tmp/php_rc.log
+	echo DEFAULT >> /tmp/php_rc.log
+fi
+
+
+# run monitor disk size 20131217.VODKA
+if [ -e /usr/sbin/disk_monitor.sh ]; then
+	/usr/sbin/disk_monitor.sh &
+fi
+
+if [ -d "/CacheVolume" ]; then
+		/usr/local/orion/communicationmanager/communicationmanagerd start
+fi
+
+#create account.xml
+/usr/sbin/account
+
+# virtual volume
+if [ "$PROJECT_FEATURE_VIRTUAL_VOLUME" = "1" ] ; then
+	vvctl --init &
+fi
+
+if [ -e /usr/sbin/sync_tm_to_hd.sh ]; then
+	NTP_EN=$(xmldbc -g "/system_mgr/time/ntp_enable")
+
+	if [ "$NTP_EN" == "0" ]; then
+		if [ -e /mnt/HD_a4/.systemfile/custom_tm ]; then
+			SetDate `cat /mnt/HD_a4/.systemfile/custom_tm` > /dev/null
+		fi
+	fi
+fi
+
+#for restart HD
+if [ -e /tmp/hotplug_ignore ]; then
+  rm /tmp/hotplug_ignore
+fi
+
+if [ -e /sbin/ifconfig2 ]; then
+  rm /sbin/ifconfig
+  mv /sbin/ifconfig2 /sbin/ifconfig
+fi
+
+if [ -e /tmp/mfg_mode ]; then
+  touch /tmp/boot_finished
+  touch /tmp/system_ready
+  # for mfg
+  mfg_start
+else
+  touch /tmp/boot_finished
+
+  # restore rebuild speed to default
+  md_sync_speed.sh max
+fi
+
+# delay a moment for "ipv6-ready logo" auto-test only
+INTERVAL=$(xmldbc -g "/system_mgr/login_delay")
+if [ "$INTERVAL" != "" -a "$INTERVAL" != "0" ]; then
+	sleep $INTERVAL
+	echo $INTERVAL > /tmp/login_delay
+fi
+
+#### please don't add anything end ####

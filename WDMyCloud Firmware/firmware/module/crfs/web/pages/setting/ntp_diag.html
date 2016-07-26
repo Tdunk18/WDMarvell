@@ -1,0 +1,65 @@
+<!-- Scan Disk Dialog  -->
+<div id="hd_ntp_Diag" class="WDLabelDiag" style="display:none;">
+<div class="WDLabelHeaderDialogue WDLabelHeaderDialogueNTPIcon" id="hd_ntp_Diag_title">NTP Settings</div>
+<div align="center"><div class="hr"><hr></div></div>
+	<!-- 1.Scan Disk Dialog : Bar -->
+	<div id="hd_ntp_set">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">				
+				The NTP service synchronizes with your network and automatically updates the date and time on your device.
+			<br><br>
+			Current NTP servers
+			<br><br>
+			
+			<div style="border-top: 1px solid #333333;">
+				<br><br>					
+			<ul class="nListDiv">
+					<li id="id_ntp_user">
+						<div class="div1"></div>
+						<div class="div2">					
+							<table border="0"  cellspacing="0" cellpadding="0" height="0" style="margin-top:13px;">
+							<tr>
+							<td>
+							<input type="text" name="f_ntp_server" id="f_ntp_server" onkeyup="show('id_ntp_del')">							
+							</td>
+							</tr>
+							</table>
+							<!--
+							<input type="checkbox" id="id_y" value="1" onclick="check_eula('#id_y')"> Yes 
+							-->
+							
+						</div>
+						<div class="div3">User defined NTP server</div>						
+						<div class="div4"><a href="javascript:del_user_ntp();" ><div id="id_ntp_del" class="del" style="margin-top:10px;" onclick="del_user_ntp();">&nbsp;&nbsp;&nbsp;</div></a></div>											
+					</li>
+					<li>
+							<div class="div1"></div>
+						<div class="div2">time.windows.com</div>
+						<div class="div3">Microsoft NTP service</div>						
+						<div class="div4"></div>											
+					</li>
+					<li>
+							<div class="div1"></div>
+						<div class="div2">pool.ntp.org</div>
+						<div class="div3">NTP pool service</div>						
+						<div class="div4"></div>											
+					</li>
+			</ul>
+					<br><br>
+					<table border="0"  cellspacing="0" cellpadding="0" height="0">
+						<tr><td>
+					<div id="id_ntp_server_save" class="LightningLabelButtonSecondary up">
+						<button onclick="add_user_ntp();" >Add User NTP</button>			
+					</div>
+					</td></tr>
+				</table>
+				</div>									
+					<span id="id_ntp_wait" style="display:none"><img border=0 src="/web/images/SpinnerSun.gif">&nbsp;Waiting...</span>																			
+			</div>
+		</div>		
+		<div class="hrBottom2"><hr></div>		
+		<button type='button' class='ButtonLeftPos close'>Cancel</button>		
+		<button type='button' class='ButtonRightPos1' id="ntp_button" onclick="save_ntp();">Save</button>  	
+	</div>			
+</div><!-- end of Format HD Dialog -->
+

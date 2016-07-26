@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<style>
+#apps_info td {
+	height: 30px;
+	line-height: 30px;
+}
+</style>
+
+<!-- custom js -->
+<script type="text/javascript" src="/web/dsdk/js/util.js"></script>
+<script type="text/javascript" src="/web/dsdk/js/application_ui.js"></script>
+<script type='text/javascript' src='/web/function/app_menu.js'></script>
+<script type='text/javascript' src='/web/function/appsDiag.js'></script>
+<!-- custom end -->
+
+<script type="text/javascript">
+var plex_apps_inf = new Array();
+
+function apps_button_active()
+{
+}
+
+function page_load()
+{
+	load_app_info(function(MyRes){		//Load app_info.xml
+		load_app_info_xml();
+		load_app_menu();
+	});	
+}
+
+function page_unload()
+{
+
+}
+</script>
+
+<body>
+<div id="content" class="b1">
+<!-- banner 2nd layout -->
+<table cellspacing=0 cellpadding=0 border=0>
+	<tr valign="bottom">
+		<td width="28"></td>
+		<td align="left">
+			<div class="header_1"><span class="_text" lang="_menu" datafld="addon"></span></div>
+		</td>	
+	</tr>		
+</table>
+<div class="hr_0"><div class="hr_1"></div></div>
+<!-- banner 2nd layout -->
+
+<!-- left menu -->
+<table cellspacing=0 cellpadding=0 border=0 height="100%">
+		<tr>
+			<td valign="top">
+				<ul class="ButtonArrowTop" onmousedown="scrollDivDown('SubMenuDiv')" style="display:none">
+				<li class="ButtonArrowUpListUp"></li>
+				</ul>
+				
+				<div id="SubMenuDiv">
+					<div class="LightningSubMenubg">
+						<ul class="LightningSubMenu">
+						</ul>
+					</div>
+				</div>
+				
+				<ul class="ButtonArrowBottom" onmousedown="scrollDivUp('SubMenuDiv')" style="display:none">
+				<li class="ButtonArrowDownListUp"></li>
+				</ul>
+			</td>
+			<td valign="top">
+					<div class="r_content mainbody" id="mainbody" style="border:0px solid red;"></div>  <!-- mainbody end -->
+		</td>
+	</tr>	
+</table>
+
+<!-- content -->
+<div id="app_dialog" style="display: none;">
+	<div id="apkg_template" style="display: none;">
+			<table cellspacing=0 cellpadding=0 border=0 height="100%" id="apps_info">
+						<tr>
+							<td style="padding-right: 7px; width: 47px;" id="app_icon">
+							</td>
+							<td>
+								<div class="h1_content header_2">
+									<span id="app_show_name"></span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<span id="app_description"></span>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" style="padding-top:15px">
+								<button type="button" id="apps_config_button" style="display:none"><span class="_text" lang="_p2p" datafld="config"></span></button>
+							</td>
+						</tr>
+					</table>
+	</div>
+</div>	 				
+</body>
+</html>	

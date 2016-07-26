@@ -1,0 +1,41 @@
+<Client>
+	<DeviceId>
+		<DisplayName>LG DLNA Player</DisplayName>
+		<HttpRecognition>
+			<HttpText>LGE_DLNA_SDK</HttpText>
+			<HttpText>LG_UA</HttpText>
+		</HttpRecognition>
+		<MappingUpdatePolicy>FIX</MappingUpdatePolicy>
+	</DeviceId>
+	<Adaptations>
+		<DLNA>
+			<Version>DLNA15</Version>
+		</DLNA>
+		<MimeTranslations>
+			<MimeTypeMapping>
+				<In>application/x-srt</In>
+				<Out>text/srt</Out>
+			</MimeTypeMapping>
+			<MimeTypeMapping>
+				<In>application/x-sub</In>
+				<Out>text/sub</Out>
+			</MimeTypeMapping>
+			<MimeTypeMapping>
+				<In>application/smil</In>
+				<Out>text/smi</Out>
+			</MimeTypeMapping>
+			<MimeTypeMapping>
+				<In>application/x-ssa</In>
+				<Out>text/ssa</Out>
+			</MimeTypeMapping>
+			<MimeTypeMapping>
+				<In>application/x-psb</In>
+				<Out>text/psb</Out>
+			</MimeTypeMapping>
+			<MimeTypeMapping>
+				<In>application/x-ass</In>
+				<Out>text/ass</Out>
+			</MimeTypeMapping>
+		</MimeTranslations>
+	</Adaptations>
+</Client>

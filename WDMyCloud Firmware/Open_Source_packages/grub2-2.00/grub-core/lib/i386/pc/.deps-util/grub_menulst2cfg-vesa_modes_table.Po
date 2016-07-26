@@ -1,0 +1,12 @@
+grub-core/lib/i386/pc/grub_menulst2cfg-vesa_modes_table.o: \
+ grub-core/lib/i386/pc/vesa_modes_table.c \
+ include/grub/i386/pc/vesa_modes_table.h include/grub/types.h config.h \
+ config-util.h
+
+include/grub/i386/pc/vesa_modes_table.h:
+
+include/grub/types.h:
+
+config.h:
+
+config-util.h:

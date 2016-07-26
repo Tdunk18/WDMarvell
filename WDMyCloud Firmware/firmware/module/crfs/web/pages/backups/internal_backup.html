@@ -1,0 +1,1276 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="PRAGMA" content="no-cache"> 
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+</head>
+<script type="text/javascript" src="/web/function/schedule_select.js"></script>
+<script type="text/javascript">
+var jobs_list = new Array();
+var timeoutId = -1;
+var now_idx = -1;
+var JOBS_AMOUNT = 25;
+var modify_id = -1;
+
+function translate_status_code_detail(status_code)
+{
+	var str = "";
+	switch(status_code)
+	{
+		case "0": //Finish
+			str = _T('_usb_backups', 'status0');
+			break;
+		case "1": //Ready
+			str = _T('_usb_backups', 'status1');
+			break;
+		case "2": //Backup in Progress
+			str = _T('_usb_backups', 'status2');
+			break;
+		case "-1": //Backup Failed
+			str = _T('_usb_backups', 'status_1_d');
+			break;
+		case "-2": //Invalid Source Folder
+			str = _T('_usb_backups', 'status_2');
+			break;
+		case "-3": //Invalid Destination Folder
+			str = _T('_usb_backups', 'status_3');
+			break;
+		case "-4": //Duplicate Backup
+			str = _T('_usb_backups', 'status_4');
+			break;
+		case "-5": //Additional Backups not allowed
+			str = _T('_usb_backups', 'status_5');
+			break;
+		case "-6": //Memory Allocation Error
+			str = _T('_usb_backups', 'status_6');
+			break;
+		case "-7": //Invalid Backup
+			str = _T('_usb_backups', 'status_7');
+			break;
+		case "-8": //Invalid Backup Path
+			str = _T('_usb_backups', 'status_8');			
+			break;
+		case "-9":
+			str = _T('_usb_backups', 'status_9');
+			break;
+		case "-10": //Cancel
+			str = _T('_usb_backups', 'status_10');
+			break;
+		case "-11": //Destination Full
+			str = _T('_usb_backups', 'status_11');
+			break;
+		default:
+			str = _T('_usb_backups', 'status_1');
+			break;
+	}
+	return str
+}
+
+function translate_status_code(status_code)
+{
+	var str = "";
+	switch(status_code)
+	{
+		case "0": //Finish
+			str = _T('_usb_backups', 'status0');
+			break;
+		case "1": //Ready
+			str = _T('_usb_backups', 'status1');
+			break;
+		case "2": //Backup in Progress
+			str = _T('_usb_backups', 'status2');
+			break;
+		case "-10": //Backup Stopped
+			str = _T('_usb_backups', 'backup_Stopped');
+			break;
+		default:
+			str = _T('_usb_backups', 'status_1');
+			break;
+	}
+	return str
+}
+var get_incremental_list_idx = -1;
+function show_jobs_detail(idx)
+{
+	adjust_dialog_size("#BackupsDiag", 670, 560);
+
+	$("#BackupsDiag").overlay({fixed: false, oneInstance:false, expose: '#000', api:true, closeOnClick:false, closeOnEsc:false}).load();
+	$("#BackupsDiag").center();
+	$('#Internal_Backup_Detail').show();
+
+	init_button();
+	language();
+
+	$("#BackupsDiag_title").html(_T('_backup', 'desc5'));
+	$("#internal_task_name").html(jobs_list[idx][0]);
+//	$("#internal_category").html(jobs_list[idx][6].replace(/1/g, _T('_usb_backups', 'usb_to_nas'))
+//											 .replace(/2/g, _T('_usb_backups', 'nas_to_usb')));
+
+	/* [+] Source path */
+	var table_ele = $("#Internal_Backup_Detail .source_listDiv ul");
+	table_ele.empty();
+	for(var k in jobs_list[idx][2])
+	{
+		var t = "<li id='backups_InternalBackupsSource"+(parseInt(k,10)+1)+"_text'>";
+		var _path = translate_path_to_display(jobs_list[idx][2][k]);
+		t += String.format('<div class="select_text TooltipIcon" title="{0}">{1}</div>', _path, _path);
+		t += "</li>";
+		table_ele.append(t);
+	}
+
+	var list_height = jobs_list[idx][2].length * 32;
+	$("#Internal_Backup_Detail .source_listDiv").height((list_height < 96) ? list_height : 96);
+	$("#Internal_Backup_Detail .source_listDiv").jScrollPane({autoReinitialise: true});
+	/* [-] Source path */
+
+	/* [+] Dest path */
+	table_ele = $("#Internal_Backup_Detail .dest_listDiv ul");
+	table_ele.empty();
+	var _path = translate_path_to_display(jobs_list[idx][4]);
+	table_ele.append(String.format('<li id="backups_InternalBackupsDest_text"><div class="select_text TooltipIcon" title="{0}">{1}</div></li>', _path, _path));
+	/* [-] Dest path */
+
+	init_tooltip();
+
+	$("#internal_dest_dir div").html(translate_path_to_display(jobs_list[idx][4]));
+	$("#internal_dest_dir div").attr("title", translate_path_to_display(jobs_list[idx][4]));
+
+	$("#internal_backup_type").html(jobs_list[idx][7].replace(/1/g, _T('_usb_backups', 'copy'))
+												.replace(/2/g, _T('_usb_backups', 'sync'))
+												.replace(/3/g, _T('_usb_backups', 'incremental')));
+
+	var _status = translate_status_code_detail(jobs_list[idx][10]);
+	if (jobs_list[idx][9] != "" && jobs_list[idx][10] == "0") //hvae timestamp
+		_status = String.format(_T("_usb_backups", "status0_1"), multi_lang_format_time(parseInt(jobs_list[idx][9], 10) * 1000));
+	$("#internal_status").html(_status);
+
+	$("#Internal_Backup_Detail .close").click(function(){
+		$("#internal_revocer_div").hide();
+		$("#bakups_internalbackupdetailrevocer_div").hide();
+		$("#BackupsDiag").overlay().close();
+		$('#Internal_Backup_Detail').hide();
+	});
+	show_schedule("internal_backup_sch_status",jobs_list[idx][14],jobs_list[idx][15],jobs_list[idx][16]);
+
+	$("#jobs_list tr").removeClass("trSelected");
+	
+	switch(parseInt(jobs_list[idx][7],10))
+	{
+		case 3://Incremental mode, Get Incremental List
+				$("#internal_revocer_div").show();
+				$("#backups_InternalBackupsRecover_button").attr("onClick", String.format('show_recover_diag({0});', idx));
+				
+				clearTimeout(timeoutId);
+				get_incremental_list_idx = idx;
+				$("#jobs_list").flexOptions({params:[{name:'get_incremental_list_flag', value: 1}]})
+									.flexReload()
+									.flexOptions({params:[{name:'get_incremental_list_flag', value: 0}]});
+		break;
+		
+		default://Copy, Sync
+				$("#bakups_internalbackupdetailrevocer_div").show();
+				$("#backups_InternalBackupsDetailSyncRecover_button").attr("onClick",	String.format('recover_job({0}, "");', idx));
+		break;
+	}
+}
+
+function show_recover_diag(idx)
+{
+	$("#Internal_Backup_Recovery .dialog_content").height(330);
+	$("#Internal_Backup_Recovery .dialog_content").jScrollPane({autoReinitialise: true});
+
+	$('#Internal_Backup_Detail').hide();
+	$('#Internal_Backup_Recovery').show();
+
+	$("#Internal_Backup_Recovery .close").click(function(){
+		$('#Internal_Backup_Detail').hide();
+		$('#Internal_Backup_Recovery').hide();
+	});
+
+	$("#Internal_Backup_Recovery .back").click(function(){
+		$('#Internal_Backup_Detail').show();
+		$('#Internal_Backup_Recovery').hide();
+	});
+}
+
+function recover_job(idx, restore_source)
+{
+	jConfirm('M', _T('_backup','msg16'), _T('_backup','title5') ,"warning" ,function(r){
+		if(r)
+		{
+					
+						jLoading(_T('_common','set'), 'loading', 's', "");
+						clearTimeout(timeoutId);
+						$("#jobs_list").flexAjaxID().abort();
+					
+						wd_ajax({
+							url: "/web/backups/internal_backup.php",
+							type: "POST",
+							data: {
+								action: "go_restore",
+								taskname: jobs_list[idx][0],
+								restore_source: (restore_source == "")?"":restore_source
+							},
+							cache: false,
+							dataType: "json",
+							complete: function(r) {
+								jLoadingClose();
+								$("#Internal_Backup_Recovery .close").trigger('click');
+								$("#Internal_Backup_Detail .close").trigger('click');
+								$("#jobs_list").flexReload();
+							}
+						});
+		}				
+	});	//end of jConfirm
+}
+
+function go_jobs(ele,idx)
+{
+	if ($(ele).hasClass("grayout")) return;
+
+	jLoading(_T('_common','set'), 'loading', 's', "");
+	clearTimeout(timeoutId);
+	$("#jobs_list").flexAjaxID().abort();
+
+	wd_ajax({
+		url: "/web/backups/internal_backup.php",
+		type: "POST",
+		data: {
+			action: "go_jobs",
+			taskname: jobs_list[idx][0]
+		},
+		cache: false,
+		dataType: "json",
+		complete: function(r) {
+			jLoadingClose();
+			$(ele).removeClass("grayout");
+			$("#jobs_list").flexReload();
+		}
+	});
+}
+
+function stop_jobs(idx)
+{
+	jLoading(_T('_common','set'), 'loading', 's', "");
+	clearTimeout(timeoutId);
+	$("#jobs_list").flexAjaxID().abort();
+
+	wd_ajax({
+		url: "/web/backups/internal_backup.php",
+		type: "POST",
+		data: {
+			action: "stop_jobs",
+			taskname: jobs_list[idx][0]
+		},
+		cache: false,
+		dataType: "json",
+		success: function(r) {
+			jLoadingClose();
+			$("#jobs_list").flexReload();
+		}
+	});
+}
+
+function pre_del_jobs(idx)
+{
+	jConfirm("", _T('_usb_backups', 'msg11'), jobs_list[idx][0], "", function(r) {
+		if (r)
+			del_jobs(idx);
+	});
+}
+
+function del_jobs(idx)
+{
+	jLoading(_T('_common','set'), 'loading', 's', "");
+	clearTimeout(timeoutId);
+	$("#jobs_list").flexAjaxID().abort();
+
+	wd_ajax({
+		url: "/web/backups/internal_backup.php",
+		type: "POST",
+		data: {
+			action: "del",
+			taskname: jobs_list[idx][0]
+		},
+		cache: false,
+		dataType: "json",
+		success: function(r) {
+			jLoadingClose();
+			$("#jobs_list").flexReload();
+		}
+	});
+}
+
+var last_jobs_list = new Object();
+function load_jobs_list()
+{
+	$("#jobs_list").flexigrid({	
+			url: "/web/backups/internal_backup.php?action=get_list",
+			dataType: 'json',
+			colModel : [
+			/* 0 */{display: "Task_name", name : 'f_task_name', width: 145, align: 'left'},
+			/* 1 */{display: "id", name : 'id', hide: true},
+			/* 2 */{display: "Source Dir", name : 'f_source_dir', hide: true},
+			/* 3 */{display: "Source Percent", name : 'f_source_percent', hide: true},
+			/* 4 */{display: "Dest Dir", name : 'f_dest_dir', hide: true},
+			/* 5 */{display: "Status", name : 'f_status', width: 350, align: 'left'},
+			/* 6 */{display: "category", name : 'f_category', hide: true},
+			/* 7 */{display: "backup_type", name : 'f_backup_type', hide: true},
+			/* 8 */{display: "Action", name : 'f_action', width: 160, align: 'right'}
+			],
+			usepager: true,
+			useRp:true,
+			page: 1, 
+			rp: 30,
+			showTableToggleBtn: false,
+			width: 'auto',
+			height: 'auto',
+			errormsg: _T('_common','connection_error'), //Text:Connection Error
+			nomsg: _T('_common','no_items'), //Text:No items
+			singleSelect:true,
+			f_field: getCookie("username"),
+			resizable: false,
+			rpOptions: [10],
+			onSuccess:function(){
+				init_tooltip();
+				clearTimeout(timeoutId);
+				timeoutId = setTimeout('$("#jobs_list").flexReload()', 2000);
+
+				if (jobs_list.length > 0)
+					$("#jobs_list_div").show();
+				else
+					$("#jobs_list_div").hide();
+
+				if (now_idx != -1)
+					$("#jobs_list #row" + now_idx).toggleClass("trSelected");
+
+				if (action_type == "create") //select and focus
+				{
+					$("#jobs_list tr").removeClass("trSelected");
+					$("#jobs_list tr:last").toggleClass("trSelected");
+					$("#jobs_list tr:last a").focus();
+					action_type = "";
+				}
+				
+				if (get_incremental_list_idx != -1)
+				{
+					var idx = get_incremental_list_idx;
+					//restore_list
+					var i = 1;
+					var table_ele = $("#restore_listDiv ul");
+					table_ele.empty();
+					for(var k in jobs_list[idx][13])
+					{
+						var t = "<li>";
+						t += String.format("<div class=\"dateTime\">{0}</div>", _status = multi_lang_format_time(parseInt(jobs_list[idx][13][k][1], 10) * 1000));
+						t += String.format('<div class=\"btn\"><button type="button" onClick="recover_job({0}, \'{1}\');" id="backups_InternalBackupsRestore{3}_button">{2}</button></div>',
+								idx, jobs_list[idx][13][k][0] ,_T("_backup", "button1"), i);
+						t += "</li>";
+						table_ele.append(t);
+						i++;
+					}
+					get_incremental_list_idx = -1;
+				}
+			},
+			preProcess: function(r) {
+				var r_data = r;
+				jobs_list.length = 0;
+
+				if (r.success)
+				{
+					var _r = r_data.rows;
+					var i = 1;
+					for(var key in _r)
+					{
+						var c = _r[key]['cell'];
+
+						r_data.rows[key]['cell'][8] = '<div class="list_icon">';
+						//Action
+						if (c[5] == "2" || c[5] == "3") //Backuping or Recovering
+							r_data.rows[key]['cell'][8] += String.format('<div class="stop TooltipIcon" onClick="stop_jobs({0});" title="{1}" id="backups_InternalBackupsStopJob{2}_button"></div>', key, _T("_usb_backups", "backup_cancel"), i);
+						else
+							r_data.rows[key]['cell'][8] += String.format('<div class="start TooltipIcon" onClick="go_jobs(this,{0});" title="{1}" id="backups_InternalBackupsGoJob{2}_button"></div>', key, _T("_usb_backups", "backup_now"), i);
+						//Edit					
+						r_data.rows[key]['cell'][8] += String.format('<div class="edit TooltipIcon {3}" onClick="modify_job(this,{0});" title="{1}" id="backups_InternalBackupsModifyJob{2}_button"></div>', key, _T("_usb_backups", "edit_job"), i, (c[5] == "2" || c[5] == "3") ? "grayout" : "");
+						//Del
+						r_data.rows[key]['cell'][8] += String.format('<div class="del TooltipIcon" onClick="pre_del_jobs({0});" title="{1}" id="backups_InternalBackupsDelJob{2}_button"></div>', key, _T("_usb_backups", "del_job"), i);
+						//Details
+						r_data.rows[key]['cell'][8] += String.format('<div class="detail TooltipIcon" onClick="show_jobs_detail({0});" title="{1}" id="backups_InternalBackupsShowJob{2}_button"></div>', key, _T("_usb_backups", "details"), i);
+
+						r_data.rows[key]['cell'][8] += '</div>';
+
+						//Status
+						if (c[5] == "2" || c[5] == "3") //Backup in process and Recover
+						{
+							var src_len = c[2].length;
+							var now_backup_path = translate_path_to_display(c[12]);
+							var now_idx = $.inArray("/"+now_backup_path, c[2])+1;
+
+							if (now_idx <= 0 && last_jobs_list.length > 0)
+							{
+								now_idx = last_jobs_list.rows[key]['now_idx'];
+								now_backup_path = last_jobs_list.rows[key]['now_backup_path'];
+							}
+							r_data.rows[key]['now_idx'] = now_idx;
+							r_data.rows[key]['now_backup_path'] = now_backup_path;
+
+							var bar_p = parseInt(c[11], 10);
+							if (isNaN(bar_p)) bar_p = parseInt(r_data.rows[key]['cell'][11], 10);
+
+							var bar = '<div class="list_icon_bar" style="">' +
+										'<div class="bar_p" style="float: left; width: {0}%;"></div>' +
+										'</div>' +
+										'<div class="list_bar_text TooltipIcon" title="{2}">{3}/{4}, {5} {1}</div>';
+							
+							if (c[5] == "2" && bar_p >= 0 && now_idx > 0)
+								r_data.rows[key]['cell'][5] = String.format(bar, bar_p, now_backup_path, now_backup_path, now_idx, src_len, "");
+							else if (c[5] == "3" && bar_p >= 0) //Recover
+								r_data.rows[key]['cell'][5] = String.format(bar, bar_p, now_backup_path, now_backup_path, now_idx, src_len, _T("_usb_backups", "recovering"));
+							else
+								r_data.rows[key]['cell'][5] = '<img src="/web/images/WD-Anim-barber-fast.gif" border="0" class="list_icon_bar_anim">';
+						}
+						else
+							r_data.rows[key]['cell'][5] = translate_status_code(c[5].toString());
+
+						jobs_list.push(r_data.rows[key]['cell']);
+						i++;
+					}
+				}
+
+				//get now selected row index;
+				var list_ele = $("#jobs_list");
+				var selected_count = $('.trSelected', list_ele).length;
+				if(selected_count > 0)
+					now_idx = $('.trSelected td:nth-child(2) div', list_ele).text();
+				else
+					now_idx = -1;
+
+				last_jobs_list = $.extend({}, r_data);
+				return r_data;
+			},
+			onError: function() {
+				clearTimeout(timeoutId);
+				timeoutId = setTimeout('$("#jobs_list").flexReload()', 1000);
+			}
+	});
+}
+
+function modify_job(ele, idx)
+{
+	if ($(ele).hasClass("grayout")) return;
+
+	modify_id = idx;
+	$("#backups_InternalBackupsSourcepath_button").hide();
+	$("#backups_InternalBackupsDestpath_button").hide();
+	
+	$("#backups_InternalBackupsTaskName_text").val(jobs_list[idx][0]);
+  $("#old_taskname").val(jobs_list[idx][0]);
+  $("#backups_InternalBackupsTaskName_Div").hide();
+  $("#backups_InternalBackupsTaskNameSystem_text").html(jobs_list[idx][0]).show();
+  
+	$("#f_category_text").html(jobs_list[idx][6].replace(/1/g, _T('_usb_backups', 'usb_to_nas'))
+										   .replace(/2/g, _T('_usb_backups', 'nas_to_usb')));
+	$("#f_category_select").hide();
+	$("#f_category").attr('rel', jobs_list[idx][6]);
+	$("#f_category_text").show();
+
+	/* [+] Source path */
+	var table_ele = $("#Internal_Backup_Create .source_listDiv ul");
+	table_ele.empty();
+	for(var k in jobs_list[idx][2])
+	{
+		var t = "<li id='backups_InternalBackupsSource"+(parseInt(k,10)+1)+"_text'>";
+		var _path = translate_path_to_display(jobs_list[idx][2][k]);
+		t += String.format('<div class="select_text TooltipIcon" title="{0}">{1}</div>', _path, _path);
+		t += "</li>";
+		table_ele.append(t);
+	}
+
+	var list_height = jobs_list[idx][2].length * 32;
+	$("#Internal_Backup_Create .source_listDiv").height((list_height < 96) ? list_height : 96);
+	$("#Internal_Backup_Create .source_listDiv").jScrollPane({autoReinitialise: true});
+	$(".source_listDiv_empty").hide();
+	/* [-] Source path */
+
+	/* [+] Dest path */
+	table_ele = $("#Internal_Backup_Create .dest_listDiv ul");
+	table_ele.empty();
+	var _path = translate_path_to_display(jobs_list[idx][4]);
+	table_ele.append(String.format('<li id="backups_InternalBackupsDest_text"><div class="select_text TooltipIcon" title="{0}">{1}</div></li>', _path, _path));
+	$(".dest_listDiv_empty").hide();
+	/* [-] Dest path */
+
+	init_tooltip();
+
+//	if ( jobs_list[idx][6] == "1") //USB to NAS
+//	{
+//		if ($("#f_type_li li").length < 3)
+//			$("#f_type_li").append(String.format('<li rel="3" class="li_end"><a href="#"">{0}</a></li>', _T("_usb_backups", "incremental")));
+//	}
+//
+	$("#f_type").html(jobs_list[idx][7].replace(/1/g, _T('_usb_backups', 'copy'))
+									   .replace(/2/g, _T('_usb_backups', 'sync'))
+									   .replace(/3/g, _T('_usb_backups', 'incremental')));
+	$("#f_type").attr('rel', jobs_list[idx][7]);
+	$("#f_type_text").show();
+
+	if (jobs_list[idx][14] == "0")
+	{
+		setSwitch('#backups_InternalBackupsRecurring_switch', "0");
+		set_mode('#s_type',"3",function(){show_schedule_type_div()});				
+		sch_hour_select("backups_InternalBackupsHour",1);	
+		sch_day_select("backups_InternalBackupsDay",1);
+		sch_week_select("backups_InternalBackupsWeek",1);
+		sch_pm_select("backups_InternalBackupsPM",0);
+		init_select();
+		$(".backup_schedule_tr").hide();
+	}	
+	else
+	{	
+		setSwitch('#backups_InternalBackupsRecurring_switch', "1");
+		set_mode('#s_type',jobs_list[idx][14],function(){show_schedule_type_div()});		
+		sch_hour_select("backups_InternalBackupsHour",jobs_list[idx][16]);	
+		sch_day_select("backups_InternalBackupsDay",jobs_list[idx][15]);
+		sch_week_select("backups_InternalBackupsWeek",jobs_list[idx][15]);
+		if (jobs_list[idx][16]<=11)
+			sch_pm_select("backups_InternalBackupsPM",0);
+		else	
+			sch_pm_select("backups_InternalBackupsPM",1);
+		init_select();
+		$(".backup_schedule_tr").show();		
+	}
+	$("#f_task_id").val(jobs_list[idx][1]);
+
+	$("#jobs_list tr").removeClass("trSelected");
+
+	$("#BackupsDiag_title").html(_T('_backup', 'edit_job'));
+	$("#BackupsDiag").overlay({fixed: false, oneInstance:false, expose: '#000', api:true, closeOnClick:false, closeOnEsc:false}).load();
+	$("#BackupsDiag").center();
+	$("#backups_InternalBackupsSave1_button").show();
+	$("#backups_InternalBackupsCreate2_button").hide();
+	$('#Internal_Backup_Create').show();
+	adjust_dialog_size("#BackupsDiag", 800, 580);
+	
+}
+
+var action_type = "";
+function save_job(do_action)
+{
+	jLoading(_T('_common','set'), 'loading', 's', "");
+	clearTimeout(timeoutId);
+	$("#jobs_list").flexAjaxID().abort();
+
+	var _source_dir = new Array();
+	$("#Internal_Backup_Create .source_listDiv li div").each(function(){
+		_source_dir.push("/"+ $(this).html());
+	});
+
+	var _dest_dir = "";
+	$("#Internal_Backup_Create .dest_listDiv li div").each(function(){
+		_dest_dir = "/" + $(this).html();
+	});
+
+	wd_ajax({
+		url: "/web/backups/internal_backup.php",
+		type: "POST",
+		data: {
+			action: do_action,
+			taskid: $("#f_task_id").val(),
+			taskname: $("#backups_InternalBackupsTaskName_text").val(),
+			old_taskname: (do_action == "modify") ? $("#old_taskname").val() : "" ,			
+			source_dir: _source_dir,
+			dest_dir: _dest_dir,
+			backup_type: $("#f_type").attr('rel'), //1:copy, 2:sync 3:incremental
+			schedule: getSwitch('#backups_InternalBackupsRecurring_switch'),
+			backup_sch_type: $("#s_type").attr('rel'),
+			hour: $("#id_sch_hour").attr('rel'),
+			week: $("#id_sch_week").attr('rel'),
+			day: $("#id_sch_day").attr('rel')			
+		},
+		cache: false,
+		dataType: "json",
+		success: function(r) {
+			jLoadingClose();
+			//reload Jobs list
+			$("#jobs_list").flexReload();
+
+			$("#backups_InternalBackupsCancel1_button").click();
+		}
+	});
+
+	action_type = do_action;
+}
+
+function select_change(sel_val)
+{
+	$("#f_source_path").empty();
+	$(".source_listDiv ul").empty();
+	$(".source_listDiv").height(0);
+	$(".source_listDiv_empty").show();
+	$(".dest_listDiv ul").empty();
+	$(".dest_listDiv_empty").show();
+	$("#backups_InternalBackupsDestpath_text").val('');
+
+	$("#f_type").html(_T('_usb_backups', 'copy'));
+	$("#f_type").attr('rel', 1);
+
+//	if (sel_val == "1") //USB to NAS
+//	{
+//		$("#f_type_li li").eq(1).removeClass('li_end');
+//		if ($("#f_type_li li").length < 3)
+//			$("#f_type_li").append(String.format('<li rel="3" class="li_end"><a href="#"">{0}</a></li>', _T("_usb_backups", "incremental")));
+//	}
+//	else //NAS to USB
+//	{
+//		$("#f_type_li li").eq(2).remove();
+//		$("#f_type_li li").eq(1).addClass('li_end');
+//	}
+}
+
+function reset_setting()
+{
+	$("#backups_InternalBackupsTaskName_Div").show();
+	$("#backups_InternalBackupsTaskNameSystem_text").empty().hide();
+	$("#backups_InternalBackupsTaskName_text").val('');
+	$(".source_listDiv ul").empty();
+	$(".source_listDiv_empty").show();
+	$(".dest_listDiv ul").empty;
+	$(".dest_listDiv_empty").show();
+	$("#backups_InternalBackupsDestpath_text").val('');
+	$("#f_taskid").val('');
+	$("#f_type_select").show();
+	$("#f_type_text").hide();
+	$("#backups_InternalBackupsSourcepath_button").show();
+	$("#backups_InternalBackupsDestpath_button").show();
+	setSwitch('#backups_InternalBackupsRecurring_switch', 0);
+	select_change(1);
+
+	modify_id = -1;
+	//clearTimeout(timeoutId);
+	//timeoutId = setTimeout('$("#jobs_list").flexReload()', 3000);
+}
+function backup_chk_name(name)
+{
+	//return 1:	not a valid name
+	var re=/[^a-zA-Z0-9_-]/;
+	if(re.test(name))
+		return 1;
+	else
+		return 0;
+}
+function check_data()
+{
+	if ($("#backups_InternalBackupsTaskName_text").val() == "")
+	{
+		jAlert( _T('_usb_backups', 'msg7'), "warning");
+		return false;
+	}
+	if(backup_chk_name($("#backups_InternalBackupsTaskName_text").val())==1)
+	{
+		//The Task allow characters : "a-z" , "A-Z" , "0-9" , "-" and "_"
+		jAlert(_T('_remote_backup','msg5'), _T('_common','error'),"",function(){
+			$('#backups_InternalBackupsTaskName_text').focus();
+		});
+		return;
+	}
+	if ($("#Internal_Backup_Create .source_listDiv ul li").length == 0)
+	{
+		jAlert( _T('_usb_backups', 'msg2'), "warning");
+		return false;
+	}
+
+	if ($("#Internal_Backup_Create .dest_listDiv ul li").length == 0)
+	{
+		jAlert( _T('_usb_backups', 'msg3'), "warning");
+		return false;
+	}
+	var _source_dir = new Array();
+	$("#Internal_Backup_Create .source_listDiv li div").each(function(){
+		_source_dir.push($(this).html());
+	});
+
+	var _dest_dir = "";
+	$("#Internal_Backup_Create .dest_listDiv li div").each(function(){
+	  _dest_dir = $(this).html();
+	});
+	
+	for (var i = 0; i < _source_dir.length; i++)
+	{
+		if (_dest_dir == _source_dir[i])
+		{
+			jAlert( _T('_backup', 'msg10'), "warning");		
+			return;
+		}
+	}
+
+	var task_name = $("#backups_InternalBackupsTaskName_text").val();
+	for (var idx in jobs_list)
+	{
+		if (idx == modify_id)
+			continue;
+
+		if (jobs_list[idx][0].toLowerCase() == task_name.toLowerCase())
+		{
+			jAlert( _T('_backup', 'msg17'), "warning");	//Text:A job with the same name entered already exists. Enter a different name.
+			return false;
+		}
+	}
+
+	return true;
+}
+
+function unbind_dialog_buttons()
+{
+	$("#BackupsDiag *").unbind('click');
+}
+
+function page_load()
+{
+	$("#jobs_list_div").hide();
+
+	$("input:text").inputReset();
+	init_switch();
+
+	$("#tip_backup_type").attr("title", _T("_usb_backups", "backup_type_tip")).attr("rel", _T("_usb_backups", "backup_type_tip"));
+	init_tooltip();
+	$("#backups_InternalBackupsSourcepath_button").click(function(){
+		$("#BackupsDiag").overlay().close();		
+		open_folder_selecter({
+			title: _T('_usb_backups', 'select_source_dir'),
+			device: "HDD", //HDD, USB, ..., ALL
+			root: '/mnt/HD',
+			cmd: 'cgi_read_open_tree',
+			script: '/cgi-bin/folder_tree.cgi',
+			effect: 'no_son',
+			formname: 'generic',
+			textname: null,
+			filetype: 'all',
+			checkbox_all: 2,
+			showfile: 1,
+			chkflag: 1, //for show check box, 1:show, 0:not
+			chk:1,
+			callback: null,
+			multi_select: true,
+			max_select: 25,
+			over_select_msg: _T("_usb_backups", "over_select_msg"),
+			afterOK: function() {
+				var sel_source_ele = $("#folder_selector input:checkbox:checked[name=folder_name]");
+
+				var table_ele = $("#Internal_Backup_Create .source_listDiv ul");
+				table_ele.empty();
+				var sel_source_ele_length = 0;
+				sel_source_ele.each(function(k){					
+					if (!$(this).prop('disabled'))
+					{
+						sel_source_ele_length++;
+						var t = "<li id='backups_InternalBackupsSource"+(parseInt(k,10)+1)+"_text'>";
+						var _path = translate_path_to_display($(this).val());
+						t += String.format('<div class="select_text TooltipIcon" title="{0}">{1}</div>', _path, _path);
+						t += String.format('<span style="display:none">{0}</span>', _path);
+						t += "</li>";
+						table_ele.append(t);
+					}	
+				});
+
+				var list_height = sel_source_ele_length * 32;
+				$("#Internal_Backup_Create .source_listDiv").height((list_height <= 96) ? list_height : 96);
+
+				if (sel_source_ele.length > 0)
+					$(".source_listDiv_empty").hide();
+				else
+					$(".source_listDiv_empty").show();
+
+				if (sel_source_ele.length > 1)
+					$("#Internal_Backup_Create .source_listDiv").jScrollPane({contentWidth:260, autoReinitialise: true});
+
+				init_select();
+				$("#BackupsDiag").overlay().load();
+				$("#BackupsDiag").center();
+			},
+			afterCancel: function() {
+				$("#BackupsDiag").overlay().load();
+				$("#BackupsDiag").center();
+			}
+		});
+	});
+	
+	$("#backups_InternalBackupsDestpath_button").click(function(){
+		$("#BackupsDiag").overlay().close();		
+		open_folder_selecter({
+			title: _T('_usb_backups', 'select_dest_dir'),
+			device: "HDD", //HDD, USB, ..., ALL
+			root: '/mnt/HD',
+			cmd: 'cgi_read_open_tree',
+			script: '/cgi-bin/folder_tree.cgi',
+			effect: 'no_son',
+			formname: 'generic',
+			textname: null,
+			filetype: 'all',
+			checkbox_all: 2,
+			showfile: 0,
+			chkflag: 1, //for show check box, 1:show, 0:not
+			chk:1,
+			callback: null,
+			single_select: true,
+			afterOK: function() {
+				var sel_ele = $("#folder_selector input:checkbox:checked[name=folder_name]");
+				var table_ele = $("#Internal_Backup_Create .dest_listDiv ul");
+				table_ele.empty();
+				sel_ele.each(function(){
+					var t = "<li id='backups_InternalBackupsDest_text'>";
+					var _path = translate_path_to_display($(this).val());
+					t += String.format('<div class="select_text TooltipIcon" title="{0}">{1}</div>', _path, _path);
+					t += String.format('<span style="display:none">{0}</span>', _path);
+					t += "</li>";
+					table_ele.append(t);
+				});
+
+				if (sel_ele.length > 0)
+					$(".dest_listDiv_empty").hide();
+				else
+					$(".dest_listDiv_empty").show();
+
+				init_select();
+
+				$("#BackupsDiag").overlay().load();
+				$("#BackupsDiag").center();
+			},
+			afterCancel: function() {
+				$("#BackupsDiag").overlay().load();
+				$("#BackupsDiag").center();
+			}
+		});
+	});
+
+	$("#backups_InternalBackupsCreate2_button").click(function(){
+		if ($("#backups_InternalBackupsCreate2_button").hasClass("gray_out"))
+			return;
+		if (!check_data())
+			return;
+
+		clearTimeout(timeoutId);
+		save_job("create");
+	});
+
+	$("#backups_InternalBackupsSave1_button").click(function(){
+		if (!check_data())
+			return;
+
+		clearTimeout(timeoutId);
+		save_job("modify");
+	});
+
+	$("#backups_InternalBackupsCancel1_button").click(function(){
+		reset_setting();
+		$("#BackupsDiag").overlay().close();
+		$('#Internal_Backup_Create').hide();
+		$('#Internal_Backup_Detail').hide();
+		$('#Internal_Backup_Recovery').hide();
+	});
+
+	$("#backups_InternalBackupsCreate_button").click(function(){
+		if (jobs_list.length >= JOBS_AMOUNT)
+		{
+			jAlert( _T('_usb_backups', 'msg12'), "warning");
+			return false;
+		}
+		adjust_dialog_size("#BackupsDiag", 800, 580);
+
+		reset_setting();
+		$("#BackupsDiag_title").html(_T('_backup', 'create'));
+		$("#BackupsDiag").overlay({fixed: false, oneInstance:false, expose: '#000', api:true, closeOnClick:false, closeOnEsc:false}).load();
+		$("#BackupsDiag").center();
+		$("#backups_InternalBackupsCreate2_button").show();
+		$("#backups_InternalBackupsSave1_button").hide();
+		$('#Internal_Backup_Create').show();
+		set_mode('#s_type',"3",function(){show_schedule_type_div()});			
+		sch_hour_select("backups_InternalBackupsHour",1);	
+		sch_day_select("backups_InternalBackupsDay",1);
+		sch_week_select("backups_InternalBackupsWeek",1);
+		sch_pm_select("backups_InternalBackupsPM",0);
+		init_select();
+		$(".backup_schedule_tr").hide();
+	});
+
+$("#backups_InternalBackupsRecurring_switch").click(function(){			
+		var v = getSwitch('#backups_InternalBackupsRecurring_switch');
+		if( v == 0  )
+		{
+			$(".backup_schedule_tr").hide();
+		}
+		else
+		{
+			$(".backup_schedule_tr").show();
+		}
+	});
+
+	load_jobs_list();
+}
+	
+function show_schedule_type_div(s_type)
+{	
+	var type = $("#s_type").find(".buttonSel").attr("value");
+	switch(type)
+	{
+		case '3':	//daily
+			$("#id_week_div").hide()
+			$("#id_month_div").hide()		
+			$("#id_hour_div").show();
+			if (TIME_FORMAT == "12")
+				$("#id_pm_div").show();
+			break;
+		case '2':	//weekly			
+			$("#id_week_div").show()
+			$("#id_month_div").hide()
+			$("#id_hour_div").show();
+			if (TIME_FORMAT == "12")
+				$("#id_pm_div").show();
+			break;
+		case '1':	//monthly			
+			$("#id_week_div").hide()
+			$("#id_month_div").show()
+			$("#id_sch_day").attr("rel","1").text("01");
+			$("#id_hour_div").show();
+			if (TIME_FORMAT == "12")
+				$("#id_pm_div").show();
+			break;
+	}
+}
+function show_schedule(div,type,week_day,hour)
+{
+	if(TIME_FORMAT == "12")
+	{
+		var select_array = new Array(
+			//0,1,2,3,4
+		"12AM","1AM","2AM","3AM","4AM","5AM","6AM","7AM","8AM","9AM","10AM","11AM","12PM","1PM","2PM","3PM","4PM","5PM","6PM"
+		,"7PM","8PM","9PM","10PM","11PM"
+			);
+	}
+	else
+	{
+			var select_array = new Array(
+			//0,1,2,3,4
+		"0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18"
+		,"19","20","21","22","23"
+			);		
+	}		
+	var week_array = new Array(		
+			_T('_mail','sun'),
+			_T('_mail','mon'),
+			_T('_mail','tue'),
+			_T('_mail','wed'),
+			_T('_mail','thu'),
+			_T('_mail','fri'),
+			_T('_mail','sat')		
+	);	
+	var min = "00";
+	
+	if (type == 0)
+	{
+		$("#"+div).html(_T('_ipv6','off'));
+	}
+	else if (type == 3) //daily
+	{
+		if (TIME_FORMAT == 12)
+			$("#"+div).html(select_array[hour]+" / "+ _T('_mail','daily'));//Daily
+		else
+		$("#"+div).html(select_array[hour]+" :  "+ min +" / "+ _T('_mail','daily'));//Daily
+
+	}
+	else if (type == 2) //weekly
+	{					
+		if (TIME_FORMAT == 12)
+			$("#"+div).html(week_array[week_day]+" "+select_array[hour]+" / "+_T('_mail','weekly'));//Weekly
+		else
+		$("#"+div).html(week_array[week_day]+" "+select_array[hour]+" :  "+ min +" / "+_T('_mail','weekly'));//Weekly
+
+	}
+	else if (type == 1) //monthly
+	{		
+		var s="";
+		if(week_day==1 || week_day==21 || week_day==31)
+			s=week_day + "st" ;
+		else if(week_day==2 || week_day==22)
+			s=week_day + "nd" ;
+		else if(week_day==3 || week_day==23)
+			s=week_day + "rd" ;
+		else 
+			s=week_day + "th" ;
+		
+		if (TIME_FORMAT == 12)
+			$("#"+div).html(s+" "+select_array[hour] +" / "+_T('_mail','monthly'));//Monthly
+		else	
+			$("#"+div).html(s+" "+select_array[hour]+" :  "+ min +" / "+_T('_mail','monthly'));//Monthly
+	}
+}
+function page_unload()
+{
+	clearTimeout(timeoutId);
+}
+
+</script>
+
+<body>
+<div class="h1_content header_2"><span class="_text" lang="_backup" datafld="title3"></span></div>
+<div class="field_top"><span class="_text" lang="_backup" datafld="desc9"></span></div>
+<div class="hr_0_content"><div class="hr_1"></div></div>
+<button type="button" class="field_top" id="backups_InternalBackupsCreate_button"><span class="_text" lang="_backup" datafld="create"></span></button>
+
+<div class="field_top">
+	<!-- List -->
+	<div id="jobs_list_div">
+		<div class="hr_0_content"><div class="hr_1"></div></div>
+		<div class="h1_content header_2"><span class="_text" lang="_backup" datafld="title2"></span></div>
+		<div class="field_top">
+			<table id="jobs_list"></table>
+		</div>
+		<br>
+	</div>
+	
+</div>
+
+<div id="BackupsDiag" class="WDLabelDiag" style="display:none;">
+	<div id="BackupsDiag_title" class="WDLabelHeaderDialogue WDLabelHeaderDialogueFolderIcon">
+		<span class="_text" lang="_backup" datafld="desc1"></span>
+	</div>
+
+	<div align="center"><div class="hr"><hr></div></div>
+
+	<!-- Create -->
+	<div id="Internal_Backup_Create" style="display:none;">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<table border="0" cellpadding="0" cellspacing="0" width="100%">
+					<tr>
+						
+						<td class="tdfield"><span class="_text" lang="_usb_backups" datafld="job_name"></span></td>
+						<td class="tdfield_padding" colspan="2">
+							<div id="backups_InternalBackupsTaskName_Div">
+							<input type="hidden" name="f_task_id" id="f_task_id">
+							<input type="hidden" name="old_taskname" id="old_taskname">
+							<input type="text" name="backups_InternalBackupsTaskName_text" id="backups_InternalBackupsTaskName_text" style="width: 200px;" maxLength="16">
+							</div>
+							<div id="backups_InternalBackupsTaskNameSystem_text" style="display:none;"></div>
+						</td>
+					</tr>				
+					<tr>
+						<td class="tdfield" style="vertical-align: top; padding-top: 25px;"><span class="_text" lang="_usb_backups" datafld="source_dir"></span></td>
+						<td class="tdfield_padding" width="270">
+							<div class="source_listDiv">
+								<ul></ul>
+							</div>
+							<div class="source_listDiv_empty">
+								<ul><li></li></ul>
+							</div>
+						</td>
+						<td class="tdfield_padding" style="padding-left: 5px;">
+							<button type="button" id="backups_InternalBackupsSourcepath_button"><span class="_text" lang="_button" datafld="browse"></span></button>
+						</td>
+					</tr>
+					<tr>
+						<td class="tdfield"><span class="_text" lang="_usb_backups" datafld="dest_dir"></span></td>
+						<td class="tdfield_padding" width="270">
+							<div class="dest_listDiv">
+								<ul></ul>
+							</div>
+							<div class="dest_listDiv_empty">
+								<ul><li></li></ul>
+							</div>
+						</td>
+						<td class="tdfield_padding" style="padding-left: 5px;">
+							<button type="button" id="backups_InternalBackupsDestpath_button"><span class="_text" lang="_button" datafld="browse"></span></button>
+						</td>
+					</tr>
+					<tr>
+						<td class="tdfield"><span class="_text" lang="_usb_backups" datafld="backup_type"></span></td>
+						<td class="tdfield_padding" colspan="2">
+							<table border="0" cellpadding="0" cellspacing="0">
+								<tr>
+									<td>
+							<div class="select_menu" style="height:25px" id="f_type_select">
+								<ul>
+									<li class="option_list">
+										<div id="backups_InternalBackupsType_select" class="wd_select option_selected">
+											<div class="sLeft wd_select_l"></div>
+											<div class="sBody text wd_select_m" id="f_type" rel="1"><span class="_text" lang="_usb_backups" datafld="copy"></span></div>
+											<div class="sRight wd_select_r"></div>
+										</div>
+
+										<ul class="ul_obj" id="f_type_li" style="height:auto">
+											<div>
+											<li id="backups_InternalBackupsTypeLi1_select" rel="1" class="li_start"><a href="#""><span class="_text" lang="_usb_backups" datafld="copy"></span></a></li>
+											<li id="backups_InternalBackupsTypeLi2_select" rel="2" ><a href="#""><span class="_text" lang="_usb_backups" datafld="sync"></span></a></li>
+                      <li id="backups_InternalBackupsTypeLi2_select" rel="3" class="li_end"><a href="#""><span class="_text" lang="_usb_backups" datafld="incremental"></span></a></li>
+                      						</div>
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div id="f_type_text"></div>
+						</td>
+                                               	<td style="padding-left:10px;">
+
+						<div class="TooltipIcon" id="tip_backup_type" title="" rel=""></div>
+
+						</td>
+                                             </tr>
+                                           </table>
+							
+                                          </td>
+					</tr>			
+					<tr>
+						<td class="tdfield"><span class="_text" lang="_backup" datafld="recurring_backup"></span></td>
+						<td class="tdfield_padding" colspan="2">
+							<input id="backups_InternalBackupsRecurring_switch" name="backups_InternalBackupsRecurring_switch" class="onoffswitch" type="checkbox" value="true">
+						</td>
+					</tr>	
+					<tr class="backup_schedule_tr" style="display:none">
+						<td class="tdfield"></td>
+						<td class="tdfield_padding" colspan="2">
+							<div id="s_type">
+								<button id="backups_InternalBackupsDaily_button" class="left_button" value="3"><span class="_text" lang="_mail" datafld="daily">Daily</span></button><button id="backups_InternalBackupsWeekly_button" class="middle_button" value="2"><span class="_text" lang="_mail" datafld="weekly">Weekly</span></button><button id="backups_InternalBackupsMonthly _button" class="right_button" value="1"><span class="_text" lang="_mail" datafld="monthly">Monthly</span></button>																
+							</div>
+						</td>
+					</tr>				
+					<tr class="backup_schedule_tr" style="display:none">
+						<td class="tdfield"></td>
+						<td class="tdfield_padding" colspan="2">
+						
+						<table border="0" cellspacing="0" cellpadding="0" height="0">
+						<tr>							
+							<td>
+										<div id="id_week_div" style="width:170px;display:none">
+										<div class="select_menu" id="id_sch_week_top_main"></div>
+										</div>
+							</td>
+							<td>			
+										<div id="id_month_div" style="width:170px;display:none">
+											<div class="select_menu" id="id_sch_day_top_main"></div>
+										</div>	
+							</td>
+							<td>			
+										<div id="id_hour_div" style="width:170px;display:none">
+										<div class="select_menu" id="id_sch_hour_top_main"></div>
+										</div>
+							</td>
+							<td>			
+										<div id="id_pm_div" style="width:170px;display:none">
+										<div class="select_menu" id="id_pm_top_main"></div>
+										</div>
+							</td>
+						</tr>
+					</table>		
+							
+						</td>
+					</tr>								
+				</table>								
+			</div>	
+		</div>
+		
+		<div class="hrBottom2"><hr></div>
+		<button type="button" id="backups_InternalBackupsCancel1_button" class="ButtonLeftPos close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="backups_InternalBackupsCreate2_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="create"></span></button>
+		<button type="button" id="backups_InternalBackupsSave1_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="apply"></span></button>
+	</div>
+	<!-- end of Create -->
+
+	<!-- Detail -->
+	<div id="Internal_Backup_Detail" style="display:none;">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<table border="0" width="580" cellpadding="0" cellspacing="0" style='table-layout:fixed'>
+					<tr>
+						<td class="tdfield">
+							<span class="_text" lang="_usb_backups" datafld="job_name"></span>
+						</td>
+						<td class="tdfield_padding">
+							<span id="internal_task_name"></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="tdfield" style="vertical-align: top; padding-top: 25px;">
+							<span class="_text" lang="_usb_backups" datafld="source_dir"></span>
+						</td>
+						<td class="tdfield_padding">
+							<div class="source_listDiv">
+								<ul></ul>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="tdfield">
+							<span class="_text" lang="_usb_backups" datafld="dest_dir"></span>
+						</td>
+						<td class="tdfield_padding">
+							<div class="dest_listDiv">
+								<ul></ul>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td class="tdfield">
+							<span class="_text" lang="_usb_backups" datafld="status"></span>
+						</td>
+						<td class="tdfield_padding">
+							<span id="internal_status"></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="tdfield">
+							<span class="_text" lang="_usb_backups" datafld="backup_type"></span>
+						</td>
+						<td class="tdfield_padding">
+							<span id="internal_backup_type"></span>
+						</td>
+					</tr>
+					<tr>
+						<td class="tdfield"><span class="_text" lang="_backup" datafld="recurring_backup"></span></td>
+						<td class="tdfield_padding">
+								<span id="internal_backup_sch_status"></span>
+						</td>
+					</tr>					
+					<tr id="internal_revocer_div" style="display:none;">
+						<td class="tdfield">
+							<span class="_text" lang="_backup" datafld="desc17"></span>
+						</td>
+						<td class="tdfield_padding">
+							<button type="button" id="backups_InternalBackupsRecover_button" onClick="show_recover_diag(0);"><span class="_text" lang="_common" datafld="list"></span></button>
+						</td>
+					</tr>
+					<tr id="bakups_internalbackupdetailrevocer_div" style="display:none;">
+						<td class="tdfield">
+							<span class="_text" lang="_backup" datafld="desc17"></span>
+						</td>
+						<td class="tdfield_padding">
+							<button type="button" id="backups_InternalBackupsDetailSyncRecover_button"><span class="_text" lang="_backup" datafld="button1"></span></button>
+						</td>
+					</tr>
+				</table>
+			</div>	
+		</div>
+		
+		<div class="hrBottom2"><hr></div>
+		<button type="button" id="backups_InternalBackupsClose1_button" class="ButtonRightPos1 close"><span class="_text" lang="_button" datafld="close"></span></button>
+	</div>
+	<!-- end of Detail -->
+	
+	<!-- Recovery -->
+	<div id="Internal_Backup_Recovery" style="display:none;">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<div id="restore_listDiv">
+					<ul></ul>
+				</div>
+			</div>	
+		</div>
+		
+		<div class="hrBottom2"><hr></div>
+		<button type="button" id="backups_InternalBackupsBack1_button" class="ButtonLeftPos back"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="backups_InternalBackupsClose2_button" class="ButtonRightPos1 close"><span class="_text" lang="_button" datafld="close"></span></button>
+	</div>
+	<!-- end of Recovery -->
+</div>
+</body>
+</html>	

@@ -1,0 +1,124 @@
+#!/bin/sh
+source /usr/local/modules/files/project_features
+
+KILL_PROCES_FUNCTION()
+{
+	
+  #killall -9 mmfm
+  #killall -9 mmfc
+  killall -9 wget 2>/dev/null
+  twonky.sh stop
+ 
+  #mt-daapd -k
+  itunes.sh stop
+
+  #killall -9 inotify_itune 2>/dev/null
+  
+  #killall -9 avahi-daemon 2>/dev/null
+  
+  killall -9 mysqld_safe mysqld 2>/dev/null
+  killall -9 snmpd 2>/dev/null
+  killall -9 usb_disk 2>/dev/null
+  #stop scan disk
+  killall -9 resize2fs 2>/dev/null
+  killall -9 e2fsck  2>/dev/null
+  killall -9 scandisk 2>/dev/null
+
+	#iSCSI target
+	if [ "${PROJECT_FEATURE_ISCSI}" = "1" ] ; then
+		iSCSI_TARGET=$(xmldbc -g "/system_mgr/iscsi/enable")
+		if [ "$iSCSI_TARGET" = "1" ] ; then
+			iscsictl --deinit
+		fi
+	fi
+
+	# stop docker
+	PROCESS_ID=`pidof docker`
+	if [ -n "${PROCESS_ID}" ] ; then
+		TIMEOUT=60
+		docker_daemon.sh stop
+		while [ $TIMEOUT -gt 0 -a -e /proc/${PROCESS_ID} ] ; do
+			TIMEOUT=`expr $TIMEOUT - 1`
+			sleep 1
+		done
+	fi
+
+	### usb storage or sata disk ###
+	PID=`ps | grep transmission-daemon | grep "systemfile" | awk '{ print $1 }'`
+	kill -9 $PID
+	killall -9 newp2p 2>/dev/null
+
+	killall -9 scheddler 2>/dev/null
+	killall -9 afpd 2>/dev/null
+	#rmmod -f lltd 2>/dev/null
+	nfs stop
+	#smbwddb
+	#rm -f /tmp/.dosmbwddb 2>/dev/null
+	smbcmd -s
+	killall -9 pure-ftpd 2>/dev/null
+	killall rsync
+	#killall sshd
+	afp stop
+	#umount all iso mount points
+	iso_mount -u
+
+	smart_test -X
+	
+	# Stop performance monitor
+	[ -f /etc/init.d/atop ] && /etc/init.d/atop stop
+	
+	# Stop WD Mediacrawler/Dispatcher/Notifier
+	#/etc/init.d/wddispatcherd stop
+	/etc/init.d/wdnotifierd stop
+	/etc/init.d/wdphotodbmergerd stop
+	/etc/init.d/wdmcserverd stop
+	rm -f /tmp/WDMCDispatcher.pipe 2>/dev/null
+  
+	#rm -f /tmp/cgi_roaming_skip 2>/dev/null
+}
+
+KILL_PROCES_For_MFG()
+{
+  killall chk_hotplug 2>/dev/null
+  killall system_daemon 2>/dev/null
+  killall set_pwm
+  rm /usr/sbin/sata_disk
+}
+
+KILL_OTHER_PROGRAMS()
+{
+	#virtual volume
+	[ "$PROJECT_FEATURE_VIRTUAL_VOLUME" = "1" ] && vvctl --deinit
+
+  lltd.sh stop 2>/dev/null
+}
+
+PROG_NAME=`basename $0`
+echo "$PROG_NAME $1..." > /dev/kmsg
+
+num=$#
+
+dsknum=1
+while [ $dsknum -le 26 ]
+do
+	DISK_PATH=/mnt/HD_`expr substr "$DSK_INDEX" "$dsknum" 1`4
+	if [ -d "$DISK_PATH" ];then
+		touch $DISK_PATH/wake_up
+		sync
+		rm $DISK_PATH/wake_up
+	fi
+dsknum=`expr $dsknum + 1`
+done
+
+KILL_PROCES_FUNCTION $1
+
+if [ "$1" = "mfg" ]; then
+  KILL_PROCES_For_MFG
+fi
+
+if [ "$num" = "1" -a "$1" = "all" ]; then
+  KILL_OTHER_PROGRAMS
+fi
+
+echo "$PROG_NAME done." > /dev/kmsg
+

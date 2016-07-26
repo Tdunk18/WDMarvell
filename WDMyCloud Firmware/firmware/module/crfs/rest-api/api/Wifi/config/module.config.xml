@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+    <name>Wifi</name>
+    <version>2.1</version>
+    <description>Module has wifi_aps, wifi_ap_clients, wifi_client_access_points, wifi_client_connections</description>
+
+    <components>
+        <component>
+            <name>wifi_aps</name>
+            <module>Wifi</module>
+            <controller_class>\Wifi\Controller\WifiAps</controller_class>
+            <auth_security>
+                <get>ADMIN_AUTH_LAN</get>
+                <put>ADMIN_AUTH_LAN</put>
+            </auth_security>
+        </component>
+        <component>
+            <name>wifi_ap_clients</name>
+            <module>Wifi</module>
+            <controller_class>\Wifi\Controller\WifiApClients</controller_class>
+            <auth_security>
+                <get>ADMIN_AUTH_LAN</get>
+                <delete>ADMIN_AUTH_LAN</delete>
+            </auth_security>
+        </component>
+        <component>
+            <name>wifi_ap_configuration</name>
+            <module>Wifi</module>
+            <controller_class>\Wifi\Controller\WifiApConfiguration</controller_class>
+            <auth_security>
+                <get>ADMIN_AUTH_LAN</get>
+                <delete>ADMIN_AUTH_LAN</delete>
+            </auth_security>
+        </component>
+        <component>
+            <name>wifi_client_access_points</name>
+            <module>Wifi</module>
+            <controller_class>\Wifi\Controller\WifiClientAccessPoints</controller_class>
+            <auth_security>
+                <get>ADMIN_AUTH_LAN</get>
+                <put>ADMIN_AUTH_LAN</put>
+            </auth_security>
+        </component>
+        <component>
+            <name>current_wifi_client_connection</name>
+            <module>Wifi</module>
+            <controller_class>\Wifi\Controller\CurrentWifiClientConnection</controller_class>
+            <auth_security>
+                <get>ADMIN_AUTH_LAN</get>
+                <delete>ADMIN_AUTH_LAN</delete>
+            </auth_security>
+        </component>
+        <component>
+            <name>wifi_client_configuration</name>
+            <module>Wifi</module>
+            <controller_class>\Wifi\Controller\WifiClientConfiguration</controller_class>
+            <auth_security>
+                <get>ADMIN_AUTH_LAN</get>
+                <delete>ADMIN_AUTH_LAN</delete>
+            </auth_security>
+        </component>
+    </components>
+</module>

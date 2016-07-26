@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="PRAGMA" content="no-cache"> 
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+</head>
+
+<!-- jQuery Lib -->
+<script type="text/javascript" src="/web/jquery/js/jquery-1.9.1.min.js"></script>
+
+<script type="text/javascript">
+var timeoutId = 0;
+var web_get_percentage_timeout = -1;
+var web_get_verify_timeout = -1;
+var web_upload_uP_fw_timeout = -1;
+
+function page_load()
+{	
+	parent.wd_ajax({			 			   
+		type: "POST",
+		url: "/cgi-bin/system_mgr.cgi",
+		data:{cmd:"cgi_upload_status"},	
+		async:false,	
+		cache: false,
+		dataType: 'html',
+	   	success: function(data){		   
+	   		if (data == "error")
+	   		{
+	   			var sys_time = (new Date()).getTime();
+					location.href = "/web/setting/upload.html?r=" + sys_time;
+					parent.error_msg(parent._T('_firmware','msg3'));					
+					//parent.adjust_dialog_size("#overlay", 400, 276);
+					parent.dialog_show_button();
+					parent.hide_upload_show()
+					parent.restart_web_timeout();
+					parent.restart_get_name_mpapping();
+					parent.$("#id_msg").show();
+					return;
+	   		}  
+	   		else if (data == "auto")
+	   		{
+	   			//for auto update firmware, do noting
+	   		}	
+	   		else
+	   		{	
+	   				update_fw();					 	   
+	   		}		
+	   }
+	 });	 	
+ 	parent.set_percentage("0");	
+	parent.clear_percentage();
+	parent.startload();	
+	parent.show_percentage();
+	setTimeout(function(){get_percentage();},2000);
+}
+function update_fw()
+{
+		parent.wd_ajax({			 			   
+		type: "POST",
+		url: "/cgi-bin/system_mgr.cgi",
+		data:{cmd:"cgi_upload"},	
+		async:true,	
+		cache: false,
+		dataType: 'html',
+	   	success: function(data){	   						 	   
+	   },
+	   error:function()
+	   {
+	   	update_fw();
+	   }
+	 });
+}
+function get_verify()
+{	
+	parent.wd_ajax({
+		type:"POST",
+		url:"/cgi-bin/system_mgr.cgi",
+		data:{cmd:"cgi_get_firmware_verify"},
+		async:true,
+		cache: false,
+		dataType: 'html',
+		success:function(data){			
+			if (data == "4")	
+			{								
+					check_upload_uP_fw();
+					clearTimeout(web_get_verify_timeout);
+					return;
+			}
+			else if (data == "5")
+			{	
+				parent.clear_percentage();	
+					var sys_time = (new Date()).getTime();
+	   			location.href = "/web/setting/upload.html?r=" + sys_time;
+	   			parent.error_msg(parent._T('_firmware','msg4'));	   			   			
+	   			//parent.adjust_dialog_size("#overlay", 400, 276);
+	   			parent.dialog_show_button();
+	   			parent.hide_upload_show()
+	   			parent.restart_web_timeout();
+	   			parent.restart_get_name_mpapping();	   		
+				
+				clearTimeout(web_get_verify_timeout);
+				return;
+			}	
+			else
+			{	
+				web_get_verify_timeout = setTimeout(function(){get_verify();},2000);
+			}	
+				
+		},
+		error:function()
+		{
+			web_get_verify_timeout = setTimeout(function(){get_verify();},2000);
+		}
+	});
+}
+function get_percentage()
+{
+//	if (timeoutId != 0 ) window.clearTimeout();
+	
+	parent.wd_ajax({
+		type: "POST",
+		url: "/cgi-bin/system_mgr.cgi",
+		data:{cmd:"cgi_get_percentage"},
+		async:true,	
+		cache: false,
+		dataType: 'html',
+	   	success: function(data){	
+	   		if (data < 0)
+	   		{
+	   			parent.clear_percentage();
+	   			//parent.closeload();
+	   			//parent.jAlert(_T('_firmware','msg3'), _T('_common','error'),'');
+
+	   			var sys_time = (new Date()).getTime();
+	   			location.href = "/web/setting/upload.html?r=" + sys_time;
+	   			parent.error_msg(parent._T('_firmware','msg3'));	   		
+//	   			if (parent.MULTI_LANGUAGE == 13) 				    
+//				    parent.adjust_dialog_size("#overlay", 430, 276);
+//					else		
+//	   			  parent.adjust_dialog_size("#overlay", 400, 276);
+	   			    
+	   			parent.dialog_show_button();
+	   			parent.hide_upload_show()
+	   			parent.restart_web_timeout();
+	   			parent.restart_get_name_mpapping();	   		
+	   			clearTimeout(web_get_percentage_timeout); 		
+	   		}	
+	   		else if (data < 100)
+	   		{
+	   			parent.set_percentage(data);   	
+	   			web_get_percentage_timeout = setTimeout(get_percentage,1000);	   		
+	   		}	
+	   		else if (data >=100 )
+	   		{
+	   			if (data >100) data = 100;
+	   			parent.set_percentage(data);
+	   			setTimeout(get_verify,1000);
+	   			clearTimeout(web_get_percentage_timeout); 		
+	   		}
+	   },
+	   	error:function(){	   			 	
+	   			web_get_percentage_timeout = setTimeout(get_percentage,1000);
+	   }
+	 });
+}
+
+function check_upload_uP_fw()
+{
+	parent.wd_ajax({			 			   
+		type: "POST",
+		url: "/cgi-bin/system_mgr.cgi",
+		data:{cmd:"cgi_get_uP_fw"},	
+		async:true,	
+		cache: false,
+		dataType: 'html',
+	   	success: function(data){		
+	   						 
+	   		if (data == "OK")
+	   		{			 	   				   	
+	   			//upload micor firmware
+	   			//parent.parent.jAlert(_T('_firmware','msg3'), _T('_common','error'));	   				   			   				   			
+	   			parent.upload_Up_msg();
+	   			upload_uP_fw();
+	   		}	
+	   		else if (data == "NO")
+	   		{
+	   			//continue;
+	   			parent.closeload();	
+//	   			parent.clear_percentage();	   			
+					parent.upload_fw_success();
+	   		}		   	
+	   },
+	   error:function()
+	   {
+	   	check_upload_uP_fw();
+	   }
+	 });
+}
+
+function upload_uP_fw()
+{
+	parent.wd_ajax({			 			   
+		type: "POST",
+		url: "/cgi-bin/system_mgr.cgi",
+		data:{cmd:"cgi_get_uP_percentage"},	
+		async:true,	
+		cache: false,
+		dataType: 'html',
+	   	success: function(data){		
+	   						 
+	   		if (data.length < 1) {web_upload_uP_fw_timeout = setTimeout(upload_uP_fw,1000);}				 
+	   		else if (data < 0)
+	   		{			 	   				   	
+	   			parent.clear_percentage();		
+	   			parent.closeload();  					   				   								   			
+	   			parent.jAlert(parent._T('_firmware','msg3'), _T('_common','error'));
+	   			var sys_time = (new Date()).getTime();
+	   			location.href = "/web/setting/upload.html?r=" + sys_time;   				   
+	   			clearTimeout(web_upload_uP_fw_timeout); 				   
+	   		}	
+	   		else if (data < 100)
+	   		{
+	   			parent.set_percentage(data);	   
+	   			web_upload_uP_fw_timeout = setTimeout(upload_uP_fw,1000);
+	   		}	
+	   		else if (data >=100 )
+	   		{
+	   			parent.set_percentage(data);	   			
+	   			//setTimeout(chk_uP,5000);
+	   			clearTimeout(web_upload_uP_fw_timeout);		   		
+	   			parent.upload_uP_ok();
+	   		}
+	   },
+	   error:function()
+	   {
+	   	web_upload_uP_fw_timeout = setTimeout(upload_uP_fw,1000);
+	   }
+	 });
+}
+function chk_uP()
+{	
+	parent.wd_ajax({
+          url: '/ui_update_uP.html',
+          success: function(result){          	
+           setTimeout(chk_uP,3000);
+          },     
+          error: function(result){          	
+  	     parent.upload_uP_ok();							       	 
+             return false;
+          }
+       });              
+}
+function page_unload()
+{     
+		clearTimeout(web_get_verify_timeout);
+		clearTimeout(web_get_percentage_timeout); 	
+		clearTimeout(web_upload_uP_fw_timeout);	
+}
+
+</script>
+	
+</head>
+<body onLoad="page_load()" onunload="page_unload();">  
+<div id="content" class="b1">	
+	<form name="form_firm" id="form_firm" method="post" action="/cgi-bin/system_mgr.cgi" style="display:none">
+		<input type="hidden" name="cmd" value="cgi_reboot">
+		<input type="button" value="Reboot" onclick="parent.form_firm.submit();">
+	</form>
+
+	<div id="id_error" style="display:none">
+		<input type="button" onclick="history.back();" value="Back">
+		<input type="button" value="Restart All Process">
+	</div>
+</div>
+</body>
+</html>

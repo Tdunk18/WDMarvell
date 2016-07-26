@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="cs-CZ" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Nastavení sítě UPS</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Konfigurace jednotky My Cloud (Nastavení)\nSíť\nSíťový nepřerušitelný zdroj napájení (UPS)\nNastavení sítě UPS");
+addButton("show",BTN_TEXT,"Zobrazit","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left; background: #fafafa\"> ");
+AddMasterBreadcrumbs("index.htm", "", "&gt;", "Home", "welcome.htm");
+document.write("<a href=\"general_change_device_name.htm\">Konfigurace jednotky My Cloud (Nastavení)<\/a> &gt; <a href=\"network_address.htm\">Síť<\/a> &gt; <a href=\"setting_the_network_ups.htm\">Síťový nepřerušitelný zdroj napájení (UPS)<\/a> &gt; Nastavení sítě UPS<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(0);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Nastavení sítě UPS</h1>
+<p class="Body">Nepřerušitelný zdroj napájení (UPS) je zařízení, které 
+ je napájeno z&#160;baterií a&#160;udržuje zařízení připojená k&#160;portu 
+ nepřerušitelného zdroje napájení (UPS) alespoň na krátký čas v&#160;chodu, 
+ pokud dojde k&#160;výpadku hlavního napájecího zdroje. Když je zařízení 
+ My Cloud™ připojeno 
+ pomocí nepřerušitelného zdroje napájení (UPS) k&#160;síťové jednotce, 
+ jednotka se automaticky vypne, když dojde k&#160;vybití nepřerušitelného 
+ zdroje napájení (UPS) na určité procento kapacity.</p>
+<p class="Body">Komunikace se zařízením My Cloud se 
+ provádí pomocí protokolu master/slave, ve kterém nadřízené zařízení ovládá 
+ podřízená zařízení.</p>
+<p class="Body">Když je nepřerušitelný zdroj napájení (UPS) připojen k&#160;zařízení 
+ My Cloud  pomocí USB portu, 
+ zařízení se automaticky stává nadřízeným zařízením sítě nepřerušitelného 
+ zdroje napájení (UPS). Další zařízení My Cloud  
+ připojená k&#160;nepřerušitelnému zdroji napájení (UPS) mohou být odkazována 
+ na IP adresu nadřízeného nepřerušitelného zdroje napájení (UPS). Pokud 
+ dojde k&#160;vybití nepřerušitelného zdroje napájení (UPS) na určené procento 
+ kapacity, všechny podřízené jednotky My Cloud  
+ se automaticky a&#160;řádně vypnou. Viz odpověď znalostní databáze s&#160;ID 
+ č.&#160;11852, kde naleznete seznam nepřerušitelných zdrojů napájení (UPS).</p>
+<p class="Body">Chcete-li nastavit síť nepřerušitelného zdroje napájení 
+ (UPS) pro své zařízení My Cloud™, 
+ postupujte následovně.</p>
+<ol style="list-style: decimal;">
+	<li style="list-style: none; display: inline;"><ol style="list-style: decimal;">
+		<li class="n1">Klikněte na položku <span style="font-weight: bold;">Nastavení</span>.</li>
+		<li class="n1">V&#160;levém podokně klikněte na položku <span style="font-weight: bold;">Síť</span>.</li>
+		<li class="n1">V&#160;oblasti Síť UPS &gt; Podřízené kliknutím 
+		 na přepínač <img src="graphics/toggle_button.png" alt="" style="border: none;" width="20" height="12" border="0" />&#160;povolte 
+		 dynamické DNS.</li>
+		<li class="n1">Zadejte IP adresu nadřízeného zařízení síťového 
+		 nepřerušitelného zdroje napájení (UPS).</li>
+		<li class="n1">Klikněte na tlačítko <span style="font-weight: bold;">Další. 
+		 </span><span>Zobrazí se</span> obrazovka „Probíhá“ a&#160;po aktualizaci 
+		 nastavení se obrazovka Síť zobrazí s&#160;podřízeným zařízením 
+		 síťového nepřerušitelného zdroje napájení (UPS) nastaveným na 
+		 hodnotu VYPNUTO.</li>
+	</ol></li>
+	<li style="list-style: none; display: inline;"><p class="Indent1">&#160;</p></li>
+</ol>
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt;">© 2015 Western Digital Technologies, Inc. 
+	 <span style="color: rgb(75, 90, 104); font-size: 10.6666669845581px; 
+			 line-height: 21.3333339691162px; orphans: auto; widows: 1; 
+			 -webkit-text-stroke-width: 0px; display: inline	 ! important ; 
+			 float: none; background-color: rgb(250, 250, 250);">Všechna 
+	 práva vyhrazena.</span> </p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>

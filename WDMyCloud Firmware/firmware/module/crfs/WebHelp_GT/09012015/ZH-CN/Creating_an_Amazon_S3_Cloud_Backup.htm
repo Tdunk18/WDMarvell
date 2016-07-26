@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="MS-HAID" content="Creating an Amazon S3 Cloud Backup" />
+<meta http-equiv="Content-Language" content="zh-CN" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>创建 Amazon S3 云备份</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("备份个人云\n云备份\n创建 Amazon S3 云备份");
+addButton("show",BTN_TEXT,"显示","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("index.htm", "", ">", "首页", "welcome.htm");
+document.write("<a href=\"Creating_a_USB_Backup.htm\">备份个人云<\/a> > <a href=\"What_is_a_Cloud_Backup.htm\">云备份<\/a> > 创建 Amazon S3 云备份<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>创建 Amazon S3 云备份</h1>
+<p class="Body"><span style="font-weight: bold;">注</span>：创建云备份前，请先前往 <a 
+	 href="http://aws.amazon.com/s3" target="_blank">http://aws.amazon.com/s3</a> 
+ 注册 Amazon S3 服务。</p>
+<p class="Body">设置好 Amazon S3 帐户后，使用以下步骤创建云备份。</p>
+<ol style="list-style: square;">
+	<li style="list-style: none; display: inline;"><ol style="list-style: decimal;">
+		<li class="n1">单击“<b>备份</b>”。</li>
+		<li class="n1">单击“<span style="font-weight: bold;">云备份</span>”。</li>
+		<li class="n1">单击屏幕顶部的<b> Amazon S3 </b>按钮。<img src="Graphics/image016.png" 
+														 alt="" width="90" 
+														 height="18" border="0" /></li>
+		<li class="n1">单击“<b>创建</b>”。</li>
+		<li class="n1">输入云备份的作业名称。</li>
+		<li class="n1">单击“<b>下一步”</b>。</li>
+		<li class="n1">输入 Amazon S3 提供的以下信息：</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold;">地区</b>：从下拉菜单中选择用于云的“地区”。</li>
+		<li class="b1"><b style="font-weight: bold;">访问密钥</b>：输入 Amazon 
+		 S3 提供给您的访问密钥。</li>
+		<li class="b1"><b style="font-weight: bold;">私钥</b>：输入 Amazon S3 
+		 提供给您的私钥。</li>
+		<li class="b1"><b style="font-weight: bold;">远程路径</b>：输入云的远程路径。这通常就是 
+		 Bucket 名称。</li>
+	</ul>
+	<ol start="8" style="list-style: decimal;">
+		<li class="n1">单击“<b>下一步</b>”。</li>
+		<li class="n1">在“类型”字段中，选择以下某个选项：</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold;">上传：</b>将 My Cloud 
+		 Mirror 数据备份到 Amazon S3 Bucket。</li>
+		<li class="b1"><b style="font-weight: bold;">下载：</b>将 Amazon S3 
+		 Bucket 备份到 My Cloud Mirror 服务器。</li>
+	</ul>
+	<ol start="10" style="list-style: decimal;">
+		<li class="n1">在“备份类型”字段中，从下拉菜单选择要执行的备份类型。选项包括：</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold;">覆盖现有文件</b>：覆盖目标文件夹中与源文件同名的文件。</li>
+		<li class="b1"><b style="font-weight: bold;">完全备份</b>：每次执行备份时，创建包含所有备份数据的单独的文件夹。</li>
+		<li class="b1"><b style="font-weight: bold;">增量备份</b>：覆盖源文件比目标文件更新的文件。</li>
+	</ul>
+	<ol start="11" style="list-style: decimal;">
+		<li class="n1">单击“<span style="font-weight: bold;">下一步</span>”。</li>
+		<li class="n1">在“本地路径”字段中，输入 My Cloud Mirror 设备上的备份路径。</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">单击<span style="font-weight: bold;">浏览</span>，找到备份在设备上的位置。<br />
+		（例如 Volume_1/backup）</li>
+	</ul>
+	<ol start="13" style="list-style: decimal;">
+		<li class="n1">单击<img src="Graphics/toggle_button.png" alt="" width="20" 
+								 height="15" border="0" /> 激活自动更新功能。这将根据您创建的计划自动更新备份。</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">如果激活自动更新功能：</li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: circle;">
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">选择自动更新计划：每天、每周或每月</p></li>
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">从下拉菜单选择“自动更新时间”（“每天”选项）。</p></li>
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">从下拉菜单选择“自动更新日期和时间”（“每周”或“每月”选项）。</p></li>
+		</ul></li>
+	</ul>
+	<ol start="14" style="list-style: decimal;">
+		<li class="n1">单击“<b>下一步</b>”。</li>
+		<li class="n1">检查设置，然后单击“<b>完成</b>”。您的 Amazon S3 云备份随即创建。</li>
+	</ol></li>
+</ol>
+<p class="Body" style="margin-left: 60px;"><span style="font-weight: bold;">注</span>：访问 
+ Amazon S3 云备份 Bucket 可查看设备备份。</p>
+<p class="ListContinue2CxSpLast">&#160;</p>
+<p>
+<a href="javascript:void(0);" onclick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) &gt;=2 &amp;&amp; typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','什么是云备份','What_is_a_Cloud_Backup.htm','启用 ElephantDrive 云备份','Enabling_an_ElephantDrive_Cloud_Backup.htm');return false;" title="另请参阅"><img src="ss_btn_另请参阅.gif" border="0" height="17" width="50" alt="另请参阅" /></a>
+
+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt;">© 2015 Western Digital Technologies, Inc. 
+	 保留所有权利。</p>
+</div>
+<script type="text/javascript" language="JavaScript">//<![CDATA[
+if (parseInt(navigator.appVersion) >= 3 && typeof (WritePopupMenuLayer) == "function")
+  WritePopupMenuLayer();
+//]]></script><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>
+

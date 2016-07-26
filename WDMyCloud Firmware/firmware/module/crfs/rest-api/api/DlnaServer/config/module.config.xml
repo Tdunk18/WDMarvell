@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+    <name>DlnaServer</name>
+    <version>2.1</version>
+    <description>Module has {}</description >
+    
+    <components>
+        <component>
+            <name>media_server_configuration</name>
+            <module>DlnaServer</module>
+            <controller_class>\DlnaServer\Controller\Configuration</controller_class>
+            <auth_security>
+                <get>ADMIN_AUTH_LAN</get>
+                <put>ADMIN_AUTH_LAN</put>
+            </auth_security>
+        </component>
+        <component>
+            <name>media_server_connected_list</name>
+            <module>DlnaServer</module>
+            <controller_class>\DlnaServer\Controller\ConnectedList</controller_class>
+            <auth_security>
+                <get>ADMIN_AUTH_LAN</get>
+                <put>ADMIN_AUTH_LAN</put>
+            </auth_security>
+        </component>
+        <component>
+            <name>media_server_database</name>
+            <module>DlnaServer</module>
+            <controller_class>\DlnaServer\Controller\Database</controller_class>
+            <auth_security>
+                <get>USER_AUTH</get>
+                <put>ADMIN_AUTH_LAN</put>
+            </auth_security>
+        </component>
+    </components>
+    
+</module>

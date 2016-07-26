@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config-pnpx-upnpav>
+	<pnpxinfo version="0.0">
+		"<X_hardwareId>VEN_011A&amp;amp;DEV_030B&amp;amp;REV_01</X_hardwareId>"
+		"<X_compatibleId>urn:www-wdc-com:device:NetworkAttachedStorage</X_compatibleId>"
+		"<X_modelId>{02BF98D2-1B50-4a1f-83D9-A85402784100}</X_modelId>"
+		"<X_containerId>{73656761-7465-7375-636b-0090a9f6F006}</X_containerId>"
+	</pnpxinfo>
+	<upnpavinfo version="0.0">
+		"<manufacturer>Western Digital Corporation</manufacturer>"
+		"<manufacturerURL>http://www.wd.com</manufacturerURL>"
+		"<modelDescription>2-Bay Personal Cloud Storage</modelDescription>"
+		"<modelName>WDMyCloudMirror</modelName>"
+		"<modelURL>http://products.wdc.com/WDMyCloudMirrorGen2</modelURL>"
+		"<modelNumber>BWVZ</modelNumber>"
+		"<deviceType>urn:schemas-wd-com:device:WdNAS-DEV_030B:1</deviceType>"
+	</upnpavinfo>
+</config-pnpx-upnpav>

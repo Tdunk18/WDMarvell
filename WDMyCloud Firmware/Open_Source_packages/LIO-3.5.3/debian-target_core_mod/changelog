@@ -1,0 +1,5 @@
+target-core-mod (3.5.3-1) unstable; urgency=low
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Nicholas A. Bellinger (nab) <nab@risingtidesystems.com>  Sun, 10 Apr 2011 18:22:08 -0700

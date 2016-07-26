@@ -1,0 +1,17 @@
+div.graph {
+	position: absolute;
+	z-index: -1;
+	top: 50px;
+	display: none;
+	width: 242px;
+	height: 242px;
+	padding: 0;
+	float: left;
+	margin-left: 30px; 
+	margin-top: 4px;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="PRAGMA" content="no-cache"> 
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+</head>
+
+<script type="text/javascript">
+function page_load()
+{
+	if(parseInt(STORAGE_RAID_FUNCTION,10) == 1) $("#raid").show();
+	if(parseInt(STORAGE_DISKSTATUS_FUNCTION,10) == 1) $("#disk_mgmt").show();
+	if(parseInt(STORAGE_ISCSI_FUNCTION,10) == 1)	$("#iscsi").show();
+	if(parseInt(STORAGE_VOLVIRTUALIZATION_FUNCTION,10) == 1)	$("#virtual_vol").show();
+	
+	if (MODEL_NAME == "BG2Y")	
+	{
+		$("#iscsi").addClass('LightningSubMenuFirst');
+		go_sub_page('/web/storage/iscsi.html', 'iscsi');
+	}
+	else
+	{	
+		wd_ajax({
+			url: FILE_USED_VOLUME_INFO,
+			type: "GET",
+			async:false,
+			cache:false,
+			dataType:"xml",
+			success: function(xml){
+				$('volume_info > item', xml).each(function(e){
+					if ( $('volume_encrypt',this).text() == "1")
+					{
+						$("#hd_ve").show();
+						return false;
+					}
+				})
+			},
+			complete: function() {
+				init_subMenu();
+			},
+	        error:function (xhr, ajaxOptions, thrownError){}  
+		});	
+
+		go_sub_page('/web/storage/raid.php', 'raid');
+	}	
+}
+
+function page_unload()
+{
+}
+</script>
+
+<body>
+<!-- banner 2nd layout -->
+<table cellspacing=0 cellpadding=0 border=0>
+	<tr valign="bottom">
+		<td align="left">
+			<div class="header_1" style="width: auto;"><span class="_text" lang="_menu_title" datafld="storage"></span></div>
+		</td>
+	</tr>		
+</table>
+<div class="hr_0"><div class="hr_1"></div></div>
+<!-- banner 2nd layout -->
+
+<!-- left menu -->			
+<table cellspacing=0 cellpadding=0 border=0>
+	<tr>
+		<td valign="top">
+			<div id="SubMenuDiv">
+				<div class="LightningSubMenubg">
+					<ul class="LightningSubMenu">
+						<li class="LightningSubMenuFirst" id="raid" style="display:none"><a id="storage_raid_link" href="javascript:go_sub_page('/web/storage/raid.php', 'raid');"><span class="_text" lang="_menu" datafld="RAID"></span></a></li>
+						<li id="disk_mgmt" style="display:none"><a id="storage_diskstatus_link" href="javascript:go_sub_page('/web/storage/disk_mgmt.html', 'disk_mgmt');google_analytics_log('Storage-Disk_Status', 'pv-storage-disk')"><span class="_text" lang="_disk_mgmt" datafld="title5"></span></a></li>
+						<li id="iscsi" style="display:none"><a id="storage_iscsi_link" href="javascript:go_sub_page('/web/storage/iscsi.html', 'iscsi');"><span class="_text" lang="_iscsi" datafld="iscsi"></span></a></li>
+						<li id="virtual_vol" style="display:none"><a id="storage_virtualization_link" href="javascript:go_sub_page('/web/storage/virtual_vol.html', 'virtual_vol');"><span class="_text" lang="_vv" datafld="title3">Volume Virtualization</span></a></li>
+						<li class="LightningSubMenuEnd" id="hd_ve" style="display:none"><a id="storage_volumeEncryption_link" href="javascript:go_sub_page('/web/storage/hd_ve.html', 'hd_ve');"><span class="_text" lang="_menu" datafld="volume_encryption">Volume Encryption</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</td>
+		<td valign="top">	
+			<div class="r_content mainbody" id="mainbody" style="border:0px solid red;"></div>
+		</td>
+	</tr>
+</table>
+
+</body>
+</html>	

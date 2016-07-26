@@ -1,0 +1,84 @@
+body
+{
+  background-color:#121212;
+  //background-image:url('/errordocs/images/bg.jpg');
+  font-family:helvetica,arial;
+  line-height:130%;
+}
+
+ul
+{
+  list-style-position:inside;
+  padding: 0px;
+  margin: 0px;
+  line-height:200%;
+} 
+
+a:link
+{
+  color:#CCCCCC;
+}
+a:visited
+{
+  color:#CCCCCC;
+}
+a:hover
+{
+  color:#CCCCCC;
+}
+a:active
+{
+  color:#CCCCCC;
+}
+
+.contentTable
+{
+  height:100%;
+  width:100%;
+  valign:center;
+  margin-left:auto;
+  margin-right:auto;
+  width:700px;
+}
+
+.bottomPadding
+{
+  height:20px;
+}
+
+td
+{
+  color:#CCCCCC;
+  font-size:14px;
+}
+
+.centerSpacerColumn
+{
+  width:75px;
+}
+
+.bigOops
+{
+  color:#CCCCCC;
+  font-size:30px;
+}
+
+.backgroundDIV
+{
+  position:fixed;
+  left:0px;
+  top:0px;
+  right:0px;
+  bottom:0px;
+}
+
+.centerDIV
+{
+  visibility:hidden;
+  position:fixed;
+  left:0px;
+  top:0px;
+  right:0px;
+  bottom:0px;
+}
+

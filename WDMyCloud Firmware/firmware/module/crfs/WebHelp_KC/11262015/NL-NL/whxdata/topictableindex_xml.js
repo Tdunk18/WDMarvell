@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><cki><ck fm=\"Info over schijfstatus\" to=\"Cloudtoegang in-/uitschakelen\" num=\"57\"/><ck fm=\"De apparaatbeschrijving wijzigen\" to=\"Op WDMyCloud.com inschrijven\" num=\"57\"/><ck fm=\"Ondersteuning vragen\" to=\"Wat is RAID-opslag?\" num=\"38\"/></cki>";

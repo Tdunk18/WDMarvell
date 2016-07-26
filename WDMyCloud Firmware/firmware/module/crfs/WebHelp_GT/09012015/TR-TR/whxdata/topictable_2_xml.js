@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><ck><di ky=\"106\" rd=\"what_is_raid_storage.htm|RAID Depolama nedir?\" ct=\"RAID Depolama nedir RAID (Yedekli Bağımsız Diskler Dizisi)  aynı  verileri birden çok sabit sürücüde ...\" bc=\"\"/></ck>";

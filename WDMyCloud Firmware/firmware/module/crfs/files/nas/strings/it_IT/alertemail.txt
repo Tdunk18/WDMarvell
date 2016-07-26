@@ -1,0 +1,8 @@
+0001 = Messaggio di avviso da %1
+0002 = In %2 %1 vengono generati gli eventi seguenti 
+0003 = Descrizione evento
+0004 = Gravità
+0005 = Codice evento
+0006 = Ora evento
+0007 = Titolo evento
+0008 = Versione firmware

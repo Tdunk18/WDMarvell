@@ -1,0 +1,118 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<wdmc>
+	<!--
+		Profiles are divided into, ExtractorProfiles & TranscoderProfiles. Each profile references a plugin that has to be specified below.
+
+		GUID:			Unique identifier for profile.
+
+		Category:		Can be [video/image/music/other]
+
+		Default:		Default plugin, for a given category, for those file types that do not have their extensions
+						specified in the <MimeType> tags. A category should have one default plugin.
+
+		Plugin:			This the GUID of the plugin referenced by this profile.
+
+		MimeTypes:		List multiple preferred mimetypes supported by this profile where each one is specified by a <MimeType> tag.
+
+		Size:			ONLY used for <TranscoderProfiles>, same as specified in the <AutotranscodeMap>.
+						'Size', 'Priority', file extension, category are used to find right profile and plugin.
+
+		Parameters:		(OPTIONAL) Not all profiles will specify <Parameters> to be passed in. These are command-line arguments
+						that may be required by the referenced plugin. 	-->
+
+	<ExtractorProfiles>
+		<Profile GUID = "fa82f74dded94b0f86a4f67efcfe4c2f"
+				 Category = "video"
+				 Default = "yes"
+				 Plugin = "091b212118e148259cca32465b6194dc">
+			<MimeType>video/mp4</MimeType>
+		</Profile>
+		<Profile GUID = "4c2e6ce9965845c18aeaa8816765834c"
+				 Category = "audio"
+				 Default = "yes"
+				 Plugin = "766e351ce6954326b3e7cac4aa6c4080">
+			<MimeType>audio/mpeg</MimeType>
+		</Profile>
+		<Profile GUID = "43adef2173c0412fa908243885cd6f81"
+				 Category = "image"
+				 Default = "yes"
+				 Plugin = "d1ca5301f918452692947865ce940a87">
+			<MimeType>image/jpeg</MimeType>
+		</Profile>
+	</ExtractorProfiles>
+
+	<TranscoderProfiles>
+		<Profile GUID = "cb62bbdd389b48898f2e5244977cb2c5"
+				 Category = "image"
+				 Size = "96x"
+				 Default = "yes"
+				 Plugin = "d312a08daf7d4218a7d1222eb67d1906">
+			<Parameter Name = "-define" Value = "jpeg:size=192x192"/>
+			<Parameter Name = "source"/>
+			<Parameter Name = "-auto-orient"/>
+			<Parameter Name = "-strip"/>
+			<Parameter Name = "-background" Value = "#000000"/>
+			<Parameter Name = "-quality" Value = "80"/>
+			<Parameter Name = "-filter" Value = "box"/>
+			<Parameter Name = "-resize" Value = "x192"/>
+			<Parameter Name = "destination"/>
+			<MimeType>image/jpeg</MimeType>
+		</Profile>
+		<Profile GUID = "a76ef047d8d24c03823acdf41c4ee7c8"
+				 Category = "image"
+				 Size = "1024x"
+				 Default = "yes"
+				 Plugin = "944dfee7a3934671a1b910639b68a05a">
+			<Parameter Name = "-size" Value = "1024x"/>
+			<Parameter Name = "-quality" Value = "85"/>
+			<MimeType>image/jpeg</MimeType>
+		</Profile>
+	</TranscoderProfiles>
+
+	<!--
+		This specifies all plugins that we use for metadata extraction or transcoding.
+
+		GUID:			This is a unique identifier for the plugin. Plugins referenced by used profiles will be loaded.
+
+		Categories:		Semicolon separated list of supported categories. In general, a plugin
+						could extract metadata for more	than one category. Of course 'categories' can only be [video/image/music/other].
+
+		Action:			"Extractor", "Transcoder", "ExtractorTranscoder"
+
+		Description:	help string to describe the plugin.
+
+		Path:			A relative path to the plugin. Our plugins are all in sub-folders of the /bin/ folder.
+	-->
+	<Plugins>
+		<Plugin GUID = "091b212118e148259cca32465b6194dc"
+				Name = "ffmpeg"
+				Categories = "video"
+				Action = "Extractor"
+				Description = "Uses ffmpeg library for frame extraction"
+				Path = "extractors/libwdmcffmpegplugin"/>
+		<Plugin GUID = "766e351ce6954326b3e7cac4aa6c4080"
+				Name = "TagLib"
+				Categories = "audio"
+				Action = "Extractor"
+				Description = "Uses TagLib library to extract audio metadata."
+				Path = "extractors/libwdmctaglibplugin"/>
+		<Plugin GUID = "d1ca5301f918452692947865ce940a87"
+				Name = "exif"
+				Categories = "image"
+				Action = "Extractor"
+				Description = "Image Metadata extraction Library"
+				Path = "extractors/libwdmcexifplugin"/>
+		<Plugin GUID = "944dfee7a3934671a1b910639b68a05a"
+				Name = "kthumb"
+				Categories = "image"
+				Action = "Transcoder"
+				Description = ""
+				Path = "transcoders/libkthumb"/>
+		<Plugin GUID = "d312a08daf7d4218a7d1222eb67d1906"
+				Name = "ImageMagick"
+				Categories = "image"
+				Action = "Transcoder"
+				Description = "Uses ImageMagick Command line tool."
+				Path = "transcoders/libwdmcimagemagickplugin"/>
+	</Plugins>
+</wdmc>

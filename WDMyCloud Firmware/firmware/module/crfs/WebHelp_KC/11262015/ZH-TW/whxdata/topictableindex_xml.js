@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><cki><ck fm=\"關於磁碟狀態\" to=\"設定其他使用者\" num=\"66\"/><ck fm=\"擁有者基本工作\" to=\"重新啟動 My Cloud 裝置\" num=\"67\"/><ck fm=\"還原装置預設設定\" to=\"什麼是 RAID 儲存裝置？\" num=\"19\"/></cki>";

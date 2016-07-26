@@ -1,0 +1,133 @@
+kernel_exec-symlist.o: symlist.c ../config.h ../include/grub/cache.h \
+ ../include/grub/symbol.h ../config.h ../include/grub/types.h \
+ ../include/grub/cpu/types.h ../include/grub/command.h \
+ ../include/grub/err.h ../include/grub/list.h ../include/grub/misc.h \
+ /opt_gccarm/x86_64-intel-linux-gnu/lib/gcc/x86_64-intel-linux-gnu/4.8.2/include/stdarg.h \
+ ../include/grub/i18n.h ../include/grub/device.h ../include/grub/disk.h \
+ ../include/grub/device.h ../include/grub/dl.h ../include/grub/elf.h \
+ ../include/grub/env.h ../include/grub/menu.h \
+ ../include/grub/env_private.h ../include/grub/env.h \
+ ../include/grub/err.h ../include/grub/file.h ../include/grub/fs.h \
+ ../include/grub/fs.h ../include/grub/i18n.h ../include/grub/kernel.h \
+ ../include/grub/list.h ../include/grub/misc.h ../include/grub/mm.h \
+ ../include/grub/parser.h ../include/grub/reader.h \
+ ../include/grub/partition.h ../include/grub/dl.h ../include/grub/term.h \
+ ../include/grub/unicode.h ../include/grub/mm.h ../include/grub/time.h \
+ ../include/grub/cpu/time.h ../include/grub/mm_private.h \
+ ../include/grub/net.h ../include/grub/file.h \
+ ../include/grub/net/netbuff.h ../include/grub/efi/api.h \
+ ../include/grub/libgcc.h ../config-util.h ../include/grub/memory.h \
+ ../include/grub/efi/efi.h ../include/grub/efi/disk.h \
+ ../include/grub/disk.h ../include/grub/i386/pit.h ../include/grub/pci.h \
+ ../include/grub/cpu/pci.h ../include/grub/i386/pci.h \
+ ../include/grub/i386/io.h
+
+../config.h:
+
+../include/grub/cache.h:
+
+../include/grub/symbol.h:
+
+../config.h:
+
+../include/grub/types.h:
+
+../include/grub/cpu/types.h:
+
+../include/grub/command.h:
+
+../include/grub/err.h:
+
+../include/grub/list.h:
+
+../include/grub/misc.h:
+
+/opt_gccarm/x86_64-intel-linux-gnu/lib/gcc/x86_64-intel-linux-gnu/4.8.2/include/stdarg.h:
+
+../include/grub/i18n.h:
+
+../include/grub/device.h:
+
+../include/grub/disk.h:
+
+../include/grub/device.h:
+
+../include/grub/dl.h:
+
+../include/grub/elf.h:
+
+../include/grub/env.h:
+
+../include/grub/menu.h:
+
+../include/grub/env_private.h:
+
+../include/grub/env.h:
+
+../include/grub/err.h:
+
+../include/grub/file.h:
+
+../include/grub/fs.h:
+
+../include/grub/fs.h:
+
+../include/grub/i18n.h:
+
+../include/grub/kernel.h:
+
+../include/grub/list.h:
+
+../include/grub/misc.h:
+
+../include/grub/mm.h:
+
+../include/grub/parser.h:
+
+../include/grub/reader.h:
+
+../include/grub/partition.h:
+
+../include/grub/dl.h:
+
+../include/grub/term.h:
+
+../include/grub/unicode.h:
+
+../include/grub/mm.h:
+
+../include/grub/time.h:
+
+../include/grub/cpu/time.h:
+
+../include/grub/mm_private.h:
+
+../include/grub/net.h:
+
+../include/grub/file.h:
+
+../include/grub/net/netbuff.h:
+
+../include/grub/efi/api.h:
+
+../include/grub/libgcc.h:
+
+../config-util.h:
+
+../include/grub/memory.h:
+
+../include/grub/efi/efi.h:
+
+../include/grub/efi/disk.h:
+
+../include/grub/disk.h:
+
+../include/grub/i386/pit.h:
+
+../include/grub/pci.h:
+
+../include/grub/cpu/pci.h:
+
+../include/grub/i386/pci.h:
+
+../include/grub/i386/io.h:

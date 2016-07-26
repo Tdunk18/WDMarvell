@@ -1,0 +1,285 @@
+#!/bin/bash
+#
+# Control script for OnBoarding Network Location Communicator daemon
+#
+# Command-line switches
+#   start     starts daemon
+#   stop      stops daemon
+#   restart   stop/start daemon
+#   status    running/not_running status
+#
+# History:
+#	11/20/14 - created: Ken Choy
+
+MY_SCRIPT_NAME=$0
+ROOT_UID=0     # Only users with $UID 0 have root privileges.
+E_NOTROOT=87   # Non-root exit error
+
+BIN_FNAME="onbrdnetloccomm"
+INSTALL_DIR=/usr/local/bin
+OB_FILE_PATH="$INSTALL_DIR/$BIN_FNAME"
+LOG_SWITCH='-l'
+CHECK_SWITCH=""
+CHECK_INTERVAL=""
+FAILURES_CHECK_SWITCH=""
+FAILURES_CHECK_INTERVAL=""
+
+# Handle product differences here
+OBNLC_STATIC_CONFIG="/usr/local/onboarding/onbrd.ini"
+export OBNLC_STATIC_CONFIG
+
+# syslog severity levels: LOG_EMERG 0, LOG_ALERT 1, LOG_CRIT 2, LOG_ERR 3, LOG_WARNING 4, LOG_NOTICE 5, LOG_INFO 6, LOG_DEBUG 7
+LOG_SEVERITY=5
+EXTENDED_LOGGING_SETTING_SCRIPT="/usr/sbin/isEnhancedLoggingEnabled.sh"
+
+usage()
+{
+	echo "usage: $MY_SCRIPT_NAME {-path (onboarding NetLocComm daemon file path)|-logtofile (loglevel)|-logtoconsole (loglevel)|-checkinterval (interval_in_secs)|-failurescheckinterval (interval_in_secs)|start|stop|restart|status}"
+	return 0
+}
+
+
+###################################
+#
+# Get user specified extended logging setting.
+#
+###################################
+get_extended_logging_setting()
+{
+	# Check if extended logging setting script exists and is executable.
+	if [ -x "$EXTENDED_LOGGING_SETTING_SCRIPT" ] ; then
+		$EXTENDED_LOGGING_SETTING_SCRIPT > /dev/null
+		return $?
+	else
+		# Default extended logging setting to disabled.
+		return 0
+	fi
+}
+
+###################################
+#
+# Checks that script is being run as root and that onboarding daemon program
+# is installed.
+#
+###################################
+validate_environment()
+{
+  # script must be run as root
+  if [ "$UID" -ne "$ROOT_UID" ]
+  then
+    echo "`date` $MY_SCRIPT_NAME - script must be run as root"
+    exit $E_NOTROOT
+  fi  
+
+  # make sure daemon exists
+  
+  if [ "$SPECIFIED_PATH" != '' ]
+  then
+    OB_FILE_PATH=$SPECIFIED_PATH
+  fi
+
+  if [ ! -x "$OB_FILE_PATH" ]
+  then
+	echo "`date` $MY_SCRIPT_NAME - executable file not found, exiting"
+	exit 0
+  fi
+  return 0
+}
+
+###################################
+#
+# Start daemon if it is not already running
+#
+###################################
+start_obd()
+{
+  renice 0 -p $$ >> /dev/null
+
+  # If a daemon is already running, then exit.
+  OB_PROC=`pidof $BIN_FNAME`
+  retstat=$?
+  if [ $retstat -eq 0 ]; then
+	echo "`date` $MY_SCRIPT_NAME - already running with PID $OB_PROC"
+	return 0
+  fi
+ 
+  echo "`date` $MY_SCRIPT_NAME - Start"
+  nice -n 10 $OB_FILE_PATH $LOG_SWITCH $LOG_SEVERITY $CHECK_SWITCH $CHECK_INTERVAL $FAILURES_CHECK_SWITCH $FAILURES_CHECK_INTERVAL
+  return 0
+}
+
+###################################
+#
+# Stop daemon if it is running
+#
+###################################\
+stop_obd()
+{
+  OB_PROC=`pidof $BIN_FNAME`
+  retstat=$?
+  if [ $retstat -eq 0 ]; then
+    `kill -15 $OB_PROC`
+    echo "`date` $MY_SCRIPT_NAME - Stop $OB_PROC"
+  else
+    echo "`date` $MY_SCRIPT_NAME - process is not running"
+  fi
+
+  return 0
+}
+
+###################################
+#
+# Echo daemon status
+#
+###################################
+obd_status()
+{
+  pidof $BIN_FNAME >/dev/null
+  retstat=$?
+  if [ $retstat -eq 0 ]; then
+    echo "$BIN_FNAME is running."
+  else
+    echo "$BIN_FNAME is not running."
+  fi
+
+  return 0
+}
+
+###################################
+#
+# Display daemon version
+#
+###################################
+obd_info()
+{
+  cd $INSTALL_DIR
+  $OB_FILE_PATH -v
+  return 0
+}
+
+###################################
+###################################
+#
+# Start of Script
+#
+###################################
+
+VALID_CM=0
+
+if [ -z "$LD_LIBRARY_PATH" ] ; then
+   LD_LIBRARY_PATH=${CM_LIBS}
+else
+   LD_LIBRARY_PATH="${CM_LIBS}:${LD_LIBRARY_PATH}"
+fi
+export LD_LIBRARY_PATH
+
+CMD_TASK=""
+
+while [ $# -gt 0 ]; do
+  case $1 in
+	-path)
+		if [ "$2" ]; then
+			SPECIFIED_PATH=$2
+			`export SPECIFIED_PATH=$SPECIFIED_PATH`
+			shift
+		else
+			echo 'Must specify $BIN_FNAME binary file path'
+			exit 1
+		fi
+		;;
+	-logtofile|logtofile)
+		LOG_SWITCH='-l'
+		if [ "$2" ]; then
+			if [[ $2 =~ ^[0-9]+$ ]]; then
+				# Override user specified severity level with command line specified level.
+				LOG_SEVERITY=$2
+				shift
+			fi
+		fi
+		;;
+	-logtoconsole|logtoconsole)
+		LOG_SWITCH='-lc'
+		if [ "$2" ]; then
+			if [[ $2 =~ ^[0-9]+$ ]]; then
+				# Override user specified severity level with command line specified level.
+				LOG_SEVERITY=$2
+				shift
+			fi
+		fi
+		;;
+	-checkinterval|checkinterval)
+		if [ "$2" ]; then
+			if [[ $2 =~ ^[0-9]+$ ]]; then
+				CHECK_SWITCH="-c"
+				CHECK_INTERVAL="$2"
+				shift
+			fi
+		fi
+		;;
+	-failurescheckinterval|failurescheckinterval)
+		if [ "$2" ]; then
+			if [[ $2 =~ ^[0-9]+$ ]]; then
+				FAILURES_CHECK_SWITCH="-f"
+				FAILURES_CHECK_INTERVAL="$2"
+				shift
+			fi
+		fi
+		;;
+	*)
+# JS - do not assign parameter to CMD_TASK if it is empty
+	    if [ "$1" ]; then
+		  CMD_TASK=$1
+		fi
+		;;
+  esac
+
+  shift
+done
+
+validate_environment
+
+# Get user specified extended logging setting.
+get_extended_logging_setting
+if [ 1 -eq $? ] ; then
+	# Want log level of at least 6
+	if [ $LOG_SEVERITY -lt 6 ]; then
+		LOG_SEVERITY=6
+	fi
+fi
+ 
+case "$CMD_TASK" in 
+	start)
+		start_obd
+		VALID_CM=1
+		;;
+	stop)
+		stop_obd
+		VALID_CM=1
+		;;
+	restart)
+		stop_obd
+		sleep 5
+		start_obd
+		VALID_CM=1
+		;;
+	status)
+		obd_status
+		VALID_CM=1
+		;;
+	info)
+		obd_info
+		VALID_CM=1
+		;;
+	*)
+esac
+
+if [ "$VALID_CM" -eq 0 ] 
+then
+	echo "$MY_SCRIPT_NAME invalid option(s): $@"
+	usage
+	exit 1
+fi
+
+
+exit 0
+  

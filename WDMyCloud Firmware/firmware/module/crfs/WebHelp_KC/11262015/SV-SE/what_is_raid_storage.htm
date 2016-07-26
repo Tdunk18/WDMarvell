@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="MS-HAID" content="What is RAID Storage?" />
+<meta http-equiv="Content-Language" content="sv-SE" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Vad är RAID-lagringsutrymme?</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Lagring\nRAID-lagringsutrymme\nVad är RAID-lagringsutrymme?");
+addButton("show",BTN_TEXT,"Visa","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left; background: #fafafa\"> ");
+AddMasterBreadcrumbs("index.htm", "", "&gt;", "Home", "welcome.htm");
+document.write("<a href=\"what_is_raid_storage.htm\">Lagring<\/a> &gt; <a href=\"what_is_raid_storage.htm\">RAID-lagringsutrymme<\/a> &gt; Vad är RAID-lagringsutrymme?<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(0);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1 style="background-color: Transparent;">Vad är RAID-lagringsutrymme?</h1>
+<p class="Body">Med RAID (Redundant Array of Independent Disks) <span style="mso-bidi-font-family: Arial;">kan 
+ du lagra samma data på olika platser på flera hårddiskar och som ger redundans, 
+ ökad prestanda och dataintegritet.</span> Det finns flera RAID-nivåer 
+ och varje nivå erbjuder en separat metod för delning eller distribution 
+ av data mellan drivenheterna. Din My Cloud™ -enhet 
+ låter dig välja mellan följande lagringssätt:</p>
+<ol style="list-style: square;">
+	<li style="list-style: none; display: inline;"><ul style="list-style: square;">
+		<li class="b1"><b style="mso-bidi-font-weight: normal;">JBOD</b>: 
+		 <span style="font-size: 10.0pt; font-family: Arial, sans-serif; 
+				 mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+				 mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">&#160;En 
+		 eller flera enheter utan RAID-konfiguration som hanteras som separata 
+		 logiska volymer.</font></span></li>
+		<li class="b1">Disklänkande: Flera enheter kombineras linjärt för 
+		 att bilda en stor logisk volym.</li>
+		<li class="b1"><b style="mso-bidi-font-weight: normal;">RAID 0</b>: 
+		 Läget RAID 0 ger diskdelning mellan alla enheter i RAID-enhetsgruppen. 
+		 <br />
+		RAID 0 ger inte dataredundans men ger bästa prestanda av alla RAID-nivåer. 
+		 RAID 0 bryter upp data i mindre segment och delar datasegmenten 
+		 på varje enhet i enheten.</li>
+		<li class="b1"><b style="mso-bidi-font-weight: normal;">RAID 1</b>: 
+		 I läget RAID 1 duplicerar RAID-kontrollanten alla data från en 
+		 enhet till en andra enhet i enhetsgruppen. RAID 1 ger fullständig 
+		 dataredundans men halverar lagringskapaciteten för nödvändiga 
+		 data.</li>
+		<li class="b1"><span style="font-weight: bold;">RAID 5</span>: 
+		 RAID 5-läge ger överlägsen prestanda och skydd genom datastriping 
+		 över 3 eller flera enheter och ägnar en fjärdedel av varje enhet 
+		 till feltolerans. <span style="font-weight: bold;">Det här alternativet 
+		 är bara tillgängligt för My Cloud-enheter med 4 ingångar.</span></li>
+		<li class="b1"><span style="font-weight: bold;">RAID 10</span><span>:</span> 
+		 RAID 10-läge är ett RAID-protokoll där data skrivs i ränder över 
+		 primära diskar som speglas till de sekundära diskarna. <span style="font-weight: bold;">Det 
+		 här alternativet är bara tillgängligt för My Cloud-enheter med 
+		 4 ingångar.</span></li>
+	</ul></li>
+</ol>
+<br />
+
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt;">© 2015 Western Digital Technologies, Inc. 
+	 <span style="color: rgb(75, 90, 104); font-size: 10.6666669845581px; 
+			 line-height: 21.3333339691162px; orphans: auto; widows: 1; 
+			 -webkit-text-stroke-width: 0px; display: inline	 ! important ; 
+			 float: none; background-color: rgb(250, 250, 250);">Med ensamrätt.</span> 
+	 </p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>

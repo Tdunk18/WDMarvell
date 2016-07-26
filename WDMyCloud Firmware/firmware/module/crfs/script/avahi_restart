@@ -1,0 +1,2 @@
+avahi-daemon -k
+avahi-daemon -D

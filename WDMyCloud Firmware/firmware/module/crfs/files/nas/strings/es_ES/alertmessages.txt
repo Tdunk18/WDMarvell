@@ -1,0 +1,302 @@
+0001 = Temperatura del sistema excesiva
+0001D = La temperatura del sistema está por encima de la temperatura normal de funcionamiento. Coloque el sistema en un lugar más fresco. Si no se toman medidas, el sistema se apagará cuando la temperatura alcance el límite crítico.
+
+0002 = Temperatura del sistema insuficiente
+0002D = La temperatura del sistema está por debajo de la temperatura mínima específica. Coloque el sistema en un lugar más caliente.
+
+0003 = Error de unidad de disco SMART
+0003D = Error en la autocomprobación del disco %1. Póngase en contacto con el servicio técnico de WD.
+
+0004 = Error de volumen
+0004D = No se puede acceder al volumen de datos %1 del disco. Póngase en contacto con el servicio técnico de WD.
+
+0005 = Apagado térmico pendiente
+0005D = El sistema se está sobrecalentando y, si no se toman medidas, se apagará automáticamente.
+
+0006 = Apagado térmico inmediato
+0006D = El sistema se ha sobrecalentado de forma crítica y se apagará inmediatamente para evitar daños.
+
+2020 = Apagado del sistema
+2020D = El sistema se está apagando.
+
+1020 = Apagado del sistema
+1020D = El sistema se está apagando.
+
+0020 = Apagado del sistema
+0020D = El sistema se está apagando.
+
+0029 = El ventilador no funciona
+0029D = El ventilador del sistema no funciona. Póngase en contacto con el servicio técnico de WD.
+
+0031 = En alimentación SAI
+0031D = El sistema está utilizando la unidad SAI. %1Está a un % de su capacidad.
+
+0201 = Error en la unidad
+0201D = Error de unidad en el receptáculo %1. Reemplace la unidad con error. Póngase en contacto con el servicio técnico de WD.
+
+0207 = Error inminente en la unidad
+0207D = Error inminente de la unidad %1. Reemplace la unidad con error. Póngase en contacto con el servicio técnico de WD.
+
+0208 = Volumen degradado
+0208D = Volumen %1 degradado. Compruebe el estado de la unidad ejecutando la prueba de disco en Configuración >> Utilidades.
+
+0209 = Progreso de migración de volumen
+0209D = Progreso %1 de migración de volumen - %2 %
+
+2209 = Progreso de migración de volumen
+2209D = Progreso de migración de volumen %2 %
+
+0210 = Reconstrucción de volumen
+0210D = Hora de reconstrucción del volumen en curso: %2 minutos
+
+2210 = Reconstrucción de volumen
+2210D = Hora de reconstrucción del volumen en curso: %2 minutos
+
+0212 = Error de reconstrucción de volumen
+0212D = Se ha producido un error de reconstrucción del volumen %1. Compruebe el estado de la unidad ejecutando la prueba de disco en Configuración >> Utilidades.
+
+0213 = Error de expansión de volumen
+0213D = Se ha producido un error de expansión del volumen %1. Compruebe el estado de la unidad ejecutando la prueba de disco en Configuración >> Utilidades.
+
+0216 = Itinerancia RAID habilitada
+0216D = Se ha habilitado la itinerancia RAID.
+
+2216 = Itinerancia RAID habilitada
+2216D = Se ha habilitado la itinerancia RAID.
+
+0224 = Sustituir la unidad de disco con la luz roja
+0224D = Sustituir la unidad de disco con el LED rojo
+
+2041 = Puerto Ethernet %1 conectado a 10/100
+2041D = Velocidad de conexión limitada a 10/100 Mbps.
+
+0042 = Unidad SAI al 50% de su capacidad
+0042D = El sistema está funcionando con la unidad SAI al 50% de su capacidad. En cuanto pueda, conecte el sistema a otra fuente de alimentación.
+
+0043 = Unidad SAI al 15% de su capacidad
+0043D = El sistema está funcionando con la unidad SAI al 15% de su capacidad. Conecte inmediatamente el sistema a otra fuente de alimentación.  De lo contrario, el sistema se apagará cuando se agoten las reservas de la unidad SAI.
+
+0044 = Unidad SAI agotada
+0044D = Se ha agotado la batería de la unidad SAI. El sistema se apagará inmediatamente para evitar daños.
+
+1001 = Volumen utilizado superior al 95%
+1001D = El volumen%1 está utilizado casi en su totalidad, por lo que es posible que empiece a experimentar problemas de rendimiento. No olvide hacer una copia de seguridad de sus archivos y, a continuación, sáquelos de la unidad para liberar espacio. Si la papelera de reciclaje está habilitada, vacíela para liberar espacio.
+
+1002 = Vínculo de red inactivo
+1002D = El vínculo de red %1 está inactivo o intermitente. Verifique la conexión de red.
+
+1010 = Vínculo de red inactivo
+1010D = El vínculo de red %1 está inactivo o intermitente. Verifique la conexión de red.
+
+1003 = Error de actualización de firmware
+1003D = Se ha producido un error en la actualización del firmware. Inténtelo de nuevo. Si el error persiste, contacte con el servicio técnico de WD.
+
+1004 = Temperatura del sistema alta
+1004D = El dispositivo está actualmente sobrecalentado. Asegúrese de que el dispositivo tiene una ventilación adecuada.
+
+1021 = Error de restauración de configuración
+1021D = Se ha producido un error de restauración de la configuración.
+
+0022 = Error de alimentación
+0022D = Se ha producido un error en la alimentación %1.
+
+1022 = Error de alimentación
+1022D = Se ha producido un error en la alimentación %1. Compruebe la fuente de alimentación.
+
+1030 = Almacenamiento por debajo del umbral
+1030D = El almacenamiento se encuentra por debajo del umbral
+
+1035 = Programa de mejora de productos
+1035D = ¿Desea participar en la mejora de nuestro producto? Más información %1
+
+0036 = Error de comprobación del sistema de archivos
+0036D = Se han detectado errores de configuración durante la comprobación del sistema de archivos. Realice una copia de seguridad de sus datos y vuelva a configurar la unidad para resolver dichos errores. Si el problema persiste, contacte con el servicio técnico de WD.
+
+1036 = Error de comprobación del sistema de archivos
+1036D = Se han detectado errores de configuración durante la comprobación del sistema de archivos. Realice una copia de seguridad de sus datos y vuelva a configurar la unidad para resolver dichos errores. Si el problema persiste, contacte con el servicio técnico de WD.
+
+1045 = Error del sistema de archivos corregido
+1045D = Se han corregido los errores de configuración detectados durante la comprobación del sistema de archivos.
+
+1037 = El sistema no está listo
+1037D = El sistema está ocupado. Espere hasta que el LED de encendido permanezca en color azul antes de insertar otra unidad.
+
+1120 = Dispositivo USB no admitido
+1120D = Se ha detectado un dispositivo USB no admitido (proveedor: %1, modelo: %2, número de serie: %3). Extraiga el dispositivo USB.
+
+1121 = Sistema de archivos no admitido
+1121D = Se ha detectado un sistema de archivos no admitido en un dispositivo USB (proveedor %1, modelo: %2, número de serie: %3, sistema de archivos %4, etiqueta %5). Extraiga el dispositivo USB.
+
+1122 = No se pudo crear archivo compartido
+1122D = No se pudo crear un archivo compartido en un dispositivo USB (proveedor: %1, modelo: %2, número de serie: %3, sistema de archivos %4, etiqueta %5, nombre de archivo compartido: %6)
+
+1123 = Retirada de dispositivo no segura
+1123D = Se retiró un dispositivo USB (proveedor: %1, modelo: %2, número de serie: %3) sin ser expulsado, afectando posiblemente a los datos de %2.
+
+1124 = No es posible montar el dispositivo USB
+1124D = No es posible montar el dispositivo USB (proveedor: %1, modelo: %2, número de serie: %3). Compruebe el dispositivo USB.
+
+1127 = No es posible hacer copias de seguridad de los archivos del dispositivo USB
+1127D = No es posible hacer copias de seguridad de los archivos del dispositivo USB Compruebe la conectividad del dispositivo.
+
+1130 = Copia de seguridad del dispositivo USB en cola
+1130D = Aún se está ejecutando un trabajo de copia de seguridad anterior. La copia de seguridad del dispositivo USB se iniciará automáticamente cuando finalice el trabajo en curso.
+
+1400 = Error de copia de seguridad remota
+1400D = Se ha producido un error durante el trabajo de copia de seguridad remota de nombre: %1. Compruebe la configuración del sistema.
+
+1401 = Error de restauración de copia de seguridad remota
+1401D = Se ha producido un error durante el trabajo de copia de restauración remota de nombre: %1. Compruebe la configuración del sistema.
+
+2402 = Copia de seguridad remota correcta
+2402D = El trabajo de copia de seguridad remota de nombre: %1, se completó correctamente en el dispositivo: %2, al archivo compartido: %3
+
+1402 = Copia de seguridad remota correcta
+1402D = El trabajo de copia de seguridad remota de nombre: %1, se completó correctamente en el dispositivo: %2, al archivo compartido: %3
+
+2403 = Restauración de copia de seguridad remota correcta
+2403D = El trabajo de restauración remota de nombre: %1, se completó correctamente en el dispositivo: %2, al archivo compartido: %3
+
+1403 = Restauración de copia de seguridad remota correcta
+1403D = El trabajo de restauración remota de nombre: %1, se completó correctamente en el dispositivo: %2, al archivo compartido: %3
+
+2001 = Reinicio del sistema
+2001D = El sistema se ha reiniciado.
+
+1011 = Firmware nuevo disponible
+1011D = Hay disponible una nueva versión del firmware. Actualice el sistema.
+
+2002 = Firmware nuevo disponible
+2002D = Hay disponible una nueva versión del firmware. Actualice el sistema.
+
+2003 = Temperatura normal
+2003D = La temperatura del sistema está dentro del intervalo de temperatura específico.
+
+2004 = Actualización de firmware correcta
+2004D = El firmware se ha actualizado correctamente a %1.
+
+2005 = Restauración a valores de fábrica correcta
+2005D = Se han restaurado los valores predeterminados de fábrica del sistema.
+
+2006 = ¡Hay una nueva actualización de software disponible para usted!
+2006D = Abra el panel de WD My Cloud para obtener más información.
+
+2024 = Descarga de actualización de firmware
+2024D = Se está descargando una actualización de firmware.
+
+2026 = Instalación de actualización de firmware
+2026D = Se está instalando una actualización de firmware.
+
+1028 = Es necesario reiniciar
+1028D = Es necesario reiniciar.
+
+2028 = Es necesario reiniciar
+2028D = Es necesario reiniciar.
+
+2032 = El sistema está en modo de espera.
+2032D = El sistema está en modo de espera.
+
+1033 = El sistema se está reiniciando.
+1033D = El sistema se está reiniciando.
+
+2033 = El sistema se está reiniciando.
+2033D = El sistema se está reiniciando.
+
+1038 = Espacio de almacenamiento casi lleno
+1038D = El espacio de almacenamiento de [%1] está casi lleno. No olvide hacer una copia de seguridad de sus archivos y, a continuación, sáquelos de la unidad para liberar espacio.
+
+2038 = Espacio de almacenamiento casi lleno
+2038D = El espacio de almacenamiento de [%1] está casi lleno. No olvide hacer una copia de seguridad de sus archivos y, a continuación, sáquelos de la unidad para liberar espacio.
+
+1039 = Espacio de almacenamiento lleno
+1039D = El espacio de almacenamiento de [%1] está al límite de su capacidad. No olvide hacer una copia de seguridad de sus archivos y, a continuación, sáquelos de la unidad para liberar espacio.
+
+2039 = Espacio de almacenamiento lleno
+2039D = El espacio de almacenamiento de [%1] está al límite de su capacidad. No olvide hacer una copia de seguridad de sus archivos y, a continuación, sáquelos de la unidad para liberar espacio.
+
+2040 = Dispositivo SAI no compatible
+2040D = Dispositivo SAI no compatible
+
+2121 = Dispositivo USB bloqueado
+2121D = Se ha detectado un dispositivo USB bloqueado (proveedor: %1, modelo: %2, número de serie: %3).
+
+2126 = Archivos copiados del dispositivo USB
+2126D = Se han copiado los archivos del<%1> al <%2>
+
+2128 = Copiando archivos
+2128D = Copiando archivos del dispositivo USB.
+
+2129 = Archivos trasladados del dispositivo USB
+2129D = Se han trasladado los archivos del <%1> al <%2>
+
+2131 = Moviendo archivos
+2131D = Moviendo los archivos del dispositivo USB.
+
+1200 = Unidad no admitida
+1200D = No se admite la unidad en el receptáculo %1. Reemplace la unidad insertada con una unidad aprobada. Véase la lista de unidades aprobadas en www.wd.com
+
+2200 = Unidad no admitida
+2200D = No se admite la unidad en el receptáculo %1. Reemplace la unidad insertada con una unidad aprobada. Véase la lista de unidades aprobadas en www.wdc.com
+
+2202 = Unidad demasiado pequeña
+2202D = La unidad es demasiado pequeña en la ubicación %1
+
+2203 = Unidad iniciándose
+2203D = La unidad se está iniciando en la ubicación %1
+
+2211 = Comprobación de integridad de almacenamiento
+2211D = Se está comprobando la integridad del almacenamiento.
+
+2214 = Unidad insertada
+2214D = Se ha insertado una nueva unidad en el receptáculo %1. Para añadir esta unidad al conjunto RAID del sistema, vaya a Almacenamiento >> RAID y haga clic en el botón Cambiar modo RAID.
+
+0215 = Unidad eliminada
+0215D = La unidad ha sido eliminada del receptáculo %1
+
+2215 = Unidad eliminada
+2215D = La unidad ha sido eliminada del receptáculo %1. Compruebe el sistema.
+
+2217 = Ninguna unidad instalada
+2217D = No se ha instalado ninguna unidad. Añada unidades para empezar a utilizar el sistema. Puede adquirir una unidad nueva en www.wd.com
+
+2218 = Se ha añadido la unidad de reserva activa a la matriz RAID.
+2218D = Se ha añadido la unidad de reserva activa a la matriz RAID.
+
+2219 = Se ha completado la migración RAID.
+2219D = Se ha completado la migración RAID.
+
+2220 = Se ha completado la reconstrucción RAID.
+2220D = Se ha completado la reconstrucción RAID.
+
+2221 = Ninguna unidad WD Red NAS insertada
+2221D = Ninguna unidad WD Red NAS insertada. Tenga en cuenta que el dispositivo WD My Cloud se ha diseñado para un uso óptimo con discos duros WD Red NAS.
+
+2222 = Se ha formateado el volumen
+2222D = Se ha formateado el volumen %1.
+
+2223 = Progreso de ampliación del volumen
+2223D = Progreso de ampliación del volumen %1: %2%
+
+2300 = Análisis de medios detenido
+2300D = El dispositivo detuvo la exploración multimedia. Como consecuencia, algunas miniaturas no se mostrarán cuando se acceda a ellas de forma remota. Para reanudar el análisis, reinicie el sistema WD My Cloud.
+
+1501 = Actualización de aplicación disponible
+1501D = %1 Hay disponible una actualización de la aplicación Proceda a su actualización.
+
+1502 = Virus encontrado
+1502D = Antivirus - Conceptos básicos: Ha finalizado el análisis de virus y se han encontrado infecciones. Consulte el informe del análisis de virus para más información.
+
+2503 = Análisis de virus finalizado
+2503D = Antivirus - Conceptos básicos: El análisis de virus ha finalizado. No se han encontrado virus.
+
+2504 = Iniciado el análisis de virus programado
+2504D = Antivirus - Conceptos básicos: Iniciado el análisis de virus programado
+
+2505 = Iniciado el análisis de virus programado
+2505D = Antivirus - Conceptos básicos: El análisis de virus se ha detenido a la hora de finalización programada. El análisis está incompleto. 
+
+1103 = Se ha producido un error mientras se recuperan datos desde el punto seguro
+1103D = %4 - Hubo un error al recuperar el punto seguro %1 en el recurso compartido %2 en %3.
+
+2103 = Los datos se han recuperado correctamente desde el punto seguro
+2103D = Los datos se han recuperado correctamente desde el punto seguro %1 en el recurso compartido %2 en %3.

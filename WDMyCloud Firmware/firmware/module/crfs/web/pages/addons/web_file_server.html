@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>	
+
+<link href="/web/jquery/uploader/uploadify.css" rel="stylesheet" type="text/css" />
+<script src="/web/jquery/uploader/swfobject.js" type="text/javascript"></script>
+<script src="/web/jquery/uploader/jquery.uploadify.v2.1.4.min.js" type="text/javascript"></script>  
+
+<!-- styles needed by jScrollPane -->
+<link type="text/css" href="/web/jquery/jScrollPane/style/jquery.jscrollpane.css?v2.0" rel="stylesheet" media="all" />
+<!-- the jScrollPane script -->
+<script type="text/javascript" src="/web/jquery/jScrollPane/script/jquery.jscrollpane.min.js"></script>
+
+<script type="text/javascript" src="/web/function/abgne-minwt_selectmenu.js"></script>
+
+<script type="text/javascript" src="/web/function/web_file_server_command.js?v2.2"></script>
+<!-- custom end -->
+				
+
+<script type="text/javascript">
+function page_load()
+{
+	 $("#tip_wfs").attr('title',_T('_tip','wfs_upload'));  
+ 		init_tooltip();
+      
+	$(".web_fileviewer_div").hover(
+		function() {			
+			$("#Apps_webfilviewerBrowser_button").addClass("upload_hover").removeClass("upload_button").removeClass("upload_active");
+		}, function() {
+			$("#Apps_webfilviewerBrowser_button").addClass("upload_button").removeClass("upload_hover").removeClass("upload_active");
+                }
+	);
+	
+	$(".web_fileviewer_div").click(function()
+	{
+		$("#Apps_webfilviewerBrowser_button").addClass("upload_active").removeClass("upload_hover").removeClass("upload_button");
+	});
+}
+
+function set_iframe_width()
+{
+	$("#id_img").hide();
+	$("#mainFrame").css("width","110%").css("height","660px");    	
+}
+function page_unload()
+{
+}
+</script>
+
+<body>
+<form name="form_web" id="form_web"><input type="hidden" name="text_id" id="text_id"></form>
+<div id="html5_upload" style="left;display:none"></div>		
+<div id="id_img" style="margin-left:200px;margin-top:50px"><img src="/web/images/SpinnerSun.gif?v2" border=0><span class="_text" lang="_common" datafld="wait"></span></div> 
+<iframe id="mainFrame" name="mainFrame" frameborder='0' width="0" height="0"  scrolling="no" src="/web/addons/web_file_server_main.html?v1.1"></iframe>
+
+<div class="overlay" id="overlay">
+	<div id="id_result" style="display:none">
+		<div id="id_percentage">0%</div>	
+	</div>
+</div>	
+
+<div id="tooltip" class="tooltip overlay_tooltip"></div>  
+<div id="dialog_overlay" class="dialog_overlay"><div id="share_info" align="center"></div></div>	
+
+<div id="banner" class="banner" style="border: 1px">	
+	<div id="login_user" class="login_user"></div>
+</div>
+
+<div id="id_test1" style="display:inline;width:'auto';visibility:hidden"></div>
+
+<div id="shareDiag" class="WDLabelDiag" style="display:none">
+<div id="shareDiag_title" class="WDLabelHeaderDialogue WDLabelHeaderDialogueFolderIcon">
+<span class="_text" lang="_remote_backup" datafld="msg22">Select Path</span></div>
+<div align="center"><div class="hr"><hr></div></div>	
+	<div id="sDiag_zip_tree" style="display:none">	
+		<div class="WDLabelBodyDialogue">			
+		<div class="dialog_content">
+					<div id="tree_container_zip">										
+					</div>
+		</div>
+		</div>
+	<div class="hrBottom2"><hr/></div>
+		<button class="ButtonMarginLeft_40px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>		
+		<button class="ButtonRightPos2" id="a_zip_ok" ><span class="_text" lang="_button" datafld="Ok"></span></button>
+	</div>	
+<!-- rename file name -->
+	<div id="sDiag_rename" style="display:none">
+		<div class="WDLabelBodyDialogue">			
+		<div class="dialog_content">	
+			<table border="0"  cellspacing="0" cellpadding="0" height="0">
+				<tr>
+					<td><span class="_text" lang="_wfs" datafld="rename">Rename</span></td>	
+					<td width=10></td>					
+					<td><input type="text" size="30" id="Apps_webfileviewerRename_text" name="Apps_webfileviewerRename_text"></td>
+		 	</tr>		
+		</table>		 
+		</div>	
+		</div>		
+		<div class="hrBottom2"><hr/></div>	
+		<button class="ButtonMarginLeft_40px close" id="Apps_webfileviewerRenameCancel_button" onclick="rename_cancel();"><span class="_text" lang="_button" datafld="Cancel"></span></button>		
+		<button class="ButtonRightPos2" id="Apps_webfileviewerRenameSave_button" ><span class="_text" lang="_button" datafld="save"></span></button>	
+	</div>
+<!-- end rename file name -->
+		<div id="sDiag_create_dir" style="display:none">
+		<div class="WDLabelBodyDialogue">			
+		<div class="dialog_content">	
+		<table border="0"  cellspacing="0" cellpadding="0" height="0">
+				<tr>
+					<td><span class="_text" lang="_wfs" datafld="folder_name">Folder Name</span></td>	
+					<td width=10></td>					
+					<td><input type="text" size="30" id="Apps_webfileviewerCreate_text" name="Apps_webfileviewerCreate_text"></td>
+		 	</tr>		
+		</table>												
+		</div>
+		</div>
+		<div class="hrBottom2"><hr/></div>		
+		<button class="ButtonMarginLeft_40px close" id="Apps_webfileviewerCreateCancel_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>		
+		<button class="ButtonRightPos2" id="Apps_webfileviewerCreateSave_button" ><span class="_text" lang="_button" datafld="save"></span></button>	
+	</div>
+<!-- -->	
+		<div id="sDiag_upload" style="display:none">			
+			<div class="WDLabelBodyDialogue">			
+			<div id="upload_scroll">
+				<div id="error_msg"></div>
+<div id="Content" >
+	<table>
+		<tr>
+			<td>           
+									<div id="upload_desc" style="display:none"><span class="_text" lang="_wfs" datafld="upload_desc"></span></div>
+			</td>
+			<td style="padding-left:10px;position: relative; vertical-align: top;" class="web_fileviewer_div">
+					<input type="file" name="Apps_webfileviewerUploadSelect_link" id="Apps_webfileviewerUploadSelect_link" size="20"/>    	
+					<button id="Apps_webfilviewerBrowser_button"><span class="_text" lang="_button" datafld="browse"></span></button>
+			</td>
+		</tr>
+	</table>				
+				<div id="fileQueue"></div>
+ <br><br><br><br>
+</div>  <!-- <div id="Content"> -->
+</div> <!-- 	<div class="dialog_content"> -->
+</div>
+<div class="hrBottom2"><hr/></div>
+		<button class="ButtonMarginLeft_40px" id="Apps_webfileviewerUploadClose_button" onclick="upload_cancel_b();"><span class="_text" lang="_button" datafld="close"></span></button>		
+		<button class="ButtonRightPos2" id="Apps_webfileviewerUploadUpload_button" onclick="upload_action();"><span class="_text" lang="_wfs" datafld="upload"></span></button>					
+	</div>
+	<div id="sDiag_properties" style="display:none">
+			<div class="WDLabelBodyDialogue">			
+			<div class="dialog_content">
+							<table cellspacing=0 cellpadding=0 border=0 width="100%">
+							<tr >
+								<td width="200px" height="40"><span class="_text" lang="_device" datafld="name">Name</span></td>
+								<td><div id="p_name" style="overflow: hidden;text-overflow: ellipsis; white-space: nowrap; max-width:240px; "></div></td>
+							</tr>	
+							<tr>
+								<td height="38"><span class="_text" lang="_wfs" datafld="location">Location</span></td>
+								<td><div id="p_path"  style="overflow: hidden;text-overflow: ellipsis; white-space: nowrap; max-width:240px; "></div></td>
+							</tr>	
+							
+							<tr style="display:none">
+								<td><span class="_text" lang="_wfs" datafld="change_time">Change Time</span></td>
+								<td><div id="p_change_time"></div></td>
+							</tr>	
+							<tr>
+								<td height="38"><span class="_text" lang="_wfs" datafld="modified">Modified Time</span></td>
+								<td><div id="p_modify_time"></div></td>
+							</tr>	
+							<tr style="display:none">
+								<td><span class="_text" lang="_wfs" datafld="access_time">Access Time</span></td>
+								<td><div id="p_access_time"></div></td>
+							</tr>	
+						</table>			
+					<table cellspacing=0 cellpadding=0 border=0 width="100%">
+					<tr>
+						<td width="200px" height="38"><span class="_text" lang="_wfs" datafld="owner">Owner</span></td>
+						<td><div id="p_permission_owner"></div></td>
+					</tr>	
+					<tr>
+						<td height="38"><span class="_text" lang="_wfs" datafld="user_group">User Group</span></td>
+						<td><div id="p_permission_user_group"></div></td>
+					</tr>	
+					<tr>
+						<td height="38"><span class="_text" lang="_login" datafld="others">Others</span></td>
+						<td><div id="p_permission_others"></div></td>
+					</tr>	
+					</table>
+						<table cellspacing=0 cellpadding=0 border=0 width="100%">
+					<tr>
+						<td width="200px" height="38"><span class="_text" lang="_wfs" datafld="owner">Owner</span></td>
+						<td><div id="p_owner"></div></td>
+					</tr>	
+					<tr>
+						<td height="38"><span class="_text" lang="_wfs" datafld="user_group">User Group</span></td>
+						<td><div id="p_group"></div></td>
+					</tr>					
+					</table>
+		</div>	
+		</div>
+<div class="hrBottom2"><hr/></div>
+		<button class="ButtonRightPos2 close" id="a_properties_ok"><span class="_text" lang="_button" datafld="close"></span></button>		
+	</div>
+</div>
+</body>
+</html>

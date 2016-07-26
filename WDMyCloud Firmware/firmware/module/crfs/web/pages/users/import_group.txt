@@ -1,0 +1,3 @@
+#group name/user name/ shared folder(rw)/ shared folder(ro)/ shared folder(deny)/group quota
+#group/u1:u2/folder1:folder2/folder3:folder4/folder5:folder6/0:0:0:0
+

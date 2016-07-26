@@ -1,0 +1,16 @@
+DROP TABLE IF EXISTS "AlertCategory";
+CREATE TABLE "AlertCategory" ("id" INTEGER PRIMARY KEY  UNIQUE , "value" VARCHAR NOT NULL );
+INSERT INTO "AlertCategory" VALUES(1,'system');
+INSERT INTO "AlertCategory" VALUES(2,'user');
+DROP TABLE IF EXISTS "AlertDesc";
+CREATE TABLE "AlertDesc" ("id" INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL , "severity" INTEGER NOT NULL  check(typeof("severity") = 'integer')  DEFAULT 10, "code" VARCHAR NOT NULL , "description" VARCHAR, "scope" INTEGER DEFAULT 1 , "admin_ack_only" BOOL NOT NULL  DEFAULT 1, "category" INTEGER DEFAULT 1);
+DROP TABLE IF EXISTS "AlertScopes";
+CREATE TABLE "AlertScopes" ("id" INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL  UNIQUE , "value" VARCHAR NOT NULL );
+INSERT INTO "AlertScopes" VALUES(1,'all');
+INSERT INTO "AlertScopes" VALUES(2,'admin');
+INSERT INTO "AlertScopes" VALUES(3,'specific');
+DROP TABLE IF EXISTS "AlertSeverities";
+CREATE TABLE "AlertSeverities" ("id" INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL  UNIQUE , "value" VARCHAR NOT NULL );
+INSERT INTO "AlertSeverities" VALUES(1,'critical');
+INSERT INTO "AlertSeverities" VALUES(5,'warning');
+INSERT INTO "AlertSeverities" VALUES(10,'Info');

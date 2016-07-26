@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="MS-HAID" content="Creating an Amazon S3 Cloud Backup" />
+<meta http-equiv="Content-Language" content="cs-CZ" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Vytvoření zálohy v&#160;cloudu Amazon S3</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Zálohování osobního cloudu\nZálohování v cloudu\nVytvoření zálohy v cloudu Amazon S3");
+addButton("show",BTN_TEXT,"Zobrazit","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("index.htm", "", ">", "Home (Výchozí)", "welcome.htm");
+document.write("<a href=\"Creating_a_USB_Backup.htm\">Zálohování osobního cloudu<\/a> > <a href=\"What_is_a_Cloud_Backup.htm\">Zálohování v cloudu<\/a> > Vytvoření zálohy v&#160;cloudu Amazon S3<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Vytvoření zálohy v&#160;cloudu Amazon S3</h1>
+<p class="Body"><span style="font-weight: bold;">Poznámka</span>: Před 
+ vytvořením zálohy v&#160;cloudu se zaregistrujte do služby Amazon S3 na 
+ adrese <a href="http://aws.amazon.com/s3" target="_blank">http://aws.amazon.com/s3</a>.</p>
+<p class="Body">Jakmile bude váš účet Amazon S3 nastaven, vytvořte zálohu 
+ v&#160;cloudu následujícím postupem.</p>
+<ol style="list-style: square;">
+	<li style="list-style: none; display: inline;"><ol style="list-style: decimal;">
+		<li class="n1">Klikněte na položku <b>Zálohy</b>.</li>
+		<li class="n1">Klikněte na položku <span style="font-weight: bold;">Zálohování 
+		 v&#160;cloudu</span>.</li>
+		<li class="n1">Klikněte na tlačítko <b>Amazon S3</b> v&#160;horní 
+		 části obrazovky.<img src="Graphics/image016.png" alt="" width="90" 
+								 height="18" border="0" /></li>
+		<li class="n1">Klikněte na <b>Vytvořit</b>.</li>
+		<li class="n1">Zadejte Název úlohy pro své zálohování v&#160;cloudu.</li>
+		<li class="n1">Klikněte na tlačítko <b>Další</b>.</li>
+		<li class="n1">Zadejte následující informace ze služby Amazon S3:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold;">Oblast</b>: Vyberte 
+		 oblast použitou pro váš cloud v&#160;rozevírací nabídce.</li>
+		<li class="b1"><b style="font-weight: bold;">Přístupový klíč</b>: 
+		 Zadejte přístupový klíč, který jste obdrželi od služby Amazon 
+		 S3.</li>
+		<li class="b1"><b style="font-weight: bold;">Privátní klíč</b>: 
+		 Zadejte privátní klíč, který jste obdrželi od služby Amazon S3.</li>
+		<li class="b1"><b style="font-weight: bold;">Vzdálená cesta</b>: 
+		 Zadejte vzdálenou cestu do vašeho cloudu. Obvykle se jedná o&#160;název 
+		 umístění Bucket.</li>
+	</ul>
+	<ol start="8" style="list-style: decimal;">
+		<li class="n1">Klikněte na tlačítko <b>Další</b>.</li>
+		<li class="n1">V&#160;poli Typ vyberte jednu z&#160;následujících 
+		 možností:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold;">Odeslat:</b> Zálohuje 
+		 data vaší jednotky My Cloud Mirror do umístění Bucket Amazon S3.</li>
+		<li class="b1"><b style="font-weight: bold;">Stáhnout:</b> Zálohuje 
+		 obsah vašeho umístění Bucket Amazon S3 do serveru My Cloud Mirror.</li>
+	</ul>
+	<ol start="10" style="list-style: decimal;">
+		<li class="n1">V&#160;poli Typ zálohování vyberte v&#160;rozevírací 
+		 nabídce typ zálohování, které chcete provádět. Možnosti jsou následující:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b>Přepsat stávající soubory:</b> Přepíše soubory 
+		 v&#160;cílové složce, který mají stejný název jako zdrojový soubor.</li>
+		<li class="b1"><b style="font-weight: bold;">Úplné zálohování</b>: 
+		 Vytvoří samostatnou složku obsahující všechna zálohovaná data 
+		 při každém provádění zálohy.</li>
+		<li class="b1"><b style="font-weight: bold;">Přírůstkové zálohování</b>: 
+		 Přepíše soubory zdrojovými soubory, které jsou novější než cílové 
+		 soubory.</li>
+	</ul>
+	<ol start="11" style="list-style: decimal;">
+		<li class="n1">Klikněte na tlačítko <span style="font-weight: bold;">Další</span>.</li>
+		<li class="n1">V&#160;poli Místní cesta zadejte cestu pro zálohování 
+		 v&#160;zařízení My Cloud Mirror.</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">Kliknutím na <span style="font-weight: bold;">Procházet</span> 
+		 procházejte do umístění pro vaši zálohu v&#160;zařízení.<br />
+		(Příklad Volume_1/backup)</li>
+	</ul>
+	<ol start="13" style="list-style: decimal;">
+		<li class="n1">Kliknutím na <img src="Graphics/toggle_button.png" 
+										 alt="" width="20" height="15" 
+										 border="0" />&#160;aktivujete 
+		 funkci automatické aktualizace. Tato funkce automaticky aktualizuje 
+		 vaši zálohu na základě plánu, který vytvoříte.</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">Chcete-li aktivovat funkci automatické aktualizace:</li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: circle;">
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">Vyberte 
+			 plán automatické aktualizace: Denně, Týdně nebo Měsíčně</p></li>
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">Vyberte 
+			 čas automatické aktualizace v&#160;rozevírací nabídce (možnost 
+			 Denně).</p></li>
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">Vyberte 
+			 datum a&#160;čas automatické aktualizace v&#160;rozevíracích 
+			 nabídkách (možnost Týdně nebo Denně).</p></li>
+		</ul></li>
+	</ul>
+	<ol start="14" style="list-style: decimal;">
+		<li class="n1">Klikněte na tlačítko <b>Další</b>.</li>
+		<li class="n1">Zkontrolujte nastavení a&#160;klikněte na <b>Dokončit</b>. 
+		 Vaše zálohování v&#160;cloudu Amazon S3 je vytvořeno.</li>
+	</ol></li>
+</ol>
+<p class="Body" style="margin-left: 60px;"><span style="font-weight: bold;">POZNÁMKA</span>: 
+ Chcete-li zobrazit zálohy vašeho zařízení, otevřete umístění Bucket své 
+ zálohy v&#160;cloudu Amazon S3.</p>
+<p class="ListContinue2CxSpLast">&#160;</p>
+<p>
+
+<a href="javascript:void(0);" onclick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) &gt;=2 &amp;&amp; typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','Co je to zálohování v cloudu','What_is_a_Cloud_Backup.htm','Povolení zálohování v cloudu ElephantDrive','Enabling_an_ElephantDrive_Cloud_Backup.htm');return false;" title="Viz také"><img src="ss_btn_viz_také.gif" border="0" height="17" width="47" alt="Viz také" /></a>
+
+
+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt;">© 2015 Western Digital Technologies, Inc. 
+	 <span style="line-height: 100%;"><b style="font-weight: normal;">Všechna 
+	 práva vyhrazena</b>.</span></p>
+</div>
+<script type="text/javascript" language="JavaScript">//<![CDATA[
+if (parseInt(navigator.appVersion) >= 3 && typeof (WritePopupMenuLayer) == "function")
+  WritePopupMenuLayer();
+//]]></script><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>
+

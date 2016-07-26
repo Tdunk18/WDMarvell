@@ -1,0 +1,1509 @@
+﻿<!-- Format Disk Dialog  -->
+<div id="formatdsk_Diag" class="WDLabelDiag">
+<div class="WDLabelHeaderDialogue" id="formatdsk_Diag_title"><span class="_text" lang="_raid" datafld="title3"></span></div>
+<div align="center"><div class="hr"><hr></div></div>
+
+<!-- 1.Format Disk Dialog : Select A RAID TYPE -->
+	<div id="dskDiag_raidmode_set">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content" style="border:0px solid yellow;">
+				<div class="raid_left">
+					<ul style="">
+						<li id="raid_main_menu_std" rel="raid_r_std" style="cursor:pointer;"><div class='tlt' style='width:150px;border: 0px solid red;'><span class="_text" lang="_raid" datafld="desc5"></span></div></li>	
+						<li id="raid_main_menu_jbod" rel="raid_r_jbod" style="cursor:pointer;display:none"><div class='tlt' style='width:150px;border: 0px solid red;'><span class="_text" lang="_raid" datafld="desc6"></span></div></li>	
+						<li id="raid_main_menu_r0" rel="raid_r_r0" style="cursor:pointer;display:none"><div class='tlt' style='width:150px;border: 0px solid red;'><span class="_text" lang="_raid" datafld="desc7"></span></div></li>	
+						<li id="raid_main_menu_r1" rel="raid_r_r1" style="cursor:pointer;display:none"><div class='tlt' style='width:150px;border: 0px solid red;'><span class="_text" lang="_raid" datafld="desc8"></span></div></li>	
+						<li id="raid_main_menu_r5" rel="raid_r_r5" style="cursor:pointer;display:none"><div class='tlt' style='width:150px;border: 0px solid red;'><span class="_text" lang="_raid" datafld="desc9"></span></div></li>	
+						<li id="raid_main_menu_r10" rel="raid_r_r10" style="cursor:pointer;display:none"><div class='tlt' style='width:150px;border: 0px solid red;'><span class="_text" lang="_raid" datafld="desc11"></span></div></li>	
+					</ul>
+				</div>
+				<div class="raid_right">
+					<!-- Std Desc -->
+					<table cellspacing="0" cellpadding="0" border="0" width="100%" id="raid_r_std">
+						<tr><td colspan="2"><b><span class="_text" lang="_raid" datafld="desc13"></span></b></td></tr>	
+						<tr><td colspan="2" height="20px">&nbsp;</td></tr>	
+						<tr>	
+							<td width="300px" valign="top"><span class="_text" lang="_raid" datafld="desc19"></span></td>
+							<td align="center"><img border='0' src='/web/images/RAID/raidmode_jbod.png'></td>
+						</tr>
+					</table>
+					
+					<!--JBOD Desc-->
+					<table cellspacing="0" cellpadding="0" border="0" width="100%" id="raid_r_jbod" style="display:none">
+						<tr><td colspan="2"><b><span class="_text" lang="_raid" datafld="desc14"></span></b></td></tr>	
+						<tr><td colspan="2" height="20px">&nbsp;</td></tr>	
+						<tr>	
+							<td width="300px" valign="top"><span class="_text" lang="_raid" datafld="desc27"></span></td>
+							<td align="center"><img border='0' src='/web/images/RAID/raidmode_raid0-spanning.png'></td>
+						</tr>
+					</table>
+					
+					<!--RAID0  Desc-->
+					<table cellspacing="0" cellpadding="0" border="0" width="100%" id="raid_r_r0" style="display:none">
+						<tr><td colspan="2"><b><span class="_text" lang="_raid" datafld="desc15"></span></b></td></tr>	
+						<tr><td colspan="2" height="20px">&nbsp;</td></tr>	
+						<tr>	
+							<td width="300px" valign="top"><span class="_text" lang="_raid" datafld="desc28"></span></td>
+							<td align="center"><img border='0' src='/web/images/RAID/raidmode_raid0.png'></td>
+						</tr>	
+					</table>	
+					
+					<!--RAID1  Desc-->
+					<table cellspacing="0" cellpadding="0" border="0" width="100%" id="raid_r_r1" style="display:none">
+						<tr><td colspan="2"><b><span class="_text" lang="_raid" datafld="desc16"></span></b></td></tr>	
+						<tr><td colspan="2" height="20px">&nbsp;</td></tr>	
+						<tr>	
+							<td width="300px" valign="top"><span class="_text" lang="_raid" datafld="desc29"></span></td>
+							<td align="center"><img border='0' src='/web/images/RAID/raidmode_raid1.png'></td>
+						</tr>	
+					</table>	
+					
+					<!--RAID5  Desc-->
+					<table cellspacing="0" cellpadding="0" border="0" width="100%" id="raid_r_r5" style="display:none">
+						<tr><td colspan="2"><b><span class="_text" lang="_raid" datafld="desc17"></span></b></td></tr>	
+						<tr><td colspan="2" height="20px">&nbsp;</td></tr>	
+						<tr>	
+							<td width="300px" valign="top"><span class="_text" lang="_raid" datafld="desc30"></span></td>
+							<td align="center"><img border='0' src='/web/images/RAID/raidmode_raid5.png'></td>
+						</tr>
+					</table>
+						
+					<!--RAID10  Desc -->
+					<table cellspacing="0" cellpadding="0" border="0" width="100%" id="raid_r_r10" style="display:none">
+						<tr><td colspan="2"><b><span class="_text" lang="_raid" datafld="desc18"></span></b></td></tr>	
+						<tr><td colspan="2" height="20px">&nbsp;</td></tr>	
+						<tr>	
+							<td width="300px" valign="top"><span class="_text" lang="_raid" datafld="desc31"></span></td>
+							<td align="center"><img border='0' src='/web/images/RAID/raidmode_raid10.png'></td>
+						</tr>	
+					</table>
+					<!-- checkbox: for create all / newly format -->
+					<table cellspacing="0" cellpadding="0" border="0" width="auto">
+						<!-- Create All HD -->
+						<tr id="tr_create_all_format">
+							<td class="tdfield_40" style="min-width:20px;width:20px;">
+								    <input type="checkbox" name="storage_raidFormatType_chkbox" id="storage_raidFormatType1_chkbox" value="1">
+							</td>
+							<td class="tdfield_padding">
+								<div id="DIV_CHECKBOX_RAIDMODE_HTML"><span class="_text" lang="_raid" datafld="desc20"></span></div>
+							</td>
+							<td class="tdfield_padding" style="align="left"><div class="TooltipIcon" id="tip_create_alldisk"></div></td>
+						</tr>
+						<!-- Create Newly Insert HD -->
+						<tr id="tr_newly_insert_format" style="display:none">
+							<td class="tdfield_40" style="min-width:20px;width:20px;">
+								    <input type="checkbox" name="storage_raidFormatType_chkbox" id="storage_raidFormatType2_chkbox" value="2">
+							</td>
+							<td class="tdfield_padding"><div id="DIV_CHECKBOX_REFORMART_RAIDMODE_HTML"><span class="_text" lang="_raid" datafld="desc51"></span></div></td>
+							<td class="tdfield_padding" align="left"><div class="TooltipIcon" id="tip_create_newlydisk"></div></td>
+						</tr>
+						
+						<!-- My Migrate : STD to R1 -->
+						<tr id="tr_std2r1_format" style="display:none">
+							<td class="tdfield_40" style="min-width:20px;width:20px;">
+								    <input type="checkbox" name="storage_raidFormatType_chkbox" id="storage_raidFormatType3_chkbox" value="4">
+							</td>
+							<td class="tdfield_padding"><div id="DIV_CHECKBOX_STD2R1_HTML"><span class="_text" lang="_raid" datafld="desc54"></span></div></td>
+							<td class="tdfield_padding" align="left"><!--<div class="TooltipIcon" id="tip_STD2R1"></div>--></td>
+						</tr>
+						<!-- My Migrate : STD to R5 -->
+						<tr id="tr_std2r5_format" style="display:none">
+							<td class="tdfield_40" style="min-width:20px;width:20px;">
+								    <input type="checkbox" name="storage_raidFormatType_chkbox" id="storage_raidFormatType4_chkbox" value="5">
+							</td>
+							<td class="tdfield_padding"><div id="DIV_CHECKBOX_STD2R5_HTML"><span class="_text" lang="_raid" datafld="desc55"></span></div></td>
+							<td class="tdfield_padding" align="left"><!--<div class="TooltipIcon" id="tip_STD2R5"></div>--></td>
+						</tr>
+						<!-- My Migrate : R1 to R5 -->
+						<tr id="tr_r12r5_format" style="display:none">
+							<td class="tdfield_40" style="min-width:20px;width:20px;">
+								    <input type="checkbox" name="storage_raidFormatType_chkbox" id="storage_raidFormatType5_chkbox" value="6">
+							</td>
+							<td class="tdfield_padding"><div id="DIV_CHECKBOX_R12R5_HTML"><span class="_text" lang="_raid" datafld="desc55"></span></div></td>
+							<td class="tdfield_padding" align="left"><!--<div class="TooltipIcon" id="tip_R12R5"></div>--></td>
+						</tr>
+						<!-- My Migrate : R5 Add Spare Disk -->
+						<tr id="tr_spare_disk_format" style="display:none">
+							<td class="tdfield_40" style="min-width:20px;width:20px;">
+								    <input type="checkbox" name="storage_raidFormatType_chkbox" id="storage_raidFormatType6_chkbox" value="7">
+							</td>
+							<td class="tdfield_padding"><div id="DIV_CHECKBOX_SPAREDSK_HTML"><span class="_text" lang="_raid" datafld="desc61"></span></div></td>
+							<td class="tdfield_padding" align="left"><div class="TooltipIcon" id="tip_SPAREDisk"></div></td>
+						</tr>
+						<!-- RAID Expansion : R1 -->
+						<tr id="tr_r1_expan"  style="display:none">
+							<td class="tdfield_40" style="min-width:20px;width:20px;height:24px;">
+								    <input type="checkbox" name="storage_raidFormatType_chkbox" id="storage_raidFormatType7_chkbox" value="8">
+							</td>
+							<td class="tdfield_padding"><div id="DIV_CHECKBOX_R1EXPAN_HTML"><span class="_text" lang="_raid" datafld="desc93"></span></div></td>
+							<td class="tdfield_padding" align="left"><div class="TooltipIcon" id="tip_R1Expan"></div></td>
+						</tr>
+						<!-- RAID Expansion : R5 -->
+						<tr id="tr_r5_expan"  style="display:none">
+							<td class="tdfield_40" style="min-width:20px;width:20px;height:24px;">
+								    <input type="checkbox" name="storage_raidFormatType_chkbox" id="storage_raidFormatType8_chkbox" value="9">
+							</td>
+							<td class="tdfield_padding"><div id="DIV_CHECKBOX_R5EXPAN_HTML"><span class="_text" lang="_raid" datafld="desc93"></span></div></td>
+							<td class="tdfield_padding" align="left"><div class="TooltipIcon" id="tip_R5Expan"></div></td>
+						</tr>
+						<!-- RAID Extendsion : R5 -->
+						<tr id="tr_r5_extend"  style="display:none">
+							<td class="tdfield_40" style="min-width:20px;width:20px;height:24px;">
+								    <input type="checkbox" name="storage_raidFormatType_chkbox" id="storage_raidFormatType9_chkbox" value="10">
+							</td>
+							<td class="tdfield_padding"><div id="DIV_CHECKBOX_R5EXTEND_HTML"><span class="_text" lang="_raid" datafld="desc99"></span></div></td>
+							<td class="tdfield_padding" align="left"><div class="TooltipIcon" id="tip_R5Extend"></div></td>
+						</tr>
+						<!-- RAID Extendsion : R1 to STD -->
+						<tr id="tr_r5_r12std" style="display:none">
+							<td class="tdfield_40" style="min-width:20px;width:20px;height:24px;">
+								    <input type="checkbox" name="storage_raidFormatType_chkbox" id="storage_raidFormatType10_chkbox" value="11">
+							</td>
+							<td class="tdfield_padding"><div id="DIV_CHECKBOX_R12R5_HTML"><span class="_text" lang="_raid" datafld="desc101"></span></div></td>
+							<td class="tdfield_padding" align="left"><!--<div class="TooltipIcon" id="tip_R12STD"></div>--></td>
+						</tr>
+						<!-- RAID Migrate : Migration Continue-->
+						<tr id="tr_migration_continue" style="display:none">
+							<td class="tdfield_40" style="min-width:20px;width:20px;height:24px;">
+								    <input type="checkbox" name="storage_raidFormatType_chkbox" id="storage_raidFormatType11_chkbox" value="12">
+							</td>
+							<td class="tdfield_padding"><div id="DIV_CHECKBOX_MIGRATEContinue_HTML"><span class="_text" lang="_raid" datafld="desc106"></span></div></td>
+							<td class="tdfield_padding" align="left"><!--<div class="TooltipIcon" id="tip_R12STD"></div>--></td>
+						</tr>
+					</table>
+				</div><!-- end of raid_right-->
+			</div><!--end of dialog_content -->	
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatCancel1_button" class="ButtonLeftPos close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatNext1_button" class="ButtonRightPos1  grayout"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div>	
+	
+	<!-- 2.Format Disk Dialog : physical disk info -->
+	<div id="dskDiag_physical_info" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<span class="_text" lang="_raid" datafld="desc108"></span><br>
+			<div class="dialog_content">
+						<div class="flexigrid" style="width: 650px;">
+						<div class="hDiv">
+							<div class="hDivBox" style="width: 650px;">
+								<!-- title -->
+									<th align="center" abbr="f_icon" axis="col0"><div style="text-align: center; width: 40px;">--</div></th>
+									<th align="center" abbr="f_drive" axis="col1"><div style="text-align: left; width: 150px;">Drive</div></th>
+									<th align="center" abbr="f_size" axis="col2"><div style="text-align: left; width: 240px;">Size</div></th>
+									<th align="left" abbr="f_state" axis="col3"><div style="text-align: right; width: 150px;">State</div></th>
+							</div><!-- hDivBox -->
+						</div><!-- hDiv -->
+						<div class="bDiv" id="diag_create_hdinfo_bDiv">
+							<table cellspacing="0" cellpadding="0" border="0">
+								<tbody id="formatdsk_hd_info"></tbody>
+							</table>
+						</div><!-- bDiv -->
+						</div><!-- flexigrid -->
+						
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>		
+		<button type="button" id="storage_raidFormatBack2_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidFormatCancel2_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatNext2_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div>
+	
+	<!-- 3.Format Disk Dialog : Auto-Rebuild Settings -->
+	<div id="dskDiag_rebuild_set" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<span class="_text" lang="_raid" datafld="desc35">This section allows you to rebuild the RAID if it becomes corrupted.  Enable Auto-Rebuild to automatically rebuild the RAID once the disk is recognized.</span><br><br>
+				<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="70%">
+				   	<tr>
+				   		<td class="tdfield"><span class="_text" lang="_raid" datafld="desc4"></span></td>
+				   		<td class="tdfield_padding">
+				   			<input id="storage_raidFormatAutoRebuild3_switch" name="storage_raidFormatAutoRebuild3_switch" class="onoffswitch" type="checkbox" value="true">
+				   		</td>
+				    </tr>
+				</table>
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>		
+		<button type="button" id="storage_raidFormatBack3_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidFormatCancel3_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatNext3_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div>
+	
+	<!-- 4.Format Disk Dialog : RAID Size Settings 1 -->
+	<div id="dskDiag_raidsize_volume1_set" style="display:none">
+			<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<div id="dskDiag_raidsize_1st_desc1"></div><br>
+				<div id="dskDiag_raidsize_1st_desc2"></div><br>
+				<table border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse" bordercolor="#111111" width="100%">
+			        <tr>
+			        	<td align="left" colspan="2"><div style="width:300px"><div id="slider_desc_volume1"></div></div></td></tr>
+			        <tr>
+			        	<td><div id="slider_volume1" style="margin-left:0px;"></div></td>
+			        	<td width="100px" align="right"><div id="amount_right"></div></td>
+			        </tr>
+							<tr>
+			        	<td align="right"><div id="Get_RemainSize"></div></td>
+			        	<td></td>
+			        </tr>
+			        <tr><td colspan="2" height="30px"></td></tr>
+			        <tr id="tr_spare_dsk" style="display:none">
+			          <td colspan="2">
+			          		<table>
+			          			<tr>
+					        		<td><input type="checkbox" name="storage_raidFormatSpareDsk4_chkbox" id="storage_raidFormatSpareDsk4_chkbox" value="1"></td>
+					        		<td><span class="_text" lang="_raid" datafld="desc61"></span></td>
+					        		</tr>
+			        			</table>
+			          </td>
+			        </tr>
+			        <tr id="tr_1st_create_jbod">
+			        	<td colspan="2">
+			        		<table><tr>
+			        		<td><input type="Checkbox" name="storage_raidFormat1stSpanning4_chkbox" id="storage_raidFormat1stSpanning4_chkbox" value="1"></td>
+			        		<td><span class="_text" lang="_raid" datafld="desc46">Configure the remaining disk space as Spanning.</span></td>
+			        		</tr></table>
+			        	</td>	
+			        </tr>
+			        <tr id="tr_1st_create_jbod_msg" style="display:none">
+			        	<td colspan="2">
+			        		<span class="_text" lang="_raid" datafld="desc92"></span>
+			        	</td>	
+			        </tr>
+			    </table>
+			 </div>   
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatBack4_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidFormatCancel4_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatNext4_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div>	
+	
+	<!-- 5.Format Disk Dialog : RAID Size Settings 2 -->
+	<div id="dskDiag_raidsize_volume2_set" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<div><span class="_text" lang="_raid" datafld="desc32"></span></div><br>
+				<div id="dskDiag_raidsize_2nd_desc2"></div><br>
+				<table border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse" bordercolor="#111111" width="100%">	
+			        <tr> 
+			          <td  align="left" colspan="2"><div id="slider_desc_volume2" style="width:300px"></div></td>	
+			        </tr>
+			        <tr>
+			        	<td><div id="slider_volume2"></div></td>
+			        	<td width="100px" align="right"><div id="amount_right_volume2"></div></td>
+			        </tr>
+			        <tr>
+			        	<td align="right"><div id="Get_RemainSize_volume2"></div></td>
+			        	<td></td>
+			        </tr>
+			        <tr><td colspan="3" height="30px"></td></tr>
+			        <tr id="tr_2nd_create_jbod">
+			        	<td height="20" colspan="2">
+			        		<table><tr>
+			        		<td><input type="checkbox" name="storage_raidFormat2ndSpanning5_chkbox" id="storage_raidFormat2ndSpanning5_chkbox" value="1"></td>
+			        		<td><span class="_text" lang="_raid" datafld="desc46">Configure the remaining disk space as Spanning.</span></td>
+			        		</tr></table>
+			        	</td>
+			        </tr>
+				</table>
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatBack5_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidFormatCancel5_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatNext5_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button> 
+	</div>
+	
+	<!-- 6.Format Disk Dialog : Summary -->
+	<div id="dskDiag_summary" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<span class="_text" lang="_format" datafld="desc11">This section provides a summary of the configuration you just created. It will show the volume name, file format, disk size and disk array number.</span><br><br>
+				
+				<div class="flexigrid" style="width: 650px;">
+				<div class="hDiv">
+					<div class="hDivBox" style="width: 650px;">
+						<table cellspacing="0" cellpadding="0" border="0">
+							<thead>
+								<tr>
+									<th align="center" abbr="f_ve" axis="col0"><div style="text-align: center; width: 16px;">--</div></th>
+									<th align="center" abbr="f_ve_auto_mount" axis="col1"><div style="text-align: center; width: 16px;">--</div></th>
+									<th align="center" abbr="f_vol" axis="col2"><div style="text-align: left; width: 90px;">Volume Name</div></th>
+									<th align="left" abbr="f_type" axis="col3"><div style="text-align: left; width: 110px;">Type</div></th>
+									<th align="left" abbr="f_file_type" axis="col4"><div style="text-align: left; width: 72px;">File System</div></th>
+									<th align="center" abbr="f_size" axis="col5"><div style="text-align: left; width: 80px;">Size</div></th>
+									<th align="center" abbr="f_disk" axis="col6"><div style="text-align: left; width: 178px;">Disk</div></th>
+								</tr>
+							</thead>
+						</table>
+					</div><!-- hDivBox -->
+				</div><!-- hDiv -->
+				<div class="bDiv" id="diag_create_summary_bDiv">
+					<table cellspacing="0" cellpadding="0" border="0">
+						<tbody id="create_summary_list"></tbody>
+					</table>
+				</div><!-- bDiv -->
+				</div><!-- flexigrid -->
+				
+			</div>
+		</div>
+
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatBack6_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidFormatCancel6_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatNext6_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button> 
+	</div>
+	
+	<!-- 7.Format Disk Dialog : Bar -->
+	<div id="dskDiag_bar" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<span class="_text" lang="_format" datafld="desc13"></span><br><br>
+				<div style="margin: 0px auto;text-align:center;line-height:25px;width:80%;" id="formatdsk_state"></div>
+				<div style="margin: 0px auto;width:80%;" id="formatdsk_parogressbar"></div>
+				<div style="margin: 0px auto;text-align:center;line-height:25px;width:80%;" id="formatdsk_desc"></div>
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<!--<button type="button" id="storage_raidFormatCancel7_button" class="ButtonRightPos1 close"><span class="_text" lang="_button" datafld="close"></span></button>-->
+	</div>
+	
+	<!-- 8.Format Disk Dialog : waiting for disk remount -->
+	<div id="dskDiag_wait" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<span class="_text" lang="_format" datafld="desc12"></span>
+				 <table border="0" cellSpacing="0" cellPadding="0" style="border-collapse: collapse" bordercolor="#000000" width="95%">
+            <tr>
+            	<td height="100" width="300px" align="right"><img src="/web/images/SpinnerSun.gif"></td>
+            	<td align="left"><span class="_text" lang="_common" datafld="wait">Waiting...</span></td>
+            </tr>
+        	</table> 	
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatCancel8_button" class="ButtonRightPos1 close"><span class="_text" lang="_button" datafld="close"></span></button>
+	</div>
+	
+	<!-- 9.Format Disk Dialog : Result List -->
+	<div id="dskDiag_res" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">	
+				<p><span class="_text" lang="_format" datafld="desc14">Setup is complete. This section provides information on the volume name, file system, RAID mode (type) and the disk array.</span></p>
+				<div id="dskDiag_res_div">
+						<div class="flexigrid" style="width: 600px;">
+						<div class="hDiv">
+							<div class="hDivBox" style="width: 600px;">
+								<table cellspacing="0" cellpadding="0">
+									<thead>
+										<tr>
+											<th align="left" abbr="f_vol" axis="col1"><div style="text-align: left; width: 98px;">Volume Name</div></th>
+											<th align="left" abbr="f_filesystem" axis="col2"><div style="text-align: left; width: 80px;">File System</div></th>
+											<th align="left" abbr="f_mode" axis="col3"><div style="text-align: left; width: 125px;">Mode</div></th>
+											<th align="center" abbr="f_disk" axis="col3"><div style="text-align: left; width: 280px;">Disk</div></th>
+										</tr>
+									</thead>
+								</table>
+							</div><!-- hDivBox -->
+						</div><!-- hDiv -->
+						<div class="bDiv" id="diag_create_current_res_bDiv">
+							<table cellspacing="0" cellpadding="0" border="0">
+								<tbody id="dskDiag_res_hdlst"></tbody>
+							</table>
+						</div><!-- bDiv -->
+					</div><!-- flexigrid -->
+				</div>
+				
+				<div id="dskDiag_res_phy_div" style="display:none">
+				<div class="flexigrid" style="width: 462px;">
+						<div class="hDiv">
+							<div class="hDivBox">
+								<table cellspacing="0" cellpadding="0">
+									<thead>
+										<tr>
+											<th align="center" abbr="f_slot" axis="col0"><div style="text-align: left; width: 45px;">Slot</div></th>
+											<th align="left" abbr="f_vendor" axis="col1"><div style="text-align: left; width: 77px;">Vendor</div></th>
+											<th align="left" abbr="f_version" axis="col2"><div style="text-align: left; width: 170px;">Model</div></th>
+											<th align="left" abbr="f_version" axis="col3"><div style="text-align: left; width: 120px;">Serial Number</div></th>
+										</tr>
+									</thead>
+								</table>
+							</div><!-- hDivBox -->
+						</div><!-- hDiv -->
+						<div class="bDiv">
+							<table cellspacing="0" cellpadding="0" border="0">
+								<tbody id="dsk_dskDiag_res_phy_hdlst"></tbody>
+							</table>
+						</div><!-- bDiv -->
+					</div><!-- flexigrid -->
+				</div>
+			</div>   	
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+			<button type="button" id="storage_raidFormatFinish9_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="close"></span></button>
+	</div>
+	
+<!-- 10.Format Disk Dialog : waiting for disk partitioning -->
+	<div id="dskDiag_partitioning_wait" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+			<span class="_text" lang="_format" datafld="desc15">Please be patient while ShareCenter partitions your drive. Do not turn off the NAS at this stage.</span><br><br>
+			<table border="0" cellSpacing="0" cellPadding="0" style="border-collapse: collapse" bordercolor="#000000" width="95%">
+            <tr>
+            	<td height="100" width="300px" align="right"><img src="/web/images/SpinnerSun.gif"></td>
+            	<td align="left"><span class="_text" lang="_format" datafld="partitioning">Partitioning...</span></td>
+            </tr>
+        	</table>
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<!--<button type="button" id="storage_raidFormatCancel10_button" class="ButtonRightPos1 close"><span class="_text" lang="_button" datafld="close"></span></button>-->
+	</div>	
+	
+	<!-- 11.Format Disk Dialog : Volume Encryption -->
+	<div id="dskDiag_volume_encrpty_list" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<span class="_text" lang="_raid" datafld="desc71">This section allows you to choose which volumes you want to encrypt</span><br><br>
+				<div class="flexigrid" style="width: 580px;">
+				<div class="hDiv">
+					<div class="hDivBox" style="width: 580px;">
+						<table cellspacing="0" cellpadding="0" border="0">
+							<thead>
+								<tr>
+									<th align="left" abbr="f_icon" axis="col0"><div style="text-align: left; width: 40px;">--</div></th>
+									<th align="left" abbr="f_vol" axis="col1"><div style="text-align: left; width: 98px;">--</div></th>
+									<th align="left" abbr="f_type" axis="col2"><div style="text-align: left; width: 125px;">--</div></th>
+									<th align="left" abbr="f_size" axis="col3"><div style="text-align: left; width: 80px;">--</div></th>
+									<th align="center" abbr="f_vol_encryption" axis="col4"><div style="text-align: center; width: 230px;">--</div></th>
+								</tr>
+							</thead>
+						</table>
+					</div><!-- hDivBox -->
+				</div><!-- hDiv -->
+				<div class="bDiv" id="diag_create_volume_encrpty_bDiv">
+					<table cellspacing="0" cellpadding="0" border="0">
+						<tbody id="create_volume_encryption_list"></tbody>
+					</table>
+				</div><!-- bDiv -->
+				</div><!-- flexigrid -->		
+			</div>		
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatBack11_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidFormatCancel11_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatNext11_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button> 
+	</div>
+	
+	<!-- 12.Format Disk Dialog : 1st Volume Encryption -->
+	<div id="dskDiag_volume_encrpty_1st" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<span class="_text" lang="_raid" datafld="desc39">This section allows you to set up a password for the selected volume. Select Auto Mount to automatically mount the encrypted volume without re-entering the password at boot up.</span><br><br>
+				<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="550">	        
+					<tr> 
+						<td width="250px" height="55px" colspan="3"><b><span class="_text" lang="_raid" datafld="desc40"></span></b></td>
+					</tr>
+					<tr> 
+						<td width="250px" height="55px">&nbsp;<span class="_text" lang="_raid" datafld="desc37">Enter Encryption Password</span></td>
+						<td colspan="2"><input type="password" name="storage_raidFormatVE1stPWD12_password" id="storage_raidFormatVE1stPWD12_password"></td>
+					</tr>
+					<tr> 
+						<td width="250px" height="55px">&nbsp;<span class="_text" lang="_raid" datafld="desc38">Verify Encryption Password</span></td>
+						<td colspan="2"><input type="password" name="storage_raidFormatVE1stConfirmPWD12_password" id="storage_raidFormatVE1stConfirmPWD12_password"></td>
+					</tr>
+					<tr> 
+						<td width="250px" height="55px">&nbsp;<span class="_text" lang="_raid" datafld="desc36">Auto Mount</span></td>
+						<td width="90px" colspan="2">
+							<input id="storage_raidFormatVE1stAutoMount12_switch" name="storage_raidFormatVE1stAutoMount12_switch" class="onoffswitch" type="checkbox" value="true">
+						</td>
+						<!--<td align="left"><div class="TooltipIcon" id="tip_create_ve_1st_auto_mount"></div></td>-->
+					</tr>
+				</table>
+			</div>
+		</div>
+				
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatBack12_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidFormatCancel12_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatNext12_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button> 
+	</div>
+	
+	<!-- 13.Format Disk Dialog : 2nd Volume Encryption -->
+	<div id="dskDiag_volume_encrpty_2nd" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<span class="_text" lang="_raid" datafld="desc39">This section allows you to set up a password for the selected volume. Select Auto Mount to automatically mount the encrypted volume without re-entering the password at boot up.</span><br><br>
+				<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="550">	               
+					<tr> 
+						<td width="250px" height="55px" colspan="3"><b><span class="_text" lang="_raid" datafld="desc41"></span></b></td>
+					</tr>
+					<tr> 
+						<td width="250px" height="55px">&nbsp;<span class="_text" lang="_raid" datafld="desc37">Enter Encryption Password</span></td>
+						<td colspan="2"><input type="password" name="storage_raidFormatVE2ndPWD13_password" id="storage_raidFormatVE2ndPWD13_password"></td>
+					</tr>
+					<tr> 
+						<td align="left" height="55px">&nbsp;<span class="_text" lang="_raid" datafld="desc38">Verify Encryption Password</span></td>
+						<td colspan="2"><input type="password" name="storage_raidFormatVE2ndConfirmPWD13_password" id="storage_raidFormatVE2ndConfirmPWD13_password"></td>
+					</tr>
+					<tr> 
+						<td width="200" align="left" height="55px">&nbsp;<span class="_text" lang="_raid" datafld="desc36">Auto Mount</span></td>
+						<td width="90px"  colspan="2">
+							<input id="storage_raidFormatVE2ndAutoMount13_switch" name="storage_raidFormatVE2ndAutoMount13_switch" class="onoffswitch" type="checkbox" value="true">
+						</td>
+						<!--<td align="left"><div class="TooltipIcon" id="tip_create_ve_2nd_auto_mount"></div></td>-->
+					</tr>
+				</table>
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatBack13_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidFormatCancel13_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatNext13_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button> 
+	</div>
+	
+	<!-- 14.Format Disk Dialog : 3rd Volume Encryption -->
+	<div id="dskDiag_volume_encrpty_3rd" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<span class="_text" lang="_raid" datafld="desc39">This section allows you to set up a password for the selected volume. Select Auto Mount to automatically mount the encrypted volume without re-entering the password at boot up.</span><br><br>
+				<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="550">	        
+					<tr> 
+						<td width="250px" height="55px" colspan="3"><b><span class="_text" lang="_raid" datafld="desc42"></span></b></td>
+					</tr>
+					<tr> 
+						<td width="250px" height="55px">&nbsp;<span class="_text" lang="_raid" datafld="desc37">Enter Encryption Password</span></td>
+						<td colspan="2"><input type="password" name="storage_raidFormatVE3rdPWD14_password" id="storage_raidFormatVE3rdPWD14_password"></td>
+					</tr>
+					<tr> 
+						<td align="left" height="55px">&nbsp;<span class="_text" lang="_raid" datafld="desc38">Verify Encryption Password</span></td>
+						<td colspan="2"><input type="password" name="storage_raidFormatVE3rdConfirmPWD14_password" id="storage_raidFormatVE3rdConfirmPWD14_password"></td>
+					</tr>
+					<tr> 
+						<td width="200px" align="left" height="55px">&nbsp;<span class="_text" lang="_raid" datafld="desc36">Auto Mount</span></td>
+						<td width="90px" colspan="2">
+							<input id="storage_raidFormatVE3rdAutoMount14_switch" name="storage_raidFormatVE3rdAutoMount14_switch" class="onoffswitch" type="checkbox" value="true">
+						</td>
+						<!--<td align="left"><div class="TooltipIcon" id="tip_create_ve_3rd_auto_mount"></div></td>-->
+					</tr>
+				</table>
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatBack14_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidFormatCancel14_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatNext14_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button> 
+	</div>
+	
+	<!-- 15.Format Disk Dialog : 4th Volume Encryption -->
+	<div id="dskDiag_volume_encrpty_4th" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<span class="_text" lang="_raid" datafld="desc39">This section allows you to set up a password for the selected volume. Select Auto Mount to automatically mount the encrypted volume without re-entering the password at boot up.</span><br><br>
+				<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="550">	        
+					<tr> 
+						<td width="250px" height="55px" colspan="3"><b><span class="_text" lang="_raid" datafld="desc43"></span></b></td>
+					</tr>
+					<tr> 
+						<td width="250px" height="55px">&nbsp;<span class="_text" lang="_raid" datafld="desc37">Enter Encryption Password</span></td>
+						<td colspan="2"><input type="password" name="storage_raidFormatVE4thPWD15_password" id="storage_raidFormatVE4thPWD15_password"></td>
+					</tr>
+					<tr> 
+						<td align="left" height="55px">&nbsp;<span class="_text" lang="_raid" datafld="desc38">Verify Encryption Password</span></td>
+						<td colspan="2"><input type="password" name="storage_raidFormatVE4thConfirmPWD15_password" id="storage_raidFormatVE4thConfirmPWD15_password"></td>
+					</tr>
+					<tr> 
+						<td width="200px" align="left" height="55px">&nbsp;<span class="_text" lang="_raid" datafld="desc36">Auto Mount</span></td>
+						<td width="90px"  colspan="2">
+							<input id="storage_raidFormatVE4thAutoMount15_switch" name="storage_raidFormatVE4thAutoMount15_switch" class="onoffswitch" type="checkbox" value="true" >
+						</td>
+						<!--<td align="left"><div class="TooltipIcon" id="tip_create_ve_4th_auto_mount"></div></td>-->
+					</tr>
+				</table>
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatBack15_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidFormatCancel15_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatNext15_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button> 
+	</div>
+	
+	<!-- 16.Confirm to format disk -->
+	<div id="dskDiag_create_confirm" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<table border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td><img border='0' src='/web/images/RAID/checkmark_completion.png'></td>
+					<td style="font-size:0.6cm;font-weight: 400;"><span id="create_confirm_title" class="_text" lang="_raid" datafld="desc47"></span></td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td><span id="create_confirm_desc" class="_text" lang="_raid" datafld="desc57"></span></td>
+				</tr>	
+			</table>	
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatBack16_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidFormatCancel16_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatNext16_button" class="ButtonRightPos1"><span class="_text" lang="_raid" datafld="button4"></span></button> 
+	</div>
+	
+	<!-- 17.Re-Format Disk Dialog : Std to R1 -->
+	<div id="Reformat_Dsk_Diag_Std2R1" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<span class="_text" lang="_raid" datafld="desc85"></span><br>
+				<table cellspacing="0" cellpadding="0" border="0" id="reformat_std2r1_source_list"></table>	
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatBack17_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidFormatCancel17_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatNext17_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button> 
+	</div>
+	
+	<!-- 18.Re-Format Disk Dialog : Std to R1 / Auto-Rebuild Settings -->
+	<div id="Reformat_Dsk_Diag_Std2R1_Rebuild" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="70%">
+				   	<tr>
+				   		<td class="tdfield"><span class="_text" lang="_raid" datafld="desc4"></span></td>
+				   		<td class="tdfield_padding">
+				   			<input id="storage_raidFormatSTD2R1AutoRebuild18_switch" name="storage_raidFormatSTD2R1AutoRebuild18_switch" class="onoffswitch" type="checkbox" value="true" >
+				   		</td>
+				    </tr>
+				</table>
+			</div>	
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatBack18_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidFormatCancel18_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatNext18_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button> 
+	</div>
+	
+	<!-- 19.Re-Format Disk Dialog : Std to R1 / Summary List -->
+	<div id="Reformat_Dsk_Diag_Std2R1_Summary" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<span class="_text" lang="_format" datafld="desc11"></span><br>
+				<div class="flexigrid" style="width: 600px;">
+				<div class="hDiv">
+					<div class="hDivBox">
+						<table cellspacing="0" cellpadding="0">
+							<thead>
+								<tr>
+									<th align="center" abbr="f_volume_name" axis="col0"><div style="text-align: left; width: 98px;">Volume Name</div></th>
+									<th align="left" abbr="f_mode" axis="col1"><div style="text-align: left; width: 80px;">Type</div></th>
+									<th align="left" abbr="f_file_system" axis="col2"><div style="text-align: left; width: 80px;">File System</div></th>
+									<th align="center" abbr="f_size" axis="col3"><div style="text-align: left; width: 100px;">Size</div></th>
+									<th align="center" abbr="f_disk" axis="col4"><div style="text-align: left; width: 115px;">Disk</div></th>
+								</tr>
+							</thead>
+						</table>
+					</div><!-- hDivBox -->
+				</div><!-- hDiv -->
+				<div class="bDiv" style="height: auto;">
+					<table cellspacing="0" cellpadding="0" border="0">
+						<tbody id="reformat_std2r1_summary_list"></tbody>
+					</table>
+				</div><!-- bDiv -->
+				</div><!-- flexigrid -->
+			</div>	
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatBack19_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidFormatCancel19_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatNext19_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button> 
+	</div>
+	
+	<!-- 20.Re-Build Disk Dialog : Confirm to STD1R1 -->
+	<div id="Std2R1_Diag_confirm" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<table border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td><img border='0' src='/web/images/RAID/checkmark_completion.png'></td>
+					<td style="font-size:0.6cm;font-weight: 400;"><span id="Std2R1_confirm_title" class="_text" lang="_raid" datafld="desc54"></span></td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td><span id="rebuild_confirm_desc" class="_text" lang="_raid" datafld="desc83"></span></td>
+				</tr>	
+			</table>	
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatBack20_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidFormatCancel20_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatNext20_button" class="ButtonRightPos1"><span class="_text" lang="_raid" datafld="button4"></span></button> 
+	</div>	
+	
+	<!-- 21.Re-Format Disk Dialog : waiting for disk remount -->
+	<div id="Reformat_Dsk_Diag_Wait" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<span class="_text" lang="_format" datafld="desc12"></span>
+				<table border="0" cellSpacing="0" cellPadding="0" style="border-collapse: collapse" bordercolor="#000000" width="95%">
+            <tr>
+            	<td height="100" width="300px" align="right"><img src="/web/images/SpinnerSun.gif"></td>
+            	<td align="left"><span class="_text" lang="_common" datafld="wait">Waiting...</span></td>
+            </tr>
+        	</table>
+	       </div> 
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<!--<button type="button" id="storage_raidFormatCancel21_button" class="ButtonRightPos1 close"><span class="_text" lang="_button" datafld="close"></span></button>-->
+	</div>
+	
+	<!-- 22.Re-Format Disk Dialog : Bar -->
+	<div id="Reformat_Dsk_Diag_Bar" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<span class="_text" lang="_format" datafld="desc13"></span><br>
+				<div style="margin: 0px auto;text-align:center;line-height:25px;width:80%;" id="reformat_state"></div>
+				<div style="margin: 0px auto;width:80%;" id="reformat_parogressbar"></div>
+				<div style="margin: 0px auto;text-align:center;line-height:25px;width:80%;" id="reformat_desc"></div>
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatCancel22_button" class="ButtonRightPos1 close"><span class="_text" lang="_button" datafld="close"></span></button>
+	</div>
+	
+	<!-- 23.Re-Format Disk Dialog : Result List -->
+	<div id="Reformat_Dsk_Diag_Res" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<span class="_text" lang="_format" datafld="desc14"></span><br>
+				<div id="Reformat_Dsk_Diag_res_div">
+						<div class="flexigrid" style="width: 600px;">
+						<div class="hDiv">
+							<div class="hDivBox" style="width: 600px;">
+								<table cellspacing="0" cellpadding="0">
+									<thead>
+										<tr>
+											<th align="center" abbr="f_vol" axis="col0"><div style="text-align: left; width: 98px;">Volume Name</div></th>
+											<th align="left" abbr="f_filesystem" axis="col1"><div style="text-align: left; width: 80px;">File System</div></th>
+											<th align="left" abbr="f_mode" axis="col2"><div style="text-align: left; width: 125px;">Mode</div></th>
+											<th align="center" abbr="f_disk" axis="col3"><div style="text-align: left; width: 280px;">Disk</div></th>
+										</tr>
+									</thead>
+								</table>
+							</div><!-- hDivBox -->
+						</div><!-- hDiv -->
+						<div class="bDiv" style="height: auto;" id="diag_reformat_current_res_bDiv">
+							<table cellspacing="0" cellpadding="0" border="0">
+								<tbody id="Reformat_Dsk_Diag_res_hdlst"></tbody>
+							</table>
+						</div><!-- bDiv -->
+					</div><!-- flexigrid -->
+				</div>
+				
+				<div id="Reformat_Dsk_Diag_res_phy_div" style="display:none">
+				<div class="flexigrid" style="width: 462px;">
+						<div class="hDiv">
+							<div class="hDivBox">
+								<table cellspacing="0" cellpadding="0">
+									<thead>
+										<tr>
+											<th align="center" abbr="f_slot" axis="col0"><div style="text-align: left; width: 45px;">Slot</div></th>
+											<th align="left" abbr="f_vendor" axis="col1"><div style="text-align: left; width: 77px;">Vendor</div></th>
+											<th align="left" abbr="f_version" axis="col2"><div style="text-align: left; width: 170px;">Model</div></th>
+											<th align="left" abbr="f_version" axis="col3"><div style="text-align: left; width: 120px;">Serial Number</div></th>
+										</tr>
+									</thead>
+								</table>
+							</div><!-- hDivBox -->
+						</div><!-- hDiv -->
+						<div class="bDiv" style="height: 60px;">
+							<table cellspacing="0" cellpadding="0" border="0" id="">
+								<tbody id="dsk_Reformat_Dsk_Diag_res_phy_hdlst"></tbody>
+							</table>
+						</div><!-- bDiv -->
+					</div><!-- flexigrid -->
+				</div>
+			  </div>  
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatFinish23_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="close"></span></button>
+	</div>	
+	
+	<!-- 24.Re-Format Disk Dialog : RAID5 Add Spare Disk / Summary List -->
+	<div id="Reformat_Dsk_Diag_R5Spare_Summary" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+			
+				<div class="flexigrid" style="width: 650px;">
+				<div class="hDiv">
+					<div class="hDivBox">
+						<table cellspacing="0" cellpadding="0">
+							<thead>
+								<tr>
+									<th align="center" abbr="f_volume_name" axis="col0"><div style="text-align: left; width: 98px;">Volume Name</div></th>
+									<th align="left" abbr="f_mode" axis="col1"><div style="text-align: left; width: 80px;">Type</div></th>
+									<th align="left" abbr="f_file_system" axis="col2"><div style="text-align: left; width: 80px;">File System</div></th>
+									<th align="center" abbr="f_size" axis="col3"><div style="text-align: left; width: 100px;">Size</div></th>
+									<th align="center" abbr="f_disk" axis="col4"><div style="text-align: left; width: 115px;">Disk</div></th>
+								</tr>
+							</thead>
+						</table>
+					</div><!-- hDivBox -->
+				</div><!-- hDiv -->
+				<div class="bDiv" style="height: auto;">
+					<table cellspacing="0" cellpadding="0" border="0">
+						<tbody id="reformat_r5spare_summary_list"></tbody>
+					</table>
+				</div><!-- bDiv -->
+				</div><!-- flexigrid -->
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatBack24_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidFormatCancel24_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatNext24_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button> 
+	</div>
+	
+	<!-- 25.Re-Build Disk Dialog : Confirm to Spare Disk -->
+	<div id="R5SpareDisk_Diag_confirm" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<table border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td><img border='0' src='/web/images/RAID/checkmark_completion.png'></td>
+					<td style="font-size:0.6cm;font-weight: 400;"><span id="R5SpareDisk_confirm_title" class="_text" lang="_raid" datafld="desc61"></span></td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td><span id="rebuild_confirm_desc" class="_text" lang="_raid" datafld="desc57"></span></td>
+				</tr>	
+			</table>	
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatBack25_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidFormatCancel25_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatNext25_button" class="ButtonRightPos1"><span class="_text" lang="_raid" datafld="button4"></span></button> 
+	</div>	
+	
+	<!-- 26.Re-Format Disk Dialog : RAID5 Add Spare Disk / Bar -->
+	<div id="Reformat_Dsk_Diag_R5Spare_Bar" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<span class="_text" lang="_format" datafld="desc13"></span><br>
+				<div style="margin: 0px auto;text-align:center;line-height:25px;width:80%;" id="reformat_r5spare_state"></div>
+				<div style="margin: 0px auto;width:80%;" id="reformat_r5spare_parogressbar"></div>
+				<div style="margin: 0px auto;text-align:center;line-height:25px;width:80%;" id="reformat_r5spare_desc"></div>
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatCancel26_button" class="ButtonRightPos1 close"><span class="_text" lang="_button" datafld="close"></span></button>
+	</div>
+	
+	<!-- 27.Re-Format Disk Dialog : Std to R5 -->
+	<div id="Reformat_Dsk_Diag_Std2R5" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				
+				<div class="flexigrid" style="width: 600px;">
+				<div class="hDiv">
+					<div class="hDivBox">
+						<table cellspacing="0" cellpadding="0">
+							<thead>
+								<tr>
+									<th align="center" axis="col0"><div style="text-align: center; width: 30px;">-</div></th>
+									<th align="left" axis="col1"><div style="text-align: left; width: 98px;">Volume Name</div></th>
+									<th align="left" axis="col2"><div style="text-align: left; width: 77px;">File System</div></th>
+									<th align="left" axis="col3"><div style="text-align: left; width: 100px;">Size</div></th>
+									<th align="left" axis="col4"><div style="text-align: left; width: 65px;">Disk</div></th>
+									<th align="left" axis="col5"><div style="text-align: left; width: 150px;">Disk</div></th>
+								</tr>
+							</thead>
+						</table>
+					</div><!-- hDivBox -->
+				</div><!-- hDiv -->
+				<div class="bDiv" style="height: auto;">
+					<table cellspacing="0" cellpadding="0" border="0">
+						<tbody id="reformat_std2r5_source_list"></tbody>
+					</table>
+				</div><!-- bDiv -->
+				</div><!-- flexigrid -->
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatBack27_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidFormatCancel27_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatNext27_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button> 
+	</div>
+	
+	<!-- 28.Re-Format Disk Dialog : Std to R5 / Auto-Rebuild Settings -->
+	<div id="Reformat_Dsk_Diag_Std2R5_Rebuild" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="70%">
+				   	<tr>
+				   		<td class="tdfield"><span class="_text" lang="_raid" datafld="desc4"></span></td>
+				   		<td class="tdfield_padding">
+				   			<input id="storage_raidFormatSTD2R5AutoRebuild28_switch" name="storage_raidFormatSTD2R5AutoRebuild28_switch" class="onoffswitch" type="checkbox" value="true">
+				   		</td>
+				    </tr>
+				</table>
+			</div>	
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatBack28_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidFormatCancel28_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatNext28_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button> 
+	</div>
+	
+	<!-- 29.Re-Format Disk Dialog : Std to R5 / Summary List -->
+	<div id="Reformat_Dsk_Diag_Std2R5_Summary" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<span class="_text" lang="_format" datafld="desc11"></span><br>
+				
+				<div class="flexigrid" style="width: 600px;">
+				<div class="hDiv">
+					<div class="hDivBox">
+						<table cellspacing="0" cellpadding="0">
+							<thead>
+								<tr>
+									<th align="center" axis="col0"><div style="text-align: left; width: 98px;">Volume Name</div></th>
+									<th align="left" axis="col1"><div style="text-align: left; width: 80px;">Type</div></th>
+									<th align="left" axis="col2"><div style="text-align: left; width: 70px;">File System</div></th>
+									<th align="center" axis="col3"><div style="text-align: left; width: 100px;">Size</div></th>
+									<th align="center"  axis="col4"><div style="text-align: left; width: 200px;">Disk</div></th>
+								</tr>
+							</thead>
+						</table>
+					</div><!-- hDivBox -->
+				</div><!-- hDiv -->
+				<div class="bDiv" style="height: auto;">
+					<table cellspacing="0" cellpadding="0" border="0">
+						<tbody id="reformat_std2r5_summary_list"></tbody>
+					</table>
+				</div><!-- bDiv -->
+				</div><!-- flexigrid -->
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatBack29_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidFormatCancel29_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatNext29_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button> 
+	</div>
+	
+	<!-- 30.Re-Format Disk Dialog : Std to R5 / Confirm to R5 -->
+	<div id="STD2R5Disk_Diag_confirm" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<table border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td><img border='0' src='/web/images/RAID/checkmark_completion.png'></td>
+					<td style="font-size:0.6cm;font-weight: 400;"><span id="R12R5Disk_confirm_title" class="_text" lang="_raid" datafld="desc55"></span></td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td><span id="rebuild_confirm_desc" class="_text" lang="_raid" datafld="desc48"></span></td>
+				</tr>	
+			</table>	
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatBack30_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidFormatCancel30_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatNext30_button" class="ButtonRightPos1"><span class="_text" lang="_raid" datafld="button4"></span></button>
+	</div>	
+	
+	<!-- 31.Re-Format Disk Dialog : R1 to R5 -->
+	<div id="Reformat_Dsk_Diag_R12R5" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<div class="flexigrid" style="width: 600px;">
+				<div class="hDiv">
+					<div class="hDivBox">
+						<table cellspacing="0" cellpadding="0">
+							<thead>
+								<tr>
+									<th align="center" abbr="f_raid_mode" axis="col0"><div style="text-align: center; width: 20px;">-</div></th>
+									<th align="left" abbr="f_volume_name" axis="col1"><div style="text-align: left; width: 98px;">Volume Name</div></th>
+									<th align="left" abbr="f_file_type" axis="col2"><div style="text-align: left; width: 77px;">File System</div></th>
+									<th align="left" abbr="f_size" axis="col3"><div style="text-align: left; width: 65px;">Size</div></th>
+									<th align="left" abbr="f_disk" axis="col4"><div style="text-align: left; width: 110px;">Disk</div></th>
+									<th align="left" abbr="f_newly_disk" axis="col5"><div style="text-align: left; width: 105px;">Disk</div></th>
+								</tr>
+							</thead>
+						</table>
+					</div><!-- hDivBox -->
+				</div><!-- hDiv -->
+				<div class="bDiv" style="height: auto;">
+					<table cellspacing="0" cellpadding="0" border="0">
+						<tbody id="reformat_r12r5_source_list"></tbody>
+					</table>
+				</div><!-- bDiv -->
+				</div><!-- flexigrid -->
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatBack31_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidFormatCancel31_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatNext31_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div>
+	
+	<!-- 32.Re-Format Disk Dialog : R1 to R5 / Auto-Rebuild Settings -->
+	<div id="Reformat_Dsk_Diag_R12R5_Rebuild" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				
+				<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="70%">
+				   	<tr>
+				   		<td class="tdfield"><span class="_text" lang="_raid" datafld="desc4"></span></td>
+				   		<td class="tdfield_padding">
+				   			<input id="storage_raidFormatR12R5AutoRebuild32_switch" name="storage_raidFormatR12R5AutoRebuild32_switch" class="onoffswitch" type="checkbox" value="true" >
+				   		</td>
+				    </tr>
+				</table>
+			</div>	
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatBack32_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidFormatCancel32_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatNext32_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div>
+	
+	<!-- 33.Re-Format Disk Dialog : R1 to R5 / Summary List -->
+	<div id="Reformat_Dsk_Diag_R12R5_Summary" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<span class="_text" lang="_format" datafld="desc11"></span><br>
+				<div class="flexigrid" style="width: 600px;">
+				<div class="hDiv">
+					<div class="hDivBox">
+						<table cellspacing="0" cellpadding="0">
+							<thead>
+								<tr>
+									<th align="center" abbr="f_volume_name" axis="col0"><div style="text-align: left; width: 98px;">Volume Name</div></th>
+									<th align="left" abbr="f_mode" axis="col1"><div style="text-align: left; width: 80px;">Type</div></th>
+									<th align="left" abbr="f_file_system" axis="col2"><div style="text-align: left; width: 80px;">File System</div></th>
+									<th align="center" abbr="f_size" axis="col3"><div style="text-align: left; width: 65px;">Size</div></th>
+									<th align="center" abbr="f_disk" axis="col4"><div style="text-align: left; width: 115px;">Disk</div></th>
+								</tr>
+							</thead>
+						</table>
+					</div><!-- hDivBox -->
+				</div><!-- hDiv -->
+				<div class="bDiv" style="height: auto">
+					<table cellspacing="0" cellpadding="0" border="0">
+						<tbody id="reformat_r12r5_summary_list"></tbody>
+					</table>
+				</div><!-- bDiv -->
+				</div><!-- flexigrid -->
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatBack33_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidFormatCancel33_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatNext33_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div>
+	
+	<!-- 34.Re-Format Disk Dialog : R1 to R5 / Confirm to R5 -->
+	<div id="R12R5Disk_Diag_confirm" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<table border="0" cellpadding="0" cellspacing="0">
+				<tr>
+					<td><img border='0' src='/web/images/RAID/checkmark_completion.png'></td>
+					<td style="font-size:0.6cm;font-weight: 400;"><span id="R12R5Disk_confirm_title" class="_text" lang="_raid" datafld="desc55"></span></td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td><span id="rebuild_confirm_desc" class="_text" lang="_raid" datafld="desc48"></span></td>
+				</tr>	
+			</table>	
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatBack34_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidFormatCancel34_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatFinish34_button" class="ButtonRightPos1"><span class="_text" lang="_raid" datafld="button4"></span></button>
+	</div>	
+	
+	<!-- 35.Re-Format Disk Dialog : R1 to R5 / Partitioning -->
+	<div id="Reformat_Dsk_Diag_R12R5_Partitioning" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<span class="_text" lang="_format" datafld="desc15"></span><br>
+				  <table border="0" cellSpacing="0" cellPadding="0" style="border-collapse: collapse" bordercolor="#000000" width="95%">
+            <tr>
+            	<td height="100" width="300px" align="right"><img src="/web/images/SpinnerSun.gif"></td>
+            	<td align="left"><span class="_text" lang="_format" datafld="partitioning">Partitioning...</span></td>
+            </tr>
+        	</table>   
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<!--<button type="button" id="storage_raidFormatCancel35_button" class="ButtonRightPos1 close"><span class="_text" lang="_button" datafld="close"></span></button>-->
+	</div>
+	
+	<!-- 36.Re-Format Disk Dialog : (Std to R5) or (R1 to R5) / Resize Sync -->
+	<div id="Reformat_Dsk_Diag_Migrate_Resize_Sync" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<span class="_text" lang="_format" datafld="desc13"></span><br>
+				<div style="margin: 0px auto;text-align:center;line-height:25px;width:80%;" id="migrate_resize_sync_state"></div>
+				<div style="margin: 0px auto;width:80%;" id="migrate_resize_sync_parogressbar"></div>
+				<div style="margin: 0px auto;text-align:center;line-height:25px;width:80%;" id="migrate_resize_sync_desc"></div>
+			</div>	
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatCancel36_button" class="ButtonRightPos1 close"><span class="_text" lang="_button" datafld="close"></span></button>
+	</div>
+	
+	<!-- 37.Re-Format Disk Dialog : Std to R1 / Partitioning -->
+	<div id="Reformat_Dsk_Diag_Std2R1_Partitioning" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<span class="_text" lang="_format" datafld="desc13"></span><br>
+				<table border="0" cellSpacing="0" cellPadding="0" style="border-collapse: collapse" bordercolor="#000000" width="95%">
+            <tr>
+            	<td height="100" width="300px" align="right"><img src="/web/images/SpinnerSun.gif"></td>
+            	<td align="left"><span class="_text" lang="_format" datafld="partitioning">Partitioning...</span></td>
+            </tr>
+        	</table>
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<!--<button type="button" id="storage_raidFormatClose37_button" class="ButtonRightPos1 close"><span class="_text" lang="_button" datafld="close"></span></button>-->
+	</div>
+	
+	<!-- 38.Re-Format Disk Dialog : Std to R1 / Sync
+	<div id="Reformat_Dsk_Diag_Std2R1_Sync" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<span class="_text" lang="_format" datafld="desc13"></span><br>
+				<div style="margin: 0px auto;text-align:center;line-height:25px;width:80%;" id="std2r1_sync_state"></div>
+				<div style="margin: 0px auto;width:80%;" id="std2r1_sync_parogressbar"></div>
+				<div style="margin: 0px auto;text-align:center;line-height:25px;width:80%;" id="std2r1_sync_desc"></div>
+			</div>	
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatClose38_button" class="ButtonRightPos1 close"><span class="_text" lang="_button" datafld="close"></span></button>
+	</div>
+	-->
+	
+	<!-- 39.Re-Format Disk Dialog : Std to R5 / Partitioning -->
+	<div id="Reformat_Dsk_Diag_Std2R5_Partitioning" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<span class="_text" lang="_format" datafld="desc13"></span><br>
+				
+				<table border="0" cellSpacing="0" cellPadding="0" style="border-collapse: collapse" bordercolor="#000000" width="95%">
+            <tr>
+            	<td height="100" width="300px" align="right"><img src="/web/images/SpinnerSun.gif"></td>
+            	<td align="left"><span class="_text" lang="_format" datafld="partitioning">Partitioning...</span></td>
+            </tr>
+        	</table> 
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<!--<button type="button" id="storage_raidFormatCancel39_button" class="ButtonRightPos1 close"><span class="_text" lang="_button" datafld="close"></span></button>-->
+	</div>
+	
+	<!-- 40.RAID Expansion : Expansion 2R1 List -->
+	<div id="RAIDExpansion_2R1_List" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				
+				<div class="flexigrid" style="width: 600px;">
+				<div class="hDiv">
+					<div class="hDivBox">
+						<table cellspacing="0" cellpadding="0">
+							<thead>
+								<tr>
+									<th align="center" abbr="f_volume_name" axis="col0"><div style="text-align: left; width: 98px;">Volume Name</div></th>
+									<th align="center" abbr="f_disk" axis="col1"><div style="text-align: left; width: 115px;">Disk</div></th>
+								</tr>
+							</thead>
+						</table>
+					</div><!-- hDivBox -->
+				</div><!-- hDiv -->
+				<div class="bDiv" style="height: auto">
+					<table cellspacing="0" cellpadding="0" border="0">
+						<tbody id="expandsk_2r1_list"></tbody>
+					</table>
+				</div><!-- bDiv -->
+				</div><!-- flexigrid -->
+					
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatBack40_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidFormatCancel40_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatNext40_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div>
+	
+	<!-- 41.RAID Expansion : Replace HD -->
+	<div id="RAIDExpansion_ReplaceHD" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				
+				<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="70%">
+				   	<tr><td class="tdfield"><span class="_text" lang="_raid" datafld="desc94"></span></td></tr>
+				   	<tr><td>&nbsp;</td></tr>
+				    <tr><td><button class="left_button _text" lang="_button" datafld="yes" onclick="INTERNAL_RaidExpan_ReplaceHD(1);" id="storage_raidFormatExpandReplacehdYes_button"></button><button class="right_button _text" lang="_button" datafld="no" onclick="INTERNAL_RaidExpan_ReplaceHD(0);" id="storage_raidFormatExpandReplacehdNo_button"></button></td></tr>
+				</table>
+				
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatBack41_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidFormatCancel41_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatNext41_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div>
+	
+	<!-- 42.RAID Expansion : No Replace HD / RAID Size Set-->
+	<div id="RAIDExpansion_raidsize_set" style="display:none">
+			<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<table border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse" bordercolor="#111111" width="95%">
+					<tr>
+						<td align="left" colspan="3"><span class="_text" lang="_raid" datafld="desc110"></span></td>
+					</tr>
+					<tr>
+						<td align="left" colspan="3">&nbsp;</td>
+					</tr>
+					<tr>
+						<td width="20">&nbsp;</td> 
+						<td align="left" colspan="2"><div style="width:300px"><div id="expan_desc_slider"></div></div></td>
+					</tr>
+					<tr>
+						<td width="20px">&nbsp;</td>
+						<td><div id="expan_slider"></div></td>
+					<td width="80px" align="right"><div id="expan_silder_right"></div></td>
+					</tr>
+					<tr>
+						<td width="20px">&nbsp;</td> 
+						<td align="right"><div id="RAIDExpansion_RemainSize"></div></td>
+						<td></td>
+					</tr>
+				</table>
+			    <div class="vol_no_enough_space_text" class="_text" lang="_raid" datafld="msg12" style="display: none;"></div>
+			 </div>   
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatBack42_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidFormatCancel42_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatNext42_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div>	
+	
+	<!-- 43.RAID Expansion : No Replace HD / Summary -->
+	<div id="RAIDExpansion_Summary" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<span class="_text" lang="_format" datafld="desc11"></span><br><br>
+				<span class="_text" lang="_raid" datafld="desc125"></span><br><br>
+				<div class="flexigrid" style="width: 670px;">
+				<div class="bDiv" style="height: auto">
+					<table cellspacing="0" cellpadding="0" border="0">
+						<tbody id="expan_summary_list"></tbody>
+					</table>
+				</div><!-- bDiv -->
+				</div><!-- flexigrid -->
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatBack43_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidFormatCancel43_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatNext43_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div>
+	
+	<!-- 44.RAID1 To STD: 2 RAID1 List to select -->
+	<div id="R12STD_list" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				
+				<div class="flexigrid" style="width: 600px;">
+				<div class="hDiv">
+					<div class="hDivBox">
+						<table cellspacing="0" cellpadding="0">
+							<thead>
+								<tr>
+									<th align="center" abbr="f_volume_name" axis="col0"><div style="text-align: left; width: 98px;">Volume Name</div></th>
+									<th align="center" abbr="f_disk" axis="col1"><div style="text-align: left; width: 115px;">Disk</div></th>
+								</tr>
+							</thead>
+						</table>
+					</div><!-- hDivBox -->
+				</div><!-- hDiv -->
+				<div class="bDiv" style="height: auto">
+					<table cellspacing="0" cellpadding="0" border="0">
+						<tbody id="r12std_list"></tbody>
+					</table>
+				</div><!-- bDiv -->
+				</div><!-- flexigrid -->
+				
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatBack44_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidFormatCancel44_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatNext44_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div>
+	
+	<!-- 45.RAID1 To STD: primary drive list to select -->
+	<div id="R12STD_primaary_hd_list" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<span class="_text" lang="_raid" datafld="desc102"></span><br><br>
+				<span class="_text" lang="_raid" datafld="desc103"></span><br>
+				<div class="flexigrid" style="width: 600px;">
+				<div class="hDiv">
+					<div class="hDivBox">
+						<table cellspacing="0" cellpadding="0">
+							<thead>
+								<tr>
+									<th align="center" abbr="f_volume_name" axis="col0"><div style="text-align: left; width: 98px;">Volume Name</div></th>
+									<th align="center" abbr="f_disk" axis="col1"><div style="text-align: left; width: 115px;">Disk</div></th>
+								</tr>
+							</thead>
+						</table>
+					</div><!-- hDivBox -->
+				</div><!-- hDiv -->
+				<div class="bDiv" style="height: auto">
+					<table cellspacing="0" cellpadding="0" border="0">
+						<tbody id="r12std_primaary_hd_list"></tbody>
+					</table>
+				</div><!-- bDiv -->
+				</div><!-- flexigrid --><br>
+				<span class="_text" lang="_raid" datafld="desc104"></span>
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatBack45_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidFormatCancel45_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatNext45_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div>
+	
+	<!-- 46.RAID Expansion :Replace HD / Confirm -->
+	<div id="RAIDExpansion_ReplaceHD_confirm" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<table border="0" cellpadding="0" cellspacing="0" width="630px">
+				<tr>
+					<td><img border='0' src='/web/images/RAID/checkmark_completion.png'></td>
+					<td style="font-size:0.6cm;font-weight: 400;"><span id="RAIDExpansion_ReplaceHD_confirm_title" class="_text" lang="_raid" datafld="desc93"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td><span id="RAIDExpansion_ReplaceHD_confirm_desc"></span></td>
+				</tr>	
+				<tr>
+					<td>&nbsp;</td>
+					<td><span class="_text" lang="_raid" datafld="desc125"></span></td>
+				</tr>
+			</table>	
+		</div>
+	
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatBack46_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidFormatCancel46_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatFinish46_button" class="ButtonRightPos1"><span class="_text" lang="_raid" datafld="button4"></span></button>
+	</div>
+
+	<!-- 47.RAID Expansion : R5 Expand Capacity / Summary List -->
+	<div id="RAIDExpansion_R5Expand_Summary" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<span class="_text" lang="_format" datafld="desc11"></span><br><br>
+				<span class="_text" lang="_raid" datafld="desc125"></span><br><br>
+				<div class="flexigrid" style="width: 100%;">
+					<div class="bDiv" style="height: auto;">
+						<table cellspacing="0" cellpadding="0" border="0">
+							<tbody id="reformat_r5expand_summary_list"></tbody>
+						</table>
+					</div><!-- bDiv -->
+				</div><!-- flexigrid -->
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatBack35_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidFormatCancel47_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatNext46_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button> 
+	</div>
+	
+	<!-- 48.RAID Expansion : Summary List / Confirm -->
+	<div id="RAIDExpansion_R5Expand_confirm" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<table border="0" cellpadding="0" cellspacing="0" width="630px">
+				<tr>
+					<td><img border='0' src='/web/images/RAID/checkmark_completion.png'></td>
+					<td style="font-size:0.6cm;font-weight: 400;"><span id="RAIDExpansion_ReplaceHD_confirm_title" class="_text" lang="_raid" datafld="desc93"></span></td>
+				</tr>
+				<tr>
+					<td>&nbsp;</td>
+					<td><span id="RAIDExpansion_confirm_desc"></span><br>&nbsp;</td>
+				</tr>	
+				<tr>
+					<td>&nbsp;</td>
+					<td><span class="_text" lang="_raid" datafld="desc121"></span></td>
+				</tr>
+			</table>	
+		</div>
+	
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatBack36_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidFormatCancel48_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidFormatFinish47_button" class="ButtonRightPos1"><span class="_text" lang="_raid" datafld="button4"></span></button>
+	</div>
+	
+	<!-- 49.RAID : Shutdown for format fail -->
+	<div id="RAID_FormatShutdown" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<span id="Storage_RAIDFormatShutdown1_Span" class="_text" lang="_raid" datafld="desc128"></span><br><br>	
+			
+			<div id="Storage_RAIDFormatShutdown1_Div"></div>
+		</div>
+	
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidFormatShutDown49_button" class="ButtonRightPos1"><span class="_text" lang="_utilities" datafld="shutdown"></span></button>
+	</div>
+
+	
+</div><!-- end of Format HD Dialog -->
+

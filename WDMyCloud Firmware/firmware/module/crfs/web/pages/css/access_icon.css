@@ -1,0 +1,1751 @@
+﻿.ListDiv li{
+	width:660px;
+	height:60px;
+	list-style-type:none;
+    background-color: #F0F0F0;
+	line-height:60px;
+	padding-left:20px;
+	padding-right:20px;
+}
+.ListDiv li:nth-child(even) {
+    background: #dcdcdc;
+}
+.ListDiv .isoshare{
+	width:520px;
+}
+.ListDiv li .usericon {
+	float:left;
+	width:20px;
+	height:20px;
+	background: url(../images/icon/NAS_icn_VerticalNavList_user_up.png?r=20150204) no-repeat -6px;
+	margin-top:18px;
+}
+.ListDiv li .adminicon {
+	float:left;
+	width:20px;
+	height:24px;
+	background: url(../images/icon/IconVerticalListAdmin2Up.png?r=20150204) no-repeat;
+	margin-top:18px;
+}
+.ListDiv li .icon {
+	float:left;
+	width: 30px;
+	height: 30px;
+	background: url(../images/icon/NAS_icn_row_folder_up.png?r=20150204) no-repeat;
+	margin-top: 15px;
+	cursor: default;
+}
+.ListDiv li .ISOname {
+	float:left;
+	width: 210px;
+	height:60px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+    line-height: 60px;
+    padding-left: 10px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.ListDiv li .name {
+	float:left;
+	width: 270px;
+	height:60px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+    line-height: 60px;
+    padding-left: 10px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.ListDiv li .sname {
+	float:left;
+	width:250px;
+	height:50px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.ListDiv li .iso_sname {
+	float:left;
+	width:450px;
+	height:50px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding-left:10px;
+}
+.ListDiv li .img {
+	float:left;
+	width:200px;
+	height:40px;
+	padding-top:15px;
+	/*cursor: pointer;*/
+}
+
+.ListDiv li.gray_out div.img a {
+	cursor: default;
+}
+#mask_id.gray_out .ListDiv li div.img a{
+	cursor: default;
+}
+.ListDiv li .img a {
+	cursor: pointer;
+}
+
+.ListDiv li .access {
+	float:right;
+    width: 160px;
+	height:50px;
+    text-align: right;
+    font-size: 14px;
+}
+.ListDiv li .access2 {
+	float:left;
+	height:50px;
+}
+.ListDiv li .detail {
+	float:left;
+	width:30px;
+	height:30px;
+	background: url('../images/icon/BackupJobDetail.png?r=20150204');
+	background-size:30px 30px;
+	cursor: pointer;
+	margin-top:15px;
+	margin-left:15px;
+	/*border:1px solid red;*/
+}
+.ListDiv li .detail:hover {
+	float:left;
+	width:30px;
+	height:30px;
+	background: url('../images/icon/BackupJobDetailHover.png?r=20150204');
+	background-size:30px 30px;
+	cursor: pointer;
+	/*border:1px solid red;*/
+}
+.ListDiv li .sedit {
+	margin-top:15px;
+	float:left;
+	width:30px;
+	height:30px;
+	background: url('../images/icon/ButtonEdit.png?r=20150204');
+	background-size:30px 30px;
+	cursor: pointer;
+	margin-left:15px;
+	/*border:1px solid red;*/
+}
+.ListDiv li .sedit:hover {
+	background: url('../images/icon/ButtonEditHover.png?r=20150204');
+	background-size:30px 30px;
+}
+.ListDiv li .sdel {
+	margin-top:15px;
+	margin-left:15px;
+	float:left;
+	width:30px;
+	height:30px;
+	background: url('../images/icon/BackupDelete.png?r=20150204');
+	cursor: pointer;
+	/*border:1px solid red;*/
+}
+.ListDiv li .sdel:hover{
+	width:30px;
+	height:30px;
+	background: url('../images/icon/BackupDeleteHover.png?r=20150204');
+}
+.rwDown{
+	background: url('../images/AccessPermission/ButtonPermissionsReadWriteDown.png?r=20150204');
+	width:62px;
+	height:30px;
+	display: block;
+}
+.rwUp{
+	background: url('../images/AccessPermission/ButtonPermissionsReadWriteUp.png?r=20150204');
+	width:62px;
+	height:30px;
+	display: block;
+}
+.rwUp:hover{
+	background: url('../images/AccessPermission/ButtonPermissionsReadWriteOver.png?r=20150204');
+}
+
+.rDown{
+	background: url('../images/AccessPermission/ButtonPermissionsReadOnlyDown.png?r=20150204');
+	width:62px;
+	height:30px;
+	display: block;
+}
+.rUp{
+	background: url('../images/AccessPermission/ButtonPermissionsReadOnlyUp.png?r=20150204');
+	width:62px;
+	height:30px;
+	display: block;
+}
+.rUp:hover{
+	background: url('../images/AccessPermission/ButtonPermissionsReadOnlyOver.png?r=20150204');
+}
+.dDown{
+	background: url('../images/AccessPermission/ButtonPermissionsNoneDown.png?r=20150204');
+	width:62px;
+	height:30px;
+	display: block;
+}
+.dUp{
+	background: url('../images/AccessPermission/ButtonPermissionsNoneUp.png?r=20150204');
+	width:62px;
+	height:30px;
+	display: block;
+}
+.dUp:hover{
+	background: url('../images/AccessPermission/ButtonPermissionsNoneOver.png?r=20150204');
+}
+.gray_out .rwUp{
+	background: url('../images/AccessPermission/ButtonPermissionsReadWriteUp.png?r=20150204');
+	width:62px;
+	height:30px;
+	display: block;
+}
+.gray_out .rUp{
+	background: url('../images/AccessPermission/ButtonPermissionsReadOnlyUp.png?r=20150204');
+	width:62px;
+	height:30px;
+	display: block;
+}
+.gray_out .dUp{
+	background: url('../images/AccessPermission/ButtonPermissionsNoneUp.png?r=20150204');
+	width:62px;
+	height:30px;
+	display: block;
+}
+.gray_out .rUp, .gray_out .rwDown, .gray_out .dUp,.gray_out div .img{
+	cursor: default;
+}
+
+
+
+.ListDiv .isoshare .img .rDown{
+	background: url('../images/AccessPermission/ButtonPermissionsReadOnlyDown.png?r=20150204');
+	width:62px;
+	height:30px;
+	display: block;	
+}
+
+.ListDiv .isoshare .img .rUp{
+	background: url('../images/AccessPermission/ButtonPermissionsReadOnlyUp.png?r=20150204');
+	width:62px;
+	height:30px;
+	display: block;	
+}
+.ListDiv .isoshare .img .rUp:hover{
+	background: url('../images/AccessPermission/ButtonPermissionsReadOnlyOver.png?r=20150204');
+}
+.img a{
+	float:left;
+}
+
+.device_active{
+	margin-left:-40px;
+}
+.device_active li{
+	width:540px;
+	height:42px;
+}
+
+.device_active li .div1_cpu{
+	float:left;
+	width:50px;
+	height:42px;
+	
+	background: url('../images/icon/activityicon_cpu.png?r=20150204') no-repeat;
+	background-position:center;
+}
+.device_active li .div1_memory{
+	float:left;
+	width:50px;
+	height:42px;
+	
+	background: url('../images/icon/activityicon_memory.png?r=20150204') no-repeat;
+	background-position:center;
+}
+.device_active li .div1_network{
+	float:left;
+	width:50px;
+	height:42px;
+	
+	background: url('../images/icon/activityicon_network.png?r=20150204') no-repeat;
+	background-position:center;
+}
+.device_active li .div1_process{
+	float:left;
+	width:50px;
+	height:42px;
+
+	background: url('../images/icon/activityicon_processes.png?r=20150204') no-repeat;
+	background-position:center;
+}
+.device_active li .div2{
+	float:left;
+	width:200px;
+	height:42px;
+}
+
+.device_active li .div3{
+	float:left;
+	width:50px;
+	height:42px;
+	background: url('../images/icon/deviceactivitymeter_000.png?r=20150204') no-repeat;
+	background-position:center;
+}
+.device_active li .div3_no{
+	float:left;
+	width:20px;
+	height:42px;
+	/*background: url('../images/icon/deviceactivitymeter_000.png?r=20150204') no-repeat;*/
+	background-position:center;
+}
+.device_active li .div3_0{
+	float:left;
+	width:50px;
+	height:42px;
+	background: url('../images/icon/deviceactivitymeter_000.png?r=20150204') no-repeat;
+	background-position:center;
+}
+.device_active li .div3_1{
+	float:left;
+	width:50px;
+	height:42px;
+	background: url('../images/icon/deviceactivitymeter_020.png?r=20150204') no-repeat;
+	background-position:center;
+}
+.device_active li .div3_2{
+	float:left;
+	width:50px;
+	height:42px;
+	background: url('../images/icon/deviceactivitymeter_020.png?r=20150204') no-repeat;
+	background-position:center;
+}
+.device_active li .div3_3{
+	float:left;
+	width:50px;
+	height:42px;
+	background: url('../images/icon/deviceactivitymeter_030.png?r=20150204') no-repeat;
+	background-position:center;
+}
+.device_active li .div3_4{
+	float:left;
+	width:50px;
+	height:42px;
+	background: url('../images/icon/deviceactivitymeter_030.png?r=20150204') no-repeat;
+	background-position:center;
+}
+.device_active li .div3_5{
+	float:left;
+	width:50px;
+	height:42px;
+	background: url('../images/icon/deviceactivitymeter_050.png?r=20150204') no-repeat;
+	background-position:center;
+}
+.device_active li .div3_6{
+	float:left;
+	width:50px;
+	height:42px;
+	background: url('../images/icon/deviceactivitymeter_060.png?r=20150204') no-repeat;
+	background-position:center;
+}
+.device_active li .div3_7{
+	float:left;
+	width:50px;
+	height:42px;
+	background: url('../images/icon/deviceactivitymeter_075.png?r=20150204') no-repeat;
+	background-position:center;
+}
+.device_active li .div3_8{
+	float:left;
+	width:50px;
+	height:42px;
+	background: url('../images/icon/deviceactivitymeter_075.png?r=20150204') no-repeat;
+	background-position:center;
+}
+.device_active li .div3_9{
+	float:left;
+	width:50px;
+	height:42px;
+	background: url('../images/icon/deviceactivitymeter_075.png?r=20150204') no-repeat;
+	background-position:center;
+}
+.device_active li .div3_10{
+	float:left;
+	width:50px;
+	height:42px;
+	background: url('../images/icon/deviceactivitymeter_100.png?r=20150204') no-repeat;
+	background-position:center;
+}
+.device_active li .div4{
+	float:left;
+	width:200px;
+	height:42px;
+}
+.device_active li .div4_no{
+	float:left;
+	width:230px;
+	height:42px;
+	line-height:42px;
+}
+.device_active li .div5 {
+    position: relative;
+    top: 6px;
+    right: -50px;
+    width: 30px;
+    height: 30px;
+	float:left;
+	cursor: pointer;
+	background: url('../images/icon/IconListDropdownNotificationsGoArrowUp.png?r=20150204') no-repeat;
+	background-position:center;
+}
+.device_active li .div5:hover{
+	background: url('../images/icon/IconListDropdownNotificationsGoArrowDown.png?r=20150204') no-repeat;
+	background-position:center;
+}
+
+/*remote share list */
+.rsListDiv{
+	margin-top:0px;
+}
+.rsListDiv li {
+	width:560px;
+	height:30px;
+	list-style-type: none;
+	background-color :#F0F0F0;
+	line-height:30px;
+}
+.rsListDiv li:nth-child(even) {
+    background-color: #DCDCDC;
+}
+
+.rsListDiv li .sel {
+	float:left;
+	width:40px;
+	height:25px;
+	padding-left:15px;
+	padding-top:5px;
+}
+
+.rsListDiv li .name {
+	float:left;
+	width:240px;
+	height:30px;
+}
+
+.rsListDiv li .size {
+	float:right;
+	width:180px;
+	
+	height:30px;
+	padding-left:60px;
+	/*border:1px solid red;*/
+}
+
+/*share list ----------------------------------*/
+.sListDiv{
+	margin-top:0px;
+}
+.sListDiv li {
+	width: 500px;
+	height: 30px;
+	list-style-type:none;
+	background-color :#F0F0F0;
+	line-height:30px;
+}
+.sListDiv li:nth-child(even) {
+    background-color: #DCDCDC;
+}
+
+.sListDiv li .sel {
+	float:left;
+	width:40px;
+	height:25px;
+	padding-left:15px;
+	padding-top:5px;
+}
+
+.sListDiv li .name {
+	float:left;
+	width:350px;
+	height:30px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.sListDiv li .img {
+	float:left;
+	width:200px;
+	height:40px;
+	padding-top:10px;
+	cursor: pointer;
+}
+
+
+.pListDiv li {
+    width: 500px;
+    height: 43px;
+	margin-left: -40px;
+	list-style-type: none;
+    background-color :#F0F0F0;
+	line-height: 43px;
+}
+.pListDiv li:nth-child(even) {
+    background: #DCDCDC;
+}
+
+.pListDiv li .div1{
+	float: left;
+	width: 50px;
+	height: 43px;
+	background: url('/web/images/icon/Icon_Calendar_blue_32x32.png?r=20150204') no-repeat;
+	background-size: 30px 30px;
+	background-position:center;
+}
+.pListDiv li .div2 {
+	float:left;
+	width: 110px;
+	height: 30px;
+}
+.pListDiv li .div3{
+	float:left;
+	width:290px;
+	height:30px;
+}
+
+.pListDiv li .div4{
+	float:left;
+	width:40px;
+	height:30px;
+	vertical-align:middle;
+	cursor: pointer;
+	/*background: url('../images/icon/user.png?r=20150204') no-repeat;
+	background-position:center;
+	*/
+	
+}
+/*import user*/
+.iListDiv li{
+	margin-left:-45px;
+	width:550px;
+	height:40px;
+	list-style-type:none;
+	background-color :#F0F0F0;
+	line-height:40px;
+}
+.iListDiv li:nth-child(even) {
+    background: #DCDCDC;
+}
+.iListDiv li .icon {
+	float:left;
+	width:30px;
+	height:30px;
+	cursor: default;
+}
+.ok{
+	background: url('../images/icon/tick.png?r=20150204') no-repeat;
+	background-position:center;
+	display: block;
+	width:30px;
+	height:30px;
+	padding-top:10px;
+	padding-left:10px;
+}
+.warning{
+	background: url('../images/icon/warning.png?r=20150204') no-repeat;
+	background-position:center;
+	display: block;
+	width:30px;
+	height:30px;
+	padding-left:10px;
+	padding-top:10px;
+}
+.ng{
+	background: url('../images/icon/icon-close.png?r=20150204') no-repeat;
+	background-position:center;
+	display: block;
+	width:30px;
+	height:30px;
+	padding-left:10px;
+	padding-top:10px;
+}
+
+.iListDiv li .uname {
+	float:left;
+	width:200px;
+	height:30px;
+	padding-left:10px;
+	/*border:1px solid red;*/
+}
+
+.iListDiv li .pw {
+	float:left;
+	width:150px;
+	height:30px;
+	/*border:1px solid red;*/
+}
+.iListDiv li .quota {
+	float:left;
+	width:160px;
+	height:30px;
+	/*border:1px solid red;*/
+}
+.iListDiv li .data {
+	float:right;
+	width:30px;
+	height:30px;
+	padding-right:20px;
+	/*border:1px solid red;*/
+}
+.info_icon {
+	background: url('../images/icon/IconListDropdownNotificationsGoArrowUp.png?r=20150204') no-repeat;
+	background-position:center;
+	width:30px;
+	height:30px;
+	cursor: pointer;
+	/*border:1px solid red;*/
+	display: block;
+	padding-top:10px;
+}
+.info_icon:hover {
+	background: url('../images/icon/IconListDropdownNotificationsGoArrowDown.png?r=20150204') no-repeat;
+	background-position:center;
+	width:30px;
+	height:30px;
+	cursor: pointer;	
+	display: block;
+}
+.error_color{
+	/*color:#ff0000;*/
+}
+.bListDiv li{
+	margin-left:-40px;
+	width:550px;
+	height:40px;
+	list-style-type:none;
+	background-color :#F0F0F0;
+	line-height:40px;
+}
+.bListDiv li:nth-child(even) {
+    background: #dcdcdc;
+}
+
+.bListDiv li .icon {
+	float:left;
+	width:30px;
+	height:30px;
+	background: url(../images/icon/NAS_icn_VerticalNavList_user_up.png?r=20150204) no-repeat -6px;
+	margin-left:15px;
+	margin-top:6px;
+	cursor: default;
+}
+.bListDiv li .name {
+	float:left;
+	width:150px;
+	height:40px;
+	padding-left:5px;
+	
+	/*border:1px solid red;*/
+}
+
+.bListDiv li .addStatus {
+	float:left;
+	height:40px;
+	line-height:40px;
+	/*border:1px solid red;*/
+}
+
+.nListDiv li{
+	margin-left:-40px;
+	width:600px;
+	height:50px;
+	list-style-type:none;
+    background-color :#F0F0F0;
+	/*line-height:50px;*/	
+}
+.nListDiv li:nth-child(even) {
+    background: #DCDCDC;
+}
+
+.nListDiv li .div1{
+	float:left;
+	width:50px;
+	height:50px;;
+	
+	background: url('../images/icon/IconDialogueSettingsNTP1.png?r=20150204') no-repeat;	
+	background-position:center;
+}
+.nListDiv li .div2{
+	float:left;
+	width:300px;
+	height:50px;
+	display: inline-block;	
+	vertical-align:middle;	
+	line-height:50px;
+	display:table-cell;
+
+}
+
+.nListDiv li .div2_input{
+	float:left;
+	width:300px;
+	height:40px;
+	margin-top:8px;
+
+}
+
+.nListDiv li .div3{
+	float:left;
+	width:220px;
+	/*height:50px;
+	display: inline-block;*/
+	position:relative;
+	bottom:-15px;
+}
+
+.nListDiv li .div4{
+	float:left;
+	width:30px;
+	height:50px;		
+	display: inline-block;	
+	vertical-align:middle;
+}
+
+/*dfs*/
+.dListDiv li {
+	margin-left:-40px;
+	width:500px;
+	height:30px;
+	list-style-type:none;
+	background-color :#F0F0F0;
+	line-height:30px;
+}
+.dListDiv li:nth-child(even) {
+    background-color: #DCDCDC;
+}
+
+.dListDiv li .local_name {
+	float:left;
+	width:150px;
+	height:30px;
+	padding-left:20px;
+	/*border:1px solid red;*/
+}
+.dListDiv li .host {
+	float:left;
+	width:250px;
+	height:30px;
+	padding-left:20px;
+	/*border:1px solid red;*/
+}
+.dListDiv li .remote_folder {
+	float:left;
+	width:150px;
+	height:30px;
+	padding-left:20px;
+	/*border:1px solid red;*/
+}
+.dListDiv li a.edit_icon {
+	background: url('../images/icon/ButtonEditUp_12x18.png?r=20150204') no-repeat;
+	width:18px;
+	height:18px;
+	cursor: pointer;
+	/*border:1px solid red;*/
+	display: block;
+	float:left;
+	margin-top:6px;
+	/*border:1px solid red;*/
+}
+
+.dListDiv li a.edit_icon:hover {
+	float:left;
+	width:18px;
+	height:18px;
+	background: url('../images/icon/ButtonEditOver.png?r=20150204') no-repeat;
+	cursor: pointer;	
+	display: block;
+	/*border:1px solid red;*/
+}
+
+.dListDiv li a.del_icon {
+	background: url('../images/icon/IconListDropdownNotificationsDeleteUp.png?r=20150204') no-repeat;
+	width:18px;
+	height:18px;
+	cursor: pointer;
+	/*border:1px solid red;*/
+	display: block;
+	float:left;
+	margin-top:6px;
+	margin-left:5px;
+	/*border:1px solid red;*/
+}
+
+.dListDiv li a.del_icon:hover {
+	float:left;
+	width:18px;
+	height:18px;
+	background: url('../images/icon/IconListDropdownNotificationsDeleteDown.png?r=20150204') no-repeat;
+	cursor: pointer;	
+	display: block;
+	margin-left:5px;
+	/*border:1px solid red;*/
+}
+.mListDiv li{
+	margin-left:-40px;
+	width:660px;
+	height:50px;
+	background-color :#F0F0F0;
+	list-style-type: none;
+}
+
+.mListDiv li:nth-child(even) {
+    background: #dcdcdc;
+}
+.mListDiv li .div1{
+	float:left;
+	width:500px;
+	padding-left:10px;
+	line-height:50px	
+}
+.mListDiv li .div1_input{
+		float:left;
+	width:500px;
+	height:50px;
+	padding-left:10px;	
+	margin-top:8px;	
+}
+
+.mListDiv li .div2{
+	float:right;
+	width:100px;
+	vertical-align:middle;	
+	display:table-cell;
+	line-height: 50px
+}
+
+.RU-RU .mListDiv li .div2,.FR-FR .mListDiv li .div2,.DE-DE .mListDiv li .div2{
+	padding-right:20px;
+}
+
+.mListDiv li .div3{
+	float:left;
+	width:180px;
+	height:50px;
+	display: inline-block;
+}
+
+.mListDiv li .div4{
+	float:left;
+	width:50px;
+	height:50px;		
+	display: inline-block;	
+	vertical-align:middle;
+}
+/*user list for group dialog*/
+.uListDiv li{
+	margin-left:-40px;
+	width:530px;
+	height:40px;
+	list-style-type:none;
+	background-color :#F0F0F0;
+	line-height:40px;
+}
+.uListDiv li:nth-child(even) {
+    background: #DCDCDC;
+}
+
+.uListDiv li .chkbox {
+	float:left;
+	width:30px;
+	height:24px;
+	padding-left:10px;
+	padding-top:11px;
+
+	/*border:1px solid red;*/
+}
+.uListDiv li .username {
+	float:left;
+	width:160px;
+	height:40px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	/*border:1px solid red;*/
+}
+.uListDiv li .email {
+	float:left;
+	width:290px;
+	height:40px;
+	padding-left:10px;
+	font-style: italic;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	/*border:1px solid red;*/
+}
+
+#batch_group_list_div .uListDiv .username{
+	float:left;
+	width:250px;
+	height:40px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;	
+}
+/*quota*/
+.qListDiv li {
+	margin-left:-40px;
+	width:570px;
+	height:42px;
+	list-style-type:none;
+	background-color :#F0F0F0;
+	line-height:42px;
+}
+.qListDiv li:nth-child(even) {
+    background-color: #DCDCDC;
+}
+
+.qListDiv li .vinfo{
+	float:left;
+	width:200px;
+	height:42px;	
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-left:20px;
+	/*border:1px solid red;*/
+}
+.qListDiv li .quota{
+	float:left;
+	width:220px;
+	height:32px;
+	margin-left:10px;
+	margin-top:8px;
+	/*border:1px solid red;*/
+	
+}
+.qListDiv li .unit{
+	float:left;
+	width:80px;
+	height:42px;
+	margin-left:10px;
+	/*border:1px solid red;*/
+	
+}
+
+
+.proListDiv li{
+	margin-left:-40px;
+	width:740px;
+	height:30px;
+	list-style-type:none;
+	background-color :#ECECEC;
+	line-height:30px;
+}
+br + .proListDiv li {
+    background: #F0F0F0;
+}
+.proListDiv:not(.proListTitleBar) li:nth-child(even) {
+    background: #DCDCDC;
+}
+
+.proListDiv li .div1{
+	float:left;
+	width:315px;
+	height:30px;
+	padding-left:10px;
+	
+}
+.proListDiv li .div2{
+	float:left;
+	width:185px;
+	height:30px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.proListDiv li .div3{
+	float:left;
+	width:230px;
+	height:30px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+/*remote_backup*/
+.remoteListDiv li{
+	margin-left:-40px;
+	width:695px;
+	height:42px;
+	list-style-type:none;
+	background-color :#F0F0F0;
+	line-height:42px;
+}
+.remoteListDiv li:nth-child(even) {
+    background: #DCDCDC;
+}
+.remoteListDiv li .rok{
+	float:left;
+	width:24px;
+	height:24px;
+	background: url('/web/images/flexigrid/status_ok.png?r=20150204') no-repeat;
+	background-position:center;
+	margin-top:7px;
+	/*border:1px solid red;*/
+}
+.remoteListDiv li .rng{
+	float:left;
+	width:24px;
+	height:24px;
+	background: url('/web/images/flexigrid/status_fail.png?r=20150204') no-repeat;
+	background-position:center;
+	margin-top:7px;
+	/*border:1px solid red;*/
+}
+.remoteListDiv li .rnone{
+	float:left;
+	width:24px;
+	height:24px;
+	margin-top:7px;
+	/*border:1px solid red;*/
+}
+.remoteListDiv li .ricon{
+	float:left;
+	width:42px;
+	height:42px;
+	
+	background: url('../images/icon/IconDialogueWindowSetupTimeMachine24x24.png?r=20150204') no-repeat;
+	background-position:center;
+	/*border:1px solid red;*/
+}
+.remoteListDiv li .rname{
+	float:left;
+	width:125px;
+	height:42px;
+	padding-left:10px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	/*border:1px solid red;*/
+}
+.remoteListDiv li .rip{
+	float:left;
+	width:95px;
+	height:42px;
+	margin-left:10px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	/*border:1px solid red;*/
+}
+.remoteListDiv li .rsize{
+	float:left;
+	width:70px;
+	height:42px;	
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-left:10px;
+	/*border:1px solid red;*/
+}
+.remoteListDiv li .rdetailIcon{
+	width:30px;
+	height:30px;
+	background-image: url('/web/images/icon/BackupJobDetail.png?r=20150204');
+	float:left;
+	cursor: pointer;
+	margin-top:5px;
+	margin-left:10px;
+	display: inline-block;
+	/*border:1px solid red;*/
+}
+.remoteListDiv li .rdetailIcon:hover{
+	width:30px;
+	height:30px;
+	background-image: url('/web/images/icon/BackupJobDetailHover.png?r=20150204');
+	float:left;
+	cursor: pointer;
+	margin-top:5px;
+	margin-left:10px;
+	display: inline-block;
+	/*border:1px solid red;*/
+}
+.remoteListDiv li .rrcovery{
+	float:left;
+	width:80px;
+	height:42px;	
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-left:10px;
+	display: inline-block;
+	/*border:1px solid red;*/
+}
+.remoteListDiv li .rbackupIcon{
+	width:30px;
+	height:30px;
+	background-image: url('/web/images/icon/start.png?r=20150204');
+	float:left;
+	cursor: pointer;
+	margin-top:5px;
+	margin-left:10px;
+	display: inline-block;
+}
+.remoteListDiv li .rbackupIcon:hover{
+	width:30px;
+	height:30px;
+	background-image: url('/web/images/icon/startHover.png?r=20150204');
+	float:left;
+	cursor: pointer;
+	margin-top:5px;
+	margin-left:10px;
+	display: inline-block;
+}
+.remoteListDiv li .rrecoverIcon{
+	width:30px;
+	height:30px;
+	background-image: url('/web/images/wfs/download_n.png?r=20150204');
+	float:left;
+	cursor: pointer;
+	margin-top:5px;
+	margin-left:10px;
+	display: inline-block;
+	/*border:1px solid red;*/
+}
+.remoteListDiv li .rrecoverIcon:hover{
+	width:30px;
+	height:30px;
+	background-image: url('/web/images/wfs/download_f.png?r=20150204');
+	float:left;
+	cursor: pointer;
+	margin-top:5px;
+	margin-left:10px;
+	display: inline-block;
+	/*border:1px solid red;*/
+}
+.remoteListDiv li .rstopIcon{
+	width:30px;
+	height:30px;
+	background-image: url('/web/images/icon/button_pause.png?r=20150204');
+	float:left;
+	cursor: pointer;
+	margin-top:5px;
+	margin-left:10px;
+	display: inline-block;
+	/*border:1px solid red;*/
+}
+.remoteListDiv li .rstopIcon:hover{
+	width:30px;
+	height:30px;
+	background-image: url('/web/images/icon/button_pauseHover.png?r=20150204');
+	float:left;
+	cursor: pointer;
+	margin-top:5px;
+	margin-left:10px;
+	display: inline-block;
+	/*border:1px solid red;*/
+}
+.remoteListDiv li .rdelIcon{
+	width:30px;
+	height:30px;
+	background-image: url('/web/images/icon/BackupDelete.png?r=20150204');
+	float:left;
+	cursor: pointer;
+	margin-top:5px;
+	margin-left:10px;
+	display: inline-block;
+	/*border:1px solid red;*/
+}
+.remoteListDiv li .rdelIcon:hover{
+	width:30px;
+	height:30px;
+	background-image: url('/web/images/icon/BackupDeleteHover.png?r=20150204');
+	float:left;
+	cursor: pointer;
+	margin-top:5px;
+	margin-left:10px;
+	display: inline-block;
+	/*border:1px solid red;*/
+}
+.remoteListDiv li .rstate{
+	float:left;
+	width:265px;
+	height:42px;	
+	margin-left:10px;
+}
+.remoteListDiv li .rpercent{
+	float:left;
+	width:40px;
+	height:25px;
+	margin-left:10px;
+	margin-top:4px;
+	font-size:12px;
+	/*border:1px solid red;*/
+}
+
+/*cloud user*/
+.devListDiv{
+	margin-left:-40px;
+}
+.devListDiv li{
+	width:845px;
+	height:45px;
+	list-style-type:none;
+    background-color :#F0F0F0;
+}
+.devListDiv li:nth-child(even) {
+    background: #DCDCDC;
+}
+.devListDiv .fullName{
+	float:left;
+	margin-left:10px;
+	height:40px;
+	width:250px;
+	line-height:40px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	/*border:1px solid red;*/
+}
+.devListDiv .emailInfo{
+	float:left;
+	margin-left:10px;
+	height:40px;
+	width:500px;
+	line-height:40px;
+	/*border:1px solid red;*/
+}
+
+.devListDiv .accountName ,.devListDiv .firstName , .devListDiv .lastName , .devListDiv .email{
+	float:left;
+	margin-left:10px;
+	margin-top:7px;
+	height:40px;
+}
+
+.devListDiv .saveButton{
+	float:left;
+	margin-left:10px;
+	margin-top:7px;
+}
+
+.CloudUserListDiv{
+    margin-top: 20px;
+	margin-left:-40px;
+}
+.CloudUserListDiv li{
+	width: 680px;
+	height: 50px;
+	list-style-type: none;
+    background-color: #F0F0F0;
+}
+.CloudUserListDiv li:nth-child(even) {
+    background: #DCDCDC;
+}
+.CloudUserListDiv .cloudIcon{
+	float:left;
+	background: url("/web/images/icon/NAS_icn_row_user_up.png?r=20150204") no-repeat scroll center 0px transparent;
+	position: relative;
+	top: 10px;
+	margin-left: 15px;
+	margin-right: 5px;
+	height: 30px;
+	width: 30px;
+}
+.CloudUserListDiv .mobile_icon{
+    width: 30px;
+    height: 30px;
+	float: left;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.CloudUserListDiv .mobile_access_iphone_icon {
+    background: url('/web/images/icon/NAS_icn_row_device_phone_up.png?r=20150204') no-repeat center 0;
+}
+
+.CloudUserListDiv .mobile_access_ipod_icon {
+    background: url('/web/images/icon/NAS_icn_row_device_phone_up.png?r=20150204') no-repeat center 0;
+}
+
+.CloudUserListDiv .mobile_access_ipad_icon {
+    background: url('/web/images/icon/NAS_icn_row_device_tablet_up.png?r=20150204') no-repeat center 0;
+}
+
+.CloudUserListDiv .mobile_access_android_phone_icon {
+    background: url('/web/images/icon/NAS_icn_row_device_phone_up.png?r=20150204') no-repeat center 0;
+}
+
+.CloudUserListDiv .mobile_access_android_tablet_icon {
+    background: url('/web/images/icon/NAS_icn_row_device_tablet_up.png?r=20150204') no-repeat center 0;
+}
+
+.CloudUserListDiv .mobile_access_computer_icon {
+    background: url('/web/images/icon/IconCLoudAccessComputerLaptop.png?r=20150204') no-repeat center 0;
+}
+
+.CloudUserListDiv .mobile_access_generic_phone_icon {
+    background: url('/web/images/icon/NAS_icn_row_device_phone_up.png?r=20150204') no-repeat center 0;
+}
+
+.CloudUserListDiv .mobile_access_unknown_device_icon{
+    background: url('/web/images/icon/NAS_icn_row_device_tablet_up.png?r=20150204') no-repeat;
+}
+
+.CloudUserListDiv .mobile_access_application_icon {
+	float:left;
+	width:120px;
+	height:24px;
+	margin-top:14px;
+	margin-left:20px;
+	padding-left:34px;
+	padding-top:4px;
+	/*border:1px solid red;*/
+}
+
+.CloudUserListDiv .mobile_access_wdphotos_icon {
+    background: url('/web/images/icon/cloud/WDPhotos_Icon_24x24.png?r=20150204') no-repeat ;
+    background-size:24px 24px;
+}
+
+.CloudUserListDiv .mobile_access_wd2gopro_icon {
+    background: url('/web/images/icon/cloud/WD2goPro_Icon_24x24.png?r=20150204') no-repeat;
+    background-size:24px 24px;
+}
+
+.CloudUserListDiv .mobile_access_wd2go_icon {
+    background: url('/web/images/icon/cloud/IconWDMyCloudMobile.png?r=20150204') no-repeat;
+    background-size:24px 24px;
+}
+
+.CloudUserListDiv .mobile_access_wdcloud_icon {
+    background: url('/web/images/icon/cloud/IconWDCloudMobile.png?r=20150204') no-repeat;
+    background-size:24px 24px;
+}
+
+.CloudUserListDiv .mobile_access_wdsync_icon {
+    background: url('/web/images/icon/cloud/IconWDSync.png?r=20150519') no-repeat;
+    background-size:24px 24px;
+}
+
+.CloudUserListDiv .mobile_access_unknown_icon {
+    background: url('/web/images/icon/cloud/Icon_QuestionMark_16x16.png?r=20150204') no-repeat;
+    background-size:16px 16px;
+}
+.CloudUserListDiv .dac_connected{
+	float:left;
+	margin-left:20px;
+	margin-top:17px;
+	width:110px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;	
+}
+.CloudUserListDiv .email{
+	float:left;
+	margin-left:20px;
+	margin-top:17px;
+	width:300px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.CloudUserListDiv .desc{
+	float:left;
+	margin-left:10px;
+	margin-top:17px;
+	width:165px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	/*border:1px solid red;*/
+}
+.CloudUserListDiv .timeInfo{
+	float:left;
+	margin-left:20px;
+	margin-top:7px;
+	width:350px;
+	font-size:13px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	/*border:1px solid red;*/
+}
+.CloudUserListDiv .timeInfo_x1{
+	float:left;
+	margin-left:20px;
+	margin-top:7px;
+	width:250px;
+	font-size:11px;
+	/*border:1px solid red;*/
+}
+.CloudUserListDiv .emailIcon{
+	float:right;
+	width:30px;
+	height:30px;
+	background: url(../images/icon/IconMyCloudWebEmailResendUp.png?r=20141013) no-repeat;
+	margin-top:12px;
+	margin-right: 15px;
+	cursor: pointer;
+}
+.CloudUserListDiv .emailIcon:hover{
+	float:right;
+	width:30px;
+	height:30px;
+	background: url(../images/icon/IconMyCloudWebEmailResendDown.png?r=20141013) no-repeat;
+	margin-top:12px;
+	margin-right: 15px;
+}
+.gray_out.emailIcon{
+	float:right;
+	width:30px;
+	height:30px;
+	background: url(../images/icon/IconMyCloudWebEmailResendUp.png?r=20141013) no-repeat;
+	margin-top:12px;
+	margin-right: 15px;
+	cursor: default;
+}
+.gray_out.emailIcon:hover{
+	float:right;
+	width:30px;
+	height:30px;
+	background: url(../images/icon/IconMyCloudWebEmailResendUp.png?r=20141013) no-repeat;
+	margin-top:12px;
+	margin-right: 15px;
+	cursor: default;
+}
+.CloudUserListDiv .edit{
+	float:right;
+	margin-top:10px;
+	margin-right: 15px;
+	width:30px;
+	height:30px;
+	background: url('../images/icon/ButtonEdit.png?r=20150204');
+	cursor: pointer;
+}
+.CloudUserListDiv .edit:hover{
+	float:right;
+	margin-top:10px;
+	width:30px;
+	height:30px;
+	background: url('../images/icon/ButtonEditHover.png?r=20150204');
+}
+.CloudUserListDiv .edit.gray_out:hover{
+	float:right;
+	margin-right:15px;
+	margin-top:10px;
+	width:30px;
+	height:30px;
+	background: url('../images/icon/ButtonEdit.png?r=20150204');
+	cursor: default;
+}
+
+.CloudUserListDiv .delIcon {
+    width: 30px;
+    height: 30px;
+	float: right;
+	margin-right: 15px;
+	margin-top: 9px;
+    background: url('../images/icon/BackupDelete.png?r=20150204');
+	cursor: pointer;
+}
+.CloudUserListDiv .delIcon:hover {
+    background: url('../images/icon/BackupDeleteHover.png?r=20150204');
+}
+.gray_out.delIcon,
+.gray_out.delIcon:hover {
+    background: url('../images/icon/BackupDelete.png?r=20150204');
+	cursor: default;	
+}
+
+.CloudUserListDiv .mobile_access_unexpired_dac_icon {
+    width: 30px;
+    height: 30px;
+	float: right;
+	margin-right: 20px;
+	margin-top: 10px;
+    background: url('../images/icon/NAS_icn_row-cloud-services_active_up.png?r=20150204') no-repeat transparent;	
+}
+.CloudUserListDiv .mobile_access_new_dac_icon {
+    width: 30px;
+    height: 30px;
+	float: right;
+	margin-right: 20px;
+	margin-top: 10px;
+    background: url('../images/icon/NAS_icn_row-cloud-services_active_up.png?r=20150204') no-repeat transparent;	
+}
+.CloudUserListDiv .mobile_access_expired_dac_icon {
+    width: 30px;
+    height: 30px;
+	float: right;
+	margin-right: 20px;
+	margin-top: 10px;
+    background: url('../images/icon/NAS_icn_row-cloud-services_expired_up.png?r=20150204') no-repeat transparent;	
+}
+
+.sedit {
+	float:left;
+	width:12px;
+	height:18px;
+	background: url('../images/icon/ButtonEditUp.png?r=20150204');
+	background-size:12px 18px;
+	cursor: pointer;
+	/*border:1px solid red;*/
+}
+.sedit:hover {
+	background: url('../images/icon/ButtonEditOver.png?r=20150204');
+	background-size:12px 18px;
+}
+
+.iscsiListDiv{	
+	margin-left:-40px;	
+	margin-bottom:-10px;
+	margin-top:0px;
+}
+.iscsiListDiv li {
+	/*width:560px;*/
+	height:30px;
+	list-style-type:none;
+	background-color :#F0F0F0;
+	line-height:30px;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+.iscsiListDiv li:nth-child(even) {
+    background-color: #DCDCDC;
+}
+.iscsiListDiv li .chkbox{
+	float:left;
+	margin-left:10px;
+	margin-top:10px;
+	width:50px;
+	height:30px;		
+}
+.iscsiListDiv li .iqn{
+	float:left;
+	/*max-width:600px;
+	min-width:400px;*/
+	width:500px;
+	height:30px;		
+	/*
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	*/
+}
+
+.iscsiListDiv li .status{
+	float:left;
+	width:100px;
+	height:30px;	
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;	
+}
+
+.iscsiListDiv li .acl{
+	float:left;
+	margin-left:10px;
+	width:300px;
+	height:30px;		
+}
+
+.iscsiListDiv li .initiator{
+	float:left;
+	width:200px;
+	height:30px;		
+}
+
+.iscsiListDiv li .rw{
+	float:left;
+	width:100px;
+	height:30px;		
+}
+.iscsiListDiv li .name{
+	float:left;
+	width:200px;
+	height:30px;		
+/*	margin-left:10px;*/
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.iscsiListDiv li .img{
+	float:left;
+	width:200px;
+	height:30px;
+}
+
+.iscsiListDiv li .access{
+	float:left;
+	width:150px;
+	height:30px;		
+}
+
+.iscsiLUNListDiv{
+	/*margin-top:5px;*/
+	margin-left:-40px;
+}
+.iscsiLUNListDiv li{
+	width:540px;
+	height:30px;
+	background-color: #F0F0F0;
+	padding-top:10px;
+	padding-bottom:10px;
+	list-style-type:none;
+}
+.nowidth li{
+	width:100%;
+}
+.iscsiLUNListDiv li:nth-child(even) {
+    background: #dcdcdc;
+}
+
+.iscsiLUNListDiv li .chkbox{
+	float:left;
+	margin-left:10px;
+	margin-top:10px;
+	width:30px;
+	height:30px;		
+	line-height: 30px;		
+}
+.iscsiLUNListDiv li .name{
+	float:left;
+	/*margin-left:10px;	*/
+	width:300px;
+	height:30px;		
+	line-height: 30px;	
+}
+.iscsiLUNListDiv li .volume{
+	float:left;
+	width:100px;
+	height:30px;		
+	line-height: 30px;	
+}
+
+.iscsiLUNListDiv li .size{
+	float:left;
+	width:100px;
+	height:30px;	
+	line-height: 30px;		
+}
+
+.iscsiLUNListDiv li .status{
+	float:left;
+	width:270px;
+	height:30px;	
+	line-height: 30px;	
+}
+.iscsiLUNListDiv li .icon{
+	float:left;
+	width:80px;
+	height:30px;	
+	line-height: 30px;	
+}
+.iscsiLUNListDiv li .div_del{
+	float:left;
+	width:20px;
+	height:50px;	
+	vertical-align: middle;	
+	display: table-cell;
+}
+
+.LogListDiv{
+	margin-left:-40px;
+	margin-bottom:0px;
+}
+.LogListDiv li{
+	width:922px;
+	height:40px;
+	/*border-top: 1px solid #2b2b2b;
+	border: 1px solid #0e0e0e;*/
+	list-style-type:none;
+	background-color :#ECECEC;			
+}
+
+.LogListDiv .level{
+	float:left;
+	margin-left:10px;
+	width:68px;
+	height:25px;
+	font-size: 16px;
+	padding: 15px 0px 0px 0px;
+	cursor: pointer;
+}
+
+.LogListDiv .time{
+	float:left;
+	width:176px;
+	height:25px;
+	font-size: 16px;
+	padding: 15px 0px 0px 0px;
+	cursor: pointer;
+}
+.LogListDiv .class{
+	float:left;
+	width:99px;
+	height:25px;
+	font-size: 16px;
+	padding: 15px 0px 0px 0px;
+	cursor: pointer;
+}
+
+.SV-SE .LogListDiv .class{
+	width:108px;
+}
+.HU-HU .LogListDiv .class,
+.NB-NO .LogListDiv .class,
+.DE-DE .LogListDiv .class{
+		width:103px;
+}
+
+.LogListDiv .log{
+	float:left;
+	width:560px;
+	height:25px;
+	font-size: 16px;
+	padding: 15px 0px 0px 0px;
+}
+
+.SV-SE .LogListDiv .log{
+	width:551px;
+}
+
+.HU-HU .LogListDiv .log,
+.NB-NO .LogListDiv .log,
+.DE-DE .LogListDiv .log{
+		width:556px;
+}
+/*Add by Eve WU on 4/21/2015: Fix ITR.	
+  ITR-105490:[UI] Event log UI "Backup Type" is truncated in many languages */
+.DE-DE .LogListDiv li,
+.JA-JP .LogListDiv li,
+.FR-FR .LogListDiv li,
+.IT-IT .LogListDiv li,
+.TR-TR .LogListDiv li,
+.CS-CZ .LogListDiv li,
+.ES-ES .LogListDiv li,
+.PL-PL .LogListDiv li,
+.HU-HU .LogListDiv li,
+.NB-NO .LogListDiv li,
+.PT-BR .LogListDiv li,
+.SV-SE .LogListDiv li{
+	height:55px;
+}	
+
+.RU-RU .LogListDiv li
+{
+	height:75px;
+}	
+
+.device_active li .div2._text {
+	padding-left: 20px;
+	line-height:42px;
+}

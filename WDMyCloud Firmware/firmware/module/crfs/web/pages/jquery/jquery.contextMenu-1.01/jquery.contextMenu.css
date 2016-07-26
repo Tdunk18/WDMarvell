@@ -1,0 +1,135 @@
+/* Generic context menu styles */
+.contextMenu {
+	position: absolute;
+	width: 210 px;	/* 165px; */
+	z-index: 99999;
+	border: solid 1px #85939C;
+	background: #ECECEC;
+	color:#333;
+	padding: 0;
+	margin: 0;
+	display: none;
+}
+
+.contextMenu LI {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+    cursor: pointer;
+}
+
+.contextMenu A {
+	color: #333;
+	text-decoration: none;
+	display: block;
+	line-height: 20px;
+	height: 20px;
+	background-position: 6px center;
+	background-repeat: no-repeat;
+	outline: none;
+	padding: 1px 5px;
+	padding-left: 28px;
+}
+
+.contextMenu LI.disabled A {
+	color: #333;
+	color: #85939C;
+}
+
+.contextMenu LI.hover.disabled A {
+	background-color: transparent;
+}
+
+.contextMenu LI.hide_menu A {		
+	display:none;
+}
+
+.contextMenu LI.hover.hide_menu A {	
+	display:none;
+}
+
+.contextMenu LI.hover A {
+    color: #15ABFF;
+}
+
+.contextMenu LI.separator {
+	border-top: solid 1px #CCC;
+}
+
+/*
+	Adding Icons
+	
+	You can add icons to the context menu by adding
+	classes to the respective LI element(s)
+*/
+
+.contextMenu LI.edit A { 
+	background-image: url(/web/images/wfs/edit_n.png);
+	background-size:12px 16px;	
+	 }
+.contextMenu LI.cut A { 
+	background-image: url(/web/images/icon/IconBox26x26SharesUp.png);
+	background-size:16px 16px;	
+	 }
+.contextMenu LI.copy A { 
+	
+	background-image: url(/web/images/wfs/copy_n.png);
+	background-size:16px 16px;	
+	
+	}
+.contextMenu LI.paste A { background-image: url(images/page_white_paste.png); }
+.contextMenu LI.delete A {
+	background-image: url(/web/images/wfs/del_n.png);
+	background-size:16px 16px;		
+	
+	 }
+.contextMenu LI.quit A { background-image: url(images/door.png); }
+.contextMenu LI.plus A { background-image: url(images/plus.png); }
+.contextMenu LI.icon-enable A { background-image: url(images/start.png); }
+.contextMenu LI.icon-disable A { background-image: url(images/stop.png); }
+.contextMenu LI.icon-remove A { background-image: url(images/remove-from-my-favorite.png); }
+
+.contextMenu LI.download A {
+background-image: url(/web/images/wfs/download_n.png);
+	background-size:16px 16px;		
+	 }
+.contextMenu LI.list A { 
+	background-image: url(/web/images/wfs/icon_webfileviewer_fileproperties_normal.png);
+	background-size:16px 16px;		
+	 }
+.contextMenu LI.import A { 
+	background-image: url(/web/images/wfs/move_n.png);
+	background-size:16px 16px;	
+	}
+.contextMenu LI.fb A { background-image: url(images/facebook.png); }
+.contextMenu LI.picasa A { background-image: url(images/picasa.png); }
+.contextMenu LI.flickr A { background-image: url(images/flickr.png); }
+.contextMenu LI.zip A {
+	background-image: url(/web/images/wfs/icon_webfileviewer_addtozip_normal.png);
+	background-size:16px 16px;	
+	 }
+.contextMenu LI.tar A { 
+	background-image: url(/web/images/icon/IconBox26x26SharesUp.png);
+	background-size:16px 16px;	
+	}
+.contextMenu LI.dropbox A { background-image: url(images/box_icon.png); }
+.contextMenu LI.open A { 
+	background-image: url(/web/images/wfs/icon_webfileviewer_open_normal.png);
+	background-size:16px 16px;	
+	 }
+.contextMenu LI.addPlaylist A { background-image: url(images/playlist.png); }
+.contextMenu LI.playNow A { background-image: url(images/play.png); }
+.contextMenu LI.addPlaylist span { padding-left: 5px;font-size:14px}
+.contextMenu LI.playNow span { padding-left: 5px;font-size:14px}
+.contextMenu LI.preview A { background-image: url(images/preview.png); }
+.contextMenu LI.archive A { 
+	background-image: url(/web/images/icon/IconBox26x26SharesUp.png);
+	background-size:16px 16px;	
+	 }
+.contextMenu LI.archive_extract A { 
+	background-image: url(/web/images/wfs/icon_webfileviewer_unzip_normal.png);
+	background-size:16px 16px;	 }
+	
+.contextMenu LI.untar A { 
+	background-image: url(/web/images/wfs/icon_webfileviewer_untar_normal.png);
+	background-size:16px 16px;	 }	

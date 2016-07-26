@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+    <name>db</name>
+    <version>2.1</version>
+    <description>Database Module</description>
+    
+    <components>
+      
+    </components>
+    
+</module>

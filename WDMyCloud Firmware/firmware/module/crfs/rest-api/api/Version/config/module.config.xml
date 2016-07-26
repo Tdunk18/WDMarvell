@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+    <name>Version</name>
+    <version>2.1</version>
+    <description>Module has {}</description >
+    
+    <components>
+        <component>
+            <name>version</name>
+            <module>Version</module>
+            <controller_class>Version\Controller\Version</controller_class>
+            <auth_security>
+                <get>NO_AUTH</get>
+            </auth_security>
+        </component>
+    </components>
+    
+    <class_factory>
+        <factory>Version\FirmwareVersion</factory>
+        <implementation>
+            <class_name>Version\FirmwareVersion\Linux\FirmwareVersionImpl</class_name>
+            <attributes osname="linux" />
+        </implementation>
+        <implementation>
+            <class_name>Version\FirmwareVersion\Windows\FirmwareVersionImpl</class_name>
+            <attributes osname="windows" />
+        </implementation>
+    </class_factory>
+    
+</module>

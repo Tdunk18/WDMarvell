@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+    <name>TimeMachine</name>
+    <version>2.1</version>
+    <description>Module has {}</description >
+    
+    <components>
+        <component>
+            <name>time_machine</name>
+            <module>TimeMachine</module>
+            <controller_class>TimeMachine\Controller\TimeMachine</controller_class>
+            <auth_security>
+                <get>NO_AUTH_LAN</get>
+                <put>USER_AUTH</put>
+            </auth_security>
+        </component>
+    </components>
+    
+</module>

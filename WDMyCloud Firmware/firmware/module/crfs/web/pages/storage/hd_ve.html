@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="PRAGMA" content="no-cache"> 
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+
+<style>
+	
+.sel{
+	background-color: #0067A6;
+}
+
+.grayout{
+	filter:alpha(opacity=30);opacity:0.3; top:15px;left:0;cursor: text;
+}
+
+
+#VE_Diag .file_input_div{
+	position: relative;
+	width:auto;
+	height:auto;
+}
+#VE_Diag .file_input_hidden{
+	cursor: pointer;
+	font-size: 50px; 
+	position: absolute; 
+	right: 0px; 
+	top: 0px; 
+	width:1px;
+	opacity: 0; 
+	filter: alpha(opacity=0); 
+	-ms-filter: "alpha(opacity=0)"; 
+	-khtml-opacity: 0; 
+	-moz-opacity: 0;
+}
+</style>	
+</head>
+
+<!-- Upload File -->
+<script language="javascript" src="/web/jquery/ajaxfileupload/ajaxfileupload.js"></script>
+<script language="javascript" src="/web/function/raid_define.js"></script>
+<script type="text/javascript" src="/web/function/raid_diag.js"></script>
+<script type="text/javascript" src="/web/function/hd_ve_diag.js"></script>
+<script type="text/javascript" src="/web/function/hd_ve.js"></script>
+
+<script type="text/javascript">
+function page_load()
+{
+	var sys_time = (new Date()).getTime();
+	initDiag("/web/storage/hd_ve_diag.html?r="+sys_time);
+	
+	ve_list();
+	
+	$("#VE_Modify_Button").click(function() {	
+		_DIALOG = "";
+		
+		var grid = $("#VE_List");
+		var selected_count =$('.trSelected',grid).length;
+		if(selected_count==0)
+		{
+			jAlert( _T('_user','msg2'), _T('_common','error'));	//Text:Please select one item.
+			return;
+		}
+			
+        var names = '';  
+        $('.trSelected td:nth-child(1) div',grid).each(function(i){  
+            if(i) {
+                names += '*'; 
+            }
+            names += $(this).text();  
+        });
+		
+		ve_modify_diag(names);
+	});	
+}
+
+function page_unload()
+{
+	//clearTimeout(timeoutId);
+}
+</script>
+
+<body>
+<!-- Block 1 : Volume Encryption -->
+<div class="h1_content header_2">
+	<span class="_text" lang="_ve" datafld="title2"></span></div>	
+	<div class="field_top"><span class="_text" lang="_ve" datafld="desc10"></span></div>	
+	<div class="hr_0_content"><div class="hr_1"></div></div>
+	
+	<div class="field_top">
+		<table id="VE_List"></table>
+	</div>									
+	
+	<div class="field_top" id="VE_List_Button" style="display:none">
+	<button type="button" id="VE_Modify_Button"><span class="_text" lang="_common" datafld="modify"></span></button>
+</div>	
+
+<!-- Save File -->
+<form name="form2" id="form2" method="POST" action="/cgi-bin/ve_mgr.cgi" onsubmit="return false">
+	<input type="hidden" name="cmd" value="cgi_VE_Save_File">	
+	<input type="hidden" id="VE_Save_Vol" name="f_vol" value="">	
+	<input type="hidden" id="VE_Save_Dev" name="f_dev" value="">	
+</form>	
+</body>
+</html>

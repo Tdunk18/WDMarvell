@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+# (c) 2014-2015 Western Digital Technologies, Inc. All rights reserved.
+#
+#
+#---------------------
+
+[ ! -d /etc/init.d ] && mkdir -p /etc/init.d
+cp -a /usr/local/modules/etc/init.d/onbrdnetloccommd /etc/init.d/
+
+[ ! -d /usr/local/bin ] && mkdir -p /usr/local/bin
+ln -s /usr/local/modules/localbin/onbrdnetloccomm /usr/local/bin/.
+
+[ ! -d /usr/local/onboarding ] && mkdir -p /usr/local/onboarding
+ln -s /usr/local/config/onbrd.ini /usr/local/onboarding/.

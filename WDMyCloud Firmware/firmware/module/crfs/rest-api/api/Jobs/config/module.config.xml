@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+    <name>Jobs</name>
+    <version>2.1</version>
+    <description>Module has jobs, file_jobs and dir_jobs componenets to start NAS device jobs.</description >
+
+    <components>
+        <component>
+            <name>jobs</name>
+            <module>Jobs</module>
+            <controller_class>\Jobs\Controller\Jobs</controller_class>
+            <auth_security>
+                <all>USER_AUTH_ALL</all>
+            </auth_security>
+        </component>
+    </components>
+
+</module>

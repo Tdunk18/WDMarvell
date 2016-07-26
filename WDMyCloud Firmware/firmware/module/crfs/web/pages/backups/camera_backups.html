@@ -1,0 +1,215 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="PRAGMA" content="no-cache"> 
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+</head>
+<script type="text/javascript" src="/web/function/camera.js"></script>
+<script type="text/javascript">
+function page_load(_sub_page_callback)
+{		
+	$("#tip_auto").attr('title',_T('_tip','camera_auto'));
+	$("#tip_copy").attr('title',_T('_tip','camera_copy'));
+	$("#tip_move").attr('title',_T('_tip','camera_move'));	
+	
+	init_switch();
+	init_tooltip();
+	$("input:text").inputReset();
+	$("input:checkbox").checkboxStyle();
+	
+	//camera setting
+	
+	
+	$('#backups_mediaCameraAutoTransfer_switch').click(function() {
+		if (_g_camera_used == 1) return;			
+		camera_save();
+		google_analytics_log('camera-transfer-en', getSwitch('#backups_mediaCameraAutoTransfer_switch'));	
+	});	
+	
+	$("#TransferMode").click(function(){
+		if (_g_camera_used == 1) return;		
+		camera_save();
+		google_analytics_log('camera-transfer-mode', $('#TransferMode').attr('rel'));		//0:copy 1:move
+	});
+	init_camera();	
+	camera_info();
+	camera_status(0);		
+}
+function page_unload()
+{	
+	clearTimeout(camera_status_timeout);
+	clearTimeout(camera_info_timer);		
+}
+</script>
+
+<body>				
+							
+				<!-- camera setting -->
+			<div id="goPro_div"></div>
+			<div class="h1_content header_2 _text" lang="_media" datafld="camera_title"></div>
+			<div class="field_top"><span class="_text" lang="_media" datafld="camera_description"></span></div>
+			
+			<div class="hr_0_content" style="margin-top:30px;margin-bottom:30px;"><div class="hr_1"></div></div>  
+			<table border=0 cellspacing="0" cellpadding="0" width="100%"> 
+				<tr>
+				<td>	
+			<div class="h1_content header_2 _text" lang="_media" datafld="title4">Camera Backups</div>								
+				</td>	
+				<td align="right">				
+					<img id="id_gopro_log" style="display:none" src="/web/images/GoPro_Logo_Reversed.png" border=0 width="150" height="35">					
+				</td>	
+			</tr>
+			</table>
+				<table  width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td class="tdfield"><span class="_text" lang="_media" datafld="connect_camera"></span></td>
+							<td class="tdfield_padding" colspan="3">
+								<div id="backups_mediaCameraInfo_value"></div>
+							</td>	
+						</tr>
+						<tr>
+							<td  class="tdfield">						
+								<span id="id_camera_trans" class="_text" lang="_media" datafld="trans_file"></span>											
+							</td>	
+							<td class="tdfield_padding" colspan="3">
+								<button onclick="action_now(this.id);" id="backups_mediaCameraMove_button" style="display:none"><span class="_text" lang="_media" datafld="move_b"></span></button>
+								<button onclick="action_now(this.id);" id="backups_mediaCameraCopy_button" style="display:none"><span class="_text" lang="_media" datafld="copy_b"></span></button>							
+								<button id="backups_cameraCancel_button" type="button" onclick="camera_cancel();" style="display:none"><span class="_text" lang="_common" datafld="stop"></span></button>
+							</td>
+						</tr>
+						<tr id="id_camera_status_tr">
+							<td class="tdfield"><span id="id_camera_status" class="_text" lang="_home" datafld="ups_status"></span></td>
+							<td class="tdfield_padding" colspan="3">
+								<div id="id_camera_msg">																			            
+									<table border="0" cellspacing="0" cellpadding="0">
+									<tr>
+										<td style="display:none">	
+											<div style="display:none;width:180px;" id="id_move_file"></div>
+											<div style="display:none;width:180px;" id="id_copy_file"></div>	
+										</td>
+										<td>								
+											<span id="backups_mediaCameraPercent_bar"></span>											
+										</td>	
+										<td style="padding-left:10px;">											
+											
+										</td>
+									</tr>
+									</table>
+
+								</div>
+							</td>
+						</tr>		
+				</table>		
+
+
+				<div class="hr_0_content" style="margin-top:30px;margin-bottom:30px;"><div class="hr_1"></div></div>  
+				<div class="h1_content header_2"><span class="_text" lang="_menu_title" datafld="settings"></span></div>
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">						
+						<tr>
+							<td class="tdfield"><span class="_text" lang="_media" datafld="auto_trans"></span></td>
+							<td class="tdfield_padding" colspan="3">
+								<table>
+						<tr>
+									<td>
+										<input id="backups_mediaCameraAutoTransfer_switch" name="backups_mediaCameraAutoTransfer_switch" class="onoffswitch" type="checkbox" value="true" style="position: absolute; z-index: -1; visibility: hidden;" >
+									</td>
+									<td><div class="TooltipIcon" id="tip_auto"></div></td>									
+								</tr>
+								</table>	
+							</td>
+						</tr>
+						<tr>
+							<td class="tdfield"><span class="_text" lang="_media" datafld="mode"></span></td>
+							<td class="tdfield_padding" colspan="3">
+								<table>
+								<tr>	
+									<td>
+											<div id="TransferMode" style="display:"><button id="backups_mediaCameraTransferModeCopy_button" class="left_button" value="0"><span class="_text" lang="_wfs" datafld="copy"></span></button><button id="backups_mediaCameraTransferModeMove_button" class="right_button" value="1"><span class="_text" lang="_wfs" datafld="move"></span></button></div>
+									</td>
+									<td>
+										<div class="TooltipIcon" id="tip_copy" style="display:none"></div>
+										<div class="TooltipIcon" id="tip_move" style="display:none"></div>
+									</td>									
+									<td style="padding-left:10px"><a id="backups_mediaCameraTransferMode_link" href="javascript:open_folder_option();" class="edit_detail"><span class="_text" lang="_media" datafld="folder_options"></span> >> </a></td>
+								</tr>							
+								</table>	
+								</td>
+						</tr>	
+						<tr height="50px"><td colspan="2">&nbsp;</td></tr>
+				</table>		
+				<!-- end camera setting -->
+
+
+<div id="CameraDiag" class="WDLabelDiag" style="display:none;">
+<div class="WDLabelHeaderDialogue WDLabelHeaderDialogueFolderIcon" id="CameraDiag_title">
+	<span class="_text" lang="_media" datafld="title5"></span>	
+	</div>
+<div align="center"><div class="hr"><hr></div></div>
+	
+	<div id="folder_set">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">				
+				<table border="0"  cellspacing="0" cellpadding="0" height="0">
+					<tr>
+					<td height=40>
+						<span class="TD field _text" lang="_media" datafld="trans_foldere"></span>	
+					</td>
+					<td>
+						<table border="0"  cellspacing="0" cellpadding="0" height="0">
+							<tr>
+								<td>
+									<form name="form_camera" id="form_camera">
+									<input style="width:190px" type="text" name="backups_mediaCameraFolder_text" size="25" value="" id="backups_mediaCameraFolder_text" readonly>
+									</form>
+								</td>
+								<td width=20></td>
+								<td>	
+									<button id="backups_mediaCameraFolder_button" onclick="camera_create_tree_dialog('form_camera','backups_mediaCameraFolder_text')"><span class="_text" lang="_button" datafld="browse"></span></button>									
+								</td>
+							</tr>	
+						</table>
+				</tr>
+				<tr>
+					<td height=40>
+						<span class="TD field _text" lang="_wfs" datafld="folder_name"></span>						
+					</td>
+					<td>
+							<div class="select_menu" id="id_camera_option_top_main"></div>
+					</td>	
+				</tr>
+				<tr id="id_folder_name" style="display:none">
+					<td height=40>
+						<span class="TD field _text" lang="_media" datafld="enter_folder"></span>						
+					</td>
+					<td>
+							<input type="text" id="backups_mediaCameraCustomFolder_text" name="backups_mediaCameraCustomFolder_text">
+					</td>	
+				</tr>
+				</table>  
+			</div>	
+		</div>
+	</div>	
+		<div class="hrBottom2"><hr></div>			
+		<button type="button" class="ButtonMarginLeft_40px close" id="backups_mediaCameraCancel_button" onclick="folder_option_cancel();"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" id="backups_mediaCameraSave_button" onclick="folder_option_save();"><span class="_text" lang="_button" datafld="save"></span></button>						
+</div>
+<!-- dialog -->			
+<div id="CtreeDiag" class="WDLabelDiag" style="display:none">
+<div id="CtreeDiag_title" class="WDLabelHeaderDialogue WDLabelHeaderDialogueFolderIcon">
+<span class="_text" lang="_media" datafld="select_destination"></span></div>
+<div align="center"><div class="hr"><hr></div></div>	
+	<div id="CtreeDiag_tree" style="display:">		
+		<div class="WDLabelBodyDialogue">			
+			<div id="Ctree_div"></div>
+			</div>					
+		<div class="hrBottom2"><hr/></div>	
+		<button class="ButtonMarginLeft_40px" id="backups_mediaCameraTreeCancel_button" onclick="clear_path();"><span class="_text" lang="_button" datafld="Cancel"></span></button>		
+		<button class="ButtonRightPos2" id="backups_mediaCameraTreeOk_button" onclick="select_folder_close();"><span class="_text" lang="_button" datafld="Ok"></span></button>
+</div>
+</div>	
+<!-- dialog end -->
+
+</body>
+</html>

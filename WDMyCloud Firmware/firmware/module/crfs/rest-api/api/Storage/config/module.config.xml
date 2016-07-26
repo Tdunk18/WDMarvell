@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+    <name>Storage</name>
+    <version>2.1</version>
+    <description>Module has {}</description >
+   
+    <components>
+    
+        <!-- Usage -->
+    
+        <component>
+            <name>storage_usage</name>
+            <module>Storage</module>
+            <controller_class>\Storage\Usage\Controller\StorageUsage</controller_class>
+            <auth_security>
+                <get>NO_AUTH_LAN_USER_WAN</get>
+            </auth_security>
+        </component>
+        
+        <component>
+            <name>storage_usage_by_share</name>
+            <module>Storage</module>
+            <controller_class>\Storage\Usage\Controller\StorageUsage</controller_class>
+            <auth_security>
+                <get>ADMIN_AUTH_LAN</get>
+            </auth_security>
+        </component>
+        
+        <!-- Raid -->
+        
+        <component>
+            <name>raid_drives_status</name>
+            <module>Storage</module>
+            <controller_class>\Storage\Raid\Controller\RaidDrivesStatus</controller_class>
+            <auth_security>
+                <all>NO_AUTH_LAN</all>
+            </auth_security>
+        </component>
+        
+        <component>
+            <name>raid_configuration</name>
+            <module>Storage</module>
+            <controller_class>\Storage\Raid\Controller\RaidConfiguration</controller_class>
+            <auth_security>
+                <all>NO_AUTH_LAN</all>
+            </auth_security>
+        </component>
+        
+        <component>
+            <name>user_raid_status</name>
+            <module>Storage</module>
+            <controller_class>\Storage\Raid\Controller\UserRaidStatus</controller_class>
+            <auth_security>
+                <all>NO_AUTH_LAN</all>
+            </auth_security>
+        </component>
+        
+        <!-- Disk -->
+        
+        <component>
+            <name>hdd_standby_time</name>
+            <module>Storage</module>
+            <controller_class>\Storage\Disk\Controller\HddStandbyTime</controller_class>
+            <auth_security>
+                <get>NO_AUTH_LAN</get>
+                <put>ADMIN_AUTH_LAN</put>
+            </auth_security>
+        </component>
+        
+        <component>
+            <name>smart_test</name>
+            <module>Storage</module>
+            <controller_class>\Storage\Disk\Controller\SmartTest</controller_class>
+            <auth_security>
+                <get>ADMIN_AUTH_LAN</get>
+                <put>ADMIN_AUTH_LAN</put>
+            </auth_security>
+        </component> 
+        
+        <component>
+            <name>smart_test2</name>
+            <module>Storage</module>
+            <controller_class>\Storage\Disk\Controller\SmartTest2</controller_class>
+            <auth_security>
+                <get>ADMIN_AUTH_LAN</get>
+                <put>ADMIN_AUTH_LAN</put>
+            </auth_security>
+        </component>
+
+        <!-- Transfer -->
+        
+        <component>
+            <name>storage_transfer</name>
+            <module>Storage</module>
+            <controller_class>\Storage\Transfer\Controller\StorageTransfer</controller_class>
+            <auth_security>
+                <get>ADMIN_AUTH</get>
+                <put>ADMIN_AUTH</put>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>storage_active_transfer</name>
+            <module>Storage</module>
+            <controller_class>\Storage\Transfer\Controller\StorageActiveTransfer</controller_class>
+            <auth_security>
+                <post>NO_AUTH</post>
+            </auth_security>
+            <async_methods>
+                <method>post</method>
+            </async_methods>
+        </component>
+        
+    </components>
+    
+    <!-- Raid -->
+    
+    <class_factory>
+    
+        <factory>Storage\Raid\Manager\DrivesStatusInterface</factory>
+        
+        <implementation>
+            <class_name>Storage\Raid\Manager\Linux\DrivesStatusImpl</class_name>
+            <attributes osname="linux" />
+        </implementation>
+        
+        <implementation>
+            <class_name>Storage\Raid\Manager\Windows\DrivesStatusImpl</class_name>
+            <attributes osname="windows" />
+        </implementation>
+        
+    </class_factory>
+    
+    <class_factory>
+    
+        <factory>Storage\Raid\Manager\ConfigurationInterface</factory>
+        
+        <implementation>
+            <class_name>Storage\Raid\Manager\Linux\ConfigurationImpl</class_name>
+            <attributes osname="linux" />
+        </implementation>
+        
+        <implementation>
+            <class_name>Storage\Raid\Manager\Windows\ConfigurationImpl</class_name>
+            <attributes osname="windows" />
+        </implementation>
+        
+    </class_factory>
+    
+</module>

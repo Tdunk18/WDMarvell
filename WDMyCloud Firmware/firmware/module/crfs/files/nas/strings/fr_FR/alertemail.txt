@@ -1,0 +1,8 @@
+0001 = Message d'alerte provenant de %1
+0002 = Les événements suivants se produisent sur votre %2 %1
+0003 = Description de l'événement
+0004 = Gravité
+0005 = Code de l'événement
+0006 = Heure de l'événement
+0007 = Intitulé de l'événement
+0008 = Version du micrologiciel

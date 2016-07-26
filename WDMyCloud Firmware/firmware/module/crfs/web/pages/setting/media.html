@@ -1,0 +1,292 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="PRAGMA" content="no-cache"> 
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+<style>
+
+.sel{
+	background-color: #0067A6;
+/*	border: 2px solid #0067A6;*/
+}
+
+a {FONT-SIZE: 15px; FONT-FAMILY: Helvetica, Geneva, Arial, sans-serif;}
+
+#DLNA_View_Players_List button,input[type=submit] {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/* [+] For iTunes bar */
+
+.ui-progressbar {
+	border: 0px solid;
+}
+.ui-widget-header {
+    background: #15ABFF;
+}
+
+.ui-widget-content {
+	background: #DCDCDC;
+}
+
+.ui-progressbar .ui-progressbar-value {
+	border: 0;
+	margin: 0;
+}
+/* [-] For iTunes bar */
+</style>
+</head>
+
+<script type="text/javascript" src="/web/function/codepage.js"></script>
+<script type="text/javascript" src="/web/function/itunes.js"></script>
+<script type="text/javascript" src="/web/function/itunes_diag.js"></script>
+<script type="text/javascript" src="/web/function/dlna.js"></script>
+<script type="text/javascript" src="/web/function/dlna_diag.js"></script>
+
+<script type="text/javascript">
+var MyVariTunes=0, MyVarDLNA=0, MyVarDLNA_Ready=0;
+var MyVolumeState=0;       
+var _SELECT_ITEMS  = new Array("settings_mediaiTunesAutoRefresh_select");
+
+function page_load(_sub_page_callback)
+{
+	var sys_time = (new Date()).getTime();
+	initDiag("/web/setting/media_diag.html?r="+sys_time);
+	
+	$("#tip_dlna").attr('title',_T('_media','desc5'));
+	$("#tip_dlna_button").attr('title',_T('_media','desc6'));
+	$("#tip_itunes").attr('title',_T('_itunes','desc1'));
+	$("#tip_itunes_Refresh").attr('title',_T('_itunes','desc4'));
+	
+	init_switch();
+	init_tooltip();
+	$("input:text").inputReset();
+	$("input:checkbox").checkboxStyle();
+	
+	/*	msg:
+		0 -> no volume 
+		1 -> volume is ok
+		2 -> S.M.A.R.T. Test now		
+		3 -> Formating now
+		4 -> Scaning Disk 
+		5 -> no disk 
+		6 -> disks sequence are not valid.
+	*/
+	HD_Status(0,function(MyVolumeState){
+	switch(MyVolumeState) 
+	{
+		case 0:	//no volume 
+			setSwitch('#settings_mediaDLNA_switch', 0); 
+			$("#settings_mediaDLNA_switch").attr("disabled","disabled");
+			if(!$("#settings_mediaDLNA_switch").hasClass("gray_out")) $("#settings_mediaDLNA_switch").addClass("gray_out");
+			
+			setSwitch('#settings_mediaiTunes_switch',0);
+			$("#settings_mediaiTunes_switch").attr("disabled","disabled");
+			if(!$("#settings_mediaiTunes_switch").hasClass("gray_out")) $("#settings_mediaiTunes_switch").addClass("gray_out");
+			iTunes_disable_item(0);
+		break;
+		
+		default:
+			DLNA_get_info(); 
+			
+			iTunes_check_ready();
+			
+			$('#settings_mediaDLNA_switch').click(function() {
+				
+				jLoading(_T('_common','set'), 'loading' ,'s',""); 
+				var my_dlna = getSwitch('#settings_mediaDLNA_switch');
+				if(my_dlna==1)
+				{
+					jAlert( _T('_media','msg6'), "note", null, function(){
+							DLNA_set_on(my_dlna);
+					});
+				}
+				else
+				{
+					DLNA_set_on(my_dlna);
+				}
+			});	
+			
+			$("#settings_mediaDLNARescan_button").click(function(){
+				if ( $(this).hasClass('gray_out') || $("#settings_mediaDLNARebuild_button").hasClass('gray_out') ) return;
+				
+				$(this).addClass('gray_out'); 
+				$("#settings_mediaDLNARebuild_button").addClass('gray_out');
+				$("#DIV_RPC_LastUpdate").html(_T('_media','desc12'));
+				DLNA_Rescan();
+			});	
+			
+			$("#settings_mediaDLNARebuild_button").click(function(){
+				if ( $(this).hasClass('gray_out') || $("#settings_mediaDLNARescan_button").hasClass('gray_out')) return;
+				
+				if (MyVarDLNA != 0 ) clearTimeout(MyVarDLNA);
+				
+				$(this).addClass('gray_out'); 
+				$("#settings_mediaDLNARescan_button").addClass('gray_out');
+				
+				$("#tr_dlna_lastupdate").hide();
+				$("#tr_dlna_lastupdate_rebuild_ready").show();
+				
+				DLNA_Rebuild();
+			});		
+			
+			$('#settings_mediaiTunes_switch').click(function() {
+				var my_ituens = getSwitch('#settings_mediaiTunes_switch');
+				if (my_ituens == 1)
+				{
+						jAlert( _T('_media','msg6'), "note", null, function(){
+								iTunes_set_on(my_ituens);
+						});
+				}
+				else
+					iTunes_set_on(my_ituens)		
+			});	
+			
+			$("#settings_mediaiTunesRefresh_button").click(function() {	
+				
+				if( $("#itunes_apply_button").hasClass("gray_out")) return;
+				
+				iTunes_refresh();
+			});
+			
+		break;
+	}	
+	
+	if (_sub_page_callback)
+		_sub_page_callback();
+	})//end of HD_Status(0,function(hd_status){	 		
+}
+function page_unload()
+{
+	clearTimeout(MyVarDLNA);
+	if ( MyVariTunes != 0) clearInterval(MyVariTunes);
+}
+</script>
+
+<body>				
+		<!-- Block  : DLNA -->		
+				<div class="h1_content header_2 _text" lang="_media" datafld="title2">DLNA Media Server</div>	
+				
+				<div>
+					<table border="0" width="650px">
+							<tr>
+								<td class="tdfield"><span class="_text" lang="_media" datafld="desc1">Media Streaming</span></td>
+								<td class="tdfield_padding" colspan="2">
+									<table border="0">
+										<tr>
+											<td>
+												<input id="settings_mediaDLNA_switch" name="settings_mediaDLNA_switch" class="onoffswitch" type="checkbox" value="true" style="position: absolute; z-index: -1; visibility: hidden;">
+											</td>
+											<td><div class="TooltipIcon" id="tip_dlna"></div></td>
+											<td style="padding-left:10px" style="display:none" id="TD_dlan_view_player">
+												<a id="settings_mediaDLNAViewPlayers_link" href="javascript:DLNA_View_Players_Diag();" class="edit_detail"><span class="_text" lang="_media" datafld="desc7"></span></a>
+											</td>
+										</tr>
+									</table>	
+								</td>		
+							</tr>
+							<tr id="tr_dlna_version" style="display:none">
+								<td class="tdfield"><span class="_text" lang="_media" datafld="desc2">Version</span></td>
+								<td class="tdfield_padding" colspan="2"><div id="DIV_RPC_Version"></div></td>
+							</tr>
+							<tr id="tr_dlna_media" style="display:none">
+								<td class="tdfield"><span class="_text" lang="_media" datafld="desc8">Media</span></td>
+								<td class="tdfield_padding" colspan="2"><div id="DIV_RPC_Media"></div></td>
+							</tr>
+							<tr id="tr_dlna_lastupdate" style="display:none">
+								<td class="tdfield"><span class="_text" lang="_media" datafld="desc3">Last Update</span></td>
+								<td class="tdfield_padding" colspan="2"><div id="DIV_RPC_LastUpdate"></div></td>
+							</tr>
+							
+							<tr id="tr_dlna_lastupdate_rebuild_ready" style="display:none">
+								<td class="tdfield"><span class="_text" lang="_media" datafld="desc3">Last Update</span></td>
+								<td class="tdfield_padding" colspan="2"><img src="/web/images/WD-Anim-barber-fast.gif" border="0" class="list_icon_bar_anim"></td>
+							</tr>
+							
+							<tr id="tr_dlna_lastupdate_rebuild_progress" style="display:none">
+								<td class="tdfield"><span class="_text" lang="_media" datafld="desc3">Last Update</span></td>
+								<td class="tdfield_padding" colspan="2">
+											<table cellspacing="5" cellpadding="0" border="0" width="208px">
+											<tr>
+												<td><div id="settings_mediaDLNARebuildProgressbar_div"></div></td>
+											</tr>
+											</table>
+								</td>
+							</tr>
+							
+							<tr id="tr_dlna_button" style="display:none">
+								<td class="tdfield"><span class="_text" lang="_media" datafld="desc4">DLNA Database</span></td>
+								<td class="tdfield_padding" colspan="2" id="td_dlna_button">
+									<table>
+										<tr><!-- 1.button : Rescan -->
+											<td><button type="button" id="settings_mediaDLNARescan_button"><span class="_text" lang="_media" datafld="button1"></span></button></td>
+											<!-- button : Rescan end-->
+											
+											<!-- 2.button : Rebuild -->
+											<td><button type="button" id="settings_mediaDLNARebuild_button"><span class="_text" lang="_cloud" datafld="rebuild"></span></button></td>
+											<!-- button : Scan Disk end-->
+											
+											<td><div class="TooltipIcon" id="tip_dlna_button"></div></td>
+										</tr>
+									</table>
+								</td>	
+							</tr>
+							
+						</table>
+				</div>	
+				<div class="hr_0_content"><div class="hr_1"></div></div>
+				
+				<!-- Block  : iTuens Setting -->
+				<div id="itunes_set">
+				<div class="h1_content header_2 _text" lang="_media" datafld="title1">iTunes</div>																
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td class="tdfield"><span class="_text" lang="_media" datafld="title1"></span></td>
+							<td class="tdfield_padding" colspan="3">
+								<table>
+								<tr>	
+									<td>
+										<input id="settings_mediaiTunes_switch" name="settings_mediaiTunes_switch" class="onoffswitch" type="checkbox" value="true" style="position: absolute; z-index: -1; visibility: hidden;">
+									</td>
+									<td><div class="TooltipIcon" id="tip_itunes"></div></td>
+									<td style="padding-left:10px"  style="display:none" id="TD_itunes_advanced_options">
+										<a id="settings_mediaiTunesAdvOpts_link" href="javascript:iTtunes_Advanced_Option_Diag();" class="edit_detail"><span class="_text" lang="_media" datafld="desc20"></span> >></a>
+									</td>
+								</tr>
+								</table>	
+							</td>	
+						</tr>
+						
+						<tr id="tr_itunes_db" style="display:none;">                     
+							<td class="tdfield"><span class="_text" lang="_itunes" datafld="desc6">iTunes database</span></td>	                     
+							<td class="tdfield_padding" colspan="3">
+									<table>	
+										<tr><!-- 1.button : iTunes Rebuild  -->
+											<td><button type="button" id="settings_mediaiTunesRefresh_button"><span class="_text" lang="_button" datafld="refresh"></span></button></td>
+											<!-- 1.button : iTunes Rebuild  end -->
+											<td><div class="TooltipIcon" id="tip_itunes_Refresh"></div></td>	
+										</tr>
+									</table>	
+					        </td>
+						</tr>
+						<tr id="tr_itunes_db_state" style="display:none;">
+							<td class="tdfield"><span class="_text" lang="_itunes" datafld="desc6">iTunes database</span></td>	                     
+							<td class="tdfield_padding" style="width:180px;">
+									<table cellspacing="0" cellpadding="0" border="0" width="180px">
+									<tr>
+										<td><div id="itunes_progressbar"></div></td>
+									</tr>
+									</table>
+					        </td>
+					        <td class="tdfield_padding" style="width:100px;"><div id="itunes_percent"></div></td>	
+							<td class="tdfield_padding" style="width:180px;"><div id="itunes_desc"></div></td>
+						</tr>
+				
+					</table>						
+				</div><!-- end of itunes_set-->
+				
+</body>
+</html>

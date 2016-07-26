@@ -1,0 +1,21 @@
+<project name="bali_test" default="bali_test">
+
+<target name="bali_test">
+<delete dir="tmp"/>
+<mkdir dir="tmp"/>
+<tar destfile="tmp/baliphpunittest.tar" basedir="."/>
+<sshexec host="10.101.60.76"
+	username="root"
+	password="my3g"
+        trust="yes"
+	command="cd /shares/Public;rm -rf baliphpunittest.tar testapp webapp"/>
+<scp file="tmp/baliphpunittest.tar" todir="root:my3g@10.101.60.76:/shares/Public" trust="yes"/>
+<sshexec host="10.101.60.76"
+        username="root"
+        password="my3g"
+        trust="yes" 
+        command="cd /shares/Public;tar xvf  baliphpunittest.tar;cd testapp/apitest;/usr/bin/php phpunit.php;cd /shares/Public/testapp/apitest; tar cvf unitlogs.tar unitlogs;"/>
+<scp trust="yes" file="root:my3g@10.101.60.76:/shares/Public/testapp/apitest/unitlogs.tar" todir="."/>
+</target>
+
+</project>

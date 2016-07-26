@@ -1,0 +1,252 @@
+<!-- ftp dialog -->
+<div id="FTPSetDiag" class="WDLabelDiag" style="display:none;">
+<div class="WDLabelHeaderDialogue" id="FTPSetDiag_title"><span class="_text" lang="_lan" datafld="ftp_access_set"></span></div>
+<div align="center"><div class="hr2"><hr></div></div>
+
+<!-- 1.FTP Set -->
+<div id="FTP_Set1" style="display:none;">
+	<div class="WDLabelBodyDialogue" style="border:#0000FF 0px solid;">
+		<div class="dialog_content" style="border:#0000FF 0px solid;">
+			<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="100%"> 
+				<tr>
+					<td class="tdfield" style="width:120px;min-width:120px;"><span class="_text" lang="_ftp" datafld="max_user">Max Users</span></td>
+		            <td class="tdfield_padding" colspan="2">
+		            		 <div class="select_menu">
+								<ul>
+					        		<li class="option_list">          
+					            		<div id="settings_networkFTPAccessMaxUsers_select" class="wd_select option_selected">
+												<div class="sLeft wd_select_l"></div>
+												<div class="sBody text wd_select_m" id="FTPSet_f_maxuser" rel=""></div>
+												<div class="sRight wd_select_r"></div>	
+										</div>		
+													
+										<ul class="ul_obj" id="FTPSet_f_maxuser_li"> 
+											<div class='ftp_min_scroll'>           														            	
+								                <li id="settings_networkFTPMaxUserLi0_select" rel="1" style="width:90px" class="li_start"><a href="#">1</a></li>
+								                <li id="settings_networkFTPMaxUserLi1_select" rel="2" style="width:90px"><a href="#">2</a></li>
+								                <li id="settings_networkFTPMaxUserLi2_select" rel="3" style="width:90px"><a href="#">3</a></li>
+								                <li id="settings_networkFTPMaxUserLi3_select" rel="4" style="width:90px"><a href="#">4</a></li>
+								                <li id="settings_networkFTPMaxUserLi4_select" rel="5" style="width:90px"><a href="#">5</a></li>
+								                <li id="settings_networkFTPMaxUserLi5_select" rel="6" style="width:90px"><a href="#">6</a></li>
+								                <li id="settings_networkFTPMaxUserLi6_select" rel="7" style="width:90px"><a href="#">7</a></li>
+								                <li id="settings_networkFTPMaxUserLi7_select" rel="8" style="width:90px"><a href="#">8</a></li>
+								                <li id="settings_networkFTPMaxUserLi8_select" rel="9" style="width:90px"><a href="#">9</a></li>
+								                <li id="settings_networkFTPMaxUserLi9_select" rel="10" style="width:90px" class="li_end"><a href="#">10</a></li>
+							            	</div>
+							            </ul>
+					     	   		</li>
+					     		 </ul>
+							</div>
+		            </td>
+				</tr>	 
+				 <tr>
+	            	<td class="tdfield" style="width:120px;min-width:120px;"><span class="_text" lang="_ftp" datafld="idle_time">Idle Time</span></td>
+	                <td class="tdfield_padding" colspan="2">
+	                	<table border="0" cellpadding="0" cellspacing="0">
+		            		<tr>
+	                			 <td><input type="text" name="settings_networkFTPAccessIdleTime_text" id="settings_networkFTPAccessIdleTime_text" size="10" value="10"></td>
+	                			 <td class="tdfield_padding_left_10"><span class="_text" lang="_mail" datafld="Minutes">Minutes</span></td>
+	                		</tr>
+	                	</table>		 
+	                </td>
+	            </tr>
+	            <tr>
+	            	<td class="tdfield" style="width:120px;min-width:120px;"><span class="_text" lang="_mail" datafld="port">Port</span></td>
+	                <td class="tdfield_padding" colspan="2"><input type="text" name="settings_networkFTPAccessPort_text" id="settings_networkFTPAccessPort_text"></td>
+	            </tr>
+		        <tr>
+		            	<td class="tdfield" style="width:120px;min-width:120px;"><span class="_text" lang="_ftp" datafld="flow_control">Flow Control</span></td>
+		             	<td class="tdfield_padding" colspan="2">
+		             		<button class="left_button _text" lang="_ftp" datafld="desc4" id="settings_networkFTPAccessFlowControlUnlimited_button" onclick="ftp_flow_control(1);"></button><button class="right_button _text" lang="_ftp" datafld="desc3" id="settings_networkFTPAccessFlowControlCustomize_button" onclick="ftp_flow_control(0);"></button>	
+		                </td>
+		         </tr> 
+		         <tr id="tr_FTPSet_Flow_Control_Customize" style="display:none;">
+		            	<td class="tdfield" style="width:120px;min-width:120px;"></td>
+		             	<td class="tdfield_padding" colspan="2">
+		             		<table border="0" cellpadding="0" cellspacing="0"><tr>	
+		                	<td><input type="text" name="settings_networkFTPAccessFlowK_text" id="settings_networkFTPAccessFlowK_text" size="4" value=""></td>
+				        	<td class="tdfield_padding_left_10"> x 10 KBs</td>
+				           </tr></table>
+		                </td>
+		         </tr>
+		         
+			</table>	
+		</div>	
+	</div>
+	
+	<div class="hrBottom2"><hr></div>
+	<button type="button" id="settings_networkFTPAccessCancel1_button" class="ButtonLeftPos close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+	<button type="button" id="settings_networkFTPAccessNext1_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button>
+</div><!-- end of 1.FTP_Set1 -->		
+
+<div id="FTP_Set2" style="display:none;">
+	<div class="WDLabelBodyDialogue" style="border:#0000FF 0px solid;">
+		<div class="dialog_content"  style="border:#0000FF 0px solid;">
+			<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="100%"> 
+				<tr>
+		            <td class="tdfield" style="width:120px;min-width:120px;"><span class="_text" lang="_ftp" datafld="passive_mode">Passive Mode</span></td>
+		            <td class="tdfield_padding" colspan="2">
+		                	 <button class="left_button _text" lang="_ftp" datafld="desc5" id="settings_networkFTPAccessPMDefault_button" onclick="ftp_active_passive('0');"></button><button class="right_button _text" lang="_ftp" datafld="desc3" id="settings_networkFTPAccessPMCustomize_button" onclick="ftp_active_passive('1');"></button>	
+		             </td>
+		        </tr> 
+		        <tr id="tr_FTPSet_Passive_Mode_Customize" style="display:none;">
+		            <td class="tdfield" style="width:120px;min-width:120px;">&nbsp;</td>
+		            <td class="tdfield_padding" colspan="2">
+		            		<table>
+		            			<tr>
+				                	 <td><input type="text" name="settings_networkFTPAccessPMStart_text" id="settings_networkFTPAccessPMStart_text"></td>
+				                	 <td> ~ </td>
+				                   <td><input type="text" name="settings_networkFTPAccessPMEnd_text" id="settings_networkFTPAccessPMEnd_text"></td>
+			                    </tr>
+		                	</table>
+		                </td>
+		        </tr> 
+		        <tr>
+		            <td class="tdfield" style="width:120px;min-width:120px;">&nbsp;</td>
+		            <td class="tdfield_padding" colspan="2">
+		            		<table>
+		            			<tr>
+				                	 <td><input type="checkbox" name="settings_networkFTPAccessMode_chkbox" id="settings_networkFTPAccessMode_chkbox" value="ON"></td>
+				                	 <td><label for="settings_networkFTPAccessMode_chkbox"><span class="_text" lang="_ftp" datafld="report">Report external IP in PASV mode</span></label></td>
+			                    </tr>
+		                	</table>
+		                </td>
+		        </tr>
+		        <tr id="tr_ftp_external_ip" style="display:none;">
+		                <td class="tdfield" style="width:120px;min-width:120px;">&nbsp;</td>
+		                <td class="tdfield_padding" colspan="2">
+		                	<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse">        
+		                	<tr>
+		                		<td><span class="_text" lang="_ftp" datafld="external_ip">External IP</span></td>
+		                   		<td class="tdfield_padding_left_10"><input type="text" name="settings_networkFTPAccessExternalIP_text" id="settings_networkFTPAccessExternalIP_text"></td>
+		                   		<td class="tdfield_padding_left_10">
+		                   				<button type="button" id="settings_networkFTPAccessExternalIP_button"><span class="_text" lang="_ftp" datafld="button1"></span></button><br>
+		                   		</td>
+		                	</tr>	
+		                	</table>	
+		                </td>
+					</tr>	 
+				  
+			</table>	
+		</div>	
+	</div>
+	
+	<div class="hrBottom2"><hr></div>
+	<button type="button" id="settings_networkFTPAccessBack2_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>	
+	<button type="button" id="settings_networkFTPAccessCancel2_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>	
+	<button type="button" id="settings_networkFTPAccessNext2_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button>
+</div><!-- end of 2.FTP_Set2-->
+
+<div id="FTP_Set3" style="display:none;">
+	<div class="WDLabelBodyDialogue"  style="border:#0000FF 0px solid;">
+		<div class="dialog_content" style="border:#0000FF 0px solid;">
+			<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" width="100%"> 
+				  <tr>
+		                <td class="tdfield" style="width:auto;"><span class="_text" lang="_ftp" datafld="client_language">Client Language</span></td>
+		                <td class="tdfield_padding" colspan="2"><div class="select_menu" id="Selector_AllCodepage_Create"></div>
+		                	<!--
+		                	<table border="0" cellpadding="0" cellspacing="0">
+		                		<tr>
+		                			<td><input type="text" size="16" name="settings_networkFTPAccessClientChar_text" id="settings_networkFTPAccessClientChar_text" onkeyup="ftp_codepage(0);" class="input_x6"></td>
+		                			<td class="tdfield_padding_left_10"><<</td>
+		                			<td class="tdfield_padding_left_10"><div class="select_menu" id="Selector_AllCodepage_Create"></div></td>
+		                		</tr>
+		                	</table>
+		                	-->
+		                </td>
+		            </tr>  
+		             <tr>
+		                  <td class="tdfield" style="width:120px;min-width:120px;"><span class="_text" lang="_ftp" datafld="ssl_tsl">SSL/TLS</span></td>
+		                  <td class="tdfield_padding" colspan="2">
+		                  	<table border="0" cellpadding="0" cellspacing="0">
+		                  		<tr>
+			                  		<td class="tdfield_padding"><input type="checkbox" name="f_tls" value="3" id="settings_networkFTPAccessTLS1_chkbox"></td>
+			                  		<td class="tdfield_padding">&nbsp;<label for="tls"><span class="_text" lang="_ftp" datafld="desc7">Implicit SSL</span></label></td>
+			                  	</tr>
+			                  	<tr>
+			                  		<td class="tdfield_padding"><input type="checkbox" name="f_tls" value="2" id="settings_networkFTPAccessTLS2_chkbox"></td>
+			                  		<td class="tdfield_padding">&nbsp;<label for="tls"><span class="_text" lang="_ftp" datafld="desc8">Explicit SSL</span></label></td>
+			                  	</tr>
+		                  	</table>	
+		                  </td>
+		              </tr>
+		              <tr>
+		                  <td class="tdfield" style="width:120px;min-width:120px;"><span class="_text" lang="_ftp" datafld="fxp">FXP</span></td>
+		                  <td class="tdfield_padding" colspan="2">
+		                  	<input type="checkbox" class="onoffswitch" id="settings_networkFTPAccessFXP_chkbox" name="settings_networkFTPAccessFXP_chkbox" value="true">
+						</td>	
+		              </tr>
+			</table>	
+			<br>&nbsp;
+		</div>	
+	</div>
+	
+	<div class="hrBottom2"><hr></div>
+	<button type="button" id="settings_networkFTPAccessBack3_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>	
+	<button type="button" id="settings_networkFTPAccessCancel3_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>	
+	<button type="button" id="settings_networkFTPAccessNext3_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button>
+</div><!-- end of 3.FTP_Set3 -->
+
+<!-- 4.FTP_Set4 : Block IP GUI -->
+<div id="FTP_Set4" style="display:none;">  
+	<div class="WDLabelBodyDialogue">
+		<div class="dialog_content" style="border:#0000FF 0px solid;">
+			<span class="_text" lang="_ftp" datafld="desc2"></span>
+			<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%">
+		         <tr>
+		            <td class="tdfield_padding" style="width:auto;"><input type="text" name="settings_networkFTPAccessBlockIP_text" id="settings_networkFTPAccessBlockIP_text" value="" size="32"></td>
+		            <td class="tdfield_padding" style="width:auto;padding-left:10px;">
+			              <div class="select_menu">
+									<ul>
+						        		<li class="option_list">          
+						            	<div id="settings_networkFTPAccessBlockIPType_select" class="wd_select option_selected">
+													<div class="sLeft wd_select_l"></div>
+													<div class="sBody text wd_select_m" id="FTPBlockIP_Set_Type" rel="1"><span class="_text" lang="_ftp" datafld="permanent"></span></div>
+													<div class="sRight wd_select_r"></div>	
+											</div>		
+											<ul class="ul_obj" id="FTPBlockIP_Set_releaseday_li">            														            	
+								                <li rel="5" class="li_start"><a href="#" onclick="ftp_blockip_active_blocktype('1');"><span class="_text" lang="_ftp" datafld="permanent"></span></a></li>
+								                <li rel="1440" class="li_end"><a href="#" onclick="ftp_blockip_active_blocktype('0');"><span class="_text" lang="_ftp" datafld="temporary"></span></a></li>
+								            </ul>
+						     	   		</li>
+						     		 </ul>
+								</div>
+			         </td>
+			         <td class="tdfield_padding" style="width:auto;padding-left:10px;">
+				               <div class="select_menu" style="height:25px" id="td_blockip_release_date">
+									<ul>
+						        		<li class="option_list">          
+						            		<div id="settings_networkFTPAccessBlockIPReleaseDay_select" class="wd_select option_selected">
+													<div class="sLeft wd_select_l"></div>
+													<div class="sBody text wd_select_m" id="FTPBlockIP_Set_releaseday" rel="5"><span class="_text" lang="_itunes" datafld="auto_refresh1"></span></div>
+													<div class="sRight wd_select_r"></div>	
+											</div>		
+											<ul class="ul_obj" id="FTPBlockIP_Set_releaseday_li">            														            	
+								                <li rel="5" class="li_start"><a href="#"><span class="_text" lang="_itunes" datafld="auto_refresh1"></span></a></li>
+								                <li rel="30"><a href="#"><span class="_text" lang="_itunes" datafld="auto_refresh3"></span></a></li>
+								                <li rel="60"><a href="#"><span class="_text" lang="_itunes" datafld="auto_refresh4"></span></a></li>
+								                <li rel="1440" class="li_end"><a href="#"><span class="_text" lang="_itunes" datafld="auto_refresh8"></span></a></li>
+								            </ul>
+						     	   		</li>
+						     		 </ul>
+								</div>
+					</td>
+					<td class="tdfield_padding" style="width:auto;padding-left:10px;"><button id="settings_networkFTPAccessBlockIPSave_button" class="_text" lang="_button" datafld="apply"></button></td>			
+		        </tr> 
+		  </table>
+		  <br><b><span class="_text" lang="_ftp" datafld="desc6"></span></b><br>
+		  
+		  <div style="height:200px;" id="Setting_networkFTPDiagBlockIPList_div">
+		  <table id="FTPBlockIP_List"></table>
+		</div>	
+			
+		</div>	
+	</div>
+	
+	<div class="hrBottom2"><hr></div>	
+	<button type="button" id="settings_networkFTPAccessBack4_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>	
+	<button type="button" id="settings_networkFTPAccessCancel4_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>	
+	<button type="button" id="settings_networkFTPAccessNext4_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="finish"></span></button>
+</div><!-- end of 4.FTP_Set4 -->
+			
+</div>

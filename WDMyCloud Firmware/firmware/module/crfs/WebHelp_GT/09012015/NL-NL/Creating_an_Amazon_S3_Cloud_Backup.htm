@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="MS-HAID" content="Creating an Amazon S3 Cloud Backup" />
+<meta http-equiv="Content-Language" content="nl-NL" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Een Amazon S3-cloudback-up maken</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Een back-up maken van uw persoonlijke cloud\nCloudback-ups\nEen Amazon S3-cloudback-up maken");
+addButton("show",BTN_TEXT,"Weergeven","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("index.htm", "", ">", "Startpagina", "welcome.htm");
+document.write("<a href=\"Creating_a_USB_Backup.htm\">Een back-up maken van uw persoonlijke cloud<\/a> > <a href=\"What_is_a_Cloud_Backup.htm\">Cloudback-ups<\/a> > Een Amazon S3-cloudback-up maken<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Een Amazon S3-cloudback-up maken</h1>
+<p class="Body"><span style="font-weight: bold;">Opmerking</span>: Voordat 
+ u uw cloudback-up maakt, moet u zich aanmelden voor Amazon S3 op <a href="http://aws.amazon.com/s3" 
+	 target="_blank">http://aws.amazon.com/s3</a>.</p>
+<p class="Body">Wanneer uw Amazon S3-account gereed is, volgt u de volgende 
+ stappen om een cloudback-up te maken.</p>
+<ol style="list-style: square;">
+	<li style="list-style: none; display: inline;"><ol style="list-style: decimal;">
+		<li class="n1">Klik op <b>Back-ups</b>.</li>
+		<li class="n1">Klik op <span style="font-weight: bold;">Cloud back-ups</span>.</li>
+		<li class="n1">Klik op de knop <b>Amazon S3</b> bovenaan het venster.<img 
+		 src="Graphics/image016.png" alt="" width="90" height="18" border="0" /></li>
+		<li class="n1">Klik op <b>Maken</b>.</li>
+		<li class="n1">Voer een taaknaam in voor uw cloudback-up.</li>
+		<li class="n1">Klik op <b>Volgende</b>.</li>
+		<li class="n1">Voer de volgende gegevens in die u van Amazon S3 
+		 hebt gekregen:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold;">Regio</b>: Selecteer 
+		 de regio die u gebruikt voor uw cloud in het keuzemenu.</li>
+		<li class="b1"><b style="font-weight: bold;">Toegangssleutel</b>: 
+		 Voer de toegangssleutel in die u hebt gekregen van Amazon S3.</li>
+		<li class="b1"><b style="font-weight: bold;">Privésleutel</b>: 
+		 Voer de privésleutel in die u hebt gekregen van Amazon S3.</li>
+		<li class="b1"><b style="font-weight: bold;">Extern pad</b>: Voer 
+		 het externe pad in voor uw cloud. Dit is normaal gesproken de 
+		 naam van uw bucket.</li>
+	</ul>
+	<ol start="8" style="list-style: decimal;">
+		<li class="n1">Klik op <b>Volgende</b>.</li>
+		<li class="n1">In het veld Type selecteert u een van de volgende 
+		 opties:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold;">Uploaden:</b> Maakt 
+		 een back-up van de gegevens op uw My Cloud Mirror naar uw Amazon 
+		 S3-bucket.</li>
+		<li class="b1"><b style="font-weight: bold;">Downloaden:</b> Maakt 
+		 een back-up van uw Amazon S3-bucket naar uw My Cloud Mirror-server.</li>
+	</ul>
+	<ol start="10" style="list-style: decimal;">
+		<li class="n1">In het veld Type back-up selecteert u het type back-up 
+		 dat u wilt uitvoeren in het keuzemenu. De mogelijke opties zijn:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold;">Bestaande bestanden 
+		 overschrijven</b>: Hiermee worden bestanden in de doelmap overschreven 
+		 die dezelfde naam hebben als het bronbestand.</li>
+		<li class="b1"><b style="font-weight: bold;">Volledige back-up</b>: 
+		 Maakt elke keer dat de back-up wordt uitgevoerd een aparte map 
+		 met alle back-upgegevens.</li>
+		<li class="b1"><b style="font-weight: bold;">Incrementele back-up</b>: 
+		 Overschrijft bestanden met bronbestanden die nieuwer zijn dan 
+		 de doelbestanden.</li>
+	</ul>
+	<ol start="11" style="list-style: decimal;">
+		<li class="n1">Klik op <span style="font-weight: bold;">Volgende</span>.</li>
+		<li class="n1">In het veld Lokaal pad voert u een pad in voor de 
+		 back-up op uw My Cloud Mirror-apparaat.</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">Klik op <span style="font-weight: bold;">Bladeren</span> 
+		 en blader naar een locatie voor uw back-up op het apparaat.<br />
+		(Bijvoorbeeld Volume_1/backup)</li>
+	</ul>
+	<ol start="13" style="list-style: decimal;">
+		<li class="n1">Klik op <img src="Graphics/toggle_button.png" alt="" 
+									 width="20" height="15" border="0" />&#160;&#160;om 
+		 de functie Automatische update in te schakelen. Deze werkt uw 
+		 back-up automatisch bij op basis van een planning die u maakt.</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">Als u de functie Automatische update inschakelt:</li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: circle;">
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">Selecteer 
+			 de planning voor de automatische update: Dagelijks, Wekelijks 
+			 of Maandelijks</p></li>
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">Selecteer 
+			 de tijd voor de automatische update in het keuzemenu (optie 
+			 Dagelijks).</p></li>
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">Selecteer 
+			 de datum en tijd voor de automatische update in de keuzemenu&amp;apos;s 
+			 (Wekelijks of Maandelijks).</p></li>
+		</ul></li>
+	</ul>
+	<ol start="14" style="list-style: decimal;">
+		<li class="n1">Klik op <b>Volgende</b>.</li>
+		<li class="n1">Controleer uw instellingen en klik op <b>Voltooien</b>. 
+		 De Amazon S3-cloudback-up is gemaakt.</li>
+	</ol></li>
+</ol>
+<p class="Body" style="margin-left: 60px;"><span style="font-weight: bold;">OPMERKING</span>: 
+ Ga naar uw Amazon S3-cloudback-upbucket om de back-ups voor uw apparaat 
+ te bekijken.</p>
+<p class="ListContinue2CxSpLast">&#160;</p>
+<p>
+
+<a href="javascript:void(0);" onclick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) &gt;=2 &amp;&amp; typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','Een ElephantDrive-cloudback-up inschakelen','Enabling_an_ElephantDrive_Cloud_Backup.htm','Wat is een cloudback-up?','What_is_a_Cloud_Backup.htm');return false;" title="Zie ook"><img src="ss_btn_zie_ook.gif" border="0" height="17" width="44" alt="Zie ook" /></a>
+
+
+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt;">© 2015 Western Digital Technologies, Inc. 
+	 <span lang="de-DE" xml:lang="de-DE"><b style="font-weight: normal;">Alle 
+	 rechten voorbehouden</b></span><span lang="de-DE" xml:lang="de-DE">.</span></p>
+</div>
+<script type="text/javascript" language="JavaScript">//<![CDATA[
+if (parseInt(navigator.appVersion) >= 3 && typeof (WritePopupMenuLayer) == "function")
+  WritePopupMenuLayer();
+//]]></script><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>
+

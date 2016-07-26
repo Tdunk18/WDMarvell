@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="MS-HAID" content="Creating an Amazon S3 Cloud Backup" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Creating an Amazon S3 Cloud Backup</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Backing Up your Personal Cloud\nCloud Backups\nCreating an Amazon S3 Cloud Backup");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("index.htm", "", ">", "Home", "welcome.htm");
+document.write("<a href=\"creating_a_usb_backup.htm\">Backing Up your Personal Cloud<\/a> > <a href=\"what_is_a_cloud_backup.htm\">Cloud Backups<\/a> > Creating an Amazon S3 Cloud Backup<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Creating an Amazon S3 Cloud Backup</h1>
+<p class="Body"><span style="font-weight: bold;">Note</span>: Before creating 
+ your Cloud backup, sign-up with for the Amazon S3 service at <a href="http://aws.amazon.com/s3" 
+	 target="_blank">http://aws.amazon.com/s3</a>.</p>
+<p class="Body">Once your Amazon S3 account is set up, use the following 
+ steps to create a cloud backup.</p>
+<ol style="list-style: square;">
+	<li style="list-style: none; display: inline;"><ol style="list-style: decimal;">
+		<li class="n1">Click <b>Backups</b>.</li>
+		<li class="n1">Click <span style="font-weight: bold;">Cloud Backups</span>.</li>
+		<li class="n1">Click the <b>Amazon S3</b> button at the top of 
+		 the screen.<img src="graphics/image016.png" alt="" width="90" height="18" border="0" /></li>
+		<li class="n1">Click <b>Create</b>.</li>
+		<li class="n1">Enter a Job Name for your cloud backup.</li>
+		<li class="n1">Click <b>Next</b>.</li>
+		<li class="n1">Enter the following information supplied by Amazon 
+		 S3:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold;">Region</b>: Select 
+		 the Region used for your cloud from the drop-down menu.</li>
+		<li class="b1"><b style="font-weight: bold;">Access Key</b>: Enter 
+		 the Access Key supplied to you by Amazon S3.</li>
+		<li class="b1"><b style="font-weight: bold;">Private Key</b>: Enter 
+		 the Private Key supplied to you by Amazon S3.</li>
+		<li class="b1"><b style="font-weight: bold;">Remote Path</b>: Enter 
+		 the remote path for your cloud. This is normally your Bucket name.</li>
+	</ul>
+	<ol start="8" style="list-style: decimal;">
+		<li class="n1">Click <b>Next</b>.</li>
+		<li class="n1">In the Type field select one of the following options:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold;">Upload:</b> Backs 
+		 up your My Cloud Mirror data to your Amazon S3 bucket.</li>
+		<li class="b1"><b style="font-weight: bold;">Download:</b> Backs 
+		 up your Amazon S3 bucket to your My Cloud Mirror server.</li>
+	</ul>
+	<ol start="10" style="list-style: decimal;">
+		<li class="n1">In the Backup Type field, select the type of backup 
+		 you’d like to perform from the drop-down menu. Options include:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold;">Overwrite existing 
+		 files</b>: Overwrites files in the target folder that have the 
+		 identical name as your source file.</li>
+		<li class="b1"><b style="font-weight: bold;">Full Backup</b>: Creates 
+		 a separate folder containing all of the backup data each time 
+		 the backup is performed.</li>
+		<li class="b1"><b style="font-weight: bold;">Incremental Backup</b>: 
+		 Overwrites files with source files that are newer than the target 
+		 files.</li>
+	</ul>
+	<ol start="11" style="list-style: decimal;">
+		<li class="n1">Click <span style="font-weight: bold;">Next</span>.</li>
+		<li class="n1">In the Local Path field, enter a path for your backup 
+		 on your My Cloud Mirror device.</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">Click <span style="font-weight: bold;">Browse</span> 
+		 to browse to a location for your backup on the device.<br />
+		(Example Volume_1/backup)</li>
+	</ul>
+	<ol start="13" style="list-style: decimal;">
+		<li class="n1">Click <img src="graphics/toggle_button.png" alt="" width="20" height="15" border="0" />&#160;&#160;to 
+		 activate the Autoupdate feature. This automatically updates your 
+		 backup based on a schedule you create.</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">If you activate the Autoupdate feature:</li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: circle;">
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">Select 
+			 the Autoupdate schedule: Daily, Weekly, or Monthly</p></li>
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">Select 
+			 the Autoupdate Time from the drop-down menu (Daily option).</p></li>
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">Select 
+			 Autoupdate Date and Time from the drop-down menus (Weekly 
+			 or Monthly option).</p></li>
+		</ul></li>
+	</ul>
+	<ol start="14" style="list-style: decimal;">
+		<li class="n1">Click <b>Next</b>.</li>
+		<li class="n1">Review your settings, then click <b>Finish</b>. 
+		 Your Amazon S3 Cloud backup is created.</li>
+	</ol></li>
+</ol>
+<p class="Body" style="margin-left: 60px;"><span style="font-weight: bold;">NOTE</span>: 
+ Access your Amazon S3 Cloud backup bucket to view your device backups.</p>
+<p class="ListContinue2CxSpLast">&#160;</p>
+<p>
+
+<a href="javascript:void(0);" onclick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) &gt;=2 &amp;&amp; typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','Enabling an ElephantDrive Cloud Backup','enabling_an_elephantdrive_cloud_backup.htm','What is a Cloud Backup','what_is_a_cloud_backup.htm');return false;" title="See Also"><img src="ss_btn_see_also.gif" border="0" height="17" width="52" alt="See Also" /></a>
+
+
+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt;">© 2015 Western Digital Technologies, Inc. 
+	 All rights reserved.</p>
+</div>
+<script type="text/javascript" language="JavaScript">//<![CDATA[
+if (parseInt(navigator.appVersion) >= 3 && typeof (WritePopupMenuLayer) == "function")
+  WritePopupMenuLayer();
+//]]></script><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>
+
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>
+

@@ -1,0 +1,302 @@
+0001 = Systeemtemperatuur te hoog
+0001D = De systeemtemperatuur ligt boven de normale bedrijfstemperatuur. Verplaats het systeem naar een koelere locatie. Als er geen actie wordt ondernomen, wordt het systeem uitgeschakeld wanneer de temperatuur de kritieke limiet bereikt.
+
+0002 = Systeemtemperatuur te laag
+0002D = De systeemtemperatuur ligt beneden de opgegeven minimumtemperatuur. Verplaats het systeem naar een warmere locatie.
+
+0003 = SMART-fout van station
+0003D = De zelfcontrole van het station %1 is mislukt. Neem contact op met WD-klantenservice.
+
+0004 = Volumefout
+0004D = Het gegevensvolume %1 op het station is niet toegankelijk. Neem contact op met WD-klantenservice.
+
+0005 = Thermische uitschakeling volgt
+0005D = De temperatuur van uw systeem loopt te hoog op en het systeem wordt spoedig automatisch uitgeschakeld wanneer er geen actie wordt ondernomen.
+
+0006 = Onmiddellijke thermische uitschakeling
+0006D = Uw systeem is kritiek oververhit en wordt onmiddellijk uitgeschakeld om schade te voorkomen.
+
+2020 = Systeem afsluiten...
+2020D = Het systeem wordt afgesloten.
+
+1020 = Systeem afsluiten...
+1020D = Het systeem wordt afgesloten.
+
+0020 = Systeem afsluiten...
+0020D = Het systeem wordt afgesloten.
+
+0029 = Ventilator werkt niet
+0029D = De systeemventilator werkt niet. Neem contact op met WD-klantenservice.
+
+0031 = Op UPS-voeding
+0031D = Het systeem draait op UPS-voeding. %1% voeding resterend.
+
+0201 = Station defect
+0201D = Station in sleuf %1 is defect. Vervang het defecte station. Neem contact op met WD-klantenservice.
+
+0207 = Station bijna defect
+0207D = Station %1 is bijna defect. Vervang het defecte station. Neem contact op met WD-klantenservice.
+
+0208 = Volume verslechterd
+0208D = Volume %1 verslechterd. Controleer de status van het station door Schijftest uit te voeren in Instellingen >> Hulpprogramma's.
+
+0209 = Volumemigratie in voortgang
+0209D = Migratie volume %1 in voortgang - %2%
+
+2209 = Volumemigratie in voortgang
+2209D = Voortgang migratie volume %1: %2 %
+
+0210 = Volume opnieuw opbouwen...
+0210D = Duur in voortgang opbouwen volume %1: %2 minuten
+
+2210 = Volume opnieuw opbouwen...
+2210D = Duur in voortgang opbouwen volume %1: %2 minuten
+
+0212 = Opbouwen volume mislukt
+0212D = Het opbouwen van volume %1 is mislukt. Controleer de status van stations door Schijftest uit te voeren in Instellingen >> Hulpprogramma's.
+
+0213 = Uitbreiden volume mislukt
+0213D = Het uitbreiden van volume %1 is mislukt. Controleer de status van stations door Schijftest uit te voeren in Instellingen >> Hulpprogramma's.
+
+0216 = RAID roamen ingeschakeld
+0216D = RAID roamen is ingeschakeld.
+
+2216 = RAID roamen ingeschakeld
+2216D = RAID roamen is ingeschakeld.
+
+0224 = Vervang station met rood lampje
+0224D = Vervang station met rode led.
+
+2041 = Ethernetpoort %1 verbonden op 10/100
+2041D = Verbindingssnelheid beperkt tot 10/100 Mbps-snelheden.
+
+0042 = 50% UPS-voeding resterend
+0042D = Het systeem draait op UPS-voeding met 50% vermogen resterend. Sluit uw systeem zo snel mogelijk aan op een nieuwe voedingsbron.
+
+0043 = 15% UPS-voeding resterend
+0043D = Het systeem draait op UPS-voeding met 15% vermogen resterend. Sluit uw systeem onmiddellijk aan op een nieuwe voedingsbron.  Als u geen actie onderneemt, schakelt het systeem uit als de UPS geen vermogen meer heeft.
+
+0044 = UPS geen vermogen meer
+0044D = De UPS-voeding heeft geen resterend vermogen meer. Het systeem wordt onmiddellijk afgesloten om schade te voorkomen.
+
+1001 = Volumegebruik ligt boven 95%
+1001D = Uw volume %1 heeft bijna de volledige capaciteit bereikt zodat er problemen met de prestaties kunnen gaan optreden. Maak een back-up van uw bestanden en verplaats vervolgens bestanden van uw station om vrije ruimte te creëren. Probeer de prullenbak leeg te maken om ruimte vrij te maken, als deze is ingeschakeld.
+
+1002 = Netwerkkoppeling uit
+1002D = De netwerkkoppeling %1 is uitgevallen of is intermitterend geworden. Controleer uw netwerkverbinding.
+
+1010 = Netwerkkoppeling uit
+1010D = De netwerkkoppeling %1 is uitgevallen of is intermitterend geworden. Controleer uw netwerkverbinding.
+
+1003 = Firmware bijwerken mislukt
+1003D = Het bijwerken van de firmware is mislukt. Probeer het opnieuw. Als de fout blijft bestaan, neemt u contact op met WD-klantenservice.
+
+1004 = Hoge systeemtemperatuur
+1004D = Uw apparaat is momenteel oververhit. Zorg dat uw apparaat voldoende wordt geventileerd.
+
+1021 = Herstel configuratie mislukt
+1021D = Het herstellen van de configuratie is mislukt.
+
+0022 = Storing netvoeding
+0022D = Storing netvoeding %1.
+
+1022 = Storing netvoeding
+1022D = Storing netvoeding %1. Controleer de netvoeding.
+
+1030 = Opslag beneden drempel
+1030D = Opslag ligt beneden drempel.
+
+1035 = Productverbeteringsprogramma
+1035D = Wilt u meewerken aan verbetering van ons product? Meer informatie %1
+
+0036 = Controle bestandssysteem mislukt
+0036D = De controle van het bestandssysteem heeft fouten in uw configuratie gedetecteerd. Maak een back-up van uw gegevens en maak uw stationsconfiguratie opnieuw om deze fouten te herstellen. Neem contact op met WD-klantenservice als het probleem zich blijft voordoen.
+
+1036 = Controle bestandssysteem mislukt
+1036D = De controle van het bestandssysteem heeft fouten in uw configuratie gedetecteerd. Maak een back-up van uw gegevens en maak uw stationsconfiguratie opnieuw om deze fouten te herstellen. Neem contact op met WD-ondersteuning als het probleem zich blijft voordoen.
+
+1045 = Fout bestandssysteem gecorrigeerd
+1045D = De controle van het bestandssysteem heeft fouten in uw configuratie gedetecteerd en gecorrigeerd.
+
+1037 = Systeem niet gereed
+1037D = Het systeem is bezet. Wacht tot het aan-uitlampje continu blauw brandt voordat u een volgend station invoegt.
+
+1120 = Niet-ondersteund USB-apparaat
+1120D = Er is een niet-ondersteund USB-apparaat gedetecteerd (leverancier: %1, model: %2, serienummer: %3). Verwijder het USB-apparaat.
+
+1121 = Niet-ondersteund bestandssysteem
+1121D = Er is een niet-ondersteund bestandssysteem gedetecteerd op een USB-apparaat (leverancier %1, model: %2, serienummer: %3, bestandssysteem: %4, label: %5). Verwijder het USB-apparaat.
+
+1122 = Kon share niet maken
+1122D = Er kon geen share worden gemaakt op een USB-apparaat (leverancier: %1, model: %2, serienummer: %3, bestandssysteem: %4, label: %5, naam share: %6)
+
+1123 = Onveilige apparaatverwijdering
+1123D = Er is een USB-apparaat (leverancier: %1, model: %2, serienummer: %3) verwijderd zonder correct uit te werpen, waardoor er mogelijk gegevens op %2 zijn beschadigd .
+
+1124 = Kan het USB-apparaat niet koppelen
+1124D = Kan het USB-apparaat niet koppelen (leverancier: %1, model: %2, serienummer: %3). Controleer het USB-apparaat.
+
+1127 = Kan geen back-up van bestanden van USB-apparaat maken
+1127D = Kan geen back-up van bestanden van USB-apparaat maken. Controleer de apparaatconnectiviteit.
+
+1130 = Back-up maken van USB in wachtrij gezet
+1130D = Een voorgaande back-uptaak is nog bezig. Het maken van de USB-back-up wordt automatisch gestart wanneer de voorgaande taak is voltooid.
+
+1400 = Fout tijdens externe back-up
+1400D = Er is een fout opgetreden tijdens uw externe back-uptaak genaamd: %1. Controleer uw systeeminstellingen.
+
+1401 = Fout tijdens herstel externe back-up
+1401D = Er is een fout opgetreden tijdens uw externe hersteltaak genaamd: %1. Controleer uw systeeminstellingen.
+
+2402 = Externe back-up geslaagd
+2402D = Uw externe back-uptaak genaamd: %1, is geslaagd op het apparaat: %2, naar de share: %3
+
+1402 = Externe back-up geslaagd
+1402D = Uw externe back-uptaak genaamd: %1, is geslaagd op het apparaat: %2, naar de share: %3
+
+2403 = Herstel externe back-up geslaagd
+2403D = Uw externe hersteltaak genaamd: %1, is geslaagd op het apparaat: %2, naar de share: %3
+
+1403 = Herstel externe back-up geslaagd
+1403D = Uw externe hersteltaak genaamd: %1, is geslaagd op het apparaat: %2, naar de share: %3
+
+2001 = Systeem opnieuw gestart
+2001D = Het systeem is opnieuw gestart.
+
+1011 = Nieuwe firmware beschikbaar
+1011D = Er is een nieuwe versie van de firmware uitgegeven. Werk uw systeem bij.
+
+2002 = Nieuwe firmware beschikbaar
+2002D = Er is een nieuwe versie van de firmware uitgegeven. Werk uw systeem bij.
+
+2003 = Temperatuur normaal
+2003D = De systeemtemperatuur ligt binnen het opgegeven temperatuurbereik.
+
+2004 = Bijwerken firmware geslaagd
+2004D = De firmware is bijgewerkt naar %1.
+
+2005 = Herstellen fabrieksinstellingen geslaagd
+2005D = De fabrieksinstellingen van uw systeem zijn hersteld.
+
+2006 = U komt in aanmerking voor een nieuwe software-upgrade!
+2006D = Open het bedieningspaneel van uw WD My Cloud-apparaat voor meer informatie.
+
+2024 = Firmware-update downloaden...
+2024D = De firmware-update wordt gedownload.
+
+2026 = Firmware-update installeren...
+2026D = De firmware-update wordt geïnstalleerd.
+
+1028 = Opnieuw opstarten vereist
+1028D = Opnieuw opstarten is vereist.
+
+2028 = Opnieuw opstarten vereist
+2028D = Opnieuw opstarten is vereist.
+
+2032 = Systeem bevindt zich in stand-bymodus
+2032D = Systeem bevindt zich in stand-bymodus.
+
+1033 = Systeem wordt opnieuw opgestart
+1033D = Systeem wordt opnieuw opgestart.
+
+2033 = Systeem wordt opnieuw opgestart
+2033D = Systeem wordt opnieuw opgestart.
+
+1038 = Opslagquotum bijna verbruikt
+1038D = Opslagquotum voor [%1] is bijna verbruikt. Maak een back-up van bestanden en verplaats vervolgens bestanden van het station om vrije ruimte te creëren.
+
+2038 = Opslagquotum bijna verbruikt
+2038D = Opslagquotum voor [%1] is bijna verbruikt. Maak een back-up van bestanden en verplaats vervolgens bestanden van het station om vrije ruimte te creëren.
+
+1039 = Opslagquotum volledig verbruikt
+1039D = Opslagquotum voor [%1] heeft limiet bereikt. Maak een back-up van bestanden en verplaats vervolgens bestanden van het station om vrije ruimte te creëren.
+
+2039 = Opslagquotum volledig verbruikt
+2039D = Opslagquotum voor [%1] heeft limiet bereikt. Maak een back-up van bestanden en verplaats vervolgens bestanden van het station om vrije ruimte te creëren.
+
+2040 = Niet-ondersteund USB-apparaat
+2040D = Niet-ondersteund USB-apparaat
+
+2121 = Vergrendeld USB-apparaat
+2121D = Er is een vergrendeld USB-apparaat gedetecteerd (leverancier: %1, model: %2, serienummer: %3).
+
+2126 = Bestanden gekopieerd van USB-apparaat
+2126D = Bestanden gekopieerd van <%1> naar <%2>.
+
+2128 = Bestanden worden gekopieerd
+2128D = Bestanden worden gekopieerd van USB-apparaat.
+
+2129 = Bestanden verplaatst van USB-apparaat
+2129D = Bestanden verplaatst van <%1> naar <%2>.
+
+2131 = Bestanden worden verplaatst
+2131D = Bestanden worden verplaatst van USB-apparaat.
+
+1200 = Niet-ondersteund station
+1200D = Niet-ondersteund station in sleuf %1. Vervang het geplaatste station door een goedgekeurd station. U kunt een lijst met goedgekeurde stations downloaden via: www.wd.com
+
+2200 = Niet-ondersteund station
+2200D = Niet-ondersteund station in sleuf %1. Vervang het geplaatste station door een goedgekeurd station. U kunt een lijst met goedgekeurde stations downloaden via: www.wd.com
+
+2202 = Station te klein
+2202D = Station te klein in locatie %1
+
+2203 = Station wordt geïnitialiseerd
+2203D = Het station wordt geïnitialiseerd in locatie %1
+
+2211 = Integriteit van opslag controleren...
+2211D = De integriteit van de opslag wordt gecontroleerd.
+
+2214 = Station geplaatst
+2214D = Er is een nieuw station geplaatst in sleuf %1. Als u dit station aan de RAID-set van uw systeem wilt toevoegen, gaat u naar Opslag >> RAID en klikt u op de knop RAID-modus wijzigen.
+
+0215 = Station verwijderd
+0215D = Station verwijderd uit sleuf %1
+
+2215 = Station verwijderd
+2215D = Station verwijderd uit sleuf %1. Controleer uw systeem.
+
+2217 = Geen stations geïnstalleerd
+2217D = Er zijn geen stations geïnstalleerd. Voeg stations toe om te beginnen met het gebruik van uw systeem. U kunt een nieuw station kopen via: www.wd.com
+
+2218 = Warme-reservestation toegevoegd aan RAID-reeks
+2218D = Warme-reservestation toegevoegd aan RAID-reeks.
+
+2219 = RAID-migratie voltooid
+2219D = RAID-migratie voltooid.
+
+2220 = Opnieuw opbouwen RAID voltooid
+2220D = Opnieuw opbouwen RAID voltooid.
+
+2221 = NAS-station anders dan van WD Red geplaatst
+2221D = NAS-station anders dan van WD Red geplaatst. De WD My Cloud is ontworpen voor optimaal gebruik met WD Red NAS-harde schijven.
+
+2222 = Volume is geformatteerd
+2222D = Volume %1 is geformatteerd.
+
+2223 = Voortgang van volume uitbreiden
+2223D = Voortgang van volume %1 uitbreiden: %2%
+
+2300 = Mediascan gestopt
+2300D = Het apparaat is gestopt met het scannen van uw media. Hierdoor worden sommige miniaturen niet weergegeven bij externe toegang. Start uw WD My Cloud-systeem opnieuw om het scannen voort te zetten.
+
+1501 = Update voor app beschikbaar
+1501D = %1 er is een update voor de app beschikbaar. Bijwerken.
+
+1502 = Virus gevonden
+1502D = Basisbeginselen antivirus: Virusscan voltooid en er is een virus gevonden. Controleer het virusscanrapport voor details.
+
+2503 = Virusscan voltooid
+2503D = Basisbeginselen antivirus: Virusscan voltooid. Geen virus gevonden.
+
+2504 = Geplande virusscan gestart
+2504D = Basisbeginselen antivirus: Geplande virusscan gestart.
+
+2505 = Geplande virusscan gestopt
+2505D = Basisbeginselen antivirus: Geplande virusscan gestopt doordat eindtijd is bereikt. Scannen is niet voltooid. 
+
+1103 = Er is een fout opgetreden bij het herstellen van gegevens op basis van uw herstelpunt
+1103D = %4 - Er is een fout opgetreden bij het herstellen van gegevens op basis van uw herstelpunt %1 op de share %2 op %3.
+
+2103 = Uw gegevens zijn hersteld op basis van uw herstelpunt
+2103D = Uw gegevens zijn hersteld op basis van uw herstelpunt %1 op de share %2 op %3.

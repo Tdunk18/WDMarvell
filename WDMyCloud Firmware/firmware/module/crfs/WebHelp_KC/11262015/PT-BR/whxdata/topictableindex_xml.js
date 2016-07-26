@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><cki><ck fm=\"Sobre o Status do Disco\" to=\"Configurando opções de conexão\" num=\"56\"/><ck fm=\"Ligar/desligar o acesso à nuvem\" to=\"Excluindo um compartilhamento\" num=\"56\"/><ck fm=\"Sobre Compartilhamentos\" to=\"O que é um armazenamento de RAID?\" num=\"40\"/></cki>";

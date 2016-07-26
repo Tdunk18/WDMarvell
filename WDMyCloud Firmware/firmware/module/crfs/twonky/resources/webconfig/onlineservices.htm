@@ -1,0 +1,37 @@
+<link id="oschklink" rel="stylesheet" onload="osLoadSuccess()">
+<div id="beacon"></div>
+<script>
+   document.getElementById('osIframe').style.display = 'none';
+   document.getElementById('onlinenotavail').style.display = 'inline';
+   function osLoadSuccess() {
+      document.getElementById('onlinenotavail').style.display = 'none';
+      document.getElementById('osIframe').style.display = 'inline';
+   }
+   // Workaround for Safari 5.x -- it does not process onload for osLoadSuccess
+   if(navigator.vendor && navigator.vendor.indexOf('Apple') !== -1 &&     
+    navigator.userAgent && navigator.userAgent.indexOf('Version/5') !== -1) {
+      var _timer=setInterval(function()
+      {
+          if (document && document.getElementById('beacon') &&
+		document.getElementById('beacon').clientWidth==42 )
+          {
+              clearInterval(_timer);
+              osLoadSuccess();
+          }
+       }, 200);
+   }
+</script>
+<div id="onlineServicesContainer">
+    <div class="serverSettingsTitlebarWrapper">
+        <div class="subHeader nomargin">
+            <span class="subheaderTitle" string="onlineservices"></span>
+        </div>
+    </div>		
+	  <!--div class="paddingLeft" key="portalinfo"></div>  -->
+    <div class="paddingLeft">
+        <iframe width="750" height="1200" id="osIframe" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+        <div id="onlinenotavail">
+	<span class="largestFont" string="onlinesvcsunavailable"></span>
+        </div>
+    </div>                                     
+</div>

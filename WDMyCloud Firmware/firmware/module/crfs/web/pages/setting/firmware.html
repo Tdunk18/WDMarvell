@@ -1,0 +1,399 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="PRAGMA" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+</head>
+<style>
+
+.ui-widget-header {
+	background: #15ABFF;
+}
+
+.ui-widget-content {
+		height: 4px;
+		border:0;
+		background: #C8C8C8 !important;;
+		border-radius: 0;
+}
+
+
+</style>
+<script type="text/javascript" src="/web/function/fw_select.js"></script>
+<script type="text/javascript">
+var MICROP_FUNCTION = 1;
+
+function getFile() {
+	document.getElementById("upfile").click();
+}
+
+function sub(obj) {
+	var file = obj.value;
+	var fileName = file.split("\\");
+	document.getElementById("id_fw").innerHTML = fileName[fileName.length - 1];
+}
+
+function page_load() {
+	var sys_time = (new Date()).getTime();
+	$("#upload_frame").attr("src", "/web/setting/upload.html?r=" + sys_time);
+
+	init_tb_sch_info();
+	//init_tb_sch();
+	init_auto_fw_version();
+	draw_select();
+	init_select();
+	hide_select();
+
+
+	initDiag("/web/setting/fwDiag.html?r=" + sys_time);
+
+
+	//schedule
+	$("#id_sch_top_main").find(".option_list ul li a").click(function () {
+		if($("#id_sch").attr("rel")=="8")
+		{
+			$("#id_pm_top_main, #id_time_top_main").hide();
+		}
+		else
+		{
+			$("#id_pm_top_main, #id_time_top_main").show();
+		}
+		show('id_tb_sch_save');
+	});
+	$("#id_pm_top_main").find(".option_list ul li a").click(function () {
+		show('id_tb_sch_save');
+	});
+	$("#id_time_top_main").find(".option_list ul li a").click(function () {
+		show('id_tb_sch_save');
+	});
+
+	wd_ajax({
+		type: "POST",
+		async: true,
+		cache: false,
+		url: "/cgi-bin/system_mgr.cgi",
+		data: "cmd=get_fw_data",
+		success: function (data) {
+			if (data == "no")
+				$("#settings_fwUpdate_value").text("N/A");
+			else
+			$("#settings_fwUpdate_value").text(multi_lang_format_time(data));
+
+		}
+	});
+
+	/*wd_ajax({
+		type: "POST",
+		async: false,
+		cache: false,
+		url: "/cgi-bin/system_mgr.cgi",
+		data: "cmd=get_auto_fw_version",
+		success: function (xml) {
+
+			$(xml).find('fw').each(function (index) {
+				var str = "";
+				var new_str = $(this).find('new').text();
+				if (new_str == 0 || new_str == "-1") {
+					//str = "no upgrade"
+					//$("#id_new_firm_version").text(str);
+					hide('id_new_fw_td');					
+					show('id_ck_fw_td')
+					show('id_ck_fw_td_tip')
+
+				} else {
+
+					var version = $(this).find('version').text();
+					var path = $(this).find('path').text();
+
+					$("#id_new_firm_version").text(version);
+					show('id_new_firm_version')
+					show('id_new_fw_td');
+					hide('id_ck_fw_td')
+					hide('id_ck_fw_td_tip')
+				}
+			});
+		}
+
+	});*/
+	$("#settings_fwVersion_value").text(FW_VERSION);
+	if (MICROP_FUNCTION == 1)
+	{
+		wd_ajax({
+			type: "POST",
+			async: false,
+			cache: false,
+			url: "/cgi-bin/system_mgr.cgi",
+			data: "cmd=get_firm_v_xml",
+			success: function (xml) {				
+				var oled_text = $(xml).find("oled").text().substr(2, 2);									
+				$("#oled_info").show();
+
+				if (oled_text == "")
+						$("#id_oled_date").text("");
+				else
+						$("#id_oled_date").text("1." + oled_text);			
+			},
+			error: function (xmlHttpRequest, error) {
+				//alert("Error: " +error);   
+			}
+
+		});
+	}
+	$("#tip_auto").attr('title', _T('_tip', 'fw_auto'));
+	$("#tip_checkfw").attr('title', _T('_tip', 'fw_check'));
+	$("#tip_update").attr('title', _T('_tip', 'fw_update'));
+	init_tooltip();
+	init_switch();
+
+	$("#form_firm").submit(function () {
+		return true;
+	});
+
+	$("#send").click(function () {
+		wd_ajax({
+			type: "POST",
+			cache: false,
+			url: "/cgi-bin/system_mgr.cgi",
+			async: true,
+			data: {
+				cmd: "check_power_sch"
+			},
+			success: function (data) {
+				if (data == "error") {
+					//The power off schedule time is close to the system time, it must be larger than 10 minutes.
+					jAlert(_T('_firmware', 'msg10'), _T('_common', 'error'));
+					return false;
+				} else {
+					clear_percentage();
+					if (upload_frame.$("#file").val() == "") {
+						jAlert(_T('_system', 'msg5'), _T('_common', 'error'));
+						return;
+					}
+					//	var overlayObj=parent.$("#overlay").overlay({expose: '#000',api:true,closeOnClick:false,closeOnEsc:false});
+					var overlayObj = $("#overlay").overlay({
+						expose: '#000',
+						api: true,
+						closeOnClick: false,
+						closeOnEsc: false
+					});
+					overlayObj.load();
+					show_msg();
+					upload_frame.run();
+				}
+			}
+		});
+	});
+	
+
+
+	$("#cancel").click(function () {
+		upload_frame.$("#file").val("");
+	});
+	//chk_fw_upload();
+	
+	//wak up hd
+	wd_ajax({
+		type: "POST",
+		async: true,
+		cache: false,
+		dataType: "html",
+		url: "/cgi-bin/system_mgr.cgi",
+		data: "cmd=cgi_wake_hd",
+		success: function () {
+		}
+	});	
+}
+var loop_fw = -1;
+function chk_fw_upload()
+{
+	HD_Status(0,function(hd_status){		
+				if (hd_status == 0)
+				{
+					upload_frame.$("#id_file").addClass('gray_out');
+					upload_frame.$("#file").attr('disabled','').css('cursor','auto');	
+					$("#settings_fwUpdateNow_button").addClass('gray_out');
+					$("#settings_fwCheckUpdate_button").addClass('gray_out');
+					loop_fw = setTimeout(chk_fw_upload,60000);
+					return;
+				}
+				else
+				{
+						wd_ajax({
+								type: "POST",
+								async: true,
+								cache: false,
+								url: "/cgi-bin/system_mgr.cgi",
+								data: "cmd=chk_fw_upload",
+								success: function (data) {							
+									clearTimeout(loop_fw);					
+									if (data == "uploading" || data == "upload_complete")			             
+									{											
+										if (!upload_frame.$("#id_file").hasClass('gray_out'))
+										{					
+											upload_frame.$("#id_file").addClass('gray_out');
+											upload_frame.$("#file").attr('disabled','').css('cursor','auto');	
+											$("#settings_fwUpdateNow_button").addClass('gray_out');
+											$("#settings_fwCheckUpdate_button").addClass('gray_out');
+										}									
+										loop_fw = setTimeout(chk_fw_upload,60000);
+									}
+									else
+									{						
+											upload_frame.$("#id_file").removeClass('gray_out');						
+											upload_frame.$("#file").removeAttr('disabled');				
+											$("#settings_fwUpdateNow_button").removeClass('gray_out');
+											$("#settings_fwCheckUpdate_button").removeClass('gray_out');
+									    loop_fw = setTimeout(chk_fw_upload,60000);
+								  }
+								}
+							});	
+				}	
+		})			
+}
+function clear_chk_fw()
+{
+	clearTimeout(loop_fw);
+}
+function page_unload() {
+	clearTimeout(loop_fw);	
+}
+
+</script>
+<body>
+<div class="h1_content header_2 _text" lang="_firmware" datafld="auto_update"></div>
+<div>
+	<table border="0" cellspacing="0" cellpadding="0" height="0">
+		<tr>
+			<td class="tdfield"><span class="_text" lang="_firmware" datafld="enable_auto"></span></td>
+			<td class="tdfield_padding" colspan="4">
+				<table border="0" cellspacing="0" cellpadding="0" height="0">
+					<tr>
+						<td>
+							<input id="settings_fwAutoupdate_switch" name="settings_fwAutoupdate_switch" class="onoffswitch" type="checkbox" value="true" style="position: absolute; z-index: -1; visibility: hidden;">
+						</td>
+						<td style="padding-left:10px;">
+							<div class="TooltipIcon" id="tip_auto"></div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>	
+	<table border="0" cellspacing="0" cellpadding="0" height="0" id="id_tb_sch">
+		<tr>
+			<td class="tdfield" rowspan="2"><span class="_text" lang="_firmware" datafld="update_sch"></span></td>
+			<td>
+						<table border="0" cellspacing="0" cellpadding="0" height="0">
+							<tr>
+									<td class="tdfield_padding">
+									<div id="id_sch_top_main" class="select_menu"></div>
+								</td>
+								<td class="tdfield_padding">	
+									<div  style='padding-left:10px;'><div id="id_time_top_main" class="select_menu"></div></div>
+								</td>	
+								<td class="tdfield_padding">	
+									<div  style='padding-left:10px;'><div id="id_pm_top_main" class="select_menu" ></div></div>
+								</td>								
+							</tr>	
+						</table>	
+			</td>
+		</tr>
+		<tr>	
+			<td>	
+				<div id="id_tb_sch_save" style="padding-top:10px;display:none">
+				<button type="button" onclick="auto_update(1);"><span class="_text" lang="_button" datafld="save"></span></button>
+				</div>		
+			</td>				
+		</tr>		
+	</table>
+</div>
+<div style="margin-top:20px;">
+	<div class="hr_0_content" style="margin-top:30px;margin-bottom:30px;">
+		<div class="hr_1"></div>
+	</div>
+	<div class="h1_content header_2"><span class="_text" lang="_firmware" datafld="available_update"></span></div>
+	<div>
+		<table border="0" cellspacing="0" cellpadding="0" height="0">
+			<tr>
+				<td class="tdfield"><span class="_text" lang="_firmware" datafld="new_fw"></span></td>
+				<td class="tdfield_padding">
+					<table border="0" cellspacing="0" cellpadding="0" height="0">
+						<tr>
+							<td>
+								<div id="id_new_firm_version" style="display:none;margin-right:20px;"></div>
+							</td>
+							<td>
+								<div id="id_new_fw_td" style="display:none;">
+									<button type="button" id="settings_fwUpdateNow_button" onclick="open_diag('settings_fwUpdateNow_button');"><span class="_text" lang="_firmware" datafld="update_now"></span></button>
+								</div>																
+							</td>							
+						</tr>
+					</table>
+					
+					<table border="0" cellspacing="0" cellpadding="0" height="0">
+						<tr>
+							<td>
+								<div id="id_ck_fw_td" style="display:none">
+									<button type="button" id="settings_fwCheckUpdate_button" onclick="open_diag('settings_fwCheckUpdate_button');"><span class="_text" lang="_firmware" datafld="check_update"></span></button>
+								</div>
+							</td>	
+							<td id="id_ck_fw_td_tip" style="padding-left:10px;display:none">
+								<div class="TooltipIcon" id="tip_checkfw"></div>
+							</td>
+												
+						</tr>
+					</table>
+				</td>
+				<td></td>									
+			</tr>
+			<tr>
+				<td class="tdfield">
+					<span class="_text" lang="_firmware" datafld="current"></span>
+				</td>
+				<td class="tdfield_padding">
+					<div id="settings_fwVersion_value"></div>
+				</td>
+			</tr>
+			<tr>
+				<td class="tdfield">
+					<span class="_text" lang="_media" datafld="desc3"></span></td>
+				<td class="tdfield_padding">
+					<div id="settings_fwUpdate_value"></div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div class="hr_0_content" style="margin-top:30px;margin-bottom:30px;">
+		<div class="hr_1"></div>
+	</div>
+	<div class="h1_content header_2"><span class="_text" lang="_firmware" datafld="manual_update"></span></div>
+	<div>
+		<table border="0" cellspacing="0" cellpadding="0" height="0">
+			<tr>
+				<td class="tdfield"><span class="_text" lang="_firmware" datafld="fw_img"></span></td>
+				<td class="tdfield_padding">
+					<iframe id="upload_frame" name="upload_frame" width="0" height="34px" frameborder="0" scrolling="no" src=""></iframe>
+				</td>
+				<td class="tdfield_padding">
+					<div class="TooltipIcon" id="tip_update"></div>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<!-- end -->
+<br>
+<br>
+<br>
+<br>
+<div id="id_load" style="display:none">
+	<img src="/web/images/spinner.gif">
+</div>
+<form name="form_firm" id="form_firm" method="post" action="/cgi-bin/system_mgr.cgi" style="display:none">
+	<input type="hidden" name="cmd" value="cgi_reboot">
+	<input type="submit" value="Reboot">
+</form>
+</body>
+</html>

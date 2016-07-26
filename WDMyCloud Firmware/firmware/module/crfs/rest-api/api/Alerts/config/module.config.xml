@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<name>Alerts</name>
+	<version>2.1</version>
+	<description>Alerts REST API Module, has alert_configuration component
+	</description>
+
+	<components>
+		<component>
+			<name>alert_configuration</name>
+			<module>Alerts</module>
+			<controller_class>Alerts\Controller\Configuration</controller_class>
+			<auth_security>
+				<all>ADMIN_AUTH_LAN</all>
+			</auth_security>
+		</component>
+
+		<component>
+			<name>alert_events</name>
+			<module>Alerts</module>
+			<controller_class>Alerts\Controller\Events</controller_class>
+			<auth_security>
+				<get>NO_AUTH_LAN</get>
+			</auth_security>
+		</component>
+
+		<component>
+			<name>alerts</name>
+			<module>Alerts</module>
+			<controller_class>Alerts\Controller\Alerts</controller_class>
+			<auth_security>
+				<get>NO_AUTH_LAN_USER_WAN</get>
+				<post>NO_AUTH_LAN</post>
+				<put>USER_AUTH_LAN_ADMIN_WAN</put>
+				<delete>ADMIN_AUTH_LAN</delete>
+			</auth_security>
+		</component>
+
+		<component>
+			<name>alert_notify</name>
+			<module>Alerts</module>
+			<controller_class>Alerts\Controller\Notify</controller_class>
+			<auth_security>
+				<post>NO_AUTH</post>
+			</auth_security>
+		</component>
+
+		<component>
+			<name>alert_test_email</name>
+			<module>Alerts</module>
+			<controller_class>Alerts\Controller\ConfigurationTest</controller_class>
+			<auth_security>
+				<post>NO_AUTH_LAN</post>
+			</auth_security>
+		</component>
+		<component>
+			<name>display_alert</name>
+			<module>Alerts</module>
+			<controller_class>Alerts\Controller\Display</controller_class>
+			<auth_security>
+				<get>NO_AUTH_LAN</get>
+			</auth_security>
+		</component>
+
+
+	</components>
+
+</module>

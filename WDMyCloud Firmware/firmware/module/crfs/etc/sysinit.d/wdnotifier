@@ -1,0 +1,28 @@
+#!/bin/bash
+#
+# (c) 2014 Western Digital Technologies, Inc. All rights reserved.
+#
+#
+#---------------------
+
+[ ! -d /etc/cron.d ] && mkdir -p /etc/cron.d
+cp -a /usr/local/modules/etc/cron.d/rescan_internal_volumes /etc/cron.d/
+
+[ ! -d /etc/init.d ] && mkdir -p /etc/init.d
+cp -a /usr/local/modules/etc/init.d/wdnotifierd /etc/init.d/
+
+[ ! -d /etc/wdcomp.d ] && mkdir -p /etc/wdcomp.d
+[ ! -d /etc/rsyslog.d ] && mkdir -p /etc/rsyslog.d
+cp -a /usr/local/modules/etc/rsyslog.d/wddispatcher.conf /etc/rsyslog.d/
+
+[ ! -d /usr/local/bin ] && mkdir -p /usr/local/bin
+cp -a /usr/local/modules/localbin/wdnotifier /usr/local/bin/
+
+[ ! -d /usr/local/sbin ] && mkdir -p /usr/local/sbin
+ln -s /usr/local/modules/localsbin/wdmc_rescan_volume.py /usr/local/sbin/.
+
+[ ! -d /usr/local/nas ] && mkdir -p /usr/local/nas
+cp -a /usr/local/modules/localnas/wdnotifier.conf /usr/local/nas/
+cp -a /usr/local/modules/localnas/notify.d /usr/local/nas/
+
+

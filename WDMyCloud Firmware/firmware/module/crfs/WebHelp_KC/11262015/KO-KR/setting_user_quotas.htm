@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+ <title>사용자 할당량 설정</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+ <meta http-equiv="Content-Language" content="ko-KP" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("개인 클라우드 관리\n사용자\n사용자 할당량 설정");
+addButton("show",BTN_TEXT,"표시","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left; background: #fafafa\"> ");
+AddMasterBreadcrumbs("index.htm", "", "&gt;", "Home", "welcome.htm");
+document.write("<a href=\"user_about.htm\">개인 클라우드 관리<\/a> &gt; <a href=\"user_about.htm\">사용자<\/a> &gt; 사용자 할당량 설정<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(0);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>사용자 할당량 설정</h1>
+<p class="Body">할당량을 통해 My Cloud™  장치에서 사용자에게 할당되는 디스크 공간의 양을 결정할 수 있습니다. 사용자 할당량 할당 규칙과 사용자 계정에 할당량을 할당하는 단계는 아래와 같습니다.</p>
+<h3>할당 규칙</h3>
+<p class="Body">사용자 할당량을 할당하여 사용자 또는 그룹에 할당되는 디스크 공간을 더 잘 제어할 수 있습니다. 할당량 우선 순위와 관련해서는 여러 규칙이 있습니다.</p>
+<p class="Body"><span style="font-weight: bold;">참고</span>: 사용자 권한과 그룹 권한이 다른 경우 가장 엄격한 권한이 우선 순위입니다.</p>
+<ul style="list-style: disc;">
+	<li><p class="Body">사용자 할당량은 그룹 할당량 이하여야 합니다(예: 그룹 할당량이 20GB인데 사용자 할당량으로 30GB를 할당하려는 경우, 그룹 할당량 이하로 사용자 할당량을 줄이라는 메시지가 표시됩니다).</p></li>
+	<li><p class="Body">사용자 할당량이 설정되지 않은 경우 그룹 할당량이 사용자에게 할당됩니다.</p></li>
+	<li><p class="Body">사용자가 그룹에 참여하고 그룹이 할당되기 전에 사용자 할당량이 설정된 경우,</p></li>
+	<li style="list-style: none; display: inline;"><ul style="list-style: square;">
+		<li><p class="Body">사용자 할당량이 그룹 할당량을 초과하면 개별 사용자의 할당량이 그룹 할당량으로 자동 축소됩니다.</p></li>
+		<li><p class="Body">사용자 할당량이 그룹 할당량 이하면 개별 사용자의 할당량은 변경되지 않고 동일하게 유지됩니다.</p></li>
+	</ul></li>
+</ul>
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt;">© 2015 Western Digital Technologies, Inc. 
+	 All rights reserved.</p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>

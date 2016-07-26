@@ -1,0 +1,6399 @@
+# LANGUAGE: Chinese Simplified
+# Copyright 2013
+# Sequoia"
+# Date 6.10.2013"
+
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# -- Global note: All references to WD 2Go or WD2go.com have become WD My Cloud or WDMyCloud.com. Because we do not translate product names, you will see the difference from WD 2go to WD My Cloud or WD2go.com to WDMyCloud.com. Each key/string value is commented as well
+
+# --------- Safepoint specific codes and messages ---------
+
+#: string "Safepoint OK."
+msgid "SAFEPOINT_OK"
+msgstr "Safepoint 可用。"
+
+#: string "Safepoint operation in progress."
+msgid "SAFEPOINT_INPROGRESS"
+msgstr "Safepoint 操作进行中。"
+
+#: string "Failed request received during this safepoint operation."
+msgid "SAFEPOINT_FAILED"
+msgstr "本次 safepoint 操作进行时收到错误请求。"
+
+#: string "This safepoint was not found."
+msgid "SAFEPOINT_NOTFOUND"
+msgstr "未找到 safepoint。"
+
+#: string "This safepoint operation failed due to an unauthorized request."
+msgid "SAFEPOINT_UNAUTHORIZED"
+msgstr "由于请求未经许可，safepoint 操作失败。"
+
+#: string "A safepoint operation is currently in progress."
+msgid "SAFEPOINT_BUSY"
+msgstr "Safepoint 操作当前正在进行中。"
+
+#: string "This safepoint operation failed due to insufficient space."
+msgid "SAFEPOINT_NOSPACE"
+msgstr "由于空间不足，safepoint 操作失败。"
+
+#: string "This safepoint operation failed due to an invalid request."
+msgid "SAFEPOINT_INVALID"
+msgstr "由于请求无效，safepoint 操作失败。"
+
+#: string "This safepoint is incompatible."
+msgid "SAFEPOINT_INCOMPATIBLE"
+msgstr "此 safepoint 不兼容。"
+
+#: string "This safepoint operation failed because it is currently unreachable."
+msgid "SAFEPOINT_UNREACHABLE"
+msgstr "由于 safepoint 当前不可访问，操作失败。"
+
+#: string "This operation is not supported."
+msgid "SAFEPOINT_NOTSUPPORTED"
+msgstr "不支持此操作。"
+
+#: string "This safepoint operation failed due to a duplication error."
+msgid "SAFEPOINT_DUPLICATE"
+msgstr "由于发生重复错误，safepoint 操作失败。"
+
+#: string "This safepoint operation did not start."
+msgid "SAFEPOINT_NOTSTARTED"
+msgstr "Safepoint 操作未开始。"
+
+#: string "This safepoint is was not created."
+msgid "SAFEPOINT_NOTCREATED"
+msgstr "未创建此 safepoint。"
+
+#: string "A system resource is not available."
+msgid "SAFEPOINT_UNAVAILABLE"
+msgstr "系统资源不可用。"
+
+#: string "This safepoint operation failed due to a corrupted resource."
+msgid "SAFEPOINT_CORRUPTED"
+msgstr "由于某资源损坏，此次 safepoint 操作失败。"
+
+#: string "Safepoint operation aborted."
+msgid "SAFEPOINT_ABORTED"
+msgstr "Safepoint 操作中止。"
+
+#: string "This safepoint operation was ignored."
+msgid "SAFEPOINT_IGNORE"
+msgstr "Safepoint 操作被此忽略。"
+
+#: string "This safepoint operation is not allowed."
+msgid "SAFEPOINT_NOTALLOWED"
+msgstr "不允许此 safepoint 操作。"
+
+#: string "Your last safepoint operation timed out."
+msgid "SAFEPOINT_TIMEOUT"
+msgstr "您的上一个 safepoint 超时。"
+
+
+#: string "A bad request was made."
+msgid "ERROR_BAD_REQUEST"
+msgstr "发生一次错误请求。"
+
+#: string "You are not authorized to perform this task."
+msgid "ERROR_NOT_AUTHORIZED_TASK"
+msgstr "你没有执行此项任务的权限。"
+
+
+#: string "The requested service was not found."
+msgid "ERROR_SERVICE_NOT_FOUND"
+msgstr "没有找到请求的服务。"
+
+
+#: string "Invalid firmware package."
+msgid "ERROR_INVALID_FW_PACKAGE"
+msgstr "固件包无效。"
+
+
+#: string "Device does not have enough space for upgrade."
+msgid "ERROR_OUT_OF_SPACE_FOR_UPGRADE"
+msgstr "设备空间不足，无法升级。"
+
+
+#: string "Upgrade unpack failure."
+msgid "ERROR_UPGRADE_UNPACK_FAILED"
+msgstr "升级拆包失败。"
+
+
+#: string "Upgrade copy failure."
+msgid "ERROR_UPGRADE_COPY_FAILED"
+msgstr "升级复制失败。"
+
+
+#: string "Invalid IP address."
+msgid "ERROR_INVALID_IP_ADDRESS"
+msgstr "IP 地址无效。"
+
+
+#: string "Invalid gateway value."
+msgid "ERROR_INVALID_GATEWAY"
+msgstr "网关地址无效。"
+
+
+#: string "Invalid netmask value."
+msgid "ERROR_INVALID_NETMASK"
+msgstr "网络掩码无效。"
+
+
+#: string "Invalid DNS server value."
+msgid "ERROR_INVALID_DNS_SERVER"
+msgstr "DNS 服务器的值无效。"
+
+
+#: string "A minimum of one DNS server is required for Static Network Mode."
+msgid "ERROR_AT_LEAST_ONE_DNS_REQUIRED"
+msgstr "静态网络模式至少需要一个 DNS 服务器 。"
+
+
+#: string "Invalid config file type. Please select a .conf file."
+msgid "ERROR_INVALID_CONFIG_FILE_SELECTED"
+msgstr "配置文件类型无效。 请选择一个.conf 文件。"
+
+
+#: string "Invalid firmware file type. Please select a .deb file."
+msgid "ERROR_INVALID_FIRMWARE_FILE_SELECTED"
+msgstr "固件文件类型无效。 请选择一个.deb文件。"
+
+
+#: string "User name already in use. Please enter another user name."
+msgid "ERROR_USERNAME_ALREADY_EXISTS"
+msgstr "用户名已被占用。 请输入另一个用户名。"
+
+
+#: string "The system is currently busy; please try again in a few minutes."
+msgid "ERROR_EXCEPTION_DURING_USER_FIND"
+msgstr "系统当前正忙，请稍等几分钟再试。"
+
+
+#: string "The system is currently busy; please try again in a few minutes."
+msgid "ERROR_EXCEPTION_DURING_USER_CREATION"
+msgstr "系统当前正忙，请稍等几分钟再试。"
+
+
+#: string "The device name you are attempting to register is already in use. Please change the device name to successfully complete registration of this device."
+msgid "ERROR_EXCEPTION_DURING_REGISTRATION"
+msgstr "您试图注册的设备名称已被占用。 请变更设备名称，从而成功完成此设备的注册。"
+
+
+#: string "The email entered is already registered to an account."
+msgid "ERROR_EMAIL_ALREADY_REGISTERED"
+msgstr "该电子邮件地址已经由某个账户注册。"
+
+
+#: string "Invalid account."
+msgid "ERROR_INVALID_ACCOUNT"
+msgstr "账户无效。"
+
+
+#: string "Restore file is either incorrect file format or corrupt."
+msgid "ERROR_RESTORE_FILE_IS_NOT_CORRECT_FORMAT"
+msgstr "恢复文件格式不正确或损坏。"
+
+
+#: string "First Name must be between 1 and 20 characters."
+msgid "ERROR_FIRST_NAME_INVALID_SYNTAX"
+msgstr "名字的长度必须在1到20个字符之间。"
+
+
+#: string "Your Last Name must be between 1 and 20 characters."
+msgid "ERROR_LAST_NAME_INVALID_SYNTAX"
+msgstr "姓氏的长度必须在1到20个字符之间。"
+
+
+#: string "Please provide a valid email address."
+msgid "ERROR_PROVIDE_VALID_EMAIL_ADDRESS"
+msgstr "请提供有效的电子邮件地址。"
+
+
+#: string "Your email addresses do not match."
+msgid "ERROR_EMAIL_ADDRESS_DONT_MATCH"
+msgstr "您的电子邮件地址不匹配。"
+
+
+#: string "Registration failed. Please go to register.wdc.com to register your product."
+msgid "ERRORS_REGISTRATION_FAILED"
+msgstr "注册失败。 请访问register.wdc.com注册您的产品。"
+
+
+#: string "Cancel"
+msgid "BUTTON_CANCEL"
+msgstr "取消"
+
+#: string "Continue?"
+msgid "BUTTON_CONTINUE"
+msgstr "继续吗？"
+
+
+#: string "Save"
+msgid "BUTTON_SAVE"
+msgstr "保存"
+
+
+#: string "Updating..."
+msgid "LABEL_DESCR_LOADER_UPDATING"
+msgstr "正在更新..."
+
+
+#: string "Reboot"
+msgid "PAGE_HEADER_REBOOT"
+msgstr "重新启动"
+
+
+#: string "Factory Restore successful."
+msgid "LABEL_DESCR_FACTORY_RESTORE_SUCCESS"
+msgstr "出厂还原成功。"
+
+
+#: string "Factory restore successful."
+msgid "LABEL_DESCR_PARTIAL_RESTORE_SUCCESS"
+msgstr "出厂还原成功。"
+
+
+#: string "Firmware update successful."
+msgid "LABEL_DESCR_FIRMWARE_UPDATE_SUCCESS"
+msgstr "固件更新成功。"
+
+
+#: string "Full Restore is switching to Quick Restore."
+msgid "LABEL_DESCR_FACTORY_RESTORE_SWITCH_TO_QUICK_RESTORE"
+msgstr "正在从完全还原切换到快速还原。"
+
+
+#: string "Device is rebooting"
+msgid "LABEL_DESCR_DEVICE_REBOOTING"
+msgstr "正在重新启动设备"
+
+
+#: string "Initializing device"
+msgid "LABEL_DESCR_INTIALIZING_DEVICE"
+msgstr "正在初始化设备"
+
+
+#: string "iTunes Server:"
+msgid "LABEL_HEADER_ITUNES_SERVER"
+msgstr "iTunes 服务器。"
+
+
+#: string "Rescan"
+msgid "BUTTON_RESCAN_MEDIA"
+msgstr "重新扫描"
+
+
+#: string "Version:"
+msgid "LABEL_HEADER_VERSION"
+msgstr "版本："
+
+
+#: string "Music Tracks:"
+msgid "LABEL_HEADER_MUSIC_TRACKS"
+msgstr "音乐曲目："
+
+
+#: string "Pictures:"
+msgid "LABEL_HEADER_PICTURES"
+msgstr "图片："
+
+
+#: string "Videos:"
+msgid "LABEL_HEADER_VIDEOS"
+msgstr "视频："
+
+
+#: string "Rebuild"
+msgid "BUTTON_REBUILD"
+msgstr "还原"
+
+
+#: string "IP Address"
+msgid "LABEL_HEADER_IP_ADDRESS"
+msgstr "IP 地址"
+
+
+#: string "Network Mode"
+msgid "LABEL_HEADER_NETWORK_MODE"
+msgstr "网络模式"
+
+
+#: string "Date &amp; Time"
+msgid "PAGE_HEADER_DATE_AND_TIME"
+msgstr "日期和时间"
+
+
+#: string "Time Zone:"
+msgid "LABEL_HEADER_TIME_ZONE"
+msgstr "时区："
+
+
+#: string "(GMT-11:00) Midway Island, Samoa"
+msgid "GENERIC_TIME_ZONE_MIDWAY_ISLAND"
+msgstr "（ GMT-11:00 ）中途岛，萨摩亚群岛"
+
+
+#: string "(GMT-10:00) Hawaii"
+msgid "GENERIC_TIME_ZONE_HAWAII"
+msgstr "（ GMT-10:00 ）夏威夷"
+
+
+#: string "(GMT-09:00) Alaska"
+msgid "GENERIC_TIME_ZONE_ALASKA"
+msgstr "（ GMT-09:00 ）阿拉斯加"
+
+
+#: string "(GMT-08:00) Pacific Time (US & Canada)"
+msgid "GENERIC_TIME_ZONE_PACIFIC_TIME"
+msgstr "（ GMT-08:00 ）太平洋时间（美国和加拿大）"
+
+
+#: string "(GMT-08:00) Tijuana"
+msgid "GENERIC_TIME_ZONE_TIJUANA"
+msgstr "（ GMT-08:00 ）蒂华纳"
+
+
+#: string "(GMT-07:00) Arizona"
+msgid "GENERIC_TIME_ZONE_ARIZONA"
+msgstr "（ GMT-07:00 ）美国亚利桑那州"
+
+
+#: string "(GMT-07:00) Chihuahua, La Paz, Mazatlan"
+msgid "GENERIC_TIME_ZONE_CHIHUAHUA_LA_PAZ_MAZATLAN"
+msgstr "（ GMT-07:00 ）奇瓦瓦，拉巴斯，马扎特兰"
+
+
+#: string "(GMT-07:00) Mountain Time (US & Canada)"
+msgid "GENERIC_TIME_ZONE_MOUNTAIN_TIME"
+msgstr "（ GMT-07:00 ）山地时间（美国和加拿大）"
+
+
+#: string "(GMT-06:00) Central America (Guatemala)"
+msgid "GENERIC_TIME_ZONE_CENTRAL_AMERICA"
+msgstr "（ GMT-06:00 ）美国中部（危地马拉）"
+
+
+#: string "(GMT-06:00) Central Time (US & Canada)"
+msgid "GENERIC_TIME_ZONE_CENTRAL_TIME"
+msgstr "（ GMT-06:00 ）中部时间（美国和加拿大）"
+
+
+#: string "(GMT-06:00) Guadalajara, Mexico City, Monterrey"
+msgid "GENERIC_TIME_ZONE_GUADALAJARA"
+msgstr "（ GMT-06:00 ）瓜达拉哈拉，墨西哥城，蒙特雷"
+
+
+#: string "(GMT-06:00) Saskatchewan"
+msgid "GENERIC_TIME_ZONE_SASKATCHEWAN"
+msgstr "（ GMT-06:00 ）萨斯喀彻温省"
+
+
+#: string "(GMT-05:00) Bogota, Lima, Quito"
+msgid "GENERIC_TIME_ZONE_BOGOTA_LIMA_QUITO"
+msgstr "（ GMT-05:00 ）波哥大，利马，基多"
+
+
+#: string "(GMT-05:00) Eastern Time (US & Canada)"
+msgid "GENERIC_TIME_ZONE_EASTERN_TIME"
+msgstr "（ GMT-05:00 ）东部时间（美国和加拿大）"
+
+
+#: string "(GMT-05:00) Indiana (East)"
+msgid "GENERIC_TIME_ZONE_INDIANA"
+msgstr "（ GMT-05:00 ）印地安纳（东部）"
+
+
+#: string "(GMT-04:30) Caracas"
+msgid "GENERIC_TIME_ZONE_CARACAS"
+msgstr "（ GMT-04:30 ）加拉加斯"
+
+
+#: string "(GMT-04:00) Atlantic Time (Canada)"
+msgid "GENERIC_TIME_ZONE_ATLANTIC_TIME"
+msgstr "（ GMT-04:00 ）大西洋时间（加拿大）"
+
+
+#: string "(GMT-04:00) La Paz"
+msgid "GENERIC_TIME_ZONE_LA_PAZ"
+msgstr "（ GMT-04:00 ）拉巴斯"
+
+
+#: string "(GMT-04:00) Santiago"
+msgid "GENERIC_TIME_ZONE_SANTIAGO"
+msgstr "（ GMT-04:00 ）圣地亚哥"
+
+
+#: string "(GMT-04:00) Manaus"
+msgid "GENERIC_TIME_ZONE_MANAUS"
+msgstr "（ GMT-04:00 ）马瑙斯"
+
+
+#: string "(GMT-03:30) Newfoundland"
+msgid "GENERIC_TIME_ZONE_NEWFOUNDLAND"
+msgstr "（ GMT-03:30 ）纽芬兰"
+
+
+#: string "(GMT-03:00) Brasilia"
+msgid "GENERIC_TIME_ZONE_BRASILIA"
+msgstr "（ GMT-03:00 ）巴西利亚"
+
+
+#: string "(GMT-03:00) Buenos Aires, Georgetown"
+msgid "GENERIC_TIME_ZONE_BUENOS_AIRES_GEORGETOWN"
+msgstr "（ GMT-03:00 ）布宜诺斯艾利斯，乔治敦"
+
+
+#: string "(GMT-03:00) Greenland"
+msgid "GENERIC_TIME_ZONE_GREENLAND"
+msgstr "（ GMT-03:00 ）格陵兰"
+
+
+#: string "(GMT-03:00) Montevideo"
+msgid "GENERIC_TIME_ZONE_MONTEVIDEO"
+msgstr "（ GMT-03:00 ）蒙得维"
+
+
+#: string "(GMT-02:00) Mid-Atlantic (Noronha)"
+msgid "GENERIC_TIME_ZONE_MID_ATLANTIC"
+msgstr "（ GMT-02:00 ）大西洋中部（-迪诺罗尼亚岛）"
+
+
+#: string "(GMT-01:00) Azores Is."
+msgid "GENERIC_TIME_ZONE_AZORES_IS"
+msgstr "（ GMT-01:00 ）亚述尔群岛。"
+
+
+#: string "(GMT-01:00) Cape Verde Is."
+msgid "GENERIC_TIME_ZONE_CAPE_VERDE_IS"
+msgstr "（ GMT-01:00 ）佛得角群岛。"
+
+
+#: string "(GMT) Casablanca, Monrovia"
+msgid "GENERIC_TIME_ZONE_CASABLANCA_MONROVIA"
+msgstr "（ GMT ）卡萨布兰卡、蒙罗维亚"
+
+
+#: string "(GMT) Greenwich Mean Time: Dublin, Edinburgh, Lisbon, London"
+msgid "GENERIC_TIME_ZONE_GREENWICH_MEAN_TIME"
+msgstr "(GMT)格林威治平均时间: 都柏林，爱丁堡，里斯本，伦敦"
+
+
+#: string "(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna"
+msgid "GENERIC_TIME_ZONE_AMSTERDAM_BERLIN_BERN_ROME_STOCKHOLM_VIENNA"
+msgstr "（ GMT+01:00 ）阿姆斯特丹、柏林、伯尔尼、罗马、斯德哥尔摩、维也纳"
+
+
+#: string "(GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague"
+msgid "GENERIC_TIME_ZONE_BELGRADE_BRATISLAVA_BUDAPEST_LIJUBLIJANA_PARGUE"
+msgstr "（ GMT+01:00 ）贝尔格莱德、布拉迪斯拉发、布达佩斯、卢布尔雅那、布拉格"
+
+
+#: string "(GMT+01:00) Brussels, Copenhagen, Madrid, Paris"
+msgid "GENERIC_TIME_ZONE_BRUSSELS_COPENHAGEN_MADRID_PARIS"
+msgstr "（ GMT+01:00 ）布鲁塞尔、哥本哈根、马德里、巴黎"
+
+
+#: string "(GMT+01:00) Sarajevo, Skopje, Warsaw, Zagreb"
+msgid "GENERIC_TIME_ZONE_SARAJEVO_SKPOJE_WARSAW_ZAGREB"
+msgstr "（ GMT+01:00 ）萨拉热窝、斯科普里、华沙、萨格勒布"
+
+
+#: string "(GMT+01:00) West Central Africa"
+msgid "GENERIC_TIME_ZONE_WEST_CENTRAL_AFRICA"
+msgstr "（ GMT+01:00 ）非洲中西部"
+
+
+#: string "(GMT+02:00) Amman"
+msgid "GENERIC_TIME_ZONE_AMMAN"
+msgstr "（ GMT+02:00 ）安曼"
+
+
+#: string "(GMT+02:00) Beirut"
+msgid "GENERIC_TIME_ZONE_BEIRUT"
+msgstr "（ GMT+02:00 ）贝鲁特"
+
+
+#: string "(GMT+03:00) Minsk"
+msgid "GENERIC_TIME_ZONE_MINSK"
+msgstr "（ GMT+03:00 ）明斯克"
+
+
+#: string "(GMT+02:00) Athens, Bucharest, Istanbul"
+msgid "GENERIC_TIME_ZONE_ATHENS_BUCHAREST_ISTANBUL"
+msgstr "（ GMT+02:00 ）雅典、布加勒斯特、伊斯坦布尔"
+
+
+#: string "(GMT+02:00) Cairo"
+msgid "GENERIC_TIME_ZONE_CAIRO"
+msgstr "（ GMT+02:00 ）开罗"
+
+
+#: string "(GMT+02:00) Harare, Pretoria"
+msgid "GENERIC_TIME_ZONE_HARARE_PRETORIA"
+msgstr "（ GMT+02:00 ）哈拉雷、比勒陀利亚"
+
+
+#: string "(GMT+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius"
+msgid "GENERIC_TIME_ZONE_HELSINKI_KYIV_RIGA_SOFIA_TALLINN_VILNIUS"
+msgstr "（ GMT+02:00 ）赫尔辛基、基辅、里加（Riga）、索菲亚、塔林、维尔纽斯"
+
+
+#: string "(GMT+02:00) Jerusalem"
+msgid "GENERIC_TIME_ZONE_JERUSALEM"
+msgstr "（ GMT+02:00 ）耶路撒冷"
+
+
+#: string "(GMT+03:00) Baghdad"
+msgid "GENERIC_TIME_ZONE_BAGHDAD"
+msgstr "（ GMT+03:00 ）巴格达"
+
+
+#: string "(GMT+03:00) Kuwait, Riyadh"
+msgid "GENERIC_TIME_ZONE_KUWAIT_RIYADH"
+msgstr "（ GMT+03:00 ）科威特、利雅得"
+
+# edit update 6-10-13
+#: string "(GMT+04:00) Moscow, St. Petersburg, Volgograd"
+msgid "GENERIC_TIME_ZONE_MOSCOW_ST_PETERSBURG_VOLGOGRAD"
+msgstr "（ GMT+04:00 ）莫斯科、圣彼得堡、伏尔加格勒"
+
+
+#: string "(GMT+03:00) Nairobi"
+msgid "GENERIC_TIME_ZONE_NAIROBI"
+msgstr "（ GMT+03:00 ）内罗毕"
+
+
+#: string "(GMT+03:30) Tehran"
+msgid "GENERIC_TIME_ZONE_TEHRAN"
+msgstr "（ GMT+03:30 ）德黑兰"
+
+
+#: string "(GMT+04:00) Abu Dhabi, Muscat"
+msgid "GENERIC_TIME_ZONE_ABU_DHABI_MUSCAT"
+msgstr "（ GMT+04:00 ）阿布扎比、马斯喀特"
+
+
+#: string "(GMT+04:00) Baku, Tbilisi, Yerevan"
+msgid "GENERIC_TIME_ZONE_BAKU_TBILISI_YEREVAN"
+msgstr "（ GMT+04:00 ）巴库、第比利斯、埃里温"
+
+
+#: string "(GMT+04:00) Yerevan"
+msgid "GENERIC_TIME_ZONE_YEREVAN"
+msgstr "（ GMT+04:00 ）埃里温"
+
+
+#: string "(GMT+04:30) Kabul"
+msgid "GENERIC_TIME_ZONE_KABUL"
+msgstr "（ GMT+04:30 ）喀布尔"
+
+# edit update 6-10-13
+#: string "(GMT+06:00) Ekaterinburg"
+msgid "GENERIC_TIME_ZONE_EKATERINBURG"
+msgstr "（ GMT+06:00 ）叶卡捷琳堡"
+
+
+#: string "(GMT+05:00) Islamabad, Karachi"
+msgid "GENERIC_TIME_ZONE_ISLAMABAD_KARACHI"
+msgstr "（ GMT+05:00 ）伊斯兰堡、卡拉奇"
+
+
+#: string "(GMT+05:00) Tashkent"
+msgid "GENERIC_TIME_ZONE_TASHKENT"
+msgstr "（ GMT+05:00 ）塔什干"
+
+
+#: string "(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi"
+msgid "GENERIC_TIME_ZONE_CHENNAI_KOLKATA_MUMBAI_NEW_DELHI"
+msgstr "（ GMT+05:30 ）晨奈、加尔各答、孟买、新德里"
+
+
+#: string "(GMT+05:45) Katmandu"
+msgid "GENERIC_TIME_ZONE_KATMANDU"
+msgstr "（ GMT+05:45  ）加德满都"
+
+
+#: string "(GMT+06:00) Almaty, Novosibirsk"
+msgid "GENERIC_TIME_ZONER_ALMATY_NOVOSIBIRSK"
+msgstr "（ GMT+06:00 ）阿拉木图、新西伯利亚"
+
+
+#: string "(GMT+06:00) Astana, Dhaka"
+msgid "GENERIC_TIME_ZONE_ASTANA_DHAKA"
+msgstr "（ GMT+06:00 ）阿斯塔纳、达卡"
+
+
+#: string "(GMT+06:30) Rangoon"
+msgid "GENERIC_TIME_ZONE_RANGOON"
+msgstr "（ GMT+06:30 ）仰光"
+
+
+#: string "(GMT+07:00) Bangkok, Hanoi, Jakarta"
+msgid "GENERIC_TIME_ZONE_BANGKOK_HANOI_JAKARTA"
+msgstr "（ GMT+07:00 ）曼谷、河内、雅加达"
+
+# Edit update 6-10
+#: string "(GMT+08:00) Krasnoyarsk"
+msgid "GENERIC_TIME_ZONE_KRASNOYARSK"
+msgstr "（ GMT+08:00 ）克拉斯诺亚尔斯克"
+
+
+
+#: string "(GMT+08:00) Beijing, Chongqing, Hong Kong, Urumqi"
+msgid "GENERIC_TIME_ZONE_BEIJING_CHONGQING_HONG_KONG_URUMQI"
+msgstr "（ GMT+08:00 ）北京、重庆、香港、乌鲁木齐"
+
+# edit update 6-10
+#: string "(GMT+09:00) Irkutsk, Ulaan Bataar"
+msgid "GENERIC_TIME_ZONE_IRKUTSK_ULAAN_BATAAR"
+msgstr "（ GMT+09:00 ）伊尔库茨克市、蒙古乌兰巴托"
+
+
+#: string "(GMT+08:00) Kuala Lumpur, Singapore"
+msgid "GENERIC_TIME_ZONE_KUALA_LUMPUR_SINGAPORE"
+msgstr "（ GMT+08:00 ）吉隆坡、新加坡"
+
+
+#: string "(GMT+08:00) Perth"
+msgid "GENERIC_TIME_ZONE_PERTH"
+msgstr "（ GMT+08:00 ）珀斯"
+
+
+#: string "(GMT+08:00) Taipei"
+msgid "GENERIC_TIME_ZONE_TAIPEI"
+msgstr "（ GMT+08:00 ）台北"
+
+
+#: string "(GMT+09:00) Osaka, Sapporo, Tokyo"
+msgid "GENERIC_TIME_ZONE_OSAKA_SAPPORO_TOKYO"
+msgstr "（ GMT+09:00 ）大阪、札幌、东京"
+
+
+#: string "(GMT+09:00) Seoul"
+msgid "GENERIC_TIME_ZONE_SEOUL"
+msgstr "（ GMT+09:00 ）首尔"
+
+# edit update 6-10
+#: string "(GMT+10:00) Yakutsk"
+msgid "GENERIC_TIME_ZONE_YAKUTSK"
+msgstr "（ GMT+10:00 ）雅库茨克"
+
+
+#: string "(GMT+09:30) Adelaide"
+msgid "GENERIC_TIME_ZONE_ADELAIDE"
+msgstr "（ GMT+09:30 ）阿德莱德"
+
+
+#: string "(GMT+09:30) Darwin"
+msgid "GENERIC_TIME_ZONE_DARWIN"
+msgstr "（ GMT+09:30 ）达尔文市"
+
+
+#: string "(GMT+10:00) Brisbane"
+msgid "GENERIC_TIME_ZONE_BRISBANE"
+msgstr "（ GMT+10:00 ）布里斯班"
+
+
+#: string "(GMT+10:00) Canberra, Melbourne, Sydney"
+msgid "GENERIC_TIME_ZONE_CANBERRA_MELBOURNE_SYDNEY"
+msgstr "（ GMT+10:00 ）堪培拉、墨尔本、悉尼"
+
+
+#: string "(GMT+10:00) Guam, Port Moresby"
+msgid "GENERIC_TIME_ZONE_GUAM_PORT_MORESBY"
+msgstr "（ GMT+10:00 ）关岛、莫尔兹比港"
+
+
+#: string "(GMT+10:00) Hobart"
+msgid "GENERIC_TIME_ZONE_HOBART"
+msgstr "（ GMT+10:00 ）霍巴特"
+
+# edit update 6-8-13
+#: string "(GMT+11:00) Vladivostok"
+msgid "GENERIC_TIME_ZONE_VLADIVOSTOK"
+msgstr "（ GMT+11:00 ）符拉迪沃斯托克"
+
+
+#: string "(GMT+11:00) Magadan, Solomon Is., New Caledonia"
+msgid "GENERIC_TIME_ZONE_MAGADAN_SOLOMON_NEW_CALEDONIA"
+msgstr "（ GMT+11:00 ）马加丹、所罗门群岛、新卡里多尼亚"
+
+
+#: string "(GMT+12:00) Auckland, Wellington"
+msgid "GENERIC_TIME_ZONE_AUCKLAND_WELLINGTON"
+msgstr "（ GMT+12:00 ）奥克兰、惠灵顿"
+
+
+#: string "(GMT+12:00) Fiji, Kamchatka, Marshall Is."
+msgid "GENERIC_TIME_ZONE_FIJI_KAMCHATKA_MARSHALL_IS"
+msgstr "（ GMT+12:00 ）斐济、堪察加半岛、马绍尔群岛"
+
+
+#: string "NTP Service:"
+msgid "LABEL_HEADER_NTP_SERVICE"
+msgstr "NTP 服务"
+
+
+#: string "January"
+msgid "GENERIC_MONTH_JANUARY"
+msgstr "一月"
+
+
+#: string "February"
+msgid "GENERIC_MONTH_FEBRUARY"
+msgstr "二月"
+
+
+#: string "March"
+msgid "GENERIC_MONTH_MARCH"
+msgstr "三月"
+
+
+#: string "April"
+msgid "GENERIC_MONTH_APRIL"
+msgstr "四月"
+
+
+#: string "May"
+msgid "GENERIC_MONTH_MAY"
+msgstr "五月"
+
+
+#: string "June"
+msgid "GENERIC_MONTH_JUNE"
+msgstr "六月"
+
+
+#: string "July"
+msgid "GENERIC_MONTH_JULY"
+msgstr "七月"
+
+
+#: string "August"
+msgid "GENERIC_MONTH_AUGUST"
+msgstr "八月"
+
+
+#: string "September"
+msgid "GENERIC_MONTH_SEPTEMBER"
+msgstr "九月"
+
+
+#: string "October"
+msgid "GENERIC_MONTH_OCTOBER"
+msgstr "十月"
+
+
+#: string "November"
+msgid "GENERIC_MONTH_NOVEMBER"
+msgstr "十一月"
+
+
+#: string "December"
+msgid "GENERIC_MONTH_DECEMBER"
+msgstr "十二月"
+
+
+#: string "I accept"
+msgid "GENERIC_LABEL_ACCEPT_EULA"
+msgstr "我接受"
+
+#: string "Click to confirm that you have read and agree to the firmware upgrade information."
+msgid "LABEL_FW_UPGRADE_EULA_ACCEPTANCE"
+msgstr "单击以确认您已阅读并同意固件升级信息。"
+
+
+
+#: string "Print"
+msgid "GENERIC_LABEL_PRINT"
+msgstr "打印"
+
+#: string "Retrieving..."
+msgid "GENERIC_LABEL_DESCR_RETRIEVE"
+msgstr "获取中......"
+
+
+
+#: string "Time:"
+msgid "LABEL_HEADER_TIME"
+msgstr "时间:"
+
+
+#: string "AM"
+msgid "LABEL_DESCR_TIME_AM"
+msgstr "上午"
+
+
+#: string "PM"
+msgid "LABEL_DESCR_TIME_PM"
+msgstr "下午"
+
+# edit - removed colon after device name 6-10
+#: string "Device Name"
+msgid "LABEL_HEADER_DEVICE_NAME"
+msgstr "设备名称"
+
+
+#: string "Description:"
+msgid "LABEL_HEADER_DESCRIPTION"
+msgstr "描述："
+
+
+#: string "Language:"
+msgid "LABEL_HEADER_LANGUAGE"
+msgstr "语言:"
+
+
+#: string "Serial Number:"
+msgid "LABEL_HEADER_SERIAL_NUMBER"
+msgstr "序列号:"
+
+
+#: string "Register Now"
+msgid "BUTTON_REGISTER_NOW"
+msgstr "现在注册"
+
+
+#: string "Update from File"
+msgid "BUTTON_UPDATE_FROM_FILE"
+msgstr "从文件更新"
+
+
+#: string "Auto Update:"
+msgid "LABEL_HEADER_AUTO_UPDATE"
+msgstr "自动更新:"
+
+
+#: string "Daily"
+msgid "LABEL_DESCR_DAILY"
+msgstr "每日"
+
+
+#: string "Sunday"
+msgid "LABEL_DESCR_SUNDAY"
+msgstr "星期日"
+
+
+#: string "Monday"
+msgid "LABEL_DESCR_MONDAY"
+msgstr "星期一"
+
+
+#: string "Tuesday"
+msgid "LABEL_DESCR_TUESDAY"
+msgstr "星期二"
+
+
+#: string "Wednesday"
+msgid "LABEL_DESCR_WEDNESDAY"
+msgstr "星期三"
+
+
+#: string "Thursday"
+msgid "LABEL_DESCR_THURSDAY"
+msgstr "星期四"
+
+
+#: string "Friday"
+msgid "LABEL_DESCR_FRIDAY"
+msgstr "星期五"
+
+
+#: string "Saturday"
+msgid "LABEL_DESCR_SATURDAY"
+msgstr "星期六"
+
+#--- Calender Days of Week header, 3 characters MAX  ---
+
+#: string "Sun"
+msgid "CONTENT_SETTINGS_STRING_SUN"
+msgstr "周日"
+
+#: string "Mon"
+msgid "CONTENT_SETTINGS_STRING_MON"
+msgstr "周一"
+
+#: string "Tue"
+msgid "CONTENT_SETTINGS_STRING_TUE"
+msgstr "周二"
+
+#: string "Wed"
+msgid "CONTENT_SETTINGS_STRING_WED"
+msgstr "周三"
+
+#: string "Thu"
+msgid "CONTENT_SETTINGS_STRING_THU"
+msgstr "周四"
+
+#: string "Fri"
+msgid "CONTENT_SETTINGS_STRING_FRI"
+msgstr "周五"
+
+#: string "Sat"
+msgid "CONTENT_SETTINGS_STRING_SAT"
+msgstr "周六"
+
+#: string "Generic Media Receiver"
+msgid "CONTENT_SETTINGS_STRING_GENERIC_MEDIA_RECEIVER"
+msgstr "通用媒体接收器"
+
+#: string "Factory restore in progress."
+msgid "CONTENT_SETTINGS_STRING_FACTORY_RESTORE_IN_PROGRESS"
+msgstr "正在进行出厂还原。"
+
+#: string "Media"
+msgid "CONTENT_SETTINGS_STRING_MEDIA"
+msgstr "媒体"
+
+#: string "System Only Factory Restore"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_SYSTEM_ONLY_FACTORY_RESTORE"
+msgstr "仅系统出厂还原"
+
+#: string "Update Firmware"
+msgid "PAGE_HEADER_UPDATE_FIRMWARE"
+msgstr "更新固件"
+
+
+#: string "Firmware Update Version found: "
+msgid "LABEL_DESCR_FIRMWARE_UPDATE_FOUND"
+msgstr "找到固件更新版本:"
+
+
+#: string "Your firmware is up to date."
+msgid "LABEL_DESCR_FIRMWARE_UP_TO_DATE"
+msgstr "固件是最新的。"
+
+
+#: string "Importing File..."
+msgid "LABEL_DESCR_IMPORTING_FILE"
+msgstr "导入文件..."
+
+
+#: string "Process is idle."
+msgid "LABEL_DESCR_UPDATE_PROCESS_IDLE"
+msgstr "进程处于空闲状态。"
+
+
+#: string "Downloading..."
+msgid "LABEL_DESCR_DOWNLOADING"
+msgstr "正在下载..."
+
+
+#: string "Upgrading..."
+msgid "LABEL_DESCR_UPGRADING"
+msgstr "正在升级..."
+
+
+#: string "Firmware Update Failed"
+msgid "LABEL_DESCR_UPDATE_PROCESS_FAILED"
+msgstr "固件更新失败"
+
+
+#: string "Diagnostic in progress."
+msgid "LABEL_DESCR_DIAGNOSTIC_IN_PROGRESS"
+msgstr "正在进行诊断。"
+
+
+#: string "Quick Factory Restore"
+msgid "LABEL_DESCR_QUICK_FACTORY_RESTORE"
+msgstr "快速出厂还原"
+
+#: string "Quick Factory Restore"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_QUICK_FACTORY_RESTORE"
+msgstr "快速出厂还原"
+
+#: string "Full Factory Restore"
+msgid "LABEL_DESCR_FULL_FACTORY_RESTORE"
+msgstr "完全出厂还原"
+
+#: string "Your device configuration will be updated, followed by a reboot. "
+msgid "LABEL_DESCR_CONFIGURATION_UPDATE_REBOOT"
+msgstr "设备重新启动后，您的设备配置将会更新。"
+
+#: string "Self Test passed."
+msgid "LABEL_DESCR_SELF_TEST_PASSED"
+msgstr "自检通过。"
+
+
+#: string "Self Test incomplete."
+msgid "LABEL_DESCR_SELF_TEST_DID_NOT_COMPLETE"
+msgstr "未完成自检。"
+
+
+#: string "Self Test cancelled."
+msgid "LABEL_DESCR_SELF_TEST_CANCELLED"
+msgstr "已取消自检。"
+
+
+#: string "Import Configuration File"
+msgid "PAGE_HEADER_IMPORT_CONFIGURATION_FILE"
+msgstr "导入配置文件"
+
+
+#: string "Login"
+msgid "BUTTON_LOGIN"
+msgstr "登录"
+
+
+#: string "Western Digital Technologies, Inc.<br />License Agreement"
+msgid "PAGE_HEADER_WESTERN_DIGITAL_TECHNOLOGIES"
+msgstr "西部数据股份有限公司<br/>许可证协议"
+
+
+#: string "Please read the license agreement carefully."
+msgid "LABEL_DESCR_PLEASE_READ_LICENSE_AGREEMENT"
+msgstr "请仔细阅读许可协议。"
+
+
+#: string "Problem confirming acceptance of license agreement."
+msgid "LABEL_DESCR_PROBLEM_CONFIRMING_LICENSE_AGREEMENT_ACCEPETANCE"
+msgstr "确认接受许可证协议时发生问题。"
+
+
+#: string "Please accept the license agreement"
+msgid "LABEL_DESCR_PLEASE_ACCEPT_LICENSE_AGREEMENT"
+msgstr "请接受许可证协议"
+
+
+#: string "Device is shutting down. After the LED on the front of the device is off, you can safely unplug your drive. Please close your browser or browser tab."
+msgid "LABEL_DESCR_SHUTTING_DOWN"
+msgstr "正在关闭设备。 设备前面板上的LED指示灯灭后，您可以安全地拔下您的驱动器。 请关闭浏览器或浏览器选项卡。"
+
+
+#: string "You are about to reboot your network device: any backups, file activity, or file transfers may be interrupted." 
+msgid "LABEL_DESCR_REBOOT_DEVICE"
+msgstr "您即将重启您的网络设备:任何备份、文件活动或文件传输可能会中断。"
+
+
+#: string "You are about to shut down your network device: any backups, file activity, or file transfers may be interrupted." 
+msgid "LABEL_DESCR_SHUTDOWN_DEVICE"
+msgstr "您即将关闭您的网络设备:任何备份、文件活动或文件传输可能会中断。"
+
+
+#: string "You don't have permission to access a resource. Please try again."
+msgid "ERROR_FORBIDDEN"
+msgstr "您没有访问资源的许可。 请重试。"
+
+
+#: string "Invalid Request."
+msgid "ERROR_DAC_INVALID"
+msgstr "请求无效。"
+
+
+#: string "Please check your network connection; then make sure that your router has the latest firmware installed and that UPnP is enabled.<br><br>For more information on how to enable UPnP, view your router's product documentation."
+msgid "LABEL_REMOTE_CONNECTION_FAILED"
+msgstr "请检查您的网络连接，并确保您的路由器已安装最新的固件，且已开启通用即插即用（ UPnP ）功能。<br><br>获取关于如何启用通用即插即用（UPnP）的更多信息，请查看您的路由器的说明文件。"
+
+
+#: string "Disabled"
+msgid "LABEL_STATUS_DISABLED"
+msgstr "已禁用"
+
+
+#: string "Connecting"
+msgid "LABEL_STATUS_CONNECTING"
+msgstr "正在连接"
+
+
+#: string "Connected"
+msgid "LABEL_STATUS_PORTFORWARDED"
+msgstr "已连接"
+
+
+#: string "Ready"
+msgid "LABEL_STATUS_READY"
+msgstr "准备就绪"
+
+
+#: string "Connected (Relay connection established)"
+msgid "LABEL_STATUS_RELAYED"
+msgstr "已连接（已建立中继连接）"
+
+
+#: string "Failed"
+msgid "LABEL_STATUS_FAILED"
+msgstr "失败"
+
+
+#: string "Your device could not be registered successfully. Please make sure you do not have network connectivity issues and try again."
+msgid "ERROR_DEVICE_REG_FAILED"
+msgstr "您的设备无法成功注册。 请确保您的网络可以连通，并重试。"
+
+
+#: string "This action could not be completed because your device is not registered. Please register your device and try again."
+msgid "ERROR_DEVICE_NOT_REGISTERED"
+msgstr "此操作未能完成，因为您的设备尚未注册。 请注册您的设备，然后重试。"
+
+
+#: string "The device status could not be updated due to an communication or internal software error."
+msgid "ERROR_DEVICE_UPDATE_FAILED"
+msgstr "由于通讯或内部软件错误，设备状态无法更新。"
+
+
+#: string "The web access account could not be located on the server. Please retry your last operation."
+msgid "ERROR_WEBACCOUNT_NOT_FOUND"
+msgstr "互联网接入账户未能在服务器上找到。 请重试上一个操作。"
+
+
+#: string "The registration email could not be re-sent. Please make sure your device is registered and you do not have any network connectivity issues and try again."
+msgid "ERROR_WEBACCOUNT_RESUBMIT_EMAIL_FAILED"
+msgstr "未能重新发送注册邮件。 请确保您的设备已注册，且您的网络可以连通，然后重试。"
+
+# Edit - reworded - 5-21 Moravia, please update accordingly; see spreadsheet
+#: string "This email account cannot be deleted. Make sure your device is registered and your network connection is functioning properly, and then try again."
+msgid "ERROR_WEBACCOUNT_DELETE_FAILED"
+msgstr "此电子邮件帐户无法删除。 请确保设备已经注册，并且网络连接正常，然后重试。"
+
+
+#: string "Your mobile device could not be located on the server. Please retry your last operation."
+msgid "ERROR_MOBILEACCESS_NOT_FOUND"
+msgstr "您的移动设备无法在服务器上找到。 请重试上一个操作。"
+
+
+#: string "Failed to generate code for your mobile device. Please make sure you do not have any network connectivity issues and try again."
+msgid "ERROR_MOBILEACCESS_CREATE_FAILED"
+msgstr "未能为您的移动设备生成代码。 请确保您的网络可以连通，并重试。"
+
+
+#: string "Mobile access for this device could not be removed. Please make sure your device is registered and you do not have any network connectivity issues and try again."
+msgid "ERROR_MOBILEACCESS_DELETE_FAILED"
+msgstr "无法移除此设备的移动访问。 请确保您的设备已注册，且没有任何网络连接问题，然后重试。"
+
+
+#: string "Failed to locate user account. Please make sure your device is registered and you do not have any network connectivity issues and try again."
+msgid "ERROR_USER_NOT_FOUND"
+msgstr "无法找到用户帐户。 请确保您的设备已注册，且没有任何网络连接问题，然后重试。"
+
+
+#: string "Failed to create user account. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_USER_CREATE_FAILED"
+msgstr "创建用户帐户失败。 请确保您具有此操作所需的权限和足够的磁盘空间，然后重试。"
+
+
+#: string "Failed to update user account. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_USER_UPDATE_FAILED"
+msgstr "更新用户帐户失败。 请确保您具有此操作所需的权限和足够的磁盘空间，然后重试。"
+
+
+#: string "Failed to delete user account. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_USER_DELETE_FAILED"
+msgstr "无法删除用户帐户。 请确保您具有此操作所需的权限和足够的磁盘空间，然后重试。"
+
+
+#: string "Unable to modify share access list. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_SHAREACCESS_NOT_FOUND"
+msgstr "无法修改共享访问列表。 请确保您具有此操作所需的权限和足够的磁盘空间，然后重试。"
+
+
+#: string "Failed to create share access list. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_SHAREACCESS_CREATE_FAILED"
+msgstr "无法创建共享访问列表。 请确保您具有此操作所需的权限和足够的磁盘空间，然后重试。"
+
+
+#: string "Failed to update share access list. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_SHAREACCESS_UPDATE_FAILED"
+msgstr "无法更新共享访问列表。 请确保您具有此操作所需的权限和足够的磁盘空间，然后重试。"
+
+
+#: string "Failed to delete share access list. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_SHAREACCESS_DELETE_FAILED"
+msgstr "无法删除共享访问列表。 请确保您具有此操作所需的权限和足够的磁盘空间，然后重试。"
+
+
+#: string "This operation could not succeed because the share resource no longer exists or is currently inaccessible. Please make sure you have sufficient disk space for this operation and try again."
+msgid "ERROR_SHARE_NOT_FOUND"
+msgstr "由于共享资源不再存在或目前无法访问，此操作失败。 请确保您具有此操作所需的足够的磁盘空间，然后重试。"
+
+
+#: string "There was an error while updating a share resource. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_SHARE_UPDATE_FAILED"
+msgstr "更新共享资源时出错。 请确保您具有此操作所需的权限和足够的磁盘空间，然后重试。"
+
+
+#: string "There was an error while deleting a share resource. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_SHARE_DELETE_FAILED"
+msgstr "删除共享资源时出错。 请确保您具有此操作所需的权限和足够的磁盘空间，然后重试。"
+
+
+#: string "Back"
+msgid "BUTTON_BACK"
+msgstr "返回"
+
+# Edit - changed from sentence case to title case
+#: string "Recovering Content with a Safepoint"
+msgid "HELP_LINK_RECOVERING_SAFEPOINT"
+msgstr "正在通过一个 Safepoint 来恢复内容"
+
+
+#: string "Weekly"
+msgid "LABEL_DESCR_WEEKLY"
+msgstr "每周"
+
+
+#: string "Monthly"
+msgid "LABEL_DESCR_MONTHLY"
+msgstr "每月"
+
+
+#: string "Name"
+msgid "LABEL_SAFEPOINT_NAME"
+msgstr "名称"
+
+
+#: string "Frequency:"
+msgid "LABEL_HEADER_FREQUENCY"
+msgstr "频率:"
+
+
+#: string "Safepoint update process terminated. You can update your safepoint anytime using the Auto Update option, or manually by clicking the update icon on your safepoint in the Manage section."
+msgid "LABEL_SAFEPOINT_UPDATE_ABORTED"
+msgstr "Safepoint 更新已终止。 Safepoint 更新已终止。 您可以使用“自动更新”选项随时更新 safepoint，也可以在“管理”栏下单击更新图标进行手动更新。"
+
+
+#: string "Your data was successfully restored. Your device will automatically restart shortly and can be used in place of your original WD My Cloud."
+msgid "LABEL_SAFEPOINT_RESTORE_COMPLETE"
+msgstr "您的数据已成功还原。 您的设备即将自动重新启动，并代替您原来的 WD My Cloud。"
+
+
+#: string "An error occurred while recovering data from your safepoint. Please try the Recovery option again.<br><br>If the error persists, please contact WD Support."
+msgid "ERROR_SAFEPOINT_RESTORE_FAILED"
+msgstr "从 safepoint 恢复数据时出错。 请再次尝试“恢复”选项。<br><br>如果错误仍然存在，请联系WD支持服务。"
+
+
+#: string "To be created"
+msgid "LABEL_SAFEPOINT_TO_BE_CREATED"
+msgstr "待创建"
+
+
+#: string "Your safepoint cannot be created due to a failed request. Please try creating your safepoint again."
+msgid "ERROR_SAFEPOINT_CREATE_FAILED"
+msgstr "由于请求失败，safepoint 无法创建。 请尝试再次创建 safepoint。"
+
+
+#: string "Your safepoint cannot be created due to an invalid request."
+msgid "ERROR_SAFEPOINT_CREATE_INVALID"
+msgstr "由于请求无效，无法创建 safepoint。"
+
+
+#: string "Your safepoint cannot be created due to an unauthorized request. Please be sure to enter appropriate credentials for your device and/or shares, and try again."
+msgid "ERROR_SAFEPOINT_CREATE_UNAUTHORIZED"
+msgstr "由于请求未经许可，safepoint 无法创建。 请确保输入正确的设备或共享的凭证，并重试。"
+
+
+#: string "Your safepoint cannot be created due to a missing drive or share resource. Please try creating your safepoint again."
+msgid "ERROR_SAFEPOINT_CREATE_NOT_FOUND"
+msgstr "由于缺少驱动器或网络共享资源，您无法创建 safepoint。 请尝试再次创建 safepoint。"
+
+
+#: string "A safepoint operation is currently in progress. Please wait for the current operation to finish before initiating another."
+msgid "ERROR_SAFEPOINT_BUSY"
+msgstr "Safepoint 操作当前正在进行中。 请等待当前操作完成，然后再进行下一个操作。"
+
+
+#: string "Your safepoint cannot be created due to insufficient space. Please make sure you have sufficient space on your destination device and/or shares, and then try again."
+msgid "ERROR_SAFEPOINT_CREATE_NOSPACE"
+msgstr "由于空间不足，safepoint 无法创建。 请确保您的目标设备和/或共享上有足够空间，然后重试。"
+
+
+#: string "Your safepoint cannot be updated due to a failed request. Please try again."
+msgid "ERROR_SAFEPOINT_UPDATE_FAILED"
+msgstr "由于请求失败，safepoint 无法更新。 请重试。"
+
+
+#: string "Your safepoint cannot be updated due to an invalid request."
+msgid "ERROR_SAFEPOINT_UPDATE_INVALID"
+msgstr "由于请求无效，无法更新 safepoint。"
+
+
+#: string "Your safepoint cannot be updated due to an unauthorized request. Please be sure to enter appropriate credentials for your device and/or shares, and and try again."
+msgid "ERROR_SAFEPOINT_UPDATE_UNAUTHORIZED"
+msgstr "由于请求未经许可，safepoint 无法更新。 请确保输入正确的设备和/或共享的凭证，然后重试。"
+
+
+#: string "Your safepoint cannot be updated due to a missing drive or share resource. Make sure the drive or resource is available; then try again."
+msgid "ERROR_SAFEPOINT_CREATE_UPDATE_NOTFOUND"
+msgstr "由于缺少驱动器或共享资源，您无法创建 safepoint。 确保驱动器或资源可用;然后重试。"
+
+
+#: string "Your safepoint cannot be updated due to insufficient space. Please make sure you have sufficient space on your destination device and/or shares, and try again."
+msgid "ERROR_SAFEPOINT_UPDATE_NOSPACE"
+msgstr "由于空间不足，safepoint 无法更新。 请确保您的目标设备和/或共享有足够空间，然后重试。"
+
+
+#: string "The discovery operation was not successful due to a failed request. Please retry by clicking Discover again."
+msgid "ERROR_NAS_DISCOVER_FAILED"
+msgstr "由于请求失败，发现操作不成功。 请单击“发现”按钮以重试。"
+
+
+#: string "This operation could not succeed due to an authentication failure. Please retry the operation to continue."
+msgid "ERROR_NAS_AUTHENTICATION_FAILED"
+msgstr "由于身份验证失败，此操作未成功。 请重试操作以继续。"
+
+
+#: string "This operation could not succeed due to an invalid authentication request. Please retry the operation to continue."
+msgid "ERROR_NAS_AUTHENTICATION_INVALID"
+msgstr "由于身份验证请求无效，此操作未成功。 请重试操作以继续。"
+
+
+#: string "Invalid username or password. Please enter your credentials again to continue."
+msgid "ERROR_NAS_AUTHENTICATION_UNAUTHORIZED"
+msgstr "用户名或密码无效。 请重新输入您的凭证以继续。"
+
+
+#: string "Your device could not be found. Please try again to continue."
+msgid "ERROR_NAS_AUTHENTICATION_NOTFOUND"
+msgstr "未能找到您的设备。 请重试以继续。"
+
+
+#: string "The shares on the selected device could not be located due to a failed request. Please try again to continue."
+msgid "ERROR_SHARE_DISCOVER_FAILED"
+msgstr "由于请求失败，未能在选定的设备上找到该共享。 请重试以继续。"
+
+
+#: string "The shares on the selected device could not be located due to an invalid operation. Please try again to continue."
+msgid "ERROR_SHARE_DISCOVER_INVALID"
+msgstr "由于操作无效，未能在选定的设备上无法找到该共享。 请重试以继续。"
+
+
+#: string "The shares on the selected device could not be located due to an unauthorized request. Please make sure you enter appropriate credentials for your device and/or shares and try again."
+msgid "ERROR_SHARE_DISCOVER_UNAUTHORIZED"
+msgstr "由于请求未经许可，未能在选定的设备上找到该共享。 请确保输入正确的设备和/或共享的凭证，并重试。"
+
+
+#: string "Your device could not be found. Please try again to continue."
+msgid "ERROR_SHARE_DISCOVER_NOTFOUND"
+msgstr "未能找到您的设备。 请重试以继续。"
+
+
+#: string "This operation could not succeed due to an authentication failure. Please retry the operation to continue."
+msgid "ERROR_SHARE_AUTHENTICATION_FAILED"
+msgstr "由于身份验证失败，此操作未成功。 要继续，请重试该操作。"
+
+
+#: string "This operation could not succeed due to an invalid request. Please retry the operation to continue."
+msgid "ERROR_SHARE_AUTHENTICATION_INVALID"
+msgstr "由于请求无效，此操作未成功。 请重试操作以继续。"
+
+
+#: string "Invalid username or password. Please enter your credentials again to continue."
+msgid "ERROR_SHARE_AUTHENTICATION_UNAUTHORIZED"
+msgstr "用户名或密码无效。 请重新输入您的凭证以继续。"
+
+
+#: string "Your device or share could not be found. Please try again to continue."
+msgid "ERROR_SHARE_AUTHENTICATION_NOTFOUND"
+msgstr "无法找到您的设备或共享。 请重试以继续。"
+
+
+#: string "Your safepoint(s) could not be found due to a failed request. Please try again to continue."
+msgid "ERROR_SAFEPOINT_DISCOVER_FAILED"
+msgstr "由于请求失败，未能找到您的 safepoint。 请重试以继续。"
+
+
+#: string "This operation could not succeed due to an invalid request. Please retry the operation to continue."
+msgid "ERROR_SAFEPOINT_DISCOVER_INVALID"
+msgstr "由于请求无效，此操作未成功。 要继续，请重试该操作。"
+
+
+#: string "Your safepoint could not be found due to an unauthorized request. Please make sure you enter appropriate credentials for your device and/or shares and try again."
+msgid "ERROR_SAFEPOINT_DISCOVER_UNAUTHORIZED"
+msgstr "由于请求未经许可，未能找到您的 safepoint。 请确保输入正确的设备和/或共享的凭证，并重试。"
+
+
+#: string "Your device or share could not be found. Please try again to continue."
+msgid "ERROR_SAFEPOINT_DISCOVER_NOTFOUND"
+msgstr "无法找到您的设备或共享。 请重试以继续。"
+
+
+#: string "Your safepoint(s) could not be found due to a failed request. Please try again to continue."
+msgid "ERROR_SAFEPOINT_GET_LIST_FAILED"
+msgstr "由于请求失败，无法找到您的 safepoint。 请重试以继续。"
+
+
+#: string "Your safepoint could not be deleted due to a failed request. Please try again."
+msgid "ERROR_SAFEPOINT_DESTROY_FAILED"
+msgstr "由于请求失败，无法删除您的 safepoint。 请重试。"
+
+
+#: string "Your safepoint could not be deleted due to an invalid request. Please try again."
+msgid "ERROR_SAFEPOINT_DESTROY_INVALID"
+msgstr "由于请求无效，无法删除您的 safepoint。 请重试。"
+
+
+#: string "Your safepoint could not be found. Please try again to continue."
+msgid "ERROR_SAFEPOINT_DESTROY_NOT_FOUND"
+msgstr "无法找到您的 safepoint。 请重试以继续。"
+
+
+#: string "Your safepoint could not be deleted because it is currently unreachable. Please try again after some time."
+msgid "ERROR_SAFEPOINT_DESTROY_UNREACHABLE"
+msgstr "由于您的 safepoint 目前不可访问，因此无法删除。 请稍后重试。"
+
+
+#: string "Your data could not be recovered due to an invalid request. Please try again."
+msgid "ERROR_SAFEPOINT_RESTORE_INVALID"
+msgstr "由于请求无效，无法恢复您的数据。 请重试。"
+
+
+#: string "Your safepoint could not be found. Please try again to continue."
+msgid "ERROR_SAFEPOINT_RESTORE_NOTFOUND"
+msgstr "无法找到您的 safepoint。 请重试以继续。"
+
+
+#: string "Your data could not be recovered due to insufficient space. Please make sure you have sufficient space on your destination device and/or shares and try again."
+msgid "ERROR_SAFEPOINT_RESTORE_NOSPACE"
+msgstr "由于空间不足，无法恢复您的数据。 请确保您的目标设备和/或共享有足够空间，并重试。"
+
+
+#: string "Your data could not be recovered because your safepoint is currently unreachable. Please try again after some time."
+msgid "ERROR_SAFEPOINT_RESTORE_UNREACHABLE"
+msgstr "由于您的 safepoint 目前不可访问，因此无法恢复数据。 请稍后重试。"
+
+
+#: string "The device you are recovering to does not appear to be in factory fresh state. Please navigate to Settings and perform a factory restore. Please note that you will lose all of your existing data on the device if you do so."
+msgid "ERROR_SAFEPOINT_RESTORE_NOT_FACTORY_FRESH"
+msgstr "您正在恢复的设备似乎并不处于出厂状态。 请浏览&quot;设置&quot;栏并执行出厂还原操作。 请注意，如果您这么做，您将缺失设备上所有的现有数据。"
+
+
+#: string "This operation could not succeed due to a failed request. Please try again."
+msgid "ERROR_SAFEPOINT_GET_STATUS_FAILED"
+msgstr "由于请求失败，此操作未成功。 请重试。"
+
+
+#: string "Invalid request. Please try again."
+msgid "ERROR_SAFEPOINT_GET_STATUS_INVALID"
+msgstr "请求无效。 请重试。"
+
+
+#: string "Your device or share could not be found. Please try again to continue."
+msgid "ERROR_SAFEPOINT_GET_STATUS_NOTFOUND"
+msgstr "无法找到您的设备或共享。 请重试以继续。"
+
+
+#: string "This operation could not succeed due to insufficient space. Please make sure you have sufficient space on your device and/or shares and try again."
+msgid "ERROR_SAFEPOINT_GET_STATUS_NOSPACE"
+msgstr "由于空间不足，此操作未成功。 请确保您的设备和/或共享有足够空间，然后重试。"
+
+
+#: string "Your safepoint is currently unreachable. Please try again after some time."
+msgid "ERROR_SAFEPOINT_GET_STATUS_UNREACHABLE"
+msgstr "您的 safepoint 目前无法访问。 请稍后重试。"
+
+
+#: string "This operation could not succeed due to a failed request. Please try again."
+msgid "ERROR_SAFEPOINT_SET_INFO_FAILED"
+msgstr "由于请求失败，此操作未成功。 请重试。"
+
+
+#: string "Invalid request. Please try again."
+msgid "ERROR_SAFEPOINT_SET_INFO_INVALID"
+msgstr "请求无效。 请重试。"
+
+
+#: string "There was an error due to an unauthorized request. Please make sure you enter appropriate credentials for your device and/or shares and try again."
+msgid "ERROR_SAFEPOINT_SET_INFO_UNAUTHORIZED"
+msgstr "由于请求未经许可，发生了一个错误。 请确保输入设备和/或共享的相应凭证，并重试。"
+
+
+#: string "Your safepoint could not be found. Please try again to continue."
+msgid "ERROR_SAFEPOINT_SET_INFO_NOTFOUND"
+msgstr "无法找到您的 safepoint。 请重试以继续。"
+
+
+#: string "This operation could not succeed due to a failed request. Please try again."
+msgid "ERROR_SAFEPOINT_GET_SCHEDULE_FAILED"
+msgstr "由于请求失败，此操作未成功。 请重试。"
+
+
+#: string "Invalid request. Please try again."
+msgid "ERROR_SAFEPOINT_GET_SCHEDULE_INVALID"
+msgstr "请求无效。 请重试。"
+
+
+#: string "Your safepoint could not be found. Please try again to continue."
+msgid "ERROR_SAFEPOINT_GET_SCHEDULE_NOT_FOUND"
+msgstr "无法找到您的 safepoint。 请重试以继续。"
+
+
+#: string "This operation could not succeed due to a failed request. Please try again."
+msgid "ERROR_SAFEPOINT_SET_SCHEDULE_FAILED"
+msgstr "由于请求失败，此操作未成功。 请重试。"
+
+
+#: string "Invalid request. Please try again."
+msgid "ERROR_SAFEPOINT_SET_SCHEDULE_INVALID"
+msgstr "请求无效。 请重试。"
+
+
+#: string "Your safepoint could not be found. Please try again to continue."
+msgid "ERROR_SAFEPOINT_SET_SCHEDULE_NOT_FOUND"
+msgstr "无法找到您的 safepoint。 请重试以继续。"
+
+
+#: string "A safepoint with the same name already exists on this share. Please choose a different name for your safepoint and try again."
+msgid "ERROR_SAFEPOINT_CREATE_DUPLICATE"
+msgstr "此共享中已存在一个同名的 safepoint。 请为您的 safepoint 选择一个不同的名称，然后重试。"
+
+
+#: string "This safepoint is corrupt and could not be deleted. Please fix the errors on this safepoint and try again."
+msgid "ERROR_SAFEPOINT_DESTROY_CORRUPTED"
+msgstr "此 safepoint 已损坏，因此无法删除。 请修复此 safepoint 的错误，然后重试。"
+
+
+#: string "The recovery operation failed due to an invalid safepoint state. Please wait for some time and try again."
+msgid "ERROR_SAFEPOINT_RESTORE_DUPLICATE"
+msgstr "由于 safepoint 状态无效，恢复操作失败。 请稍等片刻，然后重试。"
+
+
+#: string "The recovery operation could not succeed because this safepoint is currently being updated. Please wait for that operation to finish before attempting to recover your data from this safepoint."
+msgid "ERROR_SAFEPOINT_RESTORE_NOT_USABLE"
+msgstr "由于此 safepoint 当前正在更新，恢复操作未成功。 请等待该操作完成，然后再尝试从该 safepoint 恢复您的数据。"
+
+
+#: string "A safepoint with the same name already exists on this share. Please choose a different name for your safepoint and try again."
+msgid "ERROR_SAFEPOINT_SET_INFO_DUPLICATE"
+msgstr "此共享中已存在一个同名的 safepoint。 请为您的 safepoint 选择一个不同的名称，然后重试。"
+
+
+#: string "A scheduling error occurred with your safepoint. Please set the auto-update schedule for your safepoint again. If your safepoint is yet to be created, please try creating the safepoint again."
+msgid "ERROR_SAFEPOINT_GET_SCHEDULE_CORRUPTED"
+msgstr "您的 safepoint 发生计划错误。 请再次为您的 safepoint 设置自动更新计划。 如果您是 safepoint 尚未建立，请尝试再次创建 safepoint。"
+
+
+#: string "This operation could not succeed due to an scheduling conflict. Please ensure you have not enabled other safepoint operations for this time and try again."
+msgid "ERROR_SAFEPOINT_SET_SCHEDULE_DUPLICATE"
+msgstr "由于计划冲突，此操作未成功。 请确保您此次没有启用其他 safepoint，然后重试。"
+
+
+#: string "Size:"
+msgid "LABEL_DESCR_SIZE"
+msgstr "大小:"
+
+
+#: string "The safepoint cannot be created for a time occurring in the past. Please select a valid time from the drop-down and try again."
+msgid "ERROR_SAFEPOINT_CREATE_BAD_TIME_VALUE"
+msgstr "无法在过去的时间内创建 safepoint。 请从下拉列表中选择一个有效的时间，然后重试。"
+
+
+#: string "Error updating password. Please try again."
+msgid "ERROR_PASSWORD_UPDATE_FAILED"
+msgstr "更新密码时出错。 请重试。"
+
+
+#: string "Failed to create the specified share. Please try again."
+msgid "ERROR_SHARE_CREATE_FAILED"
+msgstr "创建特定的共享失败。 请重试。"
+
+
+#: string "The status of your safepoint(s) is currently unavailable. Please try again later."
+msgid "ERROR_SAFEPOINT_GET_STATUS_UNAVAILABLE"
+msgstr "Safepoint 状态当前不可用。 请稍后再试。"
+
+
+#: string "The web access account you requested already exists. Please enter a different email address."
+msgid "ERROR_WEBACCOUNT_DUPLICATE"
+msgstr "您请求的互联网帐户已存在。 请输入另外一个电子邮件地址。"
+
+
+#: string "Your last operation timed out. Make sure there are no network connectivity issues and try again."
+msgid "ERROR_TIMEOUT"
+msgstr "您的上一个操作超时。 请确保您的网络可以连通，并重试。"
+
+
+#: string "Your WD My Cloud IP address has changed; enter the new IP address in your browser."
+msgid "ERROR_TIMEOUT_IPADDRESS_CHANGED"
+msgstr "您的 WD My Cloud IP 地址已经变更，请在您的浏览器中输入新的IP地址。"
+
+
+#: string "The safepoint create operation is not allowed at this time."
+msgid "ERROR_SAFEPOINT_CREATE_NOT_ALLOWED"
+msgstr "当前不允许进行 safepoint 创建操作。"
+
+
+#: string "The safepoint delete operation is not allowed at this time."
+msgid "ERROR_SAFEPOINT_DESTROY_NOT_ALLOWED"
+msgstr "当前不允许进行 safepoint 删除操作。"
+
+
+#: string "The safepoint update operation is not allowed at this time."
+msgid "ERROR_SAFEPOINT_UPDATE_NOT_ALLOWED"
+msgstr "当前不允许进行 safepoint 更新操作。"
+
+
+#: string "This operation is not supported."
+msgid "ERROR_NOT_SUPPORTED"
+msgstr "不支持此操作。"
+
+
+#: string "A system resource is not available."
+msgid "ERROR_UNAVAILABLE"
+msgstr "系统资源不可用。"
+
+
+#: string "An error occurred during the abort operation."
+msgid "ERROR_ABORTED"
+msgstr "中止操作时发生错误。"
+
+
+#: string "A failed request was received during this operation."
+msgid "ERROR_FAILED"
+msgstr "操作过程中时发生一次请求失败。"
+
+
+#: string "Operation failed due to a duplication error."
+msgid "ERROR_DUPLICATE"
+msgstr "由于重复错误，操作失败。"
+
+
+#: string "Operation failed due to a corrupt resource."
+msgid "ERROR_CORRUPTED"
+msgstr "由于资源损坏，操作失败。"
+
+
+#: string "This operation is not allowed."
+msgid "ERROR_NOT_ALLOWED"
+msgstr "不允许此操作。"
+
+
+#: string "Upgrade was not successful."
+msgid "ERROR_UPGRADE_FAILED"
+msgstr "未成功升级。"
+
+
+#: string "Conversion was not successful."
+msgid "ERROR_CONVERSION_FAILED"
+msgstr "未成功转换。"
+
+
+#: string "Manufacturer:"
+msgid "LABEL_MANUFACTURER"
+msgstr "制造商:"
+
+
+#: string "Self-Assessment Test:"
+msgid "LABEL_SELF_ASSESSMENT_TEST"
+msgstr "自我评估测试:"
+
+
+#: string "No Internet access. Check your network and try again."
+msgid "ERROR_NO_INTERNET_CONNECTIVITY"
+msgstr "无法接入互联网。 请检查您的网络，然后重试。"
+
+
+#: string "USB Device Details"
+msgid "LABEL_USB_DEVICE_DETAILS"
+msgstr "USB 设备详细信息"
+
+
+#: string "USB Device Name"
+msgid "LABEL_USB_DEVICE_NAME"
+msgstr "USB 设备名称"
+
+
+#: string "Model:"
+msgid "LABEL_MODEL"
+msgstr "型号:"
+
+
+#: string "Provide a valid name."
+msgid "ERROR_PROVIDE_VALID_NAME"
+msgstr "请提供一个有效的名称。"
+
+
+#: string "Password hint"
+msgid "LABEL_DESCR_SHOW_PASSWORD_HINT"
+msgstr "密码提示"
+
+
+#: string "The drive was not found. Please make sure the drive is connected and try again."
+msgid "ERROR_DRIVE_NOT_FOUND"
+msgstr "没有找到驱动器。 请确保驱动器已连接，然后重试。"
+
+
+#: string "Connection Status:"
+msgid "LABEL_HEADER_CONNECTION_STATUS"
+msgstr "连接状态:"
+
+
+#: string "Eject USB Drive?"
+msgid "HEADING_EJECT_USB"
+msgstr "弹出 USB 驱动器吗?"
+
+
+#: string "Unable to retrieve data. Make sure there are no network connectivity issues and try again."
+msgid "ERROR_GET_ERROR"
+msgstr "无法获取数据。 请确保没有网络连接问题，并重试。"
+
+
+#: string "Ejecting this device will remove all associated shares."
+msgid "LABEL_DESCR_CONFIRM_EJECT_USB_1"
+msgstr "弹出此设备将移除所有相关的共享。"
+
+
+#: string "Backup tasks in progress on this device will be interrupted."
+msgid "LABEL_DESCR_CONFIRM_EJECT_USB_2"
+msgstr "本设备上正在进行的备份任务将会中断。"
+
+#: string "If you are logged in remotely, you cannot access the device until it is plugged back in."
+msgid "LABEL_DESCR_CONFIRM_EJECT_USB_3"
+msgstr "如果您是远程登录，您将无法访问设备，直至设备插回。"
+
+#: string "Username {0} is reserved. It is a case sensitive, alphanumeric value between 1 and 32 characters, and cannot contain spaces."
+msgid "ERROR_USERNAME_RESERVED"
+msgstr "用户名{0}已保留。 它包含 1 到 32 个字母或数字，区分大小写，并且不能包含空格。"
+
+#: string "First name {0} is reserved. It is a case sensitive, alphanumeric value between 1 and 32 characters and cannot contain spaces."
+msgid "ERROR_NAME_RESERVED"
+msgstr "名字{0}已保留。 它包含 1 到 32 个字母或数字，区分大小写，并且不能包含空格。"
+
+#: string "First name must be an alphanumeric value between 1 and 32 characters and cannot contain spaces."
+msgid "ERROR_ADD_USER_FIRST_NAME_INCORRECT_SYNTAX"
+msgstr "名字必须是 1 到 32 个字母或数字，区分大小写，并且不能包含空格。"
+
+#: string "First name is a case-sensitive alphanumeric value up to 256 characters when combined with last name. Spaces and underscores are permitted when combining first and last name."
+msgid "ERROR_EDIT_USER_FIRST_NAME_INCORRECT_SYNTAX"
+msgstr "名字是几个字母或数字，区分大小写，加上姓氏后，一共不能超过256个字符。 姓氏和名字组合在一起时，允许使用空格和下划线。"
+
+
+#: string "Last name is a case sensitive alphanumeric value that can be up to 256 characters when combined with first name. Spaces and underscores are permitted when combining last and first name."
+msgid "ERROR_LAST_NAME_INCORRECT_SYNTAX"
+msgstr "姓氏是几个字母或数字，区分大小写，加上名字后，一共不能超过256个字符。 姓氏和名字组合在一起时，允许使用空格和下划线。"
+
+
+
+
+
+
+
+#: string "Failed to send test email. Please ensure you are not facing network connectivity issues and try again."
+msgid "ERROR_TEST_EMAIL_SEND_FAILED"
+msgstr "发送测试电子邮件失败。 请确保您的网络连接没有问题，并重试。"
+
+#: string "Local USB"
+msgid "BUTTON_LOCAL"
+msgstr "本地 USB"
+
+#: string "Scan Network"
+msgid "BUTTON_NETWORK"
+msgstr "扫描网络"
+
+#: string "Not enough disk space available.<br><br>Please delete at least {0} on your drive and try again."
+msgid "ERROR_SPACE_LIMITATION"
+msgstr "没有足够的可用磁盘空间。<br><br>请在您的驱动器上删除至少{0}，然后重试。"
+
+#: string "Upgrade download failure. Please try your upgrade again."
+msgid "ERROR_UPGRADE_DOWNLOAD_FAILED"
+msgstr "升级下载失败。 请重试升级。"
+
+#: string "Before updating your firmware, make sure that both drives are installed in your WD My Cloud."
+msgid "ERROR_UPGRADE_ALL_DRIVE_MUST_BE_PRESENT"
+msgstr "更新固件之前，请确保两个驱动器都已安装在您的 WD My Cloud 中。"
+
+#: string "Are you sure you want to eject this USB drive?"
+msgid "LABEL_DESCR_EJECT_USB"
+msgstr "您确定要弹出 USB 驱动器?"
+
+#: string "Unknown error. Retry your last operation. If the error persists, contact WD Support for assistance."
+msgid "ERROR_UNKNOWN"
+msgstr "未知错误。 请重试上一个操作。 如果错误仍然存在，请联系西部数据支持服务以寻求协助。"
+
+#: string "Internal server error. Retry your last operation. If the error persists, contact WD Support for assistance."
+msgid "ERROR_INTERNAL_SERVER_ERROR"
+msgstr "内部服务器错误。 请重试上一个操作。 如果错误仍然存在,请联系西部数据支持服务以寻求协助。"
+
+#: string "Your safepoint operation could not be canceled due to a failed request. Try again."
+msgid "ERROR_SAFEPOINT_CANCEL_FAILED"
+msgstr "由于请求失败，无法找到您的 safepoint 操作无法取消。 请重试。"
+
+#: string "Your safepoint operation could not be canceled due to a missing drive or share resource. Try again."
+msgid "ERROR_SAFEPOINT_CANCEL_NOT_FOUND"
+msgstr "由于缺少驱动器或共享资源，您的 safepoint 操作无法取消。 请重试。"
+
+#: string "Your safepoint operation could not be canceled due to an unauthorized request. Enter appropriate credentials for your device and/or shares and try again."
+msgid "ERROR_SAFEPOINT_CANCEL_UNAUTHORIZED"
+msgstr "由于请求未经许可，您的 safepoint 操作无法取消。 输入正确的设备和/或共享凭证，然后重试。"
+
+#: string "Your safepoint operation could not be canceled due to an invalid request."
+msgid "ERROR_SAFEPOINT_CANCEL_INVALID"
+msgstr "由于请求无效，您的 safepoint 操作无法取消。"
+
+#: string "Canceling this safepoint operation is not allowed at this time."
+msgid "ERROR_SAFEPOINT_CANCEL_NOT_ALLOWED"
+msgstr "当前不允许取消 safepoint 操作。"
+
+#: string "Error changing Central Server:"
+msgid "LABEL_CHANGING_CENTRAL_SERVER"
+msgstr "变更中央服务器时出错："
+
+#: string "Error retrieving Central Server information:"
+msgid "LABEL_GET_CENTRAL_SERVER"
+msgstr "获取中央服务器信息时出错："
+
+#: string "Error updating firmware:"
+msgid "LABEL_UPDATING_FIRMWARE"
+msgstr "更新固件时出错："
+
+#: string "Error auto-updating firmware:"
+msgid "LABEL_AUTO_UPDATING_FIRMWARE"
+msgstr "自动更新固件时出错："
+
+#: string "Error retrieving firmware upgrade information:"
+msgid "LABEL_GET_FIRMWARE_UPDATE_PROGRESS"
+msgstr "获取固件升级信息时出错："
+
+#: string "Error retrieving usage values:"
+msgid "LABEL_GET_USAGE"
+msgstr "获取使用值时出错:"
+
+#: string "Error configuring network settings:"
+msgid "LABEL_CONFIGURING_NETWORKS"
+msgstr "配置网络设置时出错:"
+
+
+#: string "Error in Network Connectivity test:"
+msgid "LABEL_NETWORK_CONNECTIVITY_TEST"
+msgstr "网络连接检测出错:"
+
+
+#: string "Error restoring factory defaults:"
+msgid "LABEL_RESTORING_FACTORY_DEFAULT"
+msgstr "恢复出厂默认设置时出错:"
+
+
+#: string "Error retrieving factory restore information:"
+msgid "LABEL_GET_FACTORY_RESTORE_PROGRESS"
+msgstr "获取出厂还原信息时出错："
+
+
+#: string "Error retrieving diagnostic test information:"
+msgid "LABEL_GET_DIAGNOSTIC_TEST_INFORMATION"
+msgstr "获取诊断检测信息时出错："
+
+
+#: string "Error starting diagnostic test:"
+msgid "LABEL_STARTING_DIAGNOSTIC_TEST"
+msgstr "开始诊断测试时出错:"
+
+
+#: string "Error canceling diagnostic test:"
+msgid "LABEL_CANCELLING_DIAGNOSTIC_TEST"
+msgstr "取消诊断测试时出错:"
+
+
+#: string "Error retrieving diagnostic test information:"
+msgid "LABEL_GET_SELFTEST_PROGRESS"
+msgstr "获取诊断检测信息时出错："
+
+
+#: string "Error configuring remote access:"
+msgid "LABEL_CONFIGURATING_REMOTE_ACCESS"
+msgstr "配置远程访问时出错:"
+
+
+#: string "Error updating remote access:"
+msgid "LABEL_UPDATING_REMOTE_ACCESS"
+msgstr "更新远程访问时出错:"
+
+
+#: string "Error adding mobile access:"
+msgid "LABEL_ADDING_REMOTE_DEVICE_ACCESS"
+msgstr "添加移动访问时出错:"
+
+
+#: string "Error registering web access account:"
+msgid "LABEL_REGISTERING_WEB_ACCESS"
+msgstr "注册互联网访问帐户时出错:"
+
+
+#: string "Error retrieving web access account:"
+msgid "LABEL_GET_WEB_ACCESS"
+msgstr "获取互联网访问帐户时出错:"
+
+
+#: string "Error resending registration email:"
+msgid "LABEL_RESUBMITTING_REGISTRATION_EMAIL"
+msgstr "重新发送注册电子邮件时出错:"
+
+
+#: string "Error deleting web access:"
+msgid "LABEL_DELETING_WEB_ACCESS"
+msgstr "删除网络访问时出错:"
+
+
+#: string "Error retrieving mobile devices:"
+msgid "LABEL_RETRIEVING_MOBILE_ACCESS"
+msgstr "获取移动设备时出错:"
+
+
+#: string "Error generating code for your mobile device:"
+msgid "LABEL_GENERATING_CODE_FOR_MOBILE_ACCESS"
+msgstr "为您的移动设备生成代码时出错："
+
+
+#: string "Error removing mobile access:"
+msgid "LABEL_REMOVING_MOBILE_ACCESS"
+msgstr "移除移动访问时出错:"
+
+
+#: string "Error rebuilding content database:"
+msgid "LABEL_REBUILDING_WD2GO_DATABASE"
+msgstr "还原内容数据库时出错:"
+
+
+#: string "Error configuring connection options:"
+msgid "LABEL_CONFIGURATING_CONNECTION_OPTION"
+msgstr "配置连接选项时出错:"
+
+
+#: string "Error blocking media player:"
+msgid "LABEL_BLOCKING_MEDIA_PLAYER"
+msgstr "阻止媒体播放器时出错："
+
+
+#: string "Error rescanning media players:"
+msgid "LABEL_RESCANNING_MEDIA_PLAYERS"
+msgstr "重新扫描媒体播放器时出错:"
+
+
+#: string "Error rescanning DLNA server:"
+msgid "LABEL_RESCANNING_DLNA_SERVER"
+msgstr "重新扫描 DLNA 服务器时出错:"
+
+
+#: string "Error rebuilding DLNA server database:"
+msgid "LABEL_REBUILDING_DLNA_SERVER_DATABASE"
+msgstr "还原 DLNA 服务器数据库时出错："
+
+
+#: string "Error retrieving progress information from DLNA server:"
+msgid "LABEL_GET_DLNA_RESCAN_PROGRESS"
+msgstr "从 DLNA 服务器获取进程信息时出错:"
+
+
+#: string "Error retrieving information from DLNA server:"
+msgid "LABEL_GET_DLNA_INFORMATION"
+msgstr "从 DLNA 服务器获取信息时出错:"
+
+
+#: string "Error enabling DLNA service:"
+msgid "LABEL_ENABLING_DLNA_SERVICE"
+msgstr "启用 DLNA 服务时出错:"
+
+
+#: string "Error enabling iTunes service"
+msgid "LABEL_ENABLING_ITUNES_SERVICE"
+msgstr "启用 iTunes 服务时出错:"
+
+
+#: string "Error rescanning iTunes server:"
+msgid "LABEL_RESCANNING_ITUNES_SERVER"
+msgstr "重新扫描 iTunes 服务器时出错:"
+
+
+#: string "Error initiating storage conversion:"
+msgid "LABEL_STARTING_STORAGE_CONVERSION"
+msgstr "存储转换初始化时出错:"
+
+
+#: string "Error retrieving progress information for storage conversion:"
+msgid "LABEL_GET_STORAGE_CONVERSION_PROGRESS"
+msgstr "为存储转换获取进程信息时出错:"
+
+
+#: string "Error unlocking USB:"
+msgid "LABEL_UNLOCKING_USB"
+msgstr "解锁 USB 时出错:"
+
+
+#: string "Error retrieving USB information:"
+msgid "LABEL_GET_USB_INFORMATION"
+msgstr "获取 USB 信息时出错:"
+
+
+#: string "Error ejecting USB device:"
+msgid "LABEL_EJECT_USB"
+msgstr "弹出 USB 设备时出错:"
+
+
+#: string "Error updating owner password:"
+msgid "LABEL_UPDATING_OWNER_PASSWORD"
+msgstr "更新所有者密码时出错。"
+
+
+#: string "Error updating password:"
+msgid "LABEL_UPDATING_PASSWORD"
+msgstr "更新密码时出错。"
+
+
+#: string "Error retrieving user information:"
+msgid "LABEL_GET_USER_INFORMATION"
+msgstr "获取用户信息时出错:"
+
+
+#: string "Error creating user:"
+msgid "LABEL_CREATING_USER"
+msgstr "创建用户时出错:"
+
+
+#: string "Error updating user:"
+msgid "LABEL_UPDATING_USER"
+msgstr "更新用户时出错:"
+
+
+#: string "Error deleting user:"
+msgid "LABEL_DELETING_USER"
+msgstr "删除用户时出错:"
+
+
+#: string "Error updating share access privileges:"
+msgid "LABEL_UPDATING_SHARE_ACCESS"
+msgstr "更新共享访问权限时出错:"
+
+
+#: string "Error creating share access privileges:"
+msgid "LABEL_CREATING_SHARE_ACCESS"
+msgstr "创建共享访问权限时出错:"
+
+
+#: string "Error deleting share access privileges:"
+msgid "LABEL_DELETING_SHARE_ACCESS"
+msgstr "删除共享访问权限时出错:"
+
+
+#: string "Error retrieving share information:"
+msgid "LABEL_GET_SHARE_INFORMATION"
+msgstr "获取共享信息时出错:"
+
+
+#: string "Error creating your share:"
+msgid "LABEL_CREATING_SHARE"
+msgstr "创建您的共享时出错:"
+
+
+#: string "Error updating your share:"
+msgid "LABEL_UPDATING_SHARE"
+msgstr "更新您的共享时出错:"
+
+
+#: string "Error deleting your share:"
+msgid "LABEL_DELETING_SHARE"
+msgstr "删除您的共享时出错:"
+
+
+#: string "Error deleting computer backup:"
+msgid "LABEL_DELETING_BACKUP"
+msgstr "删除计算机备份时出错:"
+
+
+#: string "Error authenticating device on network:"
+msgid "LABEL_AUTHENTICATING_DEVICE_ON_NETWORK"
+msgstr "验证网络上的设备时出错:"
+
+
+#: string "Error discovering shares on selected network device:"
+msgid "LABEL_DISCOVERING_SHARES_ON_NETWORK_DEVICE"
+msgstr "在选定的网络设备上发现共享时出错:"
+
+
+#: string "Error authenticating share on selected network device:"
+msgid "LABEL_AUTHENTICATING_SHARE_ON_NETWORK_DEVICE"
+msgstr "在选定的网络设备上验证共享时出错:"
+
+
+#: string "Error discovering safepoint(s) on selected network device:"
+msgid "LABEL_DISCOVERING_SAFEPOINT_ON_NETWORK_DEVICE"
+msgstr "在选定的网络设备上发现 safepoint 时出错:"
+
+
+#: string "Error retrieving safepoint list on selected network device:"
+msgid "LABEL_RETRIEVING_SAFEPOINT_LIST_ON_NETWORK_DEVICE"
+msgstr "在选定的网络设备上获取 safepoint 列表时出错:"
+
+
+#: string "Error retrieving safepoint progress information:"
+msgid "LABEL_GET_SAFEPOINT_PROGRESS"
+msgstr "获取 safepoint 进程信息时出错："
+
+
+#: string "Error retrieving scheduling information from safepoint:"
+msgid "LABEL_GET_SAFEPOINT_SCHEDULE_INFORMATION"
+msgstr "从 safepoint 获取计划信息时出错:"
+
+
+#: string "Error discovering network devices:"
+msgid "LABEL_DISCOVERING_NETWORK_DEVICES"
+msgstr "发现网络设备时出错:"
+
+
+#: string "Error canceling safepoint discovery process:"
+msgid "LABEL_CANCELLING_DISCOVERY"
+msgstr "取消 safepoint 发现过程时出错:"
+
+
+#: string "Error creating your safepoint:"
+msgid "LABEL_CREATING_SAFEPOINT"
+msgstr "创建您的 safepoint 时出错:"
+
+
+#: string "Error deleting your safepoint:"
+msgid "LABEL_DELETING_SAFEPOINT"
+msgstr "删除您的 safepoint 时出错:"
+
+
+#: string "Error updating your safepoint:"
+msgid "LABEL_UPDATING_SAFEPOINT"
+msgstr "更新您的 safepoint 时出错:"
+
+
+#: string "Error recovering from your safepoint:"
+msgid "LABEL_RESTORING_SAFEPOINT"
+msgstr "从您的 safepoint 恢复数据时出错:"
+
+
+#: string "Error updating safepoint settings:"
+msgid "LABEL_UPDATING_SAFEPOINT_SETTINGS"
+msgstr "更新 safepoint 设置时出错:"
+
+
+#: string "Error updating safepoint schedule:"
+msgid "LABEL_UPDATING_SAFEPOINT_SCHEDULE"
+msgstr "更新 safepoint 计划时出错:"
+
+
+#: string "Error canceling safepoint operation:"
+msgid "LABEL_CANCELLING_SAFEPOINT_CREATE_UPDATE"
+msgstr "取消 safepoint 操作时出错:"
+
+
+#: string "Error canceling safepoint recovery:"
+msgid "LABEL_CANCELLING_SAFEPOINT_RESTORE"
+msgstr "取消 safepoint 恢复时出错:"
+
+
+#: string "Do not unplug your device during the firmware update installation. After completing the update, your network drive will reboot automatically."
+msgid "LABEL_DESCR_FIRMWARE_UPDATE_PROGRESS"
+msgstr "在安装固件更新时，请勿拔下您的设备。 完成更新后，您的网络驱动器将自动重新启动。"
+
+
+#: string "Do not unplug the device during the rebooting process."
+msgid "LABEL_DESCR_DO_NOT_UNPLUG_DEVICE_DURING_REBOOT"
+msgstr "在重新启动过程中，请勿拔下您的设备。"
+
+
+#: string "Your firmware will now be updated. Do not unplug your device during the firmware update installation. After completing the firmware update, your network drive will automatically reboot. It is also recommended that you install the latest updates for the operating system on your computer before you proceed.<br><br><b>Important:</b> Ensure you have multiple copies of your data (another backup) before updating your drive."
+msgid "LABEL_DESCR_UPDATE_FROM_FILE_REBOOT"
+msgstr "您的固件现在将被更新。 在安装固件更新时，请勿拔下您的设备。 完成固件更新后，您的网络驱动器将自动重新启动。 另外，建议您先为计算机上的操作系统安装最近的更新，然后再继续。<br><br><B>重要说明:</b>请确保您具有多个数据副本(即备份)，然后再更新您的驱动器。"
+
+
+#: string "The web access account you requested for could not be created. Ensure that you do not have any network connectivity issues and try again."
+msgid "ERROR_WEBACCOUNT_CREATE_FAILED"
+msgstr "无法创建您请求的互联网接入帐户。 请确保您的网络可以连通，然后重试。"
+
+
+#: string "Navigate to <a id='supportLink' href='#'>Support</a> and create a system report to troubleshoot or obtain automated customer support from WD."
+msgid "ERROR_DIAGNOSTIC_TEST_FAILED_SUPPORT"
+msgstr "找到 <a id='supportLink' href='#'>支持</a> 然后创建一份系统报告，用来排除故障或从WD获取自动客户支持。."
+
+
+#: string "This safepoint is no longer available."
+msgid "ERROR_SAFEPOINT_NOT_CREATED"
+msgstr "此 safepoint 不再可用。"
+
+
+#: string "Error updating Time Machine configuration:"
+msgid "LABEL_UPDATING_TIME_MACHINE"
+msgstr "更新 Time Machine 配置时出错:"
+
+
+#: string "The operation was aborted while the server was processing the request. The operation may or may not have been completed successfully. Please refresh the page and try again."
+msgid "ERROR_USER_ABORT"
+msgstr "服务器处理请求时，操作被中止。 该操作可能未成功完成。 请刷新页面，然后重试。"
+
+
+#: string "Next"
+msgid "BUTTON_NEXT"
+msgstr "下一步"
+
+
+#: string "Finish"
+msgid "BUTTON_FINISH"
+msgstr "完成"
+
+
+
+msgid "HEADING_USER_PROFILE"
+msgstr "用户配置文件"
+
+
+
+msgid "LABEL_USER_NAME"
+msgstr "用户名"
+
+
+#: string "Password"
+msgid "LABEL_PASSWORD"
+msgstr "密码"
+
+
+#: string "Registered email:"
+msgid "LABEL_REGISTERED_EMAIL"
+msgstr "注册的电子邮件"
+
+
+#: string "Share Access"
+msgid "HEADING_SHARE_ACCESS"
+msgstr "共享访问"
+
+
+#: string "Share details"
+msgid "HEADER_SHARE_PROFILE"
+msgstr "共享配置文件"
+
+
+#: string "Share Name"
+msgid "LABEL_SHARE_NAME"
+msgstr "共享名称"
+
+
+#: string "Share Description"
+msgid "LABEL_SHARE_DESCRIPTION"
+msgstr "共享描述"
+
+
+#: string "Media Serving"
+msgid "LABEL_MEDIA_SERVING"
+msgstr "媒体服务"
+
+
+#: string "User Access"
+msgid "HEADER_USER_ACCESS"
+msgstr "用户访问"
+
+
+#: string "In the unlikely event your WD My Cloud fails, you can restore all content and configuration settings from a previously created safepoint. To recover data and configuration settings, click Start Recovery."
+msgid "LABEL_DESC_RECOVER_FROM_A_SAFEPOINT"
+msgstr "万一您的 WD My Cloud 出现故障（这种情况不太可能发生），您可以从之前建立的一个 safepoint 中恢复您的内容。 要恢复数据和配置设置，请单击“开始恢复”。"
+
+
+#: string "Start Recovery"
+msgid "LABEL_START_RECOVERY"
+msgstr "开始恢复"
+
+
+#: string "Device Profile"
+msgid "HEADER_DEVICE_PROFILE"
+msgstr "设备配置文件"
+
+
+#: string "Primary server:"
+msgid "LABEL_PRIMARY_SERVER"
+msgstr "主服务器:"
+
+
+#: string "Registered to:"
+msgid "LABEL_REGISTERED_TO"
+msgstr "注册到："
+
+
+#: string "LCD Brightness:"
+msgid "LABEL_LCD_BRIGHTNESS"
+msgstr "液晶屏亮度:"
+
+
+#: string "View"
+msgid "LABEL_VIEW"
+msgstr "查看"
+
+
+#: string "FTP Access"
+msgid "LABEL_FTP_ACCESS"
+msgstr "FTP访问"
+
+
+#: string "Factory restore:"
+msgid "LABEL_FACTORY_RESTORE"
+msgstr "出厂还原："
+
+
+#: string "Quickly erase data and configuration settings."
+msgid "LABEL_DESC_QUICK_RESTORE"
+msgstr "快速清除数据和配置设置。"
+
+
+#: string "Shutdown"
+msgid "LABEL_SHUTDOWN"
+msgstr "关闭"
+
+
+#: string "Reboot"
+msgid "LABEL_REBOOT"
+msgstr "重新启动"
+
+
+#: string "Alert emails:"
+msgid "LABEL_ALERT_EMAILS"
+msgstr "提醒电子邮件:"
+
+
+#: string "Event logs:"
+msgid "LABEL_EVENT_LOGS"
+msgstr "事件日志:"
+
+
+#: string "Automated support:"
+msgid "LABEL_AUTOMATED_SUPPORT"
+msgstr "自动支持:"
+
+
+#: string "Request support"
+msgid "LABEL_REQUEST_SUPPORT"
+msgstr "请求支持"
+
+
+#: string "Updated On"
+msgid "LABEL_UPDATED_ON"
+msgstr "更新时间"
+
+
+#: string "Update Schedule"
+msgid "LABEL_UPDATE_SCHEDULE"
+msgstr "更新计划"
+
+
+#: string "Available Updates"
+msgid "LABEL_AVAILABLE_UPDATES"
+msgstr "可用更新"
+
+
+#: string "Creating a safepoint ensures that all of your data and configuration settings can be recovered in the unlikely event that your WD My Cloud fails."
+msgid "WIZARD_CREATE_SAFEPOINT_1"
+msgstr "创建一个 safepoint，确保万一您的 WD My Cloud 出现故障时，您所有的收和配置设置能够恢复。"
+
+
+#: string "You can create a safepoint on a USB device connected to your WD My Cloud or on a compatible device on your network."
+msgid "WIZARD_CREATE_SAFEPOINT_2"
+msgstr "您可以在一个连接到您的 WD My Cloud 的USB设备上，或者在您的网络中一个兼容的移动设备上创建一个 safepoint。"
+
+#: string "You will no longer have remote access from the Internet to your stored content on your drive."
+msgid "CONTENT_CLOUD_ACCESS_DIALOG_STRING_YOU_WILL_NO_LONGER_BE_ABLE_TO_ACCESS_REMOTELY"
+msgstr "您将不能通过互联网远程访问在驱动器中存储的内容。"
+
+# Edit - from WD2go.com to WDMyCloud.com
+#: string "You will no longer be able to log into WDMyCloud.com."
+msgid "CONTENT_USER_DIALOG_STRING_YOU_WILL_NO_LONGER_BE_ABLE_TO_ACCESS_REMOTELY"
+msgstr "您将不再能够登录到 WDMyCloud.com."
+
+
+#: string "Scanning your network for devices...please wait"
+msgid "LABEL_SCANNING_YOUR_NETWORK_FOR_DEVICES"
+msgstr "扫描网络中的设备...请稍候"
+
+
+#: string "Select a device"
+msgid "LABEL_SELECT_A_DEVICE"
+msgstr "选择一个设备"
+
+
+#: string "Safepoint List"
+msgid "LABEL_SAFEPOINT_LIST"
+msgstr "Safepoint 列表"
+
+
+#: string "Getting Started"
+msgid "LABEL_GETTING_STARTED_WIZARD"
+msgstr "使用入门"
+
+
+#: string "Saving...please wait"
+msgid "LABEL_SAVING_PLEASE_WAIT"
+msgstr "正在保存...请稍候"
+
+
+#: string "User added successfully; email with instructions sent."
+msgid "LABEL_DESC_USER_ADDED_SUCCESSFULLY_EMAIL_SENT"
+msgstr "已成功添加用户；已发送包含说明文件的电子邮件"
+
+
+#: string "Update History"
+msgid "LABEL_UPDATE_HISTORY"
+msgstr "更新历史记录"
+
+#: string "All"
+msgid "LABEL_DESCR_MEDIA_SERVING_ALL"
+msgstr "全部"
+
+#: string "Photos"
+msgid "LABEL_DESCR_MEDIA_SERVING_PHOTOS"
+msgstr "照片"
+
+#: string "Music"
+msgid "LABEL_DESCR_MEDIA_SERVING_MUSIC"
+msgstr "音乐"
+
+#: string "Videos"
+msgid "LABEL_DESCR_MEDIA_SERVING_VIDEOS"
+msgstr "视频"
+
+#: string "None"
+msgid "LABEL_DESCR_MEDIA_SERVING_NONE"
+msgstr "无"
+
+#: string "Select a user from the drop-down list and click Get Code to generate an activation code."
+msgid "LABEL_DESCR_MOBILE_ACCESS_ACTIVATE_CODE_1"
+msgstr "从下拉列表中选择一个用户，然后单击“获取代码”，生成一个激活码。"
+
+# Edited string: WD 2go changed to WD My Cloud - 2013
+#: string "Install WD Photos and/or WD My Cloud on your tablet or mobile device."
+msgid "LABEL_DESCR_MOBILE_ACCESS_ACTIVATE_CODE_2"
+msgstr "在您的平板或移动设备上安装 WD Photos 和/或 WD My Cloud。"
+
+#: string "Launch app and tap Connect Now."
+msgid "LABEL_DESCR_MOBILE_ACCESS_ACTIVATE_CODE_3"
+msgstr "启动应用程序，然后单击“立即连接”。 "
+
+#: string "Select your product."
+msgid "LABEL_DESCR_MOBILE_ACCESS_ACTIVATE_CODE_4"
+msgstr "选择您的产品。"
+
+#: string "Enter Activation Code."
+msgid "LABEL_DESCR_MOBILE_ACCESS_ACTIVATE_CODE_5"
+msgstr "输入激活代码。"
+
+#: string "Delete User"
+msgid "PAGE_HEADER_DELETE_USER"
+msgstr "删除用户"
+
+#: string "Delete Share"
+msgid "PAGE_HEADER_DELETE_SHARE"
+msgstr "删除共享"
+
+#: string "Get Code"
+msgid "BUTTON_GET_CODE"
+msgstr "获取代码"
+
+#: string "Port forwarding connection established."
+msgid "LABEL_STATUS_PORTFORWARDED_EXPLANATION"
+msgstr "端口转发连接已建立。"
+
+#: string "MB"
+msgid "GENERIC_MB"
+msgstr "MB"
+
+#: string "GB"
+msgid "GENERIC_GB"
+msgstr "GB"
+
+#: string "TB"
+msgid "GENERIC_TB"
+msgstr "TB"
+
+#: string "Public"
+msgid "CONTENT_GENERIC_STRING_PUBLIC" 
+msgstr "公用"
+
+
+#: string "User Access"
+msgid "LABEL_HEADER_USER_ACCESS"
+msgstr "用户访问"
+
+#: string "First Name"
+msgid "LABEL_FIRST_NAME"
+msgstr "名字"
+
+#: string "Last Name"
+msgid "LABEL_LAST_NAME"
+msgstr "姓氏"
+
+#: string "OK"
+msgid "BUTTON_OK"
+msgstr "确定"
+
+# Edit to OK 6-7-13
+#: string "OK"
+msgid "STATUS_HEALTHY"
+msgstr "确定"
+
+#: string "Home"
+msgid "HEADER_NAV_HOME"
+msgstr "首页"
+
+#: string "Shares"
+msgid "NAV_PRIMARY_SHARES"
+msgstr "共享"
+
+#: string "Users"
+msgid "LABEL_USERS"
+msgstr "用户"
+
+#: string "General"
+msgid "PAGE_HEADER_GENERAL"
+msgstr "常规"
+
+#: string "Network"
+msgid "NAV_SECOND_NETWORK"
+msgstr "网络"
+
+#: string "Media"
+msgid "NAV_MEDIA"
+msgstr "媒体"
+
+#: string "Diagnostics"
+msgid "NAV_DIAGNOSTICS"
+msgstr "诊断"
+
+#: string "Utilities"
+msgid "NAV_UTILITIES"
+msgstr "实用工具"
+
+#: string "Settings"
+msgid "NAV_PRIMARY_SETTINGS"
+msgstr "设置"
+
+#: string "Safepoints"
+msgid "LEARNING_CENTER_LABEL_HEADER_WD_SAFEPOINT"
+msgstr "Safepoints"
+
+#: string "MAC Address"
+msgid "LABEL_HEADER_MAC_ADDRESS"
+msgstr "MAC 地址"
+
+#: string "Workgroup Name"
+msgid "LABEL_HEADER_WORKGROUP_NAME"
+msgstr "工作组名称"
+
+#: string "Gateway"
+msgid "LABEL_HEADER_GATEWAY"
+msgstr "网关"
+
+#: string "Netmask"
+msgid "LABEL_HEADER_NETMASK"
+msgstr "网络掩码"
+
+#: string "Required"
+msgid "LABEL_DESCR_REQUIRED"
+msgstr "需要"
+
+#--- Cloud Access ---
+
+#: string "Cloud Access"
+msgid "PRI_NAV_CLOUD_ACCESS"
+msgstr "云访问"
+
+#: string "Configure Access"
+msgid "CONTENT_CLOUD_ACCESS_HEAD1_CONFIGURE_DEVICE_ACCESS"
+msgstr "配置访问"
+
+# Edit from WD2go.com to WDMyCloud.com
+#: string "WDMyCloud.com Login for <span class='remote_access_username'></span>"
+msgid "CONTENT_CLOUD_ACCESS_HEAD2_MY_CLOUD_WEB_FOR"
+msgstr "WDMyCloud.com 登录 <span class='remote_access_username'></span>"
+
+
+#--- About Cloud Access section ---
+
+#: string "About Cloud Access"
+msgid "CONTENT_CLOUD_ACCESS_HEAD2_ABOUT_CLOUD_ACCESS"
+msgstr "关于云访问"
+
+#: string "Configure mobile device access to your cloud. Each user needs to download and install the WD mobile apps onto their smartphone or tablet."
+msgid "CONTENT_CLOUD_ACCESS_STRING_ABOUT_CLOUD_ACCESS"
+msgstr "配置移动设备对您的My Cloud的访问。 每个用户都需要下载WD移动应用程序并安装到其智能手机或平板电脑上。"
+
+#--- Cloud Access Profile section ---
+
+#: string "Cloud Access Status"
+msgid "CONTENT_CLOUD_ACCESS_HEAD2_CLOUD_ACCESS_PROFILE"
+msgstr "云访问状态"
+
+#: string "Connection Status"
+msgid "CONTENT_CLOUD_ACCESS_LABEL_CONNECTION_STATUS"
+msgstr "连接状态:"
+
+#: string "Cloud Access is disabled."
+msgid "CONTENT_CLOUD_ACCESS_STRING_CLOUD_ACCESS_DISABLED_EXPLANATION"
+msgstr "已禁用云访问。"
+
+#: string "To enable Cloud Access, navigate to Settings > General > Cloud Access."
+msgid "CONTENT_CLOUD_ACCESS_STRING_CLOUD_ACCESS_DISABLED_EXPLANATION_2"
+msgstr "要启用云访问，找到“设置&quot;>&quot;一般&quot;>&quot;云访问“。"
+
+
+#--- Cloud Access DAC section ---
+
+#: string "Cloud devices for <span class='remote_access_username'></span>"
+msgid "CONTENT_CLOUD_ACCESS_HEAD2_CLOUD_ACCESS_FOR"
+msgstr "云设备 <span class='remote_access_username'></span>"
+
+
+#: string "There is no cloud device access configured for <span class='remote_access_username'></span>."
+msgid "CONTENT_CLOUD_ACCESS_STRING_NO_DAC_CONFIGURED_FOR"
+msgstr "没有配置云设备的访问 <span class='remote_access_username'></span>."
+
+#: string "Click Get Code to generate an activation code for your cloud devices. Codes are valid for 48 hours and can only be used once."
+msgid "CONTENT_CLOUD_ACCESS_STRING_CLICK_TO_GET_CODE"
+msgstr "单击“获取代码”为您的云设备生成一个激活码。 代码在48小时内有效，只能使用一次。"
+
+#: string "New Unregistered Device"
+msgid "CONTENT_CLOUD_ACCESS_STRING_NEW_UNREGISTERED_DEVICE"
+msgstr "新的未注册设备"
+
+#: string "Code:"
+msgid "CONTENT_CLOUD_ACCESS_STRING_CODE"
+msgstr "代码:"
+
+#--- Cloud Access Dialogs ---
+
+#: string "Delete Cloud Access?"
+msgid "CONTENT_CLOUD_ACCESS_DIALOG_TITLE_REMOVE_CLOUD_ACCESS"
+msgstr "删除云访问吗?"
+
+#: string "Are you sure you want to remove cloud access for"
+msgid "CONTENT_CLOUD_ACCESS_DIALOG_STRING_REMOVE_CLOUD_ACCESS_FOR"
+msgstr "您确定要移除云访问吗？"
+
+#: string "Are you sure you want to remove the device activation code"
+msgid "CONTENT_CLOUD_ACCESS_DIALOG_STRING_REMOVE_DAC"
+msgstr "您确定要移除设备激活代码吗？"
+
+# Edit - changed WD 2go to WD My Cloud - 5/2013
+#: string "Delete WD My Cloud Account?"
+msgid "CONTENT_CLOUD_ACCESS_DIALOG_TITLE_DELETE_WD2GO_ACCOUNT"
+msgstr "删除 WD My Cloud 账户吗?"
+
+# Edit - changed WD 2go to WD My Cloud - 5/2013
+#: string "Are you sure you want to delete access to WDMyCloud.com?"
+msgid "CONTENT_CLOUD_ACCESS_DIALOG_STRING_DELETE_WD2GO_ACCOUNT"
+msgstr "您确定刚要删除对 WDMyCloud.com 的访问吗?"
+
+
+#: string "Registration Email Sent"
+msgid "CONTENT_CLOUD_ACCESS_DIALOG_TITLE_REGISTRATION_EMAIL_SENT"
+msgstr "注册电子邮件已发送"
+
+#: string "A registration email has been sent successfully to the specified user."
+msgid "CONTENT_CLOUD_ACCESS_DIALOG_STRING_REGISTRATION_EMAIL_SENT"
+msgstr "注册电子邮件已成功发送至指定的用户。"
+
+#: string "Please allow a few minutes for the user to receive an email with instructions for accessing files remotely on your WD My Cloud."
+msgid "CONTENT_CLOUD_ACCESS_DIALOG_STRING_REGISTRATION_EMAIL_SENT_INSTRUCTION"
+msgstr "请稍等几分钟，用户才能收到电子邮件，邮件中包含远程访问您的 WD My Cloud 文件的说明。"
+
+# Edit - changed WD2go.com to WDMyCLoud.com
+#: string "Update WDMyCloud.com Login"
+msgid "CONTENT_DIALOG_CLOUD_ACCESS_TITLE_UPDATE_MY_CLOUD_WEB_ACCOUNT"
+msgstr "更新 WDMyCloud.com 登录信息"
+
+# Edit - changed WD2go.com to WDMyCLoud.com
+#: string "Change the email address for your WDMyCLoud.com login."
+msgid "CONTENT_USERS_DIALOG_STRING_UPDATE_MY_CLOUD_ACCOUNT_DESC"
+msgstr "更改登录 WDMyCloud.com 所需的电子邮件地址。"
+
+#: string "Old Email"
+msgid "CONTENT_DIALOG_CLOUD_ACCESS_STRING_OLD_EMAIL"
+msgstr "旧电子邮件"
+
+#: string "New Email"
+msgid "CONTENT_DIALOG_CLOUD_ACCESS_STRING_NEW_EMAIL"
+msgstr "新电子邮件"
+
+
+
+
+#--- Dashboard's Cloud Access ---
+
+#: string "Add Cloud Access"
+msgid "CONTENT_DASHBOARD_DIALOG_TITLE_ADD_CLOUD_ACCESS"
+msgstr "添加云访问"
+
+#: string "Generate an activation code to get remote access to the content on your drive."
+msgid "CONTENT_DASHBOARD_DIALOG_STRING_ADD_CLOUD_ACCESS_INTRO"
+msgstr "生成一个激活代码，从而远程访问您储存在驱动器中的内容。"
+
+#: string "Activation code successfully generated. Enter the code in your app on your mobile device."
+msgid "CONTENT_DASHBOARD_DIALOG_STRING_DAC_CREATE_SUCCESSFUL"
+msgstr "激活代码已成功生成。 您的移动设备上的应用程序中输入代码。"
+
+#: string "Activation Code"
+msgid "CONTENT_DASHBOARD_DIALOG_LABEL_DAC"
+msgstr "激活代码"
+
+#: string "Select a User"
+msgid "CONTENT_DASHBOARD_DIALOG_LABEL_SELECT_A_USER"
+msgstr "请选择一个用户"
+
+#: string "Expiration"
+msgid "CONTENT_DASHBOARD_DIALOG_LABEL_EXPIRATION"
+msgstr "到期日期"
+
+
+
+#--- Users related Cloud Access ---
+
+
+#: string "Email Address"
+msgid "CONTENT_USERS_DIALOG_LABEL_EMAIL_ADDRESS"
+msgstr "电子邮件地址"
+
+#--- Settings > General ---
+
+#: string "Configure"
+msgid "CONTENT_SETTINGS_LINK_CONFIGURE"
+msgstr "配置"
+
+#: string "Edit"
+msgid "CONTENT_SETTINGS_LINK_EDIT"
+msgstr "编辑"
+
+#--- Settings > General > Device Profile ---
+
+#: string "Device Profile"
+msgid "CONTENT_SETTINGS_HEAD2_DEVICE_PROFILE"
+msgstr "设备配置文件"
+
+# Edit to title case from Device name to Device Name
+#: string "Device Name"
+msgid "CONTENT_SETTINGS_LABEL_DEVICE_NAME"
+msgstr "设备名称"
+
+#: string "Description"
+msgid "CONTENT_SETTINGS_LABEL_DESCRIPTION"
+msgstr "描述"
+
+# Edit to title case from Serial number to Serial Number 
+#: string "Serial Number"
+msgid "CONTENT_SETTINGS_LABEL_SERIAL_NUMBER"
+msgstr "序列号"
+
+#--- Settings > General > Language & Clock ---
+
+#: string "Language &amp; Clock"
+msgid "CONTENT_SETTINGS_HEAD2_LANGUAGE_AND_CLOCK"
+msgstr "语言和时钟"
+
+#: string "Language"
+msgid "CONTENT_SETTINGS_LABEL_LANGUAGE"
+msgstr "语言"
+
+#: string "Time Zone"
+msgid "CONTENT_SETTINGS_LABEL_TIME_ZONE"
+msgstr "时区"
+
+#: string "NTP Service"
+msgid "CONTENT_SETTINGS_LABEL_NTP_SERVICE"
+msgstr "NTP 服务"
+
+# Edit - title case from Primary server to Primary Server 
+#: string "Primary Server"
+msgid "CONTENT_SETTINGS_LABEL_PRIMARY_SERVER"
+msgstr "主服务器"
+
+#: string "Date &amp; Time"
+msgid "CONTENT_SETTINGS_LABEL_DATE_AND_TIME"
+msgstr "日期和时间"
+
+#--- Settings > General > Language & Clock > Dialog ---
+
+#: string "NTP Settings"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_NTP_SETTINGS"
+msgstr "NTP 设置"
+
+#: string "The NTP service synchronizes with your network and automatically updates the date and time on your device."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_NTP_SERVICE_INTRO"
+msgstr "NTP 服务同步您的网络并自动更新设备上的日期和时间。"
+
+#: string "Current NTP servers"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_CURRENT_NTP_SERVERS"
+msgstr "当前的 NTP 服务器"
+
+#: string "Add User NTP"
+msgid "CONTENT_SETTINGS_DIALOG_BUTTON_ADD_USER_NTP"
+msgstr "添加用户 NTP"
+
+#: string "User defined NTP server"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_USER_DEFINED_NTP_SERVER"
+msgstr "用户自定义的 NTP 服务器"
+
+#: string "Microsoft NTP service"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_MICROSOFT_NTP_SERVICE"
+msgstr "微软  NTP 服务"
+
+#: string "NTP pool service"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_NTP_POOL_SERVICE"
+msgstr "NTP 池服务器"
+
+#: string "Date &amp; Time Settings"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_DATE_AND_TIME_SETTINGS"
+msgstr "日期和时间设置"
+
+#: string "Please enter the current date and time."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_DATE_AND_TIME_SETTINGS_INTRO"
+msgstr "请输入当前的日期和时间。"
+
+#: string "Date"
+msgid "CONTENT_SETTINGS_DIALOG_LABEL_DATE"
+msgstr "日期"
+
+#: string "Time"
+msgid "CONTENT_SETTINGS_DIALOG_LABEL_TIME"
+msgstr "时间"
+
+#: string "Calendar"
+msgid "CONTENT_SETTINGS_DIALOG_BUTTON_CALENDAR"
+msgstr "日历"
+
+#--- Settings > General > Cloud Access ---
+
+#: string "Cloud Access"
+msgid "CONTENT_SETTINGS_HEAD2_CLOUD_ACCESS"
+msgstr "云访问"
+
+#: string "Remote Access"
+msgid "CONTENT_SETTINGS_LABEL_CLOUD_SERVICE"
+msgstr "远程访问"
+
+#: string "Connection Status"
+msgid "CONTENT_SETTINGS_LABEL_CONNECTION_STATUS"
+msgstr "连接状态:"
+
+#--- Settings > General > Cloud Access > Dialog ---
+
+#: string "Disable Cloud Service"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_DISABLE_CLOUD_SERVICE"
+msgstr "禁用云服务"
+
+#: string "Are you sure you want to disable cloud access? Remote access to the files on your device will no longer be available, either over the Internet or from your mobile devices."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_DISABLE_CLOUD_ACCESS_CONFIRMATION"
+msgstr "您确定要禁用云访问吗? 您将无法继续通过互联网或您的移动设备远程访问您设备上的文件。"
+
+#: string "Disconnecting"
+msgid "CONTENT_SETTINGS_STRING_DISCONNECTING"
+msgstr "正在断开连接"
+
+#: string "Expired:"
+msgid "CONTENT_CLOUD_ACCESS_STRING_EXPIRED"
+msgstr "已过期:"
+
+#: string "Expires:"
+msgid "CONTENT_CLOUD_ACCESS_STRING_EXPIRES"
+msgstr "到期日期:"
+
+#: string "Continue?"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_DO_YOU_WANT_TO_CONTINUE"
+msgstr "继续吗？"
+
+#: string "Port forwarding failed to connect on port"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_MANUAL_RELAYED_EXPLANATION_PART1"
+msgstr "端口转发未能在端口连接"
+
+#: string "and port"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_MANUAL_RELAYED_EXPLANATION_PART2"
+msgstr "和端口"
+
+#: string "Cloud Access Connection Options"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_CLOUD_ACCESS_CONNECTION_OPTIONS"
+msgstr "云访问连接选项"
+
+#: string "Configure connection options for remote access to your device."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_CONFIGURES_CONNECTION_OPTION_FOR_CLOUD_ACCESS"
+msgstr "配置连接选项，用于远程访问您的设备。"
+
+#: string "Connectivity"
+msgid "CONTENT_SETTINGS_DIALOG_LABEL_CONNECTIVITY"
+msgstr "连接"
+
+#: string "Auto"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_AUTO"
+msgstr "自动"
+
+#: string "Manual"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_MANUAL"
+msgstr "手动"
+
+#: string "Win XP"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_WINXP"
+msgstr "Win XP"
+
+#: string "Attempts to establish a direct connection between your device and the router."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_AUTO_EXPLANATION"
+msgstr "尝试在您的设备和路由器间建立直接连接。"
+
+#: string "Manually configure your router to work with your device."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_MANUAL_EXPLANATION"
+msgstr "手动配置您的路由器，使其适应您的设备。"
+
+#: string "Attempts to establish a direct or relay connection, as appropriate for Windows XP compatibility."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_WINXP_EXPLANATION"
+msgstr "为保证 Win XP 兼容性，尝试在您的设备和路由器间建立直接连接。"
+
+#: string "Learn More"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_LEARN_MORE"
+msgstr "了解更多信息"
+
+#: string "External Port 1 (HTTP)"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_WD2GO_HTTP_PORT"
+msgstr "外部端口1 （ HTTP ）"
+
+#: string "External Port 2 (HTTPS)"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_WD2GO_HTTPS_PORT"
+msgstr "外部端口2 （ HTTP ）"
+
+#: string "Content Database"
+msgid "CONTENT_SETTINGS_DIALOG_LABEL_WD2GO_DATABASE"
+msgstr "内容数据库"
+
+#: string "Rebuild"
+msgid "CONTENT_SETTINGS_DIALOG_LABEL_WD2GO_DATABASE_REBUILD"
+msgstr "还原"
+
+#--- Settings > General > Energy Saver ---
+
+#: string "Energy Saver"
+msgid "CONTENT_SETTINGS_HEAD2_ENERGY_SAVER"
+msgstr "节电器"
+
+#: string "Drive Sleep"
+msgid "CONTENT_SETTINGS_LABEL_HDD_SLEEP"
+msgstr "驱动器睡眠"
+
+#: string "LED"
+msgid "CONTENT_SETTINGS_LABEL_DEVICE_LED"
+msgstr "LED"
+
+#--- Settings > General > Mac Backups ---
+
+#: string "Mac Backups"
+msgid "CONTENT_SETTINGS_HEAD2_MAC_BACKUPS"
+msgstr "Mac 备份"
+
+#: string "Time Machine"
+msgid "CONTENT_SETTINGS_LABEL_TIME_MACHINE"
+msgstr "Time Machine"
+
+#--- Settings > General > Mac Backups > Dialog ---
+
+#: string "Time Machine Settings"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_TIME_MACHINE_SETTINGS"
+msgstr "Time Machine 设置"
+
+#: string "Configure settings for your Time Machine backups for your Mac."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_TIME_MACHINE_INTRO"
+msgstr "为您的 Mac 的 Time Machine 备份设置配置。"
+
+# Edited from sentence case to title case - Select a share is now Select a Share
+#: string "Select a Share"
+msgid "CONTENT_SETTINGS_DIALOG_LABEL_SELECT_A_SHARE"
+msgstr "请选择一个共享"
+
+#: string "Enabled on share:"
+msgid "CONTENT_SETTINGS_DIALOG_LABEL_ENABLED_ON_SHARE"
+msgstr "在共享中启用："
+
+# Edited from sentence case to title case - Maximum size is now Maximum Size
+#: string "Maximum Size"
+msgid "CONTENT_SETTINGS_DIALOG_LABEL_MAXIMUM_SIZE"
+msgstr "最大容量"
+
+# Edit - this string has been reworded, and will require editing in all languages
+#: string "Increasing the maximum backup value after the initial backup has no effect on existing backups. WD recommends leaving this setting at the maximum value for your initial backup. After the first backup is complete, you can change the backup size by dragging the Maximum Size slider."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_MAXIMUM_SIZE_WARNING"
+msgstr "在初始备份后增加最大备份值对现有备份不起作用。 WD 建议为初始备份将此设置保留为最大值。 首次备份完成后，可以拖动“最大大小”滑块更改备份大小。"
+
+#--- Settings > Media > DMS ---
+
+#: string "DLNA Media Server"
+msgid "CONTENT_SETTINGS_HEAD2_DLNA_MEDIA_SERVER"
+msgstr "DLNA 媒体服务器"
+
+#: string "Media Streaming"
+msgid "CONTENT_SETTINGS_LABEL_MEDIA_STREAMING"
+msgstr "媒体流"
+
+#: string "View Media Players"
+msgid "CONTENT_SETTINGS_LINK_VIEW_MEDIA_PLAYERS"
+msgstr "查看媒体播放器"
+
+#: string "Version"
+msgid "CONTENT_SETTINGS_LABEL_VERSION"
+msgstr "版本"
+
+#: string "Last Update"
+msgid "CONTENT_SETTINGS_LABEL_LAST_VERSION"
+msgstr "上次更新"
+
+#: string "Updating database..."
+msgid "CONTENT_SETTINGS_STRING_UPDATING_DATABASE"
+msgstr "正在更新数据库..."
+
+#: string "DLNA Database"
+msgid "CONTENT_SETTINGS_LABEL_DLNA_DATABASE"
+msgstr "DLNA 数据库"
+
+#--- Settings > Media > DMS > Dialog ---
+
+#: string "Media Streaming Options"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_MEDIA_STREAMING_OPTIONS"
+msgstr "媒体流选项"
+
+#: string "Stream music, video, or photos to any compatible device through your home."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_MEDIA_STREAMING_OPTIONS_INTRO"
+msgstr "在家中将音乐、视频和照片发送到兼容的设备上。"
+
+#: string "Media players"
+msgid "CONTENT_SETTINGS_STRING_MEDIA_PLAYERS"
+msgstr "媒体播放器"
+
+#--- Settings > Media > iTunes ---
+
+#: string "iTunes"
+msgid "CONTENT_SETTINGS_HEAD2_ITUNES"
+msgstr "iTunes"
+
+#: string "iTunes Server"
+msgid "CONTENT_SETTINGS_LABEL_ITUNES_SERVER"
+msgstr "iTunes 服务器。"
+
+#: string "iTunes Database"
+msgid "CONTENT_SETTINGS_LABEL_ITUNES_DATABASE"
+msgstr "iTunes 数据库"
+
+#: string "Rescan"
+msgid "CONTENT_SETTINGS_BUTTON_RESCAN"
+msgstr "重新扫描"
+
+#--- Settings > Media > iTunes > Dialog ---
+
+#: string "Rescan iTunes"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_RESCAN_ITUNES"
+msgstr "重新扫描 iTunes 已经初始化。"
+
+#: string "iTunes rescan has been initiated."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_ITUNES_RESCAN_STARTED"
+msgstr "重新扫描 iTunes。"
+
+#: string "iTunes rescan error."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_ITUNES_RESCAN_ERROR"
+msgstr "iTunes 重新扫描出错。"
+
+#--- Settings > Utilities > Diagnostics ---
+
+#: string "System Diagnostics"
+msgid "CONTENT_SETTINGS_HEAD2_SYSTEM_DIAGNOSTICS"
+msgstr "系统诊断"
+
+#: string "System Configuration"
+msgid "CONTENT_SETTINGS_HEAD2_SYSTEM_CONFIGURATION"
+msgstr "系统配置"
+
+#: string "Diagnostics Test"
+msgid "CONTENT_SETTINGS_LABEL_DIAGNOSTICS_TEST"
+msgstr "诊断测试"
+
+#: string "Quick Test"
+msgid "CONTENT_SETTINGS_BUTTON_QUICK_TEST"
+msgstr "快速检测"
+
+#: string "Full Test"
+msgid "CONTENT_SETTINGS_BUTTON_FULL_TEST"
+msgstr "完全检测"
+
+#: string "Test in progress"
+msgid "CONTENT_SETTINGS_LABEL_TEST_IN_PROGRESS"
+msgstr "正在进行检测"
+
+#: string "Factory Restore"
+msgid "CONTENT_SETTINGS_LABEL_FACTORY_RESTORE"
+msgstr "出厂还原"
+
+#: string "System Only"
+msgid "CONTENT_SETTINGS_BUTTON_SYSTEM_ONLY"
+msgstr "仅系统"
+
+# edit - removed Restore from string to shorten 6-10
+#: string "Quick"
+msgid "CONTENT_SETTINGS_BUTTON_QUICK_RESTORE"
+msgstr "快速"
+
+# edit - removed Restore from string to shorten 6-10
+#: string "Full"
+msgid "CONTENT_SETTINGS_BUTTON_FULL_RESTORE"
+msgstr "完全"
+
+#: string "System Config"
+msgid "CONTENT_SETTINGS_LABEL_SYSTEM_CONFIG"
+msgstr "系统配置"
+
+#: string "Save Config File"
+msgid "CONTENT_SETTINGS_BUTTON_SAVE_CONFIG_FILE"
+msgstr "保存配置文件"
+
+#: string "Import File"
+msgid "CONTENT_SETTINGS_BUTTON_IMPORT_FILE"
+msgstr "导入文件"
+
+# --- Settings > Utilities > Diagnostics > Dialog ---
+
+#: string "Factory Restore"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_FACTORY_RESTORE"
+msgstr "出厂还原"
+
+#: string "System Factory Restore"
+msgid "CONTENT_SETTINGS_HEAD2_FACTORY_RESTORE"
+msgstr "系统出厂还原"
+
+#: string "System Only reverts system settings to their default values, but retains user data and shares."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_SYSTEM_ONLY_FACTORY_RESTORE_DESC"
+msgstr "“仅系统”操作将系统设置还原到其默认值，但保留用户数据和共享。"
+
+#: string "Quick Restore reverts all settings to their default values, erases all user data and shares, and retains default shares. Quick Restore creates a new file table on the device, but does not fully overwrite or erase the drive, so data recovery programs can be used to restore user data and shares."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_QUICK_FACTORY_RESTORE_DESC"
+msgstr "“快速还原”操作将所有设置还原到其默认值，清除所有用户数据和共享，保留默认共享。 “快速还原”操作在设备上创建一个新的文件表，但不会完全覆盖或清除驱动器，因此，可以使用数据恢复程序来恢复用户数据和共享。"
+
+#: string "Full Restore reverts all settings to their default values, deletes all user data and shares permanently, and retains default shares. Data recovery programs cannot be used to restore data; all user data and shares, with the exception of the default shares, are permanently deleted."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_FULL_FACTORY_RESTORE_DESC"
+msgstr "“完全还原”操作将所有设置还原到其默认值，永久删除所有用户数据和共享，保留默认共享。 不能使用数据恢复程序来恢复数据；除了默认共享以外，其他所有用户收和共享都将被永久删除。"
+
+
+#: string "Continue?"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_FACTORY_RESTORE_CONFIRMATION"
+msgstr "继续吗？"
+
+#: string "Switch to Quick"
+msgid "CONTENT_SETTINGS_DIALOG_BUTTON_SWITCH_TO_QUICK"
+msgstr "切换到”快速“"
+
+#--- Settings > Utilities > System Support ---
+
+#: string "System Support"
+msgid "CONTENT_SETTINGS_HEAD2_SYSTEM_SUPPORT"
+msgstr "系统支持"
+
+#: string "Request Support"
+msgid "BUTTON_REQUEST_SUPPORT"
+msgstr "请求支持"
+
+#: string "Automated Support"
+msgid "CONTENT_SETTINGS_LABEL_AUTOMATED_SUPPORT"
+msgstr "自动支持:"
+
+#: string "Privacy Policy"
+msgid "CONTENT_SETTINGS_LINK_PRIVACY_POLICY"
+msgstr "隐私策略"
+
+#: string "System report"
+msgid "CONTENT_SETTINGS_LABEL_SYSTEM_REPORT"
+msgstr "系统报告"
+
+#: string "Create and Save"
+msgid "CONTENT_SETTINGS_BUTTON_CREATE_AND_SAVE"
+msgstr "创建并保存"
+
+
+
+#--- Settings > Utilities > Device Maintenance ---
+
+#: string "Device Maintenance"
+msgid "CONTENT_SETTINGS_HEAD2_DEVICE_MAINTENANCE"
+msgstr "设备维护"
+
+#: string "Device Power"
+msgid "CONTENT_SETTINGS_LABEL_DEVICE_POWER"
+msgstr "设备电源"
+
+#--- Settings > Utilities > Device Maintenance > Dialog ---
+
+#: string "Shutdown Device"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_SHUTDOWN_DEVICE"
+msgstr "关闭设备"
+
+#: string "Shutting Down"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_SHUTTING_DOWN"
+msgstr "正在关闭"
+
+#: string "Reboot"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_REBOOT"
+msgstr "重新启动"
+
+#--- Settings > Firmware Update ---
+
+#: string "Auto Update"
+msgid "CONTENT_SETTINGS_HEAD2_AUTO_UPDATE"
+msgstr "自动更新"
+
+#: string "Enable Auto Update"
+msgid "CONTENT_SETTINGS_LABEL_ENABLE_AUTO_UPDATE"
+msgstr "启用自动更新"
+
+#: string "New Firmware"
+msgid "CONTENT_SETTINGS_LABEL_NEW_FIRMWARE"
+msgstr "新固件"
+
+#: string "Check for Update"
+msgid "CONTENT_SETTINGS_BUTTON_CHECK_FOR_UPDATE"
+msgstr "检查更新"
+
+#: string "Update Now"
+msgid "CONTENT_SETTINGS_BUTTON_UPDATE_NOW"
+msgstr "立即更新"
+
+#: string "Release Notes"
+msgid "CONTENT_SETTINGS_LINK_RELEASE_NOTES"
+msgstr "发行说明"
+
+#: string "Current Version"
+msgid "CONTENT_SETTINGS_LABEL_CURRENT_VERSION"
+msgstr "当前版本"
+
+#: string "Last Update"
+msgid "CONTENT_SETTINGS_LABEL_LAST_UPDATE"
+msgstr "上次更新"
+
+#: string "Manual Update"
+msgid "CONTENT_SETTINGS_HEAD2_MANUAL_UPDATE"
+msgstr "手动更新"
+
+#: string "Firmware Image"
+msgid "CONTENT_SETTINGS_LABEL_FIRMWARE_IMAGE"
+msgstr "固件映像"
+
+#--- Settings > Firmware Update > Dialog ---
+
+#: string "Install and Reboot"
+msgid "CONTENT_SETTINGS_DIALOG_BUTTON_INSTALL_AND_REBOOT"
+msgstr "安装然后重新启动"
+
+#: string "New Firmware Available"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_NEW_FIRMWARE_AVAILABLE"
+msgstr "新固件可用"
+
+#--- USB ---
+
+#: string "Unlock USB Device"
+msgid "GLOB_NAV_USB_DIALOG_TITLE_UNLOCK_USB_DRIVE"
+msgstr "解锁 USB 设备"
+
+# Edit: removed - There are - and changed to No USB devices found.
+#: string "No USB devices found."
+msgid "GLOB_NAV_USB_STRING_NO_USB_FOUND"
+msgstr "没有找到 USB 设备。"
+
+#: string "Enter password to unlock the drive"
+msgid "GLOB_NAV_USB_STRING_UNLOCK_DRIVE_INTRO"
+msgstr "请输入密码以解锁驱动器"
+
+#: string "Password"
+msgid "GLOB_NAV_USB_LABEL_PASSWORD"
+msgstr "密码"
+
+#: string "Save Password"
+msgid "GLOB_NAV_USB_LABEL_SAVE_PASSWORD"
+msgstr "保存密码"
+
+#: string "Manufacturer"
+msgid "GLOB_NAV_USB_LABEL_MANUFACTURER"
+msgstr "制造商"
+
+#: string "Model"
+msgid "GLOB_NAV_USB_LABEL_MODEL"
+msgstr "型号"
+
+#: string "Serial Number"
+msgid "GLOB_NAV_USB_LABEL_SERIAL_NUMBER"
+msgstr "序列号"
+
+#: string "Firmware Version"
+msgid "GLOB_NAV_USB_LABEL_FIRMWARE_VERSION"
+msgstr "固件版本"
+
+#: string "Size"
+msgid "GLOB_NAV_USB_LABEL_SIZE"
+msgstr "容量"
+
+#: string "Free of"
+msgid "GLOB_NAV_USB_STRING_FREE_OF"
+msgstr "没有"
+
+#: string "Device locked."
+msgid "GLOB_NAV_USB_STRING_DRIVE_LOCKED"
+msgstr "设备已锁定。"
+
+#--- Help ---
+
+#: string "Support"
+msgid "CONTENT_DIALOG_HELP_TITLE_SUPPORT"
+msgstr "支持"
+
+#: string "Request Automated Support"
+msgid "CONTENT_DIALOG_HELP_HEAD2_REQUEST_AUTOMATED_SUPPORT"
+msgstr "请求自动支持"
+
+#: string "Selecting Automated Customer Support generates and attaches a comprehensive diagnostic report to your support request, including your device's serial number, MAC address, and other status information. Your request is then routed to a team of experts to assist you as quickly and efficiently as possible."
+msgid "CONTENT_DIALOG_HELP_DESC_REQUEST_AUTOMATED_SUPPORT"
+msgstr "选择“自动客户支持”将产生一份全面的诊断报告并附在您的支持请求中，包括设备的序列号、MAC地址和其它状态信息。 然后，您的请求会被发送给一个专家团队，尽可能快速、高效地给您帮助。"
+
+#: string "To include your report with your support request, select the Attach My Device Diagnostic Report and Request Support option; then click Request Support."
+msgid "CONTENT_DIALOG_HELP_STRING_CHECK_AND_CLICK_REQUEST_SUPPORT_DESC1"
+msgstr "要将您的报告附在您的支持请求中，选择“附上我的设备诊断报告并请求支持”选项；然后单击“请求支持”。"
+
+#: string "To submit a support request without attaching a device diagnostic report, please submit a request through our standard support page."
+msgid "CONTENT_DIALOG_HELP_STRING_CHECK_AND_CLICK_REQUEST_SUPPORT_DESC2"
+msgstr "要在不附加设备诊断报告的情况下提交支持请求，请通过我们的标准支持页面提交请求。"
+
+#: string "Attach my device's diagnostic report and request support"
+msgid "CONTENT_DIALOG_HELP_STRING_ATTACH_MY_DIAGNOSTIC_REPORT"
+msgstr "附上我的设备诊断报告并请求支持"
+
+#: string "Create and Save System Report"
+msgid "CONTENT_DIALOG_HELP_HEAD2_CREATE_AND_SAVE_SYSTEM_REPORT"
+msgstr "创建并保存系统报告"
+
+#: string "Create and save a comprehensive system report to your drive."
+msgid "CONTENT_DIALOG_HELP_DESC_CREATE_AND_SAVE_SYSTEM_REPORT"
+msgstr "对驱动器创建并保存一份全面的系统报告"
+
+#: string "Support Resources"
+msgid "CONTENT_DIALOG_HELP_HEAD2_SUPPORT_RESOURCES"
+msgstr "支持资源"
+
+#: string "Help"
+msgid "GLOB_NAV_HELP_LINK_HELP"
+msgstr "帮助"
+
+#: string "Support"
+msgid "GLOB_NAV_HELP_LINK_SUPPORT"
+msgstr "支持"
+
+#: string "About"
+msgid "GLOB_NAV_HELP_LINK_ABOUT"
+msgstr "关于"
+
+#: string "Product Documentation"
+msgid "GLOB_NAV_HELP_LINK_PRODUCT_DOCUMENTATION"
+msgstr "产品文档"
+
+#: string "FAQs"
+msgid "GLOB_NAV_HELP_LINK_FAQS"
+msgstr "常见问题解答"
+
+#: string "Forum"
+msgid "GLOB_NAV_HELP_LINK_FORUM"
+msgstr "论坛"
+
+#: string "Contacts"
+msgid "GLOB_NAV_HELP_LINK_CONTACTS"
+msgstr "联系人"
+
+#: string "Copyright Info"
+msgid "GLOB_NAV_HELP_LINK_COPYRIGHT_INFO"
+msgstr "版权信息"
+
+#: string "GNU General Public License"
+msgid "GLOB_NAV_HELP_LINK_GNU_PUBLIC_LICENSE"
+msgstr "通用公共许可证（GNU）"
+
+#--- Dashboard ---
+
+#: string "Error"
+msgid "CONTENT_HOME_STRING_ERROR"
+msgstr "错误"
+
+#--- Dashboard > Dialog ---
+
+#: string "Free Space"
+msgid "DASHBOARD_DIALOG_STRING_FREE_SPACE"
+msgstr "可用空间"
+
+#--- Global Navigation & Global Dialogs ---
+
+#: string "Device Initializing"
+msgid "GLOB_NAV_DIALOG_TITLE_DEVICE_INITIALIZING"
+msgstr "正在初始化设备"
+
+#: string "Error"
+msgid "GLOB_NAV_DIALOG_TITLE_ERROR"
+msgstr "错误"
+
+#: string "Logout"
+msgid "GLOB_NAV_LINK_LOGOUT"
+msgstr "注销"
+
+#: string "Firmware Version"
+msgid "GLOB_NAV_HELP_STRING_FIRMWARE_VERSION"
+msgstr "固件版本"
+
+#: string "Copyright"
+msgid "GLOB_NAV_HELP_STRING_COPYRIGHT"
+msgstr "版权所有"
+
+
+#--- Global > EULA & Login ---
+
+#: string "Choose your language"
+msgid "GLOB_NAV_EULA_LABEL_CHOOSE_YOUR_LANGUAGE"
+msgstr "选择您的语言"
+
+#: string "I agree to the"
+msgid "GLOB_NAV_EULA_LABEL_I_AGREE_TO_THE"
+msgstr "我同意"
+
+#: string "WD End User License Agreement"
+msgid "GLOB_NAV_EULA_LABEL_WD_END_USER_LICENSE_AGREEMENT"
+msgstr "WD 最终用户许可协议"
+
+#: string "Continue"
+msgid "GLOB_NAV_EULA_BUTTON_PROCEED"
+msgstr "继续吗？"
+
+#: string "Login"
+msgid "GLOB_NAV_LOGIN_DIALOG_TITLE_LOGIN"
+msgstr "登录"
+
+#: string "Please enter your username and password."
+msgid "GLOB_NAV_LOGIN_STRING_LOGIN_INTRO"
+msgstr "请输入您的用户名和密码。"
+
+#: string "Username"
+msgid "GLOB_NAV_LOGIN_LABEL_USERNAME"
+msgstr "用户名"
+
+#: string "Password"
+msgid "GLOB_NAV_LOGIN_LABEL_PASSWORD"
+msgstr "密码"
+
+#: string "Invalid username or password"
+msgid "GLOB_NAV_LOGIN_STRING_INVALID_USERNAME_PASSWORD"
+msgstr "用户名或密码无效。"
+
+#: string "Unauthorized"
+msgid "GLOB_NAV_LOGIN_STRING_UNAUTHORIZED"
+msgstr "未经许可"
+
+#: string "Notifications"
+msgid "NAV_NOTIFICATIONS"
+msgstr "通知"
+
+#: string "ON"
+msgid "CONTENT_GENERIC_TOGGLE_ON"
+msgstr "开"
+
+#: string "OFF"
+msgid "CONTENT_GENERIC_TOGGLE_OFF"
+msgstr "关"
+
+#: string "Firmware Update"
+msgid "NAV_FIRMWARE_UPDATE"
+msgstr "固件更新"
+
+#: string "Safepoint Restore Progress"
+msgid "CONTENT_SAFEPOINTS_DIALOG_TITLE_RESTORE_PROGRESS"
+msgstr "Safepoint 恢复进度"
+
+#: string "Safepoint Update Schedule"
+msgid "CONTENT_SAFEPOINTS_DIALOG_TITLE_UPDATE_SCHEDULE"
+msgstr "Safepoint 更新计划"
+
+#: string "Safepoint Progress"
+msgid "CONTENT_SAFEPOINTS_HEAD2_SAFEPOINT_PROGRESS"
+msgstr "Safepoint 进程"
+
+#: string "Currently Copying"
+msgid "CONTENT_SAFEPOINTS_LABEL_CURRENTLY_COPYING"
+msgstr "正在复制"
+
+#: string "copied"
+msgid "CONTENT_SAFEPOINTS_LABEL_COPIED"
+msgstr "完成复制"
+
+#: string " No default application associated with the .{0} file extension."
+msgid "ERROR_ID_LABEL_NO_DEFAULT_EXTENSION"
+msgstr " 找不到与带有.{0}文件扩展名的文件相关的应用程序。"
+
+#: string "Safepoint Profile"
+msgid "CONTENT_SAFEPOINTS_HEAD2_SAFEPOINT_PROFILE"
+msgstr "Safepoint 配置文件"
+
+#: string "Description"
+msgid "CONTENT_SAFEPOINTS_LABEL_DESCRIPTION"
+msgstr "描述"
+
+#: string "This safepoint is in an invalid state, try updating to fix the problem"
+msgid "CONTENT_SAFEPOINTS_LABEL_INVALID_SAFEPOINT_MESSAGE"
+msgstr "此 safepoint 处于无效状态，请尝试更新以修复问题"
+
+#: string "Update now"
+msgid "CONTENT_SAFEPOINTS_LABEL_UPDATE_NOW"
+msgstr "立即更新"
+
+#: string "Update"
+msgid "CONTENT_SAFEPOINTS_BUTTON_UPDATE"
+msgstr "更新"
+
+#: string "Auto Update"
+msgid "CONTENT_SAFEPOINTS_LABEL_AUTO_UPDATE"
+msgstr "自动更新"
+
+#: string "Details"
+msgid "CONTENT_SAFEPOINTS_LINK_DETAILS"
+msgstr "详细信息"
+
+#: string "Created On"
+msgid "CONTENT_SAFEPOINTS_LABEL_CREATED_ON"
+msgstr "创建于"
+
+#: string "Size"
+msgid "CONTENT_SAFEPOINTS_LABEL_SIZE"
+msgstr "容量"
+
+#: string "No Safepoints"
+msgid "CONTENT_SAFEPOINTS_LABEL_GENERIC_NO_SAFEPOINTS" 
+msgstr "没有 Safepoint"
+
+#: string "Waiting for safepoints"
+msgid "CONTENT_SAFEPOINTS_LABEL_LIST_WAIT_FOR_SAFEPOINTS"
+msgstr "等待 safepoint"
+
+#: string "About Safepoints"
+msgid "CONTENT_SAFEPOINTS_HEAD1_ABOUT_SAFEPOINTS"
+msgstr "关于 Safepoint"
+
+#: string "A safepoint is a snapshot of the content on WD My Cloud at a specific point in time and stored on a different network drive or USB device. In the event your WD My Cloud content becomes corrupt or the drive fails, you can restore your content from your safepoint to your WD My Cloud drive."
+msgid "CONTENT_SAFEPOINTS_HEAD2_SAFEPOINT_INFO"
+msgstr "Safepoint 是在某个特定的时间点上对 WD My Cloud 中的内容的快照，它存储在一个不同的网络驱动器或 USB 设备中。 如果 WD My Cloud 内容已损坏或驱动器出现故障，您可以从与 WD My Cloud 驱动器相连的 safepoint 恢复您的内容。"
+
+#: string "Delete Safepoint"
+msgid "CONTENT_SAFEPOINTS_DIALOG_TITLE_DELETE_CONFIRM"
+msgstr "删除 Safepoint"
+
+#: string "Are you sure you want to delete this safepoint?"
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_DELETE_CONFIRM_MESSAGE"
+msgstr "确定删除此 safepoint 吗?"
+
+#: string "Day"
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_UPDATE_DAY"
+msgstr "日期"
+
+#: string "Daily"
+msgid "CONTENT_SAFEPOINTS_DIALOG_BUTTON_DAILY"
+msgstr "每日"
+
+#: string "Weekly"
+msgid "CONTENT_SAFEPOINTS_DIALOG_BUTTON_WEEKLY"
+msgstr "每周"
+
+#: string "Monthly"
+msgid "CONTENT_SAFEPOINTS_DIALOG_BUTTON_MONTHLY"
+msgstr "每月"
+
+#: string "There were no devices found"
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_NO_DEVICES"
+msgstr "未找到设备"
+
+#: string "Retrieving Shares"
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_GETTING_SHARES"
+msgstr "正在获取共享"
+
+#: string "Please choose a safepoint"
+msgid "CONTENT_SAFEPOINTS_DIALOG_HEAD1_CHOOSE_SAFEPOINT"
+msgstr "请选择一个 safepoint"
+
+#: string "The following safepoints were found on the device/share you selected. Please choose a safepoint from the list below and click Finish to begin your restore."
+msgid "CONTENT_SAFEPOINTS_DIALOG_HEAD2_SAFEPOINTS_FOUND"
+msgstr "在您选择的设备上找到以下 safepoint。 请从下面的列表中选择一个 safepoint，单击&quot;完成&quot;以开始恢复。"
+
+#: string "Retrieving Safepoints"
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_GETTING_SAFEPOINTS"
+msgstr "正在获取 Safepoint"
+
+#: string "Safepoint details"
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_SAFEPOINT_DETAILS"
+msgstr "Safepoint 详细信息"
+
+#: string "Last updated"
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_LAST_UPDATED"
+msgstr "上次更新"
+
+#: string "Created for"
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_CREATED_FOR"
+msgstr "创建"
+
+#: string "Create now or later"
+msgid "CONTENT_SAFEPOINTS_DIALOG_HEAD1_CREATE_NOW_LATER"
+msgstr "立即创建或以后创建"
+
+#: string "Because creating a safepoint can take a while and slightly impact performance, you may choose to create one now or schedule one for later."
+msgid "CONTENT_SAFEPOINTS_DIALOG_HEAD2_CREATE_NOW_LATER_MESSAGE"
+msgstr "由于创建一个 safepoint 可能要耗费一段时间并对性能略有影响，您也可以选择立即创建或为制定计划以后创建。"
+
+#: string "Now"
+msgid "CONTENT_SAFEPOINTS_DIALOG_BUTTON_NOW"
+msgstr "现在"
+
+#: string "Later"
+msgid "CONTENT_SAFEPOINTS_DIALOG_BUTTON_LATER"
+msgstr "以后"
+
+#: string "Creates your safepoint immediately"
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_CREATE_IMMEDIATELY"
+msgstr "立即创建 safepoint"
+
+#: string "Create your safepoint"
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_CREATE_SAFEPOINT"
+msgstr "创建 safepoint"
+
+#: string "Tomorrow"
+msgid "CONTENT_SAFEPOINTS_DIALOG_DROP_LIST_TOMORROW"
+msgstr "明天"
+
+#: string "Today"
+msgid "CONTENT_SAFEPOINTS_DIALOG_DROP_LIST_TODAY"
+msgstr "今天"
+
+#: string "SSH"
+msgid "CONTENT_DIALOG_SETTINGS_SSH_TITLE_SSH_CONFIRMATION"
+msgstr "SSH"
+
+#: string "Static Network Mode"
+msgid "CONTENT_DIALOG_SETTINGS_NETWORK_TITLE_NETWORK_MODE"
+msgstr "静态网络模式"
+
+#: string "Change Network Mode"
+msgid "CONTENT_DIALOG_SETTINGS_NETWORK_TITLE_NETWORK_MODE_CONFIRMATION"
+msgstr "变更网络模式"
+
+#: string "Internet access"
+msgid "CONTENT_SETTINGS_NETWORK_STRING_INTERNET_ACCESS"
+msgstr "互联网接入"
+
+#: string "No Internet access"
+msgid "CONTENT_SETTINGS_NETWORK_STRING_NO_INTERNET_ACCESS"
+msgstr "无法接入互联网。"
+
+#: string "Network Profile"
+msgid "CONTENT_SETTINGS_NETWORK_HEAD1_NETWORK_PROFILE"
+msgstr "网络配置文件"
+
+#: string "Status"
+msgid "CONTENT_SETTINGS_NETWORK_LABEL_STATUS"
+msgstr "状态"
+
+#: string "Network Services"
+msgid "CONTENT_SETTINGS_NETWORK_HEAD1_NETWORK_SERVICES"
+msgstr "网络服务"
+
+#: string "Static"
+msgid "CONTENT_SETTINGS_NETWORK_BUTTON_STATIC"
+msgstr "静态"
+
+#: string "DHCP"
+msgid "CONTENT_SETTINGS_NETWORK_BUTTON_DHCP"
+msgstr "DHCP"
+
+#: string "SSH"
+msgid "CONTENT_SETTINGS_NETWORK_LABEL_SSH"
+msgstr "SSH"
+
+#: string "Network Workgroup"
+msgid "CONTENT_SETTINGS_NETWORK_HEAD1_NETWORK_WORKGROUP"
+msgstr "网络工作组"
+
+#: string "Invalid email address"
+msgid "CONTENT_DIALOG_SETTINGS_STRING_INVALID_EMAIL"
+msgstr "电子邮件地址无效。"
+
+# Edit string please 6-10-13
+#: string "Email limit met. Only five notification email addresses allowed."
+msgid "CONTENT_DIALOG_SETTINGS_STRING_EMAIL_LIMIT"
+msgstr "达到电子邮件限制。 只允许五个通知电子邮件地址。"
+
+#: string "DNS Server 1"
+msgid "CONTENT_DIALOG_SETTINGS_STRING_DNS_SERVER_1"
+msgstr "DNS 服务器 1"
+
+#: string "DNS Server 2"
+msgid "CONTENT_DIALOG_SETTINGS_STRING_DNS_SERVER_2"
+msgstr "DNS 服务器 2"
+
+#: string "DNS Server 3"
+msgid "CONTENT_DIALOG_SETTINGS_STRING_DNS_SERVER_3"
+msgstr "DNS 服务器 3"
+
+#: string "Specify network parameters and configure your network manually."
+msgid "CONTENT_DIALOG_SETTINGS_STRING_NETWORK_MODE_MESSAGE"
+msgstr "指定网络参数并手动配置网络。"
+
+#: string "Modifying your network settings can make your device unrecognizable on your network. If switching from DHCP to Static Mode, be sure to use a valid, available IP address; if switching from Static Mode to DHCP, you may need to relocate the device on your network."
+msgid "CONTENT_DIALOG_SETTINGS_LABEL_NETWORK_MODE_CONFIRMATION_MESSAGE"
+msgstr "修改您的网络设置可能会使您的设备在网络中无法识别。 如果从 DHCP 切换到静态模式，一定要使用一个有效的、可用的 IP 地址;如果从静态模式切换为 DHCP，您可能需要在您的网络中重新定位设备。"
+
+#: string "Continue?"
+msgid "CONTENT_DIALOG_SETTINGS_LABEL_NETWORK_MODE_CONTINUE_MESSAGE"
+msgstr "继续吗？"
+
+# Edit sentence. Removed "in any way," and last part of sentence "...including but not limited to enabling SSH." 
+#: string "Please note that modifying or attempting to modify this device outside the normal operation of the product voids your WD warranty."
+msgid "CONTENT_DIALOG_SETTINGS_LABEL_NETWORK_SSH_MESSAGE"
+msgstr "请注意，以任何本产品常规操作以外的方式对此设备进行调整或试图进行调整，您将无法享受 WD 保修。"
+
+#: string "I accept"
+msgid "CONTENT_DIALOG_SETTINGS_LABEL_NETWORK_SSH_I_ACCEPT"
+msgstr "我接受"
+
+#: string "Notifications"
+msgid "GLOB_NAV_NOTIFICATIONS_TITLE_NOTIFICATIONS"
+msgstr "通知"
+
+#: string "Notification"
+msgid "GLOB_NAV_NOTIFICATIONS_TITLE_NOTIFICATION"
+msgstr "通知"
+
+#: string "Notifications Configuration"
+msgid "CONTENT_DIALOG_SETTINGS_NOTIFICATIONS_TITLE_NOTIFICATIONS_CONFIG"
+msgstr "通知配置"
+
+#: string "Notifications Email"
+msgid "CONTENT_SETTINGS_NOTIFICATION_HEAD1_NOTIFICATION_EMAIL"
+msgstr "通知电子邮件"
+
+#: string "Alert Emails"
+msgid "CONTENT_SETTINGS_NOTIFICATION_LABEL_NOTIFICATION_EMAILS"
+msgstr "提醒电子邮件"
+
+#: string "Details"
+msgid "CONTENT_SETTINGS_NOTIFICATION_LABEL_DETAILS"
+msgstr "详细信息"
+
+#: string "Notifications Display"
+msgid "CONTENT_SETTINGS_NOTIFICATION_HEAD1_NOTIFICATION_DISPLAY"
+msgstr "显示通知"
+
+#: string "Show notifications for the following messages"
+msgid "CONTENT_SETTINGS_NOTIFICATION_LABEL_SHOW_NOTIFICATIONS"
+msgstr "显示以下消息的通知"
+
+#: string "Critical Only"
+msgid "CONTENT_SETTINGS_NOTIFICATION_LABEL_CRITICAL_ONLY"
+msgstr "仅限严重"
+
+#: string "Critical and Warning"
+msgid "CONTENT_SETTINGS_NOTIFICATION_LABEL_CRITICAL_AND_WARNING"
+msgstr "严重和警告"
+
+#: string "All"
+msgid "CONTENT_SETTINGS_NOTIFICATION_LABEL_ALL_NOTIFICATIONS"
+msgstr "全部"
+
+#: string "Set up notifications configuration to receive system notifications through the WD My Cloud interface or through email."
+msgid "CONTENT_DIALOG_SETTINGS_NOTIFICATIONS_HEAD2_SETUP_NOTIFICATIONS"
+msgstr "设置通知配置，通过 WD My Cloud 界面或电子邮件接收系统通知。"
+
+#: string "Send email notifications for the following messages:"
+msgid "CONTENT_DIALOG_SETTINGS_NOTIFICATIONS_LABEL_SETUP_NOTIFICATIONS_MESSAGE"
+msgstr "为以下消息发送电子邮件通知："
+
+#: string "New Email"
+msgid "CONTENT_DIALOG_SETTINGS_NOTIFICATIONS_BUTTON_NEW_EMAIL"
+msgstr "新电子邮件"
+
+#: string "Send Test Email"
+msgid "CONTENT_DIALOG_SETTINGS_NOTIFICATIONS_BUTTON_SEND_TEST_EMAIL"
+msgstr "发送测试电子邮件"
+
+#: string "There are no notifications to view"
+msgid "GLOB_NAV_NOTIFICATIONS_STRING_NO_NOTIFICATIONS_FOUND"
+msgstr "没有通知可阅"
+
+#: string "There are no critical or warning notifications to view"
+msgid "GLOB_NAV_NOTIFICATIONS_STRING_NO_CRIT_WARN_NOTIFICATIONS_FOUND"
+msgstr "没有严重或警告通知可阅"
+
+#: string "There are no critical notifications to view"
+msgid "GLOB_NAV_NOTIFICATIONS_STRING_NO_CRIT_NOTIFICATIONS_FOUND"
+msgstr "没有严重通知可阅"
+
+#: string "Info"
+msgid "GLOB_NAV_NOTIFICATIONS_LABEL_INFO"
+msgstr "信息"
+
+#: string "Warning"
+msgid "GLOB_NAV_NOTIFICATIONS_LABEL_WARNING"
+msgstr "警告"
+
+#: string "Critical"
+msgid "GLOB_NAV_NOTIFICATIONS_LABEL_CRITICAL"
+msgstr "严重"
+
+#: string "View All"
+msgid "GLOB_NAV_NOTIFICATIONS_BUTTON_VIEW_ALL"
+msgstr "查看全部"
+
+#: string "Code"
+msgid "GLOB_NAV_NOTIFICATIONS_LABEL_CODE"
+msgstr "代码"
+
+#: string "Dismiss All"
+msgid "GLOB_NAV_NOTIFICATIONS_BUTTON_DISMISS_ALL"
+msgstr "全部解除"
+
+#----Users----
+
+#----User's Bumper----
+
+#: string "About Users"
+msgid "CONTENT_USERS_BUMPER_TITLE_ABOUT_USERS"
+msgstr "关于用户"
+
+#: string "Control who can access your cloud and their type of access."
+msgid "CONTENT_USERS_STRING_ABOUT_USERS_DESC"
+msgstr "控制谁能访问你的云以及他们的访问类型。"
+
+#----User's Detail----
+#: string "Set Up Users"
+msgid "CONTENT_USERS_HEAD1_SET_UP_USERS"
+msgstr "设置用户"
+
+#: string "Username"
+msgid "CONTENT_GENERIC_TEXTBOX_LABEL_USERNAME"
+msgstr "用户名"
+
+#----My Cloud Web----
+
+# Edit - changed WD2go.com to WDMyCloud.com
+#: string "<span class='remote_access_username'></span> does not have a WDMyCloud.com login. Enter an email address to sign up for a login."
+msgid "CONTENT_USERS_STRING_NO_ACCOUNTS_MY_CLOUD_WEB"
+msgstr "<span class='remote_access_username'></span> 没有 WDMyCloud.com 登录账号。 输入一个电子邮件地址以注册。"
+
+# Edit - changed WD2go.com to WDMyCloud.com
+#: string "Click Sign Up to get a WDMyCloud.com login."
+msgid "CONTENT_USERS_STRING_CLICK_REGISTER_MY_CLOUD_WEB"
+msgstr "点击”注册“，获取一个 WDMyCloud.com 登录账号。"
+
+#----Share Access----
+
+#: string "Full Access"
+msgid "CONTENT_GENERIC_STRING_RW_ACCESS"
+msgstr "完全访问"
+
+#: string "Read Access"
+msgid "CONTENT_GENERIC_STRING_RO_ACCESS"
+msgstr "只读访问"
+
+#: string "No Access"
+msgid "CONTENT_GENERIC_STRING_NO_ACCESS"
+msgstr "无权访问"
+
+#---- Create User Dialog ----
+
+#: string "Add User"
+msgid "CONTENT_USERS_DIALOG_TITLE_ADD_USER"
+msgstr "添加用户"
+
+#: string "Email"
+msgid "CONTENT_GENERIC_TEXTBOX_LABEL_EMAIL"
+msgstr "电子邮件"
+
+#: string "Confirm Password"
+msgid "CONTENT_GENERIC_TEXTBOX_LABEL_CONFIRM_PASSWORD"
+msgstr "确认密码"
+
+#: string "Required"
+msgid "CONTENT_GENERIC_STRING_REQUIRED"
+msgstr "需要"
+
+#----Edit Password Dialog ----
+
+#: string "Edit Password"
+msgid "CONTENT_USERS_DIALOG_TITLE_EDIT_PASSWORD"
+msgstr "编辑密码"
+
+#: string "You can edit the password for this user by using the fields below:"
+msgid "CONTENT_USERS_DIALOG_STRING_EDIT_PASSWORD_DESC"
+msgstr "您可以使用以下字段编辑此用户的密码："
+
+#: string "New Password"
+msgid "CONTENT_GENERIC_TEXTBOX_LABEL_NEW_PASSWORD"
+msgstr "新密码"
+
+#----Delete User Dialog ----
+
+#: string "Are you sure you want to delete this user?"
+msgid "CONTENT_USERS_DIALOG_STRING_DELETE_USER_CONFIRM"
+msgstr "您确定要删除此用户吗?"
+
+#---- Register My Cloud Web Dialog ---- 
+
+# Edit - changed WD2go.com to WDMyCloud.com
+#: string "Sign Up for WDMyCloud.com Login"
+msgid "CONTENT_USERS_DIALOG_TITLE_REGISTER_MY_CLOUD"
+msgstr "注册，获取一个 WDMyCloud.com 登录账户"
+
+# Edit - changed WD2go.com to WDMyCloud.com
+#: string "Sign up to get a login for WDMyCloud.com."
+msgid "CONTENT_USERS_DIALOG_STRING_REGISTER_MY_CLOUD_DESC"
+msgstr "注册以获取一个 WDMyCloud.com 登录账户。"
+
+#: string "Your Name"
+msgid "CONTENT_USERS_DIALOG_TEXTBOX_LABEL_YOUR_NAME"
+msgstr "您的名字"
+
+#: string "Registration Email Sent"
+msgid "CONTENT_USERS_DIALOG_TITLE_REGISTRATION_EMAIL_SENT"
+msgstr "注册电子邮件已发送"
+
+#: string "A registration email has been sent to the specified user."
+msgid "CONTENT_USERS_DIALOG_STRING_REGISTRATION_EMAIL_SENT"
+msgstr "注册电子邮件已成功发送给指定的用户。"
+
+# Edit: removed space between In and structions. Should be single word Instructions, not In structions 
+#: string "Please allow some time for the email to arrive in the user's inbox. Instructions for obtaining remote access to the content on your drive are provided."
+msgid "CONTENT_USERS_DIALOG_STRING_REGISTRATION_EMAIL_SENT_INSTRUCTION"
+msgstr "请等待一段时间，邮件即将送达用户的收件箱。 提供了关于远程访问驱动器中内容的说明。"
+
+#---- Delete WD My Cloud Account Dialog ----
+
+#: string "Delete Email Address"
+msgid "CONTENT_USERS_DIALOG_TITLE_DELETE_WD2GO_ACCOUNT"
+msgstr "删除电子邮件地址"
+
+#: string "Are you sure you want to delete this email address?"
+msgid "CONTENT_USERS_DIALOG_STRING_DELETE_WD2GO_ACCOUNT_CONFIRM"
+msgstr "您确定要删除电子邮件地址吗?"
+
+
+#----Shares Bumper ----
+
+#: string "About Shares"
+msgid "CONTENT_SHARES_BUMPER_TITLE_ABOUT_SHARES"
+msgstr "关于共享"
+
+#: string "About Shares"
+msgid "CONTENT_SHARES_HEAD1_TITLE_ABOUT_SHARES"
+msgstr "关于共享"
+
+#: string "A share is an area for storing files (like a folder). You can create multiple shares on a single storage device and control access to each share."
+msgid "CONTENT_SHARES_STRING_ABOUT_SHARES_DESC"
+msgstr "共享是指一个用于存储文件的区域(如一个文件夹)。 您可以一个存储设备上创建多个共享，并控制对每个共享的访问。"
+
+#----Share Detail----
+
+#: string "Managing Shares"
+msgid "CONTENT_SHARES_HEAD1_MANAGE_SHARES"
+msgstr "管理共享"
+
+#----Add Share Dialog----
+
+#: string "Add Share"
+msgid "CONTENT_SHARES_DIALOG_TITLE_ADD_SHARE"
+msgstr "添加共享"
+
+#: string "Create Share"
+msgid "CONTENT_SHARES_DIALOG_STRING_CREATE_SHARE"
+msgstr "创建共享"
+
+#: string "Public Access"
+msgid "CONTENT_SHARES_TOGGLE_LABEL_PUBLIC_ACCESS" 
+msgstr "公共访问"
+
+
+#----Delete Share Dialog----
+
+#: string "Deleting this share will delete all content and configuration settings within the share."
+msgid "CONTENT_SHARES_DIALOG_STRING_DELETE_SHARE_DESC"
+msgstr "删除此共享将删除其所有的内容和配置设置。"
+
+#: string "Are you sure you want to delete this share?"
+msgid "CONTENT_SHARES_DIALOG_STRING_DELETE_SHARE_CONFIRM"
+msgstr "您确定要删除此共享吗?"
+
+
+# ----Dashboard/Home Nav----
+
+#: string "Capacity"
+msgid "CONTENT_HOME_BIG_BOX_TITLE_CAPACITY"
+msgstr "容量"
+
+#: string "Error retrieving capacity."
+msgid "ERROR_STRING_GET_STORAGE_USAGE"
+msgstr "获取容量信息时出错。"
+
+#: string "Free"
+msgid "CONTENT_HOME_BIG_BOX_STRING_FREE"
+msgstr "可用"
+
+#: string "Device"
+msgid "CONTENT_HOME_BIG_BOX_TITLE_DEVICE"
+msgstr "设备"
+
+#: string "Diagnosis"
+msgid "CONTENT_HOME_SMALL_BOX_TITLE_DIAGNOSIS"
+msgstr "诊断"
+
+#: string "Normal"
+msgid "CONTENT_HOME_DIALOG_STRING_DIAGNOSIS_NORMAL"
+msgstr "正常"
+
+#: string "Overheated"
+msgid "CONTENT_HOME_DIALOG_STRING_DIAGNOSIS_OVERHEATED"
+msgstr "过热"
+
+#: string "Sufficient"
+msgid "CONTENT_HOME_DIALOG_STRING_DIAGNOSIS_SUFFICIENT"
+msgstr "足够"
+
+#: string "Low"
+msgid "CONTENT_HOME_DIALOG_STRING_DIAGNOSIS_LOW_FREE_SPACE"
+msgstr "低"
+
+# PLEASE DELETE THIS STRING 6-10-13
+#: string "Warning"
+msgid "CONTENT_HOME_STRING_SICK"
+msgstr "警告"
+
+#: string "Initializing"
+msgid "CONTENT_HOME_STRING_INITIALIZING"
+msgstr "正在初始化"
+
+#: string "Firmware"
+msgid "CONTENT_HOME_SMALL_BOX_TITLE_FIRMWARE"
+msgstr "固件"
+
+#: string "Cloud Devices"
+msgid "CONTENT_HOME_MEDIUM_BOX_TITLE_CLOUD_DEVICES"
+msgstr "云设备"
+
+#: string "Users"
+msgid "CONTENT_HOME_MEDIUM_BOX_TITLE_USERS"
+msgstr "用户"
+
+#: string "Shares"
+msgid "CONTENT_HOME_MEDIUM_BOX_TITLE_SHARES"
+msgstr "共享"
+
+#: string "Content Scan"
+msgid "CONTENT_HOME_MEDIUM_BOX_TITLE_MEDIA_SCAN"
+msgstr "内容扫描"
+
+#: string "Error retrieving content scan status."
+msgid "ERROR_STRING_GET_MEDIA_CRAWLER"
+msgstr "获取内容扫描状态时出错。"
+
+#: string "Idle"
+msgid "CONTENT_HOME_STRING_IDLE"
+msgstr "空闲"
+
+#---- Capacity Usage Dialog ----
+
+#: string "Capacity Usage"
+msgid "CONTENT_HOME_DIALOG_TITLE_CAPACITY_USAGE"
+msgstr "容量使用"
+
+#: string "Current usage of your system capacity."
+msgid "CONTENT_HOME_DIALOG_STRING_CAPACITY_USAGE_DESC"
+msgstr "目前系统容量的使用情况。"
+
+#: string "Free Space"
+msgid "CONTENT_HOME_DIALOG_LABEL_FREE_SPACE"
+msgstr "可用空间"
+
+#: string "Music Tracks"
+msgid "CONTENT_HOME_DIALOG_LABEL_MUSIC_TRACKS"
+msgstr "音乐"
+
+#: string "Photos"
+msgid "CONTENT_HOME_DIALOG_LABEL_PHOTOS"
+msgstr "照片"
+
+#: string "Other"
+msgid "CONTENT_HOME_DIALOG_LABEL_OTHER"
+msgstr "其他"
+
+#---- Diagnosis Dialog ----
+
+#: string "Diagnosis"
+msgid "CONTENT_HOME_DIALOG_TITLE_DIAGNOSIS"
+msgstr "诊断"
+
+#: string "Display a snapshot of your system components to assess the overall health of your WD My Cloud."
+msgid "CONTENT_HOME_DIALOG_STRING_DIAGNOSIS_DESC"
+msgstr "显示系统组件的快照，以评估您的 WD My Cloud 的整体健康状况。"
+
+#: string "Good"
+msgid "CONTENT_HOME_DIALOG_STRING_DIAGNOSIS_GOOD"
+msgstr "良好"
+
+#: string "Bad"
+msgid "CONTENT_HOME_DIALOG_STRING_DIAGNOSIS_BAD"
+msgstr "较差"
+
+#: string "Temperature"
+msgid "CONTENT_HOME_DIALOG_LABEL_TEMPERATURE"
+msgstr "温度"
+
+#: string "Drive Status"
+msgid "CONTENT_HOME_DIALOG_LABEL_DRIVE_STATUS"
+msgstr "驱动器状态"
+
+#: string "Content Status"
+msgid "CONTENT_HOME_DIALOG_LABEL_SHARE_STATUS"
+msgstr "内容状态"
+
+#: string "Temperature status"
+msgid "CONTENT_HOME_DIALOG_TOOLTIP_TEMPERATURE"
+msgstr "温度状态"
+
+#: string "Drive SMART status"
+msgid "CONTENT_HOME_DIALOG_TOOLTIP_DRIVE_STATUS"
+msgstr "驱动器 SMART 状态"
+
+#: string "Data volume mounted or not mounted"
+msgid "CONTENT_HOME_DIALOG_TOOLTIP_SHARE_STATUS"
+msgstr "数据卷是否已安装"
+
+#: string "Amount of free space remaining"
+msgid "CONTENT_HOME_DIALOG_TOOLTIP_FREE_SPACE"
+msgstr "剩余可用空间数量"
+
+#: string "Not Mounted"
+msgid "CONTENT_HOME_DIALOG_STRING_DIAGNOSIS_NOT_MOUNTED"
+msgstr "未安装"
+
+#: string "Mounted"
+msgid "CONTENT_HOME_DIALOG_STRING_DIAGNOSIS_MOUNTED"
+msgstr "已安装"
+
+#---- Media Scan Dialog ----
+
+# Edit - changed to Content Scan Status - 5-21
+#: string "Content Scan Status"
+msgid "CONTENT_HOME_DIALOG_TITLE_MEDIA_SCAN"
+msgstr "内容扫描状态"
+
+#: string "Snapshot of your current Media database scan."
+msgid "CONTENT_HOME_DIALOG_STRING_MEDIA_SNAPSHOT_DESC"
+msgstr "当前媒体数据库扫描的快照。"
+
+#: string " (scan in progress...)"
+msgid "CONTENT_HOME_DIALOG_STRING_MEDIA_SCAN_IN_PROGRESS"
+msgstr " 正在进行扫描"
+
+#----Getting Started  ----
+
+#: string "Getting Started"
+msgid "GLOB_NAV_HELP_DIALOG_TITLE_GETTING_STARTED"
+msgstr "使用入门"
+
+#: string "Getting Started"
+msgid "DIALOG_TITLE_GETTING_STARTED"
+msgstr "使用入门"
+
+
+
+# --- NEW Getting Started Keys and strings from KM - START  ---
+
+#: string "WD My Cloud lets you create your personal cloud. Store your photos, videos, music, and files in one place, and access your content anywhere."
+msgid "STRING_INTRO_LEVEL1_GETTING_STARTED"
+msgstr "WD My Cloud 可以让您创建您的个人云。 在一个地方存储您的照片、视频、音乐和文件，并在任何地方访问您的内容。"
+
+# Edited from WD2go.com to WDMyCloud.com
+#: string "Access requires a WDMyCloud.com login, and each user needs one."
+msgid "STRING_INTRO_LEVEL2_GETTING_STARTED"
+msgstr "访问需要有一个 WDMyCloud.com 登录账户，每个用户使用一个登录账户。"
+
+# Edited from WD2go.com to WDMyCloud.com
+#: string "Sign up for a WDMyCloud.com login"
+msgid "STRING_INTRO_TABLE_HEAD_GETTING STARTED"
+msgstr "注册一个 WDMyCloud.com 登录账户"
+
+
+#EDIT 6-10-13
+#: string ""Entering your email address registers your WD My Cloud device and sets you up to receive updates and info. Also, each time you add a user, WD My Cloud automatically creates a new share using the first name of the user.""
+msgid "STRING_INTRO_LEVEL3_GETTING_STARTED"
+msgstr "输入您的电子邮件地址，注册 WD My Cloud 设备，然后进行设置以便收到相关更新和信息。 此外，每次添加一个用户，WD My Cloud会使用该用户的名字自动创建一个新的共享。"
+
+#: string "That's it."
+msgid "STRING_INTRO2_LEVEL1_GETTING_STARTED"
+msgstr "就这么简单。"
+
+# Edited from wd2go.com to WDMyCloud.com
+#: string "You'll receive an email from WDMyCloud.com with your login info."
+msgid "STRING_INTRO2_LEVEL2_GETTING_STARTED"
+msgstr "您将收到一封来自 WDMyCloud.com 的电子邮件，其中包含您的登录信息。"
+
+#: string "Click these links for additional software and info:"
+msgid "STRING_INTRO2_LEVEL3_GETTING_STARTED"
+msgstr "单击这些链接，以获取额外的软件和信息:"
+
+#: string "Automatically update WD My Cloud when a firmware update is available."
+msgid "STRING_INTRO2_CHECKBOX1_GETTING_STARTED"
+msgstr "当固件更新可用时，自动更新 WD My Cloud。"
+
+#: string "*"
+msgid "STRING_INTRO2_CHECKBOX2_GETTING_STARTED"
+msgstr "*"
+
+#: string "*"
+msgid "STRING_INTRO2_LINK1_GETTING_STARTED"
+msgstr "*"
+
+#: string "*"
+msgid "STRING_INTRO2_LINK2_GETTING_STARTED"
+msgstr "*"
+
+#: string "*"
+msgid "STRING_INTRO2_LINK3_GETTING_STARTED"
+msgstr "*"
+
+#: string "*"
+msgid "STRING_INTRO3_LEVEL1_GETTING_STARTED"
+msgstr "*"
+
+#: string "*"
+msgid "STRING_INTRO3_LEVEL2_GETTING_STARTED"
+msgstr "*"
+
+#: string "*"
+msgid "STRING_INTRO3_LEVEL3_GETTING_STARTED"
+msgstr "*"
+
+#: string "*"
+msgid "STRING_INTRO3_CHECKBOX1_GETTING_STARTED"
+msgstr "*"
+
+#: string "*"
+msgid "STRING_INTRO3_CHECKBOX2_GETTING_STARTED"
+msgstr "*"
+
+#: string "*"
+msgid "STRING_INTRO3_LINK1_GETTING_STARTED"
+msgstr "*"
+
+#: string "*"
+msgid "STRING_INTRO3_LINK2_GETTING_STARTED"
+msgstr "*"
+
+#: string "*"
+msgid "STRING_INTRO3_LINK3_GETTING_STARTED"
+msgstr "*"
+
+
+# --- NEW Getting Started Keys and strings from KM - END  ---
+
+
+
+
+
+#--- Old/vintage Gettings Started instructions ---
+
+#: string "Use the getting started instructions to get up and running on your WD My Cloud and maximize your WD experience."
+msgid "GLOB_NAV_HELP_DIALOG_STRING_GETTING_STARTED_DESC"
+msgstr "使用”快速入门“中的说明信息，快速掌握你的 WD My Cloud，获取最好的体验！"
+
+#: string "Add yourself and others to your personal cloud so everyone's connected to their content, all the time."
+msgid "GLOB_NAV_HELP_DIALOG_STRING_GETTING_STARTED_ADD_USERS_DESC"
+msgstr "将你自己和其他人添加到你的个人云中，这样所有人都能随时可以连接到他们的内容。"
+
+#: string "Set up your personal cloud"
+msgid "GLOB_NAV_HELP_DIALOG_HEAD2_GETTING_STARTED_SETUP_ADMIN"
+msgstr "设置您的个人云"
+
+#: string "Your First Name"
+msgid "CONTENT_GENERIC_TEXTBOX_LABEL_YOUR_FIRST_NAME"
+msgstr "您的名字"
+
+#: string "Your Last Name"
+msgid "CONTENT_GENERIC_TEXTBOX_LABEL_YOUR_LAST_NAME"
+msgstr "您的姓氏"
+
+#: string "Your Email Address"
+msgid "CONTENT_GENERIC_TEXTBOX_LABEL_YOUR_EMAIL_ADDRESS"
+msgstr "您的电子邮件地址"
+
+#: string "Invite others to your personal cloud"
+msgid "GLOB_NAV_HELP_DIALOG_HEAD2_GETTING_STARTED_ADD_USERS"
+msgstr "邀请其他人到您的个人云"
+
+#: string "If you do not wish to add other users now, click Next to continue."
+msgid "GLOB_NAV_HELP_DIALOG_STRING_GETTING_STARTED_BYPASS_ADD_USERS"
+msgstr "如果您不想添加其他用户，请单击&quot;下一步&quot;以继续。"
+
+#: string "Email Address"
+msgid "CONTENT_GENERIC_TEXTBOX_LABEL_EMAIL_ADDRESS"
+msgstr "电子邮件地址"
+
+#: string "Setup Complete"
+msgid "GLOB_NAV_HELP_DIALOG_HEAD2_SETUP_COMPLETE"
+msgstr "设置完成"
+
+#: string "Learn more about what WD My Cloud can do for you."
+msgid "GLOB_NAV_HELP_DIALOG_STRING_GETTING_STARTED_LEARN_MORE"
+msgstr "了解更多 WD My Cloud 可以为您做的事情。"
+
+#: string "Upload Content"
+msgid "GLOB_NAV_HELP_DIALOG_LINK_UPLOAD_CONTENT"
+msgstr "上传内容"
+
+#: string "Backup PC/Mac"
+msgid "GLOB_NAV_HELP_DIALOG_LINK_BACKUP_PC_MAC"
+msgstr "对 PC/Mac 备份"
+
+#: string "Access Mobile Apps"
+msgid "GLOB_NAV_HELP_DIALOG_LINK_ACCESS_MOBILE_APPS"
+msgstr "访问移动应用程序"
+
+#: string "Automatically update WD My Cloud when a firmware update is available."
+msgid "GLOB_NAV_HELP_DIALOG_CHECKBOX_AUTO_UPDATE"
+msgstr "当固件更新可用时，自动更新 WD My Cloud。"
+
+#: string "Register WD My Cloud to receive product support updates regularly."
+msgid "GLOB_NAV_HELP_DIALOG_CHECKBOX_REGISTER"
+msgstr "注册 WD My Cloud，定期接收产品支持更新。"
+
+#: string "WiFi Setup"
+msgid "CONTENT_WIFI_DIALOG_TITLE_WIFISETUP"
+msgstr "无线网络（WiFi）设置"
+
+#: string "SSID"
+msgid "BUTTON_SSID"
+msgstr "SSID"
+
+#: string "Unlock"
+msgid "BUTTON_UNLOCK"
+msgstr "解除锁定"
+
+#: string "WPS Push"
+msgid "BUTTON_WPSPUSH"
+msgstr "WPS 推送"
+
+#: string "WPS PIN"
+msgid "BUTTON_WPSPIN"
+msgstr "WPS 个人识别码（PIN）"
+
+#: string "Generate New PIN"
+msgid "BUTTON_GENERATE_NEW_PIN"
+msgstr "生成新的个人识别码（PIN）"
+
+#: string "Reset to Default PIN"
+msgid "BUTTON_RESET_TO_DEFAULT_PIN"
+msgstr "重置为默认的个人识别码（PIN）"
+
+#: string "Choose this method if your wireless router supports WPS configuration."
+msgid "CONTENT_WIFI_DIALOG_WPSPUSH_LABEL"
+msgstr "如果您的无线路由器支持 WPS 配置，请选择这种方法。"
+
+#: string "Push WPS button on your router to initiate connection."
+msgid "CONTENT_WIFI_DIALOG_WPSPUSH_LABEL1"
+msgstr "按下您路由器上的 WPS 按钮来启动连接。"
+
+#: string "Push and hold the WPS button on the WD My Cloud WiFi for 3 seconds."
+msgid "CONTENT_WIFI_DIALOG_WPSPUSH_LABEL2"
+msgstr "按住 WD My Cloud WiFi 上 的 WPS 按钮3秒钟。"
+
+#: string "Connection status will be displayed when network setup is done. Blue LED status on WD My Cloud WiFi indicates successful connection."
+msgid "CONTENT_WIFI_DIALOG_WPSPUSH_LABEL3"
+msgstr "示网络设置已完后，连接状态将会显示。 WD My Cloud WiFi 上的蓝色 LED 指示灯亮表示连接成功。"
+
+#: string "Enter this 8-digit PIN into your router configuration page."
+msgid "CONTENT_WIFI_DIALOG_WPSPIN_LABEL1"
+msgstr "在您的路由器配置页面输入8位数的个人识别码（PIN）。"
+
+#: string "Click the connection button to initiate the network connection."
+msgid "CONTENT_WIFI_DIALOG_WPSPIN_LABEL2"
+msgstr "单击“连接”按钮以启动网络连接。"
+
+#: string "WiFi Manual Setup"
+msgid "CONTENT_WIFI_DIALOG_TITLE_MANUALSETUP"
+msgstr "无线网络（WiFi）手动设置"
+
+#: string "Enetr SSID"
+msgid "CONTENT_WIFI_LABEL_SSID"
+msgstr "输入 SSID"
+
+#: string "Enter Password"
+msgid "CONTENT_WIFI_LABEL_PASSWORD"
+msgstr "输入密码"
+
+#: string "Manual Connection"
+msgid "CONTENT_WIFI_LABEL_MANUALCONNECTION"
+msgstr "手动连接"
+
+#: string "Create a Safepoint"
+msgid "CONTENT_SAFEPOINTS_DIALOG_TITLE_CREATE_SAFEPOINT"
+msgstr "创建 Safepoint"
+
+#: string "searching for USB devices"
+msgid "CONTENT_SAFEPOINTS_LABEL_SEARCHING_FOR_USB_DEVICES"
+msgstr "搜索 USB 设备"
+
+#: string "Recover Content with a Safepoint"
+msgid "CONTENT_SAFEPOINTS_DIALOG_TITLE_RECOVER_SAFEPOINT"
+msgstr "使用 Safepoint 来恢复内容"
+
+#: string "Unable to discover available devices on your network."
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_NAS_DISCOVER_ERROR"
+msgstr "无法在您的网络中找到可用的设备。"
+
+
+#: string "Device name must be between 2 and 15 characters and can only contain letters, numbers, and dashes."
+msgid "ERROR_ENTER_ALPHANUMERIC_DEVICE_NAME"
+msgstr "设备名称必须介于2和15个字符之间，并且只能包含字母、数字和短划线。"
+
+#: string "Invalid safepoint name. Valid safepoint names are between 1-32 characters, case sensitive and cannot contain special characters except underscores."
+msgid "ERROR_SAFEPOINT_INCORRECT_SYNTAX"
+msgstr "Safepoint 名称无效。 有效的 safepoint 名称应介于1-32个字符之间，区分大小写，并且不能包含下划线以外的其他特殊字符。"
+
+#: string "The device name cannot start or end with a dash (-)."
+msgid "ERROR_ENTER_ALPHANUMERIC_DEVICE_NAME_DASH"
+msgstr "设备名称不能以短划线 (-) 开头或结尾。"
+
+#: string "The device name cannot start with a number."
+msgid "ERROR_ENTER_ALPHANUMERIC_DEVICE_NAME_NUMBER"
+msgstr "设备名称不能以数字开头。"
+
+#: string "Invalid device name."
+msgid "ERROR_ENTER_ALPHANUMERIC_DEVICE_INVALID"
+msgstr "设备名称无效。"
+
+# EDIT - remove duplicate word and reworded to shorten
+#: string "Timeout; waiting for reboot. Verify that the LED on the front of your device is not red; then find the device on the network and reinitialize the web user interface. If the LED is red, reboot your drive manually."
+msgid "ERROR_REBOOT_TIMEOUT"
+msgstr "超时，正在等待重新启动。 核实设备前面板上的 LED 指示灯不是红色；然后，在网络上找到设备，并重新初始化网络用户界面。 如果 LED 为红色，请手动重新启动驱动器。"
+
+#: string "Error ignoring alerts:"
+msgid "LABEL_IGNORING_ALERTS"
+msgstr "忽略警告时出错:"
+
+#: string "Start Update"
+msgid "CONTENT_DIALOG_ALERTS_STRING_BEGIN_UPDATE"
+msgstr "开始更新"
+
+#: string "Error registering device:"
+msgid "LABEL_REGISTERING_DEVICE"
+msgstr "注册设备时出错："
+
+#: string "Error rebooting device:"
+msgid "LABEL_REBOOTING_DEVICE"
+msgstr "重启设备时出错："
+
+#: string "Error shutting down device:"
+msgid "LABEL_SHUTTING_DOWN_DEVICE"
+msgstr "关闭设备时出错："
+
+#: string "Error sending test alert email:"
+msgid "LABEL_SENDING_TEST_ALERT_EMAIL"
+msgstr "发送检测提醒电子邮件时出错："
+
+#: string "Error toggling SSH:"
+msgid "LABEL_TOGGLING_SSH"
+msgstr "切换SSH时出错:"
+
+#: string "Error processing your configuration request:"
+msgid "LABEL_CONFIGURING_SETTINGS_GENERAL"
+msgstr "处理您的配置请求时出错:"
+
+#: string "Device description must start with an alphanumeric value and may contain spaces or underscores without exceeding 42 characters."
+msgid "ERROR_ENTER_ALPHANUMERIC_DEVICE_DESCRIPTION"
+msgstr "设备描述必须以字母或数字开头，可以包含空格和下划线，但总计不得超过 42 个字符。"
+
+#: string "Authorizations do not match."
+msgid "ERROR_AUTHORIZATION_DO_NOT_MATCH"
+msgstr "授权不匹配。"
+
+#: string "Workgroup name must start with an alphanumeric value, may contain dashes, exclamation points, at signs, pound signs, dollar signs, percent signs, carets, ampersands, parentheses, underscores, semicolons, colons, apostrophes, commas, periods, and be between 1 and 16 characters."
+msgid "ERROR_ENTER_ALPHANUMERIC_WORKGROUP"
+msgstr "工作组名称必须以数字或字母开头，可以包含短划线、感叹号、@符号、#符号、$符号、百分号%、脱字符号^、&符号、圆括号、下划线、分号、冒号、撇号、逗号、句号，且长度在1和16个字符之间。"
+
+#: string "Empty"
+msgid "ERROR_NETWORK_EMPTY"
+msgstr "空"
+
+#: string "The IP addresses 0.0.0.0 and 255.255.255.255 are reserved and cannot be used."
+msgid "ERROR_NETWORK_RESERVED_SPECIAL"
+msgstr "IP 地址 0.0.0.0 和 255.255.255.255 为保留地址，不能使用。"
+
+#: string "IP addresses in the 0.x.x.x format are reserved for self-identification purposes and cannot be used."
+msgid "ERROR_NETWORK_RESERVED_SELF_IDENTIFICATION"
+msgstr "0.x.x.x 格式的 IP 地址已为自我识别被保留，不能使用。"
+
+#: string "IP addresses in the 127.x.x.x format are reserved for host loopback purposes and cannot be used."
+msgid "ERROR_NETWORK_LOOPBACK"
+msgstr "127.x.x.x 格式的 IP 地址已为主机回路被保留，不能使用。"
+
+#: string "IP addresses in the 169.254.x.x format are reserved for use as link-local addresses and cannot be used."
+msgid "ERROR_NETWORK_LINKLOCAL"
+msgstr "169.254.x.x.x 格式的 IP 地址被保留用作链路本地地址，不能使用。"
+
+#: string "IP addresses in the 192.88.99.x format are reserved for 6to4 relay anycasting purposes and cannot be used."
+msgid "ERROR_NETWORK_ANYCAST"
+msgstr "192.88.99.x 格式的 IP 地址已为 6to4 中继任播保留，不能使用。"
+
+#: string "IP addresses ranging from 224.0.0.0 through 239.255.255.255 are reserved for multicasting purposes and cannot be used."
+msgid "ERROR_NETWORK_MULTICAST"
+msgstr "224.0.0.0 到 239.255.255.255 之间的 IP 地址为组播被保留，无法使用。"
+
+#: string "IP addresses ranging from 240.0.0.0 through 255.255.255.254 are reserved for future use and cannot be used."
+msgid "ERROR_NETWORK_RESERVED"
+msgstr "240.0.0.0 到 255.255.255.254 之间的 IP 地址因留作以后使用，当前无法使用。"
+
+#: string "The host IP address is invalid."
+msgid "ERROR_INVALID_HOST_IPADDRESS_AND_WITH_NETMASK"
+msgstr "该主机的 IP 地址无效。"
+
+#: string "The netmask is not contiguous and cannot be used."
+msgid "ERROR_NETMASK_NOT_CONTIGUOUS"
+msgstr "网络掩码不连续，无法使用。"
+
+#: string "The gateway is not in the same subnet as the IP address."
+msgid "ERROR_GATEWAY_WRONG_SUBNET"
+msgstr "该网关与 IP 地址不在同一子网内。"
+
+#: string "DNS Server:"
+msgid "LABEL_HEADER_DNS_SERVER"
+msgstr "DNS 服务器："
+
+#: string "Primary NTP Server:"
+msgid "LABEL_HEADER_PRIMARY_NTP_SERVER"
+msgstr "主 NTP 服务器:"
+
+#: string "Error retrieving information from storage drive(s):"
+msgid "LABEL_GET_STORAGE_DRIVE_INFORMATION"
+msgstr "从存储驱动器获取信息时出错："
+
+#: string "You must enter a password to unlock your USB drive."
+msgid "ERROR_PASSWORD_MISSING"
+msgstr "您必须输入密码来解锁您的 USB 驱动器。"
+
+#: string "The USB drive is not locked."
+msgid "ERROR_USB_DRIVE_NOT_LOCKED"
+msgstr "USB 驱动器未被锁定。"
+
+#: string "Unable to unlock the USB drive. Verify your password and try again."
+msgid "ERROR_USB_DRIVE_UNLOCK_FAILED"
+msgstr "无法解锁USB驱动器。 请检查您的密码，然后重试。"
+
+#: string "Unable to unlock the USB drive; you have exceeded your unlock attempts."
+msgid "ERROR_USB_DRIVE_EXCEEDED_ATTEMPTS"
+msgstr "无法解锁 USB 驱动器;您已超出尝试次数限制。"
+
+#: string "User name already in use. Please enter another user name."
+msgid "ERROR_USER_SAME_NAME_EXISTS"
+msgstr "用户名已被占用。 请输入另一个用户名。"
+
+#: string "User has been renamed or deleted."
+msgid "ERROR_USER_RENAMED_DELETED"
+msgstr "用户已被重命名或删除。"
+
+#: string "Username must be an alphanumeric value between 1 and 32 characters and cannot contain spaces."
+msgid "ERROR_USERNAME_INCORRECT_SYNTAX"
+msgstr "用户名必须是 1 到 32 个字母或数字，区分大小写，并且不能包含空格。"
+
+#: string "Full name is a case-sensitive alphanumeric value and may contain spaces or underscores without exceeding 256 characters."
+msgid "ERROR_FULL_NAME_INCORRECT_SYNTAX"
+msgstr "全名是一串字母或数字，区分大小写，可以包含空格和下划线，但总计不得超过 256 个字符。"
+
+# Edit - 5.30 changed from 16 characters to 32
+#: string "Password is a case-sensitive, alphanumeric value up to 32 characters, and cannot contain double quotes."
+msgid "ERROR_PASSWORD_INCORRECT_SYNTAX"
+msgstr "密码是区分大小写的字母数字值，最多 32 个字符，不可包含双引号。"
+
+#: string "Passwords do not match."
+msgid "ERROR_PASSWORDS_DONT_MATCH"
+msgstr "密码不匹配。"
+
+#: string "Share name already in use. Please enter another share name."
+msgid "ERROR_SHARE_NAME_EXISTS"
+msgstr "共享名称已被占用。 请输入另一个共享名称。"
+
+#: string "Share name {0} is reserved. Share names are case sensitive, alphanumeric values between 1 and 32 characters, and cannot contain spaces."
+msgid "ERROR_SHARE_NAME_RESERVED"
+msgstr "共享名称{0}已被保留。 共享名称包含 1 到 32 个字母或数字，区分大小写，并且不能包含空格。"
+
+#: string "Port number {0} invalid. Enter a valid port number between 1024-65535 or 80."
+msgid "ERROR_HTTP_PORTNUMBER"
+msgstr "端口号{0}无效。 请输入一个有效的端口号，号码可以是80或1024到65535之间的任一数字。"
+
+#: string "Port number {0} invalid. Enter a valid port number between 1024-65535 or 443."
+msgid "ERROR_HTTPS_PORTNUMBER"
+msgstr "端口号{0}无效。 请输入一个有效的端口号，号码可以是443或1024到65535之间的任一数字。"
+
+#: string "Duplicate port number."
+msgid "ERROR_DUPLICATE_HTTPS_PORTNUMBER"
+msgstr "端口号码重复。"
+
+
+#: string "Share has been renamed or deleted."
+msgid "ERROR_SHARE_RENAMED_DELETED"
+msgstr "共享已被重命名或删除。"
+
+#: string "Share names are case sensitive, alphanumeric values between 1 and 32 characters, and cannot contain spaces."
+msgid "ERROR_SHARE_NAME_INCORRECT_SYNTAX"
+msgstr "共享名称包含 1 到 32 个字母或数字，区分大小写，并且不能包含空格。"
+
+#: string "Share description must start with an alphanumeric value and may contain spaces or underscores without exceeding 256 characters."
+msgid "ERROR_SHARE_DESCRIPTION_INCORRECT_SYNTAX"
+msgstr "共享描述必须以字母或数字开头，可以包含空格和下划线，但总计不得超过 256 个字符。"
+
+#: string "Share username cannot be blank. Please enter a valid share username and try again."
+msgid "ERROR_SHARE_USERNAME_INCORRECT_SYNTAX"
+msgstr "共享用户名不能为空。 请输入一个有效的共享用户名，然后重试。"
+
+#: string "Device username cannot be blank. Please enter a valid device username and try again."
+msgid "ERROR_DEVICE_USERNAME_INCORRECT_SYNTAX"
+msgstr "设备用户名不能为空。 请输入一个有效的共享用户名，然后重试。"
+
+#: string "Unknown error while retrieving data. Ensure there are no network connectivity issues and try again."
+msgid "ERROR_GET_UNKNOWN_ERROR"
+msgstr "获取数据时发生未知错误。 请确保您的网络连接没有问题，然后重试。"
+
+#: string "The requested service is not allowed."
+msgid "ERROR_SERVICE_NOT_ALLOWED"
+msgstr "请求的服务是不允许的。"
+
+#: string "Cloud access is now available from your device."
+msgid "LABEL_STATUS_READY_EXPLANATION"
+msgstr "现在可从您的设备实现云访问。"
+
+#: string "For best performance, enable UPnP on your router to establish a direct connection."
+msgid "LABEL_STATUS_RELAYED_EXPLANATION"
+msgstr "为获得最佳性能，请在您的路由器上启用通用即插即用（ UPnP ），建立一个直接的连接。"
+
+#: string "Cannot establish remote access connection. Make sure you are connected to the Internet."
+msgid "LABEL_STATUS_FAILED_EXPLANATION"
+msgstr "无法建立远程访问连接。 请确保您已连接到互联网。"
+
+#: string "Trying to establish a remote access connection..."
+msgid "LABEL_STATUS_CONNECTING_EXPLANATION"
+msgstr "正在尝试建立远程访问连接..."
+
+#: string "Retrieving information..."
+msgid "LABEL_STATUS_RETRIEVING_INFORMATION"
+msgstr "正在获取信息..."
+
+#: string "Waiting"
+msgid "LABEL_CODE_WAITING"
+msgstr "正在等待"
+
+#: string "The activation code generated has expired. Please click Add Access to generate a new code."
+msgid "TOOLTIP_REMOTE_ACCESS_DAC_EXPIRED"
+msgstr "激活代码已过期。 请单击“添加访问“，生成一个新的代码。"
+
+#: string "Indicates that an activation code has been generated but has not yet been entered on your mobile or tablet device."
+msgid "TOOLTIP_REMOTE_ACCESS_DAC_WAITING"
+msgstr "表示一个激活代码已生成，但尚未从您的移动设备或平板设备中输入过。"
+
+#: string "Connected"
+msgid "LABEL_MOBILE_DEVICE_CONNECTED"
+msgstr "已连接"
+
+#: string "Manual"
+msgid "LABEL_MANUAL"
+msgstr "手动"
+
+#: string "Drive"
+msgid "LABEL_DRIVE"
+msgstr "驱动器"
+
+#: string "Failed diagnostic test."
+msgid "LABEL_FAILED_DIAGNOSTIC_TEST"
+msgstr "诊断检测失败。"
+
+#: string "Invalid NTP server value."
+msgid "ERROR_INVALID_NTP_SERVER"
+msgstr "NTP 服务器的值无效。"
+
+
+#: string "Sign Up"
+msgid "BUTTON_REGISTER"
+msgstr "注册"
+
+#: string "Share Access"
+msgid "PAGE_HEADER_SHARE_ACCESS"
+msgstr "共享访问"
+
+#: string "Steps:"
+msgid "LABEL_STEPS"
+msgstr "步骤:"
+
+# --- Tooltips Global  ---
+
+#: string "Enable NTP service to sync with your network to automatically update the date and time."
+msgid "CONTENT_SETTINGS_GENERAL_TOOLTIP_NTP"
+msgstr "启用 NTP 服务以同步您的网络并自动更新日期和时间。"
+
+#: string "Enables or disables cloud access to your device."
+msgid "CONTENT_SETTINGS_GENERAL_TOOLTIP_ENABLE_CLOUD_ACCESS"
+msgstr "启用或禁用对您的设备的云访问。"
+
+#: string "Displays the current status of your cloud access connection."
+msgid "CONTENT_SETTINGS_GENERAL_TOOLTIP_CLOUD_CONNECT_STATUS"
+msgstr "显示当前云访问连接的状态。"
+
+#: string "Turn on sleep mode to save energy. "
+msgid "CONTENT_SETTINGS_GENERAL_TOOLTIP_HDD_SLEEP"
+msgstr "打开睡眠模式以节省能源。"
+
+#: string "Sets the status of your drive's LED. "
+msgid "CONTENT_SETTINGS_GENERAL_TOOLTIP_LED_LIGHT"
+msgstr "设置您的驱动器 LED 指示灯的状态。"
+
+#: string "Enables Time Machine backups to this device."
+msgid "CONTENT_SETTINGS_GENERAL_TOOLTIP_ENABLE_TIME_MACHINE"
+msgstr "对该设备启用 Time Machine 备份。"
+
+#: string "Displays the current status of Internet connectivity."
+msgid "CONTENT_SETTINGS_NETWORK_TOOLTIP_INTERNET_ACCESS"
+msgstr "显示当前互联网连接的状态。"
+
+#: string "Select Static to manually enter IP address, netmask, and gateway information. Select DHCP (Dynamic Host Configuration Protocol) to have the network retrieve IP address assignments and other configuration information."
+msgid "CONTENT_SETTINGS_NETWORK_TOOLTIP_NETWORK_MODE"
+msgstr "选择”静态“，手动输入IP 地址、网络掩码和网关信息。 选择DHCP(动态主机配置协议)，让网络获取IP地址的分配和其他配置信息。"
+
+#: string "Enable SSH"
+msgid "CONTENT_SETTINGS_NETWORK_TOOLTIP_SSH"
+msgstr "启用 SSH"
+
+
+#: string "File Transfer Protocol (FTP) is a standard network protocol used to transfer data from one computer to another over the Internet."
+msgid "CONTENT_SETTINGS_NETWORK_TOOLTIP_FTP"
+msgstr "文件传输协议（ FTP ）是一个用来在互联网上两台计算机之间传输数据的标准网络协议。"
+
+
+#: string "(Windows only) Workgroups let devices in the same workgroup access one another. Each time you add a device to your network, assign it the same workgroup name."
+msgid "CONTENT_SETTINGS_NETWORK_TOOLTIP_WORKGROUP"
+msgstr "（仅限 Windows）工作组允许同一工作组中的设备相互访问。 每次将设备添加到网络时，都为其分配同样的工作组名称。"
+
+
+#: string "Enable content streaming to various devices." 
+msgid "CONTENT_SETTINGS_MEDIA_TOOLTIP_STREAMING"
+msgstr "为多个设备启用内容流。"
+
+#: string "Rebuilds the media database. Use only for troubleshooting when database corruption is suspected."
+msgid "CONTENT_SETTINGS_MEDIA_TOOLTIP_DLNA_DATABASE"
+msgstr "还原媒体数据库。 仅在怀疑数据库损坏时用来排除故障。"
+
+# new string 5-21-13
+#: string "Rebuilds the media database. Use only for troubleshooting when database corruption is suspected."
+msgid "CONTENT_SETTINGS_MEDIA_TOOLTIP_DLNA_RESCAN"
+msgstr "还原媒体数据库。 仅在怀疑数据库损坏时用来排除故障。"
+
+
+#: string "Enable the iTunes server to access your media through your iTunes player."
+msgid "CONTENT_SETTINGS_MEDIA_TOOLTIP_ITUNES_SERVER"
+msgstr "启用 iTunes 服务器，通过 iTunes 播放器来访问您的媒体。"
+
+#: string "Rescans all your content directories to find new media."
+msgid "CONTENT_SETTINGS_MEDIA_TOOLTIP_ITUNES_DATABASE"
+msgstr "重新扫描您的所有内容目录以查找新的媒体。"
+
+
+#: string "Quick Test (about 2 minutes) quickly scans and tests areas of your network subject to potential failures. Full Test, which may take several hours, scans your entire device to detect bad sectors."
+msgid "CONTENT_SETTINGS_DIAGNOSTICS_TOOLTIP_DIAGNOSTICS_TEST"
+msgstr "快速检测(约2分钟)可以快速扫描并检测您的网络中存在潜在故障的部分。 完全检测可能需要几个小时才能完成，它可以扫描您的整个设备，检测坏扇区。"
+
+#: string "Create a backup prior to using any restore option. Use System only to restore system data to the originial factory settings. Quick Restore erases content and system info but can be recovered with recovery software; Full Restore permanently deletes all content and system info, and cannot be recovered. Be sure to create a backup prior to using any restore option."
+msgid "CONTENT_SETTINGS_DIAGNOSTICS_TOOLTIP_FACTORY_RESTORE"
+msgstr "使用任何恢复选项前，先创建一个备份。 使用”仅系统“选项，将系统数据恢复到原来的出厂设置。 ”快速恢复“将清除内容和系统信息，但可以使用恢复软件恢复;”全面恢复“会永久删除所有内容和系统信息，并且无法恢复。 使用任何恢复选项前，一定要先创建一个备份。"
+
+#: string "Save current configuration settings or import stored configuration settings."
+msgid "CONTENT_SETTINGS_DIAGNOSTICS_TOOLTIP_SYSTEM_CONFIG"
+msgstr "保存当前的配置设置或导入保存的配置设置。"
+
+
+#: string "Automatically generate a diagnostic system report. Once complete, you will be directed to our customer support form with your diagnostic report automatically attached."
+msgid "CONTENT_SETTINGS_DIAGNOSTICS_TOOLTIP_AUTOMATED_SUPPORT"
+msgstr "自动生成一份诊断系统报告。 一旦完成，您将被引导至我们的客户支持表单，您的诊断报告将自动附上。"
+
+
+#: string "Create a system report and save it to your drive to help identify and resolve network problems."
+msgid "CONTENT_SETTINGS_DIAGNOSTICS_TOOLTIP_SYSTEM_REPORT"
+msgstr "创建一份系统报告并将其保存到您的驱动器中，这有助于识别和解决网络问题。"
+
+#: string "Shut down or reboot your device."
+msgid "CONTENT_SETTINGS_DIAGNOSTICS_TOOLTIP_REBOOT_SHUTDOWN"
+msgstr "关闭或重新启动设备。"
+
+#: string "Send system notifications to up to 5 email addresses."
+msgid "CONTENT_SETTINGS_NOTIFICATION_TOOLTIP_EMAIL"
+msgstr "发送系统通知，最多发给 5 个电子邮件地址。"
+
+#: string "Enable automatic firmware updates."
+msgid "CONTENT_SETTINGS_UPDATE_TOOLTIP_ENABLE_AUTO"
+msgstr "启用自动固件更新。"
+
+#: string "Check for available firmware updates."
+msgid "CONTENT_SETTINGS_UPDATE_TOOLTIP_CHECK_FOR_UPDATE"
+msgstr "检查是否有可用的固件更新。"
+
+#: string "Update firmware from a file."
+msgid "CONTENT_SETTINGS_UPDATE_TOOLTIP_UPDATE_FROM_FILE"
+msgstr "从文件更新固件。"
+
+#: string "Automatic: Establishes a direct connection between your device and the router using uPnP. If the connection cannot open the ports on your router, a relay connection is established.Manual: Establishes a connection through the two selected ports. If either port is unavailable, a relay connection is established. Manual router configuration is required.Windows XP Compatibility: Establishes a connection through ports 80 and 443. If these ports are unavailable, a relay connection is established. Required for Windows XP."
+msgid "CONTENT_SETTINGS_DIALOG_TOOLTIP_CONNECTIVITY"
+msgstr "自动: 使用UPnP，在您的设备和路由器之间直接建立连接。 如果连接无法打开的路由器的端口，将建立一个中继连接。手动操作: 通过所选的两个端口建立一个连接。 如果其中一个端口不可用，则建立中继连接。 必需手动配置路由器。Windows XP兼容性: 通过端口80和443建立一个连接。 如果这些端口不可用，则建立中继连接。 Windows XP需要。"
+
+#: string "Rebuild your content database. Use only for troubleshooting when database corruption is suspected."
+msgid "CONTENT_SETTINGS_DIALOG_TOOLTIP_WD2GO_DATABASE"
+msgstr "还原您的内容数据库。 仅在怀疑数据库损坏时用来排除故障。"
+
+
+#: string "The numeric value assigned to each device on your network."
+msgid "CONTENT_DIALOG_SETTINGS_TOOLTIP_NETWORK_MODE_IP"
+msgstr "分配给您网络上的每一个设备的数字形式的值。"
+
+#: string "Screens out (masks) the network portion of an IP address so that only the host portion of the IP address remains."
+msgid "CONTENT_DIALOG_SETTINGS_TOOLTIP_NETWORK_MODE_NETMASK"
+msgstr "屏蔽（掩盖） IP 地址的网络部分，因此只保留 IP 地址的主机部分。"
+
+#: string "A network point that acts as an entrance to another network."
+msgid "CONTENT_DIALOG_SETTINGS_TOOLTIP_NETWORK_MODE_GATEWAY"
+msgstr "一个网络点，作为另一个网络的入口。"
+
+#: string "Enter a domain name."
+msgid "CONTENT_DIALOG_SETTINGS_TOOLTIP_NETWORK_MODE_DNS"
+msgstr "输入一个域名。"
+
+#: string "Set the schedule for the safepoint update."
+msgid "CONTENT_SAFEPOINTS_TOOLTIP_AUTO_UPDATE"
+msgstr "设置 safepoint 更新计划。"
+
+#: string "Set the schedule for the safepoint update."
+msgid "CONTENT_SAFEPOINTS_DIALOG_TOOLTIP_AUTO_UPDATE"
+msgstr "设置 safepoint 更新计划。"
+
+#: string "Create your safepoint now or later."
+msgid "CONTENT_SAFEPOINTS_DIALOG_TOOLTIP_CREATE_NOW_LATER"
+msgstr "立即创建或以后创建 safepoint。"
+
+#: string "2013 Western Digital Corporation. All Rights Reserved"
+msgid "GLOB_NAV_HELP_STRING_COPYRIGHT_2013_WD_ALL_RIGHT_RESERVED"
+msgstr "2013西部数字公司。 保留所有权利"
+
+
+
+# --- Kathleen's new bumpers 4/16 --
+
+#: string "Help"
+msgid "CONTENT_GENERIC_BUMPER_TITLE_HELP_TOPICS"
+msgstr "帮助"
+
+#: string "Do one of the following:"
+msgid "CONTENT_GENERIC_STRING_DO_ONE_OF_THE_FOLLOWING"
+msgstr "请执行以下操作之一:"
+
+#: string "Shares are content storage areas—like folders. You can create single or multiple shares on your storage device and control access to each of them."
+msgid "CONTENT_SHARES_STRING_ABOUT_SHARES_TEXT"
+msgstr "共享是存储区内容的区域——好比文件夹。 您可以在存储设备上创建一个或多个共享，并控制对每个共享的访问。"
+
+#: string "Select a share from the list on the left"
+msgid "CONTENT_SHARES_STRING_MANAGE_SHARES_1"
+msgstr "从左侧的列表中选择一个共享"
+
+#: string "Click the Add Share button below the list"
+msgid "CONTENT_SHARES_STRING_MANAGE_SHARES_2"
+msgstr "单击列表下方的“添加共享”按钮"
+
+# Edit 5/8/13 change to Managing Shares 
+#: string "Managing Shares"
+msgid "CONTENT_SHARES_STRING_ABOUT_SHARES"
+msgstr "管理共享"
+
+#: string "Creating a Share"
+msgid "CONTENT_SHARES_STRING_CREATING_A_SHARE"
+msgstr "创建共享"
+
+#: string "Changing Access to a Share"
+msgid "CONTENT_GENERIC_STRING_CHANGING_USER_ACCESS"
+msgstr "变更对共享的访问"
+
+# Edit WD2go.com to WDMyCloud.com
+#: string "Control access to your personal cloud content by setting up user accounts and levels of access. Each user must have a WDMyCloud.com login."
+msgid "CONTENT_USERS_STRING_ABOUT_USERS_TEXT"
+msgstr "通过设置用户帐户和访问级别，控制对您的个人云内容的访问。 每个用户必须有一个 WDMyCloud.com 登录账号。"
+
+#: string "Select a user from the list on the left"
+msgid "CONTENT_USERS_STRING_MANAGE_USERS_1"
+msgstr "从左侧的列表中选择一个用户"
+
+#: string "Click the Add User button below the list"
+msgid "CONTENT_USERS_STRING_MANAGE_USERS_2"
+msgstr "单击列表下方的“添加用户”按钮"
+
+# edit 5/7/13 from About Users to Managing Users
+#: string "Managing Users"
+msgid "CONTENT_USERS_STRING_ABOUT_USERS"
+msgstr "管理用户"
+
+#: string "Adding a User"
+msgid "CONTENT_USERS_STRING_ADDING_A_USER"
+msgstr "添加一个用户"
+
+# Edit: from WD2go.com to WDMyCloud.com
+#: string "Set up your cloud for remote access. For every user you want on your cloud, you'll need to get them a WDMyCloud.com login, and they'll need to download the WD mobile apps. Once you've got that covered, you're ready to go!"
+msgid "CONTENT_CLOUD_STRING_ABOUT_CLOUDS_TEXT"
+msgstr "对您的云进行远程访问设置。 对于您想要纳入云中的用户，你需要给他们每人一个 WDMyCloud.com 登录账号，然后他们需要下载 WD 移动应用程序。 一旦完成这一步，就可以开始使用啦!"
+
+#: string "Download the mobile apps"
+msgid "CONTENT_USERS_STRING_MANAGE_CLOUD_ACCESS_1"
+msgstr "下载移动应用程序"
+
+#: string " from the WD Learning Center."
+msgid "CONTENT_USERS_STRING_MANAGE_CLOUD_ACCESS_2"
+msgstr " 来自 WD 学习中心。"
+
+# MOravia, please leave this as-is. WD will change to correct address
+#: string "(http://setup.wd2go.com)"
+msgid "CONTENT_USERS_STRING_MANAGE_CLOUD_ACCESS_3"
+msgstr "（ http://setup.wd2go.com ）"
+
+#: string "Managing Cloud Access"
+msgid "CONTENT_USERS_STRING_ABOUT_CLOUD_ACCESS"
+msgstr "管理云访问"
+
+#: string "Remote Access Basics"
+msgid "CONTENT_USERS_STRING_CLOUD_ACCESS_BASICS"
+msgstr "关于远程访问的基本知识"
+
+#: string "Setting Up Remote Access"
+msgid "CONTENT_GENERIC_STRING_SETTING_UP_CLOUD_ACCESS"
+msgstr "设置云访问"
+
+#: string "A safepoint is a snapshot of the data on your drive at a specific point in time. In the unlikely event your WD My Cloud fails, you can restore your content from a safepoint."
+msgid "CONTENT_SAFEPOINT_STRING_ABOUT_SAFEPOINTS_TEXT"
+msgstr "Safepoint 是您的驱动器上的数据在某个特定时间点的一份快照。 万一您的 WD My Cloud 出现故障（这种情况不太可能发生），您可以从一个 safepoint 中恢复您的内容。"
+
+#: string "Select a safepoint from the list on the left"
+msgid "CONTENT_USERS_STRING_MANAGE_SAFEPOINTS_1"
+msgstr "从左侧的列表中选择一个 safepoint。"
+
+# Edit 5/10/13 Changed Add to Create in string 
+#: string "Click the Create Safepoint icon below the list"
+msgid "CONTENT_USERS_STRING_MANAGE_SAFEPOINTS_2"
+msgstr "单击列表下方的“创建 Safepoint”按钮"
+
+#: string "Click Start Recovery to recover a previously saved safepoint"
+msgid "CONTENT_USERS_STRING_MANAGE_SAFEPOINTS_3"
+msgstr "单击“开始恢复&quot;，从以前保存的 safepoint 中恢复数据。"
+
+#: string "Managing Safepoints"
+msgid "CONTENT_USERS_STRING_ABOUT_SAFEPOINTS"
+msgstr "管理 Safepoint"
+
+#: string "Creating a Safepoint"
+msgid "CONTENT_USERS_STRING_CREATING_A_SAFEPOINT"
+msgstr "创建 Safepoint"
+
+#: string "Restoring Data with a Safepoint"
+msgid "CONTENT_GENERIC_STRING_RESTORE_WITH_SAFEPOINT"
+msgstr "使用 Safepoint 来恢复内容"
+
+# --- Error Section  ---
+
+
+#: string "Unknown error"
+msgid "ERROR_ID_0"
+msgstr "未知错误"
+
+#: string "Device ID not found."
+msgid "ERROR_ID_10"
+msgstr "未找到设备 ID 。"
+
+#: string "Device is not registered."
+msgid "ERROR_ID_11"
+msgstr "设备未注册。"
+
+#: string "Failed to register device."
+msgid "ERROR_ID_12"
+msgstr "未能注册设备。"
+
+#: string "Failed to update device."
+msgid "ERROR_ID_13"
+msgstr "未能更新设备。"
+
+#: string "Device user ID missing."
+msgid "ERROR_ID_14"
+msgstr "设备用户 ID 缺失。"
+
+#: string "Device user not found."
+msgid "ERROR_ID_15"
+msgstr "未找到设备用户。"
+
+#: string "Device user failed."
+msgid "ERROR_ID_16"
+msgstr "设备用户失败。"
+
+#: string "Failed to create directory."
+msgid "ERROR_ID_17"
+msgstr "未能创建目录。"
+
+#: string "Failed to delete directory."
+msgid "ERROR_ID_18"
+msgstr "未能删除目录。"
+
+#: string "Directory name missing."
+msgid "ERROR_ID_19"
+msgstr "目录名称缺失。"
+
+#: string "Directory does not exist."
+msgid "ERROR_ID_20"
+msgstr "目录不存在。"
+
+#: string "Directory already exists."
+msgid "ERROR_ID_21"
+msgstr "目录已存在。"
+
+#: string "Directory not empty."
+msgid "ERROR_ID_22"
+msgstr "目录不为空。"
+
+#: string "Error code not found."
+msgid "ERROR_ID_23"
+msgstr "未找到错误代码。"
+
+#: string "Error name not found."
+msgid "ERROR_ID_24"
+msgstr "未找到错误名称。"
+
+#: string "File already exists."
+msgid "ERROR_ID_25"
+msgstr "文件已存在。"
+
+#: string "File not found."
+msgid "ERROR_ID_26"
+msgstr "未找到文件。"
+
+#: string "Failed to upload file."
+msgid "ERROR_ID_27"
+msgstr "未能上传文件。"
+
+#: string "Failed to get status."
+msgid "ERROR_ID_28"
+msgstr "未能获取状态。"
+
+#: string "Failed to get user."
+msgid "ERROR_ID_29"
+msgstr "未能获取用户。"
+
+#: string "Invalid device user ID or authorization code."
+msgid "ERROR_ID_30"
+msgstr "设备用户 ID 或授权代码无效。"
+
+#: string "Invalid login."
+msgid "ERROR_ID_31"
+msgstr "登录信息无效。"
+
+#: string "Invalid username or password."
+msgid "ERROR_ID_32"
+msgstr "用户名或密码无效。"
+
+#: string "Invalid parameter."
+msgid "ERROR_ID_33"
+msgstr "参数无效。"
+
+#: string "Invalid path"
+msgid "ERROR_ID_34"
+msgstr "路径无效"
+
+#: string "Failed to move file."
+msgid "ERROR_ID_35"
+msgstr "未能移动文件。"
+
+#: string "Failed to move directory."
+msgid "ERROR_ID_36"
+msgstr "移动文件夹失败。"
+
+#: string "New path already exists."
+msgid "ERROR_ID_37"
+msgstr "新路径已存在。"
+
+#: string "New path invalid."
+msgid "ERROR_ID_38"
+msgstr "新路径无效。"
+
+#: string "New path missing."
+msgid "ERROR_ID_39"
+msgstr "新路径缺失。"
+
+#: string "New share is missing."
+msgid "ERROR_ID_40"
+msgstr "新共享缺失。"
+
+#: string "Parameter is missing."
+msgid "ERROR_ID_41"
+msgstr "参数缺失。"
+
+#: string "Path is not a directory."
+msgid "ERROR_ID_42"
+msgstr "路径不是一个目录。"
+
+#: string "Path is not a file."
+msgid "ERROR_ID_43"
+msgstr "路径不是一个文件。"
+
+#: string "Path not found."
+msgid "ERROR_ID_44"
+msgstr "未找到路径。"
+
+#: string "Path not valid."
+msgid "ERROR_ID_45"
+msgstr "路径无效。"
+
+#: string "Share is inaccessible."
+msgid "ERROR_ID_46"
+msgstr "无法访问共享。"
+
+#: string "Share name is missing."
+msgid "ERROR_ID_47"
+msgstr "共享名称缺失。"
+
+#: string "Failed to create user."
+msgid "ERROR_ID_48"
+msgstr "未能创建用户。"
+
+#: string "Failed to delete user."
+msgid "ERROR_ID_49"
+msgstr "未能删除用户。"
+
+#: string "Parameter user_id is missing."
+msgid "ERROR_ID_50"
+msgstr "用户 ID 参数缺失。"
+
+#: string "Parameter user_id or username is missing."
+msgid "ERROR_ID_51"
+msgstr "用户 ID 或用户名参数缺失。"
+
+#: string "User ID not found."
+msgid "ERROR_ID_52"
+msgstr "未找到设备 ID 。"
+
+#: string "Failed to update user."
+msgid "ERROR_ID_53"
+msgstr "未能更新用户。"
+
+#: string "User name already exists."
+msgid "ERROR_ID_54"
+msgstr "用户名字已存在。"
+
+#: string "Parameter username is missing."
+msgid "ERROR_ID_55"
+msgstr "用户名参数缺失。"
+
+#: string "Username not found."
+msgid "ERROR_ID_56"
+msgstr "未找到用户名。"
+
+#: string "User not authorized."
+msgid "ERROR_ID_57"
+msgstr "用户未获授权。"
+
+#: string "User not logged in."
+msgid "ERROR_ID_58"
+msgstr "用户未登录。"
+
+#: string "Failed to verify remote user."
+msgid "ERROR_ID_59"
+msgstr "未能验证远程用户。"
+
+#: string "Remote login is not allowed."
+msgid "ERROR_ID_60"
+msgstr "不允许远程登录。"
+
+#: string "Failed to get file contents."
+msgid "ERROR_ID_61"
+msgstr "未能获取文件内容。"
+
+#: string "New share not found."
+msgid "ERROR_ID_62"
+msgstr "未找到新的共享。"
+
+#: string "Start or end out of range."
+msgid "ERROR_ID_63"
+msgstr "开始或结束超出范围。"
+
+#: string "Failed to append file."
+msgid "ERROR_ID_64"
+msgstr "未能附加文件。"
+
+#: string "Failed to get album item contents."
+msgid "ERROR_ID_65"
+msgstr "未能获取相册内容。"
+
+#: string "Invalid device user ID."
+msgid "ERROR_ID_66"
+msgstr "无效的设备用户 ID 。"
+
+#: string "Album not found."
+msgid "ERROR_ID_67"
+msgstr "未找到相册。"
+
+#: string "Failed to update device user."
+msgid "ERROR_ID_68"
+msgstr "未能更新设备用户。"
+
+#: string "No share access."
+msgid "ERROR_ID_69"
+msgstr "无法访问共享。"
+
+#: string "Failed to verify remote user."
+msgid "ERROR_ID_70"
+msgstr "未能验证远程用户。"
+
+#: string "Invalid character."
+msgid "ERROR_ID_71"
+msgstr "无效的字符。"
+
+#: string "Failed to create device."
+msgid "ERROR_ID_72"
+msgstr "未能创建设备。"
+
+#: string "Failed to create device user."
+msgid "ERROR_ID_73"
+msgstr "未能创建设备用户。"
+
+#: string "Failed to get metadb info."
+msgid "ERROR_ID_74"
+msgstr "未能获取元数据库信息。"
+
+#: string "Share not found."
+msgid "ERROR_ID_75"
+msgstr "未找到共享。"
+
+#: string "Invalid share."
+msgid "ERROR_ID_76"
+msgstr "共享无效。"
+
+#: string "Failed to delete file."
+msgid "ERROR_ID_77"
+msgstr "未能删除文件。"
+
+#: string "Failed to get user."
+msgid "ERROR_ID_78"
+msgstr "未能获取用户。"
+
+#: string "Failed to add user to share access list."
+msgid "ERROR_ID_79"
+msgstr "未能在共享访问列表上添加用户。"
+
+#: string "Failed to update share access list."
+msgid "ERROR_ID_80"
+msgstr "未能更新共享访问列表。"
+
+#: string "No volumes found."
+msgid "ERROR_ID_81"
+msgstr "未找到卷。"
+
+#: string "Volume not found."
+msgid "ERROR_ID_82"
+msgstr "未找到卷。"
+
+#: string "Failed to create volume."
+msgid "ERROR_ID_83"
+msgstr "未能创建卷。"
+
+#: string "Volume already exists."
+msgid "ERROR_ID_84"
+msgstr "卷已存在。"
+
+#: string "Volume information missing."
+msgid "ERROR_ID_85"
+msgstr "卷信息缺失。"
+
+#: string "Failed to create volume share."
+msgid "ERROR_ID_86"
+msgstr "未能创建卷共享。"
+
+#: string "Failed to update volume share."
+msgid "ERROR_ID_87"
+msgstr "未能更新卷共享。"
+
+#: string "Failed to delete volume share."
+msgid "ERROR_ID_88"
+msgstr "未能删除卷共享。"
+
+#: string "Parameter is conflicting."
+msgid "ERROR_ID_89"
+msgstr "参数冲突。"
+
+#: string "User not found."
+msgid "ERROR_ID_90"
+msgstr "未找到用户。"
+
+#: string "Source file missing."
+msgid "ERROR_ID_91"
+msgstr "源文件缺失。"
+
+#: string "File path missing."
+msgid "ERROR_ID_92"
+msgstr "文件路径缺失。"
+
+#: string "Invalid parameter value."
+msgid "ERROR_ID_93"
+msgstr "参数无效。"
+
+#: string "Invalid start time."
+msgid "ERROR_ID_94"
+msgstr "起始时间无效。"
+
+#: string "Device name missing."
+msgid "ERROR_ID_95"
+msgstr "设备名称缺失。"
+
+#: string "Invalid modified time."
+msgid "ERROR_ID_96"
+msgstr "修改后的时间无效。"
+
+#: string "Failed to update modified time."
+msgid "ERROR_ID_97"
+msgstr "未能更新修改时间。"
+
+#: string "No matching shares were found."
+msgid "ERROR_ID_98"
+msgstr "没有找到匹配的共享。"
+
+#: string "Share function failed."
+msgid "ERROR_ID_99"
+msgstr "共享运行失败。"
+
+#: string "Operation is forbidden."
+msgid "ERROR_ID_100"
+msgstr "已禁用此操作。"
+
+# Edit - error in msgstr - fixed 5-21 - dms
+#: string "Failed to create share; share name already exists."
+msgid "ERROR_ID_101"
+msgstr "无法创建共享；共享名称已存在。"
+
+#: string "Failed to create share."
+msgid "ERROR_ID_102"
+msgstr "创建共享失败。"
+
+#: string "Failed to update share."
+msgid "ERROR_ID_103"
+msgstr "更新共享失败。"
+
+#: string "Failed to delete share."
+msgid "ERROR_ID_104"
+msgstr "删除共享失败。"
+
+#: string "Invalid share name."
+msgid "ERROR_ID_105"
+msgstr "共享名称无效。"
+
+#: string "Share access already exists."
+msgid "ERROR_ID_106"
+msgstr "共享访问已存在。"
+
+#: string "Share already exists."
+msgid "ERROR_ID_107"
+msgstr "共享已存在。"
+
+#: string "Share access not found."
+msgid "ERROR_ID_108"
+msgstr "未找到共享访问。"
+
+#: string "New directory not found."
+msgid "ERROR_ID_109"
+msgstr "未找到新目录。"
+
+#: string "Remote account conflict."
+msgid "ERROR_ID_110"
+msgstr "远程帐户冲突。"
+
+#: string "Failed to get SSL certificate from central server."
+msgid "ERROR_ID_111"
+msgstr "无法从中央服务器获取 SSL 证书。"
+
+#: string "Unauthenticated login."
+msgid "ERROR_ID_112"
+msgstr "登录未完成身份验证。"
+
+#: string "Album access not found."
+msgid "ERROR_ID_113"
+msgstr "未找到相册访问。"
+
+#: string "Album access already exists."
+msgid "ERROR_ID_114"
+msgstr "相册访问已存在。"
+
+#: string "Failed to delete user share access."
+msgid "ERROR_ID_115"
+msgstr "未能删除用户共享。"
+
+#: string "Failed to delete device users."
+msgid "ERROR_ID_116"
+msgstr "删除设备用户失败。"
+
+#: string "Failed to delete low-level OS user."
+msgid "ERROR_ID_117"
+msgstr "删除低级操作系统用户失败。"
+
+#: string "Device name is invalid."
+msgid "ERROR_ID_118"
+msgstr "设备名称无效。"
+
+#: string "Album item not found."
+msgid "ERROR_ID_119"
+msgstr "未找到相册项目。"
+
+#: string "No albums found."
+msgid "ERROR_ID_120"
+msgstr "未找到相册。"
+
+#: string "No album items found."
+msgid "ERROR_ID_121"
+msgstr "未找到相册。"
+
+#: string "Album ID is missing."
+msgid "ERROR_ID_122"
+msgstr "相册 ID 丢失。"
+
+#: string "Invalid album name."
+msgid "ERROR_ID_123"
+msgstr "相册名称无效。"
+
+#: string "Album already exists."
+msgid "ERROR_ID_124"
+msgstr "相册已存在。"
+
+#: string "Image library not installed."
+msgid "ERROR_ID_125"
+msgstr "映像库未安装。"
+
+#: string "Database access failed."
+msgid "ERROR_ID_126"
+msgstr "数据库访问失败。"
+
+#: string "Deleting the Public share is forbidden."
+msgid "ERROR_ID_127"
+msgstr "禁止删除公用共享。"
+
+#: string "Renaming the Public share is forbidden."
+msgid "ERROR_ID_128"
+msgstr "禁止重命名公用共享。"
+
+#: string "Failed to copy file."
+msgid "ERROR_ID_129"
+msgstr "复制文件失败。"
+
+#: string "Failed to copy directory."
+msgid "ERROR_ID_130"
+msgstr "复制目录失败。"
+
+#: string "File list is empty."
+msgid "ERROR_ID_131"
+msgstr "文件列表为空。"
+
+#: string "Both default ports and manual ports true."
+msgid "ERROR_ID_132"
+msgstr "默认端口和手动设置的断空都为真。"
+
+#: string "No results found."
+msgid "ERROR_ID_133"
+msgstr "未找到结果。"
+
+#: string "Album item already exists."
+msgid "ERROR_ID_134"
+msgstr "相册项目已存在。"
+
+#: string "Social Network is missing."
+msgid "ERROR_ID_135"
+msgstr "社交网络缺失。"
+
+#: string "Social Network not found."
+msgid "ERROR_ID_136"
+msgstr "未找到社交网络。"
+
+#: string "Social Network expired."
+msgid "ERROR_ID_137"
+msgstr "社交网络过期。"
+
+#: string "Social Network failed."
+msgid "ERROR_ID_138"
+msgstr "社交网络出现故障。"
+
+#: string "Group not found."
+msgid "ERROR_ID_139"
+msgstr "未找到小组。"
+
+#: string "EULA not accepted."
+msgid "ERROR_ID_140"
+msgstr "EULA 未被接受。"
+
+#: string "EULA bad request."
+msgid "ERROR_ID_141"
+msgstr "错误的 WULA 请求。"
+
+#: string "EULA internal server error."
+msgid "ERROR_ID_142"
+msgstr "EULA 内部服务器错误。"
+
+#: string "Device not registered."
+msgid "ERROR_ID_143"
+msgstr "设备未注册。"
+
+#: string "Device registration bad request."
+msgid "ERROR_ID_144"
+msgstr "设备注册请求错误。"
+
+#: string "Device internal server error."
+msgid "ERROR_ID_145"
+msgstr "设备内部服务器错误。"
+
+#: string "System configuration internal server error."
+msgid "ERROR_ID_146"
+msgstr "系统配置内部服务器错误。"
+
+#: string "System configuration bad request."
+msgid "ERROR_ID_147"
+msgstr "系统配置请求错误。"
+
+#: string "Device description bad request."
+msgid "ERROR_ID_148"
+msgstr "设备描述请求错误。"
+
+#: string "Device description internal server error."
+msgid "ERROR_ID_149"
+msgstr "设备描述内部服务器错误。"
+
+#: string "Media server configuration internal server error."
+msgid "ERROR_ID_150"
+msgstr "媒体服务器配置内部错误。"
+
+#: string "Media server configuration bad request."
+msgid "ERROR_ID_151"
+msgstr "媒体服务器配置请求错误。"
+
+#: string "Media server blocked list internal server error."
+msgid "ERROR_ID_152"
+msgstr "媒体服务器阻止列表内部服务器错误。"
+
+#: string "Media server blocked list bad request."
+msgid "ERROR_ID_153"
+msgstr "媒体服务器阻止列表请求错误。"
+
+#: string "Disk status internal server error."
+msgid "ERROR_ID_154"
+msgstr "磁盘状态内部服务器错误。"
+
+#: string "HDD standby time internal server error."
+msgid "ERROR_ID_155"
+msgstr "硬盘待机时间内部服务器错误。"
+
+#: string "HDD standby time bad request."
+msgid "ERROR_ID_156"
+msgstr "硬盘待机时间请求错误。"
+
+#: string "Smart test bad request."
+msgid "ERROR_ID_157"
+msgstr "智能测试请求错误。"
+
+#: string "Smart test internal server error."
+msgid "ERROR_ID_158"
+msgstr "智能测试内部服务器错误。"
+
+#: string "Media server connected list internal server error."
+msgid "ERROR_ID_159"
+msgstr "媒体服务器连接列表内部服务器错误。"
+
+#: string "Media server connected list bad request."
+msgid "ERROR_ID_160"
+msgstr "媒体服务器l连接列表请求错误。"
+
+#: string "Media server connected list not found."
+msgid "ERROR_ID_161"
+msgstr "未找到媒体服务器l连接列表。"
+
+#: string "Media server database internal server error."
+msgid "ERROR_ID_162"
+msgstr "媒体服务器数据库内部服务器错误。"
+
+#: string "Media server database bad request."
+msgid "ERROR_ID_163"
+msgstr "媒体服务器数据库请求错误。"
+
+#: string "Copy status internal server error."
+msgid "ERROR_ID_164"
+msgstr "复制状态内部服务器错误。"
+
+#: string "Storage usage by share internal server error."
+msgid "ERROR_ID_165"
+msgstr "各个共享对存储空间使用情况内部服务器错误。"
+
+#: string "Storage usage internal server error."
+msgid "ERROR_ID_166"
+msgstr "存储空间使用情况内部服务器错误。"
+
+#: string "Shutdown bad request."
+msgid "ERROR_ID_167"
+msgstr "关机请求错误。"
+
+#: string "Shutdown internal server error."
+msgid "ERROR_ID_168"
+msgstr "关机内部服务器错误。"
+
+#: string "System factory restore bad request."
+msgid "ERROR_ID_169"
+msgstr "系统出厂还原请求错误。"
+
+#: string "System factory restore internal server error."
+msgid "ERROR_ID_170"
+msgstr "系统出厂还原内部服务器错误。"
+
+#: string "System information internal server error."
+msgid "ERROR_ID_171"
+msgstr "系统信息内部服务器错误。"
+
+#: string "System state internal server error."
+msgid "ERROR_ID_172"
+msgstr "系统状态内部服务器错误。"
+
+#: string "Firmware info internal server error."
+msgid "ERROR_ID_173"
+msgstr "固件信息内部服务器错误。"
+
+#: string "Firmware info bad request."
+msgid "ERROR_ID_174"
+msgstr "固件信息请求错误。"
+
+#: string "Firmware update configuration bad request."
+msgid "ERROR_ID_175"
+msgstr "固件更新配置请求错误。"
+
+#: string "Firmware update configuration internal server error."
+msgid "ERROR_ID_176"
+msgstr "固件更新配置内部服务器错误。"
+
+#: string "Firmware update bad request."
+msgid "ERROR_ID_177"
+msgstr "固件更新请求错误。"
+
+#: string "Firmware update internal server error."
+msgid "ERROR_ID_178"
+msgstr "固件更新配置内部服务器错误。"
+
+#: string "Network not found. Check your SSID and/or re-scan the networks."
+msgid "ERROR_ID_179"
+msgstr "未找到网络。 检查您的SSID和/或重新扫描网络。"
+
+#: string "HW or driver errors."
+msgid "ERROR_ID_180"
+msgstr "硬件或驱动程序错误。"
+
+#: string "User not authorized."
+msgid "ERROR_ID_181"
+msgstr "用户未获授权。"
+
+#: string "Not found"
+msgid "ERROR_ID_182"
+msgstr "未找到"
+
+#: string "Owner configuration bad request."
+msgid "ERROR_ID_183"
+msgstr "所有者配置请求错误。"
+
+#: string "Owner configuration internal server error."
+msgid "ERROR_ID_184"
+msgstr "所有者配置内部服务器错误。"
+
+#: string "Incorrect password."
+msgid "ERROR_ID_185"
+msgstr "密码不正确。"
+
+#: string "WPS-PBC session overlap."
+msgid "ERROR_ID_186"
+msgstr "WPS-PBC 会话重叠。"
+
+#: string "Firmware update bad request."
+msgid "ERROR_ID_187"
+msgstr "固件更新请求错误。"
+
+#: string "Firmware update internal server error."
+msgid "ERROR_ID_188"
+msgstr "固件更新配置内部服务器错误。"
+
+#: string "Network not found. Check your SSID and/or re-scan the networks."
+msgid "ERROR_ID_189"
+msgstr "未找到网络。 检查您的SSID和/或重新扫描网络。"
+
+#: string "Failed getting IP address."
+msgid "ERROR_ID_190"
+msgstr "获取 IP 地址失败。"
+
+#: string "Drive not found."
+msgid "ERROR_ID_191"
+msgstr "未找到驱动器。"
+
+#: string "Drive handle missing."
+msgid "ERROR_ID_192"
+msgstr "驱动器手柄缺失。"
+
+#: string "Password missing."
+msgid "ERROR_ID_193"
+msgstr "密码缺失。"
+
+#: string "Invalid save value."
+msgid "ERROR_ID_194"
+msgstr "保存参数无效。"
+
+#: string "Drive not locked."
+msgid "ERROR_ID_195"
+msgstr "驱动器未锁定。"
+
+#: string "Unlock failed"
+msgid "ERROR_ID_196"
+msgstr "解锁失败"
+
+#: string "Unlock failed - unlock attempts exceeded."
+msgid "ERROR_ID_197"
+msgstr "解锁失败-超过尝试解锁次数限制。"
+
+#: string "Invalid encoding value."
+msgid "ERROR_ID_198"
+msgstr "编码值无效。"
+
+#: string "Unsupported request."
+msgid "ERROR_ID_199"
+msgstr "不支持此请求。"
+
+#: string "Invalid standby timer value."
+msgid "ERROR_ID_200"
+msgstr "待机计时器的值无效。"
+
+#: string "Standby timer is unsupported."
+msgid "ERROR_ID_201"
+msgstr "不支持该待机计时器。"
+
+#: string "Invalid backup enabled parameter value."
+msgid "ERROR_ID_202"
+msgstr "备份启用参数的值无效。"
+
+#: string "Invalid backup size limit parameter value."
+msgid "ERROR_ID_203"
+msgstr "备份大小参数的值无效。"
+
+#: string "Unable to create Time Machine directory."
+msgid "ERROR_ID_204"
+msgstr "不能创建 Time Machine 目录。"
+
+#: string "Unable to configure Time Machine directory."
+msgid "ERROR_ID_205"
+msgstr "不能配置 Time Machine 目录。"
+
+#: string "Backup share does not exist."
+msgid "ERROR_ID_206"
+msgstr "备份共享不存在。"
+
+#: string "Multiple interfaces on the same network."
+msgid "ERROR_ID_207"
+msgstr "同一个网络上存在多个接口。"
+
+#: string "Internal error"
+msgid "ERROR_ID_208"
+msgstr "内部错误"
+
+#: string "Crawler is not running"
+msgid "ERROR_ID_209"
+msgstr "爬虫程序未运行"
+
+#: string "APC write failure"
+msgid "ERROR_ID_210"
+msgstr "APC 写入失败。"
+
+#: string "Failed to get jobs"
+msgid "ERROR_ID_211"
+msgstr "未能获取作业。"
+
+#: string "Failed to create jobs"
+msgid "ERROR_ID_212"
+msgstr "未能创建作业。"
+
+#: string "Failed to delete jobs"
+msgid "ERROR_ID_213"
+msgstr "未能删除作业。"
+
+#: string "Failed to update jobs"
+msgid "ERROR_ID_214"
+msgstr "未能更新作业。"
+
+#: string "Jobs ID missing"
+msgid "ERROR_ID_215"
+msgstr "作业 ID 缺失。"
+
+#: string "Failed to get job ID"
+msgid "ERROR_ID_216"
+msgstr "未能获取作业 ID。"
+
+#: string "Failed to create job ID"
+msgid "ERROR_ID_217"
+msgstr "未能创建作业 ID。"
+
+#: string "Failed to delete job ID"
+msgid "ERROR_ID_218"
+msgstr "未能删除作业 ID。"
+
+#: string "Failed to update job ID"
+msgid "ERROR_ID_219"
+msgstr "未能更新作业 ID。"
+
+#: string "Jobs not found"
+msgid "ERROR_ID_220"
+msgstr "未找到作业。"
+
+#: string "Jobs operation type not found"
+msgid "ERROR_ID_221"
+msgstr "未找到作业操作类型"
+
+#: string "Transcoding scheduled"
+msgid "ERROR_ID_222"
+msgstr "代码转换计划已设置"
+
+#: string "Unsupported operation"
+msgid "ERROR_ID_223"
+msgstr "不支持此操作"
+
+#: string "Dropbox request parameter error"
+msgid "ERROR_ID_224"
+msgstr "Dropbox 请求参数错误"
+
+#: string "Dropbox file not found on server"
+msgid "ERROR_ID_225"
+msgstr "未在服务器上找到 Dropbox 文件。"
+
+#: string "Dropbox HTTP error response"
+msgid "ERROR_ID_226"
+msgstr "Dropbox HTTP 错误响应"
+
+#: string "Dropbox server connection error"
+msgid "ERROR_ID_227"
+msgstr "Dropbox 服务器连接错误"
+
+#: string "Destionation path already exists"
+msgid "ERROR_ID_228"
+msgstr "目标路径已存在"
+
+#: string "Invalid wdmc stage"
+msgid "ERROR_ID_229"
+msgstr "wdmc 阶段无效"
+
+#: string "Media server not running"
+msgid "ERROR_ID_230"
+msgstr "媒体服务器未运行"
+
+#: string "Invalid wdmc category"
+msgid "ERROR_ID_231"
+msgstr "wdmc 类别无效"
+
+#: string "Source and destination files are identical."
+msgid "ERROR_ID_232"
+msgstr "源文件和目标文件是相同的。"
+
+#: string "Error opening source file handle."
+msgid "ERROR_ID_233"
+msgstr "打开源文件句柄时出错。"
+
+#: string "Error opening destination file handle."
+msgid "ERROR_ID_234"
+msgstr "打开目标文件句柄时出错。"
+
+#: string "A Device User with the same email address already exists."
+msgid "ERROR_ID_235"
+msgstr "使用同一个电子邮件地址的设备用户已存在。"
+
+#: string "Requested resource not found."
+msgid "ERROR_ID_236"
+msgstr "未找到请求的资源。"
+
+#: string "Request not supported"
+msgid "ERROR_ID_237"
+msgstr "不支持该请求。"
+
+#: string "Bad request"
+msgid "ERROR_ID_238"
+msgstr "请求错误。"
+
+#: string "Error in internal server"
+msgid "ERROR_ID_239"
+msgstr "内部服务器错误"
+
+#: string "Not authorized to trigger send alert email."
+msgid "ERROR_ID_240"
+msgstr "未经授权，无法触发发送提醒电子邮件。"
+
+#: string "Error generating system log."
+msgid "ERROR_ID_241"
+msgstr "生成系统日志时出错。"
+
+#: string "Error in uploading system log."
+msgid "ERROR_ID_242"
+msgstr "更新系统日志时出错。"
+
+#: string "Error in reading getServiceStartUp.sh"
+msgid "ERROR_ID_243"
+msgstr "读取 getServiceStartUp.sh 时出错。"
+
+#: string "Error in reading getFixedNtpServer.sh"
+msgid "ERROR_ID_244"
+msgstr "读取 getFixedNtpServer.sh 时出错。"
+
+#: string "Error in reading getExtraNtpServer.sh"
+msgid "ERROR_ID_245"
+msgstr "读取 getExtraNtpServer.sh 时出错。"
+
+#: string "Internal error in datetime configuration"
+msgid "ERROR_ID_246"
+msgstr "日期和时间配置中发生内部错误。"
+
+#: string "Bad request in datetime configuration"
+msgid "ERROR_ID_247"
+msgstr "日期和时间配置中发生错误请求。"
+
+#: string "Internal Server error for Device User"
+msgid "ERROR_ID_248"
+msgstr "设备用户的内部服务器错误"
+
+#: string "iTunes configuration internal server error."
+msgid "ERROR_ID_249"
+msgstr "iTunes 配置内部服务器错误。"
+
+#: string "Bad request in iTunes configuration."
+msgid "ERROR_ID_250"
+msgstr "iTunes 配置请求错误。"
+
+#: string "Language configuration not found"
+msgid "ERROR_ID_251"
+msgstr "未找到语言配置"
+
+#: string "Language configuration internal server error."
+msgid "ERROR_ID_252"
+msgstr "语言配置内部服务器错误。"
+
+#: string "MicroCrawler status failed."
+msgid "ERROR_ID_253"
+msgstr "Microcrawler 状态失败。"
+
+#: string "Media crawler internal server error."
+msgid "ERROR_ID_254"
+msgstr "媒体 Crawler 内部服务器错误。"
+
+#: string "USB internal server error"
+msgid "ERROR_ID_255"
+msgstr "USB 内部服务器错误。"
+
+#: string "Error in DB file location"
+msgid "ERROR_ID_256"
+msgstr "数据库文件位置发生错误"
+
+#: string "Failed album access"
+msgid "ERROR_ID_257"
+msgstr "相册访问失败"
+
+#: string "Album is empty set"
+msgid "ERROR_ID_258"
+msgstr "相册是空的"
+
+#: string "Album name is missing"
+msgid "ERROR_ID_259"
+msgstr "相册名称缺失。"
+
+#: string "Album name info failed"
+msgid "ERROR_ID_260"
+msgstr "相册名称信息失败"
+
+#: string "Album item info failed"
+msgid "ERROR_ID_261"
+msgstr "相册项目信息失败"
+
+#: string "Device already registered"
+msgid "ERROR_ID_262"
+msgstr "设备已注册。"
+
+#: string "Device registration pending"
+msgid "ERROR_ID_263"
+msgstr "设备注册未决"
+
+#: string "Device registration unsuccessful"
+msgid "ERROR_ID_264"
+msgstr "设备注册失败"
+
+#: string "Network Configuration bad request"
+msgid "ERROR_ID_265"
+msgstr "网络配置请求错误"
+
+#: string "Network Configuration server error"
+msgid "ERROR_ID_266"
+msgstr "网络配置服务器错误"
+
+#: string "Network Service Configuration Bad request"
+msgid "ERROR_ID_267"
+msgstr "网络服务配置请求错误"
+
+#: string "Network service configuration server error."
+msgid "ERROR_ID_268"
+msgstr "网络服务配置服务器错误。"
+
+#: string "Network workgroup bad request."
+msgid "ERROR_ID_269"
+msgstr "网络工作组请求错误。"
+
+#: string "Network workgroup server error."
+msgid "ERROR_ID_270"
+msgstr "网络工作组服务器错误。"
+
+#: string "SSH configuration bad request."
+msgid "ERROR_ID_271"
+msgstr "SSH 配置请求错误。"
+
+#: string "SSH configuration server error."
+msgid "ERROR_ID_272"
+msgstr "SSH 配置服务器错误。"
+
+#: string "Update counter not found."
+msgid "ERROR_ID_273"
+msgstr "未找到更新计数器。"
+
+#: string "Time Machine parameter value missing."
+msgid "ERROR_ID_274"
+msgstr "Time Machine 参数值缺失。"
+
+#: string "Invalid file row offset."
+msgid "ERROR_ID_275"
+msgstr "文件行偏移量无效。"
+
+#: string "Invalid dir row offset."
+msgid "ERROR_ID_276"
+msgstr "目录行偏移量无效。"
+
+#: string "Invalid file row count."
+msgid "ERROR_ID_277"
+msgstr "文件行数无效。"
+
+#: string "Invalid dir row count."
+msgid "ERROR_ID_278"
+msgstr "目录行数无效。"
+
+#: string "Value of parameter http_range cannot be negative."
+msgid "ERROR_ID_279"
+msgstr "http_range 参数的值不能为负。"
+
+#: string "Network interface does not exist."
+msgid "ERROR_ID_280"
+msgstr "网络接口不存在。"
+
+#: string "File does not exist."
+msgid "ERROR_ID_281"
+msgstr "文件不存在。"
+
+#--- new for Sequoia 282 forward 3/20/13 ---
+
+#: string "To copy, the destination directory path cannot be inside the source directory."
+msgid "ERROR_ID_282"
+msgstr "要复制，则目标目录路径不能在源目录内。"
+
+#: string "Local access point internal server error."
+msgid "ERROR_ID_283"
+msgstr "本地接入点内部服务器错误。"
+
+#: string "LED configuration internal server error."
+msgid "ERROR_ID_284"
+msgstr "LED 配置内部服务器错误。"
+
+
+#: string "LED configuration bad request."
+msgid "ERROR_ID_285"
+msgstr "LED 配置请求错误。"
+
+#: string "Language configuration already exists."
+msgid "ERROR_ID_286"
+msgstr "语言配置已存在。"
+
+#: string "Source and destination directory paths are identical."
+msgid "ERROR_ID_287"
+msgstr "源目录路径和目标目录路径是相同的。"
+
+#: string "No Alert email has been sent."
+msgid "ERROR_ID_288"
+msgstr "尚未发送任何提醒电子邮件。"
+
+#: string "This call should be from localhost only."
+msgid "ERROR_ID_289"
+msgstr "该调用仅应来自本地主机。."
+
+#: string "Value provided for start time is not valid."
+msgid "ERROR_ID_290"
+msgstr "所提供的开始时间的值无效。"
+
+#: string "Value provided for modifed date is invalid."
+msgid "ERROR_ID_291"
+msgstr "所提供的修改日期的值无效。"
+
+#: string "Country name is not valid"
+msgid "ERROR_ID_292"
+msgstr "国家名称无效"
+
+#: string "Language is not valid"
+msgid "ERROR_ID_293"
+msgstr "语言无效"
+
+#: string "Invalid first name"
+msgid "ERROR_ID_294"
+msgstr "名字无效。"
+
+#: string "Invalid last name"
+msgid "ERROR_ID_295"
+msgstr "姓氏无效。"
+
+#: string "Invalid email address"
+msgid "ERROR_ID_296"
+msgstr "电子邮件地址无效。"
+
+#: string "Invalid option"
+msgid "ERROR_ID_297"
+msgstr "选项无效"
+
+#: string "HDD Standby Time Minutes Bad Request"
+msgid "ERROR_ID_298"
+msgstr "硬盘待机时间分钟数请求错误。"
+
+#: string "Enable HDD Standby Time Bad Request"
+msgid "ERROR_ID_299"
+msgstr "启用硬盘待机时间请求错误。"
+
+#: string "File does not exist"
+msgid "ERROR_ID_300"
+msgstr "文件不存在。"
+
+#: string "Device Description Bad Request"
+msgid "ERROR_ID_301"
+msgstr "设备描述请求错误。"
+
+#: string "Device Description Name Bad Request"
+msgid "ERROR_ID_302"
+msgstr "设备描述名称请求错误。"
+
+
+#: string "Destination share not accessible"
+msgid "ERROR_ID_303"
+msgstr "无法访问目标共享"
+
+#: string "Either shareall or share_name parameter has to be specified."
+msgid "ERROR_ID_304"
+msgstr "必须指定 shareall 或者 share_name 参数。"
+
+#: string "WDMC Server reset failed."
+msgid "ERROR_ID_305"
+msgstr "WDMC 服务器重置操作失败。"
+
+# --------- New strings 5/16 (second round Moravia submission) ---------
+
+#: string "Retrieving Partitions"
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_GETTING_PARTITIONS"
+msgstr "正在检索分区"
+
+#: string "Select a drive"
+msgid "LABEL_SELECT_A_DRIVE"
+msgstr "请选择一个驱动器"
+
+#: string "KB"
+msgid "GENERIC_KB"
+msgstr "KB"
+
+#: string "Resends the registration email."
+msgid "TOOLTIP_RESEND_EMAIL_ICON"
+msgstr "重新发送注册电子邮件。"
+
+#: string "Update registration email."
+msgid "TOOLTIP_UPDATE_EMAIL_ICON"
+msgstr "更新注册电子邮件。"
+
+#: string "Elapsed time"
+msgid "CONTENT_SETTINGS_STRING_ELAPSED_TIME"
+msgstr "运行时间"
+
+
+# --- NEW strings (for Moravia round 2) submitting 6-11  ---
+
+# New - 5-21-13
+#: string "Username cannot start with a dash (-)."
+msgid "ERROR_USERNAME_INCORRECT_SYNTAX_DASH"
+msgstr "用户名不能以短划线 (-) 开头。"
+
+# New - 5-21-13
+#: string "First name cannot start with a dash (-).
+msgid "ERROR_ADD_USER_FIRST_NAME_INCORRECT_SYNTAX_DASH"
+msgstr "名字不能以短划线 (-) 开头。"
+
+# New - 5-21-13
+#: string "Secure Shell (SSH) is a security protocol that provides an encrypted connection for logging into a remote server to view, transfer files, and execute programs on the server. For this reason, SSH should only be enabled by users with advanced network and Linux knowledge. Failure to use SSH properly can render your network server inoperable. If you enable SSH, do not share the root password with anyone you do not want to have access to your network server."  
+msgid "SETTINGS_NETWORK_SERVICES_TOOLTIP_SSH"
+msgstr "安全 Shell (SSH) 是一种安全协议，它为登录到远程服务器提供加密连接，以便查看和传输服务器上的文件，以及执行服务器上的程序。 因此，只有具备网络和 Linux 高级知识的用户才能启用 SSH。 使用 SSH 不当可能造成网络服务器不能工作。 如果启用了 SSH，请不要与不应访问网络服务器的任何人分享根密码。"
+
+# New - 5-21-13
+#: string "Note: User successfully added."
+msgid "LABEL_DESC_USER_ADDED_SUCCESSFULLY"
+msgstr "注意： 用户成功添加。"
+
+
+# New - 5-21-13
+#: string "Accessing WD My Cloud..."
+msgid "CONTENT_SPLASH_STRING_ACCESSING"
+msgstr "正在访问 WD My Cloud..."
+
+# New - 5-21-13
+#: string "Reading configuration information..."
+msgid "CONTENT_SPLASH_STRING_CONFIGURATION"
+msgstr "正在读取配置信息..."
+
+# New - 5-21-13
+#: string "Attempting to authenticate..."
+msgid "CONTENT_SPLASH_STRING_AUTHENTICATE"
+msgstr "正在尝试验证身份..."
+
+# New - 5-21-13
+#: string "Scanning"
+msgid "CONTENT_HOME_STRING_SCANNING"
+msgstr "正在扫描"
+
+# New - 5-22-13
+#: string "Scan complete. {0} videos processed."
+msgid "CONTENT_HOME_DIALOG_TOOLTIP_VIDEOS_SCANNED"
+msgstr "扫描完成。 {0} 个视频已处理。"
+
+# New - 5-22-13
+#: string "Scan complete. {0} music tracks processed."
+msgid "CONTENT_HOME_DIALOG_TOOLTIP_MUSIC_SCANNED"
+msgstr "扫描完成。 {0} 首曲目已处理。"
+
+# New - 5-22-13
+#: string "Scan complete. {0} photos processed."
+msgid "CONTENT_HOME_DIALOG_TOOLTIP_PHOTOS_SCANNED"
+msgstr "扫描完成。 {0} 张照片已处理。"
+
+# New - 5-22-13
+#: string "Scan complete. {0} other file types processed."
+msgid "CONTENT_HOME_DIALOG_TOOLTIP_OTHERS_SCANNED"
+msgstr "扫描完成。 {0} 个其他文件类型已处理。"
+
+# --- New strings added May 30 
+
+# NEW - ITR 76099
+#: string "Delete this cloud access."
+msgid "TOOLTIP_DELETE_DAC_ICON"
+msgstr "删除此云访问。"
+ 
+# NEW - ITR 76099
+#: string "Delete this alert."
+msgid "TOOLTIP_DELETE_ALERT_ICON"
+msgstr "删除此提醒。"
+
+# NEW - ITR 76099
+#: string "Delete email."
+msgid "TOOLTIP_DELETE_EMAIL_ICON"
+msgstr "删除电子邮件。"
+
+# NEW - ITR 76099
+#: string "Delete user-defined NTP server."
+msgid "TOOLTIP_DELETE_USER_NTP_SERVER_ICON"
+msgstr "删除用户定义的 NTP 服务器。"
+
+# NEW - ITR 76099
+#: string "Delete this notification email."
+msgid "TOOLTIP_DELETE_NOTIFICATION_EMAIL_ICON"
+msgstr "删除此通知电子邮件。"
+
+# NEW 5.30.13
+#: string "Please provide a valid email for the admin user."
+msgid "ERROR_PROVIDE_VALID_EMAIL_ADDRESS_ADMIN_USER"
+msgstr "请提供 admin 用户的有效电子邮件。"
+
+# NEW 5.30.13 for ITR 76273
+#: string "Firmware upgrade in progress."
+msgid "CONTENT_SETTINGS_STRING_FIRMWARE_UPGRADE_IN_PROGRESS"
+msgstr "固件升级正在进行。"
+
+# NEW 5.30.13 for ITR 76273
+#: string "Timeout; waiting for firmware upgrade. Verify that the LED on the front of your device is not red; then find the device on the network and reinitialize the web user interface. If the LED is red, reboot your drive manually."
+msgid "ERROR_FIRMWARE_UPGRADE_TIMEOUT"
+msgstr "超时；正在等待固件升级。 核实设备前面板上的LED指示灯不是红色；然后，在网络上找到设备，并重新初始化网络用户界面。 如果 LED 为红色，请手动重新启动驱动器。"
+
+# NEW 5-31 ---
+
+#: string "Please enable cookies in your browser."
+msgid "LABEL_DESCR_PLEASE_ENABLE_COOKIES"
+msgstr "请在浏览器中启用 cookie。"
+
+#: string "Please enable JavaScript in your browser."
+msgid "LABEL_DESCR_PLEASE_ENABLE_JAVASCRIPT"
+msgstr "请在浏览器中启用 JavaScript。"
+
+#: string "Internet Explorer 8 and higher is supported; please update your browser."
+msgid "LABEL_DESCR_IE7_NOT_SUPPORTED"
+msgstr "支持 Internet Explorer 8 及更高版本；请更新浏览器。"
+
+# New 6-4 ---
+#: string "Protect Your Stuff"
+msgid "CONTENT_SAFEPOINTS_BUMPER_TITLE_PROTECT_STUFF"
+msgstr "保护您的资料"
+
+# New 6-6-13 (76506)
+#: string "Give user cloud access by entering their email. Login instructions are sent to the email address provided."
+msgid "CONTENT_USERS_DIALOG_TOOLTIP_EMAIL"
+msgstr "输入用户电子邮件，授予他们云访问权。 登录说明将发送到提供的电子邮件地址。"
+
+
+# NEW 6-7 ---
+#: string "Previous Password"
+msgid "CONTENT_GENERIC_TEXTBOX_LABEL_OLD_PASSWORD"
+msgstr "以前的密码"
+
+
+# new 6-10 --
+#: string "Self Test Results"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_SELF_TEST_RESULTS"
+msgstr "自检结果"
+
+# new 6-10 --
+#: string "Invalid Email"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_INVALID_EMAIL"
+msgstr "无效的电子邮件"
+
+# new 6-10 --
+#: string "Alert Email Limit"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_ALERT_EMAIL_LIMIT_MET"
+msgstr "提醒电子邮件限制"
+
+# new 6-10
+#: string "Previous password is a case-sensitive, alphanumeric value up to 32 characters, and cannot contain double quotes."
+msgid "ERROR_OLD_PASSWORD_INCORRECT_SYNTAX"
+msgstr "以前的密码是一串字母或数字，区分大小写，最多 32 个字符，且不能包含双引号。"
+
+# new 6-10
+#: string "Usage"
+msgid " CONTENT_SHARES_LABEL_USAGE"
+msgstr "用法"
+
+
+# new 6-20 (from Zermatt)
+#: string "Submit"
+msgid "BUTTON_SUBMIT"
+msgstr "提交"
+
+
+# new 6-21
+#: string "Share Login"
+msgid "CONTENT_SAFEPOINTS_LABEL_SHARE_AUTHENTICATION"
+msgstr "共享登录"
+ 
+#: string "Device Login"
+msgid "CONTENT_SAFEPOINTS_LABEL_DEVICE_AUTHENTICATION"
+msgstr "设备登录"
+
+#: string "Rescan searches for changes made to your media libraries."
+msgid "CONTENT_SETTINGS_MEDIA_TOOLTIP_DLNA_DATABASE_RESCAN"
+msgstr "重新扫描搜索对您的媒体库所做的更改。"
+
+
+#new 6-25
+#: string "Click Rebuild to rebuild the media database, but do so only if database corruption is suspected."
+msgid "CONTENT_SETTINGS_MEDIA_TOOLTIP_DLNA_DATABASE_REBUILD"
+msgstr "单击“还原”还原媒体数据库，但是只能在怀疑数据库损坏时，方可这样做。"
+

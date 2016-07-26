@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="MS-HAID" content="Creating an Amazon S3 Cloud Backup" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+ <title>Erstellen einer Amazon S3-Cloud-Sicherung</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+ <meta http-equiv="Content-Language" content="de-DE" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Sichern Ihrer persönlichen Cloud\nCloud-Sicherungen\nErstellen einer Amazon S3-Cloud-Sicherung");
+addButton("show",BTN_TEXT,"Anzeigen","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left; background: #fafafa\"> ");
+AddMasterBreadcrumbs("index.htm", "", "&gt;", "Home", "welcome.htm");
+document.write("<a href=\"creating_a_usb_backup.htm\">Sichern Ihrer persönlichen Cloud<\/a> &gt; <a href=\"updates_about.htm\">Cloud-Sicherungen<\/a> &gt; Erstellen einer Amazon S3-Cloud-Sicherung<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(0);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Erstellen einer Amazon S3-Cloud-Sicherung</h1>
+<p class="Body"><span style="font-weight: bold;">Hinweis</span>: Bevor Sie eine Cloud-Sicherung erstellen, registrieren sie sich bei <a href="http://aws.amazon.com/" 
+	 target="_blank">http://aws.amazon.com/</a> f&uuml;r den Amazon S3-Dienst.</p>
+<p class="Body">Nachdem Sie ein Amazon S3-Konto eingerichtet haben, f&uuml;hren Sie die nachfolgend genannten Schritte aus, um eine Cloud-Sicherung zu erstellen.</p>
+<ol style="list-style: square;">
+	<li style="list-style: none; display: inline;"><ol style="list-style: decimal;">
+		<li class="n1">Klicken Sie auf <strong>Backups</strong>.</li>
+		<li class="n1">Klicken Sie auf <span style="font-weight: bold;">Cloud</span>-<b>Sicherungen</b>.</li>
+		<li class="n1">Klicken Sie oben am Bildschirm auf die <b>Amazon S3</b>-Schaltfl&auml;che.</li>
+		<li class="n1">Klicken Sie auf <strong>Erstellen</strong>.</li>
+		<li class="n1">Geben Sie einen Auftragsnamen f&uuml;r die Cloud-Sicherung ein.</li>
+		<li class="n1">Klicken Sie auf <b>Weiter</b>.</li>
+		<li class="n1">Geben Sie die folgenden von Amazon S3 bereitgestellten Informationen ein:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold;">Region</b>: W&auml;hlen Sie im Dropdownmen&uuml; die f&uuml;r die Cloud verwendete Region aus.</li>
+		<li class="b1"><b>Zugriffsschl&uuml;ssel</b>: Geben Sie den Zugriffsschl&uuml;ssel ein, der Ihnen von Amazon S3 bereitgestellt wurde.</li>
+		<li class="b1"><b>Privater Schl&uuml;ssel</b>: Geben Sie den privaten Schl&uuml;ssel ein, der Ihnen von Amazon S3 bereitgestellt wurde.</li>
+		<li class="b1"><strong>Remotepfad</strong>: Geben Sie den Remotepfad f&uuml;r die Cloud ein. Hierbei handelt es sich &uuml;blicherweise um den Bucketnamen.</li>
+	</ul>
+	<ol start="8" style="list-style: decimal;">
+		<li class="n1">Klicken Sie auf <b>Weiter</b>.</li>
+		<li class="n1">W&auml;hlen Sie im Feld &bdquo;Typ&ldquo; eine der folgenden Optionen aus:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b>Heraufladen:</b> Mit dieser Option werden Ihre My Cloud -Daten im Amazon S3-Bucket gespeichert.</li>
+		<li class="b1"><b>Herunterladen:</b> Mit dieser Option werden die Daten Ihres Amazon S3-Bucket auf dem My Cloud -Server gespeichert.</li>
+	</ul>
+	<ol start="10" style="list-style: decimal;">
+		<li class="n1">W&auml;hlen Sie im Feld &bdquo;Sicherungstyp&ldquo; im Dropdownmen&uuml; die Art der Sicherung aus, die Sie ausf&uuml;hren m&ouml;chten. Folgende Optionen stehen zur Verf&uuml;gung:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b>Vorhandene Dateien &uuml;berschreiben</b>: Mit dieser Option werden Dateien im Zielordner, die den gleichen Namen tragen wie die Quelldatei, &uuml;berschrieben.</li>
+		<li class="b1"><strong>Vollst&auml;ndige Sicherung</strong>: Mit dieser Option wird bei jedem Ausf&uuml;hren der Sicherung ein separater Ordner erstellt, der alle Sicherungsdaten enth&auml;lt.</li>
+		<li class="b1"><strong>Inkrementelle Sicherung</strong>: Mit dieser Option werden Dateien &uuml;berschreiben, wenn die entsprechenden Quelldateien neuer sind als die Zieldateien.</li>
+	</ul>
+	<ol start="11" style="list-style: decimal;">
+		<li class="n1">Klicken Sie auf <span style="font-weight: bold;">Weiter</span>.</li>
+		<li class="n1">Geben Sie im Feld &bdquo;Lokaler Pfad&ldquo; einen Pfad f&uuml;r die Sicherung auf dem My Cloud -Ger&auml;t ein.</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">Klicken Sie auf <span style="font-weight: bold;">Durchsuchen</span>, um auf dem Ger&auml;t nach einem Speicherort f&uuml;r die Sicherung zu suchen.<br />(Beispiel: Volume_1/Sicherung)</li>
+	</ul>
+	<ol start="13" style="list-style: decimal;">
+		<li class="n1">Klicken Sie auf <img src="graphics/toggle_button.png" alt="" width="20" height="15" border="0" />, um die Funktion der automatischen Aktualisierung zu aktivieren. Mit dieser Option wird die Sicherung automatisch auf Grundlage eines Zeitplans aktualisiert.</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">Wenn Sie die Funktion der automatischen Aktualisierung aktivieren:</li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: circle;">
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">W&auml;hlen Sie den Zeitplan f&uuml;r die automatische Aktualisierung aus: t&auml;glich, w&ouml;chentlich oder monatlich</p></li>
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">W&auml;hlen Sie aus dem Dropdownmen&uuml; die Uhrzeit f&uuml;r die automatische Aktualisierung aus (bei Auswahl der t&auml;glichen Aktualisierung).</p></li>
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">W&auml;hlen Sie im Dropdownmen&uuml; den Tag und die Uhrzeit f&uuml;r die automatische Aktualisierung aus (w&ouml;chentliche oder monatliche Sicherung).</p></li>
+		</ul></li>
+	</ul>
+	<ol start="14" style="list-style: decimal;">
+		<li class="n1">Wenn Sie &bdquo;Automatische Aktualisierung&ldquo; nicht ausw&auml;hlen, geben Sie im Feld &bdquo;Jetzt sichern&quot; an, ob Sie nun mit der Sicherung beginnen m&ouml;chten.</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">Klicken Sie auf &bdquo;Ja&quot;, um Ihre Sicherung jetzt zu starten.</li>
+	</ul>
+	<ol start="15" style="list-style: decimal;">
+		<li class="n1">Klicken Sie auf <b>Weiter</b>.</li>
+		<li class="n1">&Uuml;berpr&uuml;fen Sie die Einstellungen und klicken Sie auf <b>Fertig stellen</b>. Die Amazon S3-Sicherung wird erstellt. Der neue Auftrag wird im Abschnitt &bdquo;Amazon S3-Warteschlange&quot; der Seite &bdquo;Amazon S3-Sicherung&quot; angezeigt.</li>
+	</ol>
+	<p class="Body" style="margin-left: 60px;"><span style="font-weight: bold;">Hinweis</span>: Greifen Sie auf den Sicherungs-Bucket Ihrer Amazon S3-Cloud zu, um die Ger&auml;tesicherungen anzuzeigen.</p>
+	<p class="ListContinue2CxSpLast">&#160;</p></li>
+</ol>
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt;">© 2015 Western Digital Technologies, Inc. 
+	 <span style="color: rgb(75, 90, 104); font-size: 10.6666669845581px; 
+			 line-height: 21.3333339691162px; orphans: auto; widows: 1; 
+			 -webkit-text-stroke-width: 0px; display: inline	 ! important ; 
+			 float: none; background-color: rgb(250, 250, 250);">Alle Rechte 
+	 vorbehalten.</span> </p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>

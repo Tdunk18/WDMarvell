@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><cki><ck fm=\"A lemezállapotról\" to=\"Csatlakozási beállítások konfigurálása\" num=\"56\"/><ck fm=\"A felhőalapú hozzáférés be-/kikapcsolása\" to=\"A megosztásokról\" num=\"57\"/><ck fm=\"Regisztráció a WDMyCloud.com weboldalra\" to=\"Mi a RAID típusú tárolás?\" num=\"39\"/></cki>";

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="zh-CN" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>自动更新 My Cloud</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("配置 My Cloud（设置）\n固件更新\n自动更新\n自动更新 My Cloud");
+addButton("show",BTN_TEXT,"显示","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left; background: #fafafa\"> ");
+AddMasterBreadcrumbs("index.htm", "", "&gt;", "Home", "welcome.htm");
+document.write("<a href=\"general_change_device_name.htm\">配置 My Cloud（设置）<\/a> &gt; <a href=\"updates_auto.htm\">固件更新<\/a> &gt; <a href=\"updates_auto.htm\">自动更新<\/a> &gt; 自动更新 My Cloud<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(0);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>自动更新 My Cloud 设备</h1>
+<p class="Body">“自动更新”允许您将 My Cloud™ 设备设置为自动检查并安装可用的软件更新，从而为您带来方便。这是确保 
+ My Cloud 固件保持最新状态的最简易方法。</p>
+<p class="Body" style="font-weight: bold;">注<span style="font-weight: normal;">： 
+ 安装固件更新后，My Cloud 设备可能重新启动。 
+ 由于重新启动会影响到访问云的用户，因此，请将更新安排在用户不太可能会访问云的时间进行。</span></p>
+<p class="Body" style="font-weight: bold;"><span style="font-weight: normal;">注</span><span 
+	 style="font-weight: normal;">： 如果您启用“自动更新”，更新完成后您需要手动重启系统。</span></p>
+<p class="Body">使用以下步骤自动更新 My Cloud 设备。</p>
+<ol style="list-style: decimal;">
+	<li style="list-style: none; display: inline;"><ol style="list-style: decimal;">
+		<li class="n1">单击“<span style="font-weight: bold;">设置</span>”。</li>
+		<li class="n1">在左窗格中，单击<span style="font-weight: bold;">固件更新</span>。</li>
+		<li class="n1">在“自动更新”区域，单击 <img src="graphics/toggle_button.png" alt="" style="border: none;" width="20" height="12" border="0" /> 启用自动更新。</li>
+		<li class="n1">在“更新计划”字段中，安排更新的日期和时间：</li>
+	</ol>
+	<ul style="list-style: disc;">
+		<li class="b1"><p class="Normal_BeforeList">单击第一个下拉箭头并选择星期几。</p></li>
+		<li class="b1"><p class="Normal_BeforeList">单击第二个下拉箭头并选择时间。</p></li>
+		<li class="b1"><p class="Normal_BeforeList">单击第三个下拉箭头并选择<span style="font-family: Courier, monospace;"> 
+		 </span><span style="font-family: 'Courier New', monospace;">AM</span> 
+		 或 <span style="font-family: 'Courier New', monospace;">PM</span><span 
+		 style="font-family: Arial, sans-serif;">。</span></p></li>
+	</ul></li>
+	<ol start="5" style="list-style: decimal;">
+		<li class="n1">点击<span style="font-weight: bold;">“保存”</span>。</li>
+	</ol>
+</ol>
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt;">© 2015 Western Digital Technologies, Inc. 
+	 <span style="color: rgb(75, 90, 104); font-size: 10.6666669845581px; 
+			 line-height: 21.3333339691162px; orphans: auto; widows: 1; 
+			 -webkit-text-stroke-width: 0px; display: inline	 ! important ; 
+			 float: none; background-color: rgb(250, 250, 250);">保留所有权利。</span> 
+	 </p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>

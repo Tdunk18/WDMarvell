@@ -1,0 +1,138 @@
+lio-core-backports.git repository for 'out of tree' module builds
+
+I) Introduction
+
+This tree contains the following backported kernel code from upstream kernel.org
+lio-core-*.git source.  It tracks the v3.1.x codebase for TCM and LIO-Target,
+and does not yet contain support for TCM_Loop and TCM_FC, or other WIP TCM v4.0
+fabric modules from lio-core-2.6.git.  This will change at some point for those
+fabric modules that are standalone and do not require upstream kernel modificiations.
+
+Currently the source tree contains the following kernel code:
+
+*) kernel/drivers/target/ TCM (target_core_mod) target mode infrastructure v3.1.x and
+   Linux storage subsystem plugins.
+
+*) kernel/drivers/lio-core/ LIO-Target iSCSI fabric module v3.1.x
+
+*) kernel/fs/configfs/ Filesystem module backport of configfs required for
+   pre v2.6.27 kernels.
+
+The kernel code has been built and run on a number of different architectures and environments
+going back to v2.6.18 and up to the recent stable v2.6.3[1,2] versions that are now shipping with
+RHEL6, OpenSuse 11.2, Fedora 1[1,2] and Ubuntu Lucid Lynx.  So far this tree has been
+successfully run on i386, x86_64, ppc, powerpc, armv5tejl, alpha and ia-64 environments, but
+the kernel code will run on any supported arch/.
+
+II) Checking out the source tree
+
+The git package is required in order to access the lio-core-backports source tree.
+
+*) Cloning the lio-core-backports.git tree:
+
+First, make sure that 'git' is available on the shell where the builds will be occuring.
+git is available as the 'git-core' package on pretty much all general purpose distributions.
+Cloning a local tree is accomplished with:
+
+	'git clone git://risingtidesystems.com/lio-core-backports.git lio-core-backports.git'
+
+Note the source tree is also available via gitweb at:
+
+http://risingtidesystems.com/git/?p=lio-core-backports.git;a=summary
+http://linux-iscsi.org/git/?p=lio-core-backports.git;a=summary
+
+III) Building .ko objects for a local 'make install'
+
+Building the kernel module packages requires that the running kernel has a matching set
+of header or source available in order to generate the necessary .ko object files.
+The name of the actual header or source package will vary, so please refer to the
+distribution documentation on how to do this.
+
+Once the package required to build out of tree kernel modules has been successfully
+installed, the symlinks for build and/or source will be setup in /lib/modules/$KERNEL_REV/.
+These are the paths that lio-core-backports.git/autoconfig uses with kbuild.
+
+Running:
+
+	'make'
+
+will first call './autoconfig --write-to-file' in order to generate a local ./.make_autoconfig.
+This file is used by the lio-core-backports.git Makefiles to determine the local environment
+variables required in order for the build to commence.  The ./.make_autoconfig will look like:
+
+ARCH?=x86_64
+AUTO_CFLAGS?= -DHAS_UTS_RELEASE -DUSE_MSLEEP -Dscsi_execute_async_address  -DPYX_ISCSI_VENDOR='"Linux-iSCSI.org"'  -DIQN_PREFIX='"iqn.2003-01.org.linux-iscsi"'  -DLINUX -DLINUX_SCATTERLIST_HAS_PAGE -DSVN_VSN=\"3.1.4\"
+BASENAME?=RedHat-R6-Gold.x86_64
+CONFIGFS_BACKPORT?=0
+DISTRO?=REDHAT
+KERNEL?=26
+KERNEL_DIR?=/lib/modules/2.6.32-19.el6.x86_64/build
+KERNEL_INCLUDE_DIR?=/lib/modules/2.6.32-19.el6.x86_64/build/include
+KERNEL_SOURCE_DIR?=/lib/modules/2.6.32-19.el6.x86_64/build
+KERNEL_VERSION_INFO?=LINUX_KERNEL_26
+LIBL?=x86_64
+LIO_REV?=1ce986f1
+LIO_UTILS_REV?=
+LIO_UTILS_VERSION?=3.1.4
+LIO_VERSION?=3.1.4
+OSTYPE?=LINUX
+RELEASE?=2.6.32-19.el6.x86_64
+RELEASES?=ARRAY(0x2261f20)
+RPM_DIR?=/root/rpmbuild
+SNMP?=0
+SYSTEM?=RedHat-R6-Gold
+
+Once the build environment variables has been successfully determined, calling a 'make' will
+first build kernel/fs/configfs (if < v2.6.27 for $RELEASE), and then kernel/drivers/target
+and finally kernel/drivers/lio-core.  
+
+As the build successfully completes, calling a
+
+	'make install'
+
+will copy the .ko objects into /lib/modules/$RELEASE/extra/ and run 'depmod -ae' so that the
+.ko objects are available on the local install.
+
+IV) Building the kernel RPM packages
+
+First, make sure that the kernel header and/or source packages mentioned above are installed
+for the build environment.  Second, make sure that the 'rpmbuild' program is available to the
+local shell.  This package is available on all modern RPM based distributions, but also
+varys depending the environment.  Please refer to the local distribution documentation on how
+to install 'rpmbuild'.  From there, simply calling:
+
+	'make kernel_rpms'
+
+will generate the kernel binary packages in $RPM_DIR/packages/$ARCH from the ./.make_autoconfig
+environment variables.
+
+These packages can be installed with:
+
+	'rpm -i $PACKAGE.RPM'
+
+and later upgraded with
+
+	'rpm -iUf --force $PACKAGENAME'
+
+V) Building the kernel DEB package
+
+First make sure that the kernel header and/or source packages mentioned above are installed.
+for the build environment.  Second, make sure that the 'debhelper' and the 'module-assistant'
+package is installed.
+
+From there, calling 'make kernel_source-debs-nosign:' will generate the kernel source debs that
+can be installed with 'dpkg -i $PACKAGE.deb'.  Using module-assistant to build the new packages
+is done with:
+
+	'm-a -t a-i $PACKAGE_NAME'
+
+where $PACKAGE_NAME is be configfs-backport (for < v2.6.27 kernels), target_core_mod and
+iscsi_target_mod.
+
+This will generate the kernel version specific binary packages in /usr/src/, which can then
+be installed using:
+
+	'dpkg -i $PACKAGE'
+
+Nicholas A. Bellinger <nab -AT- risingtidesystems.com>, <nab -AT- linux-iscsi.org>
+July 12th, 2010

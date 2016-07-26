@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"no\"?><pk><wd nm=\"„zapisz\" rd=\"70,0:440:0\"/></pk>";

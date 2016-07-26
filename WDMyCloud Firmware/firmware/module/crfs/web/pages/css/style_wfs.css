@@ -1,0 +1,255 @@
+body, html {
+
+overflow:hidden;
+margin:0; padding:0; border:0;
+background-repeat: repeat-x;
+} /* Re-sets IE to "zero" for these values */
+ 
+.help_div {
+	position: absolute;
+	right:0px;
+	top:102px;
+	bottom:24px;
+	PADDING-LEFT: 15px;
+	PADDING-TOP: 15px;
+	width:232px;
+	/*height:300px;*/
+	background: #000000;
+	font-size:14px;
+	color:#ffffff;
+	border:0px solid red;
+}
+#s_logo{
+	position:absolute;
+	bottom:0px;
+	margin:0px -20px 0px 0px;
+	padding:0px 0px 0px 0px;
+	float:right;
+	width:93px;
+	z-index:999;
+	border:0px solid red;
+}
+#move_icon {
+	width:16px;
+	height:475px;
+	position: absolute;
+	right:225px;
+	top:50%;
+	cursor:pointer;
+}
+
+#menu_container div {
+	FONT-SIZE: 14px;
+	height:30px;
+	line-height: 30px;
+	cursor:pointer;
+}
+#menu_title {
+	PADDING-TOP: 15px;
+	PADDING-LEFT: 12px;
+	COLOR: #3366FF;
+	FONT-SIZE: 16px;
+}
+
+#main_container {
+	position:absolute;
+	top:138px;/*top:198px;*/
+	right:263px;
+	bottom:24px;
+	left:15px;
+	
+	/*background-image: url('/web/images/bg.jpg');*/
+	background: #ffffff;
+	padding: 8px 8px 8px 8px;		
+	
+	border-right-style:solid; border-right-width:1px;
+	border-right-color:#444444;
+	border-left-style:solid; border-left-width:1px;
+	border-left-color:#444444;
+	border-bottom-style:solid; border-bottom-width:1px;
+	border-bottom-color:#444444;
+	
+	/*border:0px solid blue;*/
+}
+
+#id_percentage
+{
+	color:#ffffff;
+	size:15px;
+}
+
+.shareDiag {
+    margin: 0.5in 0;
+    color: #000;
+    padding: 20px;
+    text-align: left;
+    background-image: url('/web/images/pop_bg.png');
+    /*border: 1px solid #000;*/
+    background-repeat: repeat-x;
+    width:500px;
+    height:350px;
+    
+	border-radius:5px 5px 5px 5px;
+	-webkit-border-top-left-radius:5px;
+	-webkit-border-top-right-radius:5px;
+	-moz-border-radius:5px 5px 5px 5px;
+}
+
+/* the overlayed element */ 
+.shareDiag {
+	/* must be initially hidden */
+	display:none;
+	
+	/* place overlay on top of other elements */
+	z-index:10000;
+	
+	/* CSS3 styling for latest browsers */
+	-moz-box-shadow:0 0 10px 10px #2A2A2A;
+	-webkit-box-shadow: 0 0 10px #2A2A2A;
+
+}
+
+/* close button positioned on upper right corner */
+.shareDiag .close {
+	background-image:url(/web/images/close.png);
+	position:absolute;
+	right:5px;
+	top:10px;
+	cursor:pointer;
+	height:32px;
+	width:35px;
+	z-index:20000;
+	background-repeat: no-repeat;
+}
+
+.shareDiag .close:hover {
+	background-image:url(/web/images/close_o.png);
+	position:absolute;
+	right:5px;
+	top:10px;
+	cursor:pointer;
+	height:32px;
+	width:35px;
+	z-index:20000;
+	background-repeat: no-repeat;
+}
+
+.diag_title{
+	font-size: 16px;
+	font-weight:bold;
+	color: #ffffff;
+}
+
+
+#my_scroll{
+	width:100%;height:350px;
+	outline: none;	/*fish+ :chrome has yellow line issue*/
+}
+ 
+.sub_menu_top{
+	position:relative;	
+	margin:102px 263px 0px 15px;
+	padding:0px 0px 0px 0px;
+	height:36px;
+	z-index:100;
+	border:0px solid red;
+}
+
+.sub_menu_top .left{
+	position:relative;	
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+	float:left;
+	width:10px;	
+	height:36px;
+	background-image: url('/web/images/management/banner_left2.png');
+	background-repeat: no-repeat;
+	z-index:999;
+	border:0px solid blue;
+}
+
+.sub_menu_top .right{
+	position:relative;	
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+	float:right;
+	width:10px;
+	height:36px;
+	background-image: url('/web/images/management/banner_right2.png');
+	background-repeat: no-repeat;
+	z-index:999;
+	border:0px solid blue;
+}
+
+.sub_menu_top .banner{
+	position:relative;	
+	margin:0px 10px 0px 10px;
+	padding:0px 0px 0px 0px;
+	height:36px;
+	background-image: url('/web/images/management/banner_center2.png');
+	background-repeat:repeat-x;
+	z-index:999;
+	border:0px solid blue;
+}
+
+.sub_menu_top .banner div {
+	margin:0px 0px 0px 8px;
+	padding:0px 0px 0px 0px;
+	line-height: 36px;
+	color:#ffffff;
+	text-align:left;
+	font-size:14px;
+	height:36px;
+	z-index:999;
+	border:0px solid red;
+}
+
+#sub_menu_bottom{
+	position:absolute;
+	width:200px;
+	height:12px;
+	background-image: url('/web/images/management/sub_bottom.png');
+	background-repeat: no-repeat;
+	left:15px;
+}
+#r_corner{
+	position:absolute;
+	width:13px;
+	height:12px;
+	background-image: url('/web/images/management/r_corner.png');
+	background-repeat: no-repeat;
+	right:15px;
+}
+
+#sub_menu_bottom{
+	position:absolute;
+	width:200px;
+	height:12px;
+	background-image: url('/web/images/management/sub_bottom.png');
+	background-repeat: no-repeat;
+	left:15px;
+}
+
+#sub_menu_bottom_right{	
+	position:absolute;
+	width:13px;
+	height:12px;
+	right:263px; /*right:15px;*/
+	bottom:24px;
+	background-image: url('/web/images/management/r_corner.png');
+	background-repeat: no-repeat;
+	z-index:2;	
+	border:0px solid blue;
+}
+
+#sub_menu_bottom_left{	
+	float:left;
+	position:absolute;
+	width:10px;
+	height:5px;
+	left:14px;
+	background-image: url('/web/images/management/l_corner.png');
+/*	background-repeat: no-repeat;	*/
+	bottom:24px;
+	z-index:2;	
+}

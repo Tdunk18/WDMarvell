@@ -1,0 +1,109 @@
+#!/bin/sh
+
+# udhcpc script edited by Tim Riker <Tim@Rikers.org>
+
+source /usr/local/modules/files/project_features
+
+[ -z "$1" ] && echo "Error: should be called from udhcpc" && exit 1
+
+PORTNUM=$(echo $interface |  cut -d '.' -f 1 | sed 's/eth//g' | sed 's/egiga//g' | sed 's/bond//g')
+LAN=lan$PORTNUM
+IP_NUM=`expr $PORTNUM + 1`
+
+[ -n "$broadcast" ] && BROADCAST="broadcast $broadcast"
+[ -n "$subnet" ] && NETMASK="netmask $subnet"
+
+case "$1" in
+	deconfig)
+		MODE=`cat /tmp/setip.$PORTNUM`
+		if [ "$MODE" != "1" ]; then
+			/sbin/ifconfig $interface 0.0.0.0
+		fi
+		;;
+
+	renew|bound)
+		# write into /etc/NAS_CFG/config.xml
+		OLDIP=`ip address show $interface  | grep 'scope global' | grep 'inet ' | sed 's/^.*inet //g' | sed 's/\/.*$//g'`
+		LINKIP=`ip address show $interface | grep 'scope link'   | grep 'inet ' | sed 's/^.*inet //g' | sed 's/\/.*$//g'`
+		CONF_IP=$(xmldbc -g "/network_mgr/$LAN/ip")
+		if [ "$OLDIP" == "$ip" ]; then
+			network -x "$interface" -i "$ip" -n "$subnet" -g "$router" -d "$dns" -w
+			exit 0;
+		fi
+
+		network -x "$interface" -i "$ip" -n "$subnet" -g "$router" -d "$dns" -o -w
+		/sbin/ifconfig $interface $ip $BROADCAST $NETMASK
+
+		if [ -n "$router" ] ; then
+			echo "deleting routers"
+			while route del default gw 0.0.0.0 dev $interface ; do
+				:
+			done
+
+			DEFAULT_GATEWAY=$(xmldbc -g "/network_mgr/default_gw")
+			BOND_ENABLE=$(xmldbc -g "/network_mgr/bonding/enable")
+
+			for i in $router ; do
+				if [ "$BOND_ENABLE" == "1" ]; then
+					if [ "$PORTNUM" == "0" ]; then
+						route add default gw $i dev $interface
+					fi
+				else
+					if [ "$DEFAULT_GATEWAY" == $LAN ]; then
+						route add default gw $i dev $interface
+					fi
+				fi
+			done
+		else
+			route add default dev $interface metric 99	
+		fi
+
+		# set ddns after the router was set
+		network -s ""
+
+		# Due to start udhcpc will call deconfig first to set ip to 0.0.0.0, so we compare old ip in config.xml and $ip.
+                # If the same, don't do load_module.
+		if [ -e /tmp/system_ready ]; then
+			if [ "$1" == "bound" -a "$CONF_IP" == "$ip" ]; then
+				exit 0;
+			fi
+		fi
+
+		#call load_module
+		#echo "renew call load_module" >> /tmp/aaa
+		kill -9 `ps | grep load_module | grep network | awk '{print $1}'` 2>/dev/null
+		load_module network	$PORTNUM &
+		MODEL=$(cat "/usr/local/modules/files/model")
+		if [ "$PROJECT_FEATURE_OLED" = "1" ]; then
+			up_send_ctl SysIP$IP_NUM $ip
+		fi
+
+		# After you add zero ip link, when you use "ifconfig" it will add a virtual link
+		# you need to delete the old one, only one ip will be exist
+		ip address del dev $interface $OLDIP
+		ip address del dev $interface $LINKIP
+		;;
+
+	leasefail)
+		#echo "lease fail..."
+#		OLDIP=`ip address show $interface  | grep 'scope global' | grep 'inet ' | sed 's/^.*inet //g' | sed 's/\/.*$//g'`
+#		if [ "x$OLDIP" != "x" ]; then
+#			ip address del dev $interface $OLDIP
+#		fi
+#
+#		IP=`ifconfig $interface | grep 'inet addr:'| cut -d: -f2 | awk '{ print $1}'`
+#		ZIP=`echo "$IP" | cut -c0-8`
+#		#echo $ZIP >> /tmp/aaa
+#		if [ "$ZIP" != "169.254." ]; then
+#			zcip -q $interface /usr/share/udhcpc/zcip.script
+#		fi
+
+		ZCIP=$(pidof zcip)
+		if [ "$ZCIP" == "" ]; then
+			zcip -v $interface /usr/share/udhcpc/zcip.script &
+		fi		
+		;;
+
+esac
+
+exit 0

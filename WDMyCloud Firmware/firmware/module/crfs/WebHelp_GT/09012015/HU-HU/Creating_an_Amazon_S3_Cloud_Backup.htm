@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="MS-HAID" content="Creating an Amazon S3 Cloud Backup" />
+<meta http-equiv="Content-Language" content="hu-HU" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Amazon S3 felhőalapú biztonsági másolat létrehozása</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Biztonsági másolat készítése a személyes felhőjéről\nFelhőbeli biztonsági másolatok\nAmazon S3 felhőalapú biztonsági másolat létrehozása");
+addButton("show",BTN_TEXT,"Megjelenít","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("index.htm", "", ">", "Nyitóoldal", "welcome.htm");
+document.write("<a href=\"Creating_a_USB_Backup.htm\">Biztonsági másolat készítése a személyes felhőjéről<\/a> > <a href=\"What_is_a_Cloud_Backup.htm\">Felhőbeli biztonsági másolatok<\/a> > Amazon S3 felhőalapú biztonsági másolat létrehozása<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Amazon S3 felhőalapú biztonsági másolat létrehozása</h1>
+<p class="Body"><span style="font-weight: bold;">Megjegyzés</span>: Mielőtt 
+ létrehozná a felhőalapú biztonsági másolatot, regisztráljon az Amazon 
+ S3 szolgáltatásra a következő weboldalon: <a href="http://aws.amazon.com/s3" 
+												 target="_blank">http://aws.amazon.com/s3</a>.</p>
+<p class="Body">Az Amazon S3-fiók beállítása után az alábbi lépések követésével 
+ hozhat létre felhőalapú biztonsági másolatot.</p>
+<ol style="list-style: square;">
+	<li style="list-style: none; display: inline;"><ol style="list-style: decimal;">
+		<li class="n1">Kattintson a <b>Biztonsági másolatok</b> elemre.</li>
+		<li class="n1">Kattintson a <span style="font-weight: bold;">Felhőbeli 
+		 biztonsági másolatok</span> elemre.</li>
+		<li class="n1">Kattintson a képernyő tetején található <b>Amazon 
+		 S3</b> gombra.<img src="Graphics/image016.png" alt="" width="90" 
+							 height="18" border="0" /></li>
+		<li class="n1">Kattintson a <b>Létrehozás</b> elemre.</li>
+		<li class="n1">Adjon munkanevet a felhőalapú biztonsági másolatnak.</li>
+		<li class="n1">Kattintson a <b><b>Tovább</b></b> gombra.</li>
+		<li class="n1">Adja meg az Amazon S3 által biztosított adatokat:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b>Régió:</b> Válassza ki a felhőhöz használt régiót 
+		 a legördülő menüből.</li>
+		<li class="b1"><b>Hozzáférési kulcs:</b> Adja meg az Amazon S3 
+		 által biztosított hozzáférési kulcsot.</li>
+		<li class="b1"><b>Magánkulcs:</b> Adja meg az Amazon S3 által biztosított 
+		 magánkulcsot.</li>
+		<li class="b1"><b>Távoli útvonal:</b> Adja meg a felhő távoli útvonalát. 
+		 Ez a gyűjtőnév általában.</li>
+	</ul>
+	<ol start="8" style="list-style: decimal;">
+		<li class="n1">Kattintson a <b><b>Tovább</b></b> gombra.</li>
+		<li class="n1">A Típus mezőben válassza ki a következők egyikét:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold;">Feltöltés:</b> Biztonsági 
+		 másolat készítése a My Cloud Mirror eszközön tárolt adatokról 
+		 az Amazon S3 gyűjtőbe.</li>
+		<li class="b1"><b style="font-weight: bold;">Letöltés:</b> Biztonsági 
+		 másolat készítése az Amazon S3 gyűjtőről a My Cloud Mirror kiszolgálóra.</li>
+	</ul>
+	<ol start="10" style="list-style: decimal;">
+		<li class="n1">A Biztonsági mentés típusa mezőben, a legördülő 
+		 menüből válassza ki azt a biztonsági mentési típust, amelyet végre 
+		 kíván hajtani. A következő lehetőségek állnak rendelkezésére:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold;">Meglévő fájlok felülírása</b>: 
+		 A célmappában azoknak a fájloknak a felülírása, amelyek a forrásfájlokkal 
+		 megegyező névvel rendelkeznek.</li>
+		<li class="b1"><b>Teljes biztonsági mentés:</b> A biztonsági mentés 
+		 végrehajtásakor mindig létrejön egy külön mappa, amely tartalmazza 
+		 az összes biztonsági mentési adatot.</li>
+		<li class="b1"><b>Növekményes biztonsági mentés:</b> Azoknak a 
+		 fájloknak a felülírása a forrásfájlokkal, amelyek újabbak a célfájloknál.</li>
+	</ul>
+	<ol start="11" style="list-style: decimal;">
+		<li class="n1">Kattintson a <span style="font-weight: bold;">Tovább</span> 
+		 gombra.</li>
+		<li class="n1">A Helyi útvonal mezőben adja meg az útvonalat a 
+		 biztonsági másolathoz a My Cloud Mirror eszközön.</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">A <span style="font-weight: bold;">Böngészés</span> 
+		 gombra kattintva keresse meg az eszközön a biztonsági másolat 
+		 helyét.<br />
+		(Például: Volume_1/backup)</li>
+	</ul>
+	<ol start="13" style="list-style: decimal;">
+		<li class="n1">A <img src="Graphics/toggle_button.png" alt="" width="20" 
+								 height="15" border="0" /> gombra kattintva 
+		 aktiválja az Automatikus frissítés funkciót. Ezzel automatikusan 
+		 frissülni fog a biztonsági másolat a létrehozott ütemezés alapján.</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">Ha aktiválta az Automatikus frissítés funkciót:</li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: circle;">
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">Válassza 
+			 ki az Automatikus frissítés ütemezése elemet: Naponta, Hetente 
+			 vagy Havonta</p></li>
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">Válassza 
+			 ki az automatikus frissítés időpontját a legördülő menüben 
+			 (Naponta).</p></li>
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">Válassza 
+			 ki az automatikus frissítés dátumát és időpontját a legördülő 
+			 menükben (Hetente vagy Havonta).</p></li>
+		</ul></li>
+	</ul>
+	<ol start="14" style="list-style: decimal;">
+		<li class="n1">Kattintson a <b>Tovább</b> gombra.</li>
+		<li class="n1">Tekintse át a beállításokat, majd kattintson a <b>Befejezés</b> 
+		 gombra. Ekkor létrejön az Amazon S3 felhőalapú biztonsági másolat.</li>
+	</ol></li>
+</ol>
+<p class="Body" style="margin-left: 60px;"><span style="font-weight: bold;">MEGJEGYZÉS</span>: 
+ Lépjen az Amazon S3 felhőalapú biztonsági másolat gyűjtőjébe az eszköz 
+ biztonsági másolatainak megtekintéséhez.</p>
+<p class="ListContinue2CxSpLast">&#160;</p>
+<p>
+
+<a href="javascript:void(0);" onclick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) &gt;=2 &amp;&amp; typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','ElephantDrive felhőalapú biztonsági mentés engedélyezése','Enabling_an_ElephantDrive_Cloud_Backup.htm','Mi a felhőalapú biztonsági mentés?','What_is_a_Cloud_Backup.htm');return false;" title="Kapcsolódó témakörök"><img src="ss_btn_kapcsolódó_témakörök.gif" border="0" height="17" width="115" alt="Kapcsolódó témakörök" /></a>
+
+
+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt;">© 2015 Western Digital Technologies, Inc. 
+	 <span lang="de-DE" xml:lang="de-DE"><b style="font-weight: normal;">Minden 
+	 jog fenntartva.</b></span></p>
+</div>
+<script type="text/javascript" language="JavaScript">//<![CDATA[
+if (parseInt(navigator.appVersion) >= 3 && typeof (WritePopupMenuLayer) == "function")
+  WritePopupMenuLayer();
+//]]></script><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>
+

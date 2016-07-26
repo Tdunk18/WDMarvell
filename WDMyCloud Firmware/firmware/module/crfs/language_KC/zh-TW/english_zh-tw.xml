@@ -1,0 +1,3511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<text>
+  <_menu_title>
+    <home len="16">首頁</home>
+    <users len="16">使用者</users>
+    <shares len="16">共享</shares>
+    <cloud_access len="16">雲端存取</cloud_access>
+    <backups len="16">備份</backups>
+    <storage len="16">儲存裝置</storage>
+    <app len="16">應用程式</app>
+    <settings len="16">設定</settings>
+  </_menu_title>
+  <_menu>
+    <lan len="22">LAN 設定</lan>
+    <time len="22">日期和時間</time>
+    <device len="22">裝置</device>
+    <network len="22">網路</network>
+    <quota len="22">配額</quota>
+    <itunes len="22">iTunes 伺服器</itunes>
+    <addon len="22">應用程式</addon>
+    <system len="22">系統設定</system>
+    <firmware len="22">韌體升級</firmware>
+    <email len="22">通知</email>
+    <power len="22">電源管理</power>
+    <ddns len="22">動態 DNS</ddns>
+    <disk len="22">掃描磁碟</disk>
+    <system_info len="22">系統資訊</system_info>
+    <logs len="22">日誌</logs>
+    <p2p_downloads len="22">P2P 下載</p2p_downloads>
+    <p2p_downloads_queue len="22">P2P 下載佇列</p2p_downloads_queue>
+    <time_machine len="22">Time Machine</time_machine>
+    <logout len="22">登出</logout>
+    <network_services len="22">網路服務</network_services>
+    <afp len="22">AFP 服務</afp>
+    <nfs len="22">NFS 服務</nfs>
+    <remote_backups len="22">遠端備份</remote_backups>
+    <web_file_server len="22">網頁檔案檢視器</web_file_server>
+    <language len="22">語言</language>
+    <resource_monitor_estimated len="26">資源監視器估計</resource_monitor_estimated>
+    <ads len="22">Active Directory</ads>
+    <forwarding len="22">連接埠轉送</forwarding>
+    <resource_monitor len="22">資源監視器</resource_monitor>
+    <snmp len="22">SNMP</snmp>
+    <dfs len="23">共享聚集</dfs>
+    <usb_backups len="22">USB 備份</usb_backups>
+    <ipv6 len="22">IPv6 設定</ipv6>
+    <volume_encryption len="22">磁碟區加密</volume_encryption>
+    <usb_device len="22">USB 裝置</usb_device>
+    <my_file len="15">網頁檔案檢視器</my_file>
+    <ftp_downloads len="22">FTP 下載</ftp_downloads>
+    <http_downloads len="22">HTTP 下載</http_downloads>
+    <RAID len="22">RAID</RAID>
+    <general>一般</general>
+    <iso_mount>ISO 掛接</iso_mount>
+    <media>媒體</media>
+    <utilities>公用程式</utilities>
+    <firmware_update>韌體更新</firmware_update>
+    <no_usb>未找到 USB 裝置。</no_usb>
+    <unmount_success>取消掛接成功</unmount_success>
+    <service>服務</service>
+  <safepoints>Safepoint 移轉</safepoints></_menu>
+  <_button>
+    <Skip len="11">略過</Skip>
+    <Ok len="11">確定</Ok>
+    <Next len="11">下一頁</Next>
+    <Cancel len="999">取消</Cancel>
+    <Previous len="11">上一步</Previous>
+    <Exit len="11">結束</Exit>
+    <Restart len="11">重新啟動</Restart>
+    <Completed len="11">已完成</Completed>
+    <save_settings len="20">儲存設定</save_settings>
+    <set_time len="25">從電腦設定時間</set_time>
+    <restore len="16">還原</restore>
+    <shutdown len="16">關機</shutdown>
+    <save len="10">儲存</save>
+    <load len="10">載入</load>
+    <apply len="10">套用</apply>
+    <test_mail len="10">測試電子郵件</test_mail>
+    <normal len="999">正常</normal>
+    <refresh len="10">重新整理</refresh>
+    <refresh_all len="10">全部重新整理</refresh_all>
+    <browse len="10">瀏覽</browse>
+    <finished len="999">完成</finished>
+    <configuration len="999">組態</configuration>
+    <applications len="999">應用程式</applications>
+    <confirm len="11">確認</confirm>
+    <scan_disk len="10">掃描磁碟</scan_disk>
+    <create len="10">建立</create>
+    <finish len="11">完成</finish>
+    <abnormal len="999">異常</abnormal>
+    <local len="10">本機</local>
+    <test len="10">測試</test>
+    <add_torrent len="11">新增 Torrent</add_torrent>
+    <close len="16">關閉</close>
+    <format len="11">格式化</format>
+    <unmount len="10">取消掛接</unmount>
+    <clear len="10">清除</clear>
+    <cfg_link len="10">設定連結</cfg_link>
+    <yes len="10">是</yes>
+    <no len="10">否</no>
+    <add len="10">新增</add>
+    <back len="10">上一頁</back>
+    <search len="10">搜尋</search>
+    <install len="20">安裝與重新開機</install>
+    <remove>移除</remove>
+    <continue>繼續</continue>
+    <dismiss_all>關閉全部</dismiss_all>
+  <switch_to_quick>轉換至快速</switch_to_quick></_button>
+  <_common>
+    <enable len="26">啟用</enable>
+    <disable len="26">停用</disable>
+    <product len="999">產品頁面</product>
+    <firmware len="999">韌體版本</firmware>
+    <update_success len="167">已儲存設定</update_success>
+    <set_success len="167">已成功儲存設定。</set_success>
+    <success len="999">成功</success>
+    <error len="999">錯誤</error>
+    <wait len="999">請稍候...</wait>
+    <add len="10">新增</add>
+    <modify len="10">修改</modify>
+    <del len="10">刪除</del>
+    <page len="10">頁面</page>
+    <of len="999">/</of>
+    <display len="999">顯示</display>
+    <to len="999">至</to>
+    <item len="999">項目</item>
+    <completed len="999">已完成</completed>
+    <message len="999">訊息</message>
+    <start len="999">開始</start>
+    <stop len="999">停止</stop>
+    <loading len="999">載入中...</loading>
+    <saving len="999">儲存中</saving>
+    <connection_error len="45">連線錯誤</connection_error>
+    <no_items len="45">無項目</no_items>
+    <new len="10">新增</new>
+    <wait_msg len="68">WD My Cloud EX2 Ultra 系統正在重新啟動。請等待操作完成。</wait_msg>
+    <shutdown_msg len="68">WD My Cloud EX2 Ultra 系統已關機。</shutdown_msg>
+    <warning len="7">警告</warning>
+    <save_msg len="167">儲存您的新設定？</save_msg>
+    <unlimited len="10">無限制</unlimited>
+    <none len="999">無</none>
+    <quick_search len="26">快速搜尋</quick_search>
+    <pagestat len="36">
+      <![CDATA[顯示 {from} 至 {to} 個項目 (共 {total} 個)]]>
+    </pagestat>
+    <processing len="45">正在處理中，請稍候...</processing>
+    <batch_create len="80">建立多位使用者</batch_create>
+    <import_users len="16">匯入使用者</import_users>
+    <info len="999">資訊</info>
+    <set>設定...</set>
+    <agree>同意</agree>
+    <download>下載中...</download>
+    <filename>檔案名稱</filename>
+    <retrieving>擷取中</retrieving>
+    <updating>更新中</updating>
+    <on>開啟</on>
+    <off>關閉</off>
+    <list>清單</list>
+    <jan>一</jan>
+    <feb>二</feb>
+    <mar>三</mar>
+    <apr>四</apr>
+    <may>五</may>
+    <jun>六</jun>
+    <jul>七</jul>
+    <aug>八</aug>
+    <sep>九</sep>
+    <oct>十</oct>
+    <nov>十一</nov>
+    <dec>十二</dec>
+    <january>一月</january>
+    <february>二月</february>
+    <march>三月</march>
+    <april>四月</april>
+    <june>六月</june>
+    <july>七月</july>
+    <august>八月</august>
+    <september>九月</september>
+    <october>十月</october>
+    <november>十一月</november>
+    <december>十二月</december>
+    <date_format1>dddd, mmmm dd, yyyy, h:MM:ss TT</date_format1>
+    <code>代碼</code>
+    <day>日</day>
+    <hours>小時</hours>
+    <minutes>分鐘後</minutes>
+  <hour>小時</hour>
+    <minute>分鐘後</minute>
+    <days>日</days>
+  <installed>已安裝</installed><checking>正在檢查...</checking></_common>
+  <_login>
+    <user>使用者</user>
+    <sel len="26">請選取您的帳戶</sel>
+    <admin len="31">系統管理員 (admin)</admin>
+    <others len="6">其他</others>
+    <pw len="11">密碼</pw>
+    <remember len="30">記住我</remember>
+    <ssl len="30">SSL 登入</ssl>
+    <login len="16">登入</login>
+    <more len="4">更多</more>
+    <msg1 len="999">只有系統管理員才能存取組態頁面。</msg1>
+    <msg2 len="999">WD My Cloud EX2 Ultra 系統正在重新啟動。請等待操作完成。</msg2>
+    <msg3 len="115">輸入的使用者名稱或密碼不正確。&lt;br&gt;請重新輸入。</msg3>
+    <msg4 len="115">輸入的使用者帳戶目前正在使用中。&lt;br&gt;請連絡系統管理員或稍後再試一次。</msg4>
+    <msg5 len="167">登入超時。請再次登入。</msg5>
+    <msg6 len="115"><![CDATA[您輸入的使用者名稱或密碼不正確。請登入<a href="%s" target="_blank">此處</a>以便獲取援助。]]></msg6>
+    <msg_booting len="167">系統正在開機，請稍候。</msg_booting>
+  <msg7>未建立密碼</msg7>
+  <msg_system_restore>系統正在格式化，請稍候。</msg_system_restore><msg8>您輸入的密碼已到期。請聯絡您的域管理員以設置新的密碼。</msg8><msg_scandisk_power_failure>系統電源曾中斷。正執行檔案系統一致性檢查。請稍候。</msg_scandisk_power_failure><msg9>不支援的瀏覽器</msg9><msg10>&lt;p&gt;不支援這個版本的 Internet Explorer。&lt;/p&gt;
+&lt;p&gt;升級至最新版本的 Microsoft Internet Explorer 或是使用其他相容的瀏覽器（例如 Google Chrome 或是 Mozilla Firefox）以檢視這個網站介面。&lt;/p&gt;</msg10><msg11>只允許管理員使用者。</msg11><account_locked>您的網域帳戶已被鎖定。請聯絡您的網域管理員以獲得協助。</account_locked></_login>
+  <_home>
+    <storage len="23">儲存裝置狀態</storage>
+    <shutdown len="13">關機</shutdown>
+    <restart len="13">重新啟動</restart>
+    <welcome len="32">歡迎使用</welcome>
+    <capacity len="10">容量</capacity>
+    <available len="10">可用</available>
+    <system_log len="24">最近活動</system_log>
+    <temperature>溫度</temperature>
+    <normal>正常</normal>
+    <elevated>提升</elevated>
+    <critical>嚴重</critical>
+    <healthy>健全</healthy>
+    <RPM>RPM</RPM>
+    <imminent_failure>即將發生的錯誤</imminent_failure>
+    <fault>故障</fault>
+    <diagnostics>診斷</diagnostics>
+    <firmware len="22">韌體</firmware>
+    <free len="999">可用</free>
+    <desc1 len="999">容量使用狀況</desc1>
+    <desc2 len="999">My Cloud EX2 Ultra 系統容量目前使用狀況。</desc2>
+    <desc3 len="999">顯示系統元件的快照，指出 WD My Cloud EX2 Ultra 系統的整體健全狀況。</desc3>
+    <desc4 len="999">溫度狀態</desc4>
+    <desc5 len="999">磁碟機 SMART 狀態</desc5>
+    <desc6 len="999">風扇轉速狀態</desc6>
+    <desc7 len="999">風扇轉速</desc7>
+    <desc8 len="999">磁碟機狀態</desc8>
+    <desc9 len="999">RAID 狀態</desc9>
+    <desc10 len="999">警告</desc10>
+    <desc11 len="999">可使用</desc11>
+    <desc12 len="999">影片</desc12>
+    <desc13 len="999">音樂</desc13>
+    <desc14 len="999">照片</desc14>
+    <desc15 len="999">其他</desc15>
+    <msg1 len="999">系統將關機。您要繼續嗎？</msg1>
+    <msg2 len="999">未找到任何 USB 裝置。</msg2>
+    <usb_details>USB 裝置詳細資訊</usb_details>
+    <usb_device_name>USB 裝置詳細名稱</usb_device_name>
+    <usb_manufacturer>製造商</usb_manufacturer>
+    <usb_model>型號</usb_model>
+    <usb_serial_number>序號</usb_serial_number>
+    <usb_firmware_version>韌體版本</usb_firmware_version>
+    <usb_Size>大小</usb_Size>
+    <usb_unlock_device>解鎖 USB 裝置</usb_unlock_device>
+    <usb_password>密碼</usb_password>
+    <usb_password_hint>密碼提示</usb_password_hint>
+    <usb_save_password>儲存密碼</usb_save_password>
+    <usb_eject_title>退出 USB 裝置？</usb_eject_title>
+    <usb_eject_msg>
+  &lt;b&gt;您確定要退出此 USB 裝置嗎？&lt;/b&gt;
+  &lt;ul&gt;
+   &lt;li&gt;退出此 USB 裝置將刪除 My Cloud EX2 Ultra 系統所有相關共享。&lt;/li&gt;
+   &lt;li&gt;正在進行的所有備份任務將中斷。&lt;/li&gt;
+   &lt;li&gt;如果您從遠端登入，直到重新插入裝置前，您無法存取該 USB 裝置。&lt;/li&gt;
+  &lt;/ul&gt;
+  </usb_eject_msg>
+    <umount_usb_drive>退出 USB 磁碟機</umount_usb_drive>
+    <usb_size>{0} 可用 {1}</usb_size>
+    <usb_unlock_password_error>不正確的 USB 密碼。請再試一次。</usb_unlock_password_error>
+    <usb_unlock>解鎖</usb_unlock>
+
+    <ups_details>UPS 裝置詳細資訊</ups_details>
+    <ups_barrery_charge_bar>電池充電： {0}{1}</ups_barrery_charge_bar>
+    <ups_barrery_charge>電池充電</ups_barrery_charge>
+    <ups_barrery_charge_OL>使用線路</ups_barrery_charge_OL>
+    <ups_barrery_charge_OB>使用電池</ups_barrery_charge_OB>
+    <ups_barrery_charge_LB>電池電量低</ups_barrery_charge_LB>
+    <ups_status>狀態</ups_status>
+  <usb_unlock_exceeded>
+  嘗試密碼復原次數過多。&lt;br&gt;
+  如果要再試一次：&lt;br&gt;
+  1.從My Cloud EX2 Ultra系統中安全移除 USB 記憶盤&lt;br&gt;
+  2.將 USB 記憶盤重新連接至My Cloud EX2 Ultra系統&lt;br&gt;
+  </usb_unlock_exceeded>
+  <usb_unlock_exceeded_title>嘗試輸入密碼次數過多</usb_unlock_exceeded_title>
+  <desc16>S.M.A.R.T.溫度</desc16>
+  <desc17>磁碟機X 溫度</desc17>
+  <usb_port_num>已連接 USB 連接埠 {0}</usb_port_num><usb_port_front>已連接 USB 連接埠前端面板</usb_port_front></_home>
+  <_user_login_home>
+    <quick_status>快速狀態</quick_status>
+    <last_time_login>最後一次登入：</last_time_login>
+    <total_ftp_downloads>FTP 下載總計</total_ftp_downloads>
+    <total_http_downloads>HTTP 下載總計</total_http_downloads>
+    <total_p2p_downloads>P2P 下載總計</total_p2p_downloads>
+    <download_wd_apps>下載 WD 應用程式</download_wd_apps>
+    <wd_my_cloud_desktop>My Cloud 桌面</wd_my_cloud_desktop>
+    <wd_2go_photos>My Cloud 和 WD Photos</wd_2go_photos>
+  </_user_login_home>
+  <_lan>
+    <title len="61">LAN 設定</title>
+    <title2 len="61">IPv6 設定</title2>
+    <title3>網路設定檔</title3>
+    <wizard_description len="999">
+   此精靈提供如何設定 WD My Cloud EX2 Ultra 系統網路介面的分解步驟指示。
+   按&lt;b&gt;下一步&lt;/b&gt;繼續。
+  </wizard_description>
+    <wizard_description2 len="999">
+      <![CDATA[
+	 		1.IP 設定<br><br> 2.摘要<br>
+		]]>
+    </wizard_description2>
+    <ip_description len="999">
+      <![CDATA[請根據您的網路設定，來設定這些 LAN 設定。]]>
+    </ip_description>
+    <vlan_description len="999">按一下開關按鈕以開啟/關閉 VLAN 設定。&lt;br&gt;
+  每個 VLAN 都需要 ID。輸入與 VLAN 相關聯的號碼。
+  </vlan_description>
+    <dhcp_client len="30">DHCP 用戶端</dhcp_client>
+    <static_ip len="30">靜態 IP</static_ip>
+    <ip_address len="30">IP 位址</ip_address>
+    <subnet_mask len="30">子網路遮罩</subnet_mask><gateway len="30">閘道 IP 位址</gateway><dns len="30">DNS 伺服器</dns><dns1 len="30">DNS 伺服器 1</dns1><dns2 len="30">DNS 伺服器 2</dns2><dns3 len="30">DNS 伺服器 3</dns3><mac len="30">Mac 位址</mac><lltd_title len="999">LLTD 設定</lltd_title><lltd len="25">LLTD</lltd><jumbo_frame>Jumbo 框架</jumbo_frame><speed_title len="999">連結速度設定</speed_title><speed len="30">連結速度</speed><speed2 len="30">速度</speed2><auto len="999">自動</auto><lan1 len="999">LAN 1</lan1><lan2 len="999">LAN 2</lan2><merge len="999">LAN 1 + LAN 2</merge><vlan_id_info len="999">1-4094</vlan_id_info><vlan len="999">VLAN</vlan><vlan_id len="999">VLAN ID</vlan_id><route_title len="999">路由設定</route_title><tunnel_title len="999">Tunnel Broker 設定</tunnel_title><dns_auto1 len="999">自動取得 DNS 伺服器位址。</dns_auto1><dns_auto2 len="999">使用下列 DNS 伺服器位址。</dns_auto2><ftp_access len="999">FTP 存取</ftp_access><ftp_access_set len="999">FTP 設定</ftp_access_set><ftp_config len="999">設定</ftp_config><choose_dhcp>請選擇 DHCP 模式設定。</choose_dhcp><auto_fill>使用 Google Public DNS</auto_fill><google_dns>使用 Google Public DNS 需遵守適用的 Google 服務條款及隱私權原則。</google_dns><smb2>SMB 2</smb2><max_smb>最大 SMB 通訊協定</max_smb><network_mode>網路模式</network_mode></_lan>
+  <_time>
+    <date_format>日期格式</date_format>
+    <time_format>時間格式</time_format>
+    <title len="999">
+      <![CDATA[語言與時間]]>
+    </title>
+    <current_time len="40">
+      <![CDATA[日期與時間]]>
+    </current_time>
+    <time_d_header>
+      <![CDATA[日期與時間設定]]>
+    </time_d_header>
+    <time_d_desc>輸入現在的日期與時間。</time_d_desc>
+    <date len="30">日期</date>
+    <time len="30">時間</time>
+    <timezone len="40">時區</timezone>
+    <GMT-12-00 len="999">
+      <![CDATA[(GMT-12:00) 國際換日線以西]]>
+    </GMT-12-00>
+    <GMT-11-00 len="999">
+      <![CDATA[(GMT-11:00) UTC-11]]>
+    </GMT-11-00>
+    <GMT-11-00_1 len="999">
+      <![CDATA[(GMT-11:00) 薩摩亞]]>
+    </GMT-11-00_1>
+    <GMT-10-00 len="999">
+      <![CDATA[(GMT-10:00) 夏威夷]]>
+    </GMT-10-00>
+    <GMT-09-00 len="999">
+      <![CDATA[(GMT-09:00) 阿拉斯加]]>
+    </GMT-09-00>
+    <GMT-08-00 len="999">
+      <![CDATA[(GMT-08:00) 下加利福尼亞州]]>
+    </GMT-08-00>
+    <GMT-08-00_1 len="999">
+      <![CDATA[(GMT-08:00) 太平洋時間 (美國及加拿大)]]>
+    </GMT-08-00_1>
+    <GMT-07-00 len="999">
+      <![CDATA[(GMT-07:00) 山區時間 (美國及加拿大)]]>
+    </GMT-07-00>
+    <GMT-07-00_1 len="999">
+      <![CDATA[(GMT-07:00) 亞利桑那]]>
+    </GMT-07-00_1>
+    <GMT-07-00_2 len="999">
+      <![CDATA[(GMT-07:00) 齊驊華，拉帕茲，馬扎特蘭]]>
+    </GMT-07-00_2>
+    <GMT-06-00 len="999">
+      <![CDATA[(GMT-06:00) 中美洲]]>
+    </GMT-06-00>
+    <GMT-06-00_1 len="999">
+      <![CDATA[(GMT-06:00) 中部時間 (美國及加拿大)]]>
+    </GMT-06-00_1>
+    <GMT-06-00_2 len="999">
+      <![CDATA[(GMT-06:00) 瓜達拉加若，墨西哥城，蒙特利]]>
+    </GMT-06-00_2>
+    <GMT-06-00_3 len="999">
+      <![CDATA[(GMT-06:00) 薩克其萬]]>
+    </GMT-06-00_3>
+    <GMT-05-00 len="999">
+      <![CDATA[(GMT-05:00) 印度安納 (東部)]]>
+    </GMT-05-00>
+    <GMT-05-00_1 len="999">
+      <![CDATA[(GMT-05:00) 東部時間 (美國及加拿大)]]>
+    </GMT-05-00_1>
+    <GMT-09-00_2 len="999">
+      <![CDATA[(GMT-05:00) 波哥大，利馬，基多]]>
+    </GMT-09-00_2>
+    <GMT-04-30 len="999">
+      <![CDATA[(GMT-04:30) 卡拉卡斯]]>
+    </GMT-04-30>
+    <GMT-04-00 len="999">
+      <![CDATA[(GMT-04:00) 大西洋時間 (加拿大)]]>
+    </GMT-04-00>
+    <GMT-04-00_1 len="999">
+      <![CDATA[(GMT-04:00) 喬治城，拉帕茲，瑪瑙斯，聖胡安]]>
+    </GMT-04-00_1>
+    <GMT-04-00_2 len="999">
+      <![CDATA[(GMT-04:00) 亞松森]]>
+    </GMT-04-00_2>
+    <GMT-04-00_3 len="999">
+      <![CDATA[(GMT-04:00) 聖地牙哥]]>
+    </GMT-04-00_3>
+    <GMT-04-00_4 len="999">
+      <![CDATA[(GMT-04:00) 古雅巴]]>
+    </GMT-04-00_4>
+    <GMT-03-30 len="999">
+      <![CDATA[(GMT-03:30) 紐芬蘭]]>
+    </GMT-03-30>
+    <GMT-03-00 len="999">
+      <![CDATA[(GMT-03:00) 巴西利亞]]>
+    </GMT-03-00>
+    <GMT-03-00_1 len="999">
+      <![CDATA[(GMT-03:00) 布宜諾斯艾利斯]]>
+    </GMT-03-00_1>
+    <GMT-03-00_2 len="999">
+      <![CDATA[(GMT-03:00) 格陵蘭]]>
+    </GMT-03-00_2>
+    <GMT-03-00_3 len="999">
+      <![CDATA[(GMT-03:00) 開雲，福塔力沙]]>
+    </GMT-03-00_3>
+    <GMT-03-00_4 len="999">
+      <![CDATA[(GMT-03:00) 蒙特維多]]>
+    </GMT-03-00_4>
+    <GMT-02-00 len="999">
+      <![CDATA[(GMT-02:00) 大西洋中部]]>
+    </GMT-02-00>
+    <GMT-02-00_1 len="999">
+      <![CDATA[(GMT-02:00) UTC-2]]>
+    </GMT-02-00_1>
+    <GMT-01-00 len="999">
+      <![CDATA[(GMT-01:00) 亞速爾群島]]>
+    </GMT-01-00>
+    <GMT-01-00_1 len="999">
+      <![CDATA[(GMT-01:00) 維德角群島]]>
+    </GMT-01-00_1>
+    <GMT len="999">
+      <![CDATA[(GMT) 卡薩布蘭卡]]>
+    </GMT>
+    <GMT_1 len="999">
+      <![CDATA[(GMT) 格林威治標準時間]]>
+    </GMT_1>
+    <GMT_2 len="999">
+      <![CDATA[(GMT) 蒙羅維亞，雷克雅維克]]>
+    </GMT_2>
+    <GMT_3 len="999">
+      <![CDATA[(GMT) 都柏林，愛丁堡，里斯本，倫敦]]>
+    </GMT_3>
+    <GMT01-00 len="999">
+      <![CDATA[(GMT+01:00) 中西非]]>
+    </GMT01-00>
+    <GMT01-00_1 len="999">
+      <![CDATA[(GMT+01:00) 布魯塞爾，哥本哈根，馬德里，巴黎]]>
+    </GMT01-00_1>
+    <GMT01-00_2 len="999">
+      <![CDATA[(GMT+01:00) 貝爾格勒，布拉提斯拉瓦，布達佩斯，盧布亞納，布拉格]]>
+    </GMT01-00_2>
+    <GMT01-00_3 len="999">
+      <![CDATA[(GMT+01:00) 阿姆斯特丹，柏林，伯恩，羅馬，斯德哥爾摩，維也納]]>
+    </GMT01-00_3>
+    <GMT01-00_4 len="999">
+      <![CDATA[(GMT+01:00) 塞拉耶佛，斯高彼亞，華沙，札格雷布]]>
+    </GMT01-00_4>
+    <GMT01-00_5 len="999">
+      <![CDATA[(GMT+01:00) 溫吐克]]>
+    </GMT01-00_5>
+    <GMT02-00 len="999">
+      <![CDATA[(GMT+02:00) 安曼]]>
+    </GMT02-00>
+    <GMT02-00_1 len="999">
+      <![CDATA[(GMT+02:00) 貝魯特]]>
+    </GMT02-00_1>
+    <GMT02-00_2 len="999">
+      <![CDATA[(GMT+02:00) 明思克]]>
+    </GMT02-00_2>
+    <GMT02-00_3 len="999">
+      <![CDATA[(GMT+02:00) 哈拉雷，普利托里亞]]>
+    </GMT02-00_3>
+    <GMT02-00_4 len="999">
+      <![CDATA[(GMT+02:00) 耶路撒冷]]>
+    </GMT02-00_4>
+    <GMT02-00_5 len="999">
+      <![CDATA[(GMT+02:00) 開羅]]>
+    </GMT02-00_5>
+    <GMT02-00_6 len="999">
+      <![CDATA[(GMT+02:00) 雅典，布加勒斯特]]>
+    </GMT02-00_6>
+    <GMT02-00_7 len="999">
+      <![CDATA[(GMT+02:00) 溫吐克]]>
+    </GMT02-00_7>
+    <GMT02-00_8 len="999">
+      <![CDATA[(GMT+02:00) 赫爾辛基，基輔，里加，塔林，維爾紐斯]]>
+    </GMT02-00_8>
+    <GMT02-00_9 len="999">
+      <![CDATA[(GMT+02:00) 大馬士革]]>
+    </GMT02-00_9>
+    <GMT02-00_10 len="999">
+      <![CDATA[(GMT+02:00) 尼古西亞]]>
+    </GMT02-00_10>
+    <GMT02-00_11 len="999">
+      <![CDATA[(GMT+02:00) 伊斯坦堡]]>
+    </GMT02-00_11>
+    <GMT03-00 len="999">
+      <![CDATA[(GMT+03:00) 巴格達]]>
+    </GMT03-00>
+    <GMT03-00_1 len="999">
+      <![CDATA[(GMT+03:00) 奈洛比]]>
+    </GMT03-00_1>
+    <GMT03-00_2 len="999">
+      <![CDATA[(GMT+03:00) 科威特，利雅德]]>
+    </GMT03-00_2>
+    <GMT03-00_3 len="999">
+      <![CDATA[(GMT+03:00) 卡里寧格勒，明思克]]>
+    </GMT03-00_3>
+    <GMT03-30 len="999">
+      <![CDATA[(GMT+03:30) 德黑蘭]]>
+    </GMT03-30>
+    <GMT04-00 len="999">
+      <![CDATA[(GMT+04:00) 巴庫]]>
+    </GMT04-00>
+    <GMT04-00_1 len="999">
+      <![CDATA[(GMT+04:00) 阿布達比，馬斯喀特]]>
+    </GMT04-00_1>
+    <GMT04-00_2 len="999">
+      <![CDATA[(GMT+04:00) 第比利斯]]>
+    </GMT04-00_2>
+    <GMT04-00_3 len="999">
+      <![CDATA[(GMT+04:00) 葉里溫]]>
+    </GMT04-00_3>
+    <GMT04-00_4 len="999">
+      <![CDATA[(GMT+04:00) 路易士港]]>
+    </GMT04-00_4>
+    <GMT03-00_4 len="999">
+      <![CDATA[(GMT+03:00) 莫斯科，聖彼得堡，伏爾加格勒]]>
+    </GMT03-00_4>
+    <GMT04-30 len="999">
+      <![CDATA[(GMT+04:30) 喀布爾]]>
+    </GMT04-30>
+    <GMT05-00_1 len="999">
+      <![CDATA[(GMT+05:00) 伊斯蘭馬巴德，克洛奇]]>
+    </GMT05-00_1>
+    <GMT05-00_2 len="999">
+      <![CDATA[(GMT+05:00) 塔什干]]>
+    </GMT05-00_2>
+    <GMT05-30 len="999">
+      <![CDATA[(GMT+05:30) 清奈，加爾各答，孟買，新德里]]>
+    </GMT05-30>
+    <GMT05-30_1 len="999">
+      <![CDATA[(GMT+05:30) 斯里哈亞華登尼普拉]]>
+    </GMT05-30_1>
+    <GMT05-45 len="999">
+      <![CDATA[(GMT+05:45) 加得滿都]]>
+    </GMT05-45>
+    <GMT06-00 len="999">
+      <![CDATA[(GMT+06:00) 阿斯坦那]]>
+    </GMT06-00>
+    <GMT06-00_1 len="999">
+      <![CDATA[(GMT+06:00) 新西伯利亞]]>
+    </GMT06-00_1>
+    <GMT06-00_2 len="999">
+      <![CDATA[(GMT+06:00) 達卡]]>
+    </GMT06-00_2>
+    <GMT06-00_3 len="999">
+      <![CDATA[(GMT+06:00) 伊卡特林堡]]>
+    </GMT06-00_3>
+    <GMT06-30 len="999">
+      <![CDATA[(GMT+06:30) 仰光]]>
+    </GMT06-30>
+    <GMT07-00 len="999">
+      <![CDATA[(GMT+07:00) 克拉斯諾亞爾斯克]]>
+    </GMT07-00>
+    <GMT07-00_1 len="999">
+      <![CDATA[(GMT+07:00) 曼谷，河內，雅加達]]>
+    </GMT07-00_1>
+    <GMT07-00_2 len="999">
+      <![CDATA[(GMT+07:00) 新西伯利亞]]>
+    </GMT07-00_2>
+    <GMT08-00 len="999">
+      <![CDATA[(GMT+08:00) 北京，重慶，香港，烏魯木齊]]>
+    </GMT08-00>
+    <GMT08-00_1 len="999">
+      <![CDATA[(GMT+08:00) 台灣台北]]>
+    </GMT08-00_1>
+    <GMT08-00_2 len="999">
+      <![CDATA[(GMT+08:00) 吉隆坡，新加坡]]>
+    </GMT08-00_2>
+    <GMT08-00_3 len="999">
+      <![CDATA[(GMT+08:00) 伯斯]]>
+    </GMT08-00_3>
+    <GMT08-00_4 len="999">
+      <![CDATA[(GMT+08:00) 烏蘭巴托]]>
+    </GMT08-00_4>
+    <GMT08-00_5 len="999">
+      <![CDATA[(GMT+08:00) 克拉斯諾亞爾斯克]]>
+    </GMT08-00_5>
+    <GMT09-00 len="999">
+      <![CDATA[(GMT+09:00) 大阪，札幌，東京]]>
+    </GMT09-00>
+    <GMT09-00_1 len="999">
+      <![CDATA[(GMT+09:00) 伊爾庫次克]]>
+    </GMT09-00_1>
+    <GMT09-00_2 len="999">
+      <![CDATA[(GMT+09:00) 首爾]]>
+    </GMT09-00_2>
+    <GMT09-30 len="999">
+      <![CDATA[(GMT+09:30) 阿德雷德]]>
+    </GMT09-30>
+    <GMT09-30_1 len="999">
+      <![CDATA[(GMT+09:30) 達爾文]]>
+    </GMT09-30_1>
+    <GMT10-00 len="999">
+      <![CDATA[(GMT+10:00) 布里斯本]]>
+    </GMT10-00>
+    <GMT10-00_1 len="999">
+      <![CDATA[(GMT+10:00) 坎培拉，墨爾本，雪梨]]>
+    </GMT10-00_1>
+    <GMT10-00_2 len="999">
+      <![CDATA[(GMT+10:00) 亞庫茲克]]>
+    </GMT10-00_2>
+    <GMT10-00_3 len="999">
+      <![CDATA[(GMT+10:00) 霍巴特]]>
+    </GMT10-00_3>
+    <GMT10-00_4 len="999">
+      <![CDATA[(GMT+10:00) 關島，墨爾斯貝港]]>
+    </GMT10-00_4>
+    <GMT11-00 len="999">
+      <![CDATA[(GMT+11:00) 海參威]]>
+    </GMT11-00>
+    <GMT11-00_1 len="999">
+      <![CDATA[(GMT+11:00) 所羅門群島，新喀里多尼亞群島]]>
+    </GMT11-00_1>
+    <GMT12-00 len="999">
+      <![CDATA[(GMT+12:00) 馬加丹]]>
+    </GMT12-00>
+    <GMT12-00_1 len="999">
+      <![CDATA[(GMT+12:00) 彼得保羅夫斯克-堪察加斯克]]>
+    </GMT12-00_1>
+    <GMT12-00_2 len="999">
+      <![CDATA[(GMT+12:00) UTC+12]]>
+    </GMT12-00_2>
+    <GMT12-00_3 len="999">
+      <![CDATA[(GMT+12:00) 斐濟]]>
+    </GMT12-00_3>
+    <GMT12-00_4 len="999">
+      <![CDATA[(GMT+12:00) 奧克蘭，威林頓]]>
+    </GMT12-00_4>
+    <GMT13-00 len="999">
+      <![CDATA[(GMT+13:00) 努瓜婁發]]>
+    </GMT13-00>
+    <GMT13-00_1 len="999">
+      <![CDATA[(GMT+13:00) 薩摩亞]]>
+    </GMT13-00_1>
+    <ntp_service>NTP 服務</ntp_service>
+    <ntp_title len="999">NTP 設定</ntp_title>
+    <ntp_desc>
+      <![CDATA[
+		NTP 服務與您的網路同步，並在您的 WD My Cloud EX2 Ultra 裝置上自動更新日期及時間。<br><br>目前 NTP 伺服器 <br> <br>
+			]]>
+    </ntp_desc>
+    <ntp_user>使用者定義 NTP 伺服器</ntp_user>
+    <ntp_server len="999">主要伺服器</ntp_server>
+    <add_ntp>新增使用者 NTP</add_ntp>
+    <ntp_status>NTP 狀態</ntp_status>
+    <msg1 len="999">無法連線至此 NTP 伺服器。</msg1>
+    <msg2 len="999">這不是正確的日期格式。</msg2>
+    <msg3 len="999">請輸入時間伺服器 IP 位址。</msg3>
+    <msg4 len="999">重要注意事項：您必須先選取正確的時區，才能輸入時間設定。</msg4>
+  </_time>
+  <_device>
+    <title len="999">裝置設定檔</title>
+    <title2 len="999">網路工作群組</title2>
+    <title3 len="999">Windows 服務</title3>
+    <workgroup len="999">工作群組</workgroup>
+    <name len="999">裝置名稱</name>
+    <device_description len="999">描述</device_description>
+    <lmb len="999">本機主瀏覽器</lmb>
+    <sdesc len="999">共享描述</sdesc>
+    <serial_number>序號</serial_number>
+    <msg1 len="999">工作群組不能包含空格。</msg1>
+    <msg2 len="999">輸入工作群組。</msg2>
+    <msg3 len="999">工作群組不能超過 16 個字元。</msg3>
+    <msg4 len="999">輸入裝置名稱。</msg4>
+    <msg5 len="999">裝置名稱不能超過 15 個字元。</msg5>
+    <msg6 len="999">輸入裝置描述。</msg6>
+    <msg7 len="999">裝置描述不能超過 32 個字元。</msg7>
+    <msg8 len="999">
+      <![CDATA[工作群組不能包含下列字元：*+=|[]/\:";<>?,]]>
+    </msg8>
+    <msg9 len="999">無效的伺服器名稱。</msg9>
+    <msg10 len="999">無效的裝置名稱。裝置名稱長度必須在 2 到 15 個字元之間，而且僅能包含字母、數字和破折號。它不能以數字或連字號開始。</msg10>
+    <msg11 len="999">裝置名稱不能包含空格。</msg11>
+    <msg12 len="999">
+      <![CDATA[裝置描述必須以英數字母為字首，可包含空格以及底線並不超過 42 個字元。]]>
+    </msg12>
+    <msg13 len="999">第一個和最後一個字元不可空白。</msg13>
+    <msg14 len="999">裝置名稱不能以數字或連字號開始。</msg14>
+  <msg15>更改裝置名稱可能造成已建立的連線，如裝置映射、別名、備份和 Time Machine 備份要求重置。如果您想繼續更改，請檢查並重新建立連接線。</msg15></_device>
+  <_module>
+    <title len="999">應用程式設定檔</title>
+    <title2 len="999">服務條款</title2>
+    <file_path len="999">檔案路徑</file_path>
+    <no len="999">號碼</no>
+    <module_name len="999">模組名稱</module_name>
+    <version len="999">版本</version>
+    <status len="999">狀態</status>
+    <on_off len="999">啟動/停止</on_off>
+    <del len="999">刪除</del>
+    <date len="999">安裝日期</date>
+    <path len="999">安裝路徑</path>
+    <logitech len="999">羅技網站</logitech>
+    <desc1>手動安裝</desc1>
+    <desc2>詳細資訊</desc2>
+    <desc3>已安裝的應用程式</desc3>
+    <desc4>N/A</desc4>
+    <desc5>安裝應用程式</desc5>
+    <desc6>瀏覽應用程式</desc6>
+    <desc7>組態 URL</desc7>
+    <desc8>已停用</desc8>
+    <desc9>已啟用</desc9>
+    <desc10>瀏覽第三方供應商的應用程式，並選取您要下載和安裝的項目。所有應用程式都已獲 WD 認證。</desc10>
+    <desc11>可用的應用程式</desc11>
+    <desc12>安裝</desc12>
+    <desc13>起始裝置</desc13>
+    <desc14>可用更新</desc14>
+    <desc15>下載中</desc15>
+    <desc16>正在安裝</desc16>
+    <desc17>管理您所有的應用程式</desc17>
+    <desc18>應用程式為 My Cloud 系統帶來其他功能。請在安裝之前先檢閱應用程式的詳細資料。</desc18>
+    <desc19><![CDATA[若要手動安裝應用程式，請按一下<a href="" onclick="return false;">此處</a>。]]></desc19>
+    <desc20>安裝日期</desc20>
+    <desc21>應用程式名稱</desc21>
+    <desc22>應用程式詳細資訊</desc22>
+    <desc23>xxx 應用程式有可用更新。請參閱下方的詳細資訊。</desc23>
+    <desc24>新功能</desc24>
+    <desc25>更新</desc25>
+    <desc26>管理應用程式</desc26>
+    <desc27>新增應用程式</desc27>
+    <desc28>可用更新</desc28>
+    <desc29>移除應用程式</desc29>
+    <desc30>下列應用程式有可用更新：</desc30>
+    <desc31>無可用的應用程式。</desc31>
+    <desc32>注意：各應用程式的支援應向個別供應商索取</desc32>
+    <desc33><![CDATA[若要手動安裝應用程式，請按一下 <div class="file_input_div" style="width:50px;float:right;border:0px solid red;text-align:left;text-decoration:underline;"> 此處。<input type="file" name="f_apps_file" class="file_input_hidden" id="f_apps_file" onchange="apps_manually_install();"></div>]]></desc33>
+    <desc34>請先檢閱並接受這些條款和條件，然後再繼續。</desc34>
+    <msg1 len="50">選取封裝。</msg1>
+    <msg2 len="96">安裝模組...</msg2>
+    <msg3 len="50">您要移除此應用程式嗎？</msg3>
+    <msg4 len="96">應用程式已成功安裝。</msg4>
+    <msg5 len="96">無法安裝應用程式。無法使用 My Cloud 系統中的儲存容量。</msg5>
+    <msg6 len="96">安裝應用程式失敗。</msg6>
+    <msg7 len="50"> {0} 應用程式已經安裝於 My Cloud 系統。您是否要重新安裝應用程式？</msg7>
+    <msg8 len="96">無法安裝應用程式。My Cloud 系統中的儲存空間不夠。請釋放儲存空間並重試。</msg8>
+    <msg9 len="96">無法啟用應用程式。</msg9>
+    <msg10 len="96">應用程式已成功啟用。</msg10>
+    <msg11 len="96">已成功刪除模組。</msg11>
+    <msg12 len="999">已達模組數量上限。</msg12>
+    <msg13 len="96"><![CDATA[從 xxx 下載 Squeeze Center 封裝，並將封裝置於 Volume_1 資料夾下。]]></msg13>
+    <msg14 len="342">此附加元件不是由 WD 建立的。WD 不提供第三方附加元件支援，而如果問題是由第三方附加元件直接導致，可能不提供產品支援。安裝此附加元件，表示您明確同意使用此附加元件的風險自負。</msg14>
+    <msg15 len="342">此附加元件不是由 Western Digitial Corporation 建立的。您要取代此附加元件嗎？</msg15>
+    <msg16 len="999">您的磁碟空間不足。請先刪除一些項目，然後再試一次。</msg16>
+    <msg17 len="999">需要更新的韌體才能安裝此應用程式。請升級 My Cloud 系統韌體並重試。</msg17>
+    <button1>拒絕</button1>
+    <button2>接受</button2>
+  <msg24> {0} 應用程式已成功安裝於 My Cloud 系統。</msg24><msg25> {0} 與 {1} 應用程式已成功安裝於 My Cloud 系統。</msg25><msg26>將刪除所有應用程式資料與設定。&lt;br&gt;&lt;/br&gt;您是否確定要解除安裝 {0}?</msg26><title3>解除安裝 {0}</title3><tip1>解除安裝應用程式</tip1><tip2>安裝應用程式</tip2><msg19>應用程式無法運作，因為此應用程式依賴其他應用程式的運作。</msg19><msg20>應用程式無法移除，因為其他應用程式依賴此應用程式。</msg20><msg21>應用程式無法停止，因為其他應用程式依賴此應用程式。</msg21></_module>
+  <_user>
+  	<groups>群組</groups>
+    <setup_user len="999">設定使用者</setup_user>
+    <setup_group len="999">設定群組</setup_group>
+    <about_user len="999">使用者說明</about_user>
+    <about_group len="999">群組說明</about_group>
+    <user_title len="999">新增使用者</user_title>
+    <del_user_title len="999">刪除使用者</del_user_title>
+    <del_group_title len="999">刪除群組</del_group_title>
+    <modify_group_title len="999">修改群組</modify_group_title>
+    <modify_pw_title len="999">編輯密碼</modify_pw_title>
+    <modify_quota_title len="999">修改配額</modify_quota_title>
+    <del_user_desc len="999">您確定要刪除此使用者嗎？</del_user_desc>
+    <del_group_desc len="999">您確定要刪除此群組嗎？</del_group_desc>
+    <user_desc len="999">控制可存取 WD My Cloud EX2 Ultra 系統的人員以及他們的存取類型。</user_desc>
+    <group_desc len="999">群組是一組使用者集合，方便您一次管理多位使用者。</group_desc>
+    <modify_group_desc>使用下方清單可在此群組中新增或移除使用者。</modify_group_desc>
+    <user_profile len="999">使用者設定檔</user_profile>
+    <group_profile len="999">群組設定檔</group_profile>
+    <user_description4 len="999">      <![CDATA[允許使用者存取下列應用程式]]>    </user_description4>
+    <user_description7 len="999">
+      <![CDATA[如果您不想要設定任何使用者配額，請保持欄位空白。]]>
+    </user_description7>
+    <create_user>建立新的使用者帳戶</create_user>
+    <share_access len="999">共享存取</share_access>
+    <all len="999">全部</all>
+    <select_group len="999">選取要新增至群組的使用者。</select_group>
+    <add_group len="999">新增群組</add_group>
+    <select_share_folder len="999">網路共享設定</select_share_folder>
+    <group_title len="999">群組設定</group_title>
+    <import_description2 len="999">
+      <![CDATA[勾選您要使用的欄位 (變為灰色的選項代表已預設選取)]]>
+    </import_description2>
+    <create_group len="999">建立新群組</create_group>
+    <select_user len="999">將使用者加入群組</select_user>
+    <group_name len="999">群組名稱</group_name>
+    <user_name len="999">使用者名稱</user_name>
+    <full_name len="999">完整名稱</full_name>
+    <pw_hint len="999">密碼提示</pw_hint>
+    <pw len="999">密碼</pw>
+    <confirm_password len="999">確認密碼</confirm_password>
+    <mail_addr len="999">電子郵件地址</mail_addr>
+    <req len="999">需要使用者名稱</req>
+    <quota_settings len="999">配額設定</quota_settings>
+    <chg_pw len="999">變更密碼</chg_pw>
+    <join_group len="999">加入群組</join_group>
+    <chg_member len="999">變更成員</chg_member>
+    <group_member len="999">群組成員資格</group_member>
+    <member len="999">成員</member>
+    <group len="999">群組</group>
+    <user len="999">使用者</user>
+    <quota_amount1 len="999">Volume_1 配額</quota_amount1>
+    <quota_amount2 len="999">Volume_2 配額</quota_amount2>
+    <quota_amount3 len="999">Volume_3 配額</quota_amount3>
+    <quota_amount4 len="999">Volume_4 配額</quota_amount4>
+    <no_hdd len="999">找不到磁碟區。</no_hdd>
+    <none_group len="999">未定義群組。</none_group>
+    <none_user len="999">未定義使用者。</none_user>
+    <cifs len="999">CIFS</cifs>
+    <ftp len="999">FTP 存取</ftp>
+    <nfs len="999">NFS 存取</nfs>
+    <webdav len="999">WebDAV 存取</webdav>
+    <media len="999">媒體提供</media>
+    <u_prefix len="999">需要使用者名稱前置詞</u_prefix>
+    <start_num len="999">帳戶前置詞</start_num>
+    <create_num len="999">使用者數目</create_num>
+    <overwrite len="999">覆寫重複的帳戶</overwrite>
+    <overwrite2 len="999">覆寫現有使用者</overwrite2>
+    <duplicate len="999">複製使用者名稱</duplicate>
+    <illegal len="999">無效的使用者名稱</illegal>
+    <create len="999">建立單一使用者</create>
+    <create2 len="999">新使用者</create2>
+    <reference len="999">請參閱此範例檔案的參數。</reference>
+    <sel_list len="999">匯入使用者清單</sel_list>
+    <max len="999">最大</max>
+    <multiple len="999">新增多位使用者</multiple>
+    <user_finish len="999">
+      <![CDATA[這是精靈的最後一個步驟。按「<B>上一頁</B>」可檢閱您的設定。按一下「套用」可儲存設定。 ]]>
+    </user_finish>
+    <pw_required>需要密碼</pw_required>
+    <help_hint len="999">使用者密碼必須至少有 5 個字元。使用者名稱不能和群組名稱相同。</help_hint>
+    <old_pw len="999">舊密碼</old_pw>
+    
+    
+      <g_multiple len="999">新增多個群組</g_multiple>
+    
+    
+      <import_group len="999">匯入群組</import_group>
+    
+    
+      <sel_glist len="999">匯入群組清單</sel_glist>
+    
+    
+      <overwrite_group len="999">覆寫重複的群組</overwrite_group>
+    
+    
+      <user_description5 len="999">允許群組存取下列應用程式。</user_description5>
+    
+    
+      <account_expires len="999">帳戶過期</account_expires>
+    
+    
+      <end_of len="999">結束：</end_of>
+    
+<wait_uesrs len="999">正在等候使用者</wait_uesrs>
+	<wait_groups len="999">正在等候群組</wait_groups>
+	<wait_shares len="999">正在等候共享</wait_shares>    
+    <msg1 len="999">已達使用者數目上限。</msg1>
+    <msg2 len="999">請選取一個項目。</msg2>
+    <msg3 len="999">已成功新增使用者帳戶。</msg3>
+    <msg4 len="999">使用者帳戶已成功變更。</msg4>
+    <msg5 len="999">使用者名稱必須為 1 至 16 個字元之間的英數字母，不可包含空格。</msg5>
+    <msg6 len="999">不接受此帳戶。請再試一次。</msg6>
+    <msg7 len="999">已保留使用者名稱 %s。為大、小寫區分、在 1 至 16 字元之間的英數字母，不可包含空格。</msg7>
+    <msg8 len="999">使用者名稱不能包含空格。</msg8>
+    <msg9 len="999">使用者名稱長度不能超過 16 個字元。請再試一次。</msg9>
+    <msg10 len="999">
+      <![CDATA[使用者名稱格式不正確。使用者名稱不能包含下列字元：* ?" < > | .; + = ~ ' [ ] { } @ # ( ) !^ $ % & , ` / \]]>
+    </msg10>
+    <msg11 len="999">使用者名稱不能和群組名稱相同。</msg11>
+    <msg12 len="999">輸入的使用者名稱已經存在。請選取其他使用者名稱。</msg12>
+    <msg13 len="999">已達群組數目上限。</msg13>
+    <msg14 len="999">已成功新增群組。</msg14>
+    <msg15 len="999">成功刪除群組。</msg15>
+    <msg16 len="999">不接受此群組名稱。請再試一次。</msg16>
+    <msg17 len="999">輸入的群組名稱已經存在。請選取其他群組名稱。</msg17>
+    <msg18 len="999">輸入群組名稱。</msg18>
+    <msg19 len="999">群組名稱必須為介於 1 至 16 個字元之間的英數字母，不可包含空格。</msg19>
+    <msg20 len="999">群組名稱長度不能超過 16 個字元。請再試一次。</msg20>
+    <msg21 len="999">
+      <![CDATA[群組名稱格式不正確。群組名稱不能包含下列字元：* ?" < > | .; + = ~ ' [ ] { } @ # ( ) !^ $ % & , ` / \]]>
+    </msg21>
+    <msg22 len="999">群組名稱不能和使用者名稱相同。</msg22>
+    <msg23 len="999">群組名稱已成功變更。</msg23>
+    <msg24 len="999">成功刪除使用者。</msg24>
+    <msg25 len="999">使用者名稱的開頭必須是 a-z,A-Z,0-9</msg25>
+    <msg26 len="999">群組名稱的開頭必須是 a-z,A-Z,0-9</msg26>
+    <msg27 len="999">使用者已成功變更。</msg27>
+    <msg28 len="999">沒有變更。</msg28>
+    <msg29 len="999">已成功新增使用者。</msg29>
+    <msg30 len="999">使用者名稱前置詞不能包含空格。</msg30>
+    <msg31 len="999">輸入帳戶前置詞。</msg31>
+    <msg32 len="999">輸入使用者數目。</msg32>
+    <msg33 len="999">使用者數目不能超過：</msg33>
+    <msg34 len="999">您一次只能修改一個項目。</msg34>
+    <msg35 len="999">您確定要刪除此使用者嗎？</msg35>
+    <msg36 len="999">匯入使用者錯誤。</msg36>
+    <msg37 len="999">匯入檔案格式不正確。請再試一次。</msg37>
+    <msg38 len="999">姓氏為大、小寫區分的英數字母，與名字合併時上限可達 16 個字元。當合併姓氏與名字時允許使用空格及底線。</msg38>
+    <msg39 len="999">名字必須為大、小寫區分、在 1 至 16 個字元之間的英數字母，不可包含空格。</msg39>
+    <msg40 len="999">無法建立您所要求的雲端網路存取帳號。請確認您沒有任何網路連線能力的問題，再試一次。</msg40>
+    <msg41 len="999">注意：成功新增使用者。</msg41>
+    <msg42 len="999">發現重複的使用者帳戶。請確認沒有重複的使用者，然後再試一次。</msg42>
+  <msg43 len="999">電子郵件不能超過 48 個字元。</msg43>
+  <msg44 len="999">匯入群組錯誤。</msg44>
+    
+  <user_description6>如果您不想要設定任何群組配額，請保持欄位空白。</user_description6><msg45>My Cloud 系統仍正添加先前輸入的多個使用者。若要編輯使用者，請稍後再試。</msg45><msg46>My Cloud 系統仍正添加先前輸入的多個群組。若要編輯群組，請稍後再試。</msg46><msg47>使用者名稱必須由 1 至 16 個字元組成的英數字元值，第一個字元必須是字母。</msg47><msg48>姓氏必須是介於 1 到 16 個字元的英數字元值。</msg48><msg49>無效的電子郵件地址。</msg49><user_description3>您可以使用下列欄位為此使用者編輯密碼。&lt;br&gt;注意：變更此密碼不會影響您的 &lt;a id="cloud_url" href="http://www.mycloud.com" target="_blank"&gt;MyCloud.com&lt;/a&gt; 帳戶。</user_description3></_user>
+  <_network_access>
+    <title len="999">設定共享</title>
+    <about>共享說明</about>
+    <desc len="999">共享是一個儲存檔案的區域 (類似於資料夾)。可在單一儲存裝置建立多個共享，控制對每個共享的存取。</desc>
+    <share_profile>共享設定檔</share_profile>
+    <user_access len="999">使用者存取</user_access>
+    <add_title len="999">新增共享</add_title>
+    <del_title len="999">刪除共享</del_title>
+    <del_desc len="999">
+      <![CDATA[
+			刪除此共享將會刪除所有內容以及共享中的組態設定。<br><br>您確定要刪除此共享嗎？
+		]]>
+    </del_desc>
+    <share_name len="999">共享名稱</share_name>
+    <read_only len="999">唯讀</read_only>
+    <read_write len="999">讀/寫</read_write>
+    <decline len="999">拒絕存取</decline>
+    <no_access len="999">無存取</no_access>
+    <comment len="999">註解</comment>
+    <oplocks len="999">Oplocks</oplocks>
+    <map len="999">對應封存</map>
+    <recycle_bin len="999">啟用資源回收筒</recycle_bin>
+    <recycle_tree len="999">回收樹狀檢視</recycle_tree>
+    <share_settings len="999">共享設定</share_settings>
+    <path len="999">路徑</path>
+    <user len="999">裝置使用者名稱</user>
+    <group len="999">群組</group>
+    <create_folder_name len="999">建立新資料夾</create_folder_name>
+    <input_folder_name len="999">輸入新的資料夾名稱</input_folder_name>
+    <assign_access_rights len="999">指派存取權限</assign_access_rights>
+    <ftp_settings len="999">FTP 設定</ftp_settings>
+    <anonymous_none len="999">匿名無</anonymous_none>
+    <anonymous_read_only len="999">匿名唯讀</anonymous_read_only>
+    <anonymous_write len="999">匿名讀/寫</anonymous_write>
+    <confirm_settings len="999">確認設定</confirm_settings>
+    <application_list len="999">應用程式清單</application_list>
+    <anonymous len="999">FTP 匿名</anonymous>
+    <none len="999">無</none>
+    <read len="999">唯讀</read>
+    <write len="999">讀/寫</write>
+    <info len="999">網路共享資訊</info>
+    <nfs_setting len="999">NFS 設定</nfs_setting>
+    <public len="999">共用</public>
+    <recycle_title len="999">資源回收筒</recycle_title>
+    <msg1 len="999">共享名稱重複或長度超過 80 個字元。請修改。</msg1>
+    <msg2 len="999">選取您要修改的項目。</msg2>
+    <msg3 len="167">
+      <![CDATA[資料夾名稱不能包含下列字元：\ / :* ?" < > | ]]>
+    </msg3>
+    <msg4 len="167">不是有效的資料夾名稱。</msg4>
+    <msg5 len="999">資料夾名稱長度應為 1-226。</msg5>
+    <msg6 len="999">已選取此父資料夾。</msg6>
+    <msg7 len="999">資料夾名稱不能空白。</msg7>
+    <msg8 len="999">不能重新命名新資料夾：已存在您指定之名稱的檔案。請指定其他檔案名稱。</msg8>
+    <msg9 len="999">共享名稱不能空白。</msg9>
+    <msg10 len="999">請選取使用者或群組。</msg10>
+    <msg11 len="999">此資料夾已設定為共享。</msg11>
+    <msg12 len="999">不是有效的主機。</msg12>
+    <msg13 len="999">已達網路共享數目上限。</msg13>
+    <msg14 len="999">選取「唯讀」或「讀/寫」。</msg14>
+    <msg15 len="999">共享失敗的項目</msg15>
+    <msg16 len="999">選取「唯讀」。</msg16>
+    <msg17 len="999">選取使用者或群組</msg17>
+    <msg18 len="999">
+      <![CDATA[注意：您即將重設網路存取清單為預設的存取權限。存取權限預設對所有帳戶為「開放」(不需要密碼)。]]>
+    </msg18>
+    <msg19 len="999">
+      <![CDATA[共享名稱不能包含下列字元：% < > * ?| / \ + = ; :" @ # !~ [ ]]]>
+    </msg19>
+    <msg20 len="999">
+      <![CDATA[共享名稱的最後一個字元不能是 '$' 或 '.' 符號。]]>
+    </msg20>
+    <msg21 len="999">
+      <![CDATA[共享名稱的第一個字元不能是 '.'、'&'、'#' 符號。]]>
+    </msg21>
+    <msg22 len="999">
+      <![CDATA[描述不能超過 128 個字元。]]>
+    </msg22>
+    <msg23 len="999">
+      <![CDATA[共享名稱不能包含下列字元：\ / :* ?" < > | ]]>
+    </msg23>
+    <msg24 len="999">
+      <![CDATA[已保留共享名稱 %s。共享名稱為大、小寫區分、在 1 至 80 字元之間的英數字母，不可包含空格。]]>
+    </msg24>
+    <msg25 len="999">
+      <![CDATA[共享名稱為大、小寫區分、在 1 至 80 字元之間的英數字母，不可包含空格。]]>
+    </msg25>
+  <usage>使用狀態</usage></_network_access>
+  <_iso_mount>
+    <iso_title len="999">ISO 掛接說明</iso_title>
+    <edit_title len="999">編輯 ISO 共享</edit_title>
+    <info len="999">資訊</info>
+    <desc>掛接位於網路共享的 ISO 檔案，可提供 ISO 檔案之檔案和資料夾內容的檔案層級存取權給具有網路共享存取權的使用者。</desc>
+    <create_iso_share>建立 ISO 共享</create_iso_share>
+    <add_iso_share>建立 ISO 共享</add_iso_share>
+    <msg1 len="999">
+      <![CDATA[
+		共享項目不能刪除，因為仍在使用中。若要刪除項目，請停止共享項目的存取權。
+		]]>
+    </msg1>
+    <msg2>您確定要刪除此 ISO 掛接？</msg2>
+    <msg3>ISO 共享已經存在。</msg3>
+    <del_title>刪除 ISO 共享</del_title>
+    <no_list>未新增任何 ISO 共享至 WD My Cloud EX2 Ultra 系統。</no_list>
+    <isoshare_list>ISO 共享清單</isoshare_list>
+  </_iso_mount>
+  <_network_services>
+    <adv_features>進階功能</adv_features>
+    <afp_title len="999">AFP 服務設定</afp_title>
+    <afp_service len="999">AFP 服務</afp_service>
+    <afp_service_b len="999">AFP 服務</afp_service_b>
+    <afp_description len="999">使用者可在此啟用 AFP 服務選項。如果使用了 Time Machine 選項，此選項會自動啟用。</afp_description>
+    <nfs_title len="999">NFS 服務設定</nfs_title>
+    <nfs_service len="999">NFS 服務</nfs_service>
+    <nfs_service_b len="999">NFS 服務</nfs_service_b>
+    <nfs_description len="999">使用者可在此啟用 NFS 服務選項。</nfs_description>
+    <ftp_service len="999">FTP 服務</ftp_service>
+    <ftp_service_b len="999">FTP 服務</ftp_service_b>
+    <afp_note len="999">(注意：新增共享至 AFP 服務會停用 Oplocks。)</afp_note>
+    <nfs_note len="999">(注意：套用共享至 NFS 服務會停用 Oplocks。)</nfs_note>
+    <webdav_service len="999">WebDAV 服務</webdav_service>
+  </_network_services>
+  <_nfs>
+    <host len="999">主機</host>
+    <real_path len="999">真正路徑</real_path>
+    <root_squash len="999">Root Squash</root_squash>
+    <write len="999">寫入</write>
+    <msg1 len="999">
+<![CDATA[主機名稱可使用下列字元："a-z"、"A-Z"、"0-9"、"-"、"/"。]]>
+</msg1>
+    <msg2 len="999">掛接點</msg2>
+  </_nfs>
+  <_quota>
+    <x_quota>%s 的配額</x_quota>
+    <used len="999">已使用</used>
+    <limit len="999">限制</limit>
+    <total_records len="999">總記錄</total_records>
+    <unlimited len="999">無限制</unlimited>
+    <status len="999">狀態</status>
+    <enable len="999">啟用</enable>
+    <disable len="999">已停用</disable>
+    <start len="999">已啟動</start>
+    <stop len="999">已停止</stop>
+    <quota_amount len="999">配額</quota_amount>
+    <msg1 len="999">使用者配額不能大於群組配額。</msg1>
+    <msg2 len="999">配額不能小於使用者配額。</msg2>
+    <msg3 len="999">配額不是正整數。請再試一次。</msg3>
+    <msg4 len="999">配額無效。輸入有效數目。</msg4>
+    <msg5 len="999">此數目高於硬碟的最大容量。請輸入實數或將設定保留為無限制。</msg5>
+    <help_hint len="999">硬碟必須先完成同步，才能設定配額。</help_hint>
+  </_quota>
+  <_ftp>
+    <idle_time len="999">閒置時間</idle_time>
+    <port_description len="999">1025 至 3688、3690 至 49999、65501 至 65535、預設：21</port_description>
+    <passive_mode len="999">被動模式</passive_mode>
+    <default_port len="999">使用預設連接埠範圍。</default_port>
+    <following_port len="999">使用下列連接埠範圍</following_port>
+    <report len="999">以 PASV 模式報告外部 IP</report>
+    <external_ip len="999">外部 IP</external_ip>
+    <client_language len="999">用戶端語言</client_language>
+    <flow_control len="999">流量控制</flow_control>
+    <unlimited len="999">無限制</unlimited>
+    <!--<allow len="999">Allow SSL/TLS connections only</allow>-->
+    <ipv4 len="999">IPV4</ipv4>
+    <ipv6 len="999">IPV6</ipv6>
+    <ip len="999">IP</ip>
+    <max_user len="999">使用者數目上限</max_user>
+    <connection len="999">連線</connection>
+    <started len="999">已啟動</started>
+    <stopped len="999">已停止</stopped>
+    <ssl_tsl len="999">TLS</ssl_tsl>
+    <fxp len="999">FXP</fxp>
+    <permanent len="999">永久</permanent>
+    <temporary len="999">暫時</temporary>
+    <auto_blcoked len="999">自動封鎖</auto_blcoked>
+    <title1 len="999">啟用 SSH</title1>
+    <msg1 len="167">HTTP 伺服器使用連接埠 8080。</msg1>
+    <msg2 len="167">郵件伺服器使用連接埠 25。</msg2>
+    <msg3 len="167">iTunes 伺服器使用連接埠 3689。</msg3>
+    <msg4 len="167">UPnP 伺服器使用連接埠 50000-65500。</msg4>
+    <msg5 len="167">DHCP 伺服器使用連接埠 67,68。</msg5>
+    <msg6 len="167">連接埠必須是數字。</msg6>
+    <msg7 len="167">連接埠號碼必須介於 1~65535 之間。</msg7>
+    <msg8 len="167">不是有效的流量控制。</msg8>
+    <msg9 len="167">輸入流量。</msg9>
+    <msg10 len="167">流量不能包含空格。</msg10>
+    <msg11 len="167">流量控制必須是數字。</msg11>
+    <msg12 len="167">流量控制不能超過 16384。</msg12>
+    <msg13 len="167">輸入閒置時間。</msg13>
+    <msg14 len="167">閒置時間必須介於 1~10 分鐘之間。</msg14>
+    <msg15 len="167">閒置時間不能包含空格。</msg15>
+    <msg16 len="167">您確定要刪除？</msg16>
+    <msg18 len="167">輸入發行日期。</msg18>
+    <msg19 len="167">不是有效的發行日期。</msg19>
+    <msg20 len="167">iTunes 伺服器使用連接埠 3689 。</msg20>
+    <msg21 len="167">不是有效的外部 IP 位址。</msg21>
+    <msg22 len="167">已達 FTP 共享數目上限。</msg22>
+    <msg23 len="167">P2P 伺服器使用連接埠 xxx。</msg23>
+    <msg24 len="167">請使用偶數的連接埠範圍。</msg24>
+    <msg25 len="167">輸入用戶端語言。</msg25>
+    <msg26 len="167"><![CDATA[「用戶端語言」長度不能超過 32 個字元。請再試一次。]]></msg26>
+    <msg27 len="167">此 FTP 共享已存在。請選取其他 FTP 共享。</msg27>
+    <msg28 len="167">aMule 伺服器使用連接埠 4711。</msg28>
+    <msg29 len="167">Squeeze Center 使用連接埠 9000。</msg29>
+    <msg30 len="167">日誌使用連接埠 514。</msg30>
+    <msg31 len="167">印表機使用連接埠 515。</msg31>
+    <msg32 len="167">Audio Streamer 使用連接埠 8000。</msg32>
+    <msg33 len="167">無效的用戶端語言。</msg33>
+    <msg34 len="167">取得外部 IP 成功。</msg34>
+    <msg35 len="167">取得外部 IP 失敗。</msg35>
+    <msg36 len="167">您必須啟用 SSH，才可使用 SFTP 存取您的 WD My Cloud EX2 Ultra。</msg36>
+    <desc1 len="999">取得外部 IP</desc1>
+    <desc2 len="999">下列 IP 位址已被封鎖，無法從網路存取此裝置。您可以永久或在某段時間暫時封鎖 IP 位址。</desc2>
+    <desc3 len="999">自訂</desc3>
+    <desc4 len="999">無限制</desc4>
+    <desc5 len="999">預設</desc5>
+    <desc6 len="999">已封鎖的 IP 清單</desc6>
+    <desc7 len="999">隱含 TLS</desc7>
+		<desc8 len="999">明確 TLS</desc8>
+    <button1 len="10">取得 IP</button1>
+  <msg37>WD My Cloud EX2 Ultra 系統的 FTP 服務已啟用。請前往「共享」頁面，啟用每個共享的 FTP 存取。</msg37></_ftp>
+  <_upnp>
+    <refresh len="10">重新整理</refresh>
+    <shared_folder len="999">共享資料夾</shared_folder>
+    <state len="999">狀態</state>
+    <msg1 len="999">不允許巢狀的共享資料夾。</msg1>
+    <msg2 len="999">失敗。</msg2>
+    <msg3 len="999">請選取一個項目。</msg3>
+    <msg4 len="999">共享資料夾的數量超出限制。</msg4>
+  </_upnp>
+  <_itunes>
+    <mp3_tag_codepage len="21">MP3 Tag 字碼頁</mp3_tag_codepage>
+    <auto_refresh len="21">自動重新整理</auto_refresh>
+    <auto_refresh1 len="999">5 分鐘</auto_refresh1>
+    <auto_refresh2 len="999">15 分鐘</auto_refresh2>
+    <auto_refresh3 len="999">30 分鐘</auto_refresh3>
+    <auto_refresh4 len="999">1 小時</auto_refresh4>
+    <auto_refresh5 len="999">2 小時</auto_refresh5>
+    <auto_refresh6 len="999">6 小時</auto_refresh6>
+    <auto_refresh7 len="999">12 小時</auto_refresh7>
+    <auto_refresh8 len="999">1 天</auto_refresh8>
+    <default len="21">預設</default>
+    <folder len="21">資料夾</folder>
+    <share len="999">共享</share>
+    <desc1 len="999">啟用 iTunes 伺服器以經由 iTunes 播放器存取您的媒體。</desc1>
+    <desc2 len="999">根</desc2>
+    <desc3 len="999">設定 iTunes 資料庫針對新媒體內容的定期重新掃描排程。</desc3>
+    <desc4 len="999">重新掃描您所有的內容目錄以尋找新媒體。</desc4>
+    <desc5 len="25">起始裝置</desc5>
+    <desc6 len="999">iTunes 資料庫</desc6>
+    <msg1 len="167">必須選取資料夾。</msg1>
+    <msg2 len="167">路徑長度不能超過 235 個字元。請再試一次。</msg2>
+    <msg3 len="167">密碼長度至少必須有 2 個字元。請再試一次。</msg3>
+    <msg4 len="167">密碼長度不能超過 16 個字元。</msg4>
+    <msg5 len="167">密碼格式不正確。請再試一次。</msg5>
+    <msg6 len="167">請輸入 MP3 Tag 字碼頁。</msg6>
+    <msg7 leng="167"><![CDATA[密碼不能包含下列字元：@ :/ \ % ' #]]></msg7>
+    <msg8 len="999">系統正在建立您的媒體庫/資料庫。</msg8>
+  </_itunes>
+  <_admin>
+    <username len="999">使用者名稱</username>
+    <password len="999">密碼</password>
+    <new_pwd len="999">新密碼</new_pwd>
+    <confirm_pwd len="999">確認密碼</confirm_pwd>
+  <desc1>建立管理員密碼以防您的 WD My Cloud EX2 Ultra 系統遭受未授權組態設定。</desc1><desc2>如果您不想現在建立密碼，請按&lt;b&gt;下一頁&lt;/b&gt;繼續。</desc2></_admin>
+  <_system>
+    <restart_title len="999">重新啟動</restart_title>
+    <system_restart len="999">系統重新啟動</system_restart>
+    <default_title len="999">預設值</default_title>
+    <restore len="999">還原為出廠預設設定</restore>
+    <shutdown_title len="999">關機</shutdown_title>
+    <warning_title len="999">警告</warning_title>
+    <system_shutdown len="999">系統關機</system_shutdown>
+    <configuration_settings len="999">組態設定</configuration_settings>
+    <save_configuration_settings len="999">儲存組態設定</save_configuration_settings>
+    <load_configuration_settings len="999">載入組態設定</load_configuration_settings>
+    <idle_time_title len="999">閒置時間</idle_time_title>
+    <account_inactivity_timer len="999">帳戶無活動計時器</account_inactivity_timer>
+    <minutes len="999">分鐘</minutes>
+    <temperature_title len="999">系統溫度臨界值</temperature_title>
+    <flash_system len="999">系統 LED 燈閃爍</flash_system>
+    <extended_log len="999">延伸記錄</extended_log>
+    <help_hint len="999">如果您還原為出廠預設值，將會清除所有目前設定。</help_hint>
+    <msg1 len="999">上載的組態設定檔案無效。請選擇正確檔案並重試。</msg1>
+    <msg2 len="999">您將重新啟動 WD My Cloud EX2 Ultra 系統。任何備份、檔案活動或是檔案傳輸可能遭到中斷。</msg2>
+    <msg3 len="999">您即將重設所有組態設定。這不會影響磁碟機上儲存的資料。請按「確定」繼續。</msg3>
+    <msg4 len="999">系統將進入休眠狀態。您要繼續嗎？</msg4>
+    <msg5 len="999">請選擇上傳檔案。</msg5>
+    <msg6 len="999">帳戶無活動計時器必須 &gt; 0 分鐘</msg6>
+    <msg7 len="999">帳戶無活動計時器不能空白。</msg7>
+    <msg8 len="999">請輸入數字。</msg8>
+    <msg9 len="999">閒置時間不能包含空格。</msg9>
+    <msg10 len="999">失去交流電源，目前正在使用 UPS。請注意 NAS 即將關機。請完成所有未完成的工作，以確保不會遺失資料。</msg10>
+  <msg11 len="999">裝置的運作超出正常的溫度上限。請將裝置移到溫度較低的地方。</msg11>
+    
+<msg12 len="999">系統過熱</msg12>
+  <default_system>
+「僅系統」將系統設定還原至預設值，但保留使用者資料及共享。
+&lt;br&gt;&lt;br&gt;
+繼續？</default_system><default_quick>「快速還原」將所有設定還原至預設值，清除使用者資料及共享，但保留預設共享。「快速還原」在裝置上建立新檔案表格，但不完全複寫或清除裝置，所以可以使用資料還原程式來還原使用者資料及共享。
+&lt;br&gt;&lt;br&gt;
+繼續？</default_quick><default_full>「完整還原」將所有設定還原至預設值，永久刪除使用者資料及共享，但保留預設共享。不可以用資料還原程式來復原資料。除了預設共享之外，所有使用者資料及共享為永久性刪除。
+&lt;br&gt;&lt;br&gt;
+繼續？</default_full><msg13>打開或關閉擴展登入需要重新啟動系統。任何備份、檔案活動或是檔案傳輸可能遭到中斷。</msg13></_system>
+  <_firmware>
+    <importing>匯入檔案中</importing>
+    <upgrading>升級中...</upgrading>
+    <new_found>找到韌體更新版本</new_found>
+    <new_available>新韌體可供使用</new_available>
+    <auto_update>自動更新</auto_update>
+    <enable_auto>啟用自動更新</enable_auto>
+    <available_update>可用更新</available_update>
+    <new_fw>新韌體</new_fw>
+    <check_update>檢查更新</check_update>
+    <last_update>最後更新</last_update>
+    <title len="999">更新韌體</title>
+    <current len="999">目前版本</current>
+    <date len="999">韌體日期</date>
+    <upload len="999">韌體上傳</upload>
+    <path len="999">韌體路徑</path>
+    <manual_update>手動更新</manual_update>
+    <fw_img>韌體圖像</fw_img>
+    <update_b>從檔案更新</update_b>
+    <update_sch>更新排程</update_sch>
+    <release_note>韌體發行備註</release_note>
+    <update_now>現在更新</update_now>
+    <reboot_required>需重新開機</reboot_required>
+    <latest_version len="999">最新版本</latest_version>
+    <update_button>從檔案更新</update_button>
+    <install_title>安裝最新韌體</install_title>
+    <msg1 len="999">韌體更新成功。請等候 WD My Cloud EX2 Ultra 系統完成重新開機程序，然後再登入。此程序應該在一分鐘內就會完成。檢查韌體版本，驗證更新。</msg1>
+    <msg2 len="999">驗證韌體失敗</msg2>
+    <msg3 len="999">上傳韌體失敗。請再試一次。</msg3>
+    <msg4 len="999">驗證韌體失敗</msg4>
+    <msg5 len="999">
+      <![CDATA[檔案名稱不能包含下列字元：~`!@#$%^&+={}[];',]]>
+    </msg5>
+    <msg6 len="999">在韌體更新安裝期間，請勿拔除 WD My Cloud EX2 Ultra 系統。在完成更新後，將自動重新啟動您的網路磁碟機。</msg6>
+    <msg7 len="999">韌體正在上傳。</msg7>
+    <msg8 len="999">
+      <![CDATA[警告：LCD 韌體更新正在進行中。<br>請勿重新啟動或將 WD My Cloud EX2 Ultra 裝置關機。]]>
+    </msg8>
+    <msg9 len="999">
+      <![CDATA[
+		<img src='/web/images/warning.png'> 若要完成 LCD 韌體升級程序，請拔下 WD My Cloud EX2 Ultra 裝置的電源線。<br><br>等候 5 秒鐘再插回電源線，接著開啟 WD My Cloud EX2 Ultra 裝置。<br><br>系統開機後，重新整理頁面以便登入。]]>
+    </msg9>
+    <msg10 len="999">排程的關閉電源時間太接近系統時間。關閉電源時間必須大於系統時間至少 10 分鐘。</msg10>
+    <msg11 len="999">您確定要上傳韌體嗎？</msg11>
+    <msg12>WD My Cloud EX2 Ultra 系統韌體是最新版本。</msg12>
+    <msg13 len="999">
+      <![CDATA[韌體更新擱置 - 需重新開機]]>
+    </msg13>
+    <msg14 len="999">在韌體更新安裝期間，請勿拔除您的裝置。在完成更新後，將自動重新啟動您的網路磁碟機。</msg14>
+  <msg15>將更新您的韌體。在韌體更新安裝期間，請勿拔除您的裝置。在完成韌體更新後，將自動重新啟動您的網路磁碟機。此外也建議您先在電腦上安裝作業系統的最新更新，然後再繼續進行。&lt;br&gt;&lt;br&gt;&lt;b&gt;重要：&lt;/b&gt;在更新硬碟之前，請先確定您已另外備份您的資料（另一個備份）。</msg15><msg16>在韌體更新安裝期間，請勿拔除您的裝置。在完成更新後，將自動重新啟動您的網路磁碟機。</msg16><msg17>無法連線至韌體更新伺服器。請確認網路連線狀態並重試。</msg17></_firmware>
+  <_mail>
+    <notification>通知</notification>
+    <account len="999">帳戶</account>
+    <anonymous len="999">匿名</anonymous>
+    <user_name len="999">使用者名稱</user_name>
+    <password len="999">密碼</password>
+    <port len="999">連接埠</port>
+    <smtp_server len="999">SMTP 伺服器</smtp_server>
+    <sender len="999">寄件者電子郵件</sender>
+    <receiver len="999">收件者電子郵件</receiver>
+    <smtp_auth len="999">安全連線</smtp_auth>
+    <interval len="999">間隔</interval>
+    <hours len="999">小時</hours>
+    <Minutes len="999">分鐘</Minutes>
+    <by_schedule len="999">根據排程</by_schedule>
+    <event_log1 len="999">當日誌檔案已滿</event_log1>
+    <fahrenheit len="999">華氏</fahrenheit>
+    <celcius len="999">攝氏</celcius>
+    <daily len="999">每日</daily>
+    <weekly len="999">每週</weekly>
+    <monthly len="999">每月</monthly>
+    <time len="999">時間</time>
+    <day_of_week len="999">週中的日</day_of_week>
+    <mon len="999">週一</mon>
+    <tue len="999">週二</tue>
+    <wed len="999">週三</wed>
+    <thu len="999">週四</thu>
+    <fri len="999">週五</fri>
+    <sat len="999">週六</sat>
+    <sun len="999">週日</sun>
+    <day_of_month len="999">月中的日</day_of_month>
+    <help_hint len="999">SMTP 伺服器是您的外寄郵件伺服器。如果您不確定這是什麼，請連絡提供您電子郵件服務的公司。</help_hint>
+    <msg1 len="999">選取空間狀態警示的間隔。</msg1>
+    <msg2 len="999">溫度必須是數字。</msg2>
+    <msg5 leng="167">測試電子郵件：已傳送</msg5>
+    <msg6 leng="167">測試電子郵件：失敗</msg6>
+    <msg7 leng="167">輸入連接埠。</msg7>
+    <msg8 leng="167">連接埠不可包含空格。</msg8>
+    <msg9 leng="167">無效的連接埠號碼。</msg9>
+    <msg10 leng="167">輸入使用者名稱。</msg10>
+    <msg11 leng="167">輸入密碼。</msg11>
+    <msg12 leng="167">密碼長度不能超過 31 個字元。請再試一次。</msg12>
+    <msg13 leng="167">使用者名稱長度不能超過 31 個字元。請再試一次。</msg13>
+    <msg14 leng="167">輸入 SMTP 伺服器。</msg14>
+    <msg15 leng="167">輸入寄件者電子郵件。</msg15>
+    <msg16 leng="167">輸入收件者電子郵件。</msg16>
+    <msg17 leng="167">SMTP 伺服器長度不能超過 63 個字元。請再試一次。</msg17>
+    <msg18 leng="167">寄件者電子郵件長度不能超過 63 個字元。請再試一次。</msg18>
+    <msg19 leng="167">收件者電子郵件長度不能超過 63 個字元。請再試一次。</msg19>
+    <msg20 leng="167">檢查寄件者電子郵件地址格式。</msg20>
+    <msg21 leng="167">檢查收件者電子郵件地址格式。</msg21>
+    <msg22 len="167">請輸入有效的電子郵件地址。</msg22>
+  <random>隨機</random></_mail>
+  <_format>
+    <wizard_title13 len="999">將 RAID 類型重新設定為 RAID 5</wizard_title13>
+    <wizard_title14 len="999">將 RAID 類型從 RAID 1 重新設定為 RAID 5</wizard_title14>
+    <format_title2 len="73">自動重新組建組態</format_title2>
+    <initializing len="25">起始裝置</initializing>
+    <formatting len="25">格式化</formatting>
+    <verifying len="25">驗證</verifying>
+    <vendor len="12">供應商</vendor>
+    <free_size len="999">可用大小</free_size>
+    <mode len="999">模式</mode>
+    <raid_description9 len="999">剩餘空間會成為 JBOD (線性) 磁碟區。</raid_description9>
+    <raid_description10 len="999">剩餘空間</raid_description10>
+    <summary len="999">摘要</summary>
+    <file_system len="12">檔案系統</file_system>
+    <format_result len="999">格式化結果</format_result>
+    <error_code len="999">錯誤代碼</error_code>
+    <step len="999">步驟</step>
+    <degraded len="999">已降級</degraded>
+    <partitioning len="999">資料分割</partitioning>
+    <rebuilding len="999">重新組建中</rebuilding>
+    <disk len="6">磁碟</disk>
+    <encryption len="999">加密</encryption>
+    <auto_mount len="999">自動掛接</auto_mount>
+    <spare len="999">備用</spare>
+    <desc3 len="999">xxx 加密</desc3>
+    <desc4 len="999">將剩餘磁碟空間設定為「跨越」。</desc4>
+    <desc5 len="167"><![CDATA[變更硬碟組態並格式化新硬碟。格式化磁碟機時，此磁碟機上儲存的所有資料都會遭到清除。按「<B>下一頁</B>」繼續。]]></desc5>
+    <desc6 len="999">本區段提供硬碟上的資訊。它會顯示磁碟陣列序列、製造商、型號和序號，以及磁碟容量。</desc6>
+    <desc8 len="999">本區段可讓您變更 WD My Cloud EX2 Ultra 系統的檔案系統。按&lt;b&gt;下一步&lt;/b&gt;以繼續。</desc8>
+    <desc9 len="999">本區段可在 RAID 損毀時讓您重新組建 RAID。選取「啟用自動重新組建」可自動重新組建 RAID，選取「停用自動重新組建」則可用其他方式診斷 RAID。</desc9>
+    <desc10 len="999">本區段可讓您變更 RAID 大小，並將剩餘磁碟空間設定為「跨越」格式。</desc10>
+    <desc11 len="999">本區段提供您剛建立之組態的摘要。它會顯示磁碟區名稱、檔案格式、磁碟大小和磁碟陣列號碼。</desc11>
+    <desc12 len="999">請等候 WD My Cloud EX2 Ultra 裝置更新您的系統。</desc12>
+    <desc13 len="999">請等候 WD My Cloud EX2 Ultra 裝置格式化您的磁碟區。</desc13>
+    <desc14 len="999">設定完成。本區段提供磁碟區名稱、檔案系統、RAID 模式 (類型) 和磁碟陣列等資訊。</desc14>
+    <desc15 len="999">請等候 WD My Cloud EX2 Ultra 裝置分割您的磁碟機。在此階段請勿關閉 NAS。</desc15>
+    <desc18 len="999"><![CDATA[變更硬碟組態並格式化新硬碟。格式化磁碟機時，此磁碟機上儲存的所有資料都會遭到清除。按「<B>下一頁</B>」繼續。]]></desc18>
+    <desc19 len="999">本區段提供新安裝硬碟上的資訊。它會顯示磁碟陣列序列、製造商、型號和序號，以及磁碟容量。</desc19>
+    <desc20 len="999">選取檔案系統。檔案系統是用來管理如何在磁碟上儲存、配置和更新資料的技術。請選擇 ext3 或 ext4。</desc20>
+    <desc21 len="999">在本區段中選取您要使用哪個磁碟來將磁碟機重新設定為 RAID 1。</desc21>
+    <desc22 len="999"><![CDATA[本區段可讓您將剩餘磁碟空間設定為「跨越」。請注意，格式化期間新磁碟區上的所有資料都會遭到清除。按「<B>下一頁</B>」繼續。]]></desc22>
+    <desc23 len="999"><![CDATA[按「<B>下一頁</B>」加密磁碟區。]]></desc23>
+    <desc24 len="999"><![CDATA[本區段可讓您加密磁碟區。按「<B>下一頁</B>」繼續。]]></desc24>
+    <desc25 len="999">設定完成。本區段提供磁碟區名稱、檔案系統、RAID 模式 (類型) 和磁碟陣列等資訊。</desc25>
+    <desc26 len="999">本精靈可協助您將新磁碟機設定為 RAID。</desc26>
+    <desc27 len="999"><![CDATA[格式化新磁碟機 (按一下格式按鈕)。格式化程序完成後，舊資料會同步至新磁碟機。]]></desc27>
+    <desc28 len="999">請等候 WD My Cloud EX2 Ultra 裝置分割和格式化磁碟機。在這個時候請勿關閉 NAS。</desc28>
+    <desc29 len="999">請等候 WD My Cloud EX2 Ultra 裝置更新您的系統。在這個時候請勿關閉 NAS。</desc29>
+    <desc30 len="999">對磁碟和 RAID 的變更已完成。此處是新磁碟及其陣列詳細資訊、製造商、型號名稱和序號。</desc30>
+    <desc31 len="999"><![CDATA[設定 RAID 5 + 備用 (按一下「建立備用磁碟」方塊)。"Disk4" 接著就會變成熱備援。如果您不想建立 RAID 5 + 備用，請取消選取「建立備用磁碟」。重新調整 RAID 5 磁碟區大小，如果您不會用到全部空間，請勾選「將剩餘磁碟空間設定為 JBOD」。按「<B>下一頁</B>」繼續。]]></desc31>
+    <desc34 len="999"><![CDATA[ <b><font color="#FF0000">警告：磁碟序列無效。</font></b> ]]></desc34>
+    <desc35 len="999">目前的磁碟序列為</desc35>
+    <desc36 len="999">請變更序列如下</desc36>
+    <msg1 len="167">選取 RAID 類型。</msg1>
+    <msg2 len="167">RAID 磁碟區的大小只能介於 xxx-yyy GB 之間。</msg2>
+    <msg3 len="167">您即將重新格式化硬碟。所有資料都將遭到清除。您要繼續嗎？</msg3>
+    <msg4 len="167">輸入 RAID 磁碟區的大小 [0-9]。</msg4>
+    <msg5 len="167">輸入 RAID 磁碟區的大小。</msg5>
+    <msg6 len="167">請等候 WD My Cloud EX2 Ultra 裝置重新啟動完成，然後再次登入。</msg6>
+    <msg7 len="167">硬碟格式化錯誤</msg7>
+    <msg8 len="167">xxx 目前正在同步。</msg8>
+    <msg9 len="167">輸入密碼。</msg9>
+    <msg10 len="167">再次輸入密碼。</msg10>
+    <msg11 len="167">密碼長度不能超過 32 個字元。請再試一次。</msg11>
+    <msg12 len="167">新密碼和確認密碼不符。請再試一次。</msg12>
+    <msg13 len="167">新密碼不能包含空格或下列字元：`~!@#$%^&amp;(){}'*+=|[]/\:";&lt;&gt;?,.</msg13>
+    <msg14 len="167">密碼長度至少必須有 4 個字元。請再試一次。</msg14>
+    <msg16 len="167">啟用此選項可能會大幅影響裝置的傳送量。</msg16>
+    <msg17 len="167">進行下列操作時，禁止系統關機、還原與重新啟動、以及韌體更新：磁碟格式化、磁碟調整大小、磁碟移轉、RAID 同位檢查與韌體上傳。</msg17>
+    <msg18 len="167">必須至少選取一個磁碟。</msg18>
+    <msg19 len="167">必須至少選取兩個磁碟。</msg19>
+  </_format>
+  <_diagnostic>
+    <title1 len="999">系統診斷</title1>
+    <desc1 len="999">磁碟測試</desc1>
+    <desc2 len="999">測試進行中</desc2>
+    <desc3 len="999">自我測試結果</desc3>
+    <desc4 len="999">自我測試已取消</desc4>
+    <desc5 len="999">精靈正在掃描系統。如果您想關閉視窗，請按一下「關閉」按鈕。關閉視窗並不會取消系統掃描。</desc5>
+    <desc6 len="999">掃描磁碟</desc6>
+    <desc7 len="999">已成功掃描此磁碟區。</desc7>
+    <desc8 len="999">請等候 WD My Cloud EX2 Ultra 裝置更新您的系統。</desc8>
+    <desc9 len="999">所有磁碟區</desc9>
+    <desc10 len="999">格式化磁碟</desc10>
+    <desc11 len="999">刪除時安全地抹除所有資料。</desc11>
+    <desc12 len="999"><![CDATA[這會永久刪除磁碟上的所有資料。請注意，執行此操作，現有檔案傳輸服務將於操作期間中斷。<br><br>您要繼續嗎？]]></desc12>
+    <desc13 len="999">已成功掃描磁碟區。找不到錯誤。</desc13>
+    <desc14 len="999">系統時鐘</desc14>
+    <desc15 len="999">USB1</desc15>
+    <desc16 len="999">USB2</desc16>
+    <desc17 len="999">磁碟機1</desc17>
+    <desc18 len="999">磁碟機2</desc18>
+    <desc19 len="999">磁碟機3</desc19>
+    <desc20 len="999">磁碟機4</desc20>
+    <desc21 len="999">記憶體</desc21>
+    <desc23 len="999">風扇</desc23>
+    <desc24 len="999">系統測試</desc24>
+    <button1 len="999">快速測試</button1>
+    <button2 len="999">完整測試</button2>
+    <button3 len="999">完成</button3>
+    <button4 len="999">系統測試</button4>
+  </_diagnostic>
+  <_scandsk>
+    <wait len="999">請稍候...</wait>
+    <volume len="999">磁碟區</volume>
+    <msg2 len="167">磁碟掃描已完成。找不到錯誤。</msg2>
+    <msg3 len="342"><![CDATA[開啟掃描磁碟前，請先擱置硬碟的所有資料傳輸和資料活動。建議您也擱置所有網路活動。請注意，執行此操作，現有檔案傳輸服務將於操作期間中斷。<br><br>您要繼續嗎？]]></msg3>
+  </_scandsk>
+  <_ve>
+    <title1 len="999">儲存金鑰</title1>
+    <title2 len="999">磁碟區加密說明</title2>
+    <status len="999">狀態</status>
+    <mount len="999">掛接</mount>
+    <pwd len="999">原始密碼</pwd>
+    <button1 len="999">下載加密的金鑰檔案</button1>
+    <desc1 len="999">新密碼</desc1>
+    <desc2 len="999">確認密碼</desc2>
+    <desc3 len="999">若要變更加密磁碟區上的設定，請先輸入原始密碼。</desc3>
+    <desc4 len="999">按一下「自動掛接」方塊可將加密磁碟機自動掛接至系統根目錄。輸入新密碼並確認該密碼，以便覆寫原始密碼。</desc4>
+    <desc5 len="999">輸入加密磁碟機的密碼。</desc5>
+    <desc6 len="999">請等候磁碟機完成加密。</desc6>
+    <desc7 len="999">上傳加密的金鑰檔案</desc7>
+    <desc8 len="999">金鑰檔案無效，無法掛接磁碟區 xxx。請試試看另一個金鑰檔案。</desc8>
+    <desc9 len="999">請等候磁碟機完成解密。</desc9>
+    <desc10>
+  WD My Cloud EX2 Ultra 系統可使用 256 位元 AES 加密來進行加密，保護您的資料以免遭受未授權存取和竊取。您可以在建立磁碟區時啟用磁碟區加密，並以正常的讀/寫權限將其掛接。&lt;br&gt;&lt;br&gt;
+  視您的組態而定，您也能將磁碟區加密設定為自動掛接磁碟區，因此您不用重複輸入必要的加密認證。
+ </desc10>
+    <msg1 len="167">輸入原始密碼。</msg1>
+    <msg2 len="167">原始密碼長度不能超過 32 個字元。請再試一次。</msg2>
+    <msg3 len="167"><![CDATA[原始密碼不能包含下列字元：@ :/ \ % ']]></msg3>
+    <msg4 len="167">您輸入的原始密碼不正確。請再試一次。</msg4>
+    <help_hint len="999"><![CDATA[
+			磁碟區加密是對稱的 256 位元資料加密技術。其優點是可同時在多個網路層運作。<br><br>磁碟區加密在背景進行。其主要功能是將您的資料進行某種編碼，讓其他使用者無法辨認。這種加密需要密碼。一旦您加密資料，就需要此密碼才能解密。<br><br>請務必確認已格式化 USB 儲存裝置，否則會遺失所有資料。您的 NAS 目前支援 2GB/4GB/8GB/16GB/32GB 裝置。您可將 USB 儲存裝置直接連結至 NAS，或是透過您使用的工作站 (PC)。
+		]]></help_hint>
+  </_ve>
+  <_ddns>
+    <title len="999">DDNS 設定</title>
+    <description len="999">動態 DNS 功能可讓您使用所購買的網域名稱 (www.whateveryournameis.com) 搭配動態指派的 IP 位址，來主控伺服器 (Web、FTP、遊戲伺服器等)。大部分寬頻網際網路服務提供者指派的都是動態 (變動) IP 位址。使用 DDNS 服務提供者，您的朋友輸入主機名稱就能連線至您的 NAS，而不用管您的 IP 位址是什麼。</description>
+    <ddns_title len="999">DDNS 設定</ddns_title>
+    <ddns len="999">動態 DNS</ddns>
+    <server_address len="999">伺服器位址</server_address>
+    <select_ddns len="999">選取動態 DNS 伺服器</select_ddns>
+    <host_name len="999">主機名稱</host_name>
+    <username len="999">使用者名稱或金鑰</username>
+    <pwd len="999">密碼或金鑰</pwd>
+    <verify len="999">驗證密碼或金鑰</verify>
+    <status len="999">狀態</status>
+    <help_hint len="999">若要使用此功能，您首先需有下拉式功能表中一個提供者的動態 DNS 帳戶。</help_hint>
+    <update_success len="999">更新成功</update_success>
+    <update_fail len="999">更新失敗</update_fail>
+    <last len="999">上次更新時間</last>
+    <next len="999">下次更新時間</next>
+    <connect len="999">連線中...</connect>
+    <msg1 len="999">伺服器位址不能空白。</msg1>
+    <msg2 len="999">伺服器位址不能超過 64 個字元。請再試一次。</msg2>
+    <msg3 len="999">主機名稱不能超過 64 個字元。請再試一次。</msg3>
+    <msg4 len="999">使用者名稱不能超過 64 個字元。請再試一次。</msg4>
+    <msg5 len="999">密碼不能超過 64 個字元。請再試一次。</msg5>
+    <msg6 len="999">密碼不相符。請再試一次。</msg6>
+    <msg7 len="999">使用者名稱不能空白。</msg7>
+    <msg8 len="999">您不能輸入空格。</msg8>
+    <msg9 len="999">密碼不能空白。</msg9>
+    <msg10 len="999">您不能輸入空格。</msg10>
+    <msg11 len="999">主機名稱不能空白</msg11>
+    <msg12 len="999">您不能輸入空格。</msg12>
+    <msg13 len="999">選取 ddns 伺服器。</msg13>
+  </_ddns>
+  <_sys_info>
+    <volume_info len="999">磁碟區資訊</volume_info>
+    <volume_name len="16">磁碟區名稱</volume_name>
+    <volume_type len="999">磁碟區類型</volume_type>
+    <sync_time len="999">剩餘的同步時間</sync_time>
+    <capacity len="999">總硬碟容量</capacity>
+    <ups_info len="999">UPS 資訊</ups_info>
+    <battery_charge len="999">電池充電</battery_charge>
+    <usb_info len="999">USB 資訊</usb_info>
+  </_sys_info>
+  <_hd_info>
+    <slot len="999">插槽</slot>
+    <manu len="999">製造商</manu>
+    <model len="999">型號</model>
+    <serial_number len="999">序號</serial_number>
+    <temp len="999">溫度</temp>
+    <size len="999">大小</size>
+    <id len="7">ID</id>
+    <item len="999">Item</item>
+  </_hd_info>
+  <_monitor>
+    <network_active>網路活動</network_active>
+    <device_active>裝置活動</device_active>
+    <desc>下表指出 WD My Cloud EX2 Ultra 系統上執行的所有系統活動和處理序。 </desc>
+    <cpu len="999">CPU</cpu>
+    <memory len="999">記憶體</memory>
+    <bandwidth len="999">頻寬</bandwidth>
+    <lan1 len="999">LAN1</lan1>
+    <lan2 len="999">LAN2</lan2>
+    <process len="999">處理序</process>
+    <used len="999">已使用</used>
+    <free len="999">可使用</free>
+    <process_name len="999">處理序名稱</process_name>
+    <owner len="999">擁有者</owner>
+    <id len="999">ID</id>
+    <utilitazion_ratio len="999">利用率 (%)</utilitazion_ratio>
+    <kb_s len="999">
+      <![CDATA[KB/s]]>
+    </kb_s>
+    <percentage len="999">%</percentage>
+    <memory_usage>記憶體使用狀況</memory_usage>
+  </_monitor>
+  <_backup>
+    <title1 len="999">內部備份</title1>
+    <title2 len="999">內部備份工作</title2>
+    <title3 len="999">內部備份說明</title3>
+    <title4 len="999">備份</title4>
+    <title5>備份恢復確認</title5>
+    <category len="999">類別</category>
+    <local len="999">內部備份</local>
+    <remote len="999">LAN 備份</remote>
+    <file len="999">檔案</file>
+    <url len="999">URL</url>
+    <rename len="999">重新命名</rename>
+    <when len="999">時機</when>
+    <recurring_backup len="999">循環</recurring_backup>
+    <none len="999">無</none>
+    <incremental_backup len="999">增量備份</incremental_backup>
+    <create len="999">建立工作</create>
+		<edit_job>修改工作</edit_job>
+    <desc1 len="999">選取路徑</desc1>
+    <desc2 len="999">來源資料夾</desc2>
+    <desc3 len="999">目的地資料夾</desc3>
+    <desc4 len="999">工作名稱</desc4>
+    <desc5 len="999">詳細資訊</desc5>
+    <desc6 len="999">每月</desc6>
+    <desc7 len="999">每週</desc7>
+    <desc8 len="999">每日</desc8>
+    <desc9 len="999">將一個儲存位置的內容備份至 My Cloud 系統上的另一個儲存位置。</desc9>
+    <desc10 len="999">上午</desc10>
+    <desc11 len="999">下午</desc11>
+    <desc12 len="999">下載成功</desc12>
+    <desc13 len="999">下載失敗</desc13>
+    <desc14 len="999">下載中</desc14>
+    <desc15 len="999">等待</desc15>
+    <desc16 len="999">已停止下載</desc16>
+    <desc17 len="999">復原備份</desc17>
+    <msg1 len="167">檢查時間設定。</msg1>
+    <msg2 len="167">檔案名稱長度應為 1-</msg2>
+    <msg4 len="167"><![CDATA[檔案名稱不能包含下列字元：\ / :* ?" < > | ]]></msg4>
+    <msg5 len="167">不是有效的檔案名稱。</msg5>
+    <msg6 len="167">目標不能是 URL 的子目錄。</msg6>
+    <msg7 len="167">URL 格式不正確，正確格式為：Volume_1/Test 或 \\192.168.0.32\Volume_1\Test\test.txt。請再試一次。</msg7>
+    <msg8 len="167">請輸入工作名稱。</msg8>
+    <msg9 len="167">工作名稱長度不能超過 256 個字元。請再試一次。</msg9>
+    <msg10 len="167">來源資料夾和目的地資料夾不能相同。</msg10>
+    <msg11 len="167">您確定要刪除內部備份工作？</msg11>
+    <msg12 len="167">輸入目的地資料夾位置。</msg12>
+    <msg13 len="999">輸入的工作名稱已經存在。</msg13>
+    <msg14 len="167">輸入來源資料夾位置。</msg14>
+    <msg15 len="167">已達備份工作數目上限。</msg15>
+  	<msg16>原始檔案夾中的資料將被覆寫。您要繼續嗎？</msg16>
+  	<msg17>具有相同名稱的工作已經存在。輸入其他不同的名稱。</msg17>
+  	<button1>復原</button1>
+  </_backup>
+  <_cloud_backup>
+    <title len="100">雲端備份</title>
+    <title_note len="100">雲端備份是什麼？</title_note>
+    <description len="999">雲端備份可讓您建立遠端備份，這些備份可透過網際網路和各種行動裝置加以存取。</description>
+  </_cloud_backup>
+  <_download>
+    <title2 len="999">FTP 下載工作</title2>
+    <save_to len="999">儲存至</save_to>
+    <speed len="999">速度</speed>
+    <download_path len="999">下載路徑</download_path>
+    <idx len="999">idx</idx>
+    <test_result len="999">測試結果</test_result>
+    <successful len="999">成功</successful>
+    <fail len="999">失敗</fail>
+    <file_size len="999">檔案大小</file_size>
+    <unavailable len="999">不可用</unavailable>
+    <codepage len="999">語言</codepage>
+    <bytes len="999">位元組</bytes>
+    <msg1 len="167">使用者名稱長度不能超過 16 個字元。請再試一次。</msg1>
+    <msg2 len="167">URL 長度應為 1-1024！</msg2>
+    <msg3 len="167">輸入「儲存至」位置。</msg3>
+    <msg4 len="167">儲存至長度應為 1-226！</msg4>
+    <msg5 len="167">URL 格式不正確，正確格式為：http://192.168.0.32/test.txt。請再試一次。</msg5>
+    <msg6 len="167">輸入日期。</msg6>
+    <msg7 len="167">日期格式不正確。請再試一次。</msg7>
+    <msg8 len="167">密碼長度不能超過 128 個字元。請再試一次。</msg8>
+  <detail_job>工作詳細資料</detail_job></_download>
+  <_p2p>
+    <title len="999">P2P</title>
+    <title2 len="999">P2P 設定</title2>
+    <title3 len="999">設定 P2P</title3>
+    <download_title len="999">下載</download_title>
+    <set_title len="999">設定</set_title>
+    <add_url len="999">從 URL 新增 Torrent</add_url>
+    <add_file len="999">從檔案新增 Torrent</add_file>
+    <tasks_title len="999">P2P 任務</tasks_title>
+    <stop_time len="999">停止時間</stop_time>
+    <start_time len="999">開始時間</start_time>
+    <disable len="999">P2P 已停用。</disable>
+    <p2p len="999">P2P</p2p>
+    <auto_download len="999">自動下載</auto_download>
+    <port_settings len="999">內送連線連接埠</port_settings>
+    <automatic len="999">自動</automatic>
+    <custom len="999">自訂</custom>
+    <incoming len="999">內送連線連接埠</incoming>
+    <bandwidth_control len="999">頻寬控制</bandwidth_control>
+    <manual len="999">手動</manual>
+    <max_download_rate len="999">最大下載率</max_download_rate>
+    <max_upload_rate len="999">最大上傳率</max_upload_rate>
+    <seeding len="999">做種</seeding>
+    <seed_removed len="999">做種直到移除</seed_removed>
+    <stop_seeding len="999">停止做種：</stop_seeding>
+    <minutes len="999">分鐘後</minutes>
+    <stop_seeding_when_meet len="999">停止做種，當符合</stop_seeding_when_meet>
+    <torrent_save_path len="999">Torrent 儲存路徑</torrent_save_path>
+    <encryption len="999">加密</encryption>
+    <flow_control_schedule len="999">流量控制排程</flow_control_schedule>
+    <bandwidth len="999">頻寬</bandwidth>
+    <mon len="999">週一</mon>
+    <tue len="999">週二</tue>
+    <wed len="999">週三</wed>
+    <thu len="999">週四</thu>
+    <fri len="999">週五</fri>
+    <sat len="999">週六</sat>
+    <sun len="999">週日</sun>
+    <p2p_detail len="999">詳細資訊</p2p_detail>
+    <top len="999">頂端</top>
+    <up len="999">上</up>
+    <down len="999">下</down>
+    <bottom len="999">底端</bottom>
+    <detail len="999">詳細資訊</detail>
+    <torrent_scheduling len="18">排程中</torrent_scheduling>
+    <monday len="999">星期一</monday>
+    <tuesday len="999">星期二</tuesday>
+    <wednesday len="999">星期三</wednesday>
+    <thursday len="999">星期四</thursday>
+    <friday len="999">星期五</friday>
+    <saturday len="999">星期六</saturday>
+    <sunday len="999">星期日</sunday>
+    <total len="999">總計</total>
+    <torrent_s len="999">Torrent</torrent_s>
+    <torrent_url_speed len="999">總 UL 速度</torrent_url_speed>
+    <torrent_dl_speed len="999">總 DL 速度</torrent_dl_speed>
+    <remove_completed len="18">移除完成</remove_completed>
+    <torrent len="999">Torrent</torrent>
+    <hhmm len="999">(HH:MM)</hhmm>
+    <start_download len="999">開始下載</start_download>
+    <stop_download len="999">停止下載</stop_download>
+    <dl_ul_speed len="999">DL/UL 速度</dl_ul_speed>
+    <priority len="999">優先順序</priority>
+    <status len="999">狀態</status>
+    <daily len="999">每日</daily>
+    <config len="999">設定</config>
+    <finished len="999">完成</finished>
+    <button1 len="999">按一下可上傳檔案</button1>
+    <button2 len="999">開始</button2>
+    <button3 len="999">停止</button3>
+    <desc1 len="999"><![CDATA[<br><br><b><font color=red>路徑已變更。原始路徑不存在。</font></b>]]></desc1>
+    <desc2 len="999">如果啟用「自動下載」，將不允許排程。如果停用「自動下載」，您可以排程下載。</desc2>
+    <desc3 len="999">選擇您要儲存 Torrent 的磁碟區。將自動建立一個 'P2P' 資料夾。</desc3>
+    <desc4 len="999"><![CDATA[啟用/停用可增強下載安全性的加密功能。]]></desc4>
+    <desc5 len="999">將此留空可指定無限制的下載速率。</desc5>
+    <desc6 len="999">全天關閉 P2P</desc6>
+    <msg1 len="167">不是有效值。</msg1>
+    <msg2 len="167">內送連線連接埠必須介於 10000-65000 之間。</msg2>
+    <msg3 len="167">值必須介於 1-1440 分鐘之間。</msg3>
+    <msg4 len="167">值必須介於 1-100 之間。</msg4>
+    <msg5 len="167">Torrent 計數的最大值是 20。</msg5>
+    <msg6 len="167">建議的並行下載數目上限為 10。</msg6>
+    <msg7 len="167">輸入 URL。</msg7>
+    <msg8 len="167">輸入有效的 URL。</msg8>
+    <msg9 len="167">輸入輸入路徑。</msg9>
+    <msg11 len="167">輸入開始時間。</msg11>
+    <msg12 len="167">每日下載持續期間限制為 23:59。</msg12>
+    <msg13 len="167">開始時間不能晚於停止時間。</msg13>
+    <msg14 len="167">值必須介於 1-100000 之間。</msg14>
+    <msg15 len="167">輸入停止時間。</msg15>
+    <msg16 len="167">FTP 伺服器使用連接埠 xxx。</msg16>
+    <msg17 len="167">只允許選取一項。</msg17>
+    <msg18 len="167">輸入語言。</msg18>
+    <msg19 len="167"><![CDATA[「語言」長度不能超過 32 個字元。請再試一次。]]></msg19>
+    <msg20 len="167">開始時間必須晚於目前時間。</msg20>
+    <msg21 len="167">無法添加此 torrent 檔案。torrent 檔案無效或重複。</msg21>
+    <msg22 len="167">無法添加此 torrent 檔案。My Cloud 系統無足夠的可用空間。</msg22>
+    <msg23 len="167">可用儲存空間不足。</msg23>
+    <msg24 len="167">上傳 Torrent 錯誤</msg24>
+    <msg25 len="167">此服務尚未啟用。請您的系統管理員將其啟用。</msg25>
+    <msg26 len="167">您確定要刪除 Torrent？</msg26>
+    <msg27 len="167">P2P 下載已停用。</msg27>
+    <msg28 len="167">P2P 下載已啟用。</msg28>
+    <msg29 len="167">URL 的最大長度是 191 個字元。</msg29>
+  <desc7>將此留空以指定無限制的上傳速率。</desc7><msg30>此埠號已被使用或已預留。請輸入另一個埠號。</msg30><desc8>變更 Torrent 儲存路徑，將使得無法存取之前下載的資料。在修改路徑之前先移動下載的資料。</desc8><title4>排程下載</title4><schedule>排程</schedule><tip1>輸入 Torrent URL、磁力連結或是 Torrent 雜湊碼，以新增要下載的 Torrent。</tip1><tip2>啟用這個選項，以利新增 Torrent 時，可以自動啟動下載。將會略過排程下載。</tip2><desc9>已成功新增。</desc9></_p2p>
+  <_time_machine>
+    <title>Mac 備份</title>
+    <no_share len="999">無共享資料夾。</no_share>
+    <desc len="999">為您的 Mac Time Machine 備份進行設定。</desc>
+    <sel len="999">選擇共享</sel>
+  </_time_machine>
+  <_elephant_drive>
+    <title len="50">ElephantDrive</title>
+    <access_backups>存取備份</access_backups>
+    <e_mail len="50">電子郵件</e_mail>
+    <password len="50">密碼</password>
+    <verify_password len="50">驗證密碼</verify_password>
+    <key_featuresNote>
+   &lt;b&gt;保護您的 WD My Cloud EX2 Ultra 系統。&lt;/b&gt;&lt;br&gt;
+   ElephantDrive 提供雲端儲存解決方案，可將您的 WD My Cloud EX2 Ultra 系統連接至雲端並加以保護。原生用戶端使用領先業界的安全功能，提供 WD My Cloud EX2 Ultra 系統的雲端備份和同步功能。此解決方案具備三個雲端儲存裝置的關鍵優勢：個別網站保護、智慧同步，以及簡單的安全共享。
+   &lt;br&gt;&lt;br&gt;
+  </key_featuresNote>
+    <elephant_link_tml>
+      <![CDATA[
+		如需 ElephantDrive 的詳細資訊，請造訪 <a href="http://www.elephantdrive.com/m/ct.aspx?ici={0}" target="_blank">http://www.elephantdrive.com/m/ct.aspx?ici={1}</a>
+		]]>
+    </elephant_link_tml>
+    <conn_status>狀態</conn_status>
+    <register>註冊</register>
+    <reg_success>註冊成功</reg_success>
+    <login>登入</login>
+    <forgot_password>
+      <![CDATA[
+		<a href="https://vault.elephantdrive.com/account/forgot_password.aspx" target="_blank">忘記密碼？</a>
+		]]>
+    </forgot_password>
+    <Note1>如果您沒有 ElephantDrive 帳戶，請輸入上方資訊並按一下「註冊」以建立帳戶。</Note1>
+    <Note2>如果您有 ElephantDrive 帳戶，請輸入上方資訊並按一下「登入」。</Note2>
+    <Note3>如需帳戶管理和資料備份，請前往 ElephantDrive 網站： </Note3>
+    <msg1 len="167">輸入電子郵件地址。</msg1>
+    <msg2 len="167">輸入有效的電子郵件地址。</msg2>
+    <msg3 len="167">輸入密碼。</msg3>
+    <msg4 len="167">密碼和確認密碼不符。請再試一次。</msg4>
+    <view_file_link>
+      <![CDATA[若要檢視您的檔案，請造訪「<a href="https://vault.elephantdrive.com" target="_blank">https://vault.elephantdrive.com</a>」]]>
+    </view_file_link>
+    <new_device_backup_wizard>
+      <![CDATA[<a href=" https://vault.elephantdrive.com/account/autologin.aspx?user={0}&session={1}&date={2}&tab={3}&dname={4}" target="_blank">新增裝置備份精靈</a>]]>
+    </new_device_backup_wizard>
+    <msg6 len="167">線上</msg6>
+    <msg7 len="167">離線</msg7>
+    <msg8 len="167">等待中...</msg8>
+    <msg9 len="167">連線中...</msg9>
+    <msg10 len="167">電子郵件已在資料庫中</msg10>
+    <msg11 len="167">服務暫時不可用。</msg11>
+    <msg12 len="167">服務暫時不可用。</msg12>
+    <msg13 len="167">找不到電子郵件。</msg13>
+    <msg14 len="167">不正確的密碼</msg14>
+  </_elephant_drive>
+  <_codepage>
+    <ISO-8859-1 len="999">西歐</ISO-8859-1>
+    <ISO8859-1 len="999">西歐</ISO8859-1>
+    <ISO-8859-2 len="999">斯拉夫文/中歐</ISO-8859-2>
+    <ISO8859-2 len="999">斯拉夫文/中歐</ISO8859-2>
+    <ISO-8859-3 len="999">南歐</ISO-8859-3>
+    <ISO-8859-4 len="999">波羅的海文</ISO-8859-4>
+    <ISO-8859-5 len="999">西里爾文</ISO-8859-5>
+    <ISO-8859-7 len="999">現代希臘文</ISO-8859-7>
+    <ISO-8859-9 len="999">土耳其文</ISO-8859-9>
+    <ISO8859-9 len="999">土耳其文</ISO8859-9>
+    <ISO-8859-10 len="999">北歐</ISO-8859-10>
+    <ISO-8859-13 len="999">波羅的海文</ISO-8859-13>
+    <ISO-8859-14 len="999">塞爾特文</ISO-8859-14>
+    <ISO-8859-15 len="999">西歐語言與歐元</ISO-8859-15>
+    <ISO-8859-16 len="999">南歐</ISO-8859-16>
+    <KOI8-R len="999">俄文</KOI8-R>
+    <KOI8-U len="999">烏克蘭文，白俄羅斯文</KOI8-U>
+    <KOI8-RU len="999">烏克蘭文，白俄羅斯文</KOI8-RU>
+    <CP1250 len="999">MS Windows 中歐</CP1250>
+    <CP1251 len="999">MS Windows 西里爾文</CP1251>
+    <cp1251 len="999">MS Windows 西里爾文</cp1251>
+    <CP1252 len="999">MS Windows 拉丁字母</CP1252>
+    <CP1253 len="999">MS Windows 希臘文</CP1253>
+    <CP1254 len="999">MS Windows 土耳其文</CP1254>
+    <CP1257 len="999">MS Windows 波羅的海文</CP1257>
+    <CP850 len="999">西歐</CP850>
+    <CP866 len="999">MS-DOS 西里爾文</CP866>
+    <CP1131 len="999">MS-DOS 白俄羅斯</CP1131>
+    <ISO-8859-6 len="999">阿拉伯文</ISO-8859-6>
+    <ISO-8859-8 len="999">希伯來文</ISO-8859-8>
+    <ISO8859-8 len="999">希伯來文</ISO8859-8>
+    <CP1255 len="999">MS Windows 希伯來文</CP1255>
+    <CP1256 len="999">MS Windows 阿拉伯文</CP1256>
+    <CP862 len="999">希伯來文</CP862>
+    <EUC-JP len="999">日文</EUC-JP>
+    <SHIFT_JIS len="999">日文</SHIFT_JIS>
+    <CP932 len="999">日文</CP932>
+    <ISO-2022-JP len="999">日文</ISO-2022-JP>
+    <ISO-2022-JP-2 len="999">日文</ISO-2022-JP-2>
+    <ISO-2022-JP-1 len="999">日文</ISO-2022-JP-1>
+    <EUC-CN len="999">簡體中文</EUC-CN>
+    <HZ len="999">簡體中文</HZ>
+    <GBK len="999">簡體中文</GBK>
+    <CP936 len="999">簡體中文</CP936>
+    <GB2312 len="999">簡體中文</GB2312>
+    <gb2312 len="999">簡體中文</gb2312>
+    <GB18030 len="999">簡體中文</GB18030>
+    <EUC-TW len="999">繁體中文</EUC-TW>
+    <BIG5 len="999">繁體中文</BIG5>
+    <big5 len="999">繁體中文</big5>
+    <CP950 len="999">繁體中文</CP950>
+    <BIG5-HKSCS len="999">繁體中文 (香港)</BIG5-HKSCS>
+    <BIG5-HKSCS_2001 len="999">繁體中文 (香港)</BIG5-HKSCS_2001>
+    <BIG5-HKSCS_1999 len="999">繁體中文 (香港)</BIG5-HKSCS_1999>
+    <ISO-2022-CN len="999">簡體中文</ISO-2022-CN>
+    <ISO-2022-CN-EXT len="999">簡體中文</ISO-2022-CN-EXT>
+    <EUC-KR len="999">韓文</EUC-KR>
+    <euc-kr len="999">韓文</euc-kr>
+    <CP949 len="999">韓文</CP949>
+    <ISO-2022-KR len="999">韓文</ISO-2022-KR>
+    <JOHAB len="999">韓文</JOHAB>
+    <ARMSCII-8 len="999">亞美尼亞文</ARMSCII-8>
+    <Georgian-Academy len="999">喬治亞文</Georgian-Academy>
+    <Georgian-PS len="999">喬治亞文</Georgian-PS>
+    <KOI8-T len="999">塔吉克文</KOI8-T>
+    <PT154 len="999">哈薩克文</PT154>
+    <RK1048 len="999">哈薩克文</RK1048>
+    <ISO-8859-11 len="999">泰文</ISO-8859-11>
+    <TIS-620 len="999">泰文</TIS-620>
+    <CP874 len="999">泰文</CP874>
+    <MuleLao-1 len="999">寮文</MuleLao-1>
+    <CP1133 len="999">寮文</CP1133>
+    <VISCII len="999">越南文</VISCII>
+    <TCVN len="999">越南文</TCVN>
+    <CP1258 len="999">越南文</CP1258>
+    <UTF-8 len="999">Unicode 8 位元</UTF-8>
+    <UCS-2 len="999">真實 UTF-16 BE</UCS-2>
+    <UCS-2BE len="999">Unicode 16 位元</UCS-2BE>
+    <UCS-2LE len="999">Unicode 16 位元</UCS-2LE>
+    <UCS-4 len="999">Unicode 32 位元</UCS-4>
+    <UCS-4BE len="999">Unicode 32 位元</UCS-4BE>
+    <UCS-4LE len="999">Unicode 32 位元</UCS-4LE>
+    <UTF-16 len="999">Unicode 16 位元</UTF-16>
+    <UTF-16BE len="999">Unicode 16 位元 Big Endian</UTF-16BE>
+    <UTF-16LE len="999">Unicode 16 位元 Little Endian</UTF-16LE>
+    <UTF-32 len="999">Unicode 32 位元</UTF-32>
+    <UTF-32BE len="999">Unicode 32 位元 Big Endian</UTF-32BE>
+    <UTF-32LE len="999">Unicode 32 位元 Little Endian</UTF-32LE>
+    <UTF-7 len="999">Unicode 7 位元</UTF-7>
+    <CP437 len="999">美國，加拿大</CP437>
+    <CP737 len="999">希臘文</CP737>
+    <CP775 len="999">愛沙尼亞文，立陶宛文和拉脫維亞文</CP775>
+    <CP852 len="999">斯拉夫文 (中歐和東歐)</CP852>
+    <CP853 len="999">MS-DOS 土耳其</CP853>
+    <CP855 len="999">西里爾文</CP855>
+    <CP857 len="999">土耳其文</CP857>
+    <CP858 len="999">西歐</CP858>
+    <CP860 len="999">MS-DOS 葡萄牙文</CP860>
+    <CP861 len="999">MS-DOS 冰島文</CP861>
+    <CP863 len="999">MS-DOS 加拿大法文</CP863>
+    <CP865 len="999">MS-DOS 北歐</CP865>
+    <cp865 len="999">MS-DOS 北歐</cp865>
+    <CP869 len="999">希臘文</CP869>
+    <CP1125 len="999">烏克蘭文</CP1125>
+    <CP864 len="999">泰文</CP864>
+    <EUC-JISX0213 len="999">日文</EUC-JISX0213>
+    <Shift_JISX0213 len="999">日文</Shift_JISX0213>
+    <ISO-2022-JP-3 len="999">日文</ISO-2022-JP-3>
+    <BIG5-2003 len="999">繁體中文 (實驗)</BIG5-2003>
+    <TDS565 len="999">土庫曼文</TDS565>
+  </_codepage>
+  <_usb_backups>
+    <title len="999">USB 備份說明</title>
+    <title_note len="999">使用 WD My Cloud EX2 Ultra 系統，可以備份至 USB 裝置以及從 USB 裝置備份回來。</title_note>
+    <title2 len="999">USB 備份工作</title2>
+    <backups_detail len="999">USB 備份詳細資訊</backups_detail>
+    <job_name len="999">工作名稱</job_name>
+    <direction len="999">方向</direction>
+    <usb_backups len="999">USB 備份</usb_backups>
+    <usb_to_nas len="999">USB 至 NAS</usb_to_nas>
+    <nas_to_usb len="999">NAS 至 USB</nas_to_usb>
+    <source_dir len="999">來源資料夾</source_dir>
+    <dest_dir len="999">目的地資料夾</dest_dir>
+    <select_source_dir len="999">選取來源資料夾</select_source_dir>
+    <select_dest_dir len="999">選取目的地資料夾</select_dest_dir>
+    <sync len="999">同步</sync>
+    <copy len="999">複製</copy>
+    <status len="999">狀態</status>
+    <datetime_format len="999">MM/dd/yyyy HH:mm:ss</datetime_format>
+    <msg2 len="167">選取來源資料夾。</msg2>
+    <msg3 len="167">選取目的地資料夾。</msg3>
+    <msg7 len="167">輸入工作名稱。</msg7>
+    <msg8 len="167">工作名稱重複。</msg8>
+    <msg9 len="167">來源資料夾和目的地資料夾重複。</msg9>
+    <msg10 len="167">選取工作。</msg10>
+    <status0_1>備份完成於 {0}</status0_1>
+    <status2>備份進行中</status2>
+    <status_4>複製備份</status_4>
+    <status_5>不允許其他備份</status_5>
+    <status_6>記憶體配置錯誤</status_6>
+    <status_7>無效的備份</status_7>
+    <status_8>無效的備份路徑</status_8>
+    <status_9>無效的來源資料夾</status_9>
+    <no_usb len="999">無 USB 儲存裝置。</no_usb>
+    <msg1 len="999">警告！檔案將從來源複製至目的地。目的地上的額外檔案都將刪除，相同名稱的檔案也會被來源覆寫。來源資料將維持不變。</msg1>
+    <edit_usb_backup len="999">編輯 USB 備份</edit_usb_backup>
+    <backups_recovery len="999">USB 備份復原</backups_recovery>
+    <incremental len="999">增量</incremental>
+    <msg11>
+		<![CDATA[
+		您確定要刪除此工作嗎？<br> <br>
+		備份工作將被刪除。<br>注意：先前的檔案備份不會被刪除。
+		]]>
+	</msg11>
+	<msg12>已達備份工作數目上限。</msg12>
+	<backup_now>開始備份</backup_now>
+	<backup_cancel>備份停止</backup_cancel>
+	<edit_job>修改工作</edit_job>
+	<del_job>刪除工作</del_job>
+	<status_1>備份失敗</status_1>
+	<create_usb_backups>建立工作</create_usb_backups>
+	<recover>復原備份</recover>
+  <auto_start>連線時自動啟動</auto_start>
+	<over_select_msg>已達資料夾和/或檔案數目上限。</over_select_msg>
+	<recovering>正在復原...</recovering>
+	<status_10>備份工作已取消</status_10>
+	<status_1_d>備份失敗。請檢查您的系統設定</status_1_d>
+	<status_2>備份來源路徑無效。請檢查設定並加以更正。</status_2>
+	<status_3>備份目的地路徑無效。請檢查設定並加以更正。</status_3>
+	<status1>備份就緒</status1>
+	<status0>備份已完成</status0>
+	<details>工作詳細資料</details>
+	<backup_type>備份類型</backup_type>
+	<backup_Stopped>備份已停止</backup_Stopped>
+  <backup_type_tip>複製─將檔案從來源複製到目的地。複製的檔案不會被覆寫。&lt;br&gt;
+  同步─將檔案從來源複製到目的地。複製的檔案會被覆寫。&lt;br&gt;
+  增量─將最多 25 份增量改變檔案複製到目的地。
+  </backup_type_tip></_usb_backups>
+  <_pwd>
+    <msg1 len="167">您輸入的密碼不正確。請再試一次。</msg1>
+    <msg2 len="167">系統管理員密碼已成功變更。</msg2>
+    <msg3 len="167">密碼不能包含空格。</msg3>
+    <msg4 len="167">新密碼不能包含空格。</msg4>
+    <msg5 len="167">新密碼長度至少必須有 5 個字元。請再試一次。</msg5>
+    <msg6 len="167">
+      <![CDATA[新密碼不能包含下列字元：@ :/ \ % ']]>
+    </msg6>
+    <msg7 len="167">密碼不相符。</msg7>
+    <msg8 len="167">
+      <![CDATA[密碼不能包含下列字元：@ :/ \ % ']]>
+    </msg8>
+    <msg9 len="167">密碼不能包含空格。</msg9>
+    <msg10 len="167">密碼長度至少必須有 5 個字元。請再試一次。</msg10>
+    <msg11 len="167">密碼長度不能超過 16 個字元。請再試一次。</msg11>
+  </_pwd>
+  <_ip>
+    <msg1 len="167">您輸入的子網路遮罩不正確。</msg1>
+    <msg2 len="167">輸入 IP 位址。</msg2>
+    <msg3 len="167">輸入正整數。</msg3>
+    <msg4 len="167">無效的 IP 位址。第一組數字應介於 1 和 223 之間。</msg4>
+    <msg5 len="167">無效的 IP 位址。第二組數字應介於 0 和 255 之間。</msg5>
+    <msg6 len="167">無效的 IP 位址。第三組數字應介於 0 和 255 之間。</msg6>
+    <msg7 len="167">無效的 IP 位址。第四組數字應介於 1 和 254 之間。</msg7>
+    <msg8 len="167">不是有效的 IP 位址。</msg8>
+    <msg9 len="167">無效的 IP 位址。請再試一次。</msg9>
+    <msg10 len="167">輸入子網路遮罩位址。</msg10>
+    <msg11 len="167">子網路遮罩位址值只能使用數字。</msg11>
+    <msg12 len="167">無效的子網路遮罩位址。第一組數字應介於 1 和 255 之間。</msg12>
+    <msg13 len="167">無效的子網路遮罩位址。第二組數字應介於 0 和 255 之間。</msg13>
+    <msg14 len="167">無效的子網路遮罩位址。第三組數字應介於 0 和 255 之間。</msg14>
+    <msg15 len="167">無效的子網路遮罩位址。第四組數字應介於 0 和 255 之間。</msg15>
+    <msg16 len="167">不是有效的子網路遮罩位址。</msg16>
+    <msg17 len="167">無效的子網路遮罩位址。請再試一次。</msg17>
+    <msg18 len="167">輸入閘道位址。</msg18>
+    <msg19 len="167">閘道位址值只能使用數字。</msg19>
+    <msg20 len="167">無效的閘道位址。第一組數字應介於 1 和 223 之間。</msg20>
+    <msg21 len="167">無效的閘道位址。第二組數字應介於 0 和 255 之間。</msg21>
+    <msg22 len="167">無效的閘道位址。第三組數字應介於 0 和 255 之間。</msg22>
+    <msg23 len="167">無效的閘道位址。第四組數字應介於 0 和 255 之間。</msg23>
+    <msg24 len="167">不是有效的閘道位址。</msg24>
+    <msg25 len="167">無效的閘道位址。請再試一次。</msg25>
+    <msg26 len="167">DNS IP 位址只能使用數字。</msg26>
+    <msg27 len="167">無效的 DNS IP 位址。第一組數字應介於 1 和 223 之間。</msg27>
+    <msg28 len="167">無效的 DNS IP 位址。第二組數字應介於 0 和 255 之間。</msg28>
+    <msg29 len="167">無效的 DNS IP 位址。第三組數字應介於 0 和 255 之間。</msg29>
+    <msg30 len="167">無效的 DNS IP 位址。第四組數字應介於 0 和 255 之間。</msg30>
+    <msg31 len="999">
+      <![CDATA[
+		輸入的 IP 位址是設定子網路遮罩的廣播位址，不能使用。請輸入有效的 IP 位址和子網路遮罩組合。
+		]]>
+    </msg31>
+    <msg32 len="167">VLAN ID 必須介於 1 和 4094 之間。</msg32>
+    <msg33 len="167">VLAN ID 不能包含空格。</msg33>
+    <msg34 len="167">前置詞長度不能包含空格。</msg34>
+    <msg35 len="167">前置詞長度必須介於 0 和 128 之間。</msg35>
+    <msg36 len="167">不允許將 LAN1 和 LAN2 設定為相同網域。</msg36>
+    <msg37 len="167">輸入伺服器位址。</msg37>
+    <msg38 len="167">不是有效的 DNS1 位址。</msg38>
+    <msg39 len="167">不是有效的 DNS2 位址。</msg39>
+  <msg40 len="999"><![CDATA[設定無效的靜態 IP 可能導致 WD My Cloud EX2 Ultra 無法存取。<br>按「儲存」繼續。]]></msg40>
+    
+  </_ip>
+  <_safepoints>
+    <title len="999">Safepoint 設定檔</title>
+    <name len="999">工作</name>
+    <create_on len="999">建立於</create_on>
+    <last_updated len="999">最後更新</last_updated>
+    <auto len="999">自動更新</auto>
+    <auto_s len="999">自動更新排程</auto_s>
+    <backup_now len="999">立即備份</backup_now>
+    <time len="999">自動更新時間</time>
+    <date_time len="999">
+      <![CDATA[自動更新日期與時間]]>
+    </date_time>
+    <size len="999">
+      <![CDATA[大小]]>
+    </size>
+  <sub_title>從 Safepoint 移轉內容。</sub_title><desc>精靈將允許您從 My Cloud 建立的 Safepoint 備份移轉內容。</desc><button_start_recovery>開始移轉</button_start_recovery><recovery_desc>請選擇您的 Safepoint 位置。</recovery_desc><local_usb>本機 USB</local_usb><scan_network>掃描網路</scan_network><search_usb>搜尋 USB 裝置</search_usb><search_network_wait>在您的網路掃描裝置...請等待。</search_network_wait><select_a_drive>請選擇磁碟機</select_a_drive><retrieving_safepoints>擷取 Safepoints</retrieving_safepoints><choose_a_savepoint>請選擇 Safepoint</choose_a_savepoint><choose_desc>在您所選擇的裝置/共享中找到下列的 Safepoints。請從以下的 Safepoint 清單選擇，按一下「完成」以開始您的還原。</choose_desc><safepoint_details>Safepoint 詳細資訊</safepoint_details><created_for>建立目的：</created_for><restore_progress>Safepoint 移轉進度</restore_progress><currently_copying>目前正在複製</currently_copying><copied>({0}%) 已複製</copied><device_login>裝置登入</device_login><share_login>共享登入</share_login><username>使用者名稱</username><password>密碼</password><error_code_1>無法連線至遠端共享。</error_code_1><error_code_2>目標位置無法使用。</error_code_2><error_code_3>用來移轉的可用空間不足。</error_code_3><error_code_4>無法寫入目標。</error_code_4><error_code_5>移轉資料時發生問題。</error_code_5><error_code_6>重新命名已移轉資料時發生問題。</error_code_6><error_code_7>建立共享時發生問題。</error_code_7><error_code_8>使用者已取消移轉。</error_code_8><error_code_9>已正在進行移轉。</error_code_9><restore_done>您的資料已成功還原。</restore_done><msg_pre_restore>在移轉過程中，無法使用雲端存取。您將無法使用 DLNA 串流裝置或任何 WD 軟體，例如 My Cloud、MyCloud.com、WD Photos 行動應用程式以及 WD Sync。您確定要繼續嗎？</msg_pre_restore><preparing_data>正在準備要移轉的 Safepoint 資料。這可能需要幾分鐘的時間。</preparing_data></_safepoints>
+  <_remote_backup>
+    <server len="44">遠端伺服器</server>
+    <remote_title1 len="44">遠端備份工作</remote_title1>
+    <remote_title2 len="44">遠端備份伺服器</remote_title2>
+    <remote_title3 len="999">保護您的資料</remote_title3>
+    <remote_title4 len="999">遠端備份</remote_title4>
+    <remote_title5 len="999">連線至遠端伺服器</remote_title5>               
+	<remote_title6 len="999">登入您的 My Cloud 帳戶</remote_title6>    
+	<remote_title7 len="999">您要備份至哪個目的地？</remote_title7>            
+	<remote_title8 len="999">找不到裝置</remote_title8>                  
+    <remote_title9 len="999">移除備份復原清單</remote_title9>
+	<remote_title10 len="999">移除備份詳細資料</remote_title10>            
+    <about len="999">遠端備份說明</about>
+    <desc len="999">
+   將您的 WD My Cloud EX2 Ultra 系統備份至您網路上或網路外的其他伺服器。&lt;br&gt;
+   繼續進行遠端備份前，請確定下列事項：&lt;br&gt;
+   &lt;ol&gt;
+    &lt;li&gt;您有可以用來備份此系統的遠端 WD My Cloud EX2 Ultra 系統。除了已經存在的資料，此系統上現有的共享和資料也會複製至目標系統。&lt;/li&gt;
+    &lt;li&gt;遠端 WD My Cloud EX2 Ultra 系統上的遠端伺服器設定已開啟。&lt;/li&gt;
+    &lt;li&gt;遠端 WD My Cloud EX2 Ultra 系統已啟用備份密碼。&lt;/li&gt;
+    &lt;li&gt;為了要在網際網路上查看您的 WD My Cloud EX2 Ultra 系統，您已在 [設定] &gt; [網路] &gt; [連接埠轉接] 中新增 SSH 和遠端備份服務的連接埠轉接規則。&lt;/li&gt;
+   &lt;/ol&gt;
+  </desc>
+    <desc2 len="999">將一個儲存位置的現有內容備份至 WD My Cloud EX2 Ultra 系統上的另一個儲存位置。</desc2>
+    <desc3 len="999">未新增任何遠端備份工作至 WD My Cloud EX2 Ultra 系統。</desc3>
+    <desc4 len="999">選取您要連線至遠端伺服器的方式</desc4>                                                                                  
+	<desc5 len="999">WD My Cloud EX2 Ultra 功能強大，您只需註冊電子郵件，它就能找到您的所有裝置。</desc5>                                                          
+	<desc6 len="999">
+   找不到可做為 WD My Cloud EX2 Ultra 系統備份目的地的裝置。&lt;br&gt;&lt;br&gt;
+   請確定：&lt;br&gt;&lt;br&gt;
+   *RSync、SSH 連接埠可以轉送。&lt;br&gt;&lt;br&gt;
+   按一下「上一頁」，再試一次。
+  </desc6>
+    <server_desc len="999">設定備份密碼，以啟用此系統向遠端伺服器的遠端備份。</server_desc>
+    <create_desc len="999">您可選擇保護 WD My Cloud EX2 Ultra 系統上的內容。指定您要保護的共享，然後選取&lt;b&gt;確定&lt;/b&gt;繼續。</create_desc>
+    <backup_complete_on len="999">備份完成於 %s</backup_complete_on>
+    <recover_complete_on len="999">復原完成於 %s</recover_complete_on>
+    <task len="999">工作名稱</task>
+    <schedule len="999">排程</schedule>
+    <status len="999">狀態</status>
+    <now len="999">現在</now>
+    <recover len="999">復原</recover>
+    <ready len="999">就緒</ready>
+    <finished len="999">完成</finished>
+    <job_desc len="999">描述</job_desc>
+    <type len="999">服務類型</type>
+    <path len="999">資料夾路徑</path>
+    <remote_path len="999">遠端共享</remote_path>
+    <ip len="999">遠端 IP</ip>
+    <pw len="999">密碼</pw>
+    <Num len="999">數字</Num>
+    <ssh_result len="999">SSH 測試結果</ssh_result>
+    <rsync_result len="999">RSYNC 測試結果</rsync_result>
+    <failed len="999">失敗</failed>
+    <wait len="999">請稍候...</wait>
+    <mode len="999">排程模式</mode>
+    <manual len="999">手動</manual>
+    <schedule2 len="999">排程</schedule2>
+    <month len="999">月</month>
+    <day len="999">日</day>
+    <hour len="999">小時</hour>
+    <minute len="999">分鐘</minute>
+    <yes len="999">是</yes>
+    <no len="999">否</no>
+    <select_one len="999">請選取一個共享</select_one>
+    <create len="999">建立工作</create>
+    <job_name len="999">工作名稱</job_name>
+    <create_on len="999">建立於</create_on>
+    <last_updated len="999">最後更新</last_updated>
+    <auto len="999">自動更新</auto>
+    <auto_s len="999">自動更新排程</auto_s>
+    <backup_now len="999">立即備份</backup_now>
+    <later len="999">稍後</later>
+    <time len="999">自動更新時間</time>
+    <date_time len="999">
+      <![CDATA[自動更新日期與時間]]>
+    </date_time>
+    <size len="999">
+      <![CDATA[大小]]>
+    </size>
+    <x_detail len="999">%s 的詳細資訊</x_detail>
+    <create_schedule_desc len="999">建立遠端備份需要一點時間，在建立期間可能會稍微影響 WD My Cloud EX2 Ultra 系統的效能。您可以選擇現在建立備份或是排程稍後建立。</create_schedule_desc>
+    <incomplete len="999">備份失敗</incomplete>
+    <completed len="999">備份已完成</completed>
+    <pw_desc len="999">請確認您已在 [設定] &gt; [網路] &gt; [連接埠轉送] 中加入 SSH 和遠端備份服務的連接埠轉送規則，以便透過網際網路查看您的 WD My Cloud EX2 Ultra 系統。</pw_desc>
+    <choose len="999">選擇方法</choose>
+	<mycloud len="999">My Cloud</mycloud>
+    <encryption len="999">加密</encryption>
+    <bandwidth>頻寬限制</bandwidth>
+    <msg1 len="999">您要現在執行此備份工作嗎？</msg1>
+    <msg2 len="999">
+      <![CDATA[設定完成。按一下「完成」儲存目前設定。]]>
+    </msg2>
+    <msg3 len="999">輸入任務名稱。</msg3>
+    <msg4 len="999">輸入的工作名稱已經存在。輸入其他不同的名稱。</msg4>
+    <msg5 len="999">
+      <![CDATA[
+		工作名稱只能包含下列字元："a-z"、"A-Z"、"0-9"、"-" 和 "_"
+		]]>
+    </msg5>
+    <msg6 len="999">選取路徑</msg6>
+    <msg7 len="999">路徑長度不能超過 235 個字元。請再試一次。</msg7>
+    <msg8 len="999">輸入密碼。</msg8>
+    <msg9 len="999">輸入 RSYNC 使用者名稱。</msg9>
+    <msg10 len="999">輸入 RSYNC 密碼。</msg10>
+    <msg11 len="999">輸入 ssh 使用者名稱。</msg11>
+    <msg12 len="999">輸入 ssh 密碼。</msg12>
+    <msg13 len="999">遠端硬碟上沒有足夠空間。</msg13>
+    <msg14 len="999">本機硬碟上沒有足夠空間。</msg14>
+    <msg15 len="999">請選取一個項目。</msg15>
+    <msg16 len="999">備份工作將被刪除。注意：先前的檔案備份不會被刪除。</msg16>
+    <msg17 len="999">已達備份工作數目上限</msg17>
+    <msg18 len="999">請輸入遠端 IP。</msg18>
+    <msg19 len="999">必要空間</msg19>
+    <msg20 len="999">可用空間</msg20>
+    <msg21 len="999">
+      <![CDATA[
+		密碼不能包含下列字元：" ' \ ?# ` :& + ;
+		]]>
+    </msg21>
+    <msg22 len="999">選取路徑</msg22>
+    <msg23 len="999">RSYNC 測試失敗。</msg23>
+    <msg24 len="999">輸入遠端 IP 位址。</msg24>
+    <msg25 len="999">您確定現在要執行備份？</msg25>
+    <msg26 len="999">無項目。</msg26>
+    <msg27 len="999">SSH 使用者名稱不能包含空格。</msg27>
+    <msg28 len="999">請選取一個資料夾。</msg28>
+    <msg29 len="999">您確定要復原資料？此程序會從遠端伺服器復原資料至您本機的 WD My Cloud EX2 Ultra 裝置。</msg29>
+    <msg30 len="999">您確定要關閉遠端伺服器功能？這樣會禁止其他網路儲存裝置備份至此 WD My Cloud EX2 Ultra 裝置。</msg30>
+    <msg31 len="999">工作將依下列排程執行</msg31>
+    <msg32 len="999">此遠端備份工作未完成。</msg32>
+    <msg33 len="999">已達資料夾和/或檔案數目上限。</msg33>
+	<msg34 len="999">遠端備份失敗。請確定遠端伺服器作用中。</msg34>
+    <success len="999">成功</success>
+    <fail len="999">失敗</fail>
+    <f1 len="999">遠端備份無法進行，因為 SSH 失敗。</f1>
+    <f2 len="999">遠端備份無法進行，因為 SSH 主機不明。</f2>
+    <f3 len="999">遠端備份無法進行，因為拒絕連線。</f3>
+    <f4 len="999">遠端備份無法進行，因為 SSH 存取失敗。</f4>
+    <f5 len="999">遠端備份無法進行，因為 SSH 金鑰變更失敗。</f5>
+    <f6 len="999">遠端備份無法進行，因為失敗的 RSYNC 測試。</f6>
+    <f7 len="999">遠端備份無法進行，因為拒絕 RSYNC 伺服器連線。</f7>
+    <f8 len="999">無效的遠端路徑。輸入有效路徑，再試一次。</f8>
+    <f9 len="999">遠端備份無法進行，因為遠端共享僅有唯讀權限。請變更遠端共享的設定，再試一次。</f9>
+    <f10 len="999">遠端備份無法進行，因為無效的 RSYNC 模組。</f10>
+    <f11 len="999">無效的遠端備份密碼。請再試一次。</f11>
+    <f12 len="999">遠端備份無法進行，原因不明。</f12>
+    <no_share len="999">無共享。</no_share>
+    <backup_status len="999">備份狀態</backup_status>
+    <recover_status len="999">復原狀態</recover_status>
+    <remote_share len="999">遠端共享</remote_share>
+    <local_share len="999">本機共享</local_share>
+    <a_space len="999">可用空間</a_space>
+    <total_size len="999">備份大小總計</total_size>
+    <cancel_on>備份停止於 %s</cancel_on>
+    <failed_on>備份失敗於 %s</failed_on>
+    <cancel>停止備份</cancel>
+  <nas_server>NAS 伺服器</nas_server>
+	<linux_server>Linux 伺服器</linux_server>
+	<ssh_account>SSH 使用者名稱</ssh_account>
+	<ssh_pw>SSH 密碼</ssh_pw>
+	<recurrence>循環</recurrence>
+  <msg35>如需了解更多關於連接埠轉送的資訊，請登入&lt;a href="#" id="backups_rlink" target="_blank"&gt;此處&lt;/a&gt;。</msg35><transfer_encryption>傳輸加密</transfer_encryption></_remote_backup>
+  <_sms>
+    <title>SMS 設定</title>
+    <sms len="999">SMS</sms>
+    <provider len="999">SMS 服務提供者</provider>
+    <add len="999">新增</add>
+    <del len="999">刪除</del>
+    <url len="999">URL</url>
+    <replace len="999">將空格字元替換為</replace>
+    <no_replace len="999">使用預設</no_replace>
+    <phone1 len="999">電話號碼 1</phone1>
+    <phone2 len="999">電話號碼 2</phone2>
+    <test len="999">測試 SMS</test>
+    <description len="999">
+      <![CDATA[
+		「SMS 設定」功能表可讓您設定以簡訊形式傳送事件警示給行動電話。您需有行動電話並訂閱 SMS 閘道提供者，由後者提供可用於組態的有效 HTTP API URL。設定好 SMS 設定後，只要發生「事件設定」功能表下勾選的事件，就會以簡訊形式傳送事件警示給設定的行動電話。
+		]]>
+    </description>
+    <name len="999">提供者名稱</name>
+    <url2 len="999">輸入 SMS URL，且訊息內容設為 "Hello world"</url2>
+    <sms_url len="999">SMS URL</sms_url>
+    <sms_description len="999">
+      <![CDATA[
+			*此 SMS URL 僅用於設定用途。完成設定後不會傳送 SMS 訊息。此 URL 的格式由 SMS 服務提供者提供，URL 必須包括下列參數：使用者名稱、密碼、目的地電話以及訊息內容。以 Clickatell 為例，可能的 URL 為：https://api.clickatell.com/http/sendmsg?user=TestUser&password=TestPassword&api_id=3148203&to=886123456789&text=Hello。
+		]]>
+    </sms_description>
+    <parameter len="999">URL 參數定義</parameter>
+    <sel len="999">選取每個參數的對應類別</sel>
+    <username len="999">使用者名稱</username>
+    <pw len="999">密碼</pw>
+    <number len="999">電話號碼</number>
+    <message len="999">訊息內容</message>
+    <other len="999">其他</other>
+    <msg1 len="999">SMS 數字不可超過 64。</msg1>
+    <msg2 len="999">提供的名稱重複，請再試一次。</msg2>
+    <msg3 len="999">提供者名稱格式不正確。</msg3>
+    <msg4 len="999">Url 不是有效值。</msg4>
+    <msg5 len="999">Url 參數不可超過 7。</msg5>
+    <msg6 len="999">請輸入電話和文字參數。</msg6>
+    <msg7 len="999">使用者名稱重複</msg7>
+    <msg8 len="999">密碼重複</msg8>
+    <msg9 len="999">電話號碼重複</msg9>
+    <msg10 len="999">文字重複</msg10>
+    <msg11 len="999">更新成功</msg11>
+    <msg12 len="999">無 SMS</msg12>
+    <msg13 len="999">請輸入 url。</msg13>
+    <msg14 len="999">請輸入特殊字元。</msg14>
+    <msg15 len="999">電話號碼無效。請輸入有效號碼。</msg15>
+    <msg16 len="999">電話號碼相同，請變更。</msg16>
+    <msg17 len="999">使用者名稱不可空白。</msg17>
+    <msg18 len="999">使用者名稱不是有效值。</msg18>
+    <msg19 len="999">密碼不可空白。</msg19>
+    <msg20 len="999">密碼不是有效值。</msg20>
+    <msg21 len="999">請新增 SMS 服務提供者。</msg21>
+    <msg22 len="999">測試 SMS：已傳送</msg22>
+    <msg23 len="999">測試 SMS：失敗</msg23>
+    <msg24 len="999">提供者名稱不能空白。</msg24>
+    <msg25 len="999">請輸入電話號碼。</msg25>
+    <msg26 len="999">Url 不能有參數。</msg26>
+    <help_hint len="999">
+      <![CDATA[
+		啟用「SMS 設定」中的 SMS 通知，即可以簡訊形式傳送事件日誌給您的行動電話。如需組態所需的適當 URL 設定，請洽詢行動服務提供者。<br><br>*此 SMS URL 僅用於設定用途。完成設定後不會傳送 SMS 訊息。此 URL 的格式由 SMS 服務提供者提供，URL 必須包括下列參數：使用者名稱、密碼、目的地電話以及訊息內容。以 Clickatell 為例，可能的 URL 為：https://api.clickatell.com/http/sendmsg?user=TestUser&password=TestPassword&api_id=3148203&to=886123456789&text=Hello。
+		]]>
+    </help_hint>
+  </_sms>
+  <_wfs>
+    <upload len="999">上傳</upload>
+    <download len="999">下載</download>
+    <refresh len="999">重新整理</refresh>
+    <size len="999">大小</size>
+    <type len="999">類型</type>
+    <modified len="999">修改時間</modified>
+    <copy len="999">複製</copy>
+    <move len="999">移動</move>
+    <rename len="999">重新命名</rename>
+    <properties len="999">屬性</properties>
+    <folder_name len="999">資料夾名稱</folder_name>
+    <location len="999">位置</location>
+    <change_time len="999">變更時間</change_time>
+    <access_time len="999">存取時間</access_time>
+    <owner len="999">擁有者</owner>
+    <user_group len="999">使用者群組</user_group>
+    <privilege len="999">權限</privilege>
+    <owner_user_group len="999">
+      <![CDATA[擁有者和使用者群組]]>
+    </owner_user_group>
+    <read len="999">
+      <![CDATA[讀取]]>
+    </read>
+    <write len="999">
+      <![CDATA[寫入]]>
+    </write>
+    <execute len="999">
+      <![CDATA[執行]]>
+    </execute>
+    <create_title len="44">建立目錄</create_title>
+    <select_files len="15">選取檔案</select_files>
+    <file_size_error len="40">檔案大小錯誤</file_size_error>
+    <add_to_zip len="40">新增至 Zip</add_to_zip>
+    <preview len="999">預覽</preview>
+    <open len="999">開啟</open>
+    <unzip len="999">解壓縮</unzip>
+    <untar len="999">解壓縮 Tar</untar>
+    <select_zip_file>選取 Zip 檔案</select_zip_file>
+    <compress_msg>請稍候.....檔案壓縮進行中。</compress_msg>
+    <decompress_msg>請稍候.....檔案解壓縮進行中。</decompress_msg>
+    <create_folder>建立資料夾</create_folder>
+    <msg1 len="999">下載檔案大小必須小於 4 GB。</msg1>
+    <msg2 len="999">選取下載檔案。</msg2>
+    <msg3 len="999">選取儲存上傳檔案路徑。</msg3>
+    <msg4 len="999">不能輸入空白字元。</msg4>
+    <msg5 len="999">輸入名稱。</msg5>
+    <msg6 len="999">未選擇檔案。</msg6>
+    <msg7 len="999">您沒有存取此目錄的足夠權限。</msg7>
+    <msg8 len="999">您確定要刪除選取的檔案？</msg8>
+    <msg9 len="999">
+      <![CDATA[
+		網頁檔案檢視器使用 Adobe® Flash® Player 從電腦上傳檔案。請先從 <a href='http://www.adobe.com'>www.adobe.com</a> 安裝最新的 Adobe Flash Player，然後再繼續。
+		
+		]]>
+    </msg9>
+    <msg10 len="999">檔案成功上傳。</msg10>
+    <msg11 len="999">佇列已滿。最大大小為 </msg11>
+    <msg12 len="999">上傳成功。</msg12>
+    <msg13 len="999">檔案正在上傳。</msg13>
+    <msg14 len="999">將檔案拖放至此</msg14>
+    <msg15 len="999">大小 &gt; 2G，無法上傳。</msg15>
+    <msg16 len="999">
+<![CDATA[解壓縮失敗！<br>請確定壓縮格式和檔案副檔名相符，才能成功解壓縮檔案。]]>
+</msg16>
+    <msg17>這會取消上傳。您確定要繼續嗎？</msg17>
+  <msg18>保留兩個檔案</msg18>
+    
+    
+      <msg19>請選擇移動方式</msg19>
+    
+    
+      <msg20>請選擇複製方式</msg20>
+    
+  <upload_desc>上傳檔案至 My Cloud 系統</upload_desc><file_desc>當發現名稱相同的檔案時，執行以下操作：</file_desc><destination>目的地</destination><msg21>一些檔案未添加到佇列：</msg21><msg22>檔案 %s1 超過了大小限制 (%s)。</msg22></_wfs>
+  <_s3>
+    <no_list>未新增任何 S3 清單至您的 WD My Cloud EX2 Ultra 裝置。</no_list>
+    <title>Amazon S3 說明</title>
+    <queue>Amazon S3 佇列</queue>
+    <amazon len="22">Amazon S3</amazon>
+    <s3_dialog_title len="44">設定 Amazon S3 備份 </s3_dialog_title>
+    <job_name len="999">工作名稱</job_name>
+    <type len="999">類型</type>
+    <a_key len="999">存取金鑰</a_key>
+    <p_key len="999">私人金鑰</p_key>
+    <b_path len="999">遠端路徑</b_path>
+    <region len="999">區域</region>
+    <backup_type len="999">備份類型</backup_type>
+    <local_path len="999">本機路徑</local_path>
+    <schedule_mode len="999">排程模式</schedule_mode>
+    <overwrite len="999">覆寫現有檔案</overwrite>
+    <fullbackup len="999">完整備份</fullbackup>
+    <incremental_backup len="999">增量備份</incremental_backup>
+    <united_states len="999">美國</united_states>
+    <northern_california len="999">北加州</northern_california>
+    <oregon len="999">奧勒岡州</oregon>
+    <sydney len="999">雪梨</sydney>
+    <sao_paulo len="999">聖保羅</sao_paulo>
+    <ireland len="999">愛爾蘭</ireland>
+    <singapore len="999">新加坡</singapore>
+    <tokyo len="999">東京</tokyo>
+    <running len="15">執行中</running>
+    <backup_now len="15">立即備份</backup_now>
+    <msg1 len="999">輸入工作名稱。</msg1>
+    <msg2 len="999">工作名稱不能包含空格。</msg2>
+    <msg3 len="999">輸入存取金鑰。</msg3>
+    <msg4 len="999">存取金鑰不能包含空格。</msg4>
+    <msg5 len="999">輸入私人金鑰。</msg5>
+    <msg6 len="999">私人金鑰不能包含空格。</msg6>
+    <msg7 len="999">輸入貯體路徑。</msg7>
+    <msg8 len="999">遠端路徑不能包含空格。</msg8>
+    <msg9 len="999">遠端路徑長度至少必須有 3 個字元。請再試一次。</msg9>
+    <msg10 len="999">選取本機路徑。</msg10>
+    <msg11 len="999">遠端路徑不能包含底線。</msg11>
+    <msg12 len="999">工作名稱重複。</msg12>
+    <msg13 len="999">
+      <![CDATA[輸入遠端複本的名稱然後按「<B>下一頁</B>」。]]>
+    </msg13>
+    <msg14 len="999">
+      <![CDATA[按「<B>下一頁</B>」繼續。]]>
+    </msg14>
+    <msg15 len="999">復原失敗。</msg15>
+    <msg16 len="999">備份失敗。</msg16>
+    <msg17 len="999">不接受此工作名稱。請再試一次。</msg17>
+    <msg18 len="999">不接受此遠端路徑。請再試一次。</msg18>
+    <msg19 len="999">遠端路徑的結尾不能是短破折號。</msg19>
+    <msg20 len="999">遠端路徑不能包含兩個連續句號。</msg20>
+    <msg21 len="999">遠端路徑不能包含短破折號旁邊接著句號。</msg21>
+    <msg22 len="999">遠端路徑不能包含短破折號旁邊接著句號。</msg22>
+    <msg23 len="999">
+      <![CDATA[遠端路徑的開頭不能包含 test_]]>
+    </msg23>
+    <msg24 len="999">
+      <![CDATA[遠端路徑的開頭不能包含 'test' 或 'TEST'。]]>
+    </msg24>
+    <msg25 len="999">遠端路徑的的開頭必須是 a-z,A-Z,0-9</msg25>
+    <msg26 len="999">工作名稱不能包含空格。</msg26>
+    <msg27 len="999">遠端路徑不能包含反斜線。</msg27>
+    <msg28 len="999">
+      <![CDATA[可以包含小寫字母、數字、句號 (.) 和短破折號 (-)]]>
+    </msg28>
+    <time_error len="999">系統時間不正確。請再試一次。</time_error>
+    <key_error len="999">存取金鑰無效。請再試一次。</key_error>
+    <private_key_error len="999">私人金鑰無效。請再試一次。</private_key_error>
+    <bucket_error len="999">無效的遠端路徑。</bucket_error>
+    <bucket_error1 len="999">遠端路徑不存在。</bucket_error1>
+    <seq len="20">
+      <![CDATA[序列]]>
+    </seq>
+    <backup_date len="35">備份日期/時間</backup_date>
+    <action len="12">動作</action>
+    <step1 len="999">設定 Amazon S3 備份</step1>
+    <step2 len="999">設定 Amazon S3 備份</step2>
+    <step3 len="999">設定 Amazon S3 備份</step3>
+    <step4 len="999">設定 Amazon S3 備份</step4>
+    <step5 len="999">設定 Amazon S3 備份</step5>
+    <step6 len="999">設定 Amazon S3 備份</step6>
+    <step1_desc len="999">輸入一個 16 字元的工作名稱，以識別待新增的上傳至雲端或下載至雲端的作業。工作名稱不能包含空格。允許以下字元：a-z、A-Z、0-9。 </step1_desc>
+    <step2_desc len="999"> 
+  輸入您獲指派的 Amazon S3 &lt;b&gt;存取&lt;/b&gt;和&lt;b&gt;私人&lt;/b&gt;金鑰。金鑰可讓 WD My Cloud EX2 Ultra 系統存取 Amazon S3 雲端儲存裝置。在&lt;b&gt;遠端路徑&lt;/b&gt;欄位中，輸入新的或現有 Amazon S3 &lt;b&gt;貯體&lt;/b&gt;名稱。這是雲端儲存裝置上的資料夾，用於寫入和讀取您的資料。最後，選取可提供最佳 Amazon S3 雲端讀取和寫入服務的適當區域。
+  </step2_desc>
+    <step3_desc len="999">  
+  在&lt;b&gt;類型&lt;/b&gt;下拉式功能表中，如果您要將 WD My Cloud EX2 Ultra 系統資料備份至 Amazon S3 雲端，請選取&lt;b&gt;上傳&lt;/b&gt;。如果您要將 Amazon S3 雲端的資料備份至 WD My Cloud EX2 Ultra 裝置，請選取&lt;b&gt;下載&lt;/b&gt;。&lt;br&gt;&lt;br&gt;
+  在&lt;b&gt;備份類型&lt;/b&gt;下拉式功能表中，選取&lt;b&gt;覆寫現有檔案&lt;/b&gt;可使用相同名稱的來源檔案覆寫目標資料夾中的檔案。選取&lt;b&gt;完整備份&lt;/b&gt;可建立個別資料夾，其中包含每次執行工作時的所有備份資料。選取&lt;b&gt;增量備份&lt;/b&gt;可使用較目標資料夾檔案新的來源檔案，來覆寫檔案。
+  </step3_desc>
+    <step4_desc len="999">
+      <![CDATA[
+			在「<b><B><B><B>Local</B>_<B>Path</B></B></B></b>」欄位中，輸入工作來源或目標目錄的完整路徑名稱 (例如 Volume_1/backup_docs)。
+		]]>
+    </step4_desc>
+    <step5_desc len="999">
+      <![CDATA[
+		選取執行工作時要使用的適當「<B>排程模式</B>」。按一下「<B>手動</B>」可於日後使用手動點按按鈕來啟動工作。按一下「<B>一次</B>」可排程只執行一次工作的日期與時間。按一下「<B>排程</B>」可設定每日執行工作的時間。
+		]]>
+    </step5_desc>
+    <step6_desc len="999">
+      <![CDATA[
+		檢閱所有設定，按「<B>上一步</B>」可返回進行所需變更。按一下「<B>結束</B>」可結束精靈而不儲存工作。按一下「<B>完成</B>」可儲存工作並結束精靈。
+		]]>
+    </step6_desc>
+    <recovery>復原</recovery>
+    <msg29>設定完成。按一下「完成」儲存目前設定</msg29>
+    <desc>
+      <![CDATA[Amazon S3 (簡單儲存服務) 是 Amazon Web Services 提供的線上檔案儲存網頁服務。它提供透過網頁服務介面，將您的裝置資料備份至雲端的儲存空間。]]>
+    </desc>
+    <del_msg>您確定要刪除此 Amazon S3 工作？</del_msg>
+    <s3_config>S3 設定</s3_config>
+    <progress>進度</progress>
+  </_s3>
+  <_ads>
+    <title len="999">Active Directory 設定</title>
+    <enable len="999">啟用 Active Directory</enable>
+    <desc len="999">請確定 WD My Cloud EX2 Ultra 系統和網域伺服器的時區相符，且彼此差距在 5 分鐘內。</desc>
+    <enable_desc len="999">啟用 Active Directory 可讓您運用已在 Windows 網域中的使用者。不過，目前還無法管理現有的本機使用者和共享。</enable_desc>
+    <enable_desc2 len="999">您確定要啟用此功能嗎？</enable_desc2>
+    <time_desc len="999">請確定 WD My Cloud EX2 Ultra 系統和網域伺服器的時區相符，且彼此差距在 5 分鐘內。</time_desc>
+    <name len="999">使用者名稱</name>
+    <pw len="999">密碼</pw>
+    <workgroup len="999">工作群組</workgroup>
+    <realm_name len="999">領域名稱</realm_name>
+    <server_name len="999">AD 伺服器名稱</server_name>
+    <ads_user len="999">ADS 使用者</ads_user>
+    <msg1 len="999">使用者名稱欄位為空白。輸入使用者名稱。</msg1>
+    <msg2 len="999">密碼欄位為空。輸入密碼。</msg2>
+    <msg3 len="999">
+      <![CDATA[工作群組名稱可使用下列字元："a-z"、"A-Z"、"0-9"、"-"]]>
+    </msg3>
+    <msg4 len="999">輸入工作群組。</msg4>
+    <msg5 len="999">網域名稱欄位為空白。輸入網域名稱。</msg5>
+    <msg6 len="999">輸入 AD 伺服器名稱。</msg6>
+    <msg7 len="999">
+      <![CDATA[請至「設定」->「網路」檢查 DNS 設定]]>
+    </msg7>
+    <msg8 len="999">成功</msg8>
+    <msg9 len="999">時間不正確。請檢查您系統的日期和時間。使日期和時間與 AD 伺服器同步。（NAS 和 Active Directory 伺服器將只允許至多 5 分鐘的時間差異。）</msg9>
+    <msg10 len="999">登入失敗。目標帳戶名不正確。</msg10>
+    <msg11 len="999">帳戶名格式不正確。請輸入一個有效的帳戶名。</msg11>
+    <msg12 len="999">無法設定 servicePrincipalNames。請確保此伺服器的網域名稱匹配 AD 域。</msg12>
+    <msg13 len="999">無法加入網域。</msg13>
+    <msg14 len="999">連線失敗。請檢查您的配置。</msg14>
+    <msg15 len="999">驗證失敗。請重新輸入正確的登入憑據。</msg15>
+    <msg16 len="999">Active Directory 域內未找到使用者名稱。請確保使用者名稱已正確輸入。使用者不存在。</msg16>
+    <msg17 len="999">無法解析所請求的 Active Directory 域內金鑰分佈中心 (KDC) 的網路位址。</msg17>
+    <msg18 len="999">AFP 和 Time Machine 服務將停止。</msg18>
+    <msg19 len="999">
+      <![CDATA[
+			使用者名稱不能包含下列字元：'
+		]]>
+    </msg19>
+    <msg20 len="999">
+      <![CDATA[
+			密碼不能包含下列字元：'
+		]]>
+    </msg20>
+  <msg57>網域名稱未被定義。請輸入一個網域名稱。</msg57><msg58>網域名稱無效。請重新輸入。</msg58><msg59>無法打開秘密資料庫。</msg59><msg60>「工作組」設置為 %s1，應為 %s2。</msg60><msg61>「域」設置為 %s1，應為 %s2。</msg61><msg62>「安全」設置為 %s1，應為 %s2。</msg62><msg63>無效配置 (%s1) 和配置修改未被請求。</msg63><msg64>已請求配置操作但未被後端支援。</msg64><msg65>未找到域 %s1 的 DC。</msg65><msg66>未查詢到 RPC：%s2 域 %s1 的 DC 資訊。</msg66><msg67>未能在 %s1 預創建帳戶。</msg67><msg68>未能加入此 RPC 的域 %s1：%s2.</msg68><msg69>在加入此項後未能驗證域成員：%s1.</msg69></_ads>
+  <_snmp>
+    <community len="999">SNMP 社群</community>
+    <notification len="999">通知</notification>
+    <notification_ip len="999">通知 IP 位址</notification_ip>
+    <description len="999">本區段可讓您設定 SNMP 功能。您可以設定 SNMP 的社群，以及設陷/通知的目的地。</description>
+    <enable>SNMP</enable>
+    <msg1 len="999">輸入 SNMP 社群。</msg1>
+    <msg2 len="999">SNMP 社群不能包含空格。</msg2>
+    <msg3 len="999">社群不能包含下列字元：@ :/ \\ %</msg3>
+    <msg4 len="999">輸入 IP 位址。</msg4>
+    <msg5 len="999">IP 位址值只能使用數字。</msg5>
+    <title_1>SNMP 設定</title_1><title_2>使用者管理 (SNMPv3)</title_2>
+    <title_3>SNMPv3 使用者詳細資料</title_3>
+    <sys_contact>聯絡資訊</sys_contact>
+    <notification_community>通知社群</notification_community>
+    <community_v2>社群 (SNMPv2c)</community_v2>
+    <scuritylevel>安全性層級</scuritylevel>
+    <authtype>驗證類型</authtype>
+    <encrytype>加密類型</encrytype>
+    <view>檢視</view>
+    <view_system>系統</view_system>
+    <view_network>網路</view_network>
+    <edit>編輯</edit>
+    <msg6>「位置」不得包含抑音符號。</msg6>
+    <msg7>聯絡資訊必須包含抑音符號。</msg7>
+    <msg8>通知社群字串必須是介於 1 到 255 個字元的英數值，而且不能包含空格、反斜線、抑音符號。 </msg8>
+    <msg9>社群　(SNMPv2c)　字串必須是介於 1 到 255 個字元的英數值，而且不能包含空格、反斜線、抑音符號。 </msg9>
+    <msg10>使用者名稱必須為 1 至 31 個字元之間的英數值，不可包含空格。</msg10>
+    <msg11>驗證密碼和確認密碼不符。請再試一次。</msg11>
+    <msg12>驗證密碼必須是介於 8 到 255 個字元的英數值，而且不能包含空格、反斜線、抑音符號。</msg12>
+    <msg13>驗證密碼和確認密碼不符。請再試一次。</msg13>
+    <msg14>加密密碼必須是介於 8 到 255 個字元的英數值，而且不能包含空格、反斜線、抑音符號。</msg14>
+    <msg15>您確定要刪除此使用者嗎？</msg15>
+  </_snmp>
+  <_bonding>
+    <title len="999">連結彙總</title>
+    <mode1 len="999">循環配置資源</mode1>
+    <mode2 len="999">使用中備份</mode2>
+    <mode3 len="999">Balance-XOR</mode3>
+    <mode4 len="999">廣播</mode4>
+    <mode5 len="999">802.3ad</mode5>
+    <mode6 len="999">調適型傳輸負載平衡</mode6>
+    <mode7 len="999">調適型負載平衡</mode7>
+    <bonding_option len="999">選項</bonding_option>
+  </_bonding>
+  <_portforwarding>
+    <no_list>未新增任何連接埠轉送服務至您的 WD My Cloud EX2 Ultra 裝置。</no_list>
+    <built_desc len="999">選取預設服務掃描</built_desc>
+    <custom_desc len="999">自訂連接埠轉送服務</custom_desc>
+    <scan len="999">掃描</scan>
+    <service len="30">服務</service>
+    <protocol len="20">通訊協定</protocol>
+    <e_port len="20">外部連接埠</e_port>
+    <p_port len="20">內部連接埠</p_port>
+    <title len="44">連接埠轉送設定</title>
+    <step1 len="44">連接埠轉送設定</step1>
+    <step2 len="44">連接埠轉送設定</step2>
+    <msg1 len="999">選取內建應用程式。</msg1>
+    <msg2 len="999">外部連接埠重複。</msg2>
+    <msg3 len="999">路由表可能無法清除。</msg3>
+    <msg4 len="999">輸入服務。</msg4>
+    <msg5 len="999">已達連接埠轉送設定數目上限。</msg5>
+    <msg6 len="999">輸入服務。</msg6>
+    <msg7 len="999">輸入外部連接埠。</msg7>
+    <msg8 len="999">輸入內部連接埠。</msg8>
+    <error1 len="999">連接埠轉送設定失敗。</error1>
+    <error2 len="999">連接埠轉送設定失敗</error2>
+    <error3 len="999">服務設定錯誤。請再試一次。</error3>
+    <ok1 len="999">連接埠轉送設定成功。</ok1>
+    <ok2 len="999">連接埠轉送設定成功。</ok2>
+    <del_error len="999">連接埠轉送刪除失敗。</del_error>
+    <del_ok len="999">連接埠轉送刪除成功。</del_ok>
+    <upnp_title len="999">UPnP 路由器偵測</upnp_title>
+    <upnp_test len="999">UPnP 路由器測試</upnp_test>
+    <found len="999">在網路上找到 UPnP 路由器。</found>
+    <not_found len="999">在網路上找不到 UPnP 路由器。</not_found>
+  </_portforwarding>
+  <_dfs>
+    <local_path len="999">本機資料夾名稱</local_path>
+    <host len="999">遠端主機</host>
+    <remote_folder len="999">遠端共享</remote_folder>
+    <enable len="999">啟用分散式檔案系統</enable>
+    <enable_title len="999">分散式檔案系統啟用/停用</enable_title>
+    <set_title len="999">共享聚集設定</set_title>
+    <get_folder len="999">取得遠端共享資料夾</get_folder>
+    <modify_title len="999">分散式檔案系統修改</modify_title>
+    <group_title len="999">根資料夾清單</group_title>
+    <group_title2 len="999">建立根資料夾</group_title2>
+    <group_title3 len="999">修改根資料夾名稱</group_title3>
+    <root_name len="999">根資料夾名稱</root_name>
+    <action len="999">動作</action>
+    <group len="999">資料夾名稱</group>
+    <sel len="999">選取資料夾</sel>
+    <dfs_description len="999">
+      <![CDATA[
+			<!--DFS is a method of storing and accessing files based in a client/NAS architecture. Any number of remote computers can access these files on the NAS with the proper authorization rights. DFS uses a uniform naming convention and a mapping scheme to keep track of where files are located. When you try to retrieve a file from the NAS, the file appears as a normal file, and you are able to work with the file in the same way as if it were stored locally on your hard drive. When you are finished working with the file, it is returned over the network to the NAS, which stores the now-altered file for retrieval at a later time.--> 在分散式檔案系統中，網路中不限數目的遠端用戶端如果具有適當的授權權限，即可存取一或多個中央伺服器存放區檔案。按一下「啟用」可啟用此功能。
+		]]>
+    </dfs_description>
+    <dfs_group_description len="999">
+      <![CDATA[
+		建立用於儲存所有檔案的根資料夾。
+		]]>
+    </dfs_group_description>
+    <dfs_link_description len="999">在本機 My Cloud 系統組態一個可連結到遠端共享的資料夾。</dfs_link_description>
+    <msg1 len="999">無法擷取遠端共享資料夾。</msg1>
+    <msg2 len="999">共享已經存在。請選取其他不同的共享名稱。</msg2>
+    <msg3 len="999">已達共享數目上限。</msg3>
+    <msg4 len="999">輸入主機。</msg4>
+    <msg5 len="999">IP 位址只能使用數字。</msg5>
+    <msg6 len="999">輸入本機共享名稱。</msg6>
+    <msg7 len="999">輸入主機。</msg7>
+    <msg8 len="999">選取遠端共享資料夾。</msg8>
+    <msg9 len="999">輸入名稱。</msg9>
+    <msg10 len="999">已達根資料夾數目上限。</msg10>
+    <msg11 len="999">輸入的根資料夾名稱已經存在。輸入其他不同的名稱。</msg11>
+    <msg12 len="999">共享名稱長度不能超過 80 個字元。</msg12>
+    <msg13 len="999">本機系統不能被用作遠端主機。</msg13>
+    <msg14 len="999">您確定要刪除分散式檔案系統嗎？</msg14>
+  </_dfs>
+  <_ipv6>
+    <ipv6_title len="999">IPv6</ipv6_title>
+    <ipv6_setup len="999">IPv6 設定</ipv6_setup>
+    <ipv4_setup len="999">LAN IP 設定</ipv4_setup>
+    <ipv4_setup2 len="999">LAN 2 IP 設定</ipv4_setup2>
+    <ipv4_setup3 len="999">LAN 1 + LAN 2 IP 設定</ipv4_setup3>
+    <auto len="999">自動</auto>
+    <dhcp len="999">DHCP</dhcp>
+    <static len="999">靜態</static>
+    <off len="999">關閉</off>
+    <prefix len="999">前置詞長度</prefix>
+    <def_gw len="999">預設閘道</def_gw>
+    <gw len="999">閘道</gw>
+    <mode len="999">模式</mode>
+    <interface len="999">介面</interface>
+    <addr len="999">IPv6 位址</addr>
+    <setup len="999">設定</setup>
+    <tunnel_enable len="999">啟用通道</tunnel_enable>
+    <tunnel_server len="999">伺服器位址</tunnel_server>
+    <tunnel_username len="999">使用者名稱</tunnel_username>
+    <tunnel_pw len="999">密碼</tunnel_pw>
+    <enable len="999">啟用 IPv6</enable>
+    <msg1>啟用 IPV6 會停用 WD My Cloud EX2 Ultra 系統上的雲端存取。&lt;br&gt;&lt;br&gt;您要繼續嗎？</msg1>
+  </_ipv6>
+  <_iso_create>
+    <title len="50">建立 ISO 映像</title>
+    <wizard_desc1 len="999">
+      <![CDATA[
+				選取您要從磁碟區新增至 ISO 檔案的內容。
+		]]>
+    </wizard_desc1>
+    <total_size len="40">映像大小</total_size>
+    <image_path len="40">映像路徑</image_path>
+    <image_name len="40">映像名稱</image_name>
+    <overwrite len="50">覆寫</overwrite>
+    <create_iso len="18">建立 ISO 映像</create_iso>
+    <auto_mount len="50">自動掛接</auto_mount>
+    <select len="10">選取</select>
+    <total_space len="13">總空間</total_space>
+    <used_space len="12">已用空間</used_space>
+    <free_space len="12">可用空間</free_space>
+    <img_wizard len="999">建立 ISO 映像。在此程序期間請勿關閉 WD My Cloud EX2 Ultra 系統。</img_wizard>
+    <msg1 len="50">選取映像路徑。</msg1>
+    <msg2 len="50">映像名稱不能包含空格。</msg2>
+    <msg3 len="50">選取資料夾。</msg3>
+    <msg4 len="50">輸入映像名稱。</msg4>
+    <msg5 len="50">ISO 映像已存在。請輸入其他映像名稱。</msg5>
+    <msg6 len="50">建立 ISO 映像失敗。</msg6>
+    <msg7 len="50">
+      <![CDATA[這會建立 ISO 映像。一旦建立後將無法修改。按「確定」繼續。]]>
+    </msg7>
+    <msg8 len="50">建立 ISO 映像。</msg8>
+    <msg9 len="50">
+      <![CDATA[您已到達 ISO 檔案/資料夾層級上限。請變更資料夾大小。按「確定」繼續。]]>
+    </msg9>
+    <msg10 len="50">硬碟空間不足。</msg10>
+    <msg11 len="50">建立 ISO 組態失敗。</msg11>
+    <msg12 len="50">這是根資料夾。您不能刪除它。</msg12>
+    <msg13 len="50">
+      <![CDATA[映像名稱可使用下列字元："a-z"、"A-Z"、"0-9"、"-"、"_"。]]>
+    </msg13>
+    <msg14 len="999">按一下此核取方塊可自動掛接 ISO 映像。</msg14>
+    <msg15 len="999">已達 ISO 映像檔案數目上限。您只能使用「刪除」或「修改」功能。 </msg15>
+  </_iso_create>
+  <_vv>
+    <title1 len="999">磁碟區虛擬化說明</title1>
+    <title2 len="999">建立磁碟區虛擬化</title2>
+    <title3 len="999">磁碟區虛擬化</title3>
+    <desc1 len="999">啟動器 IQN</desc1>
+    <desc2 len="999">裝置 IP</desc2>
+    <desc3 len="999">連接埠</desc3>
+    <desc4 len="999">驗證</desc4>
+    <desc5 len="999">使用者名稱</desc5>
+    <desc6 len="999">密碼</desc6>
+    <desc7 len="999">目標</desc7>
+    <desc8 len="999">共享資料夾</desc8>
+    <desc9 len="999">搜尋失敗</desc9>
+    <desc10 len="999">磁碟區虛擬化可讓您對應至其他 iSCSI 目標並將它們呈現為 WD My Cloud EX2 Ultra 系統上的磁碟區形式，藉以簡化延展性。</desc10>
+    <desc11 len="999">連線</desc11>
+    <desc12 len="999">中斷連線</desc12>
+    <desc13 len="999">連線錯誤</desc13>
+    <desc14 len="999">連線中</desc14>
+    <desc15 len="999">已連線</desc15>
+    <desc16 len="999">已中斷連線</desc16>
+    <desc17 len="999">正在重新連線</desc17>
+    <desc18 len="999">執行中</desc18>
+    <desc19 len="999">沒有格式</desc19>
+    <desc20 len="999">格式化</desc20>
+    <desc21 len="999">錯誤</desc21>
+    <desc22 len="999">正在建立磁碟區</desc22>
+    <desc23 len="999">離線</desc23>
+    <desc24 len="999">不支援的檔案系統</desc24>
+    <desc25 len="999">連線錯誤</desc25>
+    <desc26 len="999">建立磁碟區已失敗</desc26>
+    <desc27 len="999">停用</desc27>
+    <desc28 len="999">唯讀</desc28>
+    <desc29 len="999">等候格式化</desc29>
+    <desc30 len="999">注意：將使用少量空間來儲存虛擬磁碟區的格式化資訊。</desc30>
+    <msg1 len="999">輸入的共享名稱已經存在。請輸入其他不同的共享名稱。</msg1>
+    <msg2 len="999">即將移除虛擬磁碟區。您確定要繼續嗎？</msg2>
+    <msg3 len="999">輸入裝置 IP 位址。</msg3>
+    <msg4 len="999">輸入連接埠。</msg4>
+    <msg5 len="999">找不到目標。</msg5>
+    <msg6 len="999">輸入共享資料夾名稱。</msg6>
+    <msg7 len="167">新密碼長度至少必須有 12 個字元。請再試一次。</msg7>
+  </_vv>
+  <_http_downloads>
+    <title1 len="999">HTTP 下載</title1>
+    <title2 len="999">HTTP 下載佇列</title2>
+    <title3 len="999">HTTP 下載測試結果</title3>
+    <desc1 len="999">選取下載路徑</desc1>
+    <desc2 len="999">將要下載的檔案重新命名為指定的名稱。</desc2>
+    <desc3>dddd, mmmm dd, yyyy, h:MM:ss TT</desc3>
+    <msg1 len="167">URL 格式不正確，正確格式為：http://192.168.0.32/test.txt。請再試一次。</msg1>
+    <msg2 len="167">您確定要刪除 HTTP 下載工作？</msg2>
+  </_http_downloads>
+  <_ftp_downloads>
+    <title1 len="999">FTP 下載</title1>
+    <title2 len="999">FTP 下載測試結果</title2>
+    <login_method len="999">登入方式</login_method>
+    <file len="999">檔案</file>
+    <folder len="999">資料夾</folder>
+    <desc2 len="999">使用您的 My Cloud EX2 Ultra裝置來向 FTP 網站備份和備份 FTP 網站的內容。</desc2>
+	  <detail len="999">FTP 下載詳細資料</detail>
+		<status0>下載完成</status0>
+	  <status0_1>成功從 [{0}] 下載，時間為 [{1}]。</status0_1>
+		<status2>下載進行中</status2>
+		<status_1>下載失敗</status_1>
+		<status_1_d>下載失敗。請檢查您的系統設定。</status_1_d>
+		<status_2>下載來源路徑無效。請檢查設定並加以更正。</status_2>
+		<status_3>下載目的地路徑無效。請檢查設定並加以更正。</status_3>
+		<status_4>重複下載</status_4>
+		<status_5>不允許其他下載</status_5>
+		<status_6>系統錯誤。請重新啟動系統。</status_6>
+	  <status_7>無效的下載</status_7>
+		<status_8>無效的下載路徑</status_8>
+		<status_9>下載目的地資料夾是唯讀。請檢查設定並加以更正。</status_9>
+		<status_10>下載於 [{0}] 停止。</status_10>
+		<status_11>下載目的地的儲存空間已滿。請將檔案移出儲存空間，以便釋放可用空間。</status_11>
+		<status_430>失敗的認證導致下載失敗。請重新輸入正確的登入憑據。</status_430>
+		<status_451>無效的目的路徑導致下載失敗。請重新選擇目的路徑。</status_451>
+		<status_550>無效的遠端來源路徑導致下載失敗。請重新選擇來源路徑。</status_550>
+		<status_10057>連線錯誤導致下載失敗。請檢查所有 FTP 設定。</status_10057>
+		<status_10060>連線逾時導致下載失敗。請確認 FTP 伺服器是否可用。</status_10060>
+		<status_10061>無法連線至伺服器。</status_10061>
+		<status_10064>主機不可用導致下載失敗。請確認主機位址與 FTP 伺服器的可用性。</status_10064>
+		<status_1100>無效的主機導致下載失敗。請重新輸入正確的主機名稱。</status_1100>	
+		<download_cancel>下載停止</download_cancel>
+		<download_now>開始下載</download_now>
+		<msg1 len="167">已達下載工作數目上限。</msg1>
+	  <msg2 len="167">輸入 URL。</msg2>
+	  <msg3 len="167">URL 長度應為 1-235 個字元。</msg3>
+	  <msg4 len="167">您確定要刪除 FTP 下載工作？</msg4>
+		<msg11><![CDATA[
+			您確定要刪除此工作嗎？<br> <br>
+	 		下載工作將被刪除。<br>注意：先前的檔案下載不會被刪除。
+		]]></msg11>
+</_ftp_downloads>
+<_media>
+    <title1 len="73">iTunes</title1>
+    <title2>DLNA 媒體伺服器</title2>
+    <title3>iTunes 伺服器設定</title3>
+    <desc1>多媒體串流</desc1>
+    <desc2>版本</desc2>
+    <desc3>最後更新</desc3>
+    <desc4>DLNA 資料庫</desc4>
+    <desc5>啟用對於不同裝置的內容串流。</desc5>
+    <desc6>重新組建媒體資料庫。除非您懷疑資料庫損毀，否則請勿使用此功能。</desc6>
+    <desc7><![CDATA[檢視媒體播放器 >>]]></desc7>
+    <desc8>媒體</desc8>
+    <desc9>音樂曲目</desc9>
+    <desc10>圖片</desc10>
+    <desc11>影片</desc11>
+    <desc12>更新資料庫中...</desc12>
+    <desc13>多媒體串流選項</desc13>
+    <desc14>將音樂、影片或照片串流至家中所有相容的裝置。</desc14>
+    <desc15>媒體播放器</desc15>
+    <desc16>開啟</desc16>
+    <desc17>關閉</desc17>
+    <desc18>媒體播放器</desc18>
+    <desc19>一般媒體接收器</desc19>
+    <desc20>進階選項</desc20>
+    <button1>再次掃描</button1>
+  	<title4>相機備份</title4>
+		<title5>相機資料夾選項</title5>
+		<mode>傳輸模式</mode>
+		<recent>最近活動</recent>
+		<move_f>移動檔案</move_f>
+		<copy_f>複製檔案</copy_f>
+		<move_b>立即移動</move_b>
+		<copy_b>立即複製</copy_b>
+		<trans_foldere>傳輸資料夾</trans_foldere>
+		<folder_options>資料夾選項</folder_options>
+		<enter_folder>輸入資料夾名稱</enter_folder>	
+		<trans_file>傳輸檔案</trans_file>
+		<info>資訊</info>
+		<connect_camera>連線的相機</connect_camera>
+		<auto_trans>自動傳輸</auto_trans>	
+		<today_date>今天的日期</today_date>
+    <date_taken>拍攝日期</date_taken>
+    <custom_folder_name>自訂資料夾名稱</custom_folder_name>
+    <select_destination>選取目的地</select_destination>
+	<msg1>請輸入資料夾名稱。</msg1>		
+		<msg2 len="999">已複製 %s 個檔案 (從 %s1 至 %s2，位於 %s3)。</msg2>
+		<msg3 len="999">已移動 %s 個檔案 (從 %s1 至 %s2，位於 %s3)。</msg3>
+		<msg4 len="999">無法複製 %s 個檔案 (從相機至 %s1)。如需詳細資訊，請參閱系統日誌。</msg4>
+		<msg5 len="999">無法移動 %s 個檔案 (從相機至 %s1)。如需詳細資訊，請參閱系統日誌。</msg5>
+  <status_success>從 %s 備份于 %s1 成功完成。</status_success><status_fail1>備份失敗。請檢查連接的 USB 裝置。</status_fail1><status_fail2>備份失敗。備份目的地路徑無效。請修改備份設定，再試一次。</status_fail2><status_fail3>由於系統錯誤，備份失敗。請重新啟動 My Cloud EX2 Ultra 系統。</status_fail3><status_fail4>備份目的地為唯讀。請修改備份設定。</status_fail4><status_fail5>備份目的地的儲存空間已滿。請將檔案移出目的地空間，以便釋放可用空間。</status_fail5><status_fail6>備份停止於 %s</status_fail6><camera_title>關於相機備份</camera_title><camera_description>使用 WD My Cloud EX2 Ultra 系統備份您的相機。</camera_description><status_fail7>無法從 %s 刪除檔案</status_fail7><msg6>My Cloud 系統已啟用多媒體串流。前往「共用」頁面設置每份共用的媒體服務。</msg6></_media>
+  <_disk_mgmt>
+    <title1>磁碟設定檔</title1>
+    <title2>系統磁碟</title2>
+    <title3>磁碟機詳細資訊</title3>
+    <title4>硬碟資訊</title4>
+    <title5>磁碟狀態</title5>
+    <title6>ID</title6>
+    <title7>屬性</title7>
+    <title8>目前</title8>
+    <title9>最差</title9>
+    <title10>臨界值</title10>
+    <title11>原始值</title11>
+    <desc1>磁碟機</desc1>
+    <desc2>磁碟健全狀況</desc2>
+    <desc3>健全</desc3>
+    <desc4>供應商</desc4>
+    <desc5>型號</desc5>
+    <desc6>序號</desc6>
+    <desc7>容量</desc7>
+    <desc8>良好</desc8>
+    <desc9>不正常</desc9>
+    <desc10>不相容的磁碟機</desc10>
+    <desc11>無磁碟機</desc11>
+    <desc12>韌體版本</desc12>
+    <desc13>S.M.A.R.T.Data</desc13>
+  </_disk_mgmt>
+  <_raid>
+    <title1>RAID 設定檔</title1>
+    <title2>RAID 磁碟區</title2>
+    <title3>變更 RAID 模式</title3>
+    <title4>RAID 漫遊</title4>
+    <desc1>RAID 健全狀況</desc1>
+    <desc2>健全</desc2>
+    <desc3>所有 RAID 磁碟區都在使用中且狀態健全。</desc3>
+    <desc4>自動重新組建</desc4>
+    <desc5 len="20">JBOD</desc5>
+    <desc6 len="20">跨越</desc6>
+    <desc7 len="20">RAID 0</desc7>
+    <desc8 len="20">RAID 1</desc8>
+    <desc9 len="20">RAID 5</desc9>
+    <desc10 len="20">備用</desc10>
+    <desc11 len="20">RAID 10</desc11>
+    <desc12>磁碟機</desc12>
+    <desc13 len="999">JBOD 組態</desc13>
+    <desc14 len="999">跨越組態</desc14>
+    <desc15 len="999">RAID 0 組態</desc15>
+    <desc16 len="999">RAID 1 組態</desc16>
+    <desc17 len="999">RAID 5 組態</desc17>
+    <desc18 len="999">RAID 10 組態</desc18>
+    <desc19 len="999">使用一或多個不是 RAID 組態的磁碟機，而是以個別邏輯磁碟區來管理。</desc19>
+    <desc20 len="999">切換至 JBOD</desc20>
+    <desc21 len="999">切換至跨越</desc21>
+    <desc22 len="999">切換至 RAID 0</desc22>
+    <desc23 len="999">切換至 RAID 1</desc23>
+    <desc24 len="999">切換至 RAID 5</desc24>
+    <desc25 len="999">切換至 RAID 10</desc25>
+    <desc27 len="999">以線性方式結合磁碟機，建立一個大型邏輯磁碟區。</desc27>
+    <desc28 len="999">資料等量存放於多個硬碟上，由於結合運用兩個以上磁碟區，因此可以加速讀取和記錄資料，提高效能。</desc28>
+    <desc29 len="999">由於會在兩個不同的硬碟上記錄兩個即時資料副本，所以如果一個副本失敗，另一個仍可繼續讀/寫資料，直到故障硬碟獲得更換。</desc29>
+    <desc30 len="999">在 3 個以上磁碟機等量存放資料並將每個磁碟機的四分之一專用於容錯，可提供優越的效能和保護。</desc30>
+    <desc31 len="999">指定資料如何在主要磁碟間等量寫入 (且主要磁碟已鏡像至次要磁碟) 的 RAID 通訊協定。</desc31>
+    <desc32 len="999">您可透過下方滑桿指定 RAID 大小設定。如果您不會用到總磁碟區容量，可選擇將剩餘空間設定為「跨越」。</desc32>
+    <desc33 len="999"><![CDATA[設定 RAID 5 + 備用 (按一下「建立備用磁碟」方塊)。"Disk4" 接著就會變成熱備援。如果您不想建立 RAID 5 + 備用，請取消選取「<B>建立備用磁碟</B>」。重新調整 RAID 5 磁碟區大小，如果您不會用到全部空間，請勾選「<B>將剩餘磁碟空間設定為跨越</B>」。按「<B>下一頁</B>」繼續。]]></desc33>
+    <desc34 len="999">xxx 的磁碟區</desc34>
+    <desc35 len="999">本區段可在 RAID 損毀時讓您重新組建 RAID。「啟用自動重新組建」可在識別磁碟時自動重新組建 RAID。</desc35>
+    <desc36 len="999">自動掛接</desc36>
+    <desc37 len="999">輸入加密密碼</desc37>
+    <desc38 len="999">確認加密密碼</desc38>
+    <desc39 len="999">本區段可讓您設定所選磁碟區的密碼。選取 <b>自動掛接</b> 以自動掛接加密磁碟區，不用在開機時再次輸入密碼。</desc39>
+    <desc40 len="999">加密磁碟區 1</desc40>
+    <desc41 len="999">加密磁碟區 2</desc41>
+    <desc42 len="999">加密磁碟區 3</desc42>
+    <desc43 len="999">加密磁碟區 4</desc43>
+    <desc44 len="999">已降級</desc44>
+    <desc45 len="999">良好</desc45>
+    <desc46 len="999">將剩餘磁碟空間設定為「跨越」。</desc46>
+    <desc47 len="999">您的資料現在會移轉至 RAID5。</desc47>
+    <desc48 len="999"><![CDATA[
+		如果您需對 RAID 模式選項進行變更，請按「上一頁」按鈕。如果您已完成選擇，準備將資料移轉至 RAID5，請按一下「完成」。
+		]]></desc48>
+    <desc50 len="999">自動掛接</desc50>
+    <desc51 len="999">建立新磁碟區</desc51>
+    <desc52 len="999">加密 xxx</desc52>
+    <desc53 len="167">替換硬碟沒有足夠容量，無法支援 RAID 磁碟區。請插入更高容量的硬碟。</desc53>
+    <desc54 len="167">移轉至 RAID 1 中</desc54>
+    <desc55 len="167">移轉至 RAID 5 中</desc55>
+    <desc56 len="167">設定新插入磁碟機，以加入 RAID 或建立單獨磁碟區。</desc56>
+    <desc57 len="999">您即將重新格式化硬碟。所有資料都將遭到清除。您要繼續嗎？</desc57>
+    <desc58 len="999">在本區段中選取您要使用哪個磁碟來將磁碟機重新設定為 RAID 1。</desc58>
+    <desc59 len="999">EXT 3</desc59>
+    <desc60 len="999">EXT 4</desc60>
+    <desc61 len="999">建立備用磁碟</desc61>
+    <desc62 len="999">在本區段中選取您要使用哪個磁碟來將磁碟機重新設定為 RAID 5。</desc62>
+    <desc63 len="999"><![CDATA[若要從剩餘可用的儲存空間建立新磁碟區，請按<a href="javascript:Remain_Linear_Format();" class="edit_detail">這裡</a>。]]></desc63>
+    <desc64>未知</desc64>
+    <desc66>未設定磁碟區</desc66>
+    <desc67>設定 RAID 模式以在此裝置上設定新 RAID 磁碟區。</desc67>
+    <desc68>已降級</desc68>
+    <desc69>一或多個 RAID 磁碟區已降級。</desc69>
+    <desc70>選取以設定儲存模式。</desc70>
+    <desc71 len="999">本區段可讓您選擇要加密的磁碟區。</desc71>
+    <desc72 len="999">保護磁碟區</desc72>
+    <desc73 len="999">無安全性</desc73>
+    <desc74 len="999">啟用加密。</desc74>
+    <desc75 len="999">停用加密。</desc75>
+    <desc76 len="999">啟用自動掛接。</desc76>
+    <desc77 len="999">停用自動掛接。</desc77>
+    <desc78 len="999">建立備用磁碟，用以替換 RAID 磁碟組中即將失敗或已失敗的磁碟。</desc78>
+    <desc79 len="999">重新組建中</desc79>
+    <desc80 len="999">從剩餘空間建立磁碟區</desc80>
+    <desc81 len="999">磁碟區重調整大小。</desc81>
+    <desc82 len="999">移轉中</desc82>
+    <desc83 len="999"><![CDATA[
+		如果您需對 RAID 模式選項進行變更，請按「上一頁」按鈕。<br><br>如果您已完成選擇，準備將資料移轉至 RAID1，請按一下「完成」。
+		]]></desc83>
+    <desc84 len="999">手動重新組建中</desc84>
+    <desc85 len="999">如要變更您的 RAID 類型，請先選取磁碟區，然後從清單中選擇適當的磁碟機。</desc85>
+    <desc86 len="999">重新調整大小中</desc86>
+    <desc87 len="999">請變更序列如下：</desc87>
+    <desc88 len="999">目前的磁碟序列為：</desc88>
+    <desc89 len="999">磁碟序列</desc89>
+    <desc90 len="999"><![CDATA[請注意，執行此操作，現有檔案傳輸服務將於操作期間中斷。<br><br>您要繼續嗎？]]></desc90>
+    <desc91 len="999">等候調整大小</desc91>
+    <desc92 len="999">重要：請注意，如果您選取此選項，稍後將無法將您的資料移轉至 RAID 5。</desc92>
+    <desc93 len="999">延伸容量</desc93>
+		<desc94 len="999">您要以新的磁碟機取代現有磁碟機嗎？</desc94>
+		<desc95 len="999">擴充</desc95>
+		<desc96 len="999">重新同步</desc96>
+		<desc97 len="999">正在擴充。移除磁碟機。</desc97>
+		<desc98 len="999">正在擴充。插入新磁碟機。</desc98>
+		<desc99 len="999">延伸容量</desc99>
+		<desc100 len="999">重整</desc100>
+		<desc101 len="999">將 RAID 1 降級至 JBOD</desc101>
+		<desc102 len="999">在多個磁碟機裡有您的數據。如果您要將儲存模式從 RAID 1 變更為 JBOD，您需要選取主要磁碟機。</desc102>
+		<desc103 len="999">請選取主要磁碟機：</desc103>
+		<desc104 len="999">注意：次要磁碟機上的所有資料都將遭到清除。</desc104>
+		<desc105 len="999">等候移轉</desc105>
+		<desc106 len="999">繼續移轉</desc106>
+		<desc107 len="999">分鐘</desc107>
+		<desc108 len="999">
+  警告：&lt;br&gt;
+  1.變更 RAID 模式將清除下列磁碟上的所有資料。&lt;br&gt;
+  2.變更 RAID 模式期間無法存取這些磁碟。&lt;br&gt;
+  3.在磁碟區建立之前執行磁碟自我測試 (DST)。 
+ </desc108>
+    <desc109>從該裝置旁邊的紅色 LED 開始更換裝置。</desc109>
+    <desc110>擴充 RAID 容量。</desc110>
+    <desc111 len="999">警告：磁碟區目前已降級。請記得重新組建 Raid 以便維持資料完整性。</desc111>
+    <desc112 len="999"><![CDATA[自動重新組建組態可讓您啟用或停用「自動重新組建」功能。您也可以按一下「下一頁」，手動進行重新組建。請注意，重新組建會清除新插入磁碟機上的所有資料。]]></desc112>
+    <desc113>替換 RAID 1 中故障的磁碟機時，請確定替換磁碟機的容量相同或更多。 </desc113>
+    <desc114>磁碟自我測試</desc114>
+    <desc122>xxx正重新構建。</desc122>
+    <desc123>xxx正在擴展。</desc123><desc124>xxx正在遷移。</desc124>
+    <unknown len="999">N/A</unknown>
+    <msg1 len="342"><![CDATA[此磁碟區是從其他 WD My Cloud EX2 Ultra (不是建立在此系統中) 漫遊。按一下「確定」將其整合至您目前的 WD My Cloud EX2 Ultra。如果您不進行整合，則在磁碟區發生降級時可能會遺失資料。按一下「取消」可繼續而不進行整合。]]></msg1>
+    <msg6 len="167">請等候 WD My Cloud EX2 Ultra 系統新啟動完成，然後再次登入。</msg6>
+    <msg7 len="167">不建議於移轉期間存取您的系統磁碟區。磁碟區可能無法使用。</msg7>
+    <msg8 len="167">系統忙碌中。請等候直到系統 LED 藍燈恆亮，然後再插入另一個磁碟機。</msg8>
+    <msg9 len="167">一個磁碟機在系統準備好以前就已經插入。因此，新磁碟機的資料可能不會整合至系統之中。請在執行任何組態設定前先將系統重新開機，以避免發生資料整合的問題。</msg9>
+    <msg10 len="167">xxx 格式化錯誤 (錯誤代碼：yyy)</msg10>
+    <msg11 len="167">設定磁碟區失敗 (錯誤代碼：yyy)</msg11>
+    <button1>立即手動重新組建</button1>
+    <button2>變更 RAID 模式</button2>
+    <button3>從剩餘可用的儲存空間建立新磁碟區</button3>
+    <button4>完成</button4>
+    <button5>設定 RAID 模式</button5>
+    <button6>將新磁碟機格式化為 RAID 1 類型</button6>
+    <button7>將新磁碟機格式化為 RAID 5 類型</button7>
+    <button8>將新磁碟機格式化為 RAID 10 類型</button8>
+ <desc125>警告：在擴充容量前請確保您已備份資料。在正常情況下，您的資料將被保留。但是在擴充過程中，電源中斷或裝置磁區故障等小概率發生事件可能導致擴充失敗。</desc125><desc126>驗證 RAID 同位 (RAID parity)</desc126><desc127>檢查後台同位一致性。在此過程中系統性能可能受到影響。</desc127><desc128>硬碟故障導致 RAID 設定失敗。關閉系統，更換硬碟再試一次。</desc128></_raid>
+  <_ssh>
+    <enable len="999">SSH</enable>
+    <enable_desc1 len="999">您目前在此系統上有執行中的遠端備份。關閉 SSH 將會停用所有遠端備份。</enable_desc1>
+    <enable_desc2 len="999">您要停用 SSH 嗎？</enable_desc2>
+    <enable_desc3 len="999">請注意，以正常操作之外的方式修改或嘗試修改此系統將會喪失您的 WD 保固。</enable_desc3>
+    <enable_desc4 len="999">啟用 WD My Cloud EX2 Ultra 做為遠端伺服器，將會啟用 SSH。請注意，以正常操作之外的方式修改或嘗試修改此系統將會喪失您的 WD 保固。</enable_desc4>
+    <desc1 len="999">關閉 SSH 將停用所有遠端備份功能和 WD My Cloud EX2 Ultra 系統的安全 FTP (SFTP) 存取功能。</desc1>
+    <desc2 len="999">停用 SSH 存取功能也將停用 WD My Cloud EX2 Ultra 的安全 FTP (SFTP) 存取功能。您要繼續嗎？</desc2>
+    <desc3 len="999">      <![CDATA[SSH 使用者名稱是 "sshd" (區分大小寫)。<br><br>*請在下方為 SSH 存取建立密碼。<br><br>]]>    </desc3>
+    <accept>我接受</accept>
+    <ssh>SSH</ssh>
+  </_ssh>
+  <_cloud>
+    <sing_up>申請</sing_up>
+	<signup_desc>%s 沒有 MyCloud.com 帳戶。輸入電子郵件位址以申請帳號。</signup_desc>
+    <cloud_dev len="999">雲端裝置</cloud_dev>
+    <title len="999">雲端存取</title>
+    <service len="999">雲端服務</service>
+    <status len="999">連線狀態</status>
+    <dash_access len="999">
+      <![CDATA[儀表板雲端 <br>存取]]>
+    </dash_access>
+    <cloud_access len="999">雲端存取狀態</cloud_access>
+    <cloud_for len="999">%s 的 MyCloud.com 帳戶</cloud_for>
+    <cloud_for_info len="999">%s 沒有註冊的 WD My Cloud EX2 Ultra 網路帳號。請註冊電子郵件地址。</cloud_for_info>
+    <register>註冊</register>
+    <dev_for len="999">%s 的雲端裝置</dev_for>
+    <dev_for_info len="999">%s 沒有設定雲端裝置存取權。請按一下「取得編碼」以為您的雲端裝置產生啟用代碼。代碼有效期限為申請後 48 小時，且只能使用一次。</dev_for_info>
+    <add_access len="999">新增雲端存取</add_access>
+    <add_desc len="999">成功產生啟用代碼。在您的行動裝置應用程式中輸入代碼。 </add_desc>
+    <desc len="999">產生啟用代碼，以對您磁碟機上的內容進行遠端存取。</desc>
+    <configure_access len="999">設定存取</configure_access>
+    <wd2go_db len="999">內容資料庫</wd2go_db>
+    <step_desc len="999">
+      <![CDATA[ 
+			步驟：<br>
+			<ol>
+				<li>從下拉式選單中選擇使用者，並按一下「取得編碼」以產生啟用代碼。</li>
+				<li>在您的平板電腦或行動裝置上安裝 WD Photos 及／或 WD My Cloud EX2 Ultra。</li>
+				<li>啟動應用程式，點選「現在連線」。</li>
+				<li>選擇您的 Safepoint。</li>
+				<li>輸入啟用代碼。</li>
+			</ol>
+		]]>
+    </step_desc>
+    <sel_user len="999">選取使用者</sel_user>
+    <get len="999">取得編碼</get>
+    <del_code len="999">刪除代碼</del_code>
+    <del_desc len="999">您確定要刪除此代碼嗎？</del_desc>
+    <old_mail len="999">舊電子郵件</old_mail>
+    <new_mail len="999">新電子郵件</new_mail>                                                                                                                                                                                      
+    <code len="999">啟用代碼</code>
+    <code2>代碼</code2>
+    <expiration len="999">到期</expiration>
+    <expires len="999">到期</expires>
+    <connectivity len="999">連線能力</connectivity>
+    <option_title len="999">雲端存取連線選項</option_title>
+    <option_desc len="999">為您裝置的遠端存取設定連線選項。</option_desc>
+    <auto len="999">自動</auto>
+    <manual len="999">手動</manual>
+    <win len="999">Win XP</win>
+    <disable len="999">已停用</disable>
+    <ready len="999">就緒</ready>
+    <connected len="999">已連線</connected>
+    <connected_desc len="999">已連線 (轉送連線已建立)</connected_desc>
+    <failed len="999">失敗</failed>
+    <connecting len="999">連線中</connecting>
+    <new_device len="999">新的未註冊裝置</new_device>
+    <disconnecting len="999">中斷連線中</disconnecting>
+    <disable_desc len="999">已停用雲端存取</disable_desc>
+    <disable_desc2 len="999">
+      <![CDATA[欲啟用雲端存取，請瀏覽至「設定」>「一般」>「雲端存取」。]]>
+    </disable_desc2>
+    <dexplainedtxt len="999">在您的路由器上啟用 UPnP，建立直接連線，以獲得最佳的效能。</dexplainedtxt>
+    <explainedtxt_part1 len="999">連接埠轉接無法連線至連接埠</explainedtxt_part1>
+    <explainedtxt_part2 len="999">及連接埠</explainedtxt_part2>
+    <failedexplainedtxt len="999">無法建立遠端存取連線。請確認您已經連線至網際網路。</failedexplainedtxt>
+    <connectingexplainedtxt len="999">正在嘗試建立遠端存取連線...</connectingexplainedtxt>
+    <readyexplainedtxt len="999">現在可從您的裝置使用雲端存取。</readyexplainedtxt>
+    <retrievingtxt len="999">正在擷取資訊...</retrievingtxt>
+    <portforwardedexplainedtxt len="999">連接埠轉送連線已建立。</portforwardedexplainedtxt>
+    <reg_mail len="999">已寄送註冊電子郵件</reg_mail>
+    <reg_desc1 len="999">已將註冊電子郵件寄送給指定使用者。 </reg_desc1>
+    <reg_desc2 len="999">請等候一段時間讓電子郵件到達使用者收件夾。獲取您裝置內容遠端存取的入門指導。</reg_desc2>
+    <update_title len="999">更新 MyCloud.com 帳戶</update_title>
+    <update_desc len="999">變更您的 MyCloud.com 帳戶的電子郵件地址。 </update_desc>
+    <required len="999">必要的</required>
+    <rebuild len="999">重新組建</rebuild>
+    <started len="999">正在準備開始</started>
+    <about>雲端存取說明</about>
+    <about_cloud len="999">您必須先將智慧型手機或平板電腦註冊為個人雲端生態系統的一部分，智慧型手機或平板電腦才能存取您的磁碟機內容。您需產生一個代碼，用來將行動裝置配對至磁碟機。</about_cloud>
+    <part1>
+      <![CDATA[外部連接埠 1<br>(HTTP)*]]>
+    </part1>
+    <part2>
+      <![CDATA[外部連接埠 2<br>(HTTPS)*]]>
+    </part2>
+    <invite>邀請其他人至您的個人雲端</invite>
+    <enable_title>儀表板雲端存取</enable_title>
+    <enable_desc>
+      <![CDATA[
+		啟用從目前網路外部對儀表板網頁介面的存取權，可協助您從遠端管理此裝置。不過，這也會稍微提高對您 WD My Cloud EX2 Ultra 裝置的未授權存取風險。<br><br>您確定要啟用此功能嗎？
+		]]>
+    </enable_desc>
+    <enable_desc2>啟用從目前網路外部對儀表板網頁介面的存取權，可協助您從遠端管理此裝置。然而這可能會增加未經授權訪問您的 WD My Cloud EX2 Ultra 的風險。某些功能（如添加一位新使用者）在您的網路外將不可用。&lt;br&gt;&lt;br&gt;
+為了確保安全，您需輸入此裝置的系統管理員密碼，才能啟用此功能。</enable_desc2>
+    <auto_desc>嘗試在您的裝置和路由器之間建立直接連線。</auto_desc>
+    <manual_desc>
+      <![CDATA[
+			手動設定您的路由器，與您的裝置一同使用。<a href="http://wdc.custhelp.com/app/answers/detail/a_id/8526" target="_blank">深入了解</a>
+		]]>
+    </manual_desc>
+    <xp_desc>嘗試建立直接或是轉送連線，與 Windows XP 相容。</xp_desc>
+    <del_title>刪除 WD My Cloud EX2 Ultra 帳號？</del_title>
+    <del_code_title>移除行動存取</del_code_title>
+    <msg1>無法刪除網路帳號。請確認您的裝置已註冊且沒有任何網路連線能力問題，再試一次。</msg1>
+    <msg2>請等候設定更新完成。此程序進行期間，請勿重新整理此頁面，或將裝置關機。</msg2>
+    <msg3>
+      <![CDATA[
+		您確定要移除 %s 的雲端存取權限嗎？<br><br>您將不再能夠經由網際網路對您磁碟機上的內容進行遠端存取。
+		]]>
+    </msg3>
+    <msg4>您確定要停用移除此裝置的行動存取嗎？</msg4>
+  <msg5>如果關閉雲端服務，您將無法使用任何 WD 軟體，例如 My Cloud、WD Photos 行動裝置應用程式和 WD Sync。您確定要繼續嗎？</msg5>
+	<msg6>系統會開始掃描您的儲存裝置以提供雲端存取。視檔案磁碟區而定，完成此工作可能需要一些時間。</msg6>
+	<msg7>注意</msg7>
+  <edit>編輯</edit><resend>重新發送</resend><not_allow>未允許</not_allow><not_allow_desc>此操作未被允許，因為您正在從裝置本機網路外訪問儀錶板（網頁介面）。&lt;br&gt;&lt;br&gt;請在您裝置的本機網路訪問此介面以完成此操作。</not_allow_desc><usb_availability>USB 內容可用性</usb_availability></_cloud>
+  <_top>
+    <wizard len="999">開始使用精靈</wizard>
+    <help len="999">說明</help>
+    <support len="999">支援</support>
+    <about len="999">關於</about>
+  </_top>
+  <_tip>
+    <notification len="999">透過電子郵件接收系統通知。</notification>
+    <fw_auto len="999">啟用自動韌體更新。</fw_auto>
+    <fw_check len="999">檢查可供使用的韌體更新。</fw_check>
+    <fw_update len="999">從檔案更新韌體。</fw_update>
+    <scan len="999">掃描 My Cloud EX2 Ultra 系統中的硬碟，查看是否有任何錯誤。</scan>
+    <restore len="999">請在使用還原選項前確認已經建立備份。
+使用「僅系統」以將系統資料還原至出廠設定。「快速還原」清除內容及系統資訊，但可以用還原軟體還原。「完全還原」將永久性的刪除所有的內容及系統資訊，不能被復原。請在使用還原選項前確認已經建立備份。</restore>
+    <config len="999">儲存目前的組態設定。或是匯入儲存的組態設定。</config>
+    <smart len="999">「快速測試」快速掃描並測試 My Cloud EX2 Ultra 系統硬碟是否有潛在故障。「完整測試」掃描整個系統硬碟，可能需要幾小時。</smart>
+    <dev len="999">重新啟動裝置或將其進入休眠狀態。</dev>
+    <gen_ntp len="999">啟用 NTP 服務以與您的網路同步以及自動更新日期及時間。</gen_ntp>
+    <gen_tm len="999">啟用連接至此裝置的 Time Machine 備份。</gen_tm>
+    <gen_dfs len="999">共用聚集與分散式檔案系統 (DFS) 相似，它可以合併其他支援 SMB 協定的 My Cloud 系統或網路裝置的共享。</gen_dfs>
+    <gen_ads len="999">啟用/停用 Active Directory 服務可讓您的 WD My Cloud EX2 Ultra 裝置加入現有 Windows 網域。</gen_ads>
+    <gen_drive len="999">啟用磁碟機的睡眠模式可節省能源。</gen_drive>
+    <gen_led len="999">啟用/停用系統 LED。</gen_led>
+    <gen_lcd len="999">打開或關閉系統液晶顯示器。在關閉模式下，長按裝置上的按鈕 10 秒將打開液晶顯示器。</gen_lcd>
+    <gen_lcd_on len="999">LCD 預設為開啟。</gen_lcd_on>
+    <gen_cloud len="999">啟用/停用連接至裝置的雲端存取。</gen_cloud>
+    <gen_status len="999">顯示目前雲端存取的連線狀態。</gen_status>
+    <gen_timeout len="999">設定強制自動登出系統的預設時間。</gen_timeout>
+    <gen_recovery len="999">「電源恢復」功能會在因停電而意外關機後，自動重新啟動裝置。</gen_recovery>
+    <s3 len="999">建立新的 Amazon S3 備份工作</s3>
+    <s3_backup len="999">指定備份的 Amazon S3 貯體或根目錄路徑。</s3_backup>
+    <s3_auto len="999">根據排程自動更新備份。</s3_auto>
+    <recycle>包含從網路共享刪除的檔案，可將其復原或永久刪除。</recycle>
+    <webdav>WebDAV 允許透過 HTTP，讓多位使用者合作管理和編輯檔案。</webdav>
+    <nfs>NFS（網路檔案系統）是一項協定，允許使用者透過網路存取檔案。在 Unix、Linux 和一些 Mac OSx 版本中很常见。</nfs>
+    <host>輸入允許 NFS 存取此共享的 IP 位址。若要允許所有 IP 位址，請輸入 *。</host>
+    <root>如有必要，啟用此選項可移除使用者的根層級 NFS 權限。</root>
+    <write>啟用此選項可開啟透過 NFS 對此共享的寫入權限。</write>
+    <remote_ip>輸入您要用來備份此裝置的遠端伺服器之 IP 位址。</remote_ip>
+    <autoupdate_remote>啟用/停用排程以自動更新您的遠端備份。</autoupdate_remote>
+    <cloud_status>顯示目前雲端存取的連線狀態。</cloud_status>
+    <group>可在主要使用者頁面上建立群組。</group>
+    <public>啟用或停用對共享的公用存取。將此值設定為 ON 將允許網路中的所有人存取此共享的檔案。需先建立一或多個使用者帳戶，才能啟用此選項。</public>
+    <afp>啟用或停用 Apple 檔案通訊協定服務。如果您設定 Time Machine 備份，此選項會自動啟用。</afp>
+    <lltd>啟用或停用「連結階層拓樸搜索」通訊協定，以便增強 Microsoft Windows 機器上的網路搜索和診斷能力。</lltd>
+    <snmp>啟用或停用「簡易網路管理通訊協定」服務，用以透過 IP 網路管理裝置。</snmp>
+    <ssh>透過網路啟用安全殼層 (SSH) 連線至 SSH 應用程式。</ssh>
+    <ddns>動態 DNS 功能可讓您使用網域名稱 來主控伺服器 (Web、FTP、遊戲伺服器等)。</ddns>
+    <remote>啟用 WD My Cloud EX2 Ultra 系統作為遠端伺服器，並且能夠從 LAN 或 WAN 上的其他相容 My Cloud EX2 Ultra 系統備份共享。</remote>
+    <bonding>也稱做&lt;b&gt;繫結&lt;/b&gt;，意指使用 NAS 中存在的兩個網路介面，以及兩條纜線同時連接到路由器。這可改進效能和可靠性。</bonding>
+    <jumbo>Jumbo 框架是大型 IP 框架，用來提高支援網路上的效能。</jumbo>
+    <ipv4>選取「靜態」以輸入 IP 位址、子網路遮罩及閘道資訊，或選取「DHCP」(動態主機設定通訊協定) 以讓網路擷取 IP 位址指派及其他配置資訊。</ipv4>
+    <ipv6>IPv6 是新的 IP 標準，指定多重 IP 網路上的封包格式和位址配置。</ipv6>
+    <ftp>檔案傳輸通訊協定 (FTP) 是標準的網路通訊協定，在經由網際網路將資料從一台電腦傳送到另一台時使用。</ftp>
+    <workgroup>工作群組可讓相同工作群組中的裝置互相存取，僅適用於 Windows 系統。每次當您新增一個裝置至您的網路時，請指派相同的工作群組名稱。</workgroup>
+    <lmb>啟用/停用網域主瀏覽器以收集和記錄多個子網路上的資源及/或服務資訊。</lmb>
+    <speed>選取「自動」、「100」或「1000」。所有情況下都適用自動。</speed>
+    <port_forwarding>指派預設或自訂連接埠號碼，管理對特殊服務的連線。</port_forwarding>
+    <user_prefix>輸入使用者名稱的前置詞。前置詞不能包含空格。</user_prefix>
+    <account_prefix>輸入「帳戶前置詞」的數值。帳戶前置詞會新增至使用者名稱前置詞。</account_prefix>
+    <wfs_upload>按一下可上傳一或多個檔案至 WD My Cloud EX2 Ultra 系統。</wfs_upload>
+    <iso_overwrite>選取覆寫會將相同名稱的檔案覆蓋過去。</iso_overwrite>
+    <cloud_automatic>
+      <![CDATA[自動：使用 uPnp 在您的裝置和路由器之間建立直接連線。若連線無法在您的路由器上開啟這些連接埠，則建立轉送連線。<br><br>手動：經由兩個所選連接埠建立連線。若無法使用其中一個連接埠，則建立轉送連線。需要手動路由器組態。<br><br>Windows XP 相容性：經由連接埠 80 以及 443 建立連線。若無法使用這些連接埠，則建立轉送連線。為 Windows XP 系統必備。]]>
+    </cloud_automatic>
+    <cloud_rebuild>重新組建 MyCloud.com 資料庫。僅在有資料庫損毀的疑慮時使用疑難排解。</cloud_rebuild>
+    <require_mail>需要電子郵件地址。</require_mail>
+    <dashboard>設定並將路由器上所需的外部連接埠，轉至本裝置的內部預設連接埠（連接埠 80），即可啟用或停用透過網際網路存取此網頁介面。</dashboard>
+    <ftp_enable>啟用/停用對此共享的 FTP 存取。</ftp_enable>
+    <ftp_disable>目前此系統的 FTP 存取為停用。請瀏覽至「設定」&gt;「網路」啟用 FTP 設定，並再試一次。</ftp_disable>
+    <nfs_disable>目前此系統的 NFS 存取為停用。請瀏覽至「設定」&gt;「網路」啟用 NFS 設定，並再試一次。</nfs_disable>
+    <webdav_enable>啟用 WebDAV 協定，允許網路存取相同網路中的內容。</webdav_enable>
+    <webdav_disable>目前此系統的 WebDAV 存取為停用。請瀏覽至「設定」&gt;「網路」啟用 WebDAV 設定，並再試一次。</webdav_disable>
+    <autofw>
+      <![CDATA[韌體更新可供使用時，會發生在上午 3 點且需要重新開機。若要設定自動更新設定，請瀏覽至「設定」>「韌體更新」。]]>
+    </autofw>
+    <sms>
+      <![CDATA[透過簡訊 (SMS) 接收系統通知。]]>
+    </sms>
+    <ups>您可將此系統設定為負責將 UPS 狀態與其他裝置進行通訊 (主要模式)，或設定為與主要 UPS 通訊以接收 UPS 狀態和命令 (從屬模式)。</ups>
+    <account_mail>藉由輸入使用者的電子郵件，給予使用者雲端的存取權。會經由電子郵件將帳號的入門指導寄送至所提供的地址。</account_mail>
+    <smb2>啟用 SMB2 以支援 Windows 8 的「檔案歷程記錄」功能。</smb2>
+    <p2p_port>若要啟用連接埠設定，請瀏覽至 [設定] &gt; [網路] &gt; [連接埠轉送] &gt; [新增]，然後從清單中啟用適當的服務。</p2p_port>
+    <system_test>執行效能測試以檢查您的單元是否有記憶體、溫度、風扇和其他相關錯誤。</system_test>
+    <wipe>格式化 My Cloud EX2 Ultra 系統中的硬碟。磁碟上的所有資料將永久刪除。</wipe>
+  <raid>當您新增或移除硬碟時，自動重新組建系統上的 RAID 磁碟區。</raid>
+	<fdownload_url>檔案路徑和檔案名稱區分大小寫。</fdownload_url>
+	<camera_auto>連線相機和 WD My Cloud EX2 Ultra 系統時，檔案就會自動傳輸至您的裝置。</camera_auto>
+    
+    
+      <camera_copy>複製相機中的檔案，然後將檔案傳輸至 WD My Cloud EX2 Ultra 系統。</camera_copy>
+    
+    
+      <camera_move>將相機的檔案傳輸至 WD My Cloud EX2 Ultra 系統，不過相機中的內容會遭刪除。</camera_move>
+    
+    
+      <oplocks>啟用 Oplocks 可利用快取 SMB 用戶端檔案的方式，改善 Samba 效能。</oplocks>
+    
+    
+      <media_enable>啟用/停用此共享的媒體提供。</media_enable>
+    
+    <media_disable><![CDATA[媒體服務目前停用。請瀏覽至「設定」>「媒體」以啟用「媒體伺服器」。]]></media_disable>
+  
+<ve_download_key>下載加密金鑰</ve_download_key>
+    <media_serving>媒體提供選項可啟用和停用與 DLNA 和 iTunes 伺服器的共享。</media_serving>
+  <extendedlog>在系統診斷報告中擷取延伸記錄檔。</extendedlog>
+
+<improvement>產品改進計劃收集並定期傳送診斷及使用資訊，協助 WD 改進產品的品質與效能。此資訊一般包括裝置、應用程式與服務使用，也包含錯誤診斷。這可能包括裝置組態、CPU 及其他應用程式使用狀態統計資料、API 呼叫、服務當機資訊、網路連線狀態、儲存空間利用、以及檔案大小和類型之類的項目。</improvement><ad_domain>輸入待加入 Active Directory 的完整網域名稱 (FQDN)。</ad_domain><snmp_1>使用「簡易網路管理通訊協定」服務，以利透過 IP 網路來管理裝置。</snmp_1><snmp_2>&lt;b&gt;NoAuthNoPriv：&lt;/b&gt;訊息未經過驗證且未加密。&lt;br&gt;&lt;b&gt;AuthNoPriv：&lt;/b&gt; 訊息已經過驗證但未加密。&lt;br&gt;&lt;b&gt;AuthPriv：&lt;/b&gt;訊息已經過驗證且加密。</snmp_2><snmp_3>指出使用者存取層級。&lt;br&gt;&lt;b&gt;系統：&lt;/b&gt;僅允許查詢裝置的系統資訊。&lt;br&gt;&lt;b&gt;網路：&lt;/b&gt;僅允許查詢裝置的網路資訊。&lt;br&gt;&lt;b&gt;全部：&lt;/b&gt;允許查詢所有的裝置資訊。</snmp_3><dev1>重新啟動您的裝置。</dev1></_tip>
+  <_utilities>
+    <quick_restore len="999">快速還原</quick_restore>
+    <full_restore len="999">完整還原</full_restore>
+    <restore_title len="999">僅系統</restore_title>
+    <restore len="999">還原為預設值</restore>
+    <config_title len="999">系統組態</config_title>
+    <config len="999">系統組態</config>
+    <config_save len="999">儲存組態檔案</config_save>
+    <config_import len="999">匯入檔案</config_import>
+    <device_title len="999">裝置維護</device_title>
+    <device len="999">裝置電源</device>
+    <shutdown len="999">休眠</shutdown>
+    <shut_down len="999">關機</shut_down>
+    <up_time len="999">裝置運作時間</up_time>
+    <reboot len="999">重新開機</reboot>
+    <msg1 len="999"><![CDATA[您即將重設組態設定。這不會影響磁碟機上儲存的資料。請按「<b>確定</b>」繼續。]]></msg1>
+    <msg2 len="999">裝置正在重新啟動。&lt;br&gt;&lt;br&gt;在重新啟動期間，請勿拔除裝置。</msg2>
+    <msg3 len="999">正在關閉裝置。</msg3>
+  <full_factory_restore>完整出廠還原</full_factory_restore><quick_factory_restore>快速出廠還原</quick_factory_restore><msg4>出廠還原進行中。</msg4></_utilities>
+  <_notification>
+    <title1 len="999">通知電子郵件</title1>
+    <alert_email len="999">警示電子郵件</alert_email>
+    <title2 len="999">通知顯示</title2>
+    <title2_msg len="999">為以下訊息顯示通知</title2_msg>
+    <critical_only len="999">僅嚴重時</critical_only>
+    <c_warning len="999">嚴重時與警告時</c_warning>
+    <all len="999">全部</all>
+    <d_header len="999">警示組態</d_header>
+    <d_desc len="999">
+      <![CDATA[						
+			設定通知組態，以經由 WD My Cloud EX2 Ultra 介面或電子郵件接收系統通知。<br><br>為以下訊息傳送電子郵件通知：
+			]]>
+    </d_desc>
+    <new_email len="999">新電子郵件</new_email>
+    <test_mail len="999">傳送測試電子郵件</test_mail>
+    <info len="999">資訊</info>
+    <warning len="999">警告</warning>
+    <critical len="999">嚴重</critical>
+    <view len="999">檢視全部</view>
+    <no_alert len="999">找不到警示。</no_alert>
+  </_notification>
+  <_energy>
+    <energy_saver>能源節省</energy_saver>
+    <drive_sleep len="999">磁碟機睡眠</drive_sleep>
+    <led len="999">LED 燈</led>
+    <lcd len="999">LCD</lcd>
+    <p_recovery len="999">電源恢復</p_recovery>
+    <p_sch len="999">電源排程</p_sch>
+    <p_set len="999">電源設定</p_set>
+    <timeout len="999">網路存取逾時</timeout>
+    <p_off_all>全天關閉電源</p_off_all>
+  </_energy>
+  <_iscsi>
+    <title len="999">iSCSI 目標</title>
+    <desc len="999">
+  您的 WD My Cloud EX2 Ultra 系統可讓您建立和管理 iSCSI 目標。iSCSI 目標提供類似於本機硬碟的儲存裝置，但可透過網路存取，而非本機存取。iSCSI 目標也能經由 WD My Cloud EX2 Ultra 伺服器的基礎 RAID 結構保護。
+  &lt;br&gt;
+  &lt;br&gt;
+  若要建立 iSCSI 目標，請按一下下方的&lt;b&gt;建立 iSCSI 目標&lt;/b&gt;按鈕。
+  &lt;br&gt;
+  &lt;br&gt;
+   </desc>
+    <iscsi len="999">iSCSI</iscsi>
+    <iscsi_server len="999">iSCSI iSNS 用戶端</iscsi_server>
+    <server>伺服器</server>
+    <list_title len="999">iSCSI 目標清單</list_title>
+    <no_connect len="999">未連線至啟動器</no_connect>
+    <image_file len="999">映像檔案</image_file>
+    <security len="999">安全性</security>
+    <chap len="999">CHAP</chap>
+    <address len="999">入口網站位址</address>
+    <ry_deatil len="999">Ryanspace 詳細資訊</ry_deatil>
+    <create_iscsi_target len="999">建立 iSCSI 目標</create_iscsi_target>
+    <alias len="999">別名</alias>
+    <create_on len="999">建立於</create_on>
+    <desc1 len="999">
+      <![CDATA[
+	如果您想從現有映像檔案建立 iSCSI 目標，請按<span style="color:#0067A6;cursor: pointer;" onclick="i_create_tree_dialog('form_s3','s3_tree');">這裡</span>
+		]]>
+    </desc1>
+    <connect len="999">啟動器已連線</connect>
+    <initi_title len="999">啟動器</initi_title>
+    <initi_list len="999">下表指出目前連線至 iSCSI 目標的啟動器。</initi_list>
+    <name len="999">名稱</name>
+    <no_list len="999">未新增任何 iSCSI 目標至 WD My Cloud EX2 Ultra 系統。</no_list>
+    <create_iscsi_lun len="999">建立 iSCSI LUN</create_iscsi_lun>
+    <lun_list_title len="999">iSCSI LUN 清單</lun_list_title>
+    <create_iscsi_acl len="999">建立 iSCSI ACL</create_iscsi_acl>
+    <acl_list_title len="999">iSCSI ACL 清單</acl_list_title>
+    <acl_name>ACL 名稱</acl_name>
+    <acl_backup_title len="999">iSCSI 備份清單</acl_backup_title>
+    <create_iscsi_backup len="999">建立 iSCSI 備份</create_iscsi_backup>
+    <iqn>
+      <![CDATA[啟動器名稱 (IQN)]]>
+    </iqn>
+    <acl_info>ACL 資訊</acl_info>
+    <lun_mapping>LUN 對應</lun_mapping>
+    <pre_allocate>預先配置</pre_allocate>
+    <target_mapping>目標對應</target_mapping>
+    <msg1 len="999">目標名稱的第一個字元必須為：「a-z」或「0-9」。 </msg1>
+    <msg2 len="999">目標名稱僅可使用下列字元：「a-z」、「A-Z」、「0-9」、「-」、「.」 和 「:」。</msg2>
+    <msg3 len="999">已達 iSCSI 目標數目上限。</msg3>
+    <msg4 len="999">目標已存在。</msg4>
+    <msg5 len="999">
+      <![CDATA[名稱允許字元："a-z"、"A-Z"、"0-9"、"-"、"_"]]>
+    </msg5>
+    <msg6 len="999">密碼長度至少必須有 12 個字元。請再試一次。</msg6>
+    <msg7 len="999">
+      <![CDATA[密碼允許字元："a-z"、"A-Z"、"0-9"、"-"、"_"]]>
+    </msg7>
+    <msg8 len="999">請選擇 1GB-8TB 檔案。</msg8>
+    <msg9 len="999">請輸入別名。</msg9>
+    <msg10 len="999">您不能降低現有 iSCSI 目標的大小。</msg10>
+    <msg11 len="999">
+      <![CDATA[目標大小不可超過 ]]>
+    </msg11>
+    <msg12 len="999">
+      <![CDATA[請輸入大小。]]>
+    </msg12>
+    <msg13 len="999">
+      <![CDATA[您要移除此映像檔案嗎？]]>
+    </msg13>
+    <msg14 len="999">
+      <![CDATA[iSCSI 目標別名不能包含大寫字母。]]>
+    </msg14>
+    <msg15 len="999">
+      <![CDATA[映像檔案已經使用。]]>
+    </msg15>
+  <msg16 len="999">
+      <![CDATA[名稱的開頭不能包含 snapshots]]>
+    </msg16>
+    <msg17 len="999">
+      <![CDATA[名稱的開頭不能包含 shap-]]>
+    </msg17>
+    <msg18 len="999">請輸入 iqn。</msg18>
+    <msg19 len="999">請輸入 ACL 名稱。</msg19>
+    <msg20 len="999">請輸入 LUN 名稱。</msg20>
+    <msg21 len="999">
+      <![CDATA[名稱不能是 Default-Policy]]>
+    </msg21>
+  <msg22>請選擇更大的單位。</msg22><msg23>勿留空格。</msg23><msg24>目標名稱僅可使用下列字元：「a-z」、「0-9」、「-」、「.」 和 「:」。勿留空格。</msg24><creating>建立</creating></_iscsi>
+  <getting_start>
+    <desc1 len="999">WD My Cloud EX2 Ultra 可讓您建立您的個人雲端。將您的照片、影片、音樂及檔案儲存在一個地方，然後從任何地方存取您的資料。需要 MyCloud.com 帳戶來存取，每位使用者都需要一個帳戶。</desc1>
+    <desc2 len="999">輸入您的電子郵件地址，註冊您的系統，可設定接收關於 WD My Cloud EX2 Ultra 的更新及資訊。</desc2>
+    <desc3 len="999">
+      <![CDATA[如果您不想現在新增其他使用者，請按「<B>下一頁</B>」繼續。]]>
+    </desc3>
+    <desc4 len="999">感謝您進行註冊。已提交您的註冊。</desc4>
+    <login len="999">設定雲端存取</login>
+    <first_name len="999">名字</first_name>
+    <last_name len="999">姓氏</last_name>
+    <email len="999">您的電子郵件地址</email>
+    <complete len="999">設定完成</complete>
+	<more len="999"><![CDATA[就是這樣。]]></more>
+	<more_2 len="999"><![CDATA[您將從 MyCloud.com 收到包含登入資訊的電子郵件。]]></more_2>
+	<more_3 len="999"><![CDATA[欲知其他軟體以及資訊，請按一下此連結：]]></more_3>
+    <update len="999">上傳內容</update>
+    <backup len="999">備份 PC/Mac</backup>
+    <mobile len="999">存取行動應用程式</mobile>
+    <auto len="999">有可用系統韌體時自動更新。</auto>
+    <register len="999">註冊 WD My Cloud EX2 Ultra 系統以接收持續的產品支援。</register>
+  <imp>參與產品改進計劃。</imp><desc5>提高 WD 體驗</desc5><desc6>註冊您的產品</desc6><desc7>註冊產品可幫您註冊保固並讓您能接收到產品的更新資訊。</desc7><desc8>設定完成</desc8><auto_fw>自動更新韌體</auto_fw><auto_tip>有可用裝置韌體時自動更新。</auto_tip><imp_tip>參加 WD 的產品改進計劃，幫助 WD 提供產品改進。</imp_tip><desc9>這將是您人生最精彩的時刻。下載：</desc9></getting_start>
+  <_support>
+    <title>支援</title>
+    <title1>要求自動支援</title1>
+    <title2>建立與儲存系統報告</title2>
+    <title3>支援資源</title3>
+    <desc1>
+      <![CDATA[
+		選擇自動支援會將全面性的診斷報告產生及附加至您的支援要求中，包括您的裝置序號、MAC 位址，以及其他狀態資訊。您的要求已被傳送至專家團隊，以給您最快且最有效的幫助。<br><br>請選擇「附加我的裝置診斷報告」及 「要求支援」，已將您的報告與支援要求一同送交，然後按一下「要求支援」。<br><br>若不要附加裝置診斷報告就送出支援報告，請經由我們的標準支援網頁送交要求。
+	]]>
+    </desc1>
+    <desc2>建立系統報告以及將它儲存置您的磁碟機，可以辨識以及解決網路問題。</desc2>
+    <sel_desc>
+      <![CDATA[附加我的裝置診斷報告及要求支援]]>
+    </sel_desc>
+    <request_support>要求支援</request_support>
+    <privacy>隱私權原則</privacy>
+    <save>建立與儲存</save>
+    <doc>產品相關文件</doc>
+    <faq>問與答</faq>
+    <forum>論壇</forum>
+    <contacts>聯絡資料</contacts>
+    <msg1>上載系統日誌錯誤。</msg1>
+  <desc3>參與計劃不會影響您裝置的效能，但能協助我們改進產品。您的裝置會定期傳送其序號以及基本裝置資訊給 WD。</desc3><title4>產品改進計劃</title4><title5>參與產品改進</title5><desc4>&lt;li&gt;您將協助我們推動產品未來的更新&lt;/li&gt;
+&lt;li&gt;這將使支援團隊更高效地為您提供協助&lt;/li&gt;
+&lt;li&gt;您可以隨時停止參與計劃 
+&lt;/li&gt;</desc4></_support>
+  <_about>
+    <copyright>
+      <![CDATA[Copyright © 2010-2015 Western Digital Technologies, Inc.]]>
+    </copyright>
+    <info>著作權資訊</info>
+    <gnu>GNU 一般公開授權</gnu>
+  </_about>
+  <eula>
+    <choose>選擇您的語言</choose>
+    <agree>
+      <![CDATA[我同意 <span class="wdlink" onclick="open_eula()">WD 最終使用者授權合約</span>]]>
+    </agree>
+    <accept>我接受</accept>
+    <print>列印</print>
+    <title>Western Digital 終端使用者許可證協定</title>
+    <title2>授權合約</title2>
+    <desc>請仔細閱讀授權合約。</desc>
+    <regiest>註冊失敗。請前往 register.wdc.com 註冊您的產品。</regiest>
+  <nohdd_desc1>插入硬碟</nohdd_desc1>
+	<nohdd_desc2>
+		<![CDATA[
+			請將硬碟插入 My Cloud EX2 Ultra 系統的插槽，以便正確設定系統。若要購買硬碟，請造訪 <a id="eula_noHDD_link">WD 商店</a>。
+   			<p>
+   			插入硬碟後，按一下「繼續」。
+		]]>
+	</nohdd_desc2>
+  <regiest_fail_1>已註冊裝置。按下一步以繼續。</regiest_fail_1><regiest_fail_2>註冊失敗。若要直接透過 WD 註冊您的產品，請按一下&lt;a href="http://register.wdc.com" target="_blank"&gt;這裡&lt;/a&gt;。如果您不想現在註冊，請按「下一頁」繼續。</regiest_fail_2></eula>
+  <_wizard>
+    <msg1 leng="167">密碼和確認密碼字元不符。</msg1>
+    <msg2 leng="167">新密碼長度至少必須有 5 個字元。請再試一次。</msg2>
+    <msg3 leng="167">密碼不能包含空格。</msg3>
+    <msg4 leng="167">新密碼長度不能超過 16 個字元。</msg4>
+    <msg5 leng="167">
+      <![CDATA[新密碼不能包含下列字元：@ :/ \\ % ']]>
+    </msg5>
+    <msg6 leng="167">輸入確認密碼。</msg6>
+    <msg7 leng="167">確認密碼不能包含空格。</msg7>
+    <relogin_msg leng="167">
+      <![CDATA[您必須再次登入，這些設定才能生效。]]>
+    </relogin_msg>
+    <relogin_msg2 leng="167">
+      <![CDATA[仍在嘗試從 DHCP 伺服器取得可用 IP。重新導向 GUI 失敗。稍後可使用儲存裝置公用程式來探索裝置。]]>
+    </relogin_msg2>
+  </_wizard>
+  <_dialog_title>
+    <time_machine_2 len="44">步驟 2：摘要</time_machine_2>
+    <lan_1 len="44">歡迎使用 LAN 設定精靈</lan_1>
+    <lan_2 len="44">VLAN 設定</lan_2>
+    <import_user_4 len="44">步驟 3：摘要</import_user_4>
+  </_dialog_title>
+  <_port>
+    <msg1>連接埠號碼 %s 無效。輸入介於 1024-65535 之間或 80 的有效連接埠號碼。</msg1>
+    <msg2>連接埠號碼 %s 無效。輸入介於 1024-65535 之間或 443 的有效連接埠號碼。</msg2>
+  </_port>
+  <_network_ups>
+    <title1>網路 UPS</title1>
+    <title2>網路 UPS 從屬模式</title2>
+    <fail len="999">失敗</fail>
+    <on_line len="999">使用線路</on_line>
+    <on_battery len="999">使用電池</on_battery>
+    <low_battery len="999">電池電量低</low_battery>
+    <unknown len="999">N/A</unknown>
+    <device_info len="999">裝置資訊</device_info>
+    <desc1>從屬</desc1>
+    <desc2>輸入連接網路之主要 UPS 的 IP 位址。</desc2>
+    <desc3>請稍候，精靈正在設定和執行 UPS 設定。</desc3>
+    <msg1 len="999">目前沒有 UPS 裝置連接至此裝置。</msg1>
+    <msg2 len="999">主要模式</msg2>
+    <msg4 len="999">從屬模式</msg4>
+    <msg5 len="999">您的 WD My Cloud EX2 Ultra 無法連線至 UPS (主要) 裝置。</msg5>
+  </_network_ups>
+    <_logs>
+		<title len="999">日誌</title>
+		<view_logs len="999">檢視日誌</view_logs>
+	<system_log>系統日誌</system_log>		
+		<log_filter>日誌篩選</log_filter>
+    <view_event>檢視事件</view_event>
+    <filter_by>篩選依據</filter_by>
+		<level>層級</level>
+		<log_level>記錄層級</log_level>
+	</_logs>
+	<_recycle>
+    <title>資源回收筒設定</title>
+    <auto_clear>自動清除資源回收筒</auto_clear>
+    <clear_days_1>檔案保留時間</clear_days_1>
+    <clear_days_2>天</clear_days_2>
+  
+<del_msg_title>清除資源回收筒</del_msg_title>
+	<del_msg>您確定要從資源回收筒永久刪除所有資料？</del_msg>
+
+<err_clear_days_empty>檔案保留時間必須為 1 至 365 間的數字值。</err_clear_days_empty></_recycle>
+
+<_app_center><desc12>多媒體</desc12><desc10>瞭解更多資訊</desc10></_app_center><_smart><full_pass>通過 - 完整磁碟測試已成功完成。</full_pass><full_fail>失敗 - 完整磁碟測試失敗。請備份您的資料並更換該磁碟。如果您需要更多協助，請與 WD 支援人員聯絡。</full_fail><full_fail_glcr>失敗 - 完整磁碟測試失敗。請與 WD 支援人員聯絡。</full_fail_glcr><quick_pass>通過 - 快速磁碟測試已成功完成。</quick_pass><quick_fail>失敗 - 快速磁碟測試失敗。請備份您的資料並更換該磁碟。如果您需要更多協助，請與 WD 支援人員聯絡。</quick_fail><quick_fail_glcr>失敗 - 快速磁碟測試失敗。請與 WD 支援人員聯絡。</quick_fail_glcr></_smart><_help><mshares>管理共享</mshares><cshare>建立共享</cshare><caccess>變更共享存取</caccess><mgroups>管理群組</mgroups><cgroup>新增群組</cgroup><musers>管理使用者</musers><cuser>新增使用者</cuser><mcloud>管理雲端存取</mcloud><raccess>遠端存取基本介紹</raccess><saccess>設定雲端存取</saccess></_help><_share_aggregation><desc>創建可以存取其他 My Cloud 系統共享的本機共享，合併分散式資源。</desc><c2share>連接至共享</c2share><add_link>添加連結</add_link><tip1>根資料夾將用於存儲已連結的遠端共享，且在「共享聚集」共享下創建。</tip1><tip2>添加連結以聚集遠端共享。</tip2><tip3>根資料夾下顯示的資料夾名稱。</tip3><tip4>請輸入目標裝置的主機名稱或 IP 位址。</tip4><tip5>手動輸入遠端共享名稱或點擊 &lt;b&gt;Get Remote Share List&lt;/b&gt;（獲得遠端共享清單）以顯示遠端主機共享。</tip5><msg1>遠端共享名稱不可包含以下字元：\ / :* ?" &lt; &gt; | </msg1><msg2>遠端主機無可用共享。</msg2><msg3>遠程共享名稱不存在。</msg3></_share_aggregation><_domain><connected_to>已連接至 %s</connected_to><disconnected>已斷開連接 %s</disconnected><ad_status>Active Directory 狀態</ad_status></_domain></text>

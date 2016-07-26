@@ -1,0 +1,271 @@
+<!-- Virtual Volume  -->
+<div id="VV_Diag" class="WDLabelDiag">
+<div id="VV_Diag_title" class="WDLabelHeaderDialogue WDLabelHeaderDialogueVVIcon"><span class="_text" lang="_vv" datafld="title2"></span></div>
+<div align="center"><div class="hr"><hr></div></div>
+
+	<!-- 1.Virtual Volume/Create/Step1-->
+	<div id="VV_Create_Info">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="500">	        
+					<tr> 
+						<td class="tdfield" align="left" >&nbsp;<span class="_text" lang="_vv" datafld="desc1"></span></td>
+						<td class="tdfield_padding"><div id="CreateDiag_IQN"></td>
+					</tr>
+					<tr> 
+						<td class="tdfield" align="left">&nbsp;<span class="_text" lang="_vv" datafld="desc2"></span></td>
+						<td class="tdfield_padding"><input type="text" name="storage_volumevirtualCreateIP_text" id="storage_volumevirtualCreateIP_text"></td>
+					</tr>
+					<tr> 
+						<td class="tdfield" align="left">&nbsp;<span class="_text" lang="_vv" datafld="desc3">Input Encryption Password</span></td>
+						<td class="tdfield_padding"><input type="text" name="storage_volumevirtualCreatePort_text" id="storage_volumevirtualCreatePort_text" value="3260"></td>
+					</tr>
+				</table>
+			</div>	
+		</div>
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_volumevirtualCreateCancel1_button" class="ButtonLeftPos close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_volumevirtualCreateNext1_button" class="ButtonRightPos1 gray_out"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div>
+	
+	<!-- 2.Virtual Volume/Create/Step2:Search-->
+	<div id="VV_Create_Search" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content scroll-pane">
+				<table id="create_target_waiting" border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="550">	        
+					<tr><td align="center"><img src="/web/images/SpinnerSun.gif"></td></tr> 
+				</table>
+				
+				<div class="flexigrid" style="width: 550px;">
+						<div class="hDiv">
+							<div class="hDivBox">
+								<table cellspacing="0" cellpadding="0">
+									<thead>
+										<tr>
+											<th align="left" abbr="f_iqn" axis="col0"><div style="text-align: left; width: 535px;"><span class="_text" lang="_format" datafld="vendor">Vendor</span></div></th>
+										</tr>
+									</thead>
+								</table>
+							</div><!-- hDivBox -->
+						</div><!-- hDiv -->
+						<div class="bDiv">
+							<table cellspacing="0" cellpadding="0" border="0">
+								<tbody id="VV_Search_List"></tbody>
+							</table>
+						</div><!-- bDiv -->
+					</div><!-- flexigrid -->
+			</div>	
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_volumevirtualCreateBack2_button" class=" ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_volumevirtualCreateCancel2_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_volumevirtualCreateNext2_button" class="ButtonRightPos1 gray_out"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div>
+
+	<!-- 3.Virtual Volume/Create/Step3:Target(s) Set-->
+	<div id="VV_Create_Target_Set" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="500">	        
+					<tr> 
+						<td class="tdfield" align="left" >&nbsp;<span class="_text" lang="_vv" datafld="desc7"></span></td>
+						<td class="tdfield_padding"><div id="Create_Target"  style="word-wrap: break-word;word-break: break-all;"></div></td>
+					</tr>
+					<tr> 
+						<td class="tdfield" align="left">&nbsp;<span class="_text" lang="_vv" datafld="desc4"></span></td>
+						<td class="tdfield_padding">
+							<input id="storage_volumevirtualCreateAuth_switch" name="storage_volumevirtualCreateAuth_switch" class="onoffswitch" type="checkbox" value="true" >
+						</td>
+					</tr>
+					<tr id="VV_Create_User_tr" style="display:none"> 
+						<td class="tdfield" align="left" >&nbsp;<span class="_text" lang="_vv" datafld="desc5"></span></td>
+						<td class="tdfield_padding"><input type="text" name="storage_volumevirtualCreateUser_text" id="storage_volumevirtualCreateUser_text"></td>
+					</tr>
+					<tr id="VV_Create_PWD_tr" style="display:none"> 
+						<td class="tdfield" align="left" >&nbsp;<span class="_text" lang="_vv" datafld="desc6"></span></td>
+						<td class="tdfield_padding"><input type="password" name="storage_volumevirtualCreatePWD_password" id="storage_volumevirtualCreatePWD_password"></td>
+					</tr>
+				</table>
+			</div>	
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_volumevirtualCreateBack3_button" class=" ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_volumevirtualCreateCancel3_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_volumevirtualCreateNext3_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div>
+	
+	<!-- 4.Virtual Volume/Create/Step4:LUN List-->
+	<div id="VV_Create_LUN_List" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content .scroll-pane">
+				<table  border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="550">	        
+					<tr class="tdfield" id="create_lun_waiting"><td align="center"><img src="/web/images/SpinnerSun.gif"></td></tr> 
+					<tr class="tdfield" id="create_lun_search_fail" style="display:none"><td align="center"><span class="_text" lang="_vv" datafld="desc9"></span></td></tr> 
+				</table>
+				
+				<div class="flexigrid" style="width: 550px;">
+						<div class="hDiv">
+							<div class="hDivBox">
+								<table cellspacing="0" cellpadding="0">
+									<thead>
+										<tr>
+											<th align="left" abbr="f_idx" axis="col0"><div style="text-align: left; width: 40px;">idx</div></th>
+											<th align="left" abbr="f_lun" axis="col1"><div style="text-align: left; width: 300px;">LUN</div></th>
+											<th align="left" abbr="f_size" axis="col2"><div style="text-align: left; width: 200px;">Size</div></th>
+										</tr>
+									</thead>
+								</table>
+							</div><!-- hDivBox -->
+						</div><!-- hDiv -->
+						<div class="bDiv">
+							<table cellspacing="0" cellpadding="0" border="0" id="">
+								<tbody id="VV_LUN_List"></tbody>
+							</table>
+						</div><!-- bDiv -->
+					</div><!-- flexigrid -->
+			</div>	
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_volumevirtualCreateBack4_button" class=" ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_volumevirtualCreateCancel4_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_volumevirtualCreateNext4_button" class="ButtonRightPos1  gray_out"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div>
+	
+	<!-- 5.Virtual Volume/Create/Step5:Share Name Set-->
+	<div id="VV_Create_ShareName_Set" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<table border="0" cellpadding="0" cellspacing="0">	        
+					<tr> 
+						<td class="tdfield" align="left">&nbsp;<span class="_text" lang="_vv" datafld="desc7"></span></td>
+						<td class="tdfield_padding"><div id="Create_LUN_Target" style="word-wrap: break-word;word-break: break-all;"></div></td>
+					</tr>
+					<tr> 
+						<td class="tdfield" align="left">&nbsp;<span class="_text" lang="_vv" datafld="desc8"></span></td>
+						<td class="tdfield_padding"><input type="text" name="storage_volumevirtualCreateShareFolder_text" id="storage_volumevirtualCreateShareFolder_text"></td>
+					</tr>
+				</table>
+			</div>	
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_volumevirtualCreateBack5_button" class=" ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_volumevirtualCreateCancel5_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_volumevirtualCreateNext5_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div>
+	
+	<!-- 6.Virtual Volume/Create/Step6:Summary-->
+	<div id="VV_Create_Summary" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content scroll-pane">
+				<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="550">	        
+					<tr> 
+						<td class="tdfield" align="left">&nbsp;<span class="_text" lang="_vv" datafld="desc2"></span></td>
+						<td class="tdfield_padding"><div id="Create_Summary_IP"></div></td>
+					</tr>
+					<tr> 
+						<td class="tdfield" align="left">&nbsp;<span class="_text" lang="_vv" datafld="desc3"></span></td>
+						<td class="tdfield_padding"><div id="Create_Summary_Port"></div></td>
+					</tr>
+					<tr> 
+						<td class="tdfield" align="left">&nbsp;<span class="_text" lang="_vv" datafld="desc7"></span></td>
+						<td class="tdfield_padding"><div id="Create_Summary_Target"  style="word-wrap: break-word;word-break: break-all;"></div></td>
+					</tr>
+					<tr> 
+						<td class="tdfield" align="left">&nbsp;<span class="_text" lang="_vv" datafld="desc4"></span></td>
+						<td class="tdfield_padding">
+							<div id="Create_Summary_Auth"></div>
+						</td>
+					</tr>
+					<tr id="VV_Create_Summary_User_tr" style="display:none"> 
+						<td align="left" class="tdfield">&nbsp;<span class="_text" lang="_vv" datafld="desc5"></span></td>
+						<td class="tdfield_padding"><div id="Create_Summary_User"></div></td>
+					</tr>
+					<tr id="VV_Create_Summary_PWD_tr" style="display:none"> 
+						<td align="left" class="tdfield">&nbsp;<span class="_text" lang="_vv" datafld="desc6"></span></td>
+						<td class="tdfield_padding"><div id="Create_Summary_PWD"></div></td>
+					</tr>
+					<tr> 
+						<td align="left" class="tdfield">&nbsp;<span class="_text" lang="_vv" datafld="desc8"></span></td>
+						<td class="tdfield_padding"><div id="Create_Summary_ShareName"></div></td>
+					</tr>
+				</table>
+			</div>	
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_volumevirtualCreateBack6_button" class=" ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_volumevirtualCreateCancel6_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_volumevirtualCreateNext6_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="save"></span></button>
+		
+	</div>
+	
+	<!-- 7.Virtual Volume/View/Step1:Show LUN List-->
+	<div id="VV_View_LUN_List" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<table id="View_LUN_List"></table>
+				<br><span class="_text" lang="_vv" datafld="desc30"></span>
+			</div>	
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_volumevirtualDetailsDisconnect_button" class=" ButtonMarginLeft_40px disable"><span class="_text" lang="_vv" datafld="desc12"></span></button>
+		<button type="button" id="storage_volumevirtualDetailsConnect_button" class=" ButtonMarginLeft_40px disable"><span class="_text" lang="_vv" datafld="desc11"></span></button>
+		<button type="button" id="storage_volumevirtualDetailsDel_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_common" datafld="del"></span></button>
+		<button type="button" id="storage_volumevirtualDetailsCancel7_button" class="ButtonRightPos1 close"><span class="_text" lang="_button" datafld="close"></span></button>
+	</div>
+	
+	<!-- 8.Virtual Volume/Modify/Step1:Show LUN List-->
+	<div id="VV_Modify_Target" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="550">	 
+					<tr> 
+						<td class="tdfield" align="left"  style="width:100px">&nbsp;<span class="_text" lang="_vv" datafld="desc1"></span></td>
+						<td class="tdfield_padding"><div id="Modify_Target"></div></td>
+					</tr>
+					<tr> 
+						<td class="tdfield" align="left">&nbsp;<span class="_text" lang="_vv" datafld="desc2"></span></td>
+						<td class="tdfield_padding">
+							<table border="0"><tr>
+							<td><div id="Modify_IP"></div></td>
+							<td><div>:</div></td>
+							<td><div id="Modify_Port"></div></td>
+							</tr></table>
+						</td>
+					</tr>
+					<!--
+					<tr> 
+						<td align="left" class="tdfield">&nbsp;<span class="_text" lang="_vv" datafld="desc3"></span></td>
+						<td class="tdfield_padding"><div id="Modify_Port"></div></td>
+					</tr>
+					-->
+					<tr> 
+						<td align="left" class="tdfield">&nbsp;<span class="_text" lang="_vv" datafld="desc4"></span></td>
+						<td class="tdfield_padding">
+							<input id="storage_volumevirtualModifyAuth_switch" name="storage_volumevirtualModifyAuth_switch" class="onoffswitch" type="checkbox" value="true" >
+						</td>
+					</tr>
+					<tr id="VV_Modify_User_tr" style="display:none"> 
+						<td align="left" class="tdfield">&nbsp;<span class="_text" lang="_vv" datafld="desc5"></span></td>
+						<td class="tdfield_padding"><input type="text" name="storage_volumevirtualModifyUser_text" id="storage_volumevirtualModifyUser_text"></td>
+					</tr>
+					<tr id="VV_Modify_PWD_tr" style="display:none"> 
+						<td align="left" class="tdfield">&nbsp;<span class="_text" lang="_vv" datafld="desc6"></span></td>
+						<td class="tdfield_padding"><input type="password" name="storage_volumevirtualModifyPWD_password" id="storage_volumevirtualModifyPWD_password"></div></td>
+					</tr>
+				</table>	
+			</div>	
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_volumevirtualCreateCancel8_button" class="ButtonLeftPos close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_volumevirtualModifyNext8_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="save"></span></button>
+	</div>
+	
+</div><!-- end of VV Dialog -->
+

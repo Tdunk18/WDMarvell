@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="MS-HAID" content="Creating an Amazon S3 Cloud Backup" />
+<meta http-equiv="Content-Language" content="de-DE" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Erstellen einer Amazon S3-Cloud-Sicherung</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Sichern Ihrer persönlichen Cloud\nCloud-Sicherungen\nErstellen einer Amazon S3-Cloud-Sicherung");
+addButton("show",BTN_TEXT,"Zeigen","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("index.htm", "", ">", "Startseite", "welcome.htm");
+document.write("<a href=\"Creating_a_USB_Backup.htm\">Sichern Ihrer persönlichen Cloud<\/a> > <a href=\"What_is_a_Cloud_Backup.htm\">Cloud-Sicherungen<\/a> > Erstellen einer Amazon S3-Cloud-Sicherung<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Erstellen einer Amazon S3-Cloud-Sicherung</h1>
+<p class="Body"><span style="font-weight: bold;">Hinweis</span>: Bevor 
+ Sie eine Cloud-Sicherung erstellen, registrieren sie sich bei <a href="http://aws.amazon.com/s3" 
+	 target="_blank">http://aws.amazon.com/s3</a> für den Amazon S3-Dienst.</p>
+<p class="Body">Nachdem Sie ein Amazon S3-Konto eingerichtet haben, führen 
+ Sie die nachfolgend genannten Schritte aus, um eine Cloud-Sicherung zu 
+ erstellen.</p>
+<ol style="list-style: square;">
+	<li style="list-style: none; display: inline;"><ol style="list-style: decimal;">
+		<li class="n1">Klicken Sie auf <strong>Backups</strong>.</li>
+		<li class="n1">Klicken Sie auf <span style="font-weight: bold;">Cloud-Sicherung</span>.</li>
+		<li class="n1">Klicken Sie oben am Bildschirm auf die <b>Amazon 
+		 S3</b>-Schaltfläche.<img src="Graphics/image016.png" alt="" width="90" 
+									 height="18" border="0" /></li>
+		<li class="n1">Klicken Sie auf <strong>Erstellen</strong>.</li>
+		<li class="n1">Geben Sie einen Auftragsnamen für die Cloud-Sicherung 
+		 ein.</li>
+		<li class="n1">Klicken Sie auf <b>Weiter</b>.</li>
+		<li class="n1">Geben Sie die folgenden von Amazon S3 bereitgestellten 
+		 Informationen ein:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold;">Region</b>: Wählen 
+		 Sie im Dropdownmenü die für die Cloud verwendete Region aus.</li>
+		<li class="b1"><b>Zugriffsschlüssel</b>: Geben Sie den Zugriffsschlüssel 
+		 ein, der Ihnen von Amazon S3 bereitgestellt wurde.</li>
+		<li class="b1"><b>Privater Schlüssel</b>: Geben Sie den privaten 
+		 Schlüssel ein, der Ihnen von Amazon S3 bereitgestellt wurde.</li>
+		<li class="b1"><strong>Remotepfad</strong>: Geben Sie den Remotepfad 
+		 für die Cloud ein. Hierbei handelt es sich üblicherweise um den 
+		 Bucketnamen.</li>
+	</ul>
+	<ol start="8" style="list-style: decimal;">
+		<li class="n1">Klicken Sie auf <b>Weiter</b>.</li>
+		<li class="n1">Wählen Sie im Feld „Typ“ eine der folgenden Optionen 
+		 aus:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold;">Heraufladen:</b> Mit 
+		 dieser Option werden Ihre My Cloud Mirror-Daten im Amazon S3-Bucket 
+		 gespeichert.</li>
+		<li class="b1"><b style="font-weight: bold;">Herunterladen:</b> 
+		 Mit dieser Option werden die Daten Ihres Amazon S3-Bucket auf 
+		 dem My Cloud Mirror-Server gespeichert.</li>
+	</ul>
+	<ol start="10" style="list-style: decimal;">
+		<li class="n1">Wählen Sie im Feld „Sicherungstyp“ im Dropdownmenü 
+		 die Art der Sicherung aus, die Sie ausführen möchten. Folgende 
+		 Optionen stehen zur Verfügung:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b>Vorhandene Dateien überschreiben</b>: Mit dieser 
+		 Option werden Dateien im Zielordner, die den gleichen Namen tragen 
+		 wie die Quelldatei, überschrieben.</li>
+		<li class="b1"><strong>Vollständige Sicherung</strong>: Mit dieser 
+		 Option wird bei jedem Ausführen der Sicherung ein separater Ordner 
+		 erstellt, der alle Sicherungsdaten enthält.</li>
+		<li class="b1"><strong>Inkrementelle Sicherung</strong>: Mit dieser 
+		 Option werden Dateien überschreiben, wenn die entsprechenden Quelldateien 
+		 neuer sind als die Zieldateien.</li>
+	</ul>
+	<ol start="11" style="list-style: decimal;">
+		<li class="n1">Klicken Sie auf <span style="font-weight: bold;">Weiter</span>.</li>
+		<li class="n1">Geben Sie im Feld „Lokaler Pfad“ einen Pfad für 
+		 die Sicherung auf dem My Cloud Mirror-Gerät ein.</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">Klicken Sie auf <span style="font-weight: bold;">Durchsuchen</span>, 
+		 um auf dem Gerät nach einem Speicherort für die Sicherung zu suchen.<br />
+		(Beispiel: Volume_1/Sicherung)</li>
+	</ul>
+	<ol start="13" style="list-style: decimal;">
+		<li class="n1">Klicken Sie auf <img src="Graphics/toggle_button.png" 
+											 alt="" width="20" height="15" 
+											 border="0" />, um die Funktion 
+		 der automatischen Aktualisierung zu aktivieren. Mit dieser Option 
+		 wird die Sicherung automatisch auf Grundlage eines Zeitplans aktualisiert.</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">Wenn Sie die Funktion der automatischen Aktualisierung 
+		 aktivieren:</li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: circle;">
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">Wählen 
+			 Sie den Zeitplan für die automatische Aktualisierung aus: 
+			 täglich, wöchentlich oder monatlich</p></li>
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">Wählen 
+			 Sie aus dem Dropdownmenü die Uhrzeit für die automatische 
+			 Aktualisierung aus (bei Auswahl der täglichen Aktualisierung).</p></li>
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">Wählen 
+			 Sie im Dropdownmenü den Tag und die Uhrzeit für die automatische 
+			 Aktualisierung aus (wöchentliche oder monatliche Sicherung).</p></li>
+		</ul></li>
+	</ul>
+	<ol start="14" style="list-style: decimal;">
+		<li class="n1">Klicken Sie auf <b>Weiter</b>.</li>
+		<li class="n1">Überprüfen Sie die Einstellungen und klicken Sie 
+		 auf <b>Fertig stellen</b>. Die Amazon S3-Sicherung wird erstellt.</li>
+	</ol></li>
+</ol>
+<p class="Body" style="margin-left: 60px;"><span style="font-weight: bold;">HINWEIS</span>: 
+ Greifen Sie auf den Sicherungs-Bucket Ihrer Amazon S3-Cloud zu, um die 
+ Gerätesicherungen anzuzeigen.</p>
+<p class="ListContinue2CxSpLast">&#160;</p>
+<p>
+
+<a href="javascript:void(0);" onclick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) &gt;=2 &amp;&amp; typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','Aktivieren einer ElephantDrive-Cloud-Sicherung','Enabling_an_ElephantDrive_Cloud_Backup.htm','Was ist eine Cloud-Sicherung?','What_is_a_Cloud_Backup.htm');return false;" title="siehe auch"><img src="ss_btn_siehe_auch.gif" border="0" height="17" width="61" alt="siehe auch" /></a>
+
+
+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt;">© 2015 Western Digital Technologies, Inc. 
+	 <span lang="de-DE" xml:lang="de-DE"><b style="font-weight: normal;">Alle 
+	 Rechte vorbehalten</b></span><span lang="de-DE" xml:lang="de-DE"><b 
+	 style="font-weight: normal;">.</b></span></p>
+</div>
+<script type="text/javascript" language="JavaScript">//<![CDATA[
+if (parseInt(navigator.appVersion) >= 3 && typeof (WritePopupMenuLayer) == "function")
+  WritePopupMenuLayer();
+//]]></script><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>
+

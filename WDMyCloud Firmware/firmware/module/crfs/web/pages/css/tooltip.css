@@ -1,0 +1,40 @@
+
+.Tooltip{
+	position: absolute;
+	z-index: 99999;
+	max-width:220px;
+	min-width:100px;
+	padding:10px;
+	color: #FAFAFA;
+	font-size: 10px;
+	background: #15ABFF;
+	border: 0;
+	word-wrap : break-word;
+}
+
+.TooltipIcon{
+	width: 20px;
+  height: 18px;
+  line-height: 24px;
+	background: url("/web/img/main_sprite.png") no-repeat -140px -615px transparent;
+	/*top:5px;*/
+	left:5px;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	/*border: 1px solid #ff921a;*/
+}
+
+.TooltipIcon:hover{
+	background-position: -140px -595px;
+}
+
+.TooltipIconError{
+	width:24px;
+	height:24px;
+	background: url(../images/icon/error.png) no-repeat transparent 0px 0px ;
+	left:5px;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+}

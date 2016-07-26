@@ -1,0 +1,48 @@
+lib/libgcrypt-grub/cipher/gcry_sha256_module-sha256.o: \
+ lib/libgcrypt-grub/cipher/sha256.c ../include/grub/dl.h \
+ ../include/grub/symbol.h ../config.h ../include/grub/err.h \
+ ../include/grub/types.h ../include/grub/cpu/types.h \
+ ../include/grub/elf.h lib/libgcrypt-grub/cipher/g10lib.h \
+ ../grub-core/lib/libgcrypt_wrap/cipher_wrap.h ../include/grub/mm.h \
+ ../include/grub/misc.h \
+ /opt_gccarm/x86_64-intel-linux-gnu/lib/gcc/x86_64-intel-linux-gnu/4.8.2/include/stdarg.h \
+ ../include/grub/i18n.h ../include/grub/crypto.h \
+ lib/libgcrypt-grub/cipher/memory.h lib/libgcrypt-grub/cipher/bithelp.h \
+ lib/libgcrypt-grub/cipher/cipher.h \
+ lib/libgcrypt-grub/cipher/hash-common.h
+
+../include/grub/dl.h:
+
+../include/grub/symbol.h:
+
+../config.h:
+
+../include/grub/err.h:
+
+../include/grub/types.h:
+
+../include/grub/cpu/types.h:
+
+../include/grub/elf.h:
+
+lib/libgcrypt-grub/cipher/g10lib.h:
+
+../grub-core/lib/libgcrypt_wrap/cipher_wrap.h:
+
+../include/grub/mm.h:
+
+../include/grub/misc.h:
+
+/opt_gccarm/x86_64-intel-linux-gnu/lib/gcc/x86_64-intel-linux-gnu/4.8.2/include/stdarg.h:
+
+../include/grub/i18n.h:
+
+../include/grub/crypto.h:
+
+lib/libgcrypt-grub/cipher/memory.h:
+
+lib/libgcrypt-grub/cipher/bithelp.h:
+
+lib/libgcrypt-grub/cipher/cipher.h:
+
+lib/libgcrypt-grub/cipher/hash-common.h:

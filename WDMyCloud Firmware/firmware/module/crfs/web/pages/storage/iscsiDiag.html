@@ -1,0 +1,424 @@
+﻿<div id="iscsiDiag" class="WDLabelDiag" style="display:">
+<div id="iscsiDiag_title" class="WDLabelHeaderDialogue WDLabelHeaderDialogueiSCSIIcon">
+<span class="_text" lang="_iscsi" datafld="create_iscsi_target"></span></div>
+<div align="center"><div class="hr"><hr></div></div>
+	
+<!-- step1 -->
+<div id="iscsi_step1" style="display:" >
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content" >		
+		<form name="form_s3">		
+		<table border="0" width="100%"  cellspacing="0" cellpadding="0" height="0">
+		<tr>
+			<td width="150" height="40">
+				<span class="_text" lang="_iscsi" datafld="alias">
+			</td>	
+			<td>											
+				<input type="text" name="storage_iscsiTargetAlias_text" id="storage_iscsiTargetAlias_text" onkeyup="set_iqn();" maxlength="32" >
+			</td>
+		</tr>	
+		<tr>
+			<td width="150" height="40">
+				<span class="_text" lang="_iscsi" datafld="name">
+			</td>	
+			<td>														
+				<div id="f_iqn"></div>
+			</td>
+		</tr>
+		<tr id="id_set_location">
+			<td width="150" height="40">
+				<span class="_text" lang="_iscsi" datafld="create_on">
+			</td>
+			<td>
+				<table border="0"  cellspacing="1" cellpadding="0" height="0">
+					<tr>
+						<td>	
+				<div class="select_menu" id="id_volume_top_main"></div>
+			</td>
+						<td>&nbsp;
+							(<span id="id_volume_size"></span>)<span id="id_volume_size_byte" style="display:none"></span>
+						</td>	
+					</tr>
+				</table>		
+			</td>
+		</tr>
+		<tr id="id_set_size">
+			<td width="150" height="40">
+				<span class="_text" lang="_wfs" datafld="size">
+			</td>	
+			<td>
+				<table border="0"  cellspacing="1" cellpadding="0" height="0">
+				<tr>
+					<td>				
+					<input type="text" name="storage_iscsiTargetSize_text" id="storage_iscsiTargetSize_text" class="input_x6">
+					</td>					
+					<td width="20">
+					</td>
+					<td>
+					<div class="select_menu" id="id_unit_top_main"></div>
+					</td>					
+				</tr>													
+				</table>								
+			</td>			
+		</tr>
+		<tr id="id_set_img" style="display:none">
+			<td width="150" height="40">				
+				<span class="_text" lang="_iscsi" datafld="image_file">
+			</td>	
+			<td>										
+					<table border="0"  cellspacing="1" cellpadding="0" height="0">
+					<tr>
+						<td>
+						<input type="text" id="s3_tree" name="s3_tree" maxlength="255" size="32" readonly>
+						</td>
+						<td>
+							<button type="button" onclick="cancel_img_file();"><span class="_text" lang="_button" datafld="Cancel"></button>
+						</td>
+					</tr>
+				</table>			
+			</td> 
+		</tr>	
+		</table>		
+		<!--<span class="_text" lang="_iscsi" datafld="desc1"></span>			-->
+		<!--<span>If you would like to create a iSCSI target from an existing image file, click <span onclick="i_create_tree_dialog('form_s3','s3_tree');" style="color:#0067A6;cursor: pointer;">here</span>.</span>-->
+		</form>												
+</div>	
+</div>			
+<div class="hrBottom2"><hr/></div>		
+<button class="ButtonMarginLeft_40px close" id="storage_iscsiTargetCancel1_button"><span class="_text" lang="_button" datafld="Cancel"></button>
+<button class="ButtonRightPos2" id="storage_iscsiTargetNext1_button" ><span class="_text" lang="_button" datafld="Next"></span></button>
+</div>
+<!-- step 2-->	
+<div id="iscsi_step2" style="display:none;" >
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content">		
+		<table border="0"  cellspacing="0" cellpadding="0" height="0">		
+		<tr>
+			<td width="150" height="40">
+				<span class="_text" lang="_iscsi" datafld="security">
+			</td>				
+			<td>														
+				<div id="ChapMode" style="display:none"><button class="left_button" value="0" id="storage_iscsiTargetSecurityNone_button"><span class="_text" lang="_common" datafld="none"></span></button><button id="storage_iscsiTargetSecurityChap_button" class="right_button" value="1"><span class="_text" lang="_iscsi" datafld="chap"></span></button></div>
+			</td>			
+		</tr>		
+		<tr id="id_b_username" style="display:none">
+			<td width="150" height="40">
+				<span class="_text" lang="_user" datafld="user_name">
+			</td>				
+			<td>	
+					<input type="text" name="storage_iscsiTargetUsername_text" id="storage_iscsiTargetUsername_text" maxlength=16>
+			</td>	
+		</tr>	
+		<tr id="id_b_pwd" style="display:none">
+			<td width="150" height="40">
+				<span class="_text" lang="_user" datafld="pw">				
+			</td>				
+			<td>
+				<input type="password" name="storage_iscsiTargetPwd_text" id="storage_iscsiTargetPwd_text" maxlength=16 > 	
+			</td>	
+		</tr>	
+		<tr id="id_confirm_b_pwd" style="display:none">
+			<td width="150" height="40">
+				<span class="_text" lang="_user" datafld="confirm_password"></span>				
+			</td>				
+			<td>
+				<input type="password" name="storage_iscsiTargetConfirmPwd_text" id="storage_iscsiTargetConfirmPwd_text" maxlength=16 > 	
+			</td>	
+		</tr>	
+		</table>
+</div>	
+</div>						
+<div class="hrBottom2"><hr/></div>
+<button class="ButtonMarginLeft_40px" id="storage_iscsiTargetBack2_button"><span class="_text" lang="_button" datafld="back">Back</span></button>		
+<button class="ButtonMarginLeft_20px close" id="storage_iscsiTargetCancel2_button"><span class="_text" lang="_button" datafld="Cancel"></button>		
+<button class="ButtonRightPos2" id="storage_iscsiTargetSave2_button" onclick="create_iscsi();"><span class="_text" lang="_button" datafld="apply"></span></button>									
+</div>
+<!--  custom -->
+<div id="port_custom_dialog" style="display:none">
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content">	
+			<table border="0"  cellspacing="0" cellpadding="0" height="0">
+					<tr>
+							<td width="150" height="40"><span class="_text field_top" lang="_common" datafld="enable">Enable</span></td>
+							<td>								
+								<input type="checkbox" id="f_port_enable" name="f_port_enable" checked>						
+						</td>							
+					</tr>
+					<tr> 
+							<td width="150" height="40"><span class="_text field_top" lang="_portforwarding" datafld="service">Service</span></td>
+							<td><input type="text" name="f_service" id="f_service" maxlength="32" length="20" onkeyup="this.value=this.value.replace(/[^0-9a-zA-Z ]/g,'');">		</td>							
+					</tr>
+					<tr>
+						<td height="40" width="150"> <span class="_text" lang="_portforwarding" datafld="protocol">Protocol</span></td>
+						<td>
+		
+						<div class="select_menu">
+				      <ul>
+				        <li class="option_list">
+				                  				                  
+				            	<div id="id_protocol_main" class="wd_select option_selected">
+															<div class="sLeft wd_select_l"></div>
+															<div class="sBody text wd_select_m" id="f_protocol">TCP</div>
+															<div class="sRight wd_select_r"></div>																																								
+															
+											</div>						
+											<ul class="ul_obj">            														            	
+				                <li class="li_start"><a href="#">TCP</a>  
+				                <li class="li_end"><a href="#">UDP</a>
+				            	</ul>
+				        </li>
+				      </ul>
+							</div>
+							
+<!--							
+							<select id="protocol">
+										<option>TCP</option>
+										<option>UDP</option>										
+								</select>
+-->								
+						</td>
+					</tr>	
+					<tr>
+						<td width="150" height="40"><span class="_text" lang="_portforwarding" datafld="e_port">External Port</span></td>
+						<td>							
+								<input type="text" class="input_x2" name="e_port" id="e_port" maxlength="5" length="5" onkeyup="this.value=this.value.replace(/[^0-9]/g,'');">										
+						</td>
+					</tr>	
+						<tr>
+						<td width="150" height="40"><span class="_text" lang="_portforwarding" datafld="p_port">Internal Port</span></td>
+						<td>
+								<input type="text" class="input_x2" name="p_port" id="p_port" maxlength="5" length="5" onkeyup="this.value=this.value.replace(/[^0-9]/g,'');">
+						</td>
+					</tr>	
+			</table>
+	</div>	
+</div>	
+		
+			<div class="hrBottom2"><hr/></div>
+			<div class="LightningButton ButtonMarginLeft_40px" id="p_back_custom" lang="_button" datafld="back"></div>
+			<div class="LightningButton ButtonMarginLeft_20px close" lang="_button" datafld="Cancel"></div>
+			<div class="LightningButton ButtonMarginLeft_20px" id="port_custom_ok" lang="_button" datafld="finish"></div>
+		
+						
+</div>
+<!--  custom table -->
+
+<!-- scan table -->
+<div id="port_scan_dialog" style="display:none;" >
+
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content">
+
+
+		<span class="_text" lang="_portforwarding" datafld="built_desc"></span>
+		<br><br>		
+		<div id="port_scan_info"></div>
+
+</div>	
+</div>		
+		
+	<div class="hrBottom2"><hr/></div>
+			<div class="LightningButton ButtonMarginLeft_40px" id="p_back_scan" lang="_button" datafld="back"></div>
+			<div class="LightningButton ButtonMarginLeft_20px" id="port_scan_ok" lang="_button" datafld="apply"></div>
+			<div class="LightningButton ButtonMarginLeft_20px close" lang="_button" datafld="Cancel"></div>
+						
+</div>
+<!-- scan table end-->
+</div>
+
+
+
+<div id="portDemoDiag" class="WDLabelDiag" style="display:">
+<div id="portDiag_title" class="WDLabelHeaderDialogue WDLabelHeaderDialogueHDDIcon">
+<span class="_text" lang="_portforwarding" datafld="title"></span></div>
+<div align="center"><div class="hr"><hr></div></div>	
+<!-- step1 -->
+<div id="port_demo" style="display:" >
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content">
+		<table border="0"  cellspacing="0" cellpadding="0" height="0">
+					<tr>
+							<td width="150" height="40"><span class="_text field_top" lang="_common" datafld="enable">Enable</span></td>
+							<td>								
+								Yes</td>							
+					</tr>
+					<tr> 
+							<td width="150" height="40"><span class="_text field_top" lang="_portforwarding" datafld="service">Service</span></td>
+							<td>BitTorrent</td>							
+					</tr>
+					<tr>
+						<td height="40" width="150"> <span class="_text" lang="_portforwarding" datafld="protocol">Protocol</span></td>
+						<td>TCP
+											
+						</td>
+					</tr>	
+					<tr>
+						<td width="150" height="40"><span class="_text" lang="_portforwarding" datafld="e_port">External Port</span></td>
+						<td>							
+								5556
+						</td>
+					</tr>	
+						<tr>
+						<td width="150" height="40"><span class="_text" lang="_portforwarding" datafld="p_port">Internal Port</span></td>
+						<td>
+								5550
+						</td>
+					</tr>	
+						<tr>
+						<td width="150" height="40">Status</td>
+						<td>
+								Error
+						</td>
+					</tr>	
+			</table>
+</div>	
+</div>					
+	<div class="hrBottom2"><hr/></div>					
+	<button type="button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+</div>
+</div>
+<!-- detail-->
+<div id="iscsiDetailDiag" class="WDLabelDiag" style="display:">
+<div id="iscsiDetailDiag_title" class="WDLabelHeaderDialogue WDLabelHeaderDialogueiSCSIIcon">Ryanspace Details</div>
+<div align="center"><div class="hr"><hr></div></div>	
+<div id="iscsi_detail" style="display:" >
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content">
+<table border="0"  cellspacing="0" cellpadding="0" height="0">
+		<tr style="display:none">
+				<td width="150" height="40"><span class="_text" lang="_iscsi" datafld="alias"></td>
+				<td>														
+					<div id="id_iscsi_name"></div>
+				</td>							
+		</tr>
+		<tr> 
+				<td width="150" height="40"><span class="_text" lang="_iscsi" datafld="name"></td>
+				<td><div id="id_iscsi_iqn"></div></td>							
+		</tr>
+		<tr id="id_detail_location">
+			<td height="40" width="150"><span class="_text" lang="_iscsi" datafld="create_on"></td>
+			<td>
+						<div id="id_iscsi_location"></div>
+			</td>
+		</tr>		
+		<tr id="id_detail_img">
+			<td width="150" height="40"><span class="_text" lang="_iscsi" datafld="image_file"></td>
+			<td>		
+				<div id="id_iscsi_img"></div>			
+			</td>
+			<tr>
+			<td width="150" height="40">
+				<span class="_text" lang="_wfs" datafld="size">
+			</td>	
+			<td>
+				<table border="0"  cellspacing="0" cellpadding="0" height="0">
+				<tr>
+					<td>				
+					<input type="text" name="storage_iscsiTargetEditSize_text" id="storage_iscsiTargetEditSize_text" class="input_x3">
+					</td>					
+					<td width="20">
+					</td>
+					<td>
+					<div class="select_menu" id="id_unit_modify_top_main"></div>
+					</td>
+					<td>
+						&nbsp;<span id="id_volume_detail_size_byte"></span>
+					</td>	
+				</tr>													
+				</table>								
+			</td>			
+		</tr>
+			<tr>
+			<td width="150" height="40"><span class="_text" lang="_iscsi" datafld="security"></td>
+			<td>
+				<div id="ChapMode_detail" style="display:none"><button id="storage_iscsiTargetEditSecurityNone_button" class="left_button" value="0"><span class="_text" lang="_common" datafld="none"></span></button><button id="storage_iscsiTargetEditSecurityChap_button" class="right_button" value="1"><span class="_text" lang="_iscsi" datafld="chap"></span></button></div>						
+			</td>
+		</tr>	
+		<tr id="id_detail_username" style="display:">
+		<td width="150" height="40">
+			<span class="_text" lang="_user" datafld="user_name">
+		</td>				
+		<td>	
+				<input type="text" name="storage_iscsiTargetEditUsername_text" id="storage_iscsiTargetEditUsername_text" maxlength=16>
+		</td>	
+	</tr>	
+	<tr id="id_detail_pwd" style="display:">
+		<td width="150" height="40">
+			<span class="_text" lang="_user" datafld="pw">
+		</td>				
+		<td>
+			<input type="password" name="storage_iscsiTargetEditPwd_text" id="storage_iscsiTargetEditPwd_text" maxlength=16>	
+		</td>	
+	</tr>	
+	<tr id="id_detail_confirm_pwd" style="display:">
+		<td width="150" height="40">
+			<span class="_text" lang="_user" datafld="confirm_password"></span>
+		</td>				
+		<td>
+			<input type="password" name="storage_iscsiTargetEditConfirmPwd_text" id="storage_iscsiTargetEditConfirmPwd_text" maxlength=16>	
+		</td>	
+	</tr>	
+		</tr>	
+			<tr>
+			<td width="150" height="40"><span class="_text" lang="_iscsi" datafld="address"></td>
+			<td>
+						<div id="id_iscsi_ip"></div>
+			</td>
+		</tr>	
+</table>
+</div>	
+</div>					
+<div class="hrBottom2"><hr/></div>				
+<button type="button" class="ButtonMarginLeft_40px close" id="storage_iscsiDetailCancel_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+<button type="button" onclick="on_off_iscsi();" class="ButtonMarginLeft_20px" id="storage_iscsiDetailEnable_button"><span class="_text" lang="_common" datafld="disable"></span></button>
+<button type="button" onclick="delete_iscsi();" class="ButtonMarginLeft_20px" id="storage_iscsiDetailDelete_button"><span class="_text" lang="_common" datafld="del"></span></button>
+<button type="button" class="ButtonRightPos2"	 onclick="modify_iscsi();" id="storage_iscsiDetailSave_button"><span class="_text" lang="_button" datafld="apply"></span></button>
+</div>
+</div>
+<!-- tree -->
+<div id="s3treeDiag" class="WDLabelDiag" style="display:">
+<div id="s3treeDiag_title" class="WDLabelHeaderDialogue WDLabelHeaderDialogueiSCSIIcon"><span class="_text" lang="_iscsi" datafld="create_iscsi_target"></span></div>
+<div align="center"><div class="hr"><hr></div></div>	
+<div id="iscsi_detail" style="display:" >
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content">
+<div id="s3tree_div" class="show_file"></div>
+</div>	
+</div>		
+<div class="hrBottom2"><hr/></div>	
+<button type="button" class="ButtonMarginLeft_40px" id="s3_back_button" onclick="clear_path();"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+<button type="button" class="ButtonRightPos2" id="s3_ok_button"><span class="_text" lang="_button" datafld="Ok"></span></button>
+</div>
+</div>
+<!-- lnitiatiors -->
+<div id="iscsiInitiatorsDiag" class="WDLabelDiag" style="display:">
+<div id="iscsiInitiatorsDiag_title" class="WDLabelHeaderDialogue WDLabelHeaderDialogueiSCSIIcon"><span class="_text" lang="_iscsi" datafld="initi_title"></span></div>
+<div align="center"><div class="hr"><hr></div></div>	
+<div id="iscsi_Initiators" style="display:" >
+<div class="WDLabelBodyDialogue">
+<div class="dialog_content"><span class="_text" lang="_iscsi" datafld="initi_list"></span>
+<div id="id_ini_list"></div>				
+</div>	
+</div>		
+<div class="hrBottom2"><hr/></div>			
+	<button type="button" class="ButtonRightPos2 close"><span class="_text" lang="_button" datafld="close"></span></button>
+</div>
+</div>
+<!-- server -->
+<div id="iscsiServerDiag" class="WDLabelDiag" style="display:">
+<div id="iscsiServerDiag_title" class="WDLabelHeaderDialogue WDLabelHeaderDialogueiSCSIIcon"><span class="_text" lang="_iscsi" datafld="iscsi_server"></span></div>
+<div align="center"><div class="hr"><hr></div></div>	
+<div class="WDLabelBodyDialogue">	
+	<table border="0"  cellspacing="0" cellpadding="0" height="0">
+	<tr>
+			<td width="100" height="40"><span class="_text" lang="_iscsi" datafld="server"></td>
+			<td><input type="text" id="storage_iscsiServer_text" name="storage_iscsiServer_text"></td>
+	</tr>	
+	</table>			
+</div>		
+<div class="hrBottom2"><hr/></div>				
+<button class="ButtonMarginLeft_40px close"><span id="storage_iscsiServerCancel_button" class="_text" lang="_button" datafld="Cancel"></span></button>		
+<button class="ButtonRightPos2 save" id="storage_iscsiServerSave_button" onclick="save_iscsi_server();" ><span class="_text" lang="_button" datafld="apply"></span></button>
+</div>
+
+

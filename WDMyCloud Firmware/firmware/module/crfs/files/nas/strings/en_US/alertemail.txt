@@ -1,0 +1,8 @@
+0001 = Alert message from your %1
+0002 = Following events are generated on your %2 %1
+0003 = Event description
+0004 = Severity
+0005 = Event code
+0006 = Event time
+0007 = Event title
+0008 = Firmware version

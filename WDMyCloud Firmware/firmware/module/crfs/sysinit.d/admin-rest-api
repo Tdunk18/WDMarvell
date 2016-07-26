@@ -1,0 +1,27 @@
+#!/bin/bash
+#
+# (c) 2014 Western Digital Technologies, Inc. All rights reserved.
+#
+#
+#---------------------
+
+[ ! -d /usr/local ] && mkdir -p /usr/local
+cp -a  /usr/local/modules/localorion /usr/local/orion
+chmod 775 /usr/local/orion/openvpnclient/updateremote.sh
+ln -s /usr/local/orion/ /usr/           # ask Ian, why copy if we create symlink?
+
+[ ! -d /usr/share/doc ] && mkdir -p /usr/share/doc
+ln -s /usr/local/modules/files/admin-rest-api /usr/share/doc/
+
+[ ! -d /var/www ] && mkdir -p /var/www
+cp -a /usr/local/modules/rest-api /var/www/
+cp -a /usr/local/modules/htdocs /var/www/
+
+[ ! -d /etc ] && mkdir -p /etc
+cp -a  /usr/local/modules/apache2 /etc/
+cp -a  /usr/local/modules/wdcomp.d /etc/
+
+ln -s /var/www/rest-api/api/Shares/src/Shares/Cli/crud_share_db.php /usr/local/sbin/crud_share_db.sh
+ln -s /var/www/rest-api/api/Remote/src/Remote/Cli/send_invite_email.php /usr/local/sbin/send_invite_email.sh
+ln -s /var/www/rest-api/api/Alerts/src/Alerts/Cli/alert_email_config.php /usr/local/sbin/alert_email_config.sh
+ln -s /var/www/rest-api/api/Filesystem/src/Filesystem/Cli/volume_mount.php /usr/local/sbin/volume_mount.sh

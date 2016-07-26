@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+    <name>Auth</name>
+    <version>2.1</version>
+    <description>Auth has login, local login, logout and user components.</description >
+
+    <components>
+
+        <component>
+            <name>local_login</name>
+            <module>Auth</module>
+            <controller_class>Auth\Controller\LocalLogin</controller_class>
+            <auth_security>
+                <get>NO_AUTH</get>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>login</name>
+            <module>Auth</module>
+            <controller_class>Auth\Controller\Login</controller_class>
+            <auth_security>
+                <get>NO_AUTH</get>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>logout</name>
+            <module>Auth</module>
+            <controller_class>Auth\Controller\Logout</controller_class>
+            <auth_security>
+                <get>USER_AUTH</get>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>users</name>
+            <module>Auth</module>
+            <controller_class>Auth\Controller\Users</controller_class>
+            <auth_security>
+                <get>NO_AUTH_LAN_USER_WAN</get>
+                <put>CLOUDHOLDER_AUTH</put>
+                <post>CLOUDHOLDER_AUTH</post>
+                <delete>CLOUDHOLDER_AUTH</delete>
+            </auth_security>
+        </component>
+        
+        <component>
+            <name>groups</name>
+            <module>Auth</module>
+            <controller_class>Auth\Controller\Groups</controller_class>
+            <auth_security>
+                <get>NO_AUTH_LAN_USER_WAN</get>
+                <put>ADMIN_AUTH</put>
+                <delete>ADMIN_AUTH</delete>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>hmac</name>
+            <module>Auth</module>
+            <controller_class>Auth\Controller\Hmac</controller_class>
+            <auth_security>
+                <all>CLOUDHOLDER_AUTH</all>
+            </auth_security>
+        </component>
+
+    </components>
+
+    <class_factory>
+        <factory>Auth\User\UserManager</factory>
+        <implementation>
+            <class_name>Auth\User\Linux\UserManagerImpl</class_name>
+            <attributes osname="linux" />
+        </implementation>
+        <implementation>
+            <class_name>Auth\User\Windows\UserManagerImpl</class_name>
+            <attributes osname="windows" />
+        </implementation>
+    </class_factory>
+    <class_factory>
+        <factory>Auth\User\UserSecurity</factory>
+        <implementation>
+            <class_name>Auth\User\Linux\UserSecurityImpl</class_name>
+            <attributes osname="linux" />
+        </implementation>
+        <implementation>
+            <class_name>Auth\User\Windows\UserSecurityImpl</class_name>
+            <attributes osname="windows" />
+        </implementation>
+    </class_factory>
+</module>

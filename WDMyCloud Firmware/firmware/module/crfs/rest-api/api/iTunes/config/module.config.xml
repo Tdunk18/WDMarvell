@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+    <name>iTunes</name>
+    <version>2.1</version>
+    <description>Module has {}</description >
+
+    <components>
+        <component>
+            <name>itunes_configuration</name>
+            <module>iTunes</module>
+            <controller_class>\iTunes\Controller\Configuration</controller_class>
+            <auth_security>
+                <get>USER_AUTH</get>
+                <put>ADMIN_AUTH_LAN</put>
+            </auth_security>
+        </component>
+        <component>
+            <name>itunes_scan</name>
+            <module>iTunes</module>
+            <controller_class>\iTunes\Controller\Scan</controller_class>
+            <auth_security>
+                <put>ADMIN_AUTH_LAN</put>
+            </auth_security>
+        </component>
+    </components>
+
+</module>

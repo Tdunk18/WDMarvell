@@ -1,0 +1,3299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<text>
+  <_menu_title>
+    <home len="16">홈</home>
+    <users len="16">사용자</users>
+    <shares len="16">공유</shares>
+    <cloud_access len="16">클라우드 액세스</cloud_access>
+    <backups len="16">백업</backups>
+    <storage len="16">스토리지</storage>
+    <app len="16">앱</app>
+    <settings len="16">설정</settings>
+  </_menu_title>
+  <_menu>
+    <lan len="22">LAN 설정</lan>
+    <time len="22">시간 및 날짜</time>
+    <device len="22">장치</device>
+    <network len="22">네트워크</network>
+    <quota len="22">할당량</quota>
+    <itunes len="22">iTunes 서버</itunes>
+    <addon len="22">앱</addon>
+    <system len="22">시스템 설정</system>
+    <firmware len="22">펌웨어 업그레이드</firmware>
+    <email len="22">알림</email>
+    <power len="22">전원 관리</power>
+    <ddns len="22">동적 DNS</ddns>
+    <disk len="22">디스크 검사</disk>
+    <system_info len="22">시스템 정보</system_info>
+    <logs len="22">로그</logs>
+    <p2p_downloads len="22">P2P 다운로드</p2p_downloads>
+    <p2p_downloads_queue len="22">P2P 다운로드 대기열</p2p_downloads_queue>
+    <time_machine len="22">Time Machine</time_machine>
+    <logout len="22">로그아웃</logout>
+    <network_services len="22">네트워크 서비스</network_services>
+    <afp len="22">AFP 서비스</afp>
+    <nfs len="22">NFS 서비스</nfs>
+    <remote_backups len="22">원격 백업</remote_backups>
+    <web_file_server len="22">웹 파일 뷰어</web_file_server>
+    <language len="22">언어</language>
+    <resource_monitor_estimated len="26">리소스 모니터 예상</resource_monitor_estimated>
+    <ads len="22">Active Directory</ads>
+    <forwarding len="22">포트 전달</forwarding>
+    <resource_monitor len="22">리소스 모니터</resource_monitor>
+    <snmp len="22">SNMP</snmp>
+    <dfs len="23">공유 집계</dfs>
+    <usb_backups len="22">USB 백업</usb_backups>
+    <ipv6 len="22">IPv6 설정</ipv6>
+    <volume_encryption len="22">볼륨 암호화</volume_encryption>
+    <usb_device len="22">USB 장치</usb_device>
+    <my_file len="15">웹 파일 뷰어</my_file>
+    <ftp_downloads len="22">FTP 다운로드</ftp_downloads>
+    <http_downloads len="22">HTTP 다운로드</http_downloads>
+    <RAID len="22">RAID</RAID>
+    <general>일반</general>
+    <iso_mount>ISO 탑재</iso_mount>
+    <media>미디어</media>
+    <utilities>유틸리티</utilities>
+    <firmware_update>펌웨어 업데이트</firmware_update>
+    <no_usb>발견된 USB 장치가 없습니다.</no_usb>
+    <unmount_success>탑재 해제에 성공했습니다.</unmount_success>
+    <service>서비스</service>
+  <safepoints>Safepoint 마이그레이션</safepoints></_menu>
+  <_button>
+    <Skip len="11">건너뛰기</Skip>
+    <Ok len="11">확인</Ok>
+    <Next len="11">다음</Next>
+    <Cancel len="999">취소</Cancel>
+    <Previous len="11">이전</Previous>
+    <Exit len="11">종료</Exit>
+    <Restart len="11">다시 시작</Restart>
+    <Completed len="11">완료됨</Completed>
+    <save_settings len="20">설정 저장</save_settings>
+    <set_time len="25">내 컴퓨터에서 시간 설정</set_time>
+    <restore len="16">복원</restore>
+    <shutdown len="16">종료</shutdown>
+    <save len="10">저장</save>
+    <load len="10">로드</load>
+    <apply len="10">적용</apply>
+    <test_mail len="10">테스트 이메일</test_mail>
+    <normal len="999">정상</normal>
+    <refresh len="10">새로 고침</refresh>
+    <refresh_all len="10">모두 새로 고침</refresh_all>
+    <browse len="10">찾아보기</browse>
+    <finished len="999">마침</finished>
+    <configuration len="999">구성</configuration>
+    <applications len="999">응용프로그램</applications>
+    <confirm len="11">확인</confirm>
+    <scan_disk len="10">디스크 검사</scan_disk>
+    <create len="10">만들기</create>
+    <finish len="11">마침</finish>
+    <abnormal len="999">비정상</abnormal>
+    <local len="10">로컬</local>
+    <test len="10">테스트</test>
+    <add_torrent len="11">Torrent 추가</add_torrent>
+    <close len="16">닫기</close>
+    <format len="11">포맷</format>
+    <unmount len="10">탑재 해제</unmount>
+    <clear len="10">지우기</clear>
+    <cfg_link len="10">링크 구성</cfg_link>
+    <yes len="10">예</yes>
+    <no len="10">아니요</no>
+    <add len="10">추가</add>
+    <back len="10">뒤로</back>
+    <search len="10">검색</search>
+    <install len="20">설치 및 다시 부팅</install>
+    <remove>제거</remove>
+    <continue>계속</continue>
+    <dismiss_all>모두 해제</dismiss_all>
+  <switch_to_quick>빠른 모드로 전환</switch_to_quick></_button>
+  <_common>
+    <enable len="26">활성화</enable>
+    <disable len="26">비활성화</disable>
+    <product len="999">제품 페이지</product>
+    <firmware len="999">펌웨어 버전</firmware>
+    <update_success len="167">설정 저장됨</update_success>
+    <set_success len="167">설정이 성공적으로 저장되었습니다.</set_success>
+    <success len="999">성공</success>
+    <error len="999">오류</error>
+    <wait len="999">잠시 기다려 주십시오...</wait>
+    <add len="10">추가</add>
+    <modify len="10">수정</modify>
+    <del len="10">삭제</del>
+    <page len="10">페이지</page>
+    <of len="999">/</of>
+    <display len="999">표시</display>
+    <to len="999">~</to>
+    <item len="999">항목</item>
+    <completed len="999">완료됨</completed>
+    <message len="999">메시지</message>
+    <start len="999">시작</start>
+    <stop len="999">중지</stop>
+    <loading len="999">로드 중...</loading>
+    <saving len="999">저장 중</saving>
+    <connection_error len="45">연결 오류</connection_error>
+    <no_items len="45">항목 없음</no_items>
+    <new len="10">새로 만들기</new>
+    <wait_msg len="68">WD My Cloud Mirror 시스템이 다시 시작 중입니다. 프로세스가 완료될 때까지 기다리십시오.</wait_msg>
+    <shutdown_msg len="68">WD My Cloud Mirror 시스템이 종료되었습니다.</shutdown_msg>
+    <warning len="7">경고</warning>
+    <save_msg len="167">새 설정을 저장하시겠습니까?</save_msg>
+    <unlimited len="10">제한 없음</unlimited>
+    <none len="999">없음</none>
+    <quick_search len="26">빠른 검색</quick_search>
+    <pagestat len="36">      <![CDATA[{from}~{to}/{total}개 항목 표시 중]]>
+    </pagestat>
+    <processing len="45">처리 중입니다. 기다려 주세요 ...</processing>
+    <batch_create len="80">여러 사용자 만들기</batch_create>
+    <import_users len="16">사용자 가져오기</import_users>
+    <info len="999">정보</info>
+    <set>설정 중...</set>
+    <agree>동의</agree>
+    <download>다운로드 중...</download>
+    <filename>파일 이름</filename>
+    <retrieving>검색 중</retrieving>
+    <updating>업데이트 중</updating>
+    <on>켜기</on>
+    <off>끄기</off>
+    <list>목록</list>
+    <jan>1월</jan>
+	<feb>2월</feb>
+	<mar>3월</mar>
+	<apr>4월</apr>
+	<may>5월</may>
+	<jun>6월</jun>
+	<jul>7월</jul>
+	<aug>8월</aug>
+	<sep>9월</sep>
+	<oct>10월</oct>
+	<nov>11월</nov>
+	<dec>12월</dec>
+	<january>1월</january>
+	<february>2월</february>
+	<march>3월</march> 
+	<april>4월</april> 
+	<june>6월</june> 
+	<july>7월</july>
+	<august>8월</august> 
+	<september>9월</september> 
+	<october>10월</october>
+	<november>11월</november> 
+	<december>12월</december>
+	<date_format1>dddd, mmmm dd, yyyy, h:MM:ss TT</date_format1>
+	<code>코드</code>
+	<day>일</day>
+	<hours>시간</hours>
+	<minutes>분</minutes>
+  <hour len="999">시간</hour>
+  <minute len="999">분</minute>
+  <days>일</days>
+  <installed>설치됨</installed><checking>확인 중...</checking></_common>
+  <_login>
+    <user>사용자</user>
+    <sel len="26">계정을 선택하십시오.</sel>
+    <admin len="31">시스템 관리자(admin)</admin>
+    <others len="6">기타</others>
+    <pw len="11">암호</pw>
+    <remember len="30">이 정보 저장</remember>
+    <ssl len="30">SSL 로그인</ssl>
+    <login len="16">로그인</login>
+    <more len="4">자세히 보기</more>
+    <msg1 len="999">관리자만 구성 페이지에 액세스할 수 있습니다.</msg1>
+    <msg2 len="999">WD My Cloud Mirror 시스템이 다시 시작 중입니다. 프로세스가 완료될 때까지 기다리십시오.</msg2>
+    <msg3 len="115">입력한 사용자 이름 또는 암호가 잘못되었습니다.&lt;br&gt;다시 입력하십시오.</msg3>
+    <msg4 len="115">입력한 사용자 계정은 현재 사용 중입니다.&lt;br&gt; 관리자에게 문의하거나 나중에 다시 시도하십시오.</msg4>
+    <msg5 len="167">로그인 연결 제한 시간이 초과되었습니다. 다시 로그인하십시오.</msg5>
+    <msg6 len="115"><![CDATA[입력한 사용자 이름 또는 암호가 올바르지 않습니다. <a href="%s" target="_blank">여기를</a> 방문하여 지원을 요청하십시오.]]></msg6>
+    <msg_booting len="167">시스템이 부팅 중입니다. 기다려 주세요.</msg_booting>
+  <msg7>암호가 만들어지지 않았습니다.</msg7>
+  <msg_system_restore>시스템 포맷 중입니다. 기다려 주십시오.</msg_system_restore><msg8>입력한 암호가 만료되었습니다. 도메인 관리자에게 문의하여 새 암호를 설정하십시오.</msg8><msg_scandisk_power_failure>시스템에서 전원이 끊어졌습니다. 파일 시스템 일관성 확인 수행. 잠시 기다려 주십시오.</msg_scandisk_power_failure><msg9>지원되지 않는 브라우저</msg9><msg10>&lt;p&gt;이 버전의 Internet Explorer는 지원되지 않습니다.&lt;/p&gt;
+&lt;p&gt;이 웹 인터페이스를 보려면 Microsoft Internet Explorer를 최신 버전으로 업데이트하거나 다른 호환 브라우저(Google Chrome 또는 Mozilla Firefox)를 사용하십시오.&lt;/p&gt;</msg10><msg11>관리자 사용자만 허용됩니다.</msg11><account_locked>귀하의 도메인 계정이 잠겼습니다. 도메인 관리자에게 연락하여 도움을 요청하십시오.</account_locked></_login>
+  <_home>
+    <storage len="23">스토리지 상태</storage>
+    <shutdown len="13">종료</shutdown>
+    <restart len="13">다시 시작</restart>
+    <welcome len="32">시작</welcome>
+    <capacity len="10">용량</capacity>
+    <available len="10">사용 가능</available>
+    <system_log len="24">최근 활동</system_log>
+    <temperature>온도</temperature>
+    <normal>정상</normal>
+    <elevated>상승</elevated>
+    <critical>임계</critical>
+    <healthy>정상</healthy>
+    <RPM>RPM</RPM>
+    <imminent_failure>오류 임박</imminent_failure>
+    <fault>결함</fault>
+    <diagnostics>진단</diagnostics>
+    <firmware len="22">펌웨어</firmware>
+    <free len="999">여유</free>
+    <desc1 len="999">용량 사용</desc1>
+    <desc2 len="999">현재 My Cloud Mirror 시스템 용량 사용량입니다.</desc2>
+    <desc3 len="999">WD My Cloud Mirror 시스템의 전체적인 상태를 나타내는 시스템 구성 요소의 스냅샷을 표시합니다.</desc3>
+    <desc4 len="999">온도 상태</desc4>
+    <desc5 len="999">드라이브 SMART 상태</desc5>
+    <desc6 len="999">팬 속도 상태</desc6>
+    <desc7 len="999">팬 속도</desc7>
+    <desc8 len="999">드라이브 상태</desc8>
+    <desc9 len="999">RAID 상태</desc9>
+    <desc10 len="999">주의</desc10>
+    <desc11 len="999">여유</desc11>
+    <desc12 len="999">동영상</desc12>
+    <desc13 len="999">음악</desc13>
+    <desc14 len="999">사진</desc14>
+    <desc15 len="999">기타</desc15>
+    <msg1 len="999">시스템이 종료됩니다. 계속 진행하시겠습니까?</msg1>
+    <msg2 len="999">발견된 USB 장치가 없습니다.</msg2>
+    <usb_details>USB 장치 세부 정보</usb_details>
+    <usb_device_name>USB 장치 이름</usb_device_name>
+    <usb_manufacturer>제조업체</usb_manufacturer>
+    <usb_model>모델</usb_model>
+    <usb_serial_number>일련 번호</usb_serial_number>
+    <usb_firmware_version>펌웨어 버전</usb_firmware_version>
+    <usb_Size>크기</usb_Size>
+    <usb_unlock_device>USB 장치 잠금 해제</usb_unlock_device>
+    <usb_password>암호</usb_password>
+    <usb_password_hint>암호 힌트</usb_password_hint>
+    <usb_save_password>암호 저장</usb_save_password>
+    <usb_eject_title>USB 장치를 꺼내시겠습니까?</usb_eject_title>
+    <usb_eject_msg>
+  &lt;b&gt;정말로 이 USB 장치를 꺼내시겠습니까?&lt;/b&gt;
+  &lt;ul&gt;
+   &lt;li&gt;USB 장치를 꺼내면 My Cloud Mirror와 연결된 모든 공유가 제거됩니다.&lt;/li&gt;
+   &lt;li&gt;현재 진행 중인 모든 백업 작업이 중단됩니다.&lt;/li&gt;
+   &lt;li&gt;원격으로 로그인한 경우 다시 연결하기 전에는 이 USB 장치에 액세스할 수 없습니다.&lt;/li&gt;
+  &lt;/ul&gt;
+  </usb_eject_msg>
+    <umount_usb_drive>USB 드라이브 꺼내기</umount_usb_drive>
+    <usb_size>{0} 여유 {1}</usb_size>
+    <usb_unlock_password_error>올바르지 않은 USB 암호입니다. 다시 시도하십시오.</usb_unlock_password_error>
+    <usb_unlock>잠금 해제</usb_unlock>
+
+    <ups_details>UPS 장치 세부 정보</ups_details>
+    <ups_barrery_charge_bar>배터리 충전: {0}{1}</ups_barrery_charge_bar>
+    <ups_barrery_charge>배터리 충전</ups_barrery_charge>
+    <ups_barrery_charge_OL>회선</ups_barrery_charge_OL>
+    <ups_barrery_charge_OB>배터리</ups_barrery_charge_OB>
+    <ups_barrery_charge_LB>배터리 부족</ups_barrery_charge_LB>
+    <ups_status>상태</ups_status>
+  <usb_unlock_exceeded>
+  암호 복구를 너무 여러 번 시도했습니다. &lt;br&gt;
+  다시 시도하려면: &lt;br&gt;
+  1. My Cloud Mirror 시스템에서 USB 드라이브를 안전하게 제거&lt;br&gt;
+  2. My Cloud Mirror 시스템으로 USB 드라이브 재연결&lt;br&gt;
+  </usb_unlock_exceeded><usb_unlock_exceeded_title>암호 입력 시도 횟수 초과</usb_unlock_exceeded_title><desc16>S.M.A.R.T. 온도</desc16><desc17>드라이브X 온도</desc17><usb_port_num>연결된 USB 포트 {0}</usb_port_num><usb_port_front>연결된 USB 포트 전면 패널</usb_port_front></_home>
+  <_user_login_home>
+    <quick_status>빠른 상태</quick_status>
+    <last_time_login>최근 로그인 시간:</last_time_login>
+    <total_ftp_downloads>총 FTP 다운로드 수</total_ftp_downloads>
+    <total_http_downloads>총 HTTP 다운로드 수</total_http_downloads>
+    <total_p2p_downloads>총 P2P 다운로드 수</total_p2p_downloads>
+    <download_wd_apps>WD 앱 다운로드</download_wd_apps>
+    <wd_my_cloud_desktop>My Cloud 데스크톱</wd_my_cloud_desktop>
+    <wd_2go_photos>My Cloud와 WD Photos</wd_2go_photos>
+  </_user_login_home>
+  <_lan>
+    <title len="61">LAN 설정</title>
+    <title2 len="61">IPv6 설정</title2>
+    <title3>네트워크 프로파일</title3>
+    <wizard_description len="999">
+   이 마법사는 WD My Cloud Mirror 시스템에서 네트워크 인터페이스를 구성하는 단계별 지침을 제공합니다.
+   &lt;b&gt;다음&lt;/b&gt;을 클릭하여 계속 진행하십시오.
+  </wizard_description>
+    <wizard_description2 len="999">
+	 		<![CDATA[
+	 		1. IP 설정<br><br> 2. 요약<br>
+		]]>
+		</wizard_description2>
+    <ip_description len="999">      <![CDATA[네트워크 설정에 따라 이러한 LAN 설정을 구성합니다.]]>
+    </ip_description>
+    <vlan_description len="999">VLAN 설정에 대한 스위치 버튼을 켜기/끄기로 클릭합니다.&lt;br&gt;
+  각 VLAN에는 ID가 필요합니다. VLAN과 연결된 번호를 입력합니다.
+  </vlan_description>
+    <dhcp_client len="30">DHCP 클라이언트</dhcp_client>
+    <static_ip len="30">고정 IP</static_ip>
+    <ip_address len="30">IP 주소</ip_address>
+    <subnet_mask len="30">서브넷 마스크</subnet_mask><gateway len="30">게이트웨이 IP 주소</gateway><dns len="30">DNS 서버</dns><dns1 len="30">DNS 서버1</dns1><dns2 len="30">DNS 서버2</dns2><dns3 len="30">DNS 서버3</dns3><mac len="30">Mac 주소</mac><lltd_title len="999">LLTD 설정</lltd_title><lltd len="25">LLTD</lltd><jumbo_frame>Jumbo 프레임</jumbo_frame><speed_title len="999">연결 속도 설정</speed_title><speed len="30">연결 속도</speed><speed2 len="30">속도</speed2><auto len="999">자동</auto><lan1 len="999">LAN 1</lan1><lan2 len="999">LAN 2</lan2><merge len="999">LAN 1 + LAN 2</merge><vlan_id_info len="999">1-4094</vlan_id_info><vlan len="999">VLAN</vlan><vlan_id len="999">VLAN ID</vlan_id><route_title len="999">경로 설정</route_title><tunnel_title len="999">터널 브로커 설정</tunnel_title><dns_auto1 len="999">자동으로 DNS 서버 주소를 가져옵니다.</dns_auto1><dns_auto2 len="999">다음 DNS 서버 주소를 사용합니다.</dns_auto2><ftp_access len="999">FTP 액세스</ftp_access><ftp_access_set len="999">FTP 설정</ftp_access_set><ftp_config len="999">구성</ftp_config><choose_dhcp>DHCP 모드 설정을 선택하십시오.</choose_dhcp><auto_fill>Google Public DNS 사용</auto_fill><google_dns>Google Public DNS를 사용할 때는 적용되는 Google 서비스 약관과 개인정보보호정책을 따라야 합니다.</google_dns>
+<smb2>SMB 2</smb2>
+<max_smb>최대 SMB 프로토콜</max_smb>
+<network_mode>네트워크 모드</network_mode>
+</_lan>
+  <_time>
+    <date_format>날짜 형식</date_format>
+    <time_format>시간 형식</time_format>
+    <title len="999">      <![CDATA[언어 및 시계]]>
+    </title>
+    <current_time len="40">      <![CDATA[날짜 및 시간]]>
+    </current_time>
+    <time_d_header>      <![CDATA[날짜 및 시간 설정]]>
+    </time_d_header>
+    <time_d_desc>현재 날짜와 시간을 입력합니다.</time_d_desc>
+    <date len="30">날짜</date>
+    <time len="30">시간</time>
+    <timezone len="40">시간대</timezone>
+    <GMT-12-00 len="999">      <![CDATA[(GMT-12:00) 날짜 변경선 서쪽]]>
+    </GMT-12-00>
+    <GMT-11-00 len="999">      <![CDATA[(GMT-11:00) UTC-11]]>
+    </GMT-11-00>
+    <GMT-11-00_1 len="999">      <![CDATA[(GMT-11:00) 사모아]]>
+    </GMT-11-00_1>
+    <GMT-10-00 len="999">      <![CDATA[(GMT-10:00) 하와이]]>
+    </GMT-10-00>
+    <GMT-09-00 len="999">      <![CDATA[(GMT-09:00) 알래스카]]>
+    </GMT-09-00>
+    <GMT-08-00 len="999">      <![CDATA[(GMT-08:00) 바하 캘리포니아]]>
+    </GMT-08-00>
+    <GMT-08-00_1 len="999">      <![CDATA[(GMT-08:00) 태평양 표준시(미국과 캐나다)]]>
+    </GMT-08-00_1>
+    <GMT-07-00 len="999">      <![CDATA[(GMT-07:00) 산지 표준시(미국과 캐나다)]]>
+    </GMT-07-00>
+    <GMT-07-00_1 len="999">      <![CDATA[(GMT-07:00) 애리조나]]>
+    </GMT-07-00_1>
+    <GMT-07-00_2 len="999">      <![CDATA[(GMT-07:00) 치와와, 라파스, 마사틀란]]>
+    </GMT-07-00_2>
+    <GMT-06-00 len="999">      <![CDATA[(GMT-06:00) 중앙 아메리카]]>
+    </GMT-06-00>
+    <GMT-06-00_1 len="999">      <![CDATA[(GMT-06:00) 중부 표준시(미국과 캐나다)]]>
+    </GMT-06-00_1>
+    <GMT-06-00_2 len="999">      <![CDATA[(GMT-06:00) 과달라하라, 멕시코시티, 몬테레이]]>
+    </GMT-06-00_2>
+    <GMT-06-00_3 len="999">      <![CDATA[(GMT-06:00) 서스캐처원]]>
+    </GMT-06-00_3>
+    <GMT-05-00 len="999">      <![CDATA[(GMT-05:00) 인디애나(동부)]]>
+    </GMT-05-00>
+    <GMT-05-00_1 len="999">      <![CDATA[(GMT-05:00) 동부 표준시(미국과 캐나다)]]>
+    </GMT-05-00_1>
+    <GMT-09-00_2 len="999">      <![CDATA[(GMT-05:00) 보고타, 리마, 키토]]>
+    </GMT-09-00_2>
+    <GMT-04-30 len="999">      <![CDATA[(GMT-04:30) 카라카스]]>
+    </GMT-04-30>
+    <GMT-04-00 len="999">      <![CDATA[(GMT-04:00) 대서양 표준시(캐나다)]]>
+    </GMT-04-00>
+    <GMT-04-00_1 len="999">      <![CDATA[(GMT-04:00) 조지타운, 라파스, 마노스, 산후안]]>
+    </GMT-04-00_1>
+    <GMT-04-00_2 len="999">      <![CDATA[(GMT-04:00) 아순시온]]>
+    </GMT-04-00_2>
+    <GMT-04-00_3 len="999">      <![CDATA[(GMT-04:00) 산티아고]]>
+    </GMT-04-00_3>
+    <GMT-04-00_4 len="999">      <![CDATA[(GMT-04:00) 쿠이아바]]>
+    </GMT-04-00_4>
+    <GMT-03-30 len="999">      <![CDATA[(GMT-03:30) 뉴펀들랜드]]>
+    </GMT-03-30>
+    <GMT-03-00 len="999">      <![CDATA[(GMT-03:00) 브라질리아]]>
+    </GMT-03-00>
+    <GMT-03-00_1 len="999">      <![CDATA[(GMT-03:00) 부에노스아이레스]]>
+    </GMT-03-00_1>
+    <GMT-03-00_2 len="999">      <![CDATA[(GMT-03:00) 그린란드]]>
+    </GMT-03-00_2>
+    <GMT-03-00_3 len="999">      <![CDATA[(GMT-03:00) 카옌, 포르탈레자]]>
+    </GMT-03-00_3>
+    <GMT-03-00_4 len="999">      <![CDATA[(GMT-03:00) 몬테비데오]]>
+    </GMT-03-00_4>
+    <GMT-02-00 len="999">      <![CDATA[(GMT-02:00) 대서양 중부]]>
+    </GMT-02-00>
+    <GMT-02-00_1 len="999">      <![CDATA[(GMT-02:00) UTC-2]]>
+    </GMT-02-00_1>
+    <GMT-01-00 len="999">      <![CDATA[(GMT-01:00) 아조레스]]>
+    </GMT-01-00>
+    <GMT-01-00_1 len="999">      <![CDATA[(GMT-01:00) 카보베르데 제도]]>
+    </GMT-01-00_1>
+    <GMT len="999">      <![CDATA[(GMT) 카사블랑카]]>
+    </GMT>
+    <GMT_1 len="999">      <![CDATA[(GMT) 그리니치 표준시]]>
+    </GMT_1>
+    <GMT_2 len="999">      <![CDATA[(GMT) 몬로비아, 레이캬비크]]>
+    </GMT_2>
+    <GMT_3 len="999">      <![CDATA[(GMT) 더블린, 에든버러, 리스본, 런던]]>
+    </GMT_3>
+    <GMT01-00 len="999">      <![CDATA[(GMT+01:00) 서중앙 아프리카]]>
+    </GMT01-00>
+    <GMT01-00_1 len="999">      <![CDATA[(GMT+01:00) 브뤼셀, 코펜하겐, 마드리드, 파리]]>
+    </GMT01-00_1>
+    <GMT01-00_2 len="999">      <![CDATA[(GMT+01:00) 베오그라드, 브라티슬라바, 부다페스트, 류블랴나, 프라하]]>
+    </GMT01-00_2>
+    <GMT01-00_3 len="999">      <![CDATA[(GMT+01:00) 암스테르담, 베를린, 베른, 로마, 스톡홀름, 빈]]>
+    </GMT01-00_3>
+    <GMT01-00_4 len="999">      <![CDATA[(GMT+01:00) 사라예보, 스코페, 바르샤바, 자그레브]]>
+    </GMT01-00_4>
+    <GMT01-00_5 len="999">      <![CDATA[(GMT+01:00) 빈트후크]]>
+    </GMT01-00_5>
+    <GMT02-00 len="999">      <![CDATA[(GMT+02:00) 암만]]>
+    </GMT02-00>
+    <GMT02-00_1 len="999">      <![CDATA[(GMT+02:00) 베이루트]]>
+    </GMT02-00_1>
+    <GMT02-00_2 len="999">      <![CDATA[(GMT+02:00) 민스크]]>
+    </GMT02-00_2>
+    <GMT02-00_3 len="999">      <![CDATA[(GMT+02:00) 하라레, 프리토리아]]>
+    </GMT02-00_3>
+    <GMT02-00_4 len="999">      <![CDATA[(GMT+02:00) 예루살렘]]>
+    </GMT02-00_4>
+    <GMT02-00_5 len="999">      <![CDATA[(GMT+02:00) 카이로]]>
+    </GMT02-00_5>
+    <GMT02-00_6 len="999">      <![CDATA[(GMT+02:00) 아테네, 부카레스트]]>
+    </GMT02-00_6>
+    <GMT02-00_7 len="999">      <![CDATA[(GMT+02:00) 빈트후크]]>
+    </GMT02-00_7>
+    <GMT02-00_8 len="999">      <![CDATA[(GMT+02:00) 헬싱키, 키예프, 리가, 소피아, 탈린, 빌뉴스]]>
+    </GMT02-00_8>
+    <GMT02-00_9 len="999">      <![CDATA[(GMT+02:00) 다마스쿠스]]>
+    </GMT02-00_9>
+    <GMT02-00_10 len="999">      <![CDATA[(GMT+02:00) 니코시아]]>
+    </GMT02-00_10>
+    <GMT02-00_11 len="999">      <![CDATA[(GMT+02:00) 이스탄불]]>
+    </GMT02-00_11>
+    <GMT03-00 len="999">      <![CDATA[(GMT+03:00) 바그다드]]>
+    </GMT03-00>
+    <GMT03-00_1 len="999">      <![CDATA[(GMT+03:00) 나이로비]]>
+    </GMT03-00_1>
+    <GMT03-00_2 len="999">      <![CDATA[(GMT+03:00) 쿠웨이트, 리야드]]>
+    </GMT03-00_2>
+    <GMT03-00_3 len="999">      <![CDATA[(GMT+03:00) 칼리닌그라드, 민스크]]>
+    </GMT03-00_3>
+    <GMT03-30 len="999">      <![CDATA[(GMT+03:30) 테헤란]]>
+    </GMT03-30>
+    <GMT04-00 len="999">      <![CDATA[(GMT+04:00) 바쿠]]>
+    </GMT04-00>
+    <GMT04-00_1 len="999">      <![CDATA[(GMT+04:00) 아부다비, 무스카트]]>
+    </GMT04-00_1>
+    <GMT04-00_2 len="999">      <![CDATA[(GMT+04:00) 트빌리시]]>
+    </GMT04-00_2>
+    <GMT04-00_3 len="999">      <![CDATA[(GMT+04:00) 예레반]]>
+    </GMT04-00_3>
+    <GMT04-00_4 len="999">      <![CDATA[(GMT+04:00) 포트루이스]]>
+    </GMT04-00_4>
+    <GMT03-00_4 len="999">      <![CDATA[(GMT+03:00) 모스크바, 상트페테르부르크, 볼고그라드]]>
+    </GMT03-00_4>
+    <GMT04-30 len="999">      <![CDATA[(GMT+04:30) 카불]]>
+    </GMT04-30>
+    <GMT05-00_1 len="999">      <![CDATA[(GMT+05:00) 이슬라마바드, 카라치]]>
+    </GMT05-00_1>
+    <GMT05-00_2 len="999">      <![CDATA[(GMT+05:00) 타슈켄트]]>
+    </GMT05-00_2>
+    <GMT05-30 len="999">      <![CDATA[(GMT+05:30) 첸나이, 콜카타, 뭄바이, 뉴델리]]>
+    </GMT05-30>
+    <GMT05-30_1 len="999">      <![CDATA[(GMT+05:30) 스리자야와르데네푸라]]>
+    </GMT05-30_1>
+    <GMT05-45 len="999">      <![CDATA[(GMT+05:45) 카트만두]]>
+    </GMT05-45>
+    <GMT06-00 len="999">      <![CDATA[(GMT+06:00) 아스타나]]>
+    </GMT06-00>
+    <GMT06-00_1 len="999">      <![CDATA[(GMT+06:00) 노보시비르스크]]>
+    </GMT06-00_1>
+    <GMT06-00_2 len="999">      <![CDATA[(GMT+06:00) 다카]]>
+    </GMT06-00_2>
+    <GMT06-00_3 len="999">      <![CDATA[(GMT+06:00) 예카테린부르크]]>
+    </GMT06-00_3>
+    <GMT06-30 len="999">      <![CDATA[(GMT+06:30) 양곤(랑군)]]>
+    </GMT06-30>
+    <GMT07-00 len="999">      <![CDATA[(GMT+07:00) 크라스노야르스크]]>
+    </GMT07-00>
+    <GMT07-00_1 len="999">      <![CDATA[(GMT+07:00) 방콕, 하노이, 자카르타]]>
+    </GMT07-00_1>
+    <GMT07-00_2 len="999">      <![CDATA[(GMT+07:00) 노보시비르스크]]>
+    </GMT07-00_2>
+    <GMT08-00 len="999">      <![CDATA[(GMT+08:00) 베이징, 충칭, 홍콩, 우루무치]]>
+    </GMT08-00>
+    <GMT08-00_1 len="999">      <![CDATA[(GMT+08:00) 타이베이]]>
+    </GMT08-00_1>
+    <GMT08-00_2 len="999">      <![CDATA[(GMT+08:00) 콸라룸푸르, 싱가포르]]>
+    </GMT08-00_2>
+    <GMT08-00_3 len="999">      <![CDATA[(GMT+08:00) 퍼스]]>
+    </GMT08-00_3>
+    <GMT08-00_4 len="999">      <![CDATA[(GMT+08:00) 울란바토르]]>
+    </GMT08-00_4>
+    <GMT08-00_5 len="999">      <![CDATA[(GMT+08:00) 크라스노야르스크]]>
+    </GMT08-00_5>
+    <GMT09-00 len="999">      <![CDATA[(GMT+09:00) 오사카, 삿포로, 도쿄]]>
+    </GMT09-00>
+    <GMT09-00_1 len="999">      <![CDATA[(GMT+09:00) 이르쿠츠크]]>
+    </GMT09-00_1>
+    <GMT09-00_2 len="999">      <![CDATA[(GMT+09:00) 서울]]>
+    </GMT09-00_2>
+    <GMT09-30 len="999">      <![CDATA[(GMT+09:30) 애들레이드]]>
+    </GMT09-30>
+    <GMT09-30_1 len="999">      <![CDATA[(GMT+09:30) 다윈]]>
+    </GMT09-30_1>
+    <GMT10-00 len="999">      <![CDATA[(GMT+10:00) 브리즈번]]>
+    </GMT10-00>
+    <GMT10-00_1 len="999">      <![CDATA[(GMT+10:00) 캔버라, 멜버른, 시드니]]>
+    </GMT10-00_1>
+    <GMT10-00_2 len="999">      <![CDATA[(GMT+10:00) 야쿠츠크]]>
+    </GMT10-00_2>
+    <GMT10-00_3 len="999">      <![CDATA[(GMT+10:00) 호바트]]>
+    </GMT10-00_3>
+    <GMT10-00_4 len="999">      <![CDATA[(GMT+10:00) 괌, 포트모르즈비]]>
+    </GMT10-00_4>
+    <GMT11-00 len="999">      <![CDATA[(GMT+11:00) 블라디보스토크]]>
+    </GMT11-00>
+    <GMT11-00_1 len="999">      <![CDATA[(GMT+11:00) 솔로몬 제도, 뉴칼레도니아]]>
+    </GMT11-00_1>
+    <GMT12-00 len="999">      <![CDATA[(GMT+12:00) 마가단]]>
+    </GMT12-00>
+    <GMT12-00_1 len="999">      <![CDATA[(GMT+12:00) 페트로파블로프스크-캄차스키]]>
+    </GMT12-00_1>
+    <GMT12-00_2 len="999">      <![CDATA[(GMT+12:00) UTC+12]]>
+    </GMT12-00_2>
+    <GMT12-00_3 len="999">      <![CDATA[(GMT+12:00) 피지]]>
+    </GMT12-00_3>
+    <GMT12-00_4 len="999">      <![CDATA[(GMT+12:00) 오클랜드, 웰링턴]]>
+    </GMT12-00_4>
+    <GMT13-00 len="999">      <![CDATA[(GMT+13:00) 누쿠알로파]]>
+    </GMT13-00>
+    <GMT13-00_1 len="999">      <![CDATA[(GMT+13:00) 사모아]]>
+    </GMT13-00_1>
+    <ntp_service>NTP 서비스</ntp_service>
+    <ntp_title len="999">NTP 설정</ntp_title>
+    <ntp_desc>
+		<![CDATA[
+		NTP 서비스는 네트워크와 동기화하여 WD My Cloud Mirror 장치의 날짜와 시간을 자동으로 업데이트합니다. <br> <br> 현재 NTP 서버 <br> <br>
+			]]>
+			</ntp_desc>
+    <ntp_user>사용자 정의 NTP 서버</ntp_user>
+    <ntp_server len="999">주 서버</ntp_server>
+    <add_ntp>사용자 NTP 추가</add_ntp>
+    <ntp_status>NTP 상태</ntp_status>
+    <msg1 len="999">이 NTP 서버에 연결할 수 없습니다.</msg1>
+    <msg2 len="999">올바른 날짜 형식이 아닙니다.</msg2>
+    <msg3 len="999">시간 서버 IP 주소를 입력하십시오.</msg3>
+    <msg4 len="999">중요: 시간 설정을 입력하기 전에 올바른 시간대를 선택해야 합니다.</msg4>
+  </_time>
+  <_device>
+    <title len="999">장치 프로파일</title>
+    <title2 len="999">네트워크 작업 그룹</title2>
+    <title3 len="999">Windows 서비스</title3>
+    <workgroup len="999">작업 그룹</workgroup>
+    <name len="999">장치 이름</name>
+    <device_description len="999">설명</device_description>
+    <lmb len="999">로컬 마스터 브라우저</lmb>
+    <sdesc len="999">공유 설명</sdesc>
+    <serial_number>일련 번호</serial_number>
+    <msg1 len="999">작업 그룹에는 공백을 사용할 수 없습니다.</msg1>
+    <msg2 len="999">작업 그룹을 입력하십시오.</msg2>
+    <msg3 len="999">작업 그룹은 16자를 초과할 수 없습니다.</msg3>
+    <msg4 len="999">장치 이름을 입력하십시오.</msg4>
+    <msg5 len="999">장치 이름은 15자를 초과할 수 없습니다.</msg5>
+    <msg6 len="999">장치 설명을 입력하십시오.</msg6>
+    <msg7 len="999">장치 설명은 32자를 초과할 수 없습니다.</msg7>
+    <msg8 len="999">      <![CDATA[작업 그룹에는 다음 문자를 사용할 수 없습니다. *+=|[]/\:";<>?,]]>    </msg8>
+    <msg9 len="999">유효하지 않은 서버 이름입니다.</msg9>
+    <msg10 len="999">유효하지 않은 장치 이름입니다. 장치 이름은 2~15자에 문자, 숫자, 대시를 포함해야 합니다. 숫자 또는 하이픈으로 시작할 수 없습니다.</msg10>
+    <msg11 len="999">장치 이름에는 공백을 사용할 수 없습니다.</msg11>
+    <msg12 len="999">      <![CDATA[장치 설명은 영숫자 값으로 시작해야 하며, 42자를 초과하지 않는 한도로 공백이나 밑줄을 사용할 수 있습니다.]]>    </msg12>
+    <msg13 len="999">처음과 마지막 문자는 비워둘 수 없습니다.</msg13>
+    <msg14 len="999">장치 이름은 숫자 또는 하이픈으로 시작할 수 없습니다.</msg14>
+  <msg15>장치 이름을 변경하면 드라이브 맵, 별칭, 백업 및 Time Machine 백업과 같은 일부 기존 연결의 재설정이 필요할 수 있습니다. 변경을 계속하려면 확인 후 연결을 다시 설정하십시오.</msg15></_device>
+  <_module>
+    <title len="999">앱 프로파일</title>
+    <title2 len="999">서비스 약관</title2>
+    <file_path len="999">파일 경로</file_path>
+    <no len="999">번호</no>
+    <module_name len="999">모듈 이름</module_name>
+    <version len="999">버전</version>
+    <status len="999">상태</status>
+    <on_off len="999">시작/중지</on_off>
+    <del len="999">삭제</del>
+    <date len="999">설치 날짜</date>
+    <path len="999">설치 경로</path>
+    <logitech len="999">Logitech 웹 사이트</logitech>
+    <desc1>수동 설치</desc1>
+    <desc2>세부 정보</desc2>
+    <desc3>설치된 앱</desc3>
+    <desc4>해당 없음</desc4>
+    <desc5>앱 설치</desc5>
+    <desc6>앱 찾아보기</desc6>
+    <desc7>구성 URL</desc7>
+    <desc8>비활성화됨</desc8>
+    <desc9>활성화됨</desc9>
+    <desc10>타 공급업체에서 앱을 찾아서, 다운로드하여 설치할 앱을 선택합니다. 모든 앱이 WD 인증을 받았습니다.</desc10>
+    <desc11>사용 가능한 앱</desc11>
+    <desc12>설치</desc12>
+    <desc13>초기화 중</desc13>
+    <desc14>업데이트 사용 가능</desc14>
+    <desc15>다운로드 중</desc15>
+    <desc16>설치 중</desc16>
+    <desc17>모든 앱 관리</desc17>
+    <desc18>앱은 My Cloud 시스템에 추가 기능을 부여합니다. 설치하기 전에 앱의 세부 정보를 검토하십시오.</desc18>
+    <desc19><![CDATA[수동으로 앱을 설치하려면 <a href="" onclick="return false;">여기</a>를 클릭하십시오.]]></desc19>
+    <desc20>설치 날짜</desc20>
+    <desc21>앱 이름</desc21>
+    <desc22>앱 세부 정보</desc22>
+    <desc23>xxx 앱에 사용할 수 있는 업데이트가 있습니다. 자세한 내용은 아래를 참조하십시오.</desc23>
+    <desc24>새로운 기능</desc24>
+    <desc25>업데이트</desc25>
+    <desc26>앱 관리</desc26>
+    <desc27>앱 추가</desc27>
+    <desc28>업데이트 사용 가능</desc28>
+    <desc29>앱 제거</desc29>
+    <desc30>다음 앱에 사용할 수 있는 업데이트가 있습니다.</desc30>
+    <desc31>사용 가능한 앱이 없습니다.</desc31>
+    <desc32>참고: 각 앱에 대한 지원은 해당 판매자를 통해서 받을 수 있습니다.</desc32>
+    <desc33><![CDATA[수동으로 앱을 설치하려면 를 클릭하십시오 <div class="file_input_div" style="width:40px;float:right;border:0px solid red;text-align:left;border-bottom:1px solid #A0A0A0"> 여기.<input type="file" name="f_apps_file" class="file_input_hidden" id="f_apps_file" onchange="apps_manually_install();"></div>]]></desc33>
+		<desc34>계속 진행하기 전에 이 사용 약관을 검토한 후 동의해 주십시오.</desc34>
+    <msg1 len="50">패키지를 선택합니다.</msg1>
+    <msg2 len="96">모듈 설치...</msg2>
+    <msg3 len="50">앱을 제거하시겠습니까?</msg3>
+    <msg4 len="96">앱이 성공적으로 설치되었습니다.</msg4>
+    <msg5 len="96">앱을 설치할 수 없습니다. My Cloud 시스템의 저장 용량을 사용할 수 없습니다.</msg5>
+    <msg6 len="96">앱을 설치하지 못했습니다.</msg6>
+    <msg7 len="50">{0} 앱이 이미 My Cloud 시스템에 설치되어 있습니다. 앱을 다시 설치하시겠습니까?</msg7>
+    <msg8 len="96">앱을 설치할 수 없습니다. My Cloud 시스템에 저장 공간이 충분하지 않습니다. 저장 공간을 확보한 후 다시 시도하십시오.</msg8>
+    <msg9 len="96">앱을 활성화하지 못했습니다.</msg9>
+    <msg10 len="96">앱이 성공적으로 활성화되었습니다.</msg10>
+    <msg11 len="96">모듈이 성공적으로 삭제되었습니다.</msg11>
+    <msg12 len="999">최대 모듈 수에 도달했습니다.</msg12>
+    <msg13 len="96"><![CDATA[xxx에서 Squeeze Center 패키지를 다운로드한 후 Volume_1 폴더에 패키지를 저장합니다.]]></msg13>
+    <msg14 len="342">이 추가 기능은 WD에서 만든 것이 아닙니다. WD는 타사 추가 기능에 대한 지원을 제공하지 않으며, 타사 추가 기능을 사용한 것이 문제의 직접적인 원인인 경우 제품 지원도 제공하지 않을 수 있습니다. 이 추가 기능을 설치하는 것으로, 사용자는 자신의 위험 부담과 재량으로 이 추가 기능을 사용하는 것에 명시적으로 동의하는 것이 됩니다.</msg14>
+    <msg15 len="342">이 추가 기능은 Western Digitial Corporation에서 만든 것이 아닙니다. 이 추가 기능을 교체하시겠습니까?</msg15>
+    <msg16 len="999">디스크 공간이 부족합니다. 먼저 일부 항목을 삭제한 후 다시 시도하십시오.</msg16>
+  	<msg17 len="999">이 앱을 설치하려면 새 펌웨어가 필요합니다. My Cloud 시스템 펌웨어를 업그레이드하고 다시 시도하십시오.</msg17>
+  	<button1>거부</button1>
+    <button2>수락</button2>
+  <msg24>{0} 앱이 My Cloud 시스템에 성공적으로 설치되었습니다.</msg24><msg25>{0} 및 {1} 앱이 My Cloud 시스템에 성공적으로 설치되었습니다.</msg25><msg26>모든 앱 데이터 및 설정이 삭제됩니다.&lt;br&gt;&lt;/br&gt;{0}? 제거를 계속하시겠습니까?</msg26><title3>{0}(을)를 제거합니다</title3><tip1>앱 제거</tip1><tip2>앱 설치</tip2><msg19>이 앱은 실행될 다른 앱에 의존하므로 실행할 수 없습니다.</msg19><msg20>다른 앱이 이 앱에 의존하므로 해당 앱을 제거할 수 없습니다.</msg20><msg21>다른 앱이 이 앱에 의존하므로 해당 앱을 중지할 수 없습니다.</msg21></_module>
+  <_user>
+  	<groups>그룹</groups>
+    <setup_user len="999">사용자 설정</setup_user>
+    <setup_group len="999">그룹 설정</setup_group>
+    <about_user len="999">사용자 정보</about_user>
+    <about_group len="999">그룹 정보</about_group>
+    <user_title len="999">사용자 추가</user_title>
+    <del_user_title len="999">사용자 삭제</del_user_title>
+    <del_group_title len="999">그룹 삭제</del_group_title>
+    <modify_group_title len="999">그룹 수정</modify_group_title>
+    <modify_pw_title len="999">암호 편집</modify_pw_title>
+    <modify_quota_title len="999">할당량 수정</modify_quota_title>
+    <del_user_desc len="999">이 사용자를 삭제하시겠습니까?</del_user_desc>
+    <del_group_desc len="999">이 그룹을 삭제하시겠습니까?</del_group_desc>
+    <user_desc len="999">클라우드에 액세스할 수 있는 사용자와 액세스 권한을 제어합니다.</user_desc>
+    <group_desc len="999">그룹은 여러 사용자의 동시 관리를 더 쉽게 하기 위한 사용자들의 모임입니다.</group_desc>
+    <modify_group_desc>아래 목록을 사용하여 사용자를 이 그룹에 추가하거나 이 그룹에서 제거합니다.</modify_group_desc>
+    <user_profile len="999">사용자 프로파일</user_profile>
+    <group_profile len="999">그룹 프로파일</group_profile>
+    <user_description4 len="999">      <![CDATA[사용자가 다음 응용프로그램에 액세스할 수 있도록 합니다.]]>    </user_description4>
+    <user_description7 len="999">      <![CDATA[어떤 사용자도 설정하지 못하게 하시려면 필드를 공란으로 남겨두세요.]]>
+    </user_description7>
+    <create_user>새 사용자 계정 만들기</create_user>
+    <share_access len="999">공유 액세스</share_access>
+    <all len="999">모두</all>
+    <select_group len="999">그룹에 추가할 사용자를 선택합니다.</select_group>
+    <add_group len="999">그룹 추가</add_group>
+    <select_share_folder len="999">네트워크 공유 설정</select_share_folder>
+    <group_title len="999">그룹 설정</group_title>
+    <import_description2 len="999">      <![CDATA[사용할 필드 선택(회색 선택 항목은 기본적으로 선택되어 있음)]]>
+    </import_description2>
+    <create_group len="999">새 그룹 만들기</create_group>
+    <select_user len="999">그룹에 사용자 연결</select_user>
+    <group_name len="999">그룹 이름</group_name>
+    <user_name len="999">사용자 이름</user_name>
+    <full_name len="999">전체 이름</full_name>
+    <pw_hint len="999">암호 힌트</pw_hint>
+    <pw len="999">암호</pw>
+    <confirm_password len="999">암호 확인</confirm_password>
+    <mail_addr len="999">이메일</mail_addr>
+    <req len="999">사용자 이름 필요</req>
+    <quota_settings len="999">할당량 설정</quota_settings>
+    <chg_pw len="999">암호 변경</chg_pw>
+    <join_group len="999">그룹에 연결</join_group>
+    <chg_member len="999">구성원 변경</chg_member>
+    <group_member len="999">그룹 멤버십</group_member>
+    <member len="999">구성원</member>
+    <group len="999">그룹</group>
+    <user len="999">사용자</user>
+    <quota_amount1 len="999">Volume_1 할당량</quota_amount1>
+    <quota_amount2 len="999">Volume_2 할당량</quota_amount2>
+    <quota_amount3 len="999">Volume_3 할당량</quota_amount3>
+    <quota_amount4 len="999">Volume_4 할당량</quota_amount4>
+    <no_hdd len="999">볼륨이 없습니다.</no_hdd>
+    <none_group len="999">그룹이 정의되지 않았습니다.</none_group>
+    <none_user len="999">사용자가 정의되지 않았습니다.</none_user>
+    <cifs len="999">CIFS</cifs>
+    <ftp len="999">FTP 액세스</ftp>
+    <nfs len="999">NFS 액세스</nfs>
+    <webdav len="999">WebDAV 액세스</webdav>
+    <media len="999">미디어 서비스 제공</media>
+    <u_prefix len="999">사용자 이름 접두어</u_prefix>
+    <start_num len="999">계정 접두어</start_num>
+    <create_num len="999">사용자 수</create_num>
+    <overwrite len="999">중복 계정 덮어쓰기</overwrite>
+    <overwrite2 len="999">기존 사용자 덮어쓰기</overwrite2>
+    <duplicate len="999">중복 사용자 이름</duplicate>
+    <illegal len="999">잘못된 사용자 이름</illegal>
+    <create len="999">단일 사용자 만들기</create>
+    <create2 len="999">새 사용자</create2>
+    <reference len="999">매개변수는 이 예 파일을 참조하십시오.</reference>
+    <sel_list len="999">사용자 목록 가져오기</sel_list>
+    <max len="999">최대</max>
+    <multiple len="999">여러 사용자 추가</multiple>
+    <user_finish len="999">      <![CDATA[이것으로 마법사가 완료됩니다. 설정을 검토하려면 <b>뒤로</b>를 클릭합니다. 설정을 저장하려면 <b>적용</b>을 클릭합니다. ]]>
+    </user_finish>
+    <pw_required>암호 필요</pw_required>
+    <help_hint len="999">사용자 암호는 5자 이상이어야 합니다. 사용자 이름은 그룹 이름과 같을 수 없습니다.</help_hint>
+    <old_pw len="999">이전 암호</old_pw>
+    
+    
+      <g_multiple len="999">여러 그룹 추가</g_multiple>
+    
+    
+      <import_group len="999">그룹 가져오기</import_group>
+    
+    
+      <sel_glist len="999">그룹 목록 가져오기</sel_glist>
+    
+    
+      <overwrite_group len="999">중복 그룹 덮어쓰기</overwrite_group>
+    
+    
+      <user_description5 len="999">그룹이 다음 응용프로그램에 액세스할 수 있도록 합니다.</user_description5>
+    
+    
+      <account_expires len="999">계정 만료</account_expires>
+    
+    
+      <end_of len="999">다음의 종료 시점</end_of>
+    
+<wait_uesrs len="999">사용자를 기다리는 중</wait_uesrs>
+	<wait_groups len="999">그룹을 기다리는 중</wait_groups>
+	<wait_shares len="999">공유를 기다리는 중s</wait_shares>   
+    <msg1 len="999">최대 사용자 수에 도달했습니다.</msg1>
+    <msg2 len="999">한 항목을 선택하십시오.</msg2>
+    <msg3 len="999">사용자 계정이 성공적으로 추가되었습니다.</msg3>
+    <msg4 len="999">사용자 계정이 성공적으로 변경되었습니다.</msg4>
+    <msg5 len="999">사용자 이름은 1 ~ 16자의 영숫자 값이어야 하며, 공백은 사용할 수 없습니다.</msg5>
+    <msg6 len="999">이 계정은 허용되지 않습니다. 다시 시도하십시오.</msg6>
+    <msg7 len="999">사용자 이름 %s은(는) 예약되어 있습니다. 이것은 대소문자가 구분되는 1 ~ 16자의 영숫자 값이며, 공백은 사용할 수 없습니다.</msg7>
+    <msg8 len="999">사용자 이름에는 공백을 사용할 수 없습니다.</msg8>
+    <msg9 len="999">사용자 이름의 길이는 16자를 초과할 수 없습니다. 다시 시도하십시오.</msg9>
+    <msg10 len="999">      <![CDATA[사용자 이름 형식이 올바르지 않습니다. 사용자 이름에는 다음 문자를 사용할 수 없습니다. * ? " < > | . ; + = ~ ' [ ] { } @ # ( ) ! ^ $ % & , ` / \]]>    </msg10>
+    <msg11 len="999">사용자 이름은 그룹 이름과 같을 수 없습니다.</msg11>
+    <msg12 len="999">입력한 사용자 이름이 이미 존재합니다. 다른 사용자 이름을 선택하십시오.</msg12>
+    <msg13 len="999">최대 그룹 수에 도달했습니다.</msg13>
+    <msg14 len="999">그룹이 성공적으로 추가되었습니다.</msg14>
+    <msg15 len="999">그룹이 성공적으로 삭제되었습니다.</msg15>
+    <msg16 len="999">이 그룹 이름은 허용되지 않습니다. 다시 시도하십시오.</msg16>
+    <msg17 len="999">입력한 그룹 이름이 이미 존재합니다. 다른 그룹 이름을 선택하십시오.</msg17>
+    <msg18 len="999">그룹 이름을 입력합니다.</msg18>
+    <msg19 len="999">그룹 이름은 1~16자의 영숫자 값이어야 하며, 공백은 사용할 수 없습니다.</msg19>
+    <msg20 len="999">그룹 이름의 길이는 16자를 초과할 수 없습니다. 다시 시도하십시오.</msg20>
+    <msg21 len="999">      <![CDATA[그룹 이름 형식이 올바르지 않습니다. 그룹 이름에는 다음 문자를 사용할 수 없습니다. * ? " < > | . ; + = ~ ' [ ] { } @ # ( ) ! ^ $ % & , ` / \]]>    </msg21>
+    <msg22 len="999">그룹 이름은 사용자 이름과 같을 수 없습니다.</msg22>
+    <msg23 len="999">그룹 이름이 성공적으로 변경되었습니다.</msg23>
+    <msg24 len="999">사용자가 성공적으로 삭제되었습니다.</msg24>
+    <msg25 len="999">사용자 이름은 a-z, A-Z, 0-9로 시작해야 합니다.</msg25>
+    <msg26 len="999">그룹 이름은 a-z, A-Z, 0-9로 시작해야 합니다.</msg26>
+    <msg27 len="999">사용자가 성공적으로 변경되었습니다.</msg27>
+    <msg28 len="999">변경할 항목이 없습니다.</msg28>
+    <msg29 len="999">사용자가 성공적으로 추가되었습니다.</msg29>
+    <msg30 len="999">사용자 이름 접두어에는 공백을 사용할 수 없습니다.</msg30>
+    <msg31 len="999">계정 접두어를 입력합니다.</msg31>
+    <msg32 len="999">사용자 수를 입력합니다.</msg32>
+    <msg33 len="999">사용자 수는 다음을 초과할 수 없습니다.</msg33>
+    <msg34 len="999">한 번에 한 항목만 수정할 수 있습니다.</msg34>
+    <msg35 len="999">이 사용자를 삭제하시겠습니까?</msg35>
+    <msg36 len="999">사용자 가져오기 오류입니다.</msg36>
+    <msg37 len="999">가져오기 파일 형식이 올바르지 않습니다. 다시 시도하십시오.</msg37>
+    <msg38 len="999">이름과 결합될 경우 성은 대소문자가 구분되는 최대 16자의 영숫자 값입니다. 성과 이름을 결합할 경우 공백과 밑줄을 사용할 수 있습니다.</msg38>
+    <msg39 len="999">이름은 1 ~ 16자의 영숫자 값이어야 하며, 공백은 사용할 수 없습니다.</msg39>
+    <msg40 len="999">요청한 웹 액세스 계정을 만들 수 없습니다. 네트워크 연결 문제가 없는지 확인한 후 다시 시도하십시오.</msg40>
+    <msg41 len="999">참고: 사용자가 정상적으로 추가되었습니다.</msg41>
+    <msg42 len="999">중복 사용자 계정이 있습니다. 중복 사용자가 없는지 확인한 후 다시 시도하십시오.</msg42>
+  <msg43 len="999">이메일은 48자를 초과할 수 없습니다.</msg43>
+  <msg44 len="999">그룹 가져오기 오류입니다.</msg44>
+    
+  <user_description6>어떤 그룹도 설정하지 못하게 하시려면 필드를 공란으로 남겨두세요.</user_description6><msg45>아직 My Cloud 시스템이 이전 가져오기에서 여러 사용자를 추가하는 중입니다. 사용자를 편집하려면 나중에 다시 시도하십시오.</msg45><msg46>아직 My Cloud 시스템이 이전 가져오기에서 여러 그룹을 추가하는 중입니다. 그룹을 편집하려면 나중에 다시 시도하십시오.</msg46><msg47>사용자 이름은 1~16자 길이 영숫자 값이어야 하고 첫 글자는 문자이어야 합니다.</msg47><msg48>성은 1 ~ 16자의 영숫자 값이어야 합니다.</msg48><msg49>잘못된 이메일 주소</msg49><user_description3>아래 필드를 사용하여 이 사용자의 암호를 편집할 수 있습니다.&lt;br&gt;참고: 이 암호를 변경하는 것은 &lt;a id="cloud_url" href="http://www.mycloud.com" target="_blank"&gt;MyCloud.com&lt;/a&gt; 계정에 영향을 주지 않습니다.</user_description3></_user>
+  <_network_access>
+    <title len="999">공유 설정</title>
+    <about>공유 정보</about>
+    <desc len="999">공유란 (폴더처럼) 파일을 저장하는 영역입니다. 단일 저장 장치에 여러 개의 공유를 만들고, 각 공유에 대한 액세스를 제어할 수 있습니다.</desc>
+    <share_profile>공유 프로파일</share_profile>
+    <user_access len="999">사용자 액세스</user_access>
+    <add_title len="999">공유 추가</add_title>
+    <del_title len="999">공유 삭제</del_title>
+    <del_desc len="999">
+			<![CDATA[
+			이 공유를 삭제하면 공유 내의 모든 내용과 구성 설정이 삭제됩니다. <br><br> 이 공유를 삭제하시겠습니까?
+		]]>
+		</del_desc>
+    <share_name len="999">공유 이름</share_name>
+    <read_only len="999">읽기 전용</read_only>
+    <read_write len="999">읽기/쓰기</read_write>
+    <decline len="999">액세스 거부</decline>
+    <no_access len="999">액세스 권한 없음</no_access>
+    <comment len="999">설명</comment>
+    <oplocks len="999">Oplocks</oplocks>
+    <map len="999">맵 보관</map>
+    <recycle_bin len="999">휴지통 활성화</recycle_bin>
+    <recycle_tree len="999">휴지통 트리</recycle_tree>
+    <share_settings len="999">공유 설정</share_settings>
+    <path len="999">경로</path>
+    <user len="999">장치 사용자 이름</user>
+    <group len="999">그룹</group>
+    <create_folder_name len="999">새 폴더 만들기</create_folder_name>
+    <input_folder_name len="999">새 폴더 이름 입력</input_folder_name>
+    <assign_access_rights len="999">액세스 권한 할당</assign_access_rights>
+    <ftp_settings len="999">FTP 설정</ftp_settings>
+    <anonymous_none len="999">익명 없음</anonymous_none>
+    <anonymous_read_only len="999">익명 읽기 전용</anonymous_read_only>
+    <anonymous_write len="999">익명 읽기/쓰기</anonymous_write>
+    <confirm_settings len="999">설정 확인</confirm_settings>
+    <application_list len="999">응용프로그램 목록</application_list>
+    <anonymous len="999">FTP 익명</anonymous>
+    <none len="999">없음</none>
+    <read len="999">읽기 전용</read>
+    <write len="999">읽기/쓰기</write>
+    <info len="999">네트워크 공유 정보</info>
+    <nfs_setting len="999">NFS 설정</nfs_setting>
+    <public len="999">공용</public>
+    <recycle_title len="999">휴지통</recycle_title>
+    <msg1 len="999">공유 이름이 중복이거나 길이가 80자를 초과합니다. 수정하십시오.</msg1>
+    <msg2 len="999">수정할 항목을 선택합니다.</msg2>
+    <msg3 len="167">      <![CDATA[폴더 이름에는 다음 문자를 사용할 수 없습니다. \ / : * ? " < > | ]]>    </msg3>
+    <msg4 len="167">유효한 폴더 이름이 아닙니다.</msg4>
+    <msg5 len="999">폴더 이름 길이는 1-226자 범위여야 합니다.</msg5>
+    <msg6 len="999">이 폴더 상위는 이미 선택되었습니다.</msg6>
+    <msg7 len="999">폴더 이름은 비워둘 수 없습니다.</msg7>
+    <msg8 len="999">새 폴더 이름을 바꿀 수 없습니다. 지정한 이름을 가진 파일이 이미 존재합니다. 다른 파일 이름을 지정하십시오.</msg8>
+    <msg9 len="999">공유 이름은 비워둘 수 없습니다.</msg9>
+    <msg10 len="999">사용자 또는 그룹을 선택하십시오.</msg10>
+    <msg11 len="999">이 폴더는 이미 공유로 설정되어 있습니다.</msg11>
+    <msg12 len="999">유효한 호스트가 아닙니다.</msg12>
+    <msg13 len="999">최대 네트워크 공유 수에 도달했습니다.</msg13>
+    <msg14 len="999">읽기 전용 또는 읽기/쓰기를 선택합니다.</msg14>
+    <msg15 len="999">공유 실패 항목</msg15>
+    <msg16 len="999">읽기 전용을 선택합니다.</msg16>
+    <msg17 len="999">사용자 또는 그룹 선택</msg17>
+    <msg18 len="999">      <![CDATA[참고: 기본 액세스 권한으로 네트워크 액세스 목록을 재설정하려는 중입니다. 모든 계정의 액세스 권한 기본값이 '공개'로 설정됩니다(암호가 필요 없음).]]>
+    </msg18>
+    <msg19 len="999">      <![CDATA[공유 이름에는 다음 문자를 사용할 수 없습니다. % < > * ? | / \ + = ; : " @ # ! ~ [ ]]]>    </msg19>
+    <msg20 len="999">      <![CDATA[공유 이름의 마지막 문자는 '$' 또는 '.' 기호일 수 없습니다.]]>
+    </msg20>
+    <msg21 len="999">      <![CDATA[공유 이름의 처음 문자는 '.', '&', '#' 기호일 수 없습니다.]]>    </msg21>
+    <msg22 len="999">      <![CDATA[설명은 128자를 초과할 수 없습니다.]]>
+    </msg22>
+    <msg23 len="999">      <![CDATA[공유 이름에는 다음 문자를 사용할 수 없습니다. \ / : * ? " < > | ]]>    </msg23>
+    <msg24 len="999">      <![CDATA[공유 이름 %s은(는) 예약되어 있습니다. 공유 이름은 대소문자가 구분되는 1 ~ 80자의 영숫자 값이며, 공백은 사용할 수 없습니다.]]>
+    </msg24>
+    <msg25 len="999">      <![CDATA[공유 이름은 대소문자가 구분되는 1 ~ 80자의 영숫자 값이며, 공백은 사용할 수 없습니다.]]>
+    </msg25>
+  <usage>사용량</usage></_network_access>
+  <_iso_mount>
+    <iso_title len="999">ISO 탑재 정보</iso_title>
+    <edit_title len="999">ISO 공유 편집</edit_title>
+    <info len="999">정보</info>
+    <desc>네트워크 공유에 있는 ISO 파일을 탑재하면 네트워크 공유 액세스 권한을 가진 사용자에게 ISO 파일의 폴더 내용과 파일에 대한 파일 수준 액세스가 제공됩니다.</desc>
+    <create_iso_share>ISO 공유 만들기</create_iso_share>
+    <add_iso_share>ISO 공유 만들기</add_iso_share>
+    <msg1 len="999">
+      <![CDATA[
+		아직 사용 중이기 때문에 공유된 항목을 삭제할 수 없습니다. 항목을 삭제하려면 공유된 항목에 대한 액세스를 중지하십시오.
+		]]>
+		</msg1>
+    <msg2>이 ISO 탑재를 삭제하시겠습니까?</msg2>
+    <msg3>ISO 공유가 이미 존재합니다.</msg3>
+    <del_title>ISO 공유 삭제</del_title>
+    <no_list>WD My Cloud Mirror 시스템에 추가된 ISO 공유가 없습니다.</no_list>
+    <isoshare_list>ISO 공유 목록</isoshare_list>
+  </_iso_mount>
+  <_network_services>
+    <adv_features>고급 기능s</adv_features>
+    <afp_title len="999">AFP 서비스 설정</afp_title>
+    <afp_service len="999">AFP 서비스</afp_service>
+    <afp_service_b len="999">AFP 서비스</afp_service_b>
+    <afp_description len="999">사용자들이 여기서 AFP 서비스 옵션을 활성화할 수 있습니다. Time Machine 옵션을 사용하는 경우 이 옵션이 자동으로 활성화됩니다.</afp_description>
+    <nfs_title len="999">NFS 서비스 설정</nfs_title>
+    <nfs_service len="999">NFS 서비스</nfs_service>
+    <nfs_service_b len="999">NFS 서비스</nfs_service_b>
+    <nfs_description len="999">사용자들이 여기서 NFS 서비스 옵션을 활성화할 수 있습니다.</nfs_description>
+    <ftp_service len="999">FTP 서비스</ftp_service>
+    <ftp_service_b len="999">FTP 서비스</ftp_service_b>
+    <afp_note len="999">(주의: AFP 서비스에 공유를 추가하면 Oplocks가 비활성화됩니다.)</afp_note>
+    <nfs_note len="999">(주의: NFS 서비스에 공유를 적용하면 Oplocks가 비활성화됩니다. )</nfs_note>
+    <webdav_service len="999">WebDAV 서비스</webdav_service>
+  </_network_services>
+  <_nfs>
+    <host len="999">호스트</host>
+    <real_path len="999">실제 경로</real_path>
+    <root_squash len="999">루트 Squash</root_squash>
+    <write len="999">쓰기</write>
+    <msg1 len="999"><![CDATA[호스트 이름에는 다음 문자를 사용할 수 있습니다. "a-z" , "A-Z" , "0-9" , "-" , "/".]]>
+</msg1>
+    <msg2 len="999">탑재 지점</msg2>
+  </_nfs>
+  <_quota>
+    <x_quota>%s의 할당량</x_quota>
+    <used len="999">사용됨</used>
+    <limit len="999">한도</limit>
+    <total_records len="999">총 레코드 수</total_records>
+    <unlimited len="999">제한 없음</unlimited>
+    <status len="999">상태</status>
+    <enable len="999">활성화</enable>
+    <disable len="999">비활성화됨</disable>
+    <start len="999">시작됨</start>
+    <stop len="999">중지됨</stop>
+    <quota_amount len="999">할당량</quota_amount>
+    <msg1 len="999">사용자 할당량은 그룹 할당량보다 클 수 없습니다.</msg1>
+    <msg2 len="999">할당량은 사용자 할당량보다 작을 수 없습니다.</msg2>
+    <msg3 len="999">할당량이 양의 정수가 아닙니다. 다시 시도하십시오.</msg3>
+    <msg4 len="999">할당량이 올바르지 않습니다. 유효한 값을 입력하십시오.</msg4>
+    <msg5 len="999">이 숫자는 하드 드라이브의 최대 용량보다 큽니다. 실제 값을 입력하거나 설정을 제한 없음으로 두십시오.</msg5>
+    <help_hint len="999">할당량을 설정하려면 먼저 하드 드라이브가 동기화를 완료해야 합니다.</help_hint>
+  </_quota>
+  <_ftp>
+    <idle_time len="999">유휴 시간</idle_time>
+    <port_description len="999">1025 ~ 3688, 3690 ~ 49999, 65501 ~ 65535. 기본값: 21</port_description>
+    <passive_mode len="999">수동 모드</passive_mode>
+    <default_port len="999">기본 포트 범위를 사용합니다.</default_port>
+    <following_port len="999">다음 포트 범위를 사용합니다.</following_port>
+    <report len="999">PASV 모드의 외부 IP 보고</report>
+    <external_ip len="999">외부 IP</external_ip>
+    <client_language len="999">클라이언트 언어</client_language>
+    <flow_control len="999">흐름 제어</flow_control>
+    <unlimited len="999">제한 없음</unlimited>
+    <!--<allow len="999">Allow SSL/TLS connections only</allow>-->
+    <ipv4 len="999">IPV4</ipv4>
+    <ipv6 len="999">IPV6</ipv6>
+    <ip len="999">IP</ip>
+    <max_user len="999">최대 사용자 수</max_user>
+    <connection len="999">연결</connection>
+    <started len="999">시작됨</started>
+    <stopped len="999">중지됨</stopped>
+    <ssl_tsl len="999">TLS</ssl_tsl>
+    <fxp len="999">FXP</fxp>
+    <permanent len="999">영구</permanent>
+    <temporary len="999">일시</temporary>
+    <auto_blcoked len="999">자동 차단됨</auto_blcoked>
+    <title1 len="999">SSH 활성화</title1>
+    <msg1 len="167">포트 8080은 HTTP 서버에 사용됩니다.</msg1>
+    <msg2 len="167">포트 25는 메일 서버에 사용됩니다.</msg2>
+    <msg3 len="167">포트 3689는 iTunes 서버에 사용됩니다.</msg3>
+    <msg4 len="167">포트 50000-65500은 UPnP 서버에 사용됩니다.</msg4>
+    <msg5 len="167">포트 67, 68은 DHCP 서버에 사용됩니다.</msg5>
+    <msg6 len="167">포트는 숫자여야 합니다.</msg6>
+    <msg7 len="167">포트 번호는 1~65535 범위여야 합니다.</msg7>
+    <msg8 len="167">유효한 흐름 제어가 아닙니다.</msg8>
+    <msg9 len="167">흐름을 입력하십시오.</msg9>
+    <msg10 len="167">흐름에는 공백을 사용할 수 없습니다.</msg10>
+    <msg11 len="167">흐름 제어는 숫자여야 합니다.</msg11>
+    <msg12 len="167">흐름 제어는 16384를 초과할 수 없습니다.</msg12>
+    <msg13 len="167">유휴 시간을 입력하십시오.</msg13>
+    <msg14 len="167">유휴 시간은 1~10분 범위여야 합니다.</msg14>
+    <msg15 len="167">유휴 시간에는 공백을 사용할 수 없습니다.</msg15>
+    <msg16 len="167">삭제하시겠습니까?</msg16>
+    <msg18 len="167">출시 날짜를 입력하십시오.</msg18>
+    <msg19 len="167">유효한 출시 날짜가 아닙니다.</msg19>
+    <msg20 len="167">포트 3689는 iTunes 서버에 사용됩니다.</msg20>
+    <msg21 len="167">유효한 외부 IP 주소가 아닙니다.</msg21>
+    <msg22 len="167">최대 FTP 공유 수에 도달했습니다.</msg22>
+    <msg23 len="167">포트 xxx은(는) P2P 서버에 사용됩니다.</msg23>
+    <msg24 len="167">짝수인 포트 범위를 사용하십시오.</msg24>
+    <msg25 len="167">클라이언트 언어를 입력하십시오.</msg25>
+    <msg26 len="167"><![CDATA['클라이언트 언어'의 길이는 32자를 초과할 수 없습니다. 다시 시도하십시오.]]></msg26>
+    <msg27 len="167">이 FTP 공유는 이미 존재합니다. 다른 FTP 공유를 선택하십시오.</msg27>
+    <msg28 len="167">포트 4711은 aMule에 사용됩니다.</msg28>
+    <msg29 len="167">포트 9000은 Squeeze Center에 사용됩니다.</msg29>
+    <msg30 len="167">포트 514는 로그에 사용됩니다.</msg30>
+    <msg31 len="167">포트 515는 프린터에 사용됩니다.</msg31>
+    <msg32 len="167">포트 8000은 Audio Streamer에 사용됩니다.</msg32>
+    <msg33 len="167">올바르지 않은 클라이언트 언어입니다.</msg33>
+    <msg34 len="167">외부 IP를 성공적으로 가져왔습니다.</msg34>
+    <msg35 len="167">외부 IP 가져오기에 실패했습니다.</msg35>
+    <msg36 len="167">WD My Cloud Mirror에 액세스 하기위해 SFTP를 사용하려면 SSH를 사용가능한 상태로 설정해야 합니다.</msg36>
+    <desc1 len="999">외부 IP 가져오기</desc1>
+    <desc2 len="999">다음 IP 주소가 네트워크의 이 장치에 액세스하지 못하도록 차단되었습니다. IP 주소를 영구적으로 차단하거나 특정 기간 동안 일시적으로 차단할 수 있습니다.</desc2>
+    <desc3 len="999">사용자 지정</desc3>
+    <desc4 len="999">제한 없음</desc4>
+    <desc5 len="999">기본값</desc5>
+    <desc6 len="999">차단된 IP 목록</desc6>
+    <desc7 len="999">암시적 TLS</desc7>
+		<desc8 len="999">명시적 TLS</desc8>
+    <button1 len="10">IP 가져오기</button1>
+  <msg37>WD My Cloud Mirror 시스템의 FTP 서비스가 활성화되었습니다. 공유 페이지로 가서 각 공유의 FTP 액세스를 활성화하십시오.</msg37></_ftp>
+  <_upnp>
+    <refresh len="10">새로 고침</refresh>
+    <shared_folder len="999">공유된 폴더</shared_folder>
+    <state len="999">상태</state>
+    <msg1 len="999">중첩된 공유 폴더는 허용되지 않습니다.</msg1>
+    <msg2 len="999">실패했습니다.</msg2>
+    <msg3 len="999">한 항목을 선택하십시오.</msg3>
+    <msg4 len="999">공유된 폴더가 한도를 초과합니다.</msg4>
+  </_upnp>
+  <_itunes>
+    <mp3_tag_codepage len="21">MP3 태그 코드 페이지</mp3_tag_codepage>
+    <auto_refresh len="21">자동 새로 고침</auto_refresh>
+    <auto_refresh1 len="999">5분</auto_refresh1>
+    <auto_refresh2 len="999">15분</auto_refresh2>
+    <auto_refresh3 len="999">30분</auto_refresh3>
+    <auto_refresh4 len="999">1시간</auto_refresh4>
+    <auto_refresh5 len="999">2시간</auto_refresh5>
+    <auto_refresh6 len="999">6시간</auto_refresh6>
+    <auto_refresh7 len="999">12시간</auto_refresh7>
+    <auto_refresh8 len="999">1일</auto_refresh8>
+    <default len="21">기본값</default>
+    <folder len="21">폴더</folder>
+    <share len="999">공유</share>
+    <desc1 len="999">iTunes 서버가 iTunes 플레이어를 통해 미디어에 액세스할 수 있도록 활성화합니다.</desc1>
+    <desc2 len="999">루트</desc2>
+    <desc3 len="999">iTunes 데이터베이스의 주기적인 새 미디어 콘텐츠 다시 검색 일정을 구성하십시오.</desc3>
+    <desc4 len="999">모든 콘텐츠 디렉토리를 다시 검색하여 새 미디어를 찾습니다.</desc4>
+    <desc5 len="25">초기화 중</desc5>
+    <desc6 len="999">iTunes 데이터베이스</desc6>
+    <msg1 len="167">폴더를 선택해야 합니다.</msg1>
+    <msg2 len="167">경로 길이는 235자를 초과할 수 없습니다. 다시 시도하십시오.</msg2>
+    <msg3 len="167">암호는 2자 이상이어야 합니다. 다시 시도하십시오.</msg3>
+    <msg4 len="167">암호 길이는 16자를 초과할 수 없습니다.</msg4>
+    <msg5 len="167">암호 형식이 올바르지 않습니다. 다시 시도하십시오.</msg5>
+    <msg6 len="167">MP3 태그 코드 페이지를 입력하십시오.</msg6>
+    <msg7 leng="167"><![CDATA[암호에는 다음 문자를 사용할 수 없습니다.  @ : / \ % ' #]]></msg7>
+    <msg8 len="999">시스템이 미디어 라이브러리/데이터베이스를 빌드하는 중입니다.</msg8>
+  </_itunes>
+  <_admin>
+    <username len="999">사용자 이름</username>
+    <password len="999">암호</password>
+    <new_pwd len="999">새 암호</new_pwd>
+    <confirm_pwd len="999">암호 확인</confirm_pwd>
+  <desc1>관리자 암호를 생성하여 WD My Cloud Mirror 시스템을 무단 구성으로부터 보호하십시오.</desc1><desc2>지금 암호를 만들지 않으려면 &lt;b&gt;다음&lt;/b&gt;을 클릭하여 계속 진행하십시오.</desc2></_admin>
+  <_system>
+    <restart_title len="999">다시 시작</restart_title>
+    <system_restart len="999">시스템 재시작</system_restart>
+    <default_title len="999">기본값</default_title>
+    <restore len="999">초기 기본 설정으로 복원</restore>
+    <shutdown_title len="999">종료</shutdown_title>
+    <warning_title len="999">경고</warning_title>
+    <system_shutdown len="999">시스템 종료</system_shutdown>
+    <configuration_settings len="999">구성 설정</configuration_settings>
+    <save_configuration_settings len="999">구성 설정 저장</save_configuration_settings>
+    <load_configuration_settings len="999">구성 설정 로드</load_configuration_settings>
+    <idle_time_title len="999">유휴 시간</idle_time_title>
+    <account_inactivity_timer len="999">계정 비활성화 타이머</account_inactivity_timer>
+    <minutes len="999">분</minutes>
+    <temperature_title len="999">시스템 온도 임계값</temperature_title>
+    <flash_system len="999">시스템 LED 깜박임</flash_system>
+    <extended_log len="999">확장 로그</extended_log>
+    <help_hint len="999">초기 기본값을 복원하는 경우 모든 현재 설정이 지워집니다.</help_hint>
+    <msg1 len="999">잘못된 구성 설정 파일이 업로드되었습니다. 올바른 파일을 선택하고 다시 시도하십시오.</msg1>
+    <msg2 len="999">곧 WD My Cloud Mirror 시스템이 재부팅됩니다. 모든 백업, 파일 작업 또는 파일 전송이 중단될 수 있습니다.</msg2>
+    <msg3 len="999">모든 구성 설정을 재설정하려는 중입니다. 이것은 드라이브에 저장된 데이터에는 아무런 영향을 미치지 않습니다. 계속하려면 확인을 누르십시오.</msg3>
+    <msg4 len="999">시스템이 최대 절전 모드로 전환됩니다. 계속 진행하시겠습니까? </msg4>
+    <msg5 len="999">업로드 파일을 선택하십시오.</msg5>
+    <msg6 len="999">계정 비활성화 타이머는 0분보다 커야 합니다.</msg6>
+    <msg7 len="999">계정 비활성화 타이머는 비워둘 수 없습니다.</msg7>
+    <msg8 len="999">숫자를 입력하십시오.</msg8>
+    <msg9 len="999">유휴 시간에는 공백을 사용할 수 없습니다.</msg9>
+    <msg10 len="999">AC 전원이 끊어졌습니다. 이제 UPS를 사용합니다. NAS가 곧 종료됩니다. 데이터가 손실되지 않도록 완료되지 않은 모든 파일을 완료하십시오.</msg10>
+  <msg11 len="999">장치가 정상 온도보다 높은 온도에서 작동 중입니다. 장치를 시원한 위치로 이동시키십시오.</msg11>
+    
+<msg12 len="999">시스템이 과열됨</msg12>
+  <default_system>
+'시스템만'은 시스템 설정을 기본값으로 되돌리지만, 사용자 데이터와 공유는 유지합니다.
+&lt;br&gt;&lt;br&gt;
+계속 진행하시겠습니까?</default_system><default_quick>빠른 복원'은 모든 설정을 기본값으로 되돌리고, 모든 사용자 데이터와 공유를 지우고, 기본 공유를 유지합니다. 빠른 복원은 장치에 새 파일 테이블을 만들지만 드라이브를 완전히 덮어쓰거나 지우지는 않으므로, 데이터 복구 프로그램을 사용하여 사용자 데이터와 공유를 복원할 수 있습니다.
+&lt;br&gt;&lt;br&gt;
+계속 진행하시겠습니까?</default_quick><default_full>전체 복원'은 모든 설정을 기본값으로 되돌리고, 모든 사용자 데이터와 공유를 영구적으로 삭제하고, 기본 공유를 유지합니다. 데이터 복구 프로그램을 사용하여 데이터를 복원할 수는 없습니다. 기본 공유를 제외한 모든 사용자 데이터와 공유는 영구적으로 삭제됩니다.
+&lt;br&gt;&lt;br&gt;
+계속 진행하시겠습니까?</default_full><msg13>확장 로그인을 설정하거나 해제하려면 시스템 재부팅이 필요합니다. 모든 백업, 파일 작업 또는 파일 전송이 중단될 수 있습니다.</msg13></_system>
+  <_firmware>
+    <importing>파일 가져오는 중</importing>
+    <upgrading>업그레이드 중...</upgrading>
+    <new_found>펌웨어 업데이트 버전이 있음</new_found>
+    <new_available>새 펌웨어 있음</new_available>
+    <auto_update>자동 업데이트</auto_update>
+    <enable_auto>자동 업데이트 활성화</enable_auto>
+    <available_update>사용 가능한 업데이트</available_update>
+    <new_fw>새 펌웨어</new_fw>
+    <check_update>업데이트 확인</check_update>
+    <last_update>마지막 업데이트</last_update>
+    <title len="999">펌웨어 업그레이드</title>
+    <current len="999">현재 버전</current>
+    <date len="999">펌웨어 날짜</date>
+    <upload len="999">펌웨어 업로드</upload>
+    <path len="999">펌웨어 경로</path>
+    <manual_update>수동 업데이트</manual_update>
+    <fw_img>펌웨어 이미지</fw_img>
+    <update_b>파일에서 업데이트</update_b>
+    <update_sch>업데이트 일정</update_sch>
+    <release_note>펌웨어 출시 정보</release_note>
+	<update_now>지금 업데이트</update_now>
+	<reboot_required>다시 부팅해야 함</reboot_required>
+    <latest_version len="999">최신 버전</latest_version>
+	<update_button>파일에서 업데이트</update_button>
+	<install_title>최신 펌웨어 설치</install_title>	
+    <msg1 len="999">펌웨어 업데이트에 성공했습니다. 로그인하기 전에 WD My Cloud Mirror 시스템이 다시 부팅 프로세스를 완료할 때까지 기다리십시오. 이 프로세스에는 1분 이상 걸리지 않습니다. 펌웨어 버전을 확인하여 업데이트를 확인하십시오.</msg1>
+    <msg2 len="999">펌웨어 확인 실패</msg2>
+    <msg3 len="999">펌웨어 업로드에 실패했습니다. 다시 시도하십시오.</msg3>
+    <msg4 len="999">펌웨어 확인 실패</msg4>
+    <msg5 len="999">      <![CDATA[파일 이름에는 다음 문자를 사용할 수 없습니다. ~`!@#$%^&+={}[];',]]>    </msg5>
+    <msg6 len="999">펌웨어 업데이트 설치 중에 WD My Cloud Mirror 시스템을 분리하지 마십시오. 업데이트가 완료된 후 네트워크 드라이브가 자동으로 재부팅됩니다.</msg6>
+    <msg7 len="999">펌웨어 업로드 중입니다.</msg7>
+    <msg8 len="999"><![CDATA[경고: Micro-P 펌웨어 업데이트가 진행 중입니다.<br>WD My Cloud Mirror 장치를 다시 시작하거나 종료하지 마십시오.]]></msg8>
+    <msg9 len="999">
+    	<![CDATA[
+		<img src='/web/images/warning.png'> Micro-P 펌웨어 업그레이드 프로세스를 완료하려면 WD My Cloud Mirror 장치에서 전원 코드 연결을 끊으십시오. <br><br>5초 정도 기다린 후에 전원 코드를 꽂고 WD My Cloud Mirror 장치를 켜십시오. <br><br>시스템이 부팅되면 페이지를 새로 고쳐서 로그인하십시오.]]></msg9>
+    <msg10 len="999">예정된 전원 끄기 시간이 시스템 시간에 너무 가깝습니다. 전원 끄기 시간은 시스템 시간보다 최소 10분 이후여야 합니다.</msg10>
+    <msg11 len="999">펌웨어를 업로드하시겠습니까?</msg11>
+    <msg12>WD My Cloud Mirror 시스템 펌웨어가 최신 버전입니다.</msg12>
+    	<msg13 len="999">      <![CDATA[펌웨어 업데이트 보류 중 - 다시 부팅해야 함]]>    </msg13>
+  <msg14 len="999">
+펌웨어 업데이트 설치 중에 장치를 분리하지 마십시오.
+업데이트가 완료된 후 네트워크 드라이브가 자동으로 다시 부팅됩니다.</msg14>
+  <msg15>펌웨어가 업데이트됩니다. 펌웨어 업데이트 설치 중에 장치를 분리하지 마십시오. 펌웨어 업데이트가 완료된 후 네트워크 드라이브가 자동으로 다시 부팅됩니다. 또한 계속 진행하기 전에 컴퓨터에서 운영 체제의 최신 업데이트를 설치하는 것이 좋습니다.
+  &lt;br&gt;&lt;br&gt;
+  &lt;b&gt;중요:&lt;/b&gt; 드라이브를 업데이트하기 전에 여러 데이터 복사본(다른 백업)을 준비하도록 하십시오.</msg15><msg16>
+펌웨어 업데이트 설치 중에 장치를 분리하지 마십시오.
+업데이트가 완료된 후 네트워크 드라이브가 자동으로 다시 부팅됩니다.</msg16><msg17>펌웨어 업데이트 서버에 연결할 수 없습니다. 네트워크 연결을 확인하고 다시 시도하십시오.</msg17></_firmware>
+  <_mail>
+  	<notification>알림</notification>
+    <account len="999">계정</account>
+    <anonymous len="999">익명</anonymous>
+    <user_name len="999">사용자 이름</user_name>
+    <password len="999">암호</password>
+    <port len="999">포트</port>
+    <smtp_server len="999">SMTP 서버</smtp_server>
+    <sender len="999">보내는 사람 이메일</sender>
+    <receiver len="999">받는 사람 이메일</receiver>
+    <smtp_auth len="999">보안 연결</smtp_auth>
+    <interval len="999">간격</interval>
+    <hours len="999">시간</hours>
+    <Minutes len="999">분</Minutes>
+    <by_schedule len="999">일정별</by_schedule>
+    <event_log1 len="999">로그 파일이 가득 찰 때</event_log1>
+    <fahrenheit len="999">화씨</fahrenheit>
+    <celcius len="999">섭씨</celcius>
+    <daily len="999">매일</daily>
+    <weekly len="999">매주</weekly>
+    <monthly len="999">매월</monthly>
+    <time len="999">시간</time>
+    <day_of_week len="999">요일</day_of_week>
+    <mon len="999">월</mon>
+    <tue len="999">화</tue>
+    <wed len="999">수</wed>
+    <thu len="999">목</thu>
+    <fri len="999">금</fri>
+    <sat len="999">토</sat>
+    <sun len="999">일</sun>
+    <day_of_month len="999">월</day_of_month>
+    <help_hint len="999">SMTP 서버가 발신 메일 서버입니다. 확실하지 않은 경우 이메일 서비스 제공업체에 문의하십시오.</help_hint>
+    <msg1 len="999">공간 상태 알림 간격을 선택하십시오.</msg1>
+    <msg2 len="999">온도는 숫자여야 합니다.</msg2>
+    <msg5 leng="167">테스트 이메일: 보냄</msg5>
+    <msg6 leng="167">테스트 이메일: 실패</msg6>
+    <msg7 leng="167">포트를 입력하십시오.</msg7>
+    <msg8 leng="167">포트에는 공백을 사용할 수 없습니다.</msg8>
+    <msg9 leng="167">유효하지 않은 포트 번호입니다.</msg9>
+    <msg10 leng="167">사용자 이름을 입력하십시오.</msg10>
+    <msg11 leng="167">암호를 입력하십시오.</msg11>
+    <msg12 leng="167">암호 길이는 31자를 초과할 수 없습니다. 다시 시도하십시오.</msg12>
+    <msg13 leng="167">사용자 이름의 길이는 31자를 초과할 수 없습니다. 다시 시도하십시오.</msg13>
+    <msg14 leng="167">SMTP 서버를 입력하십시오.</msg14>
+    <msg15 leng="167">보내는 사람 이메일을 입력하십시오.</msg15>
+    <msg16 leng="167">받는 사람 이메일을 입력하십시오.</msg16>
+    <msg17 leng="167">SMTP 서버 길이는 63자를 초과할 수 없습니다. 다시 시도하십시오.</msg17>
+    <msg18 leng="167">보내는 사람 이메일 길이는 63자를 초과할 수 없습니다. 다시 시도하십시오.</msg18>
+    <msg19 leng="167">받는 사람 이메일 길이는 63자를 초과할 수 없습니다. 다시 시도하십시오.</msg19>
+    <msg20 leng="167">보내는 사람 이메일 주소 형식을 확인하십시오.</msg20>
+    <msg21 leng="167">받는 사람 이메일 주소 형식을 확인하십시오.</msg21>
+    <msg22 len="167">유효한 이메일 주소를 입력하십시오.</msg22>
+  <random>임의</random></_mail>
+  <_format>
+    <wizard_title13 len="999">RAID 5로 RAID 유형 재구성</wizard_title13>
+    <wizard_title14 len="999">RAID 1에서 RAID 5로 RAID 유형 재구성</wizard_title14>
+    <format_title2 len="73">자동 복원 구성</format_title2>
+    <initializing len="25">초기화 중</initializing>
+    <formatting len="25">포맷 중</formatting>
+    <verifying len="25">확인 중</verifying>
+    <vendor len="12">공급업체</vendor>
+    <free_size len="999">여유 공간</free_size>
+    <mode len="999">모드</mode>
+    <raid_description9 len="999">남은 공간이 JBOD(Linear) 볼륨이 됩니다.</raid_description9>
+    <raid_description10 len="999">남은 공간</raid_description10>
+    <summary len="999">요약</summary>
+    <file_system len="12">파일 시스템</file_system>
+    <format_result len="999">포맷 결과</format_result>
+    <error_code len="999">오류 코드</error_code>
+    <step len="999">단계</step>
+    <degraded len="999">저하됨</degraded>
+    <partitioning len="999">분할 중</partitioning>
+    <rebuilding len="999">복원 중</rebuilding>
+    <disk len="6">디스크</disk>
+    <encryption len="999">암호화</encryption>
+    <auto_mount len="999">자동 탑재</auto_mount>
+    <spare len="999">예비</spare>
+    <desc3 len="999">xxx 암호화</desc3>
+    <desc4 len="999">스패닝으로 남은 디스크 공간을 구성합니다.</desc4>
+    <desc5 len="167"><![CDATA[하드 드라이브 구성을 변경하고, 새 하드 드라이브를 포맷합니다. 드라이브를 포맷하면 이 드라이브에 저장된 모든 데이터가 지워집니다. <b>다음</b>을 클릭하여 계속 진행하십시오.]]></desc5>
+    <desc6 len="999">이 섹션에서는 하드 드라이브에 대한 정보를 제공합니다. 디스크 배열 시퀀스, 제조업체, 모델과 일련 번호, 디스크 용량이 표시됩니다.</desc6>
+    <desc8 len="999">이 섹션에서 WD My Cloud Mirror 시스템의 파일 시스템을 변경할 수 있습니다. 계속하려면 &lt;b&gt;다음&lt;/b&gt;을 클릭합니다.</desc8>
+    <desc9 len="999">이 섹션에서 (손상된 경우) RAID를 복원할 수 있습니다. 자동 복원 활성화를 선택하여 자동으로 RAID를 복원하거나 자동 복원 비활성화를 선택하여 다른 방법으로 RAID를 진단합니다.</desc9>
+    <desc10 len="999">이 섹션에서 RAID 크기를 변경하고, 남은 디스크 공간을 스패닝 형식으로 구성할 수 있습니다.</desc10>
+    <desc11 len="999">이 섹션에서는 사용자가 방금 만든 구성의 요약을 제공합니다. 볼륨 이름, 파일 형식, 디스크 크기, 디스크 배열 번호가 표시됩니다.</desc11>
+    <desc12 len="999">WD My Cloud Mirror 장치가 시스템을 업데이트할 때까지 기다리십시오.</desc12>
+    <desc13 len="999">WD My Cloud Mirror 장치가 볼륨을 포맷할 때까지 기다리십시오.</desc13>
+    <desc14 len="999">설정이 완료되었습니다. 이 섹션에서는 볼륨 이름, 파일 시스템, RAID 모드(유형), 디스크 배열에 대한 정보를 제공합니다.</desc14>
+    <desc15 len="999">WD My Cloud Mirror 장치가 드라이브를 분할하는 동안 기다리십시오. 지금은 NAS를 끄지 마십시오.</desc15>
+    <desc18 len="999"><![CDATA[하드 드라이브 구성을 변경하고, 새 하드 드라이브를 포맷합니다. 드라이브를 포맷하면 이 드라이브에 저장된 모든 데이터가 지워집니다. <b>다음</b>을 클릭하여 계속 진행하십시오.]]></desc18>
+    <desc19 len="999">이 섹션에서는 새로 설치된 하드 드라이브에 대한 정보를 제공합니다. 디스크 배열 시퀀스, 제조업체, 모델과 일련 번호, 디스크 용량이 표시됩니다.</desc19>
+    <desc20 len="999">파일 시스템을 선택합니다. 파일 시스템은 데이터 저장, 데이터 할당, 디스크에 데이터 업데이트 방법을 관리하는 데 사용되는 기술입니다. ext3와 ext4 중에서 선택합니다.</desc20>
+    <desc21 len="999">이 섹션에서 드라이브를 RAID 1로 재구성하는 데 사용할 디스크를 선택합니다.</desc21>
+    <desc22 len="999"><![CDATA[이 섹션에서 남은 디스크 공간을 스패닝으로 구성할 수 있습니다. 포맷 시 새 볼륨의 모든 데이터가 지워집니다. <b>다음</b>을 클릭하여 계속 진행하십시오.]]></desc22>
+    <desc23 len="999"><![CDATA[<b>다음</b>을 클릭하여 볼륨을 암호화합니다.]]></desc23>
+    <desc24 len="999"><![CDATA[이 섹션에서 볼륨을 암호화할 수 있습니다. <b>다음</b>을 클릭하여 계속 진행하십시오.]]></desc24>
+    <desc25 len="999">설정이 완료되었습니다. 이 섹션에서는 볼륨 이름, 파일 시스템, RAID 모드(유형), 디스크 배열에 대한 정보를 제공합니다.</desc25>
+    <desc26 len="999">이 마법사에 따라 새 드라이브를 RAID로 구성할 수 있습니다.</desc26>
+    <desc27 len="999"><![CDATA[새 드라이브를 포맷합니다(포맷 버튼 클릭). 포맷 프로세스가 완료되면 이전 데이터가 새 드라이브에 동기화됩니다.]]></desc27>
+    <desc28 len="999">WD My Cloud Mirror 장치가 드라이브를 분할하고 포맷하는 동안 기다리십시오. 지금은 NAS를 끄지 마십시오.</desc28>
+    <desc29 len="999">WD My Cloud Mirror 장치가 시스템을 업데이트하는 동안 기다리십시오. 지금은 NAS를 끄지 마십시오.</desc29>
+    <desc30 len="999">이 디스크와 RAID 변경이 완료됩니다. 이것은 배열 세부 정보, 제조업체, 모델 이름, 일련 번호가 있는 새 디스크입니다.</desc30>
+    <desc31 len="999"><![CDATA[RAID 5+spare를 구성합니다(예비 디스크 만들기 확인란 클릭). 그러면 '디스크4'가 핫 스패어가 됩니다. RAID 5+spare를 만들지 않으려면 예비 디스크 만들기의 선택을 취소하십시오. RAID 5 볼륨의 크기를 조정하고, 모든 공간을 사용하지 않는 경우 'JBOD로 남은 디스크 공간 구성'을 선택하십시오. <b>다음</b>을 클릭하여 계속 진행하십시오.]]></desc31>
+    <desc34 len="999"> <![CDATA[ <b><font color="#FF0000">경고: 디스크 시퀀스가 올바르지 않습니다.</font></b> ]]></desc34>
+    <desc35 len="999">이제 디스크 시퀀스는 다음과 같습니다.</desc35>
+    <desc36 len="999">다음과 같이 시퀀스를 변경하십시오.</desc36>
+    <msg1 len="167">RAID 유형을 선택합니다.</msg1>
+    <msg2 len="167">RAID 볼륨 크기는 xxx-yyy GB 범위여야 합니다.</msg2>
+    <msg3 len="167">하드 드라이브를 다시 포맷하려는 중입니다.  모든 데이터가 지워집니다.  계속 진행하시겠습니까?</msg3>
+    <msg4 len="167">RAID 볼륨 크기(0-9)를 입력하십시오.</msg4>
+    <msg5 len="167">RAID 볼륨 크기를 입력하십시오.</msg5>
+    <msg6 len="167">WD My Cloud Mirror 장치가 다시 시작될 때까지 잠시 기다렸다가 다시 로그인하십시오.</msg6>
+    <msg7 len="167">하드 드라이브 포맷 실패</msg7>
+    <msg8 len="167">지금 xxx이(가) 동기화 중입니다.</msg8>
+    <msg9 len="167">암호를 입력하십시오.</msg9>
+    <msg10 len="167">암호를 다시 입력하십시오.</msg10>
+    <msg11 len="167">암호 길이는 32자를 초과할 수 없습니다. 다시 시도하십시오.</msg11>
+    <msg12 len="167">새 암호와 암호 확인이 일치하지 않습니다. 다시 시도하십시오.</msg12>
+    <msg13 len="167">새 암호에는 공백 또는 다음 문자를 사용할 수 없습니다. `~!@#$%^&amp;(){}'*+=|[]/\:";&lt;&gt;?,.</msg13>
+    <msg14 len="167">암호는 4자 이상이어야 합니다. 다시 시도하십시오.</msg14>
+    <msg16 len="167">이 옵션을 활성화하면 장치의 처랴량에 상당한 영향이 미칠 수 있습니다.</msg16>
+		<msg17 len="167">디스크 포맷, 디스크 크기 조정, 디스크 마이그레이션, RAID 패리티 확인 및 펌웨어 업로드가 진행 중일 때는 시스템 종료, 복구, 다시 시작 및 펌웨어 업데이트가 금지됩니다.</msg17>    
+    <msg18 len="167">디스크를 하나 이상 선택해야 합니다.</msg18>
+    <msg19 len="167">디스크를 둘 이상 선택해야 합니다.</msg19>
+  </_format>
+  <_diagnostic>
+  	<title1 len="999">시스템 진단</title1>
+    <desc1 len="999">디스크 테스트</desc1>
+    <desc2 len="999">테스트 진행 중</desc2>
+    <desc3 len="999">자체 테스트 결과</desc3>
+    <desc4 len="999">자체 테스트가 취소되었습니다.</desc4>
+    <desc5 len="999">마법사가 시스템을 검사하는 중입니다. 창을 닫으려면 닫기 버튼을 클릭하십시오. 창을 닫아도 시스템 검사는 취소되지 않습니다.</desc5>
+    <desc6 len="999">디스크 검사</desc6>
+    <desc7 len="999">이 볼륨이 성공적으로 검사되었습니다.</desc7>
+    <desc8 len="999">WD My Cloud Mirror 장치가 시스템을 업데이트할 때까지 기다리십시오.</desc8>
+    <desc9 len="999">모든 볼륨</desc9>
+    <desc10 len="999">디스크 포맷</desc10>
+    <desc11 len="999">삭제 시 모든 데이터를 완전히 지웁니다.</desc11>
+    <desc12 len="999"><![CDATA[이 작업으로 디스크의 모든 데이터가 영구적으로 삭제됩니다. 이렇게 하면 이 작업 기간 동안 활성 파일 전송 서비스가 중단됩니다.<br><br>계속 진행하시겠습니까?]]></desc12>
+    <desc13 len="999">볼륨이 성공적으로 검사되었습니다. 오류가 없습니다.</desc13>
+    <desc14 len="999">시스템 클럭</desc14>
+		<desc15 len="999">USB1</desc15>
+		<desc16 len="999">USB2</desc16>
+		<desc17 len="999">드라이브1</desc17>
+		<desc18 len="999">드라이브2</desc18>
+		<desc19 len="999">드라이브3</desc19>
+		<desc20 len="999">드라이브4</desc20>
+		<desc21 len="999">메모리</desc21>
+		<desc23 len="999">팬</desc23>
+		<desc24 len="999">시스템 테스트</desc24>
+    <button1 len="999">빠른 테스트</button1>
+    <button2 len="999">전체 테스트</button2>
+    <button3 len="999">마침</button3>
+    <button4 len="999">시스템 테스트</button4>
+  </_diagnostic>
+  <_scandsk>
+    <wait len="999">잠시 기다려 주세요...</wait>
+    <volume len="999">볼륨</volume>
+    <msg2 len="167">디스크 검사가 완료되었습니다. 발견된 오류가 없습니다.</msg2>
+    <msg3 len="342"><![CDATA[디스크 검사를 시작하기 전에 하드 드라이브에 대한 모든 데이터 전송과 데이터 작업을 중단합니다. 모든 네트워크 활동도 중단하는 것이 좋습니다. 이렇게 하면 이 작업 기간 동안 활성 파일 전송 서비스가 중단됩니다.<br><br>계속 진행하시겠습니까?]]></msg3>
+  </_scandsk>
+  <_ve>
+    <title1 len="999">키 저장</title1>
+    <title2 len="999">볼륨 암호화 정보</title2>
+    <status len="999">상태</status>
+    <mount len="999">탑재</mount>
+    <pwd len="999">원래 암호</pwd>
+    <button1 len="999">암호화된 키 파일 다운로드</button1>
+    <desc1 len="999">새 암호</desc1>
+    <desc2 len="999">암호 확인</desc2>
+    <desc3 len="999">원래 암호를 입력하여 암호화된 볼륨의 설정을 변경합니다.</desc3>
+    <desc4 len="999">자동 탑재 확인란을 클릭하여 시스템 부팅 시 자동으로 암호화된 드라이브를 탑재합니다. 새 암호를 입력하고 이 암호가 원래 암호를 덮어쓰도록 확인합니다.</desc4>
+    <desc5 len="999">암호화된 드라이브의 암호를 입력합니다.</desc5>
+    <desc6 len="999">드라이브가 암호화되는 동안 기다리십시오.</desc6>
+    <desc7 len="999">암호화된 키 파일 업로드</desc7>
+    <desc8 len="999">유효하지 않은 키 파일입니다. 볼륨 xxx을(를) 탑재할 수 없습니다. 다른 키 파일로 시도하십시오.</desc8>
+    <desc9 len="999">드라이브 암호가 해독되는 동안 기다리십시오.</desc9>
+    <desc10>
+  256비트 AES 암호화로 WD My Cloud Mirror 시스템을 암호화하여 무단 액세스와 도난으로부터 데이터를 보호할 수 있습니다. 볼륨을 만들 때 볼륨 암호화를 활성화하고 일반 읽기/쓰기 액세스 권한으로 이를 탑재할 수 있습니다.&lt;br&gt;&lt;br&gt;
+  구성에 따라, 자동으로 볼륨을 탑재하도록 볼륨 암호화를 설정할 수도 있습니다. 이렇게 하면 필요한 암호화 자격 증명을 반복해서 입력하지 않아도 됩니다.
+ </desc10>
+    <msg1 len="167">원래 암호를 입력하십시오.</msg1>
+    <msg2 len="167">원래 암호 길이는 32자를 초과할 수 없습니다. 다시 시도하십시오.</msg2>
+    <msg3 len="167"><![CDATA[원래 암호에는 다음 문자를 사용할 수 없습니다.  @ : / \ % ']]></msg3>
+    <msg4 len="167">잘못된 원래 암호를 입력했습니다. 다시 시도하십시오.</msg4>
+    <help_hint len="999"><![CDATA[
+			볼륨 암호화는 대칭 256비트 데이터 암호화 기술입니다. 장점은 동시에 여러 네트워크 계층에서 작동한다는 점입니다.<br><br> 볼륨 암호화는 백그라운드로 진행됩니다. 주된 기능은 다른 사용자들이 인식할 수 없는 방법으로 데이터를 코딩하는 것입니다. 암호화에는 암호가 필요합니다. 일단 데이터를 암호화하면 이 암호로 데이터 암호를 해독해야 합니다.<br><br> 항상 USB 저장 장치를 포맷하십시오. 그렇지 않으면 모든 데이터가 지워집니다. 사용자의 NAS는 현재 2GB/4GB/8GB/16GB/32GB 장치를 지원합니다. USB 저장 장치를 NAS에 직접 연결하거나 사용하는 워크스테이션(PC)을 통해 연결할 수 있습니다.
+		]]></help_hint>
+  </_ve>
+  <_ddns>
+    <title len="999">DDNS 설정</title>
+    <description len="999">동적 DNS 기능을 사용하면 동적 할당 IP 주소와 함께 구매한 도메인 이름(www.whateveryournameis.com)을 사용하여 서버(웹, FTP, 게임 서버 등)를 호스팅할 수 있습니다. 대부분의 광대역 인터넷 서비스 제공업체에서는 동적(가변) IP 주소를 할당합니다. 친구들이 DDNS 서비스 제공업체를 통해 IP 주소와 관계 없이 사용자의 호스트 이름을 입력하여 사용자의 NAS에 연결할 수 있습니다.</description>
+    <ddns_title len="999">DDNS 설정</ddns_title>
+    <ddns len="999">동적 DNS</ddns>
+    <server_address len="999">서버 주소</server_address>
+    <select_ddns len="999">동적 DNS 서버 선택</select_ddns>
+    <host_name len="999">호스트 이름</host_name>
+    <username len="999">사용자 이름 또는 키</username>
+    <pwd len="999">암호 또는 키</pwd>
+    <verify len="999">암호 또는 키 확인</verify>
+    <status len="999">상태</status>
+    <help_hint len="999">이 기능을 사용하려면 먼저 드롭다운 메뉴에 있는 제공업체 중 하나로부터 동적 DNS 계정을 만들어야 합니다.</help_hint>
+    <update_success len="999">업데이트 성공</update_success>
+    <update_fail len="999">업데이트 실패</update_fail>
+    <last len="999">최근 업데이트 시간</last>
+    <next len="999">다음 업데이트 시간</next>
+    <connect len="999">연결 중...</connect>
+    <msg1 len="999">서버 주소는 비워둘 수 없습니다.</msg1>
+    <msg2 len="999">서버 주소는 64자를 초과할 수 없습니다. 다시 시도하십시오.</msg2>
+    <msg3 len="999">호스트 이름은 64자를 초과할 수 없습니다. 다시 시도하십시오.</msg3>
+    <msg4 len="999">사용자 이름은 64자를 초과할 수 없습니다. 다시 시도하십시오.</msg4>
+    <msg5 len="999">암호는 64자를 초과할 수 없습니다. 다시 시도하십시오.</msg5>
+    <msg6 len="999">암호가 일치하지 않습니다. 다시 시도하십시오.</msg6>
+    <msg7 len="999">사용자 이름은 비워둘 수 없습니다.</msg7>
+    <msg8 len="999">공백은 입력할 수 없습니다.</msg8>
+    <msg9 len="999">암호는 비워둘 수 없습니다.</msg9>
+    <msg10 len="999">공백은 입력할 수 없습니다.</msg10>
+    <msg11 len="999">호스트 이름은 비워둘 수 없습니다.</msg11>
+    <msg12 len="999">공백은 입력할 수 없습니다.</msg12>
+    <msg13 len="999">DDNS 서버를 선택하십시오.</msg13>
+  </_ddns>
+  <_sys_info>
+    <volume_info len="999">볼륨 정보</volume_info>
+    <volume_name len="16">볼륨 이름</volume_name>
+    <volume_type len="999">볼륨 유형</volume_type>
+    <sync_time len="999">남은 동기화 시간</sync_time>
+    <capacity len="999">총 하드 드라이브 용량</capacity>
+    <ups_info len="999">UPS 정보</ups_info>
+    <battery_charge len="999">배터리 충전</battery_charge>
+    <usb_info len="999">USB 정보</usb_info>
+  </_sys_info>
+  <_hd_info>
+    <slot len="999">슬롯</slot>
+    <manu len="999">제조업체</manu>
+    <model len="999">모델</model>
+    <serial_number len="999">일련 번호</serial_number>
+    <temp len="999">온도</temp>
+    <size len="999">크기</size>
+    <id len="7">ID</id>
+    <item len="999">항목</item>
+  </_hd_info>
+  <_monitor>
+    <network_active>네트워크 작업</network_active>
+    <device_active>장치 작업</device_active>
+    <desc>아래 목록은 WD My Cloud Mirror 시스템에서 실행 중인 모든 시스템 작업과 프로세스를 나타냅니다. </desc>
+    <cpu len="999">CPU</cpu>
+    <memory len="999">메모리</memory>
+    <bandwidth len="999">대역폭</bandwidth>
+    <lan1 len="999">LAN1</lan1>
+    <lan2 len="999">LAN2</lan2>
+    <process len="999">프로세스</process>
+    <used len="999">사용됨</used>
+    <free len="999">여유</free>
+    <process_name len="999">프로세스 이름</process_name>
+    <owner len="999">소유자</owner>
+    <id len="999">ID</id>
+    <utilitazion_ratio len="999">사용률(%)</utilitazion_ratio>
+    <kb_s len="999">      <![CDATA[KB/초]]>
+    </kb_s>
+    <percentage len="999">%</percentage>
+    <memory_usage>메모리 사용량</memory_usage>
+  </_monitor>
+  <_backup>
+    <title1 len="999">내부 백업</title1>
+    <title2 len="999">내부 백업 작업</title2>
+    <title3 len="999">내부 백업 정보</title3>
+    <title4 len="999">백업</title4>
+    <category len="999">범주</category>
+    <local len="999">내부 백업</local>
+    <remote len="999">LAN 백업</remote>
+    <file len="999">파일</file>
+    <url len="999">URL</url>
+    <rename len="999">이름 바꾸기</rename>
+    <when len="999">시점</when>
+    <recurring_backup len="999">반복</recurring_backup>
+    <none len="999">없음</none>
+    <incremental_backup len="999">증분 백업</incremental_backup>
+    <create len="999">작업 만들기</create>
+		<edit_job>작업 수정</edit_job>
+    <desc1 len="999">경로 선택</desc1>
+    <desc2 len="999">소스 폴더</desc2>
+    <desc3 len="999">대상 폴더</desc3>
+    <desc4 len="999">작업 이름</desc4>
+    <desc5 len="999">세부 정보</desc5>
+    <desc6 len="999">매월</desc6>
+    <desc7 len="999">매주</desc7>
+    <desc8 len="999">매일</desc8>
+    <desc9 len="999">My Cloud 시스템의 한 스토리지 위치에서 다른 위치로 콘텐츠를 백업합니다.</desc9>
+    <desc10 len="999">오전</desc10>
+    <desc11 len="999">오후</desc11>
+    <desc12 len="999">다운로드 성공</desc12>
+    <desc13 len="999">다운로드 실패</desc13>
+    <desc14 len="999">다운로드 중</desc14>
+    <desc15 len="999">대기 중</desc15>
+    <desc16 len="999">다운로드 중지됨</desc16>
+    <desc17>백업 복구</desc17>
+    <msg1 len="167">시간 설정을 확인하십시오.</msg1>
+    <msg2 len="167">파일 이름 길이는 1에서 다음까지의 범위여야 합니다.</msg2>
+    <msg4 len="167"><![CDATA[파일 이름에는 다음 문자를 사용할 수 없습니다. \ / : * ? " < > | ]]>    </msg4>
+    <msg5 len="167">유효한 파일 이름이 아닙니다.</msg5>
+    <msg6 len="167">대상은 URL의 하위 디렉토리일 수 없습니다.</msg6>
+    <msg7 len="167">URL 형식이 올바르지 않습니다. 올바른 형식은 다음과 같습니다.  Volume_1/Test 또는 \\192.168.0.32\Volume_1\Test\test.txt. 다시 시도하십시오.</msg7>
+    <msg8 len="167">작업 이름을 입력하십시오.</msg8>
+    <msg9 len="167">작업 이름의 길이는 256자를 초과할 수 없습니다. 다시 시도하십시오.</msg9>
+    <msg10 len="167">소스 폴더와 대상 폴더는 같을 수 없습니다.</msg10>
+    <msg11 len="167">내부 백업 작업을 삭제하시겠습니까?</msg11>
+    <msg12 len="167">대상 폴더 위치를 입력하십시오.</msg12>
+    <msg13 len="999">입력한 작업 이름이 이미 존재합니다.</msg13>
+		<msg14 len="167">소스 폴더의 위치를 입력하세요.</msg14>
+		<msg15 len="167">최대 백업 작업 수에 도달했습니다.</msg15>
+  <msg16>소스 폴더의 데이터가 덮어쓰기됩니다. 계속 진행하시겠습니까?</msg16><title5>백업 복구 확인</title5><msg17>입력한 이름과 이름이 동일한 작업이 이미 존재합니다. 다른 이름을 입력하십시오.</msg17><button1>복구</button1></_backup>
+  <_cloud_backup>
+    <title len="100">클라우드 백업</title>
+    <title_note len="100">클라우드 백업이란?</title_note>
+    <description len="999">클라우드 백업을 사용하면 인터넷에서 그리고 다양한 모바일 장치를 통해 액세스할 수 있는 원격 백업을 만들 수 있습니다.</description>
+  </_cloud_backup>
+  <_download>
+    <title2 len="999">FTP 다운로드 작업</title2>
+    <save_to len="999">저장 위치</save_to>
+    <speed len="999">속도</speed>
+    <download_path len="999">다운로드 경로</download_path>
+    <idx len="999">idx</idx>
+    <test_result len="999">테스트 결과</test_result>
+    <successful len="999">성공</successful>
+    <fail len="999">실패</fail>
+    <file_size len="999">파일 크기</file_size>
+    <unavailable len="999">사용할 수 없음</unavailable>
+    <codepage len="999">언어</codepage>
+    <bytes len="999">바이트</bytes>
+    <msg1 len="167">사용자 이름의 길이는 16자를 초과할 수 없습니다. 다시 시도하십시오.</msg1>
+    <msg2 len="167">URL 길이는 1-1024자 범위여야 합니다!</msg2>
+    <msg3 len="167">저장 위치를 입력하십시오.</msg3>
+    <msg4 len="167">저장 위치 길이는 1-226자 범위여야 합니다!</msg4>
+    <msg5 len="167">URL 형식이 올바르지 않습니다. 올바른 형식은 다음과 같습니다.  http://192.168.0.32/test.txt. 다시 시도하십시오.</msg5>
+    <msg6 len="167">날짜를 입력하십시오.</msg6>
+    <msg7 len="167">날짜 형식이 올바르지 않습니다. 다시 시도하십시오.</msg7>
+    <msg8 len="167">암호 길이는 128자를 초과할 수 없습니다. 다시 시도하십시오.</msg8>
+  <detail_job>작업 세부 정보</detail_job></_download>
+  <_p2p>
+    <title len="999">P2P</title>
+    <title2 len="999">P2P 설정</title2>
+    <title3 len="999">P2P 구성</title3>
+    <download_title len="999">다운로드</download_title>
+    <set_title len="999">설정</set_title>
+    <add_url len="999">URL에서 Torrent 추가</add_url>
+    <add_file len="999">파일에서 Torrent 추가</add_file>
+    <tasks_title len="999">P2P 작업</tasks_title>
+    <stop_time len="999">중지 시간</stop_time>
+    <start_time len="999">시작 시간</start_time>
+    <disable len="999">P2P가 비활성화되었습니다.</disable>
+    <p2p len="999">P2P</p2p>
+    <auto_download len="999">자동 다운로드</auto_download>
+    <port_settings len="999">수신 연결 포트</port_settings>
+    <automatic len="999">자동</automatic>
+    <custom len="999">사용자 지정</custom>
+    <incoming len="999">수신 연결 포트</incoming>
+    <bandwidth_control len="999">대역폭 제어</bandwidth_control>
+    <manual len="999">수동</manual>
+    <max_download_rate len="999">최대 다운로드 속도</max_download_rate>
+    <max_upload_rate len="999">최대 업로드 속도</max_upload_rate>
+    <seeding len="999">시딩</seeding>
+    <seed_removed len="999">제거될 때까지 시드</seed_removed>
+    <stop_seeding len="999">다음 이후에 시딩 중지</stop_seeding>
+    <minutes len="999">분</minutes>
+    <stop_seeding_when_meet len="999">다음을 만나면 시딩 중지</stop_seeding_when_meet>
+    <torrent_save_path len="999">Torrent 저장 경로</torrent_save_path>
+    <encryption len="999">암호화</encryption>
+    <flow_control_schedule len="999">흐름 제어 일정</flow_control_schedule>
+    <bandwidth len="999">대역폭</bandwidth>
+    <mon len="999">월</mon>
+    <tue len="999">화</tue>
+    <wed len="999">수</wed>
+    <thu len="999">목</thu>
+    <fri len="999">금</fri>
+    <sat len="999">토</sat>
+    <sun len="999">일</sun>
+    <p2p_detail len="999">세부 정보</p2p_detail>
+    <top len="999">상단</top>
+    <up len="999">위로</up>
+    <down len="999">아래로</down>
+    <bottom len="999">하단</bottom>
+    <detail len="999">세부 정보</detail>
+    <torrent_scheduling len="18">일정 예약</torrent_scheduling>
+    <monday len="999">월요일</monday>
+    <tuesday len="999">화요일</tuesday>
+    <wednesday len="999">수요일</wednesday>
+    <thursday len="999">목요일</thursday>
+    <friday len="999">금요일</friday>
+    <saturday len="999">토요일</saturday>
+    <sunday len="999">일요일</sunday>
+    <total len="999">총계</total>
+    <torrent_s len="999">Torrent</torrent_s>
+    <torrent_url_speed len="999">전체 UL 속도</torrent_url_speed>
+    <torrent_dl_speed len="999">전체 DL 속도</torrent_dl_speed>
+    <remove_completed len="18">제거 완료됨</remove_completed>
+    <torrent len="999">Torrent</torrent>
+    <hhmm len="999">(HH:MM)</hhmm>
+    <start_download len="999">다운로드 시작</start_download>
+    <stop_download len="999">다운로드 중지</stop_download>
+    <dl_ul_speed len="999">DL/UL 속도</dl_ul_speed>
+    <priority len="999">우선 순위</priority>
+    <status len="999">상태</status>
+    <daily len="999">매일</daily>
+    <config len="999">구성</config>
+    <finished len="999">마침</finished>
+    <button1 len="999">클릭하여 파일 업로드</button1>
+    <button2 len="999">시작</button2>
+    <button3 len="999">중지</button3>
+    <desc1 len="999"><![CDATA[<br><br><b><font color=red>경로가 변경되었습니다. 원래 경로가 존재하지 않습니다.</font></b>]]></desc1>
+    <desc2 len="999">자동 다운로드가 활성화된 경우 일정 예약이 허용되지 않습니다. 자동 다운로드가 비활성화된 경우 다운로드 일정을 예약할 수 있습니다.</desc2>
+    <desc3 len="999">Torrent를 저장할 볼륨을 선택하십시오. 'P2P' 폴더가 자동으로 만들어집니다.</desc3>
+    <desc4 len="999"><![CDATA[다운로드 항목의 보안을 강화하기 위해 암호화를 활성화하거나 비활성화합니다.]]></desc4>
+    <desc5 len="999">무제한 다운로드 속도를 지정하려면 이 항목을 비워둡니다.</desc5>
+    <desc6 len="999">P2P 하루 종일 꺼짐</desc6>
+    <msg1 len="167">유효한 값이 아닙니다.</msg1>
+    <msg2 len="167">수신 연결 포트는 10000~65000 범위여야 합니다.</msg2>
+    <msg3 len="167">값은 1~1440분 범위여야 합니다.</msg3>
+    <msg4 len="167">값은 1~100 범위여야 합니다.</msg4>
+    <msg5 len="167">최대 Torrent 수는 20입니다.</msg5>
+    <msg6 len="167">권장되는 최대 동시 다운로드 수는 10입니다.</msg6>
+    <msg7 len="167">URL을 입력하십시오.</msg7>
+    <msg8 len="167">유효한 URL을 입력하십시오.</msg8>
+    <msg9 len="167">입력 경로를 입력하십시오.</msg9>
+    <msg11 len="167">시작 시간을 입력하십시오.</msg11>
+    <msg12 len="167">일일 다운로드 기간은 23:59분으로 제한됩니다.</msg12>
+    <msg13 len="167">시작 시간은 중지 시간을 초과할 수 없습니다.</msg13>
+    <msg14 len="167">값은 1~100000 범위여야 합니다.</msg14>
+    <msg15 len="167">중지 시간을 입력하십시오.</msg15>
+    <msg16 len="167">포트 xxx은(는) FTP 서버에 사용됩니다.</msg16>
+    <msg17 len="167">단일 선택만 허용됩니다.</msg17>
+    <msg18 len="167">언어를 입력하십시오.</msg18>
+    <msg19 len="167"><![CDATA['언어'의 길이는 32자를 초과할 수 없습니다. 다시 시도하십시오.]]></msg19>
+    <msg20 len="167">시작 시간은 현재 시간보다 나중이어야 합니다.</msg20>
+    <msg21 len="167">이 토렌트 파일을 추가하는 데 실패했습니다. 토렌트 파일이 잘못되었거나 중복되었습니다.</msg21>
+    <msg22 len="167">이 토렌트 파일을 추가하는 데 실패했습니다. My Cloud 시스템에 충분한 공간이 없습니다.</msg22>
+    <msg23 len="167">스토리지 공간이 충분하지 않습니다.</msg23>
+    <msg24 len="167">Torrent 업로드 오류</msg24>
+    <msg25 len="167">이 서비스는 활성화되지 않았습니다. 관리자에게 문의하여 활성화하십시오.</msg25>
+    <msg26 len="167">이 Torrent를 삭제하시겠습니까?</msg26>
+    <msg27 len="167">P2P 다운로드가 비활성화되었습니다.</msg27>
+    <msg28 len="167">P2P 다운로드가 활성화되었습니다.</msg28>
+    <msg29 len="167">최대 URL 길이는 191자입니다.</msg29>
+  <desc7>무제한 업로드 속도를 지정하려면 이 항목을 비워둡니다.</desc7><msg30>이 포트 번호는 이미 사용 중이거나 예약되어 있습니다. 다른 포트 번호를 입력하십시오.</msg30><desc8>Torrent 저장 경로를 변경하여 이전에 다운로드한 데이터에 액세스할 수 없습니다. 경로를 수정하기 전에 다운로드한 데이터를 이동하십시오.</desc8><title4>일정 다운로드</title4><schedule>일정</schedule><tip1>Torrent URL, 마그넷 링크 또는 Torrent 해시 코드를 입력하여 다운로드용 Torrent를 추가하십시오.</tip1><tip2>이 옵션을 활성화하면 Torrent 추가 시 다운로드를 자동 시작합니다. 일정 다운로드가 건너뛰기됩니다.</tip2><desc9>성공적으로 추가되었습니다.</desc9></_p2p>
+  <_time_machine>
+    <title>Mac 백업</title>
+    <no_share len="999">공유 폴더가 없습니다.</no_share>
+    <desc len="999">Mac용 Time Machine 백업 설정을 구성합니다.</desc>
+    <sel len="999">공유 선택</sel>
+  </_time_machine>
+  <_elephant_drive>
+    <title len="50">ElephantDrive</title>
+    <access_backups>백업 액세스</access_backups>
+    <e_mail len="50">이메일</e_mail>
+    <password len="50">암호</password>
+    <verify_password len="50">암호 확인</verify_password>
+    <key_featuresNote>
+   &lt;b&gt;WD My Cloud Mirror 시스템을 보호하십시오.&lt;/b&gt;&lt;br&gt;
+   ElephantDrive는 WD My Cloud Mirror 시스템을 클라우드에 연결하여 보호하는 클라우드 스토리지 솔루션을 제공합니다. 네이티브 클라이언트가 업계 최강의 보안 기능으로 WD My Cloud Mirror 시스템에 클라우드 백업과 동기화를 제공합니다. 이 솔루션은 분리 사이트 보호, 인텔리전트 동기화, 단순한 보안 공유라는 핵심적인 3가지 클라우드 스토리지 기능을 제공합니다.
+   &lt;br&gt;&lt;br&gt;
+  </key_featuresNote>
+    <elephant_link_tml>
+    	<![CDATA[
+		ElephantDrive에 대해 자세히 알아보려면 <a href="http://www.elephantdrive.com/m/ct.aspx?ici={0}" target="_blank">http://www.elephantdrive.com/m/ct.aspx?ici={1}</a>를 방문하십시오.
+		]]>
+	</elephant_link_tml>
+    <conn_status>상태</conn_status>
+    <register>등록</register>
+    <reg_success>등록 성공</reg_success>
+    <login>로그인</login>
+    <forgot_password>
+		<a href="https://vault.elephantdrive.com/account/forgot_password.aspx" target="_blank">암호를 잊으셨나요?</a>
+		</forgot_password>
+    <Note1>ElephantDrive 계정이 없는 경우 위의 정보를 입력하고 '등록'을 클릭하여 계정을 만드십시오.</Note1>
+    <Note2>ElephantDrive 계정이 있는 경우 위의 정보를 입력하고 '로그인'을 클릭하십시오.</Note2>
+    <Note3>계정 관리와 데이터 백업의 경우 ElephantDrive 웹사이트로 이동하십시오. </Note3>
+    <msg1 len="167">이메일 주소를 입력하십시오.</msg1>
+    <msg2 len="167">유효한 이메일 주소를 입력하십시오.</msg2>
+    <msg3 len="167">암호를 입력하십시오.</msg3>
+    <msg4 len="167">암호와 암호 확인이 일치하지 않습니다. 다시 시도하십시오.</msg4>
+    <view_file_link>파일을 보려면 '<a href="https://vault.elephantdrive.com" target="_blank">https://vault.elephantdrive.com</a>'을 방문하십시오.</view_file_link>
+    <new_device_backup_wizard>      <![CDATA[<a href=" https://vault.elephantdrive.com/account/autologin.aspx?user={0}&session={1}&date={2}&tab={3}&dname={4}" target="_blank">새 장치 백업 마법사</a>]]>    </new_device_backup_wizard>
+    <msg6 len="167">온라인</msg6>
+    <msg7 len="167">오프라인</msg7>
+    <msg8 len="167">대기 중...</msg8>
+    <msg9 len="167">연결 중...</msg9>
+    <msg10 len="167">데이터베이스에 이미 있는 이메일입니다.</msg10>
+    <msg11 len="167">일시적으로 서비스를 사용할 수 없는 상태입니다.</msg11>
+    <msg12 len="167">일시적으로 서비스를 사용할 수 없는 상태입니다.</msg12>
+    <msg13 len="167">이메일이 없습니다.</msg13>
+    <msg14 len="167">올바르지 않은 암호입니다.</msg14>
+  </_elephant_drive>
+  <_codepage>
+    <ISO-8859-1 len="999">서유럽어</ISO-8859-1>
+    <ISO8859-1 len="999">서유럽어</ISO8859-1>
+    <ISO-8859-2 len="999">슬라브어/중앙 유럽어</ISO-8859-2>
+    <ISO8859-2 len="999">슬라브어/중앙 유럽어</ISO8859-2>
+    <ISO-8859-3 len="999">남유럽어</ISO-8859-3>
+    <ISO-8859-4 len="999">발트어</ISO-8859-4>
+    <ISO-8859-5 len="999">키릴 자모</ISO-8859-5>
+    <ISO-8859-7 len="999">현대 그리스어</ISO-8859-7>
+    <ISO-8859-9 len="999">터키어</ISO-8859-9>
+    <ISO8859-9 len="999">터키어</ISO8859-9>
+    <ISO-8859-10 len="999">북유럽어</ISO-8859-10>
+    <ISO-8859-13 len="999">발트어</ISO-8859-13>
+    <ISO-8859-14 len="999">켈트어</ISO-8859-14>
+    <ISO-8859-15 len="999">서유럽어와 Euro</ISO-8859-15>
+    <ISO-8859-16 len="999">남유럽어</ISO-8859-16>
+    <KOI8-R len="999">러시아어</KOI8-R>
+    <KOI8-U len="999">우크라이나어, 벨로루시어</KOI8-U>
+    <KOI8-RU len="999">우크라이나어, 벨로루시어</KOI8-RU>
+    <CP1250 len="999">MS Windows 중앙 유럽어</CP1250>
+    <CP1251 len="999">MS Windows 키릴 자모</CP1251>
+    <cp1251 len="999">MS Windows 키릴 자모</cp1251>
+    <CP1252 len="999">MS Windows 라틴 알파벳</CP1252>
+    <CP1253 len="999">MS Windows 그리스어</CP1253>
+    <CP1254 len="999">MS Windows 터키어</CP1254>
+    <CP1257 len="999">MS Windows 발트어</CP1257>
+    <CP850 len="999">서유럽어</CP850>
+    <CP866 len="999">MS-DOS 키릴 자모</CP866>
+    <CP1131 len="999">MS-DOS 벨로루시</CP1131>
+    <ISO-8859-6 len="999">아랍어</ISO-8859-6>
+    <ISO-8859-8 len="999">히브리어</ISO-8859-8>
+    <ISO8859-8 len="999">히브리어</ISO8859-8>
+    <CP1255 len="999">MS Windows 히브리어</CP1255>
+    <CP1256 len="999">MS Windows 아랍어</CP1256>
+    <CP862 len="999">히브리어</CP862>
+    <EUC-JP len="999">일본어</EUC-JP>
+    <SHIFT_JIS len="999">일본어</SHIFT_JIS>
+    <CP932 len="999">일본어</CP932>
+    <ISO-2022-JP len="999">일본어</ISO-2022-JP>
+    <ISO-2022-JP-2 len="999">일본어</ISO-2022-JP-2>
+    <ISO-2022-JP-1 len="999">일본어</ISO-2022-JP-1>
+    <EUC-CN len="999">중국어(간체)</EUC-CN>
+    <HZ len="999">중국어(간체)</HZ>
+    <GBK len="999">중국어(간체)</GBK>
+    <CP936 len="999">중국어(간체)</CP936>
+    <GB2312 len="999">중국어(간체)</GB2312>
+    <gb2312 len="999">중국어(간체)</gb2312>
+    <GB18030 len="999">중국어(간체)</GB18030>
+    <EUC-TW len="999">중국어(번체)</EUC-TW>
+    <BIG5 len="999">중국어(번체)</BIG5>
+    <big5 len="999">중국어(번체)</big5>
+    <CP950 len="999">중국어(번체)</CP950>
+    <BIG5-HKSCS len="999">중국어 번체(홍콩)</BIG5-HKSCS>
+    <BIG5-HKSCS_2001 len="999">중국어 번체(홍콩)</BIG5-HKSCS_2001>
+    <BIG5-HKSCS_1999 len="999">중국어 번체(홍콩)</BIG5-HKSCS_1999>
+    <ISO-2022-CN len="999">중국어(간체)</ISO-2022-CN>
+    <ISO-2022-CN-EXT len="999">중국어(간체)</ISO-2022-CN-EXT>
+    <EUC-KR len="999">한국어</EUC-KR>
+    <euc-kr len="999">한국어</euc-kr>
+    <CP949 len="999">한국어</CP949>
+    <ISO-2022-KR len="999">한국어</ISO-2022-KR>
+    <JOHAB len="999">한국어</JOHAB>
+    <ARMSCII-8 len="999">아르메니아어</ARMSCII-8>
+    <Georgian-Academy len="999">그루지야어</Georgian-Academy>
+    <Georgian-PS len="999">그루지야어</Georgian-PS>
+    <KOI8-T len="999">타지키스탄어</KOI8-T>
+    <PT154 len="999">카자흐어</PT154>
+    <RK1048 len="999">카자흐어</RK1048>
+    <ISO-8859-11 len="999">태국어</ISO-8859-11>
+    <TIS-620 len="999">태국어</TIS-620>
+    <CP874 len="999">태국어</CP874>
+    <MuleLao-1 len="999">라오어</MuleLao-1>
+    <CP1133 len="999">라오어</CP1133>
+    <VISCII len="999">베트남어</VISCII>
+    <TCVN len="999">베트남어</TCVN>
+    <CP1258 len="999">베트남어</CP1258>
+    <UTF-8 len="999">유니코드 8비트</UTF-8>
+    <UCS-2 len="999">Really UTF-16 BE</UCS-2>
+    <UCS-2BE len="999">유니코드 16비트</UCS-2BE>
+    <UCS-2LE len="999">유니코드 16비트</UCS-2LE>
+    <UCS-4 len="999">유니코드 32비트</UCS-4>
+    <UCS-4BE len="999">유니코드 32비트</UCS-4BE>
+    <UCS-4LE len="999">유니코드 32비트</UCS-4LE>
+    <UTF-16 len="999">유니코드 16비트</UTF-16>
+    <UTF-16BE len="999">유니코드 16비트(Big Endian)</UTF-16BE>
+    <UTF-16LE len="999">유니코드 16비트(Little Endian)</UTF-16LE>
+    <UTF-32 len="999">유니코드 32비트</UTF-32>
+    <UTF-32BE len="999">유니코드 32비트(Big Endian)</UTF-32BE>
+    <UTF-32LE len="999">유니코드 32비트(Little Endian)</UTF-32LE>
+    <UTF-7 len="999">유니코드 7비트</UTF-7>
+    <CP437 len="999">미국, 캐나다</CP437>
+    <CP737 len="999">그리스어</CP737>
+    <CP775 len="999">에스토니아어, 리투아니나어, 라트비아어</CP775>
+    <CP852 len="999">슬라브어(중앙 유럽, 동유럽)</CP852>
+    <CP853 len="999">MS-DOS 터키어</CP853>
+    <CP855 len="999">키릴 자모</CP855>
+    <CP857 len="999">터키어</CP857>
+    <CP858 len="999">서유럽어</CP858>
+    <CP860 len="999">MS-DOS 포르투갈어</CP860>
+    <CP861 len="999">MS-DOS 아이슬란드어</CP861>
+    <CP863 len="999">MS-DOS 캐나다 프랑스어</CP863>
+    <CP865 len="999">MS-DOS 북유럽어</CP865>
+    <cp865 len="999">MS-DOS 북유럽어</cp865>
+    <CP869 len="999">그리스어</CP869>
+    <CP1125 len="999">우크라이나어</CP1125>
+    <CP864 len="999">태국어</CP864>
+    <EUC-JISX0213 len="999">일본어</EUC-JISX0213>
+    <Shift_JISX0213 len="999">일본어</Shift_JISX0213>
+    <ISO-2022-JP-3 len="999">일본어</ISO-2022-JP-3>
+    <BIG5-2003 len="999">중국어(번체)(experimental)</BIG5-2003>
+    <TDS565 len="999">투르크멘어</TDS565>
+  </_codepage>
+  <_usb_backups>
+    <title len="999">USB 백업 정보</title>
+    <title_note len="999">WD My Cloud Mirror 시스템을 사용하여 USB 장치에/에서 백업합니다.</title_note>
+    <title2 len="999">USB 백업 작업</title2>
+    <backups_detail len="999">USB 백업 세부 정보</backups_detail>
+    <job_name len="999">작업 이름</job_name>
+    <direction len="999">방향</direction>
+    <usb_backups len="999">USB 백업</usb_backups>
+    <usb_to_nas len="999">USB에서 NAS로</usb_to_nas>
+    <nas_to_usb len="999">NAS에서 USB로</nas_to_usb>
+    <source_dir len="999">소스 폴더</source_dir>
+    <dest_dir len="999">대상 폴더</dest_dir>
+    <select_source_dir len="999">소스 폴더 선택</select_source_dir>
+    <select_dest_dir len="999">대상 폴더 선택</select_dest_dir>
+    <sync len="999">동기화</sync>
+    <copy len="999">복사</copy>
+    <status len="999">상태</status>
+    <datetime_format len="999">MM/dd/yyyy HH:mm:ss</datetime_format>
+    <msg2 len="167">소스 폴더를 선택하십시오.</msg2>
+    <msg3 len="167">대상 폴더를 선택하십시오.</msg3>
+    <msg7 len="167">작업 이름을 입력합니다.</msg7>
+    <msg8 len="167">작업 이름이 중복입니다.</msg8>
+    <msg9 len="167">소스 폴더와 대상 폴더가 중복입니다.</msg9>
+    <msg10 len="167">작업을 선택하십시오.</msg10>
+    <status0_1>백업 완료: {0}</status0_1>
+    <status2>백업 진행 중</status2>
+    <status_4>중복 백업</status_4>
+    <status_5>추가적인 백업이 허용되지 않습니다.</status_5>
+    <status_6>메모리 할당 오류</status_6>
+    <status_7>유효하지 않은 백업</status_7>
+    <status_8>유효하지 않은 백업 경로</status_8>
+    <status_9>유효하지 않은 소스 폴더</status_9>
+    <no_usb len="999">USB 스토리지가 없습니다.</no_usb>
+    <msg1 len="999">경고! 파일이 소스에서 대상으로 복사됩니다. 대상의 추가 파일이 삭제되고, 소스가 동일한 이름의 파일로 덮어씁니다. 소스 데이터가 변경되지 않은 채로 유지됩니다.</msg1>
+    <edit_usb_backup len="999">USB 백업 편집</edit_usb_backup>
+	<backups_recovery len="999">USB 백업 복구</backups_recovery>
+	<incremental len="999">증분</incremental>
+	<msg11>
+		<![CDATA[
+		이 작업을 삭제하시겠습니까? <br> <br>
+		백업 작업이 삭제됩니다. <br>참고: 이전 파일 백업은 삭제되지 않습니다.
+	]]>
+	</msg11>
+	<msg12>최대 백업 작업 수에 도달했습니다.</msg12>
+	<backup_now>백업 시작</backup_now>
+	<backup_cancel>백업 중지</backup_cancel>
+	<edit_job>작업 수정</edit_job>
+	<del_job>작업 삭제</del_job>
+	<status_1>백업 실패</status_1>
+	<create_usb_backups>작업 만들기</create_usb_backups>
+	<recover>백업 복구</recover>
+  <auto_start>연결 시 자동 시작</auto_start>
+	<over_select_msg>최대 폴더 또는 파일 수에 도달했습니다.</over_select_msg>
+	<recovering>복구 중...</recovering>
+	<status_10>백업 작업 취소됨</status_10>
+	<status_1_d>백업에 실패했습니다. 시스템 설정을 확인하십시오.</status_1_d>
+	<status_2>백업 소스 경로가 유효하지 않습니다. 설정을 확인하여 수정하십시오.</status_2>
+	<status_3>백업 대상 경로가 유효하지 않습니다. 설정을 확인하여 수정하십시오.</status_3>
+	<status1>백업 준비 완료</status1>
+	<status0>백업 완료</status0>
+	<details>작업 세부 정보</details>
+	<backup_type>백업 유형</backup_type>
+	<backup_Stopped>백업 중지됨</backup_Stopped>
+  <backup_type_tip>복사 - 소스에서 대상으로 파일을 복사합니다. 중복 파일은 덮어쓰기되지 않습니다.&lt;br&gt;
+  동기화 - 소스에서 대상으로 파일을 복사합니다. 중복 파일이 덮어쓰기됩니다.&lt;br&gt;
+  증분 - 최대 25개 사본의 파일 증분 변경 사항을 대상으로 복사합니다.
+  </backup_type_tip></_usb_backups>
+  <_pwd>
+    <msg1 len="167">잘못된 암호를 입력했습니다. 다시 시도하십시오.</msg1>
+    <msg2 len="167">관리자 암호가 성공적으로 변경되었습니다.</msg2>
+    <msg3 len="167">암호에는 공백을 사용할 수 없습니다.</msg3>
+    <msg4 len="167">새 암호에는 공백을 사용할 수 없습니다.</msg4>
+    <msg5 len="167">새 암호는 5자 이상이어야 합니다. 다시 시도하십시오.</msg5>
+    <msg6 len="167">      <![CDATA[새 암호에는 다음 문자를 사용할 수 없습니다.  @ : / \ % ']]>
+    </msg6>
+    <msg7 len="167">암호가 일치하지 않습니다.</msg7>
+    <msg8 len="167">      <![CDATA[암호에는 다음 문자를 사용할 수 없습니다.  @ : / \ % ']]>
+    </msg8>
+    <msg9 len="167">암호에는 공백을 사용할 수 없습니다.</msg9>
+    <msg10 len="167">암호는 5자 이상이어야 합니다. 다시 시도하십시오.</msg10>
+    <msg11 len="167">암호 길이는 16자를 초과할 수 없습니다. 다시 시도하십시오.</msg11>
+  </_pwd>
+  <_ip>
+    <msg1 len="167">입력한 서브넷 마스크가 올바르지 않습니다.</msg1>
+    <msg2 len="167">IP 주소를 입력하십시오.</msg2>
+    <msg3 len="167">양의 정수를 입력하십시오.</msg3>
+    <msg4 len="167">유효하지 않은 IP 주소입니다. 숫자의 첫 번째 세트는 1~223 범위에 있어야 합니다.</msg4>
+    <msg5 len="167">유효하지 않은 IP 주소입니다. 숫자의 두 번째 세트는 0~255 범위에 있어야 합니다.</msg5>
+    <msg6 len="167">유효하지 않은 IP 주소입니다. 숫자의 세 번째 세트는 0~255 범위에 있어야 합니다.</msg6>
+    <msg7 len="167">유효하지 않은 IP 주소입니다. 숫자의 네 번째 세트는 1~254 범위에 있어야 합니다.</msg7>
+    <msg8 len="167">유효한 IP 주소가 아닙니다.</msg8>
+    <msg9 len="167">유효하지 않은 IP 주소입니다. 다시 시도하십시오.</msg9>
+    <msg10 len="167">서브넷 마스크 주소를 입력하십시오.</msg10>
+    <msg11 len="167">서브넷 마스크 주소 값으로 숫자만 사용할 수 있습니다.</msg11>
+    <msg12 len="167">유효하지 않은 서브넷 마스크 주소입니다. 숫자의 첫 번째 세트는 1~255 범위에 있어야 합니다.</msg12>
+    <msg13 len="167">유효하지 않은 서브넷 마스크 주소입니다. 숫자의 두 번째 세트는 0~255 범위에 있어야 합니다.</msg13>
+    <msg14 len="167">유효하지 않은 서브넷 마스크 주소입니다. 숫자의 세 번째 세트는 0~255 범위에 있어야 합니다.</msg14>
+    <msg15 len="167">유효하지 않은 서브넷 마스크 주소입니다. 숫자의 네 번째 세트는 0~255 범위에 있어야 합니다.</msg15>
+    <msg16 len="167">유효한 서브넷 마스크 주소가 아닙니다.</msg16>
+    <msg17 len="167">유효하지 않은 서브넷 마스크 주소입니다. 다시 시도하십시오.</msg17>
+    <msg18 len="167">게이트웨이 주소를 입력하십시오.</msg18>
+    <msg19 len="167">게이트웨이 주소 값으로 숫자만 사용할 수 있습니다.</msg19>
+    <msg20 len="167">유효하지 않은 게이트웨이 주소입니다. 숫자의 첫 번째 세트는 1~223 범위에 있어야 합니다.</msg20>
+    <msg21 len="167">유효하지 않은 게이트웨이 주소입니다. 숫자의 두 번째 세트는 0~255 범위에 있어야 합니다.</msg21>
+    <msg22 len="167">유효하지 않은 게이트웨이 주소입니다. 숫자의 세 번째 세트는 0~255 범위에 있어야 합니다.</msg22>
+    <msg23 len="167">유효하지 않은 게이트웨이 주소입니다. 숫자의 네 번째 세트는 0~255 범위에 있어야 합니다.</msg23>
+    <msg24 len="167">유효한 게이트웨이 주소가 아닙니다.</msg24>
+    <msg25 len="167">유효하지 않은 게이트웨이 주소입니다. 다시 시도하십시오.</msg25>
+    <msg26 len="167">DNS IP 주소에 숫자만 사용할 수 있습니다.</msg26>
+    <msg27 len="167">유효하지 않은 DNS IP 주소입니다. 숫자의 첫 번째 세트는 1~223 범위에 있어야 합니다.</msg27>
+    <msg28 len="167">유효하지 않은 DNS IP 주소입니다. 숫자의 두 번째 세트는 0~255 범위에 있어야 합니다.</msg28>
+    <msg29 len="167">유효하지 않은 DNS IP 주소입니다. 숫자의 세 번째 세트는 0~255 범위에 있어야 합니다.</msg29>
+    <msg30 len="167">유효하지 않은 DNS IP 주소입니다. 숫자의 네 번째 세트는 0~255 범위에 있어야 합니다.</msg30>
+    <msg31 len="999">
+      <![CDATA[
+		입력된 IP 주소는 설정된 서브넷 마스크의 브로드캐스트 주소로서 사용할 수 없습니다. 유효한 IP 주소와 서브넷 마스크 조합을 입력하십시오.
+		]]>
+		</msg31>
+    <msg32 len="167">VLAN ID는 1~4094 범위에 있어야 합니다.</msg32>
+    <msg33 len="167">VLAN ID에는 공백을 사용할 수 없습니다.</msg33>
+    <msg34 len="167">접두어 길이에는 공백을 사용할 수 없습니다.</msg34>
+    <msg35 len="167">접두어 길이는 0~128 범위에 있어야 합니다.</msg35>
+    <msg36 len="167">LAN1과 LAN2를 동일한 도메인으로 설정하는 것은 허용되지 않습니다.</msg36>
+    <msg37 len="167">서버 주소를 입력하십시오.</msg37>
+    <msg38 len="167">유효한 DNS1 주소가 아닙니다.</msg38>
+    <msg39 len="167">유효한 DNS2 주소가 아닙니다.</msg39>
+  <msg40 len="999"><![CDATA[올바르지 않은 고정 IP를 설정하면 WD My Cloud Mirror에 액세스할 수 없게 됩니다.<br>계속하려면 '저장'을 클릭합니다.]]></msg40>
+    
+  </_ip>
+  <_safepoints>
+    <title len="999">safepoint 프로파일</title>
+    <name len="999">작업</name>
+    <create_on len="999">만든 날짜</create_on>
+    <last_updated len="999">마지막 업데이트 날짜</last_updated>
+    <auto len="999">자동 업데이트</auto>
+    <auto_s len="999">자동 업데이트 일정</auto_s>
+    <backup_now len="999">지금 백업</backup_now>
+    <time len="999">자동 업데이트 시간</time>
+    <date_time len="999">      <![CDATA[자동 업데이트 날짜 및 시간]]>
+    </date_time>
+    <size len="999">      <![CDATA[크기]]>
+    </size>
+  <sub_title>Safepoint에서 컨텐츠 업로드</sub_title><desc>이 마법사를 통해 My Cloud (Gen 1)에서 만든 Safepoint 백업에서 컨텐츠를 마이그레이션할 수 있습니다.</desc><button_start_recovery>마이그레이션 시작</button_start_recovery><recovery_desc>Safepoint 위치를 선택하십시오.</recovery_desc><local_usb>로컬 USB</local_usb><scan_network>네트워크 검색</scan_network><search_usb>USB 장치 검색 중</search_usb><search_network_wait>네트워크에서 장치를 검색하는 중입니다... 기다려 주세요.</search_network_wait><select_a_drive>드라이브 선택</select_a_drive><retrieving_safepoints>safepoint 검색 중</retrieving_safepoints><choose_a_savepoint>safepoint를 선택하십시오.</choose_a_savepoint><choose_desc>선택한 장치/공유에서 다음 safepoint가 발견되었습니다. 아래 목록에서 safepoint를 선택하고 마침을 클릭하여 복원을 시작하십시오.</choose_desc><safepoint_details>safepoint 세부 정보</safepoint_details><created_for>만들어짐</created_for><restore_progress>Safepoint 마이그레이션 진행</restore_progress><currently_copying>현재 복사 중</currently_copying><copied>({0}%) 복사됨</copied><device_login>장치 로그인</device_login><share_login>공유 로그인</share_login><username>사용자 이름</username><password>암호</password><error_code_1>원격 공유에 연결할 수 없습니다.</error_code_1><error_code_2>대상 위치를 사용할 수 없습니다.</error_code_2><error_code_3>마이그레이션할 공간이 부족합니다.</error_code_3><error_code_4>대상에 쓸 수 없습니다.</error_code_4><error_code_5>데이터를 마이그레이션하는 도중 오류가 발생했습니다.</error_code_5><error_code_6>마이그레이션한 데이터의 이름을 변경하는 도중 오류가 발생했습니다.</error_code_6><error_code_7>공유를 만드는 도중 오류가 발생했습니다.</error_code_7><error_code_8>사용자가 마이그레이션을 취소했습니다.</error_code_8><error_code_9>마이그레이션이 이미 진행 중입니다.</error_code_9><restore_done>데이터가 성공적으로 복원되었습니다.</restore_done><msg_pre_restore>마이그레이션 도중에는 클라우드에 액세스할 수 없습니다. DLNA 스트리밍 장치 또는 My Cloud, MyCloud.com, WD Photos 모바일 앱 및 WD Sync 같은 WD 소프트웨어를 사용할 수 없습니다. 계속 진행하시겠습니까?</msg_pre_restore><preparing_data>마이그레이션할 Safepoint 데이터를 준비합니다. 몇 분 정도 걸릴 수 있습니다.</preparing_data></_safepoints>
+  <_remote_backup>
+    <server len="44">원격 서버</server>
+    <remote_title1 len="44">원격 백업 작업</remote_title1>
+    <remote_title2 len="44">원격 백업 서버</remote_title2>
+    <remote_title3 len="999">데이터 보호</remote_title3>
+    <remote_title4 len="999">원격 백업</remote_title4>
+    <remote_title5 len="999">원격 서버에 연결</remote_title5>              
+	<remote_title6 len="999">My Cloud 계정에 로그인</remote_title6>    
+	<remote_title7 len="999">어느 위치에 백업하시겠습니까?</remote_title7>       
+	<remote_title8 len="999">발견된 장치가 없습니다.</remote_title8>          
+    <remote_title9 len="999">원격 백업 복구 목록</remote_title9>
+	<remote_title10 len="999">원격 백업 세부 정보</remote_title10>    
+    <about len="999">원격 백업 정보</about>
+    <desc len="999">
+   WD My Cloud Mirror 시스템을 내부의 다른 서버나 네트워크 외부의 서버에 백업합니다.&lt;br&gt;
+   원격 백업을 진행하기 전에 다음 사항을 확인하십시오.&lt;br&gt;
+   &lt;ol&gt;
+    &lt;li&gt;이 시스템을 백업할 대상인 원격 WD My Cloud Mirror 시스템이 있습니다. 이전의 기존 데이터 외에 이 시스템의 기존 공유와 데이터도 대상 시스템에 복사됩니다.&lt;/li&gt;
+    &lt;li&gt;원격 WD My Cloud Mirror 시스템의 원격 서버 설정이 켜졌습니다.&lt;/li&gt;
+    &lt;li&gt;원격 WD My Cloud Mirror 시스템의 백업 암호가 활성화되었습니다.&lt;/li&gt;
+    &lt;li&gt;인터넷을 통해 WD My Cloud Mirror 시스템을 보기 위해 설정 &gt; 네트워크 &gt; 포트 전달에서 SSH 및 원격 백업 서비스 모두에 대한 포트 포워딩 규칙을 추가했습니다.&lt;/li&gt;
+   &lt;/ol&gt;
+  </desc>
+    <desc2 len="999">WD My Cloud Mirror 시스템의 한 스토리지 위치에서 다른 위치로 기존 콘텐츠를 백업합니다.</desc2>
+    <desc3 len="999">WD My Cloud Mirror 시스템에 추가된 원격 백업 작업이 없습니다.</desc3>
+    <desc4 len="999">원격 서버 연결 방법을 선택하십시오.</desc4>
+	<desc5 len="999">이메일을 등록하면 WD My Cloud Mirror는 마법처럼 작동하여 모든 장치를 검색합니다.</desc5>
+	<desc6 len="999">
+   WD My Cloud Mirror 시스템을 백업할 수 있는 대상 장치를 찾을 수 없습니다.&lt;br&gt;&lt;br&gt;
+   다음을 확인하십시오.&lt;br&gt;&lt;br&gt;
+   * RSync, SSH 포트가 전달되었는지 확인하십시오.&lt;br&gt;&lt;br&gt;
+   다시 시도하려면 뒤로를 클릭하십시오.
+  </desc6>
+    <server_desc len="999">백업 암호를 설정하여 원격 서버로 이 시스템의 원격 백업을 활성화하십시오.</server_desc>
+    <create_desc len="999">WD My Cloud Mirror 시스템의 콘텐츠를 보호하도록 선택할 수 있습니다. 보호할 공유를 지정하고 &lt;b&gt;확인&lt;/b&gt;을 선택하여 계속 진행하십시오.</create_desc>
+    <backup_complete_on len="999">백업 완료: %s</backup_complete_on>
+    <recover_complete_on len="999">복구 완료: %s</recover_complete_on>
+    <task len="999">작업 이름</task>
+    <schedule len="999">일정</schedule>
+    <status len="999">상태</status>
+    <now len="999">지금</now>
+    <recover len="999">복구</recover>
+    <ready len="999">준비</ready>
+    <finished len="999">마침</finished>
+    <job_desc len="999">설명</job_desc>
+    <type len="999">서비스 유형</type>
+    <path len="999">폴더 경로</path>
+    <remote_path len="999">원격 공유</remote_path>
+    <ip len="999">원격 IP</ip>
+    <pw len="999">암호</pw>
+    <Num len="999">숫자</Num>
+    <ssh_result len="999">SSH 테스트 결과</ssh_result>
+    <rsync_result len="999">RSYNC 테스트 결과</rsync_result>
+    <failed len="999">실패함</failed>
+    <wait len="999">기다려 주세요...</wait>
+    <mode len="999">일정 모드</mode>
+    <manual len="999">수동</manual>
+    <schedule2 len="999">일정</schedule2>
+    <month len="999">월</month>
+    <day len="999">일</day>
+    <hour len="999">시간</hour>
+    <minute len="999">분</minute>
+    <yes len="999">예</yes>
+    <no len="999">아니요</no>
+    <select_one len="999">한 공유를 선택하십시오.</select_one>
+    <create len="999">작업 만들기</create>
+    <job_name len="999">작업 이름</job_name>
+    <create_on len="999">만든 날짜</create_on>
+    <last_updated len="999">마지막 업데이트 날짜</last_updated>
+    <auto len="999">자동 업데이트</auto>
+    <auto_s len="999">자동 업데이트 일정</auto_s>
+    <backup_now len="999">지금 백업</backup_now>
+    <later len="999">나중에</later>
+    <time len="999">자동 업데이트 시간</time>
+    <date_time len="999">      <![CDATA[자동 업데이트 날짜 및 시간]]>
+    </date_time>
+    <size len="999">      <![CDATA[크기]]>
+    </size>
+    <x_detail len="999">%s의 세부 정보</x_detail>
+    <create_schedule_desc len="999">원격 백업을 만드는 데에 시간이 다소 걸릴 수 있으며, 이 작업을 하는 동안 WD My Cloud Mirror 시스템의 성능에 약간의 영향이 미칠 수 있습니다. 지금 백업을 만들거나 나중 백업 일정을 예약하도록 선택할 수 있습니다.</create_schedule_desc>
+    <incomplete len="999">백업 실패</incomplete>
+    <completed len="999">백업 완료</completed>
+    <pw_desc len="999">인터넷을 통해 WD My Cloud Mirror 시스템을 보려면 설정 &gt; 네트워크 &gt; 포트 전달에서 SSH와 원격 백업 서비스 둘 모두에 대한 포트 전달 규칙을 추가해야 합니다.</pw_desc>
+    <choose len="999">방법 선택</choose>
+	<mycloud len="999">My Cloud</mycloud>
+    <encryption len="999">암호화</encryption>
+    <bandwidth>대역폭 한도</bandwidth>
+    <msg1 len="999">지금 이 백업 작업을 실행하시겠습니까?</msg1>
+    <msg2 len="999">
+      <![CDATA[설정이 완료되었습니다. <b>마침</b>을 클릭하여 현재 설정을 저장하십시오.]]>
+		</msg2>
+    <msg3 len="999">작업 이름을 입력하십시오.</msg3>
+    <msg4 len="999">입력한 작업 이름이 이미 존재합니다. 다른 이름을 입력하십시오.</msg4>
+    <msg5 len="999">
+      <![CDATA[
+		작업 이름에는 다음 문자만 사용할 수 있습니다. 'a-z', 'A-Z', '0-9', '-', '_'
+		]]>
+		</msg5>
+    <msg6 len="999">경로 선택</msg6>
+    <msg7 len="999">경로 길이는 235자를 초과할 수 없습니다. 다시 시도하십시오.</msg7>
+    <msg8 len="999">암호를 입력하십시오.</msg8>
+    <msg9 len="999">RSYNC 사용자 이름을 입력하십시오.</msg9>
+    <msg10 len="999">RSYNC 암호를 입력하십시오.</msg10>
+    <msg11 len="999">ssh 사용자 이름을 입력하십시오.</msg11>
+    <msg12 len="999">ssh 암호를 입력하십시오.</msg12>
+    <msg13 len="999">원격 하드 드라이브의 공간이 충분하지 않습니다.</msg13>
+    <msg14 len="999">로컬 하드 드라이브의 공간이 충분하지 않습니다.</msg14>
+    <msg15 len="999">한 항목을 선택하십시오.</msg15>
+    <msg16 len="999">백업 작업이 삭제됩니다. 참고: 이전 파일 백업은 삭제되지 않습니다.</msg16>
+    <msg17 len="999">최대 백업 작업 수에 도달했습니다.</msg17>
+    <msg18 len="999">원격 IP를 입력하십시오.</msg18>
+    <msg19 len="999">필요한 공간</msg19>
+    <msg20 len="999">사용 가능한 공간</msg20>
+    <msg21 len="999">
+    	<![CDATA[
+		암호에는 다음 문자를 사용할 수 없습니다. " ' \ ? # ` : & + ;
+		]]>
+	</msg21>
+    <msg22 len="999">경로 선택</msg22>
+    <msg23 len="999">RSYNC 테스트에 실패했습니다.</msg23>
+    <msg24 len="999">원격 IP 주소를 입력하십시오.</msg24>
+    <msg25 len="999">지금 백업을 수행하시겠습니까?</msg25>
+    <msg26 len="999">항목이 없습니다.</msg26>
+    <msg27 len="999">SSH 사용자 이름에는 공백을 사용할 수 없습니다.</msg27>
+    <msg28 len="999">한 폴더를 선택하십시오.</msg28>
+    <msg29 len="999">데이터를 복구하시겠습니까? 이 프로세스에서는 원격 서버의 데이터를 로컬 WD My Cloud Mirror 장치에 복구합니다.</msg29>
+    <msg30 len="999">원격 서버 기능을 끄시겠습니까? 그러면 다른 네트워크 저장 장치가 이 WD My Cloud Mirror로 백업할 수 없게 됩니다.</msg30>
+    <msg31 len="999">다음 일정으로 작업이 실행됩니다.</msg31>
+    <msg32 len="999">이 원격 백업 작업이 완료되지 않았습니다.</msg32>
+    <msg33 len="999">최대 폴더 또는 파일 수에 도달했습니다.</msg33>
+	<msg34 len="999">원격 백업에 실패했습니다. 원격 서버가 활성인지 확인하십시오.</msg34>
+    <success len="999">성공함</success>
+    <fail len="999">실패함</fail>
+    <f1 len="999">SSH 오류 때문에 원격 백업을 진행할 수 없습니다.</f1>
+    <f2 len="999">알 수 없는 SSH 호스트 때문에 원격 백업을 진행할 수 없습니다.</f2>
+    <f3 len="999">연결이 거부되어 원격 백업을 진행할 수 없습니다.</f3>
+    <f4 len="999">SSH 액세스 오류 때문에 원격 백업을 진행할 수 없습니다.</f4>
+    <f5 len="999">SSH 키 변경 오류 때문에 원격 백업을 진행할 수 없습니다.</f5>
+    <f6 len="999">RSYNC 테스트에 실패하여 원격 백업을 진행할 수 없습니다.</f6>
+    <f7 len="999">RSYNC 서버 연결이 거부되어 원격 백업을 진행할 수 없습니다.</f7>
+    <f8 len="999">유효하지 않은 원격 경로입니다. 유효한 경로를 입력하고 다시 시도하십시오.</f8>
+    <f9 len="999">원격 공유에 읽기 전용 권한이 있어서 원격 백업을 진행할 수 없습니다. 원격 공유의 설정을 변경하고 다시 시도하십시오.</f9>
+    <f10 len="999">유효하지 않은 RSYNC 모듈 때문에 원격 백업을 진행할 수 없습니다.</f10>
+    <f11 len="999">유효하지 않은 원격 백업 암호입니다. 다시 시도하십시오.</f11>
+    <f12 len="999">알 수 없는 이유로 원격 백업을 진행할 수 없습니다.</f12>
+    <no_share len="999">공유가 없습니다.</no_share>
+    <backup_status len="999">백업 상태</backup_status>
+    <recover_status len="999">복구 상태</recover_status>
+    <remote_share len="999">원격 공유</remote_share>
+    <local_share len="999">로컬 공유</local_share>
+    <a_space len="999">사용 가능한 공간</a_space>
+    <total_size len="999">전체 백업 크기</total_size>
+    <cancel_on>백업 중지: %s</cancel_on>
+    <failed_on>백업 실패: %s</failed_on>
+    <cancel>백업 중지</cancel>
+  <nas_server>NAS 서버</nas_server>
+	<linux_server>Linux 서버</linux_server>
+	<ssh_account>SSH 사용자 이름</ssh_account>
+	<ssh_pw>SSH 암호</ssh_pw>
+	<recurrence>반복</recurrence>
+  <msg35>포트 전달에 대한 자세한 내용은 &lt;a href="#" id="backups_rlink" target="_blank"&gt;여기&lt;/a&gt;를 방문하십시오.</msg35><transfer_encryption>전송 암호화</transfer_encryption></_remote_backup>
+  <_sms>
+    <title>SMS 설정</title>
+    <sms len="999">SMS</sms>
+    <provider len="999">SMS 서비스 공급자</provider>
+    <add len="999">추가</add>
+    <del len="999">삭제</del>
+    <url len="999">URL</url>
+    <replace len="999">다음으로 공백 문자 바꾸기</replace>
+    <no_replace len="999">기본값 사용</no_replace>
+    <phone1 len="999">전화 번호1</phone1>
+    <phone2 len="999">전화 번호2</phone2>
+    <test len="999">SMS 테스트</test>
+    <description len="999">
+      <![CDATA[
+		SMS 설정 메뉴에서 SMS 문자 메시지 형식으로 휴대폰에 이벤트 알림을 보내도록 설정할 수 있습니다. 휴대폰이 있어야 하며, 구성에 사용할 유효한 HTTP API URL을 제공하는 SMS 게이트웨이 공급자에 가입해야 합니다. 일단 SMS 설정이 구성되면 이벤트 설정 메뉴에서 선택된 이벤트가 발생할 때마다, 구성된 휴대폰에 문자 메시지로 이벤트 알림이 전송됩니다.
+		]]>
+		</description>
+    <name len="999">공급자 이름</name>
+    <url2 len="999">'Hello world'로 메시지 내용이 설정된 SMS URL을 입력합니다.</url2>
+    <sms_url len="999">SMS URL</sms_url>
+    <sms_description len="999">
+    	<![CDATA[
+			* 이 SMS URL은 설정 용도로만 사용됩니다. 설정이 완료된 후에는 SMS 메시지가 전송되지 않습니다. 이 URL의 형식은 SMS 서비스 공급자가 제공한 것이며, URL에는 사용자 이름, 암호, 대상 전화, 메시지 내용이 포함되어야 합니다. 예로 Clickatell을 사용합니다. 가능한 URL은 다음과 같습니다. https://api.clickatell.com/http/sendmsg?user=TestUser&password=TestPassword&api_id=3148203&to=886123456789&text=Hello.
+		]]>
+	</sms_description>
+    <parameter len="999">URL 매개변수 정의</parameter>
+    <sel len="999">각 매개변수에 해당하는 범주 선택</sel>
+    <username len="999">사용자 이름</username>
+    <pw len="999">암호</pw>
+    <number len="999">전화 번호</number>
+    <message len="999">메시지 내용</message>
+    <other len="999">기타</other>
+    <msg1 len="999">SMS 번호는 64자를 초과할 수 없습니다.</msg1>
+    <msg2 len="999">입력된 이름이 반복되었습니다. 다시 시도하십시오.</msg2>
+    <msg3 len="999">공급자 이름의 형식이 올바르지 않습니다.</msg3>
+    <msg4 len="999">URL이 유효한 값이 아닙니다.</msg4>
+    <msg5 len="999">URL 매개변수는 7을 초과할 수 없습니다.</msg5>
+    <msg6 len="999">전화와 텍스트 매개변수를 입력하십시오.</msg6>
+    <msg7 len="999">사용자 이름이 반복되었습니다.</msg7>
+    <msg8 len="999">암호가 반복되었습니다.</msg8>
+    <msg9 len="999">전화 번호가 반복되었습니다.</msg9>
+    <msg10 len="999">텍스트가 반복되었습니다.</msg10>
+    <msg11 len="999">업데이트 성공</msg11>
+    <msg12 len="999">SMS 없음</msg12>
+    <msg13 len="999">URL을 입력하십시오.</msg13>
+    <msg14 len="999">특수 문자를 입력하십시오.</msg14>
+    <msg15 len="999">전화 번호가 유효하지 않습니다. 유효한 번호를 입력하십시오.</msg15>
+    <msg16 len="999">전화 번호가 동일합니다. 변경하십시오.</msg16>
+    <msg17 len="999">사용자 이름은 비워둘 수 없습니다.</msg17>
+    <msg18 len="999">사용자 이름이 유효한 값이 아닙니다.</msg18>
+    <msg19 len="999">암호는 비워둘 수 없습니다.</msg19>
+    <msg20 len="999">암호가 유효한 값이 아닙니다.</msg20>
+    <msg21 len="999">SMS 서비스 공급자를 추가하십시오.</msg21>
+    <msg22 len="999">SMS 테스트: 보냄</msg22>
+    <msg23 len="999">SMS 테스트: 실패</msg23>
+    <msg24 len="999">공급자 이름은 비워둘 수 없습니다.</msg24>
+    <msg25 len="999">전화 번호를 입력하십시오.</msg25>
+    <msg26 len="999">URL은 매개변수를 가질 수 없습니다.</msg26>
+    <help_hint len="999">
+    	<![CDATA[
+		SMS 설정에서 SMS 알림을 활성화하여 휴대폰에 문자 메시지 형식으로 이벤트 로그를 보낼 수 있습니다. 구성에 필요한 URL 설정에 관한 정보는 모바일 서비스 공급자에게 문의하십시오.<br><br> * 이 SMS URL은 설정 용도로만 사용됩니다. 설정이 완료된 후에는 SMS 메시지가 전송되지 않습니다. 이 URL의 형식은 SMS 서비스 공급자가 제공한 것이며, URL에는 사용자 이름, 암호, 대상 전화, 메시지 내용이 포함되어야 합니다. 예로 Clickatell을 사용합니다. 가능한 URL은 다음과 같습니다. https://api.clickatell.com/http/sendmsg?user=TestUser&password=TestPassword&api_id=3148203&to=886123456789&text=Hello.
+		]]>
+	</help_hint>
+  </_sms>
+  <_wfs>
+    <upload len="999">업로드</upload>
+    <download len="999">다운로드</download>
+    <refresh len="999">새로 고침</refresh>
+    <size len="999">크기</size>
+    <type len="999">유형</type>
+    <modified len="999">수정된 시간</modified>
+    <copy len="999">복사</copy>
+    <move len="999">이동</move>
+    <rename len="999">이름 바꾸기</rename>
+    <properties len="999">속성</properties>
+    <folder_name len="999">폴더 이름</folder_name>
+    <location len="999">위치</location>
+    <change_time len="999">변경 시간</change_time>
+    <access_time len="999">액세스 시간</access_time>
+    <owner len="999">소유자</owner>
+    <user_group len="999">사용자 그룹</user_group>
+    <privilege len="999">권한</privilege>
+    <owner_user_group len="999">      <![CDATA[소유자 및 사용자 그룹]]>
+    </owner_user_group>
+    <read len="999">      <![CDATA[읽기]]>
+    </read>
+    <write len="999">      <![CDATA[쓰기]]>
+    </write>
+    <execute len="999">      <![CDATA[실행]]>
+    </execute>
+    <create_title len="44">디렉토리 만들기</create_title>
+    <select_files len="15">파일 선택</select_files>
+    <file_size_error len="40">파일 크기 오류</file_size_error>
+    <add_to_zip len="40">Zip에 추가</add_to_zip>
+    <preview len="999">미리 보기</preview>
+    <open len="999">열기</open>
+    <unzip len="999">압축 풀기</unzip>
+    <untar len="999">tar 압축 풀기</untar>
+    <select_zip_file>Zip 파일 선택</select_zip_file>
+    <compress_msg>기다려 주세요... 파일을 압축하는 중입니다.</compress_msg>
+    <decompress_msg>기다려 주세요... 파일 압축을 푸는 중입니다.</decompress_msg>
+    <create_folder>폴더 만들기</create_folder>
+    <msg1 len="999">다운로드 파일 크기는 4 GB 미만이어야 합니다.</msg1>
+    <msg2 len="999">다운로드 파일을 선택하십시오.</msg2>
+    <msg3 len="999">업로드 파일 저장 경로를 선택하십시오.</msg3>
+    <msg4 len="999">빈 문자는 입력할 수 없습니다.</msg4>
+    <msg5 len="999">이름을 입력하십시오.</msg5>
+    <msg6 len="999">선택된 파일이 없습니다.</msg6>
+    <msg7 len="999">이 디렉토리에 대한 충분한 액세스 권한이 없습니다.</msg7>
+    <msg8 len="999">선택된 파일을 삭제하시겠습니까?</msg8>
+    <msg9 len="999"><![CDATA[
+		웹 파일 뷰어는 Adobe® Flash® Player를 사용하여 컴퓨터의 파일을 업로드합니다. <a href='http://www.adobe.com'>www.adobe.com</a>에서 Adobe Flash Player 최신 버전을 설치한 후 계속 진행하십시오.
+		
+		]]>
+</msg9>
+    <msg10 len="999">파일이 성공적으로 업로드되었습니다.</msg10>
+    <msg11 len="999">대기열이 가득 찼습니다.  최대 크기: </msg11>
+    <msg12 len="999">성공적으로 업로드되었습니다.</msg12>
+    <msg13 len="999">파일 업로드 중입니다.</msg13>
+    <msg14 len="999">여기에 파일 놓기</msg14>
+    <msg15 len="999">크기가 2G를 초과하여 업로드할 수 없습니다.</msg15>
+    <msg16 len="999"><![CDATA[압축을 풀지 못했습니다!<br>파일 압축을 제대로 풀려면 압축 형식과 파일 확장자가 일치하는지 확인하십시오.]]></msg16>
+    <msg17>이 동작으로 업로드가 취소됩니다. 계속 진행하시겠습니까?</msg17>
+  <msg18>두 파일 모두 유지</msg18>
+    
+    
+      <msg19>이동 방법을 선택하십시오.</msg19>
+    
+    
+      <msg20>복사 방법을 선택하십시오.</msg20>
+    
+  <upload_desc>My Cloud 시스템에 파일 업로드</upload_desc><file_desc>동일한 이름을 가진 파일이 발견되면 다음을 수행합니다.</file_desc><destination>목적</destination><msg21>대기열에 추가되지 않은 파일:</msg21><msg22>파일 %s1이(가) 크기 제한(%s)(을)를 초과합니다.</msg22></_wfs>
+  <_s3>
+    <no_list>WD My Cloud Mirror 장치에 추가된 S3 목록이 없습니다.</no_list>
+    <title>Amazon S3 정보</title>
+    <queue>Amazon S3 대기열</queue>
+    <amazon len="22">Amazon S3</amazon>
+    <s3_dialog_title len="44">Amazon S3 백업 설정 </s3_dialog_title>
+    <job_name len="999">작업 이름</job_name>
+    <type len="999">유형</type>
+    <a_key len="999">액세스 키</a_key>
+    <p_key len="999">개인 키</p_key>
+    <b_path len="999">원격 경로</b_path>
+    <region len="999">지역</region>
+    <backup_type len="999">백업 유형</backup_type>
+    <local_path len="999">로컬 경로</local_path>
+    <schedule_mode len="999">일정 모드</schedule_mode>
+    <overwrite len="999">기존 파일 덮어쓰기</overwrite>
+    <fullbackup len="999">전체 백업</fullbackup>
+    <incremental_backup len="999">증분 백업</incremental_backup>
+    <united_states len="999">미국</united_states>
+    <northern_california len="999">북 캘리포니아</northern_california>
+    <oregon len="999">오리건</oregon>
+	<sydney len="999">시드니</sydney>
+	<sao_paulo len="999">상파울로</sao_paulo>
+    <ireland len="999">아일랜드</ireland>
+    <singapore len="999">싱가포르</singapore>
+    <tokyo len="999">도쿄</tokyo>
+    <running len="15">실행 중</running>
+    <backup_now len="15">지금 백업</backup_now>
+    <msg1 len="999">작업 이름을 입력하십시오.</msg1>
+    <msg2 len="999">작업 이름에는 공백을 사용할 수 없습니다.</msg2>
+    <msg3 len="999">액세스 키를 입력하십시오.</msg3>
+    <msg4 len="999">액세스 키에는 공백을 사용할 수 없습니다.</msg4>
+    <msg5 len="999">개인 키를 입력하십시오.</msg5>
+    <msg6 len="999">개인 키에는 공백을 사용할 수 없습니다.</msg6>
+    <msg7 len="999">버킷 경로를 입력하십시오.</msg7>
+    <msg8 len="999">원격 경로에는 공백을 사용할 수 없습니다.</msg8>
+    <msg9 len="999">원격 경로는 3자 이상이어야 합니다. 다시 시도하십시오.</msg9>
+    <msg10 len="999">로컬 경로를 선택하십시오.</msg10>
+    <msg11 len="999">원격 경로에는 밑줄을 사용할 수 없습니다.</msg11>
+    <msg12 len="999">작업 이름이 반복되었습니다.</msg12>
+    <msg13 len="999">      <![CDATA[원격 복제의 이름을 입력하고 <b>다음</b>을 클릭하십시오.]]>
+    </msg13>
+    <msg14 len="999">      <![CDATA[<b>다음</b>을 클릭하여 계속 진행하십시오.]]>
+    </msg14>
+    <msg15 len="999">복구에 실패했습니다.</msg15>
+    <msg16 len="999">백업에 실패했습니다.</msg16>
+    <msg17 len="999">이 작업 이름은 허용되지 않습니다. 다시 시도하십시오.</msg17>
+    <msg18 len="999">이 원격 경로는 허용되지 않습니다. 다시 시도하십시오.</msg18>
+    <msg19 len="999">원격 경로는 대시로 끝날 수 없습니다.</msg19>
+    <msg20 len="999">원격 경로에는 두 마참표가 연속하여 있을 수 없습니다.</msg20>
+    <msg21 len="999">원격 경로에는 마참표가 다음에 대시가 올 수 없습니다.</msg21>
+    <msg22 len="999">원격 경로에는 마참표가 다음에 대시가 올 수 없습니다.</msg22>
+    <msg23 len="999">      <![CDATA[원격 경로의 시작 부분에 test_가 올 수 없습니다.]]>
+    </msg23>
+    <msg24 len="999">      <![CDATA[원격 경로의 시작 부분에 'test' 또는 'TEST'가 올 수 없습니다.]]>
+    </msg24>
+    <msg25 len="999">원격 경로는 a-z, A-Z, 0-9로 시작해야 합니다.</msg25>
+    <msg26 len="999">작업 이름에는 공백을 사용할 수 없습니다.</msg26>
+    <msg27 len="999">원격 경로에는 백슬래시를 사용할 수 없습니다.</msg27>
+    <msg28 len="999">      <![CDATA[소문자, 숫자, 마침표(.), 대시(-)를 사용할 수 있습니다.]]>
+    </msg28>
+    <time_error len="999">시스템 시간이 올바르지 않습니다. 다시 시도하십시오.</time_error>
+    <key_error len="999">액세스 키가 유효하지 않습니다. 다시 시도하십시오.</key_error>
+    <private_key_error len="999">개인 키가 유효하지 않습니다. 다시 시도하십시오.</private_key_error>
+    <bucket_error len="999">유효하지 않은 원격 경로입니다.</bucket_error>
+    <bucket_error1 len="999">원격 경로가 존재하지 않습니다.</bucket_error1>
+    <seq len="20">      <![CDATA[시퀀스]]>
+    </seq>
+    <backup_date len="35">백업 날짜/시간</backup_date>
+    <action len="12">작업</action>
+    <step1 len="999">Amazon S3 백업 설정</step1>
+    <step2 len="999">Amazon S3 백업 설정</step2>
+    <step3 len="999">Amazon S3 백업 설정</step3>
+    <step4 len="999">Amazon S3 백업 설정</step4>
+    <step5 len="999">Amazon S3 백업 설정</step5>
+    <step6 len="999">Amazon S3 백업 설정</step6>
+    <step1_desc len="999">클라우드로 업로드할 것인지 아니면 다운로드할 것인지를 나타내는 16자리 작업 이름을 입력하십시오. 작업 이름에는 공백을 사용할 수 없습니다. 사용 가능한 문자: a-z, A-Z, 0-9. </step1_desc>
+    <step2_desc len="999"> 
+  Amazon S3가 할당한 &lt;b&gt;액세스&lt;/b&gt; 와 &lt;b&gt;개인&lt;/b&gt; 키를 입력하십시오. 이러한 키를 사용하여 WD My Cloud Mirror 시스템이 Amazon S3 클라우드 스토리지에 액세스할 수 있습니다. &lt;b&gt;원격 경로&lt;/b&gt; 필드에 새 또는 기존 Amazon S3 &lt;b&gt;버킷&lt;/b&gt; 이름을 입력하십시오. 이것은 데이터를 쓰거나 읽는 클라우드 스토리지의 폴더입니다. 마지막으로, Amazon S3 클라우드에 쓰거나 읽기 위한 최고의 서비스를 받을 적절한 지역을 선택하십시오.
+  </step2_desc>
+    <step3_desc len="999">  
+  WD My Cloud Mirror 시스템 데이터를 Amazon S3 클라우드에 백업하려는 경우 &lt;b&gt;유형&lt;/b&gt; 드롭다운 메뉴에서 &lt;b&gt;업로드&lt;/b&gt;를 선택하십시오. Amazon S3 클라우드에서 WD My Cloud Mirror 시스템에 데이터를 백업하려는 경우 &lt;b&gt;다운로드&lt;/b&gt;를 선택하십시오.&lt;br&gt;&lt;br&gt;
+  이름이 동일한 소스 파일로 대상 폴더의 파일을 덮어쓰려면 &lt;b&gt;백업 유형&lt;/b&gt; 드롭다운 메뉴에서 &lt;b&gt;기존 파일 덮어쓰기&lt;/b&gt;를 선택하십시오. 작업이 실행될 때마다 모든 백업 데이터가 들어 있는 별도의 폴더를 만들려면 &lt;b&gt;전체 백업&lt;/b&gt;을 선택하십시오. 대상 폴더 파일보다 새로운 소스 파일로 파일을 덮어쓰려면 &lt;b&gt;증분 백업&lt;/b&gt;을 선택하십시오.
+  </step3_desc>
+    <step4_desc len="999">
+			<b>로컬_경로</b> 필드에 작업에 대한 소스 또는 대상 디렉토리 폴더의 전체 경로 이름을 입력하십시오(예: Volume_1/backup_docs).
+		</step4_desc>
+    <step5_desc len="999">
+		작업 실행 시 사용할 <b>일정 모드</b>를 선택하십시오.  나중에 수동 클릭 버튼을 사용하여 작업을 시작하려면 <b>수동</b>을 클릭하십시오. 작업을 한 번만 실행할 날짜와 시간의 일정을 예약하려면 <b>한 번</b>을 클릭하십시오. 작업을 매일 실행할 시간을 설정하려면 <b>일정</b>을 클릭하십시오.
+		</step5_desc>
+    <step6_desc len="999">
+		모든 설정을 검토하고, 돌아가서 내용을 변경하려면 <b>이전</b>을 클릭하십시오. 작업을 저장하지 않고 마법사를 종료하려면 <b>종료</b>를 클릭하십시오. 작업을 저장하고 마법사를 종료하려면 <b>마침</b>을 클릭하십시오.
+		</step6_desc>
+    <recovery>복구</recovery>
+    <msg29>설정이 완료되었습니다.  마침을 클릭하여 현재 설정을 저장하십시오.</msg29>
+    <desc>      <![CDATA[Amazon S3(Simple Storage Service)는 Amazon Web Services가 제공하는 온라인 파일 스토리지 웹 서비스입니다. Amazon S3는 웹 서비스 인터페이스를 통해 장치의 데이터를 클라우드에 백업하기 위한 스토리지를 제공합니다.]]>
+    </desc>
+    <del_msg>이 Amazon S3 작업을 삭제하시겠습니까?</del_msg>
+    <s3_config>S3 구성</s3_config>
+    <progress>진행률</progress>
+  </_s3>
+  <_ads>
+    <title len="999">Active Directory 설정</title>
+    <enable len="999">Active Directory 활성화</enable>
+    <desc len="999">WD My Cloud Mirror 시스템과 도메인 서버의 시간대가 일치하며, 서로에 대해 5분 이내가 되도록 확인하십시오.</desc>
+    <enable_desc len="999">Active Directory를 활성화하면 Windows 도메인에 이미 있는 사용자를 사용할 수 있습니다. 그러나 이 시간 동안에는 기존 로컬 사용자와 공유를 관리할 수 없습니다.</enable_desc>
+    <enable_desc2 len="999">이 기능을 활성화하시겠습니까?</enable_desc2>
+    <time_desc len="999">WD My Cloud Mirror 시스템과 도메인 서버의 시간대가 일치하며, 서로에 대해 5분 이내가 되도록 확인하십시오.</time_desc>
+    <name len="999">사용자 이름</name>
+    <pw len="999">암호</pw>
+    <workgroup len="999">작업 그룹</workgroup>
+    <realm_name len="999">영역 이름</realm_name>
+    <server_name len="999">AD 서버 이름</server_name>
+    <ads_user len="999">ADS 사용자</ads_user>
+    <msg1 len="999">사용자 이름 필드가 비었습니다. 사용자 이름을 입력하십시오.</msg1>
+    <msg2 len="999">암호 필드가 비었습니다. 암호를 입력하십시오.</msg2>
+    <msg3 len="999">      <![CDATA[작업 그룹 이름에는 다음 문자를 사용할 수 있습니다. 'a-z', 'A-Z', '0-9', '-']]>
+    </msg3>
+    <msg4 len="999">작업 그룹을 입력하십시오.</msg4>
+    <msg5 len="999">도메인 이름 필드가 비었습니다. 도메인 이름을 입력합니다.</msg5>
+    <msg6 len="999">AD 서버 이름을 입력하십시오.</msg6>
+    <msg7 len="999">      <![CDATA[설정 -> 네트워크에서 DNS 설정 확인]]>
+    </msg7>
+    <msg8 len="999">성공</msg8>
+    <msg9 len="999">시간이 올바르지 않습니다. 시스템 날짜 및 시간을 확인하십시오. AD 서버와 시스템 날짜 및 시간을 설정하십시오. (NAS 및 Active Directory 서버에서 허용되는 최대 시차는 5분입니다.)</msg9>
+    <msg10 len="999">로그인에 실패했습니다. 대상 계정 이름이 잘못되었습니다.</msg10>
+    <msg11 len="999">잘못된 형식의 계정 이름입니다. 유효한 계정 이름을 입력하십시오.</msg11>
+    <msg12 len="999">servicePrincipalNames를 설정하지 못했습니다. 이 서버의 도메인 이름이 AD 도메인과 일치하는지 확인하십시오.</msg12>
+    <msg13 len="999">도메인에 연결하지 못했습니다.</msg13>
+    <msg14 len="999">연결에 실패했습니다. 구성을 확인하십시오.</msg14>
+    <msg15 len="999">인증에 실패했습니다. 올바른 로그인 자격 증명을 다시 입력하십시오.</msg15>
+    <msg16 len="999">Active Directory 도메인에서 사용자 이름을 검색할 수 없습니다. 사용자 이름을 올바로 입력했는지 확인하십시오.  사용자가 존재하지 않습니다.</msg16>
+    <msg17 len="999">요청된 Active Directory 도메인에서 KDC(Key Distribution Center)의 네트워크 주소를 확인할 수 없습니다.</msg17>
+    <msg18 len="999">AFP와 Time Machine 서비스가 중지됩니다.</msg18>
+    <msg19 len="999">
+      <![CDATA[
+			사용자 이름에는 다음 문자를 사용할 수 없습니다. '
+		]]>
+		</msg19>
+    <msg20 len="999">
+      <![CDATA[
+			암호에는 다음 문자를 사용할 수 없습니다. '
+		]]>
+		</msg20>
+  <msg57>해당 도메인 이름이 정의되지 않았습니다. 도메인 이름을 입력하십시오.</msg57><msg58>해당 도메인 이름이 잘못되었습니다. 다시 입력하십시오.</msg58><msg59>비밀 데이터베이스를 열 수 없습니다.</msg59><msg60>"작업 그룹"이 %s1(으)로 설정되었습니다. %s2이어야 합니다.</msg60><msg61>"영역"이 %s1(으)로 설정되었습니다. %s2이어야 합니다.</msg61><msg62>"보안"이 %s1(으)로 설정되었습니다. %s2이어야 합니다.</msg62><msg63>구성(%s1)이 올바르지 않으며 구성 변경 요청이 없었습니다.</msg63><msg64>구성 조작 요청이 있었지만 백엔드의 지원이 없었습니다.</msg64><msg65>도메인 %s1의 DC 검색에 실패했습니다.</msg65><msg66>rpc: %s2(으)로 도메인 %s1의 DC 정보를 조회하는 데 실패했습니다.</msg66><msg67>%s1에서 계정을 사전 생성하는 데 실패했습니다.</msg67><msg68>rpc로 도메인 %s1에 연결하는 데 실패함: %s2.</msg68><msg69>연결한 후 도메인 멤버십을 확인하는 데 실패함: %s1.</msg69></_ads>
+  <_snmp>
+    <community len="999">SNMP 커뮤니티</community>
+    <notification len="999">알림</notification>
+    <notification_ip len="999">알림 IP 주소</notification_ip>
+    <description len="999">이 섹션에서 SNMP 기능을 구성할 수 있습니다. SNMP의 커뮤니티와 트랩/알림의 대상을 설정할 수 있습니다.</description>
+    <enable>SNMP</enable>
+    <msg1 len="999">SNMP 커뮤니티를 입력하십시오.</msg1>
+    <msg2 len="999">SNMP 커뮤니티에는 공백을 사용할 수 없습니다.</msg2>
+    <msg3 len="999">이 커뮤니티에는 다음 문자를 사용할 수 없습니다.  @ : / \\ %</msg3>
+    <msg4 len="999">IP 주소를 입력하십시오.</msg4>
+    <msg5 len="999">IP 주소 값으로 숫자만 사용할 수 있습니다.</msg5>
+    <title_1>SNMP 설정</title_1><title_2>사용자 관리(SNMPv3)</title_2>
+    <title_3>SNMPv3 사용자 세부 정보</title_3>
+    <sys_contact>연락처 정보</sys_contact>
+    <notification_community>알림 커뮤니티</notification_community>
+    <community_v2>커뮤니티(SNMPv2c)</community_v2>
+    <scuritylevel>보안 수준</scuritylevel>
+    <authtype>인증 유형</authtype>
+    <encrytype>암호화 유형</encrytype>
+    <view>보기</view>
+    <view_system>시스템</view_system>
+    <view_network>네트워크</view_network>
+    <edit>편집</edit>
+    <msg6>위치에는 억음 악센트 기호를 포함할 수 없습니다.</msg6>
+    <msg7>연락처 정보에 억음 악센트 기호를 포함할 수 없습니다.</msg7>
+    <msg8>알림 커뮤니티 문자열은 1 ~ 255자 길이 영숫자 값이어야 하며 공백, 백슬래시, 억음 악센트 기호를 포함할 수 없습니다. </msg8>
+    <msg9>커뮤니티(SNMPv2c) 문자열은 1 ~ 255자 길이 영숫자 값이어야 하며 공백, 백슬래시, 억음 악센트 기호를 포함할 수 없습니다. </msg9>
+    <msg10>사용자 이름은 1 ~ 31자의 영숫자 값이어야 하며, 공백을 포함할 수 없습니다.</msg10>
+    <msg11>인증 암호와 확인 암호가 일치하지 않습니다. 다시 시도하십시오.</msg11>
+    <msg12>인증 암호는 8 ~ 255자 길이 영숫자 값이어야 하며 공백, 백슬래시, 억음 악센트 기호를 포함할 수 없습니다.</msg12>
+    <msg13>암호화 암호와 확인 암호가 일치하지 않습니다. 다시 시도하십시오.</msg13>
+    <msg14>암호화 암호는 8 ~ 255자 길이 영숫자 값이어야 하며 공백, 백슬래시, 억음 악센트 기호를 포함할 수 없습니다.</msg14>
+    <msg15>이 사용자를 삭제하시겠습니까?</msg15>
+  </_snmp>
+  <_bonding>
+    <title len="999">연결 집계</title>
+    <mode1 len="999">라운드 로빈</mode1>
+    <mode2 len="999">활성 백업</mode2>
+    <mode3 len="999">Balance-XOR</mode3>
+    <mode4 len="999">브로드캐스트</mode4>
+    <mode5 len="999">802.3ad</mode5>
+    <mode6 len="999">적응식 전송 부하 분산</mode6>
+    <mode7 len="999">적응식 부하 분산</mode7>
+    <bonding_option len="999">옵션</bonding_option>
+  </_bonding>
+  <_portforwarding>
+    <no_list>WD My Cloud Mirror 장치에 추가된 포트 전달 서비스가 없습니다.</no_list>
+    <built_desc len="999">기본 서비스 선택</built_desc>
+    <custom_desc len="999">포트 전달 서비스 사용자 지정</custom_desc>
+    <scan len="999">검색</scan>
+    <service len="30">서비스</service>
+    <protocol len="20">프로토콜</protocol>
+    <e_port len="20">외부 포트</e_port>
+    <p_port len="20">내부 포트</p_port>
+    <title len="44">포트 전달 설정</title>
+    <step1 len="44">포트 전달 설정</step1>
+    <step2 len="44">포트 전달 설정</step2>
+    <msg1 len="999">기본 제공 응용프로그램을 선택하십시오.</msg1>
+    <msg2 len="999">외부 포트가 중복입니다.</msg2>
+    <msg3 len="999">경로 테이블을 지울 수 없습니다.</msg3>
+    <msg4 len="999">서비스를 입력하십시오.</msg4>
+    <msg5 len="999">최대 포트 전달 설정 수에 도달했습니다.</msg5>
+    <msg6 len="999">서비스를 입력하십시오.</msg6>
+    <msg7 len="999">외부 포트를 입력하십시오.</msg7>
+    <msg8 len="999">내부 포트를 입력하십시오.</msg8>
+    <error1 len="999">포트 전달 설정에 실패했습니다.</error1>
+    <error2 len="999">포트 전달 설정에 실패했습니다.</error2>
+    <error3 len="999">서비스 설정 오류입니다. 다시 시도하십시오.</error3>
+    <ok1 len="999">포트 전달 설정에 성공했습니다.</ok1>
+    <ok2 len="999">포트 전달 설정에 성공했습니다.</ok2>
+    <del_error len="999">포트 전달 삭제에 실패했습니다.</del_error>
+    <del_ok len="999">포트 전달 삭제에 성공했습니다.</del_ok>
+    <upnp_title len="999">UPnP 라우터 감지</upnp_title>
+    <upnp_test len="999">UPnP 라우터 테스트</upnp_test>
+    <found len="999">네트워크에서 UPnP 라우터가 발견되었습니다.</found>
+    <not_found len="999">네트워크에서 UPnP 라우터가 발견되지 않았습니다.</not_found>
+  </_portforwarding>
+  <_dfs>
+    <local_path len="999">로컬 폴더 이름</local_path>
+    <host len="999">원격 호스트</host>
+    <remote_folder len="999">원격 공유</remote_folder>
+    <enable len="999">분산 파일 시스템 활성화</enable>
+    <enable_title len="999">분산 파일 시스템 활성화/비활성화</enable_title>
+    <set_title len="999">공유 집계 설정</set_title>
+    <get_folder len="999">원격 공유 폴더 가져오기</get_folder>
+    <modify_title len="999">분산 파일 시스템 수정</modify_title>
+    <group_title len="999">루트 폴더 목록</group_title>
+    <group_title2 len="999">루트 폴더 만들기</group_title2>
+    <group_title3 len="999">루트 폴더 이름 수정</group_title3>
+    <root_name len="999">루트 폴더 이름</root_name>
+    <action len="999">작업</action>
+    <group len="999">폴더 이름</group>
+    <sel len="999">폴더 선택</sel>
+    <dfs_description len="999">
+			<![CDATA[
+			<!--DFS is a method of storing and accessing files based in a client/NAS architecture. Any number of remote computers can access these files on the NAS with the proper authorization rights. DFS uses a uniform naming convention and a mapping scheme to keep track of where files are located. When you try to retrieve a file from the NAS, the file appears as a normal file, and you are able to work with the file in the same way as if it were stored locally on your hard drive. When you are finished working with the file, it is returned over the network to the NAS, which stores the now-altered file for retrieval at a later time.--> 분산 파일 시스템에서 수에 관계 없이 네트워크의 원격 클라이언트들이 적절한 권한을 가지고 액세스할 수 있는 하나 이상의 중앙 서버 저장소 파일. 이 기능을 활성화하려면 활성화를 클릭하십시오.
+		]]>
+		</dfs_description>
+    <dfs_group_description len="999">
+      <![CDATA[
+		모든 파일을 저장할 루트 폴더를 만드십시오.
+		]]>
+		</dfs_group_description>
+    <dfs_link_description len="999">원격 공유로 연결되는 로컬 My Cloud 시스템에 폴더를 구성합니다.</dfs_link_description>
+    <msg1 len="999">원격 공유 폴더를 검색할 수 없습니다.</msg1>
+    <msg2 len="999">공유가 이미 존재합니다. 다른 공유 이름을 선택하십시오.</msg2>
+    <msg3 len="999">최대 공유 수에 도달했습니다.</msg3>
+    <msg4 len="999">호스트를 입력하십시오.</msg4>
+    <msg5 len="999">IP 주소에 숫자만 사용할 수 있습니다.</msg5>
+    <msg6 len="999">로컬 공유 이름을 입력하십시오.</msg6>
+    <msg7 len="999">호스트를 입력하십시오.</msg7>
+    <msg8 len="999">원격 공유 폴더를 선택하십시오.</msg8>
+    <msg9 len="999">이름을 입력하십시오.</msg9>
+    <msg10 len="999">최대 루트 폴더 수에 도달했습니다.</msg10>
+    <msg11 len="999">입력한 루트 폴더 이름이 이미 존재합니다. 다른 이름을 입력하십시오.</msg11>
+    <msg12 len="999">공유 이름의 길이는 80자를 초과할 수 없습니다.</msg12>
+    <msg13 len="999">로컬 시스템은 원격 호스트로 사용할 수 없습니다.</msg13>
+    <msg14 len="999">분산 파일 시스템을 삭제하시겠습니까?</msg14>
+  </_dfs>
+  <_ipv6>
+    <ipv6_title len="999">IPv6</ipv6_title>
+    <ipv6_setup len="999">IPv6 설정</ipv6_setup>
+    <ipv4_setup len="999">LAN IP 설정</ipv4_setup>
+    <ipv4_setup2 len="999">LAN 2 IP 설정</ipv4_setup2>
+    <ipv4_setup3 len="999">LAN 1 + LAN 2 IP 설정</ipv4_setup3>
+    <auto len="999">자동</auto>
+    <dhcp len="999">DHCP</dhcp>
+    <static len="999">정적</static>
+    <off len="999">끄기</off>
+    <prefix len="999">접두어 길이</prefix>
+    <def_gw len="999">기본 게이트웨이</def_gw>
+    <gw len="999">게이트웨이</gw>
+    <mode len="999">모드</mode>
+    <interface len="999">인터페이스</interface>
+    <addr len="999">IPv6 주소</addr>
+    <setup len="999">설정</setup>
+    <tunnel_enable len="999">터널 활성화</tunnel_enable>
+    <tunnel_server len="999">서버 주소</tunnel_server>
+    <tunnel_username len="999">사용자 이름</tunnel_username>
+    <tunnel_pw len="999">암호</tunnel_pw>
+    <enable len="999">IPv6 활성화</enable>
+  <msg1>Enabling IPV6을 활성화하면 WD My Cloud Mirror 시스템의 클라우드 액세스가 비활성화됩니다.&lt;br&gt;&lt;br&gt;계속하시겠습니까?</msg1>
+  </_ipv6>
+  <_iso_create>
+    <title len="50">ISO 이미지 만들기</title>
+    <wizard_desc1 len="999">
+      <![CDATA[
+				볼륨에서 ISO 파일에 추가할 콘텐츠를 선택하십시오.
+		]]>
+		</wizard_desc1>
+    <total_size len="40">이미지 크기</total_size>
+    <image_path len="40">이미지 경로</image_path>
+    <image_name len="40">이미지 이름</image_name>
+    <overwrite len="50">덮어쓰기</overwrite>
+    <create_iso len="18">ISO 이미지 만들기</create_iso>
+    <auto_mount len="50">자동 탑재</auto_mount>
+    <select len="10">선택</select>
+    <total_space len="13">전체 공간</total_space>
+    <used_space len="12">사용된 공간</used_space>
+    <free_space len="12">여유 공간</free_space>
+    <img_wizard len="999">ISO 이미지를 만드는 중입니다. 이 프로세스가 진행되는 동안 WD My Cloud Mirror 시스템을 끄지 마십시오.</img_wizard>
+    <msg1 len="50">이미지 경로를 선택하십시오.</msg1>
+    <msg2 len="50">이미지 이름에는 공백을 사용할 수 없습니다.</msg2>
+    <msg3 len="50">폴더를 선택하십시오.</msg3>
+    <msg4 len="50">이미지 이름을 입력십시오.</msg4>
+    <msg5 len="50">이미 존재하는 ISO 이미지입니다. 다른 이미지 이름을 입력하십시오.</msg5>
+    <msg6 len="50">ISO 이미지를 만들지 못했습니다.</msg6>
+    <msg7 len="50">      <![CDATA[이 작업으로 IOS 이미지가 만들어집니다. 일단 만들어진 후에는 이것을 수정할 수 없습니다. <b>확인</b>을 클릭하여 계속 진행하십시오.]]>
+    </msg7>
+    <msg8 len="50">ISO 이미지를 만드는 중입니다.</msg8>
+    <msg9 len="50">      <![CDATA[최대 ISO 파일/폴더 수준에 도달했습니다. 폴더 크기를 변경하십시오. <b>확인</b>을 클릭하여 계속 진행하십시오.]]>
+    </msg9>
+    <msg10 len="50">하드 디스크 공간이 충분하지 않습니다.</msg10>
+    <msg11 len="50">ISO 구성을 만들지 못했습니다.</msg11>
+    <msg12 len="50">이것은 루트 폴더입니다. 삭제할 수 없습니다.</msg12>
+    <msg13 len="50">      <![CDATA[이미지 이름에는 다음 문자를 사용할 수 있습니다. 'a-z, 'A-Z', '0-9', '-', '_'.]]>
+    </msg13>
+    <msg14 len="999">ISO 이미지를 자동으로 탑재하려면 이 확인란을 클릭하십시오.</msg14>
+    <msg15 len="999">최대 ISO 이미지 파일 수에 도달했습니다. 삭제 또는 수정 기능만 사용할 수 있습니다. </msg15>
+  </_iso_create>
+  <_vv>
+    <title1 len="999">볼륨 가상화 정보</title1>
+    <title2 len="999">볼륨 가상화 만들기</title2>
+    <title3 len="999">볼륨 가상화</title3>
+    <desc1 len="999">초기자 IQN</desc1>
+    <desc2 len="999">장치 IP</desc2>
+    <desc3 len="999">포트</desc3>
+    <desc4 len="999">인증</desc4>
+    <desc5 len="999">사용자 이름</desc5>
+    <desc6 len="999">암호</desc6>
+    <desc7 len="999">대상</desc7>
+    <desc8 len="999">폴더 공유</desc8>
+    <desc9 len="999">검색 실패</desc9>
+    <desc10 len="999">볼륨 가상화는 다른 iSCSI 대상에 매핑하고 그것을 WD My Cloud Mirror 시스템의 볼륨으로서 제공하여 확장성을 단순화합니다.</desc10>
+    <desc11 len="999">연결</desc11>
+    <desc12 len="999">연결 끊기</desc12>
+    <desc13 len="999">연결 오류</desc13>
+    <desc14 len="999">연결 중</desc14>
+    <desc15 len="999">연결됨</desc15>
+    <desc16 len="999">연결 끊김</desc16>
+		<desc17 len="999">다시 연결하는 중</desc17>
+		<desc18 len="999">실행 중</desc18>
+		<desc19 len="999">포맷 없음</desc19>
+		<desc20 len="999">포맷 중</desc20>
+		<desc21 len="999">오류</desc21>
+		<desc22 len="999">볼륨 만들기</desc22>
+		<desc23 len="999">오프라인</desc23>
+		<desc24 len="999">미지원 파일 시스템</desc24>
+		<desc25 len="999">연결 오류</desc25>
+		<desc26 len="999">볼륨 만들기 실패</desc26>
+		<desc27 len="999">비활성화</desc27>
+		<desc28 len="999">읽기 전용</desc28>
+		<desc29 len="999">포맷 대기</desc29>
+		<desc30 len="999">참고: 가상 볼륨의 포맷 정보를 저장하는 데에 사용되는 공간은 크지 않습니다.</desc30>
+    <msg1 len="999">입력한 공유 이름이 이미 존재합니다. 다른 공유 이름을 입력하십시오.</msg1>
+    <msg2 len="999">가상 볼륨이 제거됩니다. 계속 진행하시겠습니까?</msg2>
+    <msg3 len="999">장치 IP 주소를 입력하십시오.</msg3>
+    <msg4 len="999">포트를 입력하십시오.</msg4>
+    <msg5 len="999">대상이 없습니다.</msg5>
+    <msg6 len="999">공유 폴더 이름을 입력하십시오.</msg6>
+    <msg7 len="167">새 암호는 12자 이상이어야 합니다. 다시 시도하십시오.</msg7>
+  </_vv>
+  <_http_downloads>
+    <title1 len="999">HTTP 다운로드</title1>
+    <title2 len="999">HTTP 다운로드 대기열</title2>
+    <title3 len="999">HTTP 다운로드 테스트 결과</title3>
+    <desc1 len="999">다운로드 경로 선택</desc1>
+    <desc2 len="999">지정된 이름으로 다운로드할 파일의 이름을 바꾸십시오.</desc2>
+    <desc3>dddd, mmmm dd, yyyy, h:MM:ss TT</desc3>
+    <msg1 len="167">URL 형식이 올바르지 않습니다. 올바른 형식은 다음과 같습니다.  http://192.168.0.32/test.txt. 다시 시도하십시오.</msg1>
+    <msg2 len="167">HTTP 다운로드 작업을 삭제하시겠습니까?</msg2>
+  </_http_downloads>
+  <_ftp_downloads>
+    <title1 len="999">FTP 다운로드</title1>
+    <title2 len="999">FTP 다운로드 테스트 결과</title2>
+    <login_method len="999">로그인 방법</login_method>
+    <file len="999">파일</file>
+    <folder len="999">폴더</folder>
+    <desc2 len="999"> My Cloud Mirror 장치를 사용하여 FTP 사이트 간에 백업하십시오.</desc2>
+	  <detail len="999">FTP 다운로드 세부 정보</detail>
+		<status0>다운로드 완료</status0>
+		<status0_1>[{1}]의 [{0}]에서 다운로드가 성공적으로 완료되었습니다.</status0_1>
+		<status2>다운로드 진행 중</status2>
+		<status_1>다운로드 실패</status_1>
+		<status_1_d>다운로드하지 못했습니다. 시스템 설정을 확인하십시오.</status_1_d>
+		<status_2>다운로드 소스 경로가 유효하지 않습니다. 설정을 확인하여 수정하십시오.</status_2>
+		<status_3>다운로드 대상 경로가 유효하지 않습니다. 설정을 확인하여 수정하십시오.</status_3>
+		<status_4>중복 다운로드</status_4>
+		<status_5>추가적인 다운로드가 허용되지 않습니다.</status_5>
+		<status_6>시스템 오류입니다. 시스템을 다시 부팅하십시오.</status_6>
+		<status_7>유효하지 않은 다운로드</status_7>
+		<status_8>유효하지 않은 다운로드 경로</status_8>
+		<status_9>다운로드 대상 폴더가 읽기 전용입니다. 설정을 확인하여 수정하십시오.</status_9>
+		<status_10>[{0}]에서 다운로드가 중단되었습니다.</status_10>
+	  <status_11>다운로드 대상 위치의 스토리지 공간이 가득 찼습니다. 스토리지에서 파일을 삭제하여 여유 공간을 만드십시오.</status_11>	
+		<status_430>인증 실패로 인해 다운로드가 실패하였습니다. 올바른 로그인 자격 증명을 다시 입력하십시오.</status_430>
+		<status_451>대상 경로가 유효하지 않아 다운로드가 실패하였습니다. 대상 경로를 다시 선택하십시오.</status_451>
+		<status_550>원격 소스 경로가 유효하지 않아 다운로드가 실패하였습니다. 소스 경로를 다시 선택하십시오.</status_550>
+		<status_10057>연결 오류로 인해 다운로드가 실패하였습니다. 전체 FTP 설정을 확인하십시오.</status_10057>
+		<status_10060>연결 시간 초과로 인해 다운로드가 실패하였습니다. FTP 서버가 사용 가능한지 확인하십시오.</status_10060>
+		<status_10061>서버에 연결할 수 없습니다.</status_10061>
+		<status_10064>호스트를 사용할 수 없어 다운로드가 실패하였습니다. 호스트 주소 및 FTP 서버 가용성을 확인하십시오.</status_10064>
+		<status_1100>호스트가 유효하지 않아 다운로드가 실패하였습니다. 올바른 호스트 이름을 다시 입력하십시오.</status_1100>
+		<download_cancel>다운로드 중지</download_cancel>
+		<download_now>다운로드 시작</download_now>
+		<msg1 len="167">최대 다운로드 작업 수에 도달했습니다.</msg1>
+	  <msg2 len="167">URL을 입력하십시오.</msg2>
+	  <msg3 len="167">URL 길이는 1-235자 범위여야 합니다.</msg3>
+	  <msg4 len="167">정말 FTP 작업을 삭제하시겠습니까?</msg4>
+	  <msg11><![CDATA[
+	이 작업을 삭제하시겠습니까? <br> <br>
+	 다운로드 작업이 삭제됩니다. <br>참고: 이전 파일 다운로드는 삭제되지 않습니다.
+		]]></msg11>
+</_ftp_downloads>
+<_media>
+    <title1 len="73">iTunes</title1>
+    	<title2>DLNA 미디어 서버</title2>
+    <title3>iTunes 서버 설정</title3>	
+    <desc1>미디어 스트리밍</desc1>
+    <desc2>버전</desc2>
+    <desc3>마지막 업데이트</desc3>
+    <desc4>DLNA 데이터베이스</desc4>
+    <desc5>여러 장치로 콘텐츠 스트리밍을 활성화합니다.</desc5>
+    <desc6>미디어 데이터베이스를 복원합니다. 데이터베이스가 손상된 것으로 의심되는 경우에만 이 옵션을 사용하십시오.</desc6>
+    <desc7><![CDATA[미디어 플레이어 보기 >>]]></desc7>
+    <desc8>미디어</desc8>
+    <desc9>음악 트랙</desc9>
+    <desc10>그림</desc10>
+    <desc11>비디오</desc11>
+    <desc12>데이터베이스 업데이트 중...</desc12>
+    <desc13>미디어 스트리밍 옵션</desc13>
+    <desc14>음악, 비디오 또는 사진을 집에 있는 아무 호환 장치에 스트리밍합니다.</desc14>
+    <desc15>미디어 플레이어</desc15>
+    <desc16>켜기</desc16>
+    <desc17>끄기</desc17>
+    <desc18>미디어 플레이어</desc18>
+    <desc19>일반 미디어 수신기</desc19>
+    <desc20>고급 옵션</desc20>
+    <button1>다시 검색</button1>
+  	<title4>카메라 설정</title4>
+		<title5>카메라 폴더 옵션</title5>
+		<mode>전송 모드</mode>
+		<recent>최근 활동</recent>
+		<move_f>파일 이동 중</move_f>
+		<copy_f>파일 복사 중</copy_f>
+		<move_b>지금 이동</move_b>
+		<copy_b>지금 복사</copy_b>
+		<trans_foldere>전송 폴더</trans_foldere>
+		<folder_options>폴더 옵션</folder_options>
+		<enter_folder>폴더 이름 입력</enter_folder>	
+		<trans_file>전송 파일</trans_file>
+		<info>정보</info>
+		<connect_camera>연결된 카메라</connect_camera>
+		<auto_trans>자동 전송</auto_trans>	
+		<today_date>오늘 날짜</today_date>
+    <date_taken>촬영 날짜</date_taken>
+    <custom_folder_name>사용자 지정 폴더 이름</custom_folder_name>
+    <select_destination>대상 저장 폴더 선택</select_destination>
+	<msg1>폴더 이름을 입력하십시오.</msg1>		
+		<msg2 len="999">%s개 파일이 %s1에서 %s3의 %s2(으)로 복사되었습니다.</msg2>
+		<msg3 len="999">%s개 파일이 %s1에서 %s3의 %s2(으)로 이동되었습니다.</msg3>
+		<msg4 len="999">%s개 파일을 카메라에서 %s1(으)로 복사하지 못했습니다. 자세한 내용은 시스템 로그를 참조하십시오.</msg4>
+		<msg5 len="999">%s개 파일을 카메라에서 %s1(으)로 이동하지 못했습니다. 자세한 내용은 시스템 로그를 참조하십시오.</msg5>
+  <status_success>%s1에 있는 %s을(를) 성공적으로 백업했습니다.</status_success><status_fail1>백업에 실패했습니다. 연결된 USB 장치를 확인하십시오.</status_fail1><status_fail2>백업에 실패했습니다. 백업 대상 경로가 유효하지 않습니다. 백업 설정을 수정한 후 다시 시도하십시오.</status_fail2><status_fail3>시스템 오류로 인해 백업이 실패했습니다. My Cloud Mirror 시스템을 다시 부팅하십시오.</status_fail3><status_fail4>백업 대상이 읽기 전용입니다. 백업 설정을 수정하십시오.</status_fail4><status_fail5>백업 대상 위치의 스토리지 공간이 가득 찼습니다. 대상 위치에서 파일을 삭제하여 여유 공간을 만드십시오.</status_fail5><status_fail6>백업 중지 위치: %s</status_fail6><camera_title>카메라 백업 정보</camera_title><camera_description>WD My Cloud Mirror 시스템을 사용하여 카메라를 백업하십시오.</camera_description><status_fail7>%s에서 파일을 삭제할 수 없습니다.</status_fail7><msg6>My Cloud 시스템에 미디어 스트리밍이 활성화되었습니다. 각 공유에 미디어 서비스를 구성하려면 공유 페이지로 이동합니다.</msg6></_media>
+  <_disk_mgmt>
+    <title1>디스크 프로파일</title1>
+    <title2>시스템 디스크</title2>
+    <title3>드라이브 세부 정보</title3>
+    <title4>하드 드라이브 정보</title4>
+    <title5>디스크 상태</title5>
+    <title6>ID</title6>
+		<title7>속성</title7>
+		<title8>현재</title8>
+		<title9>최악</title9>
+		<title10>임계값</title10>
+		<title11>원시 값</title11>
+    <desc1>드라이브</desc1>
+    <desc2>디스크 상태</desc2>
+    <desc3>정상</desc3>
+    <desc4>공급업체</desc4>
+    <desc5>모델</desc5>
+    <desc6>일련 번호</desc6>
+    <desc7>용량</desc7>
+    <desc8>양호</desc8>
+    <desc9>불량</desc9>
+    <desc10>호환되지 않는 드라이브</desc10>
+    <desc11>드라이브 없음</desc11>
+    <desc12>펌웨어 버전</desc12>
+    <desc13>S.M.A.R.T. Data</desc13>
+  </_disk_mgmt>
+  <_raid>
+    <title1>RAID 프로파일</title1>
+    <title2>RAID 볼륨</title2>
+    <title3>RAID 모드 변경</title3>
+    <title4>RAID 로밍</title4>
+    <desc1>RAID 상태</desc1>
+    <desc2>정상</desc2>
+    <desc3>모든 RAID 볼륨이 활성이며 정상입니다.</desc3>
+    <desc4>자동 복원</desc4>
+    <desc5 len="20">JBOD</desc5>
+    <desc6 len="20">스패닝</desc6>
+    <desc7 len="20">RAID 0</desc7>
+    <desc8 len="20">RAID 1</desc8>
+    <desc9 len="20">RAID 5</desc9>
+    <desc10 len="20">예비</desc10>
+    <desc11 len="20">RAID 10</desc11>
+    <desc12>드라이브</desc12>
+    <desc13 len="999">JBOD 구성</desc13>
+    <desc14 len="999">스패닝 구성</desc14>
+    <desc15 len="999">RAID 0 구성</desc15>
+    <desc16 len="999">RAID 1 구성</desc16>
+    <desc17 len="999">RAID 5 구성</desc17>
+    <desc18 len="999">RAID 10 구성</desc18>
+    <desc19 len="999">RAID 구성에 없지만 별도의 논리 볼륨으로 관리되는 하나 이상의 드라이브 사용.</desc19>
+    <desc20 len="999">JBOD로 전환</desc20>
+    <desc21 len="999">스패닝으로 전환</desc21>
+    <desc22 len="999">RAID 0으로 전환</desc22>
+    <desc23 len="999">RAID 1로 전환</desc23>
+    <desc24 len="999">RAID 5로 전환</desc24>
+    <desc25 len="999">RAID 10으로 전환</desc25>
+    <desc27 len="999">큰 논리 볼륨 하나를 만들기 위한 선형의 드라이브 조합.</desc27>
+    <desc28 len="999">성능이 개선되도록 드라이브 둘 이상의 동작을 결합하여, 데이터가 여러 하드 드라이브로 스트라이프되고, 데이터 읽기와 기록이 가속화됩니다.</desc28>
+    <desc29 len="999">두 동시 데이터 사본이 별도의 하드 드라이브에 기록되어, 이 중 하나가 실패할 경우 결함 있는 하드 드라이브를 교환할 때까지 다른 하나가 데이터 읽기/쓰기를 계속할 수 있습니다.</desc29>
+    <desc30 len="999">3개 이상의 드라이브에 데이터를 스트라이프하고 각 드라이브의 1/4을 결함 허용 전용으로 사용하여, 우수한 성능과 보호를 제공합니다.</desc30>
+    <desc31 len="999">데이터가 보조 디스크에 미러링된 여러 개의 주 디스크에 스트라이프로 기록되는 RAID 프로토콜.</desc31>
+    <desc32 len="999">아래의 슬라이더를 통해 RAID 크기 설정을 지정할 수 있습니다. 전체 볼륨 용량을 사용하지 않는 경우 남은 공간을 스패닝으로 구성하도록 선택할 수 있습니다.</desc32>
+    <desc33 len="999"><![CDATA[RAID 5+spare를 구성합니다(예비 디스크 만들기 확인란 클릭). 그러면 '디스크4'가 핫 스패어가 됩니다. RAID 5+spare를 만들지 않으려면 <B>예비 디스크 만들기</B>의 선택을 취소하십시오. RAID 5 볼륨의 크기를 조정하고, 모든 공간을 사용하지 않는 경우 <B>스패닝으로 남은 디스크 공간 구성</B>을 선택합니다. <b>다음</b>을 클릭하여 계속 진행하십시오.]]></desc33>
+    <desc34 len="999">xxx의 볼륨</desc34>
+    <desc35 len="999">이 섹션에서 (손상된 경우) RAID를 복원할 수 있습니다.  디스크가 인식된 후 RAID를 자동으로 복원하려면 자동 복원을 활성화하십시오.</desc35>
+    <desc36 len="999">자동 탑재</desc36>
+    <desc37 len="999">암호화 암호 입력</desc37>
+    <desc38 len="999">암호화 암호 확인</desc38>
+    <desc39 len="999">이 섹션에서 선택된 볼륨의 암호를 설정할 수 있습니다. 선택 <b>자동 탑재</b> 를 선택하여 부팅 시 암호를 다시 입력할 필요 없이 암호화된 볼륨을 자동으로 탑재할 수 있습니다.</desc39>
+    <desc40 len="999">볼륨 1 암호화</desc40>
+    <desc41 len="999">볼륨 2 암호화</desc41>
+    <desc42 len="999">볼륨 3 암호화</desc42>
+    <desc43 len="999">볼륨 4 암호화</desc43>
+    <desc44 len="999">저하됨</desc44>
+    <desc45 len="999">양호</desc45>
+    <desc46 len="999">스패닝으로 남은 디스크 공간을 구성합니다.</desc46>
+    <desc47 len="999">이제 데이터가 RAID5로 마이그레이션됩니다.</desc47>
+    <desc48 len="999"><![CDATA[
+		RAID 모드 선택 항목을 변경해야 하는 경우 뒤로 버튼을 클릭하십시오. RAID5로 데이터를 마이그레이션하기 위한 항목을 모두 선택했으면 <b>마침</b>을 클릭하십시오.
+		]]></desc48>
+    <desc50 len="999">자동 탑재</desc50>
+    <desc51 len="999">새 볼륨 만들기</desc51>
+    <desc52 len="999">암호화 xxx</desc52>
+    <desc53 len="167">하드 드라이브를 교환해도 RAID 볼륨을 지원하기 위한 용량이 충분해지지 않습니다. 더 많은 용량의 하드 드라이브를 삽입하십시오.</desc53>
+    <desc54 len="167">RAID 1로 마이그레이션</desc54>
+    <desc55 len="167">RAID 5로 마이그레이션</desc55>
+    <desc56 len="167">새로 삽입한 하드 드라이브를 구성하여 RAID에 연결하거나 별도의 볼륨을 만드십시오.</desc56>
+    <desc57 len="999">하드 드라이브를 다시 포맷하려는 중입니다. 모든 데이터가 지워집니다. 계속 진행하시겠습니까?</desc57>
+    <desc58 len="999">이 섹션에서 드라이브를 RAID 1로 재구성하는 데 사용할 디스크를 선택합니다.</desc58>
+    <desc59 len="999">EXT 3</desc59>
+    <desc60 len="999">EXT 4</desc60>
+    <desc61 len="999">예비 디스크 만들기</desc61>
+    <desc62 len="999">이 섹션에서 드라이브를 RAID 5로 재구성하는 데 사용할 디스크를 선택합니다.</desc62>
+    <desc63 len="999"><![CDATA[남은 가용 스토리지 공간에서 새 볼륨을 만들려면 <a href="javascript:Remain_Linear_Format();" class="edit_detail">여기</a>를 클릭하십시오.]]></desc63>
+    <desc64>알 수 없음</desc64>
+    <desc66>구성된 볼륨 없음</desc66>
+    <desc67>RAID 모드를 설정하여 이 장치에 새 RAID 볼륨을 구성하십시오.</desc67>
+    <desc68>저하됨</desc68>
+    <desc69>하나 이상의 RAID 볼륨이 저하되었습니다.</desc69>
+    <desc70>스토리지 모드를 구성하려면 선택하십시오.</desc70>
+    <desc71 len="999">이 섹션에서 암호화할 볼륨을 선택할 수 있습니다.</desc71>
+    <desc72 len="999">보안 볼륨</desc72>
+    <desc73 len="999">보안 없음</desc73>
+    <desc74 len="999">암호화가 활성화되었습니다.</desc74>
+    <desc75 len="999">암호화가 비활성화되었습니다.</desc75>
+    <desc76 len="999">자동 탑재가 활성화되었습니다.</desc76>
+    <desc77 len="999">자동 탑재가 비활성화되었습니다.</desc77>
+    <desc78 len="999">예비 디스크를 만들어서 RAID 세트의 실패한 디스크를 교환하십시오.</desc78>
+    <desc79 len="999">복원 중</desc79>
+    <desc80 len="999">남은 공간에서 볼륨 만들기</desc80>
+    <desc81 len="999">볼륨 크기를 조정하는 중입니다.</desc81>
+    <desc82 len="999">이주</desc82>
+    <desc83 len="999"><![CDATA[
+		RAID 모드 선택 항목을 변경해야 하는 경우 뒤로 버튼을 클릭하십시오.<br><br> RAID1로 데이터를 마이그레이션하기 위한 항목을 모두 선택했으면 <b>마침</b>을 클릭하십시오.
+		]]></desc83>
+    <desc84 len="999">수동 복원</desc84>
+    <desc85 len="999">RAID type 변경을 진행하기 전에 볼륨을 선택하고 목록에서 적합한 드라이브를 선택해 주십시오.</desc85>
+    <desc86 len="999">크기조정</desc86>
+    <desc87 len="999">다음과 같이 시퀀스를 변경하십시오.</desc87>
+    <desc88 len="999">이제 디스크 시퀀스는 다음과 같습니다:</desc88>
+    <desc89 len="999">디스크 시퀀스</desc89>
+    <desc90 len="999"><![CDATA[이렇게 하면 이 작업 기간 동안 활성 파일 전송 서비스가 중단됩니다.<br><br>계속 진행하시겠습니까?]]></desc90>
+    <desc91 len="999">크기가 조정될 때까지 대기</desc91>
+    <desc92 len="999">중요: 이 옵션을 선택하신 경우, 나중에 데이터를 
+RAID 5로 옮길 수 없다는 사실에 주의해 주십시오.</desc92>
+    <desc93 len="999">용량 확대</desc93>
+		<desc94 len="999">기존 드라이브를 새 드라이브로 바꾸시겠습니까?</desc94>
+		<desc95 len="999">확장 중</desc95>
+		<desc96 len="999">다시 동기화 중</desc96>
+		<desc97 len="999">확장 중입니다. 드라이브를 꺼내십시오.</desc97>
+		<desc98 len="999">확장 중입니다. 새 드라이브를 삽입하십시오.</desc98>
+		<desc99 len="999">용량 확대</desc99>
+		<desc100 len="999">모양 변경 중</desc100>
+		<desc101 len="999">RAID 1에서 JBOD로 다운그레이드</desc101>
+		<desc102 len="999">여러 드라이브에 데이터가 있습니다. 스토리지 모드를 RAID 1에서 JBOD로 변경하려는 경우 주 드라이브를 선택해야 합니다.</desc102>
+		<desc103 len="999">주 드라이브를 선택합니다.</desc103>
+		<desc104 len="999">참고: 보조 드라이브에 있는 데이터는 모두 지워집니다.</desc104>
+		<desc105 len="999">마이그레이션 대기</desc105>
+		<desc106 len="999">마이그레이션 계속</desc106>
+		<desc107 len="999">분</desc107>
+		<desc108 len="999">
+  경고:&lt;br&gt;
+  1. RAID 모드를 변경하면 아래 목록에 있는 드라이브의 모든 데이터가 삭제됩니다.&lt;br&gt;
+  2. RAID 모드 변경 중에는 이러한 드라이브에 액세스할 수 없습니다.&lt;br&gt;
+  3. 볼륨을 생성하기 전에 드라이브 셀프 테스트(DST)가 수행되었습니다.&lt;br&gt; 
+ </desc108>
+    <desc109>드라이브 근처의 빨간색 LED가 있는 드라이브부터 시작하여 드라이브를 교환합니다.</desc109>
+    <desc110>RAID 용량을 확장합니다.</desc110>
+    <desc111 len="999"><![CDATA[경고: 이제 볼륨이 저하됩니다. 데이터 무결성을 위해 Raid를 복원하십시오.]]></desc111>
+    <desc112 len="999"><![CDATA[자동 복원 구성을 통해 자동 복원을 활성화하거나 비활성화할 수 있습니다. <b>다음</b>을 클릭하여 수동으로 복원할 수도 있습니다. 복원 시 새로 삽입한 드라이브의 모든 데이터가 지워집니다.]]></desc112>
+    <desc113>교환 시 교환할 드라이브의 용량이 RAID 1의 고장 드라이브 용량 이상인지 확인하십시오. </desc113>
+    <desc114>드라이브 셀프 테스트</desc114>
+    <desc122>xxx 재구성 중입니다.</desc122>
+    <desc123>xxx 확장 중입니다.</desc123>
+    <desc124>xxx 마이그레이션 중입니다.</desc124>
+    <unknown len="999">해당 없음</unknown>
+    <msg1 len="342">이 볼륨은 다른 WD My Cloud Mirror에서 로밍되었습니다(이 시스템에 만든 것이 아님). 현재 WD My Cloud Mirror에 볼륨을 통합하려면 확인을 클릭하십시오. 통합하지 않는 경우 볼륨이 저하되면 데이터가 손실될 수 있습니다. 통합하지 않고 계속 진행하려면 취소를 클릭하십시오.</msg1>
+    <msg6 len="167">WD My Cloud Mirror 시스템이 다시 시작될 때까지 잠시 기다렸다가 다시 로그인하십시오.</msg6>
+    <msg7 len="167">마이그레이션 중 시스템 볼륨에 액세스하는 것을 권장하지 않습니다. 볼륨을 사용할 수 없습니다.</msg7>
+    <msg8 len="167">시스템이 사용 중입니다. 시스템 LED가 파란색으로 켜질 때까지 기다렸다가 다른 드라이브를 삽입하십시오.</msg8>
+    <msg9 len="167">시스템에서 수신할 준비가 되기 전에 드라이브가 삽입되었습니다. 이로 인해 새 드라이브의 데이터가 시스템에 통합되지 않았을 수 있습니다. 데이터 통합 문제를 방지하려면 모든 구성을 수행하기 전에 시스템을 다시 부팅하십시오.</msg9>
+    <msg10 len="167">xxx 포맷 실패(오류 코드:yyy)</msg10>
+    <msg11 len="167">볼륨 구성 실패(오류 코드:yyy)</msg11>
+    <button1>지금 수동 복원</button1>
+    <button2>RAID 모드 변경</button2>
+    <button3>남은 가용 스토리지 공간에서 새 볼륨 만들기</button3>
+    <button4>마침</button4>
+    <button5>RAID 모드 설정</button5>
+    <button6>RAID 1 유형으로 새 드라이브 포맷</button6>
+    <button7>RAID 5 유형으로 새 드라이브 포맷</button7>
+    <button8>RAID 10 유형으로 새 드라이브 포맷</button8>
+  <desc125>경고: 용량을 확장하기 전 데이터를 백업했는지 확인하십시오. 일반적으로 데이터는 유지됩니다. 그러나 확장 프로세스 도중 전원이 끊기거나 드라이브 섹터에서 장애가 발생하는 경우 장애가 발생할 수 있습니다.</desc125><desc126>RAID 패리티 검증</desc126><desc127>백그라운드에서 패리티 일관성 확인 이 프로세스 도중 시스템 성능이 영향을 받을 수 있습니다.</desc127><desc128>하드 디스크 장애로 인해 RAID 설정이 실패하였습니다. 다시 시도하려면 시스템을 종료한 다음 하드 디스크를 교체하십시오.</desc128></_raid>
+  <_ssh>
+    <enable len="999">SSH</enable>
+    <enable_desc1 len="999">이 시스템에 현재 실행 중인 원격 백업이 있습니다. SSH를 끄면 모든 원격 백업이 비활성화됩니다.</enable_desc1>
+    <enable_desc2 len="999">SSH를 비활성화하시겠습니까?</enable_desc2>
+    <enable_desc3 len="999">이 제품의 정상적인 조작 범위를 벗어나는 정도로 이 시스템을 수정하거나 수정을 시도하면 WD 보증이 무효화됩니다.</enable_desc3>
+    <enable_desc4 len="999">원격 서버 역할을 하도록 WD My Cloud Mirror를 활성화하면 SSH가 활성화됩니다. 이 제품의 정상적인 조작 범위를 벗어나는 정도로 이 시스템을 수정하거나 수정을 시도하면 WD 보증이 무효화됩니다.</enable_desc4>
+    <desc1 len="999">OFF SSH로 전환하면 WD My Cloud Mirror 시스템에 대한 모든 원격 백업 및 SFTP(Secure FTP) 액세스가 비활성화됩니다.</desc1>
+		<desc2 len="999">SSH 액세스를 비활성화하면 WD My Cloud Mirror 시스템에 대한 SFTP(Secure FTP) 액세스도 비활성화됩니다. 계속하시겠습니까?</desc2>
+    <desc3 len="999">      <![CDATA[SSH 사용자 이름은 'sshd(대소문자 구분)'입니다.<br><br>* 아래에 SSH 액세스에 필요한 암호를 만드십시오.<br><br>]]>
+    </desc3>
+    <accept>동의함</accept>
+    <ssh>SSH</ssh>
+  </_ssh>
+  <_cloud>
+    <sing_up>등록</sing_up>                                                             	
+	<signup_desc>%s(은)는 MyCloud.com 계정이 없습니다. 로그인을 등록할 이메일 주소를 입력하십시오.</signup_desc>  	
+    <cloud_dev len="999">클라우드 장치</cloud_dev>
+    <title len="999">클라우드 액세스</title>
+    <service len="999">클라우드 서비스</service>
+    <status len="999">연결 상태</status>
+    <dash_access len="999">      <![CDATA[대시보드 클라우드 <br>액세스]]>    </dash_access>
+    <cloud_access len="999">클라우드 액세스 상태</cloud_access>
+    <cloud_for len="999">%s에 대한 MyCloud.com 계정</cloud_for>
+    <cloud_for_info len="999">%s에 대해 등록된 WD My Cloud Mirror 웹 계정이 없습니다. 이메일 주소를 등록하십시오.</cloud_for_info>
+    <register>등록</register>
+    <dev_for len="999">%s에 대한 클라우드 장치</dev_for>
+    <dev_for_info len="999">%s에 대해 구성된 클라우드 장치 액세스가 없습니다. 코드 가져오기를 클릭하여 클라우드 장치의 활성화 코드를 생성하십시오. 요청 시간으로부터 코드는 48시간 동안 유효하며, 한 번만 사용할 수 있습니다.</dev_for_info>
+    <add_access len="999">클라우드 액세스 추가</add_access>
+    <add_desc len="999">활성화 코드가 정상적으로 생성되었습니다. 모바일 장치의 앱에 코드를 입력하십시오. </add_desc>
+    <desc len="999">활성화 코드를 생성하여 드라이브의 내용에 대한 원격 액세스를 가져옵니다.</desc>
+    <configure_access len="999">액세스 구성</configure_access>
+    <wd2go_db len="999">콘텐츠 데이터베이스</wd2go_db>
+    <step_desc len="999"> 
+    	<![CDATA[
+			단계:<br>
+			<ol>
+				<li>드롭다운 목록에서 사용자를 선택하고, <B>코드 가져오기</B>를 클릭하여 활성화 코드를 생성하십시오.</li>
+				<li>태블릿 또는 모바일 장치에 WD Photos 또는 WD My Cloud Mirror 를 설치하십시오.</li>
+				<li>앱을 실행하고 지금 연결을 누르십시오.</li>
+				<li>제품을 선택하십시오.</li>
+				<li>활성화 코드를 입력하십시오.</li>
+			</ol>
+			]]>
+		</step_desc>
+    <sel_user len="999">사용자 선택</sel_user>
+    <get len="999">코드 가져오기</get>
+    <del_code len="999">코드 삭제</del_code>
+    <del_desc len="999">이 코드를 삭제하시겠습니까?</del_desc>
+    <old_mail len="999">기존 이메일</old_mail>
+    <new_mail len="999">새 이메일</new_mail>
+    <code len="999">활성화 코드</code>
+    <code2>코드</code2>
+    <expiration len="999">만료</expiration>
+    <expires len="999">만료</expires>
+    <connectivity len="999">연결</connectivity>
+    <option_title len="999">클라우드 액세스 연결 옵션</option_title>
+    <option_desc len="999">장치에 원격으로 액세스하기 위한 연결 옵션을 구성합니다.</option_desc>
+    <auto len="999">자동</auto>
+    <manual len="999">수동</manual>
+    <win len="999">Win XP</win>
+    <disable len="999">비활성화됨</disable>
+    <ready len="999">준비</ready>
+    <connected len="999">연결됨</connected>
+    <connected_desc len="999">연결됨(릴레이 연결 설정됨)</connected_desc>
+    <failed len="999">실패함</failed>
+    <connecting len="999">연결 중</connecting>
+    <new_device len="999">등록되지 않은 새 장치</new_device>
+    <disconnecting len="999">연결 끊는 중</disconnecting>
+    <disable_desc len="999">클라우드 액세스가 비활성화되었습니다.</disable_desc>
+    <disable_desc2 len="999">      <![CDATA[클라우드 액세스를 활성화하려면 설정 > 일반 > 클라우드 액세스로 이동하십시오.]]>    </disable_desc2>
+    <dexplainedtxt len="999">성능을 극대화하려면 라우터에서 UPnP를 활성화하여 직접 연결을 설정하십시오.</dexplainedtxt>
+    <explainedtxt_part1 len="999">포트 전달이 포트</explainedtxt_part1>
+    <explainedtxt_part2 len="999">과(와) 다음 포트에 연결하지 못했습니다.</explainedtxt_part2>
+    <failedexplainedtxt len="999">원격 액세스 연결을 설정할 수 없습니다. 인터넷에 연결되어 있는지 확인하십시오.</failedexplainedtxt>
+    <connectingexplainedtxt len="999">원격 액세스 연결 설정을 시도하는 중...</connectingexplainedtxt>
+    <readyexplainedtxt len="999">이제 장치에서 클라우드에 액세스할 수 있습니다.</readyexplainedtxt>
+    <retrievingtxt len="999">정보 검색 중...</retrievingtxt>
+    <portforwardedexplainedtxt len="999">포트 전달 연결이 설정되었습니다.</portforwardedexplainedtxt>
+    <reg_mail len="999">등록 이메일 전송됨</reg_mail>
+    <reg_desc1 len="999">등록 이메일이 지정된 사용자에게 전송되었습니다. </reg_desc1>
+    <reg_desc2 len="999">이 이메일이 사용자의 받은 편지함에 도착할 때까지 기다리십시오. 드라이브의 내용에 대한 원격 액세스를 얻는 지침이 제공되었습니다.</reg_desc2>
+    <update_title len="999">MyCloud.com 계정 업데이트</update_title>
+    <update_desc len="999">MyCloud.com 계정을 위해 이메일 주소를 변경하십시오.  </update_desc>
+    <required len="999">필수</required>
+    <rebuild len="999">복원</rebuild>
+    <started len="999">시작</started>
+    <about>클라우드 액세스 정보</about>
+    <about_cloud len="999">스마트폰 또는 태블릿으로 드라이브의 콘텐츠에 액세스하려면 개인 클라우드 에코시스템의 일부로 등록해야 합니다. 모바일 장치와 드라이브를 연결할 코드를 생성합니다.</about_cloud>
+    <part1>      <![CDATA[외부 포트 1<br>(HTTP)*]]>    </part1>
+    <part2>      <![CDATA[외부 포트 2<br>(HTTPS)*]]>    </part2>
+    <invite>개인 클라우드에 다른 사용자 초대</invite>
+    <enable_title>대시보드 클라우드 액세스</enable_title>
+    <enable_desc><![CDATA[현재 네트워크 외부의 이 대시보드 웹 인터페이스에 대한 액세스를 활성화하면 이 장치를 원격으로 관리할 수 있습니다. 그러나 WD My Cloud Mirror에 대한 무단 액세스의 위험도 다소 증가합니다.<br><br> 이 기능을 활성화하시겠습니까?]]></enable_desc>
+    <enable_desc2>현재 네트워크 외부의 이 대시보드 웹 인터페이스에 대한 액세스를 활성화하면 이 장치를 원격으로 관리할 수 있습니다. 하지만, 이에 따라 사용자의 WD My Cloud Mirror에 대한 무단 액세스 위험이 다소 높아집니다. 신규 사용자 추가와 같은 특정한 기능은 사용자 네트워크 외부에서 이용할 수 없습니다.&lt;br&gt;&lt;br&gt;
+보안을 확보하려면 이 기능을 활성화하기 전에 이 장치에 대한 관리자 암호를 입력해야 합니다.</enable_desc2>
+    <auto_desc>장치와 라우터 간 직접 연결 설정을 시도합니다.</auto_desc>    
+    <manual_desc>
+        <![CDATA[
+			장치와 함께 작업하도록 수동으로 라우터를 구성합니다. <a href="http://wdc.custhelp.com/app/answers/detail/a_id/8526" target="_blank">자세히 알아보기</a>
+        ]]>
+    </manual_desc>
+    <xp_desc>Windows XP와 호환되는 직접 또는 릴레이 연결 설정을 시도합니다.</xp_desc>
+    <del_title>WD My Cloud Mirror 계정을 삭제하시겠습니까?</del_title>
+    <del_code_title>모바일 액세스 제거</del_code_title>
+    <msg1>이 웹 계정은 삭제할 수 없습니다. 장치가 등록되어 있고 네트워크 연결 문제가 없는지 확인한 후 다시 시도하십시오.</msg1>
+    <msg2>설정이 업데이트되는 동안 기다리십시오. 이 작업이 진행되는 동안 페이지를 새로 고치거나 장치를 끄지 마십시오.</msg2>
+    <msg3>      <![CDATA[
+		%s에 대한 클라우드 액세스를 제거하시겠습니까?<br><br> 더 이상 인터넷에서 원격으로 드라이브에 저장된 내용에 액세스할 수 없습니다.
+		]]>
+    </msg3>
+    <msg4>이 장치에 대한 모바일 액세스를 제거하시겠습니까?</msg4>
+  <msg5>클라우드 서비스를 끄면 My Cloud, WD Photos 모바일 앱, WD Sync 등의 WD 소프트웨어를 사용할 수 없습니다. 계속 진행하시겠습니까?</msg5>
+	<msg6>시스템이 스토리지의 클라우드 액세스 검색을 시작합니다. 파일 볼륨에 따라 이 작업을 완료하는 데 시간이 다소 걸릴 수 있습니다.</msg6>
+	<msg7>참고</msg7>
+  <edit>편집</edit><resend>재전송</resend><not_allow>허용되지 않음</not_allow><not_allow_desc>사용자가 장치의 로컬 네트워크 외부에서 대시보드(웹 인터페이스)에 액세스 중이므로 이 작업은 허용되지 않습니다.&lt;br&gt;&lt;br&gt;이 작업을 완료하려면 장치의 로컬 네트워크에서 이 인터페이스에 액세스하십시오.</not_allow_desc><usb_availability>USB 컨텐츠 가용성</usb_availability></_cloud>
+  <_top>
+    <wizard len="999">시작 마법사</wizard>
+    <help len="999">도움말</help>
+    <support len="999">지원</support>
+    <about len="999">정보</about>
+  </_top>
+  <_tip>
+    <notification len="999">이메일을 통해 시스템 알림을 수신합니다.</notification>
+    <fw_auto len="999">자동 펌웨어 업데이트를 활성화합니다.</fw_auto>
+    <fw_check len="999">사용 가능한 펌웨어 업데이트가 있는지 확인합니다.</fw_check>
+    <fw_update len="999">파일에서 펌웨어를 업데이트합니다.</fw_update>
+    <scan len="999">My Cloud Mirror 시스템 하드 드라이브에 오류가 있는지 스캔합니다.</scan>
+    <restore len="999">복원 옵션을 사용하기 전에 백업을 만듭니다.
+'시스템만'을 사용하여 시스템 데이터를 원래 초기 설정으로 복원합니다. '빠른 복원'은 내용과 시스템 정보를 지우지만 복구 소프트웨어로 복구할 수 있습니다. '전체 복원'은 모든 내용과 시스템 정보를 영구적으로 삭제하며, 복구할 수 없습니다. 복원 옵션을 사용하기 전에 백업을 만드십시오.</restore>
+    <config len="999">현재 구성 설정을 저장합니다. 또는 저장된 구성 설정을 가져옵니다.</config>
+    <smart len="999">빠른 테스트는 My Cloud Mirror 시스템의 하드 드라이브에 잠재적인 오류가 있는지를 빠르게 스캔하고 검사합니다. 전체 테스트로 전체 시스템 하드 드라이브를 스캔하고 완료하는 데에는 몇 시간 정도 걸릴 수 있습니다.</smart>
+    <dev len="999">장치를 재부팅하거나 최대 절전 모드로 전환합니다. </dev>
+    <gen_ntp len="999">NTP 서비스를 활성화하여 네트워크와 동기화하고 날짜와 시간을 자동으로 업데이트합니다.</gen_ntp>
+    <gen_tm len="999">이 장치에 Time Machine 백업을 활성화합니다.</gen_tm>
+    <gen_dfs len="999">공유 집계는 다른 My Cloud 시스템이나 SMB 프로토콜을 지원하는 네트워크 장치에서 공유를 통합하는 분산 파일 시스템(DFS)과 비슷합니다.</gen_dfs>
+    <gen_ads len="999">WD My Cloud Mirror 장치를 기존 Windows 도메인에 연결할 수 있도록 Active Directory 서비스를 활성화/비활성화합니다.</gen_ads>
+    <gen_drive len="999">드라이브의 절전 모드를 활성화하여 에너지를 절약합니다.</gen_drive>
+    <gen_led len="999">시스템 LED를 활성화/비활성화합니다.</gen_led>
+    <gen_lcd len="999">시스템 LCD를 켜거나 끄십시오. 끄기 모드에서 LCD가 10초 동안 켜질 때까지 장치의 버튼을 누르십시오.</gen_lcd>
+    <gen_lcd_on len="999">LCD는 ON으로 기본 설정되어 있습니다.</gen_lcd_on>
+    <gen_cloud len="999">장치에 대한 클라우드 액세스를 활성화/비활성화합니다.</gen_cloud>
+    <gen_status len="999">클라우드 액세스 연결의 현재 상태를 표시합니다.</gen_status>
+    <gen_timeout len="999">자동 시스템 로그아웃을 적용하는 기본 시간을 구성합니다.</gen_timeout>
+    <gen_recovery len="999">전원 복구 기능은 정전으로 갑자기 종료된 장치를 자동으로 다시 시작합니다.</gen_recovery>
+    <s3 len="999">새 Amazon S3 백업 작업 만들기</s3>
+    <s3_backup len="999">백업의 루트 디렉토리 경로 또는 Amazon S3 버킷을 지정합니다.</s3_backup>
+    <s3_auto len="999">일정에 따라 백업을 자동으로 업데이트합니다.</s3_auto>
+    <recycle>복구하거나 영구적으로 삭제할 수 있는 네트워크 공유에서 삭제된 모든 파일이 들어 있습니다.</recycle>
+    <webdav>WebDAV를 사용하면 여러 사용자들이 협력할 수 있는 방법으로 HTTP를 통해 파일을 관리하고 편집할 수 있습니다.</webdav>
+    <nfs>네트워크 파일 시스템(NFS)은 사용자가 네트워크를 통해 파일에 액세스할 수 있게 해주는 프로토콜입니다. Unix, Linux 및 일부 Mac OSx 버전에서 일반적입니다.</nfs>
+    <host>이 공유에 NFS가 액세스할 수 있도록 할 IP 주소를 입력합니다. 모든 IP 주소를 허용하려면 *를 입력하십시오.</host>
+    <root>필요한 경우 사용자로부터 루트 수준 NFS 권한을 제거하려면 이 옵션을 활성화합니다.</root>
+    <write>이 공유에서 NFS를 통해 쓰기 권한을 설정하려면 이 옵션을 활성화합니다.</write>
+    <remote_ip>이 장치를 백업할 때 사용할 원격 서버의 IP 주소를 입력합니다.</remote_ip>
+    <autoupdate_remote>원격 백업을 자동으로 업데이트할 일정을 활성화/비활성화합니다.</autoupdate_remote>
+    <cloud_status>클라우드 액세스 연결의 현재 상태를 표시합니다.</cloud_status>
+    <group>기본 사용자 페이지에서 그룹을 만들 수 있습니다.</group>
+    <public>공유에 대한 공용 액세스를 활성화하거나 비활성화합니다. 이 값을 켜기로 설정하면 네트워크의 모든 사람이 이 공유의 파일에 액세스할 수 있습니다. 하나 이상의 사용자 계정이 만들어질 때에만 이 옵션이 활성화됩니다.</public>
+    <afp>AFP(Apple File Protocol) 서비스를 활성화하거나 비활성화합니다. Time Machine 백업을 설정하는 경우에만 이 옵션이 자동으로 활성화됩니다. </afp>
+    <lltd>Microsoft Windows 시스템의 네트워크 검색 및 진단 기능이 개선되도록 링크 계층 토폴로지 검색 프로토콜을 활성화하거나 비활성화합니다.</lltd>
+    <snmp>IP 네트워크를 통해 장치를 관리할 수 있도록 SNMP(Simple Network Management Protocol) 서비스를 활성화하거나 비활성화합니다.</snmp>
+    <ssh>네트워크에서 SSH(Enable Secure Shell) 응용 프로그램에 대한 SSH 연결을 활성화하십시오.</ssh>
+    <ddns>동적 DNS 기능을 사용하면 도메인 이름을 사용하여 서버(웹, FTP, 게임 서버 등)를 호스팅할 수 있습니다.</ddns>
+    <remote>원격 서버의 역할을 하고 LAN 또는 WAN의 다른 호환 My Cloud Mirror 시스템에서 공유를 백업할 수 있도록 WD My Cloud Mirror 시스템을 활성화하십시오.</remote>
+    <bonding>또한 &lt;b&gt;Bonding(접합)&lt;/b&gt;은 NAS에 있는 두 네트워크 인터페이스와 라우터에 연결되어 있는 두 케이블을 동시에 사용하는 것을 가리킵니다. 이렇게 하면 성능과 안정성이 개선됩니다.</bonding>
+    <jumbo>Jumbo 프레임은 지원되는 네트워크를 통해 성능을 높이는 데 사용되는 대형 IP 프레임입니다.</jumbo>
+    <ipv4>정적을 선택하여 IP 주소, 서브넷 마스크, 게이트웨이 정보를 입력하거나, DHCP(Dynamic Host Configuration Protocol)를 선택하여 네트워크가 IP 주소 할당과 기타 구성 정보를 검색하도록 합니다. </ipv4>
+    <ipv6>IPv6은 여러 IP 네트워크의 패킷 형식과 주소 지정 구성표를 지정하는 새 IP 표준입니다.</ipv6>
+    <ftp>FTP(파일 전송 프로토콜)는 인터넷을 통해 한 컴퓨터에서 다른 컴퓨터로 데이터를 전송하는 데 사용되는 표준 네트워크 프로토콜입니다. </ftp>
+    <workgroup>작업 그룹을 사용하면 동일한 작업 그룹의 장치들이 서로에 액세스하고, 이러한 장치들이 Windows 시스템에만 되도록 할 수 있습니다. 장치를 네트워크에 추가할 때마다, 장치에 동일한 작업 그룹 이름을 할당하십시오.</workgroup>
+    <lmb>여러 서브넷의 리소스 또는 서비스 정보를 수집하고 기록하도록 도메인 마스터 브라우저를 활성화/비활성화합니다.</lmb>
+    <speed>'자동','100' 또는 '1000'을 선택합니다. 자동은 모든 시나리오에서 작동합니다.</speed>
+    <port_forwarding>기본 또는 사용자 지정 포트 번호를 할당하여 특정 서비스에 대한 연결을 관리합니다.</port_forwarding>
+    <user_prefix>사용자 이름에 대한 접두어를 입력합니다. 접두어에는 공백을 사용할 수 없습니다.</user_prefix>
+    <account_prefix>계정 접두어로 숫자 값을 입력합니다. 계정 접두어는 사용자 이름 접두어에 추가됩니다.</account_prefix>
+    <wfs_upload>WD My Cloud Mirror 시스템에 하나 이상의 파일을 업로드하려면 클릭합니다.</wfs_upload>
+    <iso_overwrite>동일한 이름으로 파일을 복사하려면 덮어쓰기를 선택합니다.</iso_overwrite>
+    <cloud_automatic>      <![CDATA[자동: uPnP를 사용하여 장치와 라우터 간 직접 연결을 설정합니다. 라우터의 포트에서 연결을 열 수 없는 경우 릴레이 연결이 설정됩니다.<br><br>수동: 선택된 두 포트를 통해서 연결을 설정합니다. 둘 중 어느 한 포트를 사용할 수 없는 경우 릴레이 연결이 설정됩니다. 수동 라우터 구성이 필요합니다.<br><br>Windows XP 호환성: 포트 80~443을 통해 연결을 설정합니다. 이러한 포트를 사용할 수 없는 경우 릴레이 연결이 설정됩니다. Windows XP에 필요합니다.]]>    </cloud_automatic>
+    <cloud_rebuild>MyCloud.com 데이터베이스를 복원합니다. 데이터베이스 손상이 의심되는 경우 문제 해결에만 사용합니다.</cloud_rebuild>
+    <require_mail>이메일 주소가 필요합니다.</require_mail>
+    <dashboard>라우터의 원하는 외부 포트를 이 장치의 내부 기본 포트(포트 80)로 설정 또는 전달하여, 이 웹 인터페이스에 대한 인터넷을 통한 액세스를 활성화 또는 비활성화합니다.</dashboard>
+    <ftp_enable>이 공유에 대한 FTP 액세스를 활성화/비활성화합니다.</ftp_enable>
+    <ftp_disable>현재 이 시스템에 대한 FTP 액세스가 비활성화되어 있습니다. 설정 &gt; 네트워크로 이동하여 FTP 설정을 활성화하고, 다시 시도하십시오.</ftp_disable>
+    <nfs_disable>현재 이 시스템에 대한 NFS 액세스가 비활성화되어 있습니다. 설정 &gt; 네트워크로 이동하여 NFS 설정을 활성화하고, 다시 시도하십시오.</nfs_disable>
+    <webdav_enable>동일한 네트워크에서 웹을 통해 콘텐츠에 액세스할 수 있도록 WebDAV 프로토콜을 활성화하십시오.</webdav_enable>
+    <webdav_disable>현재 이 시스템에 대한 WebDAV 액세스가 비활성화되어 있습니다. 설정 &gt; 네트워크로 이동하여 WebDAV 설정을 활성화하고, 다시 시도하십시오.</webdav_disable>
+    <autofw>      <![CDATA[있는 경우 3AM에 펌웨어 업데이트가 이루어지며, 이 경우 다시 부팅이 필요합니다. 자동 업데이트 설정을 구성하려면 설정 >> 펌웨어 업데이트로 이동합니다.]]>
+    </autofw>
+  	<sms>      <![CDATA[SMS(단문 메시지 서비스)를 통해 시스템 알림 받기.]]>
+    </sms>
+    <ups>UPS 상태를 다른 장치에 전달하도록 이 시스템을 구성하거나(마스터 모드) UPS 마스터와 통신하면서 UPS 상태와 명령을 수신하도록 이 장치를 구성할 수 있습니다(종속 모드).</ups>
+    <account_mail>이메일을 입력하여 사용자 클라우드 액세스를 부여합니다. 로그인 지침이 제공된 이메일 주소로 전송됩니다.</account_mail>
+    <smb2>Window 8에서 Windows 파일 기록을 지원하도록 SMB2를 사용 가능한 상태로 설정합니다.</smb2>
+    <p2p_port>포트 설정을 활성화하려면 설정 &gt; 네트워크 &gt; 포트 전달 &gt; 추가로 이동하여 목록에서 적절한 서비스를 활성화합니다.</p2p_port>
+    <system_test>시스템 테스트를 수행하여 장치의 메모리,온도, 팬, 기타 관련 오류를 검사하십시오.</system_test>
+    <wipe>My Cloud Mirror 시스템의 하드 드라이브를 포맷합니다. 드라이브에 있는 모든 데이터가 영구적으로 삭제됩니다.</wipe>
+  <raid>하드 드라이브를 추가하거나 제거할 때 자동으로 사용자 시스템에 RAID 볼륨을 복원합니다.</raid>
+	<fdownload_url>파일 경로와 파일 이름에는 대소문자가 구분됩니다.</fdownload_url>
+	<camera_auto>카메라를 WD My Cloud Mirror 시스템에 연결하면 파일이 자동으로 장치에 전송됩니다.</camera_auto>
+    
+    
+      <camera_copy>카메라에 파일을 복제하여 WD My Cloud Mirror 시스템에 전송합니다.</camera_copy>
+    
+    
+      <camera_move> 카메라의 파일을 WD My Cloud Mirror 시스템으로 전송하지만, 카메라의 내용은 삭제됩니다.</camera_move>
+    
+    
+      <oplocks>Oplock을 활성화하는 경우 SMB 클라이언트의 파일을 캐시하여 Samba 성능을 개선할 수 있습니다.</oplocks>
+    
+    
+      <media_enable>이 공유에 대한 미디어 서비스를 활성화/비활성화합니다.</media_enable>
+    
+    <media_disable><![CDATA[미디어 서비스가 현재 비활성화되어 있습니다.설정으로 이동하여 > 미디어에 미디어 서버를 활성화하십시오.]]></media_disable>
+  
+<ve_download_key>암호화 키 다운로드</ve_download_key>
+    <media_serving>미디어 서비스 옵션이 이 DLNA/iTunes 서버 공유를 활성화하고 비활성화합니다.</media_serving>
+  <extendedlog>시스템 진단 보고서의 확장 로그를 캡처합니다.</extendedlog>
+
+<improvement>제품 개선 프로그램은 진단 및 사용 정보를 수집하여 정기적으로 전송합니다. 이를 통해 WD가 제품의 품질과 성능을 향상시키는 데 도움을 줍니다 .  이러한 정보에는 일반적으로 장치, 응용 프로그램 및 서비스 사용, 그리고 오류 진단 정보가 포함됩니다.  또한 장치 구성, CPU 및 응용 프로그램에 의한 다른 사용 통계, API 호출, 서비스 충돌 정보, 네트워크 상태, 스토리지 활용, 파일 크기 및 종류에 대한 정보가 포함될 수도 있습니다.</improvement><ad_domain>연결할 Active Directory의 정규화된 도메인 이름(FQDN)을 입력하십시오.</ad_domain><snmp_1>IP 네트워크를 통해 장치를 관리할 수 있도록 SNMP(Simple Network Management Protocol) 서비스를 사용합니다. </snmp_1><snmp_2>&lt;b&gt;NoAuthNoPriv :&lt;/b&gt; 메시지가 인증 및 암호화되지 않았습니다.&lt;br&gt;&lt;b&gt;AuthNoPriv:&lt;/b&gt; 메시지가 인증되었으나 암호화되지 않았습니다.&lt;br&gt;&lt;b&gt;AuthPriv:&lt;/b&gt; 메시지가 인증 및 암호화되었습니다.</snmp_2><snmp_3>사용자 액세스 수준을 나타냅니다.&lt;br&gt;&lt;b&gt;시스템:&lt;/b&gt; 장치의 시스템 정보 쿼리만 허용합니다.&lt;br&gt;&lt;b&gt;네트워크:&lt;/b&gt; 장치의 네트워크 정보 쿼리만 허용합니다.&lt;br&gt;&lt;b&gt;전체:&lt;/b&gt; 모든 장치 정보의 쿼리를 허용합니다.</snmp_3><dev1>장치를 재부팅하십시오.</dev1></_tip>
+  <_utilities>
+    <quick_restore len="999">빠른 복원</quick_restore>
+    <full_restore len="999">전체 복원</full_restore>
+    <restore_title len="999">시스템만</restore_title>
+    <restore len="999">기본값으로 복원</restore>
+    <config_title len="999">시스템 구성</config_title>
+    <config len="999">시스템 구성</config>
+    <config_save len="999">구성 파일 저장</config_save>
+    <config_import len="999">파일 가져오기</config_import>
+    <device_title len="999">장치 유지 관리</device_title>
+    <device len="999">장치 전원</device>
+    <shutdown len="999">최대 절전 모드</shutdown>
+    <shut_down len="999">종료</shut_down>
+    <up_time len="999">장치 작동 시간</up_time>
+    <reboot len="999">다시 부팅</reboot>
+    <msg1 len="999">      <![CDATA[구성 설정을 재설정하려는 중입니다. 이것은 드라이브에 저장된 데이터에는 아무런 영향을 미치지 않습니다. 계속하려면 <B>확인</B>을 누르십시오.]]>    </msg1>
+    <msg2 len="999">장치 다시 부팅 중입니다.&lt;br&gt;&lt;br&gt;재부팅 프로세스 중에 장치를 분리하지 마십시오.</msg2>
+    <msg3 len="999">장치 종료 중입니다.</msg3>
+  <full_factory_restore>전체 초기 설정 복원</full_factory_restore><quick_factory_restore>빠른 초기 설정 복원</quick_factory_restore><msg4>초기 설정 복원이 진행 중입니다.</msg4></_utilities>
+  <_notification>
+    <title1 len="999">알림 이메일</title1>
+    <alert_email len="999">알림(경고) 이메일</alert_email>
+    <title2 len="999">알림 디스플레이</title2>
+    <title2_msg len="999">다음 메시지에 대해 알림 표시</title2_msg>
+    <critical_only len="999">중요만</critical_only>
+    <c_warning len="999">중요 및 경고</c_warning>
+    <all len="999">모두</all>
+    <d_header len="999">알림 구성</d_header>
+    <d_desc len="999">						
+			<![CDATA[						
+			WD My Cloud Mirror 인터페이스 또는 이메일을 통해 시스템 알림을 수신하도록 알림 구성을 설정합니다. <br><br> 다음 메시지에 대해 이메일 알림 보내기:
+			]]>
+			</d_desc>
+    <new_email len="999">새 이메일</new_email>
+    <test_mail len="999">테스트 이메일 보내기</test_mail>
+    <info len="999">정보</info>
+    <warning len="999">경고</warning>
+    <critical len="999">임계</critical>
+    <view len="999">모두 보기</view>
+    <no_alert len="999">발견된 알림이 없습니다.</no_alert>
+  </_notification>
+  <_energy>
+    <energy_saver>절전</energy_saver>
+    <drive_sleep len="999">드라이브 대기</drive_sleep>
+    <led len="999">LED</led>
+    <lcd len="999">LCD</lcd>
+    <p_recovery len="999">전원 복구</p_recovery>
+    <p_sch len="999">전원 일정</p_sch>
+    <p_set len="999">전원 설정</p_set>
+    <timeout len="999">웹 액세스 제한 시간</timeout>
+    <p_off_all>하루 종일 꺼짐</p_off_all>
+  </_energy>
+  <_iscsi>
+    <title len="999">iSCSI 대상</title>
+    <desc len="999">
+  WD My Cloud Mirror 시스템에서 iSCSI 대상을 만들고 관리할 수 있습니다. iSCSI 대상은 로컬 하드 디스크 드라이브와 유사하지만 로컬이 아닌 네트워크를 통해서 액세스할 수 있는 스토리지를 제공합니다. 또한 iSCSI 대상은 WD My Cloud Mirror 서버의 기본 RAID 구조로 보호됩니다.
+  &lt;br&gt;
+  &lt;br&gt;
+  iSCSI 대상을 만들려면 아래의 &lt;b&gt;iSCSI 대상 만들기&lt;/b&gt; 버튼을 클릭합니다.
+  &lt;br&gt;
+  &lt;br&gt;
+   </desc>
+    <iscsi len="999">iSCSI</iscsi>
+    <iscsi_server len="999">iSCSI iSNS 클라이언트</iscsi_server>
+    <server>서버</server>
+    <list_title len="999">iSCSI 대상 목록</list_title>
+    <no_connect len="999">연결된 초기자 없음</no_connect>
+    <image_file len="999">이미지 파일</image_file>
+    <security len="999">보안</security>
+    <chap len="999">CHAP</chap>
+    <address len="999">포털 주소</address>
+    <ry_deatil len="999">Ryanspace 세부 정보</ry_deatil>
+    <create_iscsi_target len="999">iSCSI 대상 만들기</create_iscsi_target>
+    <alias len="999">별칭</alias>
+    <create_on len="999">만든 날짜</create_on>
+    <desc1 len="999">
+      <![CDATA[
+	기존 이미지 파일에서 iSCSI 대상을 만들려면 <span style="color:#0067A6;cursor: pointer;" onclick="i_create_tree_dialog('form_s3','s3_tree');">여기</span>를 클릭하십시오.
+		]]>
+		</desc1>
+    <connect len="999">초기자 연결됨</connect>
+    <initi_title len="999">초기자</initi_title>
+    <initi_list len="999">다음 목록은 현재 iSCSI 대상에 연결되어 있는 초기자를 나타냅니다.</initi_list>
+    <name len="999">이름</name>
+    <no_list len="999">WD My Cloud Mirror 시스템에 추가된 iSCSI 대상이 없습니다.</no_list>
+    <create_iscsi_lun len="999">iSCSI LUN 만들기</create_iscsi_lun>
+    <lun_list_title len="999">iSCSI LUN 목록</lun_list_title>
+    <create_iscsi_acl len="999">iSCSI ACL 만들기</create_iscsi_acl>
+    <acl_list_title len="999">iSCSI ACL 목록</acl_list_title>
+    <acl_name>ACL 이름</acl_name>
+    <acl_backup_title len="999">iSCSI 백업 목록</acl_backup_title>
+    <create_iscsi_backup len="999">iSCSI 백업 만들기</create_iscsi_backup>
+    <iqn>
+      <![CDATA[시작자 이름(IQN)]]>
+    </iqn>
+    <acl_info>ACL 정보</acl_info>
+    <lun_mapping>LUN 매핑</lun_mapping>
+    <pre_allocate>사전 할당</pre_allocate>
+    <target_mapping>대상 매핑</target_mapping>
+    <msg1 len="999">대상 이름의 처음 문자는  "a-z"나 "0-9"이어야 합니다. </msg1>
+    <msg2 len="999">대상 이름에는 다음 문자만 사용할 수 있습니다. "a-z" , "A-Z" , "0-9" , "-" , "." 및 ":"</msg2>
+    <msg3 len="999">최대 iSCSI 대상 수에 도달했습니다.</msg3>
+    <msg4 len="999">이 대상은 존재합니다.</msg4>
+    <msg5 len="999">      <![CDATA[이름에 다음 문자를 사용할 수 있습니다. 'a-z, 'A-Z', '0-9', '-', '_']]>
+    </msg5>
+    <msg6 len="999">암호는 12자 이상이어야 합니다. 다시 시도하십시오.</msg6>
+    <msg7 len="999">      <![CDATA[암호에 다음 문자를 사용할 수 있습니다. 'a-z, 'A-Z', '0-9', '-', '_']]>
+    </msg7>
+    <msg8 len="999">1GB-16TB 파일을 선택하십시오.</msg8>
+    <msg9 len="999">별칭을 입력하십시오.</msg9>
+    <msg10 len="999">기존 iSCSI 대상의 크기는 줄일 수 없습니다.</msg10>
+    <msg11 len="999">      <![CDATA[목표 크기는 ~보다 클 수 없습니다. ]]>
+    </msg11>
+    	<msg12 len="999">      <![CDATA[크기를 입력하십시오.]]>    </msg12>
+	<msg13 len="999">      <![CDATA[이미지 파일을 제거하시겠습니까?]]>    </msg13>
+	<msg14 len="999">      <![CDATA[iSCSI 대상 별칭에는 대문자가 포함될 수 없습니다.]]>
+    </msg14>
+	<msg15 len="999">      <![CDATA[이미지 파일이 사용됩니다.]]>    </msg15>
+  <msg16 len="999">
+      <![CDATA[이름의 시작 부분에 snapshots를 사용할 수 없습니다.]]>
+    </msg16>
+    <msg17 len="999">
+      <![CDATA[이름의 시작 부분에 shap을 사용할 수 없습니다.]]>
+    </msg17>
+    <msg18 len="999">IQN을 입력하십시오.</msg18>
+    <msg19 len="999">ACL 이름을 입력하십시오.</msg19>
+    <msg20 len="999">LUN 이름을 입력하십시오.</msg20>
+    <msg21 len="999">
+      <![CDATA[이름에 Default-Policy를 사용할 수 없습니다.]]>
+    </msg21>
+  <msg22>대형 장치를 선택하십시오.</msg22><msg23>공백을 포함할 수 없습니다.</msg23><msg24>대상 이름에는 다음 문자만 사용할 수 있습니다. "a-z" , "0-9" , "-" , "." 및 ":" 공백을 포함할 수 없습니다.</msg24><creating>생성</creating></_iscsi>
+  <getting_start>
+    <desc1 len="999">WD My Cloud Mirror이 개인 클라우드를 만들 수 있게 합니다. 사진, 비디오, 음악, 파일을 한 곳에 보관하고, 어디에서든 이러한 내용에 액세스합니다. MyCloud.com 계정 액세스가 필요하며 각 사용자마다 한 개씩 필요합니다.</desc1>
+    <desc2 len="999">이메일 주소를 입력하면 시스템이 등록되고, 운영자가 WD My Cloud Mirror 정보와 업데이트를 수신할 수 있도록 설정됩니다.</desc2>
+    <desc3 len="999">      <![CDATA[지금 다른 사용자를 추가하지 않으려면 <B>다음</B>을 클릭하여 계속 진행하십시오.]]>
+    </desc3>
+    <desc4 len="999">등록해 주셔서 감사합니다. 등록이 제출되었습니다.</desc4>
+    <login len="999">클라우드 액세스 설정</login>
+    <first_name len="999">이름</first_name>
+    <last_name len="999">성</last_name>
+    <email len="999">이메일 주소</email>
+    <complete len="999">설정 완료</complete>
+	<more len="999"><![CDATA[이것이 전부입니다.]]></more>
+	<more_2 len="999"><![CDATA[MyCloud.com으로부터 로그인 정보가 들어 있는 이메일이 발송됩니다.]]></more_2>
+	<more_3 len="999"><![CDATA[이러한 링크를 클릭하여 추가적인 소프트웨어와 정보를 볼 수 있습니다.]]></more_3>
+    <update len="999">콘텐츠 업로드</update>
+    <backup len="999">백업 PC/Mac</backup>
+    <mobile len="999">모바일 앱 액세스</mobile>
+    <auto len="999">있는 경우 시스템 펌웨어를 자동으로 업데이트합니다.</auto>
+    <register len="999">지속적인 제품 지원을 받을 수 있도록 WD My Cloud Mirror 시스템을 등록합니다.</register>
+  <imp>제품 개선 프로그램에 참여하세요.</imp><desc5>WD 환경 개선</desc5><desc6>제품 등록</desc6><desc7>제품을 등록하면 보증을 등록하고 제품 관련 업데이트를 수신하도록 설정할 수 있습니다.</desc7><desc8>설정 완료</desc8><auto_fw>펌웨어 자동 업데이트:</auto_fw><auto_tip>사용 가능한 장치 펌웨어를 자동으로 업데이트합니다.</auto_tip><imp_tip>WD의 제품 향상 프로그램에 참여하여 WD가 제품을 개선할 수 있도록 도와주십시오.</imp_tip><desc9>여러분에게 매우 흥미로운 시간이 될 것입니다. 다운로드:</desc9></getting_start>
+  <_support>
+    <title>지원</title>
+    <title1>자동화된 지원 요청</title1>
+    <title2>시스템 보고서 만들기 및 저장</title2>
+    <title3>지원 자원</title3>
+    <desc1>
+    	<![CDATA[
+		자동화된 고객 지원을 선택하면 장치의 일련 번호, MAC 주소, 기타 상태 정보를 포함한 지원 요청에 대한 포괄적인 진단 보고서가 생성되어 첨부됩니다. 그러면 최대한 빨리 그리고 효율적으로 지원이 이루어지도록 요청이 전문가팀에 전송됩니다. <br><br> 지원 요청에 보고서를 포함시키려면 내 장치 진단 보고서 첨부 및 지원 요청 옵션을 선택한 후 지원 요청을 클릭하십시오. <br><br> 장치 진단 보고서를 첨부하지 않고 지원 요청을 제출하려면 당사의 표준 지원 페이지를 통해 요청을 제출하십시오.
+	]]>
+	</desc1>
+    <desc2>시스템 보고서를 만들고 드라이브에 저장하여 네트워크 문제를 식별하고 해결합니다.</desc2>
+    <sel_desc>      <![CDATA[내 장치 진단 보고서 첨부 및 지원 요청]]>
+    </sel_desc>
+    <request_support>지원 요청</request_support>
+    <privacy>개인정보보호정책</privacy>
+    <save>만들기 및 저장</save>
+    <doc>제품 문서</doc>
+    <faq>FAQ</faq>
+    <forum>포럼</forum>
+    <contacts>연락처</contacts>
+    <msg1>시스템 로그 업로드 오류입니다.</msg1>
+  <desc3>이 프로그램에 참여해도 사용자 장치의 성능에는 아무런 영향이 미치지 않지만, 당사 제품 개선에는 도움이 됩니다. 사용자의 장치가 주기적으로 기본적인 장치 정보와 함께 장치 일련 번호를 WD로 전송합니다.</desc3><title4>제품 개선 프로그램</title4><title5>제품 개선 프로그램에 참여</title5><desc4>&lt;li&gt;사용자는 향후의 당사 제품 업데이트에 기여합니다.&lt;/li&gt;
+&lt;li&gt;이를 통해 당사 지원 팀이 사용자를 더 효율적으로 지원할 수 있습니다.&lt;/li&gt;
+&lt;li&gt;사용자는 언제든지 이 프로그램 참여를 중지할 수 있습니다.&lt;/li&gt;</desc4></_support>
+  <_about>
+    <copyright>      <![CDATA[Copyright © 2010-2015 Western Digital Technologies, Inc.]]>
+    </copyright>
+    <info>저작권 정보</info>
+    <gnu>GNU 일반 공중 사용 허가서(GPL)</gnu>
+  </_about>
+  <eula>
+    <choose>언어 선택</choose>
+    <agree>      <![CDATA[<span class="wdlink" onclick="open_eula()">WD 최종 사용자 사용권 계약에</span> 동의합니다.]]>
+    </agree>
+    <accept>동의함</accept>
+    <print>인쇄</print>
+    <title>Western Digital 최종 사용자 라이선스 계약 </title>
+    <title2>사용권 계약</title2>
+    <desc>사용권 계약을 자세히 읽으십시오.</desc>
+    <regiest>등록에 실패했습니다. register.wdc.com으로 접속하여 제품을 등록하십시오.</regiest>
+  <nohdd_desc1>하드 드라이브 삽입</nohdd_desc1>
+	<nohdd_desc2>
+		<![CDATA[
+			시스템을 올바르게 설정하려면 하드 드라이브를 My Cloud Mirror 시스템의 슬롯에 꽂으십시오. 하드 드라이브를 구매하려면 <a id="eula_noHDD_link">WD 온라인 상점</a>을 방문하십시오.
+			<p>
+			하드 드라이브를 꽂은 후 계속을 클릭하십시오.
+		]]>
+	</nohdd_desc2>
+  <regiest_fail_1>장치가 이미 등록되었습니다. 계속하려면 '다음'을 클릭합니다.</regiest_fail_1><regiest_fail_2>등록 실패 제품을 직접 WD에 등록하려면 &lt;a href="http://register.wdc.com" target="_blank"&gt;여기&lt;/a&gt;를 클릭하십시오. 지금 등록하지 않으려면 다음을 클릭하여 계속 진행하십시오.</regiest_fail_2></eula>
+  <_wizard>
+    <msg1 leng="167">암호와 암호 확인 문자가 일치하지 않습니다.</msg1>
+    <msg2 leng="167">새 암호는 5자 이상이어야 합니다. 다시 시도하십시오.</msg2>
+    <msg3 leng="167">암호에는 공백을 사용할 수 없습니다.</msg3>
+    <msg4 leng="167">새 암호 길이는 16자를 초과할 수 없습니다.</msg4>
+    <msg5 leng="167">      <![CDATA[새 암호에는 다음 문자를 사용할 수 없습니다.  @ : / \\ % ']]>
+    </msg5>
+    <msg6 leng="167">암호 확인을 입력하십시오.</msg6>
+    <msg7 leng="167">암호 확인에는 공백을 사용할 수 없습니다.</msg7>
+    <relogin_msg leng="167">      <![CDATA[이러한 설정이 적용되도록 하려면 다시 로그인해야 합니다.]]>
+    </relogin_msg>
+    <relogin_msg2 leng="167">      <![CDATA[아직 DHCP 서버에서 사용 가능한 IP를 받으려고 시도하는 중입니다. GUI 리디렉션에 실패했습니다. 나중에 스토리지 유틸리티를 사용하여 장치를 검색합니다.]]>
+    </relogin_msg2>
+  </_wizard>
+  <_dialog_title>
+    <time_machine_2 len="44">2단계: 요약</time_machine_2>
+    <lan_1 len="44">LAN 설정 마법사 시작</lan_1>
+    <lan_2 len="44">VLAN 설정</lan_2>
+    <import_user_4 len="44">3단계: 요약</import_user_4>
+  </_dialog_title>
+  <_port>
+    <msg1>포트 번호 %s은(는) 유효하지 않습니다. 1024-65535 또는 80 중에서 유효한 포트 번호를 입력하십시오.</msg1>
+    <msg2>포트 번호 %s은(는) 유효하지 않습니다. 1024-65535 또는 443 중에서 유효한 포트 번호를 입력하십시오.</msg2>
+  </_port>
+  <_network_ups>
+    <title1>네트워크 UPS</title1>
+    <title2>네트워크 UPS 종속 모드</title2>
+    <fail len="999">실패</fail>
+    <on_line len="999">회선</on_line>
+    <on_battery len="999">배터리</on_battery>
+    <low_battery len="999">배터리 부족</low_battery>
+    <unknown len="999">해당 없음</unknown>
+    <device_info len="999">장치 정보</device_info>
+    <desc1>종속</desc1>
+    <desc2>네트워크로 연결된 UPS 마스터의 IP 주소를 입력합니다.</desc2>
+    <desc3>마법사가 UPS 설정을 구성하고 실행하는 동안 기다려 주세요.</desc3>
+    <msg1 len="999">현재 이 장치에 연결되어 있는 UPS 장치가 없습니다.</msg1>
+    <msg2 len="999">마스터 모드</msg2>
+    <msg4 len="999">종속 모드</msg4>
+    <msg5 len="999">WD My Cloud Mirror를 UPS(마스터) 장치에 연결할 수 없습니다.</msg5>
+  </_network_ups>
+  <_logs>
+		<title len="999">로그</title>
+		<view_logs len="999">로그 보기</view_logs>
+	<system_log>시스템 로그</system_log>		
+	<log_filter>로그 필터</log_filter>
+    <view_event>이벤트 보기</view_event>
+    <filter_by>필터링 기준</filter_by>
+	<level>수준</level>
+	<log_level>로그 수준</log_level>
+	</_logs>
+
+<_recycle>
+    <title>휴지통 설정</title>
+    <auto_clear>자동으로 휴지통 비우기</auto_clear>
+    <clear_days_1>파일 보존 시간</clear_days_1>
+    <clear_days_2>일</clear_days_2>
+  <del_msg_title>휴지통 비우기</del_msg_title>
+	<del_msg>휴지통에서 모든 데이터를 영구적으로 삭제하시겠습니까?</del_msg>
+  <err_clear_days_empty>파일 보존 시간은 1~365 범위의 숫자 값이어야 합니다.</err_clear_days_empty></_recycle>
+<_app_center><desc12>멀티미디어</desc12><desc10>자세히 알아보기</desc10></_app_center><_smart><full_pass>통과 - 전체 디스크 테스트가 정상적으로 완료되었습니다.</full_pass><full_fail>실패 - 전체 디스크 테스트에 실패했습니다. 데이터를 백업한 후 이 디스크를 교체하십시오. 추가적인 지원이 필요한 경우 WD 지원 팀으로 도움을 요청하십시오.</full_fail><full_fail_glcr>실패 - 전체 디스크 테스트에 실패했습니다. WD 고객 지원 팀으로 문의하십시오.</full_fail_glcr><quick_pass>통과 - 빠른 디스크 테스트가 정상적으로 완료되었습니다.</quick_pass><quick_fail>실패 - 빠른 디스크 테스트에 실패했습니다. 데이터를 백업한 후 이 디스크를 교체하십시오. 추가적인 지원이 필요한 경우 WD 지원 팀으로 도움을 요청하십시오.</quick_fail><quick_fail_glcr>실패 - 빠른 디스크 테스트에 실패했습니다. WD 고객 지원 팀으로 문의하십시오.</quick_fail_glcr></_smart><_help><mshares>공유 관리</mshares><cshare>공유 만들기</cshare><caccess>공유 액세스 변경</caccess><mgroups>그룹 관리</mgroups><cgroup>그룹 추가</cgroup><musers>사용자 관리</musers><cuser>사용자 추가</cuser><mcloud>클라우드 액세스 관리</mcloud><raccess>원격 액세스 기본 사항</raccess><saccess>클라우드 액세스 설정</saccess></_help><_share_aggregation><desc>다른 My Cloud 시스템에서 공유에 대한 액세스를 제공하는 로컬 공유를 생성하여 분산된 리소스를 통합하십시오.</desc><c2share>공유에 연결</c2share><add_link>링크 추가</add_link><tip1>루트 폴더는 연결된 원격 공유의 저장소 역할을 하며 공유 집계 공유 아래에 생성됩니다.</tip1><tip2>링크를 추가하여 원격 공유를 집계하십시오.</tip2><tip3>루트 폴더 아래에 표시된 폴더 이름입니다.</tip3><tip4>대상 장치의 호스트 이름 또는 IP 주소를 입력하십시오.</tip4><tip5>원격 공유 이름을 수동으로 입력하거나 &lt;b&gt;원격 공유 목록 가져오기&lt;/b&gt;를 클릭해 원격 호스트 공유를 표시합니다.</tip5><msg1>공유 이름에는 다음 문자를 사용할 수 없습니다. \ / : * ? " &lt; &gt; | </msg1><msg2>원격 호스트에 이용할 수 있는 공유가 없습니다.</msg2><msg3>원격 공유 이름이 존재하지 않습니다.</msg3></_share_aggregation><_domain><connected_to>다음에 연결: %s</connected_to><disconnected>다음에서 연결 끊기: %s</disconnected><ad_status>Active Directory 상태</ad_status></_domain></text>

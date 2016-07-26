@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><cki><ck fm=\"Acerca del estado del disco\" to=\"Formatear el disco del dispositivo WD My Cloud\" num=\"55\"/><ck fm=\"Configuración de las opciones de conexión\" to=\"Establecer cuotas de usuario\" num=\"55\"/><ck fm=\"Creando un archivo compartido\" to=\"¿Qué es el almacenamiento RAID?\" num=\"42\"/></cki>";

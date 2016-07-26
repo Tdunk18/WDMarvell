@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<smsinfo version="0.0">
+  <common>
+    <sms_enable>0</sms_enable>
+    <station_conunt>0</station_conunt>
+    <using_station/>
+    <proxy_enable>0</proxy_enable>
+    <proxy_url/>
+    <url_arg1/>
+    <url_arg2/>
+  </common>
+  <station/>
+</smsinfo>

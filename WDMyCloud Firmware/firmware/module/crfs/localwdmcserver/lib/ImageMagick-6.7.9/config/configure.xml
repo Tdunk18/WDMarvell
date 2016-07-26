@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuremap [
+<!ELEMENT configuremap (configure)+>
+<!ELEMENT configure (#PCDATA)>
+<!ATTLIST configure name CDATA #REQUIRED>
+<!ATTLIST configure value CDATA #REQUIRED>
+]>
+<configuremap>
+  <configure name="NAME" value="ImageMagick"/>
+  <configure name="VERSION" value="6.7.9"/>
+  <configure name="LIB_VERSION" value="0x679"/>
+  <configure name="LIB_VERSION_NUMBER" value="6,7,9,10"/>
+  <configure name="SVN_REVISION" value="9513" />
+  <configure name="RELEASE_DATE" value="2016-06-21"/>
+  <configure name="CONFIGURE" value="/data/workspace/workspace/wdmcserver_3.0.1/dependencies/ImageMagick-6.7.9-10/configure  '--prefix=/data/workspace/workspace/wdmcserver_3.0.1/dependencies/../kc2a' '--bindir=/data/workspace/workspace/wdmcserver_3.0.1/dependencies/../kc2a/trash' '--program-prefix=' 'CPPFLAGS=-I/data/workspace/workspace/wdmcserver_3.0.1/dependencies/../kc2a/include' 'LDFLAGS=-L/data/workspace/workspace/wdmcserver_3.0.1/dependencies/../kc2a/lib' '--enable-shared=yes' '--enable-static=no' '--without-threads' '--disable-openmp' '--disable-opencl' '--with-quantum-depth=8' '--without-modules' '--without-magick-plus-plus' '--without-freetype' '--without-gslib' '--without-perl' '--without-x' '--host=arm-linux' 'host_alias=arm-linux' 'CC=arm-marvell-linux-gnueabi-gcc' 'CFLAGS=-O2' 'CXX=arm-marvell-linux-gnueabi-g++' 'CXXFLAGS=-O2'"/>
+  <configure name="PREFIX" value="/data/workspace/workspace/wdmcserver_3.0.1/dependencies/../kc2a"/>
+  <configure name="EXEC-PREFIX" value="/data/workspace/workspace/wdmcserver_3.0.1/dependencies/../kc2a"/>
+  <configure name="INCLUDE_PATH" value="/data/workspace/workspace/wdmcserver_3.0.1/dependencies/../kc2a/include/ImageMagick"/>
+  <configure name="CONFIGURE_PATH" value="/data/workspace/workspace/wdmcserver_3.0.1/dependencies/../kc2a/etc/ImageMagick/"/>
+  <configure name="SHARE_PATH" value="/data/workspace/workspace/wdmcserver_3.0.1/dependencies/../kc2a/share/ImageMagick-6.7.9"/>
+  <configure name="DOCUMENTATION_PATH" value="/data/workspace/workspace/wdmcserver_3.0.1/dependencies/../kc2a/share/doc/ImageMagick-6.7.9"/>
+  <configure name="EXECUTABLE_PATH" value="/data/workspace/workspace/wdmcserver_3.0.1/dependencies/../kc2a/trash"/>
+  <configure name="LIBRARY_PATH" value="/data/workspace/workspace/wdmcserver_3.0.1/dependencies/../kc2a/lib/ImageMagick-6.7.9"/>
+  <configure name="CODER_PATH" value="/data/workspace/workspace/wdmcserver_3.0.1/dependencies/../kc2a/lib/ImageMagick-6.7.9/modules-Q8/coders"/>
+  <configure name="FILTER_PATH" value="/data/workspace/workspace/wdmcserver_3.0.1/dependencies/../kc2a/lib/ImageMagick-6.7.9/modules-Q8/filters"/>
+  <configure name="CC" value="arm-marvell-linux-gnueabi-gcc -std=gnu99 -std=gnu99"/>
+  <configure name="CFLAGS" value="-O2 -Wall"/>
+  <configure name="CPPFLAGS" value="-I/data/workspace/workspace/wdmcserver_3.0.1/dependencies/../kc2a/include/ImageMagick"/>
+  <configure name="PCFLAGS" value=""/>
+  <configure name="DEFS" value="-DHAVE_CONFIG_H"/>
+  <configure name="LDFLAGS" value="-L/data/workspace/workspace/wdmcserver_3.0.1/dependencies/../kc2a/lib -L/data/workspace/workspace/wdmcserver_3.0.1/dependencies/../kc2a/lib"/>
+  <configure name="LIBS" value="-lMagickCore -ltiff -ljpeg -lpng -lz -lm "/>
+  <configure name="CXX" value="arm-marvell-linux-gnueabi-g++"/>
+  <configure name="CXXFLAGS" value="-O2"/>
+  <configure name="DISTCHECK_CONFIG_FLAGS" value="'CC=arm-marvell-linux-gnueabi-gcc' 'CFLAGS=-O2' 'CPPFLAGS=-I/data/workspace/workspace/wdmcserver_3.0.1/dependencies/../kc2a/include' 'CXX=arm-marvell-linux-gnueabi-g++' 'LDFLAGS=-L/data/workspace/workspace/wdmcserver_3.0.1/dependencies/../kc2a/lib' --disable-deprecated --with-umem=no --with-autotrace=no --with-freetype=no --with-gslib=no --with-fontpath= --with-gvc=no --with-rsvg=no --with-wmf=no --with-perl=no"/>
+  <configure name="TARGET_CPU" value="arm"/>
+  <configure name="TARGET_VENDOR" value="unknown"/>
+  <configure name="TARGET_OS" value="linux-gnu"/>
+  <configure name="HOST" value="arm-unknown-linux-gnu"/>
+  <configure name="FEATURES" value=""/>
+  <configure name="DELEGATES" value="jpeg jng png tiff zlib"/>
+  <configure name="COPYRIGHT" value="Copyright (C) 1999-2012 ImageMagick Studio LLC"/>
+  <configure name="WEBSITE" value="http://www.imagemagick.org"/>
+  <configure name="QuantumDepth" value="8"/>
+</configuremap>

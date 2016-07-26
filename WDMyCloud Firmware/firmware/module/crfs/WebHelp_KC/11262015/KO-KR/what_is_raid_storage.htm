@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="MS-HAID" content="What is RAID Storage?" />
+<meta http-equiv="Content-Language" content="ko-KP" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>RAID 스토리지란?</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("스토리지\nRAID 스토리지\nRAID 스토리지란?");
+addButton("show",BTN_TEXT,"표시","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left; background: #fafafa\"> ");
+AddMasterBreadcrumbs("index.htm", "", "&gt;", "Home", "welcome.htm");
+document.write("<a href=\"what_is_raid_storage.htm\">스토리지<\/a> &gt; <a href=\"what_is_raid_storage.htm\">RAID 스토리지<\/a> &gt; RAID 스토리지란?<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(0);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1 style="background-color: Transparent;">RAID 스토리지란?</h1>
+<p class="Body">RAID(Redundant Array of Independent Disks)<span style="mso-bidi-font-family: Arial;">를 
+ 사용하면 여러 하드 드라이브의 여러 위치에 동일한 데이터를 저장하여 필요한 중복성, 성능 강화, 데이터 무결성을 구현할 수 있습니다.</span> 
+ RAID의 수준에는 여러 가지가 있으며, 수준마다 드라이브 간에 각각 다른 데이터 공유 또는 배포 방법을 제공합니다. My Cloud™ 장치를 사용하여 다음 스토리지 모드 중에서 
+ 하나를 선택할 수 있습니다.</p>
+<ol style="list-style: square;">
+	<li style="list-style: none; display: inline;"><ul style="list-style: square;">
+		<li class="b1"><b style="mso-bidi-font-weight: normal;">JBOD</b>:<span 
+		 style="font-size: 10.0pt; font-family: Arial, sans-serif; mso-fareast-font-family: 'Times New Roman'; 
+		 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">&#160;RAID 
+		 구성에 없지만 별도의 논리 볼륨으로 관리되는 하나 이상의 드라이브 사용.</font></span></li>
+		<li class="b1"><b>스패닝:</b> 큰 논리 볼륨 하나를 만들기 위한 선형의 드라이브 조합.</li>
+		<li class="b1"><b>RAID 0:</b> RAID 0 모드는 RAID 드라이브 그룹의 모든 드라이브 
+		 간 디스크 스트라이핑 기능을 제공합니다. <br />
+		RAID 0은 데이터 중복성은 제공하지 않지만 모든 RAID 수준의 최고 성능을 제공합니다. RAID 0은 데이터를 
+		 작은 세그먼트로 분할하고, 이러한 데이터 세그먼트들을 드라이브의 각 드라이브에 스트라이핑합니다.</li>
+		<li class="b1"><b>RAID 1:</b> RAID 1 모드에서 RAID 컨트롤러는 모든 데이터를 드라이브 
+		 그룹의 한 드라이브에서 다른 드라이브로 복제합니다. RAID 1은 완전한 데이터 중복성을 제공하지만 필요한 데이터 
+		 스토리지 용량을 절반으로 줄입니다.</li>
+		<li class="b1"><span style="font-weight: bold;">RAID 5</span>: 
+		 RAID 5 모드는 3개 이상의 드라이브에 데이터를 스트라이프하고 각 드라이브의 1/4을 결함 허용 전용으로 사용하여, 
+		 우수한 성능과 보호를 제공합니다. <span style="font-weight: bold;">이 옵션은 4베이 
+		 My Cloud 장치 전용입니다.</span></li>
+		<li class="b1"><span style="font-weight: bold;">RAID 10:</span> 
+		 RAID 10 모드는 데이터가 보조 디스크에 미러링된 여러 개의 주 디스크에 스트라이프로 기록되는 RAID 프로토콜입니다. 
+		 <span style="font-weight: bold;">이 옵션은 4베이 My Cloud 장치 전용입니다.</span></li>
+	</ul></li>
+</ol>
+<br />
+
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt;">© 2015 Western Digital Technologies, Inc. 
+	 All rights reserved.</p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>

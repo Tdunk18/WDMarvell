@@ -1,0 +1,1 @@
+10 3 * * * root  [ -f /tmp/wdmc_rescan ] && /usr/local/sbin/wdmc_rescan_volume.py

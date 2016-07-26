@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="MS-HAID" content="Creating an iSCSI Target" />
+<meta http-equiv="Content-Language" content="pl-PL" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Tworzenie obiektu docelowego iSCSI</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Pamięć masowa\niSCSI\nTworzenie obiektu docelowego iSCSI");
+addButton("show",BTN_TEXT,"Pokaż","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left; background: #fafafa\"> ");
+AddMasterBreadcrumbs("index.htm", "", "&gt;", "Home", "welcome.htm");
+document.write("<a href=\"what_is_raid_storage.htm\">Pamięć masowa<\/a> &gt; <a href=\"what_is_iscsi_.htm\">iSCSI<\/a> &gt; Tworzenie obiektu docelowego iSCSI<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(0);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1 style="background-color: Transparent;">Tworzenie obiektu docelowego 
+ iSCSI</h1>
+<p class="Body">Aby utworzyć obiekt docelowy iSCSI, zrób tak:</p>
+<ol style="list-style: disc;">
+	<li style="list-style: none; display: inline;"><ol style="list-style: decimal;">
+		<li class="n1">Kliknij pozycję <span style="font-weight: bold;">Pamięć 
+		 masowa</span>.</li>
+		<li class="n1">Kliknij pozycję <span style="font-weight: bold;">iSCSI</span>.</li>
+		<li class="n1">Kliknij przycisk&#160;<img src="graphics/toggle_button.png" alt="" style="border: none;" width="20" height="12" border="0" />, aby 
+		 włączyć obsługę iSCSI.</li>
+		<li class="n1">U&#160;dołu ekranu kliknij pozycję <span style="font-weight: bold;">Utwórz 
+		 obiekt docelowy iSCSI</span>.</li>
+		<li class="n1">Na ekranie Utwórz obiekt docelowy iSCSI wprowadź 
+		 następujące informacje:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold;">Alias</b>: opisowa 
+		 nazwa obiektu docelowego.</li>
+		<li class="b1"><span style="font-weight: bold;">Utworzono na</span>: 
+		 wybierz wolumin, na którym ma się znajdować obiekt docelowy iSCSI.</li>
+		<li class="b1"><b style="font-weight: bold;">Rozmiar</b>: rozmiar 
+		 obiektu docelowego oraz jednostka wielkości (np. GB, TB).</li>
+	</ul>
+	<ol start="6" style="list-style: decimal;">
+		<li class="n1">Kliknij przycisk <span style="font-weight: bold;"><b>Dalej</b></span>.</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">Jeśli zechcesz przypisać zabezpieczenie do obiektu 
+		 docelowego, kliknij pozycję <span style="font-weight: bold;">CHAP</span>.</li>
+		<li class="b1" :="" ;"="" style="circle: ;">Wprowadź istniejącą 
+		 już nazwę użytkownika i hasło.</li>
+	</ul></li>
+	<ol start="7" style="list-style: decimal;">
+		<li class="n1">Kliknij przycisk <span style="font-weight: bold;">Zastosuj</span>. 
+		 Został utworzony nowy obiekt docelowy iSCSI.</li>
+	</ol>
+</ol>
+<p>&#160;</p>
+<?rh-placeholder type="footer" ?>
+<?rh-placeholder type="footer" ?>
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>

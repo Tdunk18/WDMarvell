@@ -1,0 +1,19 @@
+Source: configfs-backport
+Section: unknown
+Priority: optional
+Maintainer: Nicholas A. Bellinger (nab) <nab@risingtidesystems.com>
+Build-Depends: debhelper (>= 5)
+Standards-Version: 3.7.2
+
+Package: configfs-backport-module-_KVERS_
+Architecture: any
+Provides: configfs-backport-module
+Description: configfs backport modules for Linux (kernel _KVERS_).
+ This package contains a loadable kernel modules for the configfs filesystem
+ .
+ This package contains the compiled kernel modules for _KVERS_
+ .
+ If you have compiled your own kernel, you will most likely need to build
+ your own target-modules. The target-source package has been
+ provided for use with the Debian's module-assistant or kernel-package
+ utilities to produce a version of target-modules for your kernel.

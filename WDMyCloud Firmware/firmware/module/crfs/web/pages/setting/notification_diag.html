@@ -1,0 +1,40 @@
+<!-- Scan Disk Dialog  -->
+<div id="mail_Diag" class="WDLabelDiag" style="display:none;">
+<div class="WDLabelHeaderDialogue WDLabelHeaderDialogueMailIcon" id="mail_Diag_title"><span class="_text" lang="_notification" datafld="d_header"></span></div>
+<div align="center"><div class="hr"><hr></div></div>
+
+	<!-- 1.Scan Disk Dialog : Bar -->
+	<div id="mail_set">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+			<span class="_text" lang="_notification" datafld="d_desc"></span>			
+			<table border='0' cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="220" height=40><span class="_text" lang="_notification" datafld="critical_only"></span></td>
+				<td width="220" align="center"><span class="_text" lang="_notification" datafld="c_warning"></span></td>
+				<td width="150"></td>
+				<td width="90" align="center"><span class="_text" lang="_notification" datafld="all"></span></td>
+			</tr>
+			<tr>
+			<td colspan=4 style="cursor:pointer">
+				<div id="settings_notificationsAlert_slider" style="margin-left:10px;width:610px;cursor:pointer"></div>
+			</td>	
+			</tr>
+			</table>
+			<br>
+			<div id="id_mail_content" class="wizard_add_email_container" style="height:265px;">			
+			</div>
+					<br>
+					<table border="0"  cellspacing="0" cellpadding="0" height="0">
+						<tr><td>						
+					<button id="settings_notificationsAddMail_button" type="button" onclick="add_mail();"><span class="_text" lang="_notification" datafld="new_email"></span></button>		
+					</td></tr>
+				</table>													
+			</div>	
+		</div>		
+		<div class="hrBottom2"><hr></div>		
+		<button type="button" class="ButtonMarginLeft_40px" id="settings_notificationsTestMail_button" onclick="sent_mail_test();"><span class="_text" lang="_notification" datafld="test_mail"></span></button>
+		<button type="button" class="ButtonRightPos2 close" id="settings_notificationsMailSave_button" onclick="mail_reload(1);"><span class="_text" lang="_button" datafld="Ok"></span></button>  					
+	</div>		
+</div><!-- end of Format HD Dialog -->
+

@@ -1,0 +1,162 @@
+﻿<!-- Scan Disk Dialog  -->
+<div id="active_Diag" class="WDLabelDiag" style="display:none;">
+<div class="WDLabelHeaderDialogue WDLabelHeaderDialogueDeviceActivIcon _text" id="active_title" lang="_monitor" datafld="device_active"></div>
+<div align="center"><div class="hr"><hr></div></div>
+				
+	<!-- -->
+	<div id="active_set" style="display:none">
+		<div class="WDLabelBodyDialogue" >
+				<span class="_text" lang="_monitor" datafld="desc"></span>
+				<br><br>
+				<ul class="ListDiv device_active">
+						<li>
+						<div class="div2 _text" lang="_monitor" datafld="cpu"></div>
+						<!--<div class="div3" id="id_cpu_level_icon"></div>-->
+						<div class="div3_no"></div>
+						<div class="div4_no"><span id="home_deviceActivityCPU_value"></span>%</div>
+						<div class="div5" id="home_cpu_link" onclick="diag_active_open('id_cpu');">
+<!--							<img border=0 src="images/icon/s_arrow.png"> -->
+						</div>
+					</li>
+					<li>
+						<div class="div2 _text" lang="_monitor" datafld="memory"></div>
+<!--						<div class="div3" id="id_memory_level_icon"></div> -->
+						<div class="div3_no"></div>
+						<div class="div4_no"><span id="home_deviceActivityMemory_value"></span></div>
+						<div class="div5" id="home_memory_link" onclick="diag_active_open('id_memory');">
+<!--									<img border=0 src="images/icon/s_arrow.png"> -->
+						</div>
+					</li>
+					<li>
+						<div class="div2 _text" lang="_menu" datafld="network"></div>
+						<!--<div class="div3" id="id_network_level_icon"></div>-->
+						<div class="div3_no"></div>
+						<div class="div4_no"><span id="home_deviceActivityNetwork_value"></span></div>
+						<div class="div5" id="home_network_link" onclick="diag_active_open('id_network');">
+<!--							<img border=0 src="images/icon/s_arrow.png"> -->
+						</div>
+					</li>
+					<li>
+						<div class="div2 _text" lang="_monitor" datafld="process"></div>
+						<!--
+						<div class="div3_no" id="id_process_level_icon1"></div>
+						-->
+						<div class="div3_no"></div>
+						<div class="div4_no"><span id="home_deviceActivityProcess_value"></span></div>
+						<div class="div5" id="home_process_link" onclick="diag_active_open('id_process');">
+<!--							<img border=0 src="images/icon/s_arrow.png"> -->
+						</div>
+					</li>
+				</ul>	
+			</div>	
+		
+		<div class="hrBottom2"><hr></div>		
+		<button class="ButtonRightPos2 close" id="home_deviceActivityClose_button"><span class="_text" lang="_button" datafld="close"></span></button>				
+	</div>
+		
+	<!-- cpu-->	
+	<div id="id_cpu" style="display:none">
+		<div class="WDLabelBodyDialogue">
+		<!--	<div class="dialog_content">-->
+				<span class="_text" lang="_monitor" datafld="desc"></span>
+				<br><br>
+				<div class="edit_detail"><span onclick="diag_active_open('id_device_active')" class="_text" lang="_monitor" datafld="device_active"></span> >> CPU</div> 				
+				<br>
+				<!-- -->
+				<table>
+				<tr>	
+					<td>									
+							<span class="placeholder_left" style="font-size:12px;position: absolute; z-index:99999; top: 70px; left: 12px;color: rgb(160, 160, 160); margin-top: 20px; display:inline-block"> % </span>
+							<span style="font-size:12px;position: absolute; z-index:99999; top: 320px; right: 5px;color: rgb(160, 160, 160); margin-top: 20px; display:inline-block"> Mins </span>														
+							<div id="placeholder"  style="width:590px;height:220px;margin-left:-20px;margin-top:10px;"></div> 
+					</td>		
+				</tr>
+				</table>
+			</div>	
+		<!--</div>-->
+		
+		<div class="hrBottom2"><hr></div>		
+		<button class="ButtonMarginLeft_40px" id="home_deviceActivityCpuBack_button" onclick="diag_active_open('id_device_active')"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button class="ButtonRightPos2 close" id="home_deviceActivityCpuClose_button"><span class="_text" lang="_button" datafld="close"></span></button>		
+	</div>
+
+	<!-- memory-->	
+	<div id="id_memory" style="display:none">
+		<div class="WDLabelBodyDialogue" >
+
+				<span class="_text" lang="_monitor" datafld="desc"></span>
+				<br><br>
+				<div class="edit_detail"><span onclick="diag_active_open('id_device_active')" class="_text" lang="_monitor" datafld="device_active"></span> >> <span class="_text" lang="_monitor" datafld="memory"></span></div> 				
+				<br>
+				<!-- -->
+				<table>
+				<tr>	
+					<td>							
+							<span class="placeholder_left" style="font-size:12px;position: absolute; z-index:99999; top: 65px; left: 10px;color: rgb(160, 160, 160); margin-top: 20px; display:inline-block"> %</span>
+							<span style="font-size:12px;position: absolute; z-index:99999; top: 320px; right: 5px;color: rgb(160, 160, 160); margin-top: 20px; display:inline-block"> Mins </span>				
+							<div id="placeholder_memory"  style="width:590px;height:220px;margin-left:-20px;margin-top:10px;"></div> 
+					</td>		
+				</tr>
+				</table>
+			</div>	
+		
+		
+		<div class="hrBottom2"><hr></div>		
+		<button class="ButtonMarginLeft_40px" id="home_deviceActivityMemoryBack_button" onclick="diag_active_open('id_device_active')"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button class="ButtonRightPos2 close" id="home_deviceActivityMemoryClose_button"><span class="_text" lang="_button" datafld="close"></span></button>						
+	</div>
+
+<!-- network-->	
+	<div id="id_network" style="display:none">
+		<div class="WDLabelBodyDialogue" >
+			
+				<div class="_text" lang="_monitor" datafld="desc"></div>
+				<div id="network_detail" class="edit_detail" ><span onclick="diag_active_open('id_device_active')" class="_text" lang="_monitor" datafld="device_active"></span> >> <span class="_text" lang="_menu" datafld="network"></span></div>				
+				<!-- -->
+				<table>
+				<tr>	
+					<td>							
+						<span class="placeholder_left" style="font-size:12px;position: absolute; z-index:99999; top: 65px; left: 5px;color: rgb(160, 160, 160); margin-top: 20px; display:inline-block"> MB/s </span>
+						<span style="font-size:12px;position: absolute; z-index:99999; top: 320px; right: 16px;color: rgb(160, 160, 160); margin-top: 20px;display:inline-block;text-align:right"> Mins </span>
+						<div id="placeholder_network"  style="width:590px;height:220px;margin-left:-20px;margin-top:10px;"></div> 
+					</td>		
+				</tr>
+				</table>
+				<br>
+			</div>	
+		
+		
+		<div class="hrBottom2"><hr></div>		
+		<button class="ButtonMarginLeft_40px" id="home_deviceActivityNetworkBack_button" onclick="diag_active_open('id_device_active')"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button class="ButtonRightPos2 close" id="home_deviceActivityNetworkClose_button"><span class="_text" lang="_button" datafld="close"></span></button>						
+	</div>
+
+	
+	<!-- process-->
+	<div id="id_process" style="display:none">
+		<div class="WDLabelBodyDialogue" >
+			
+				<span class="_text" lang="_monitor" datafld="desc"></span>
+				<br><br>
+				<div class="edit_detail"><span onclick="diag_active_open('id_device_active')"><span class="_text" lang="_monitor" datafld="device_active"></span></span> >> <span class="_text" lang="_monitor" datafld="process"></span></div> 				
+				<br>
+				
+				<ul class='proListDiv proListTitleBar' style="margin-bottom:0px;"><li>
+<div class='div1'><span class="_text" lang="_monitor" datafld="process" onclick="process_sort(0)" style="cursor: pointer;"></span></div>
+<div class='div2'><span class="_text" lang="_monitor" datafld="cpu" onclick="process_sort(1)" style="cursor: pointer;"></span>%</div>
+<div class='div3' id="home_processDiv3_link" ><span class="_text" lang="_monitor" datafld="memory_usage" onclick="process_sort(2)" style="cursor: pointer;"></span></div>
+</li>
+</ul>
+
+			<div class="scrollbar_active">
+				<div id="id_process_list" style="margin-top:-15px;"></div>
+     </div>				
+			</div>	
+		<div class="hrBottom2"><hr></div>		
+		<button class="ButtonMarginLeft_40px" id="home_deviceActivityProcessBack_button" onclick="diag_active_open('id_device_active')"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button class="ButtonRightPos2 close" id="home_deviceActivityProcessClose_button"><span class="_text" lang="_button" datafld="close"></span></button>								
+	</div>
+	
+	
+</div><!-- end of Format HD Dialog -->
+

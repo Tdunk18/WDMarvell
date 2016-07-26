@@ -1,0 +1,6399 @@
+# LANGUAGE: Japanesse
+# Copyright 2013
+# Sequoia"
+# Date 6.10.2013"
+
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# -- Global note: All references to WD 2Go or WD2go.com have become WD My Cloud or WDMyCloud.com. Because we do not translate product names, you will see the difference from WD 2go to WD My Cloud or WD2go.com to WDMyCloud.com. Each key/string value is commented as well
+
+# --------- Safepoint specific codes and messages ---------
+
+#: string "Safepoint OK."
+msgid "SAFEPOINT_OK"
+msgstr "Safepoint OK。"
+
+#: string "Safepoint operation in progress."
+msgid "SAFEPOINT_INPROGRESS"
+msgstr "Safepoint 処理が実行中です。"
+
+#: string "Failed request received during this safepoint operation."
+msgid "SAFEPOINT_FAILED"
+msgstr "この Safepoint 処理中に受信した要求が失敗しました。"
+
+#: string "This safepoint was not found."
+msgid "SAFEPOINT_NOTFOUND"
+msgstr "この Safepoint が見つかりませんでした。"
+
+#: string "This safepoint operation failed due to an unauthorized request."
+msgid "SAFEPOINT_UNAUTHORIZED"
+msgstr "権限のない要求であるため、この Safepoint 処理は失敗しました。"
+
+#: string "A safepoint operation is currently in progress."
+msgid "SAFEPOINT_BUSY"
+msgstr "現在 Safepoint 処理が実行中です。"
+
+#: string "This safepoint operation failed due to insufficient space."
+msgid "SAFEPOINT_NOSPACE"
+msgstr "領域が不十分なため、この Safepoint 処理は失敗しました。"
+
+#: string "This safepoint operation failed due to an invalid request."
+msgid "SAFEPOINT_INVALID"
+msgstr "無効な要求であるため、この Safepoint 処理は失敗しました。"
+
+#: string "This safepoint is incompatible."
+msgid "SAFEPOINT_INCOMPATIBLE"
+msgstr "この Safepoint は対応していません。"
+
+#: string "This safepoint operation failed because it is currently unreachable."
+msgid "SAFEPOINT_UNREACHABLE"
+msgstr "現在到達できないため、この Safepoint 処理は失敗しました。"
+
+#: string "This operation is not supported."
+msgid "SAFEPOINT_NOTSUPPORTED"
+msgstr "この処理はサポートされていません。"
+
+#: string "This safepoint operation failed due to a duplication error."
+msgid "SAFEPOINT_DUPLICATE"
+msgstr "この Safepoint 処理は重複エラーのため失敗しました。"
+
+#: string "This safepoint operation did not start."
+msgid "SAFEPOINT_NOTSTARTED"
+msgstr "この Safepoint 処理は開始しませんでした。"
+
+#: string "This safepoint is was not created."
+msgid "SAFEPOINT_NOTCREATED"
+msgstr "この Safepoint は作成されませんでした。"
+
+#: string "A system resource is not available."
+msgid "SAFEPOINT_UNAVAILABLE"
+msgstr "システムリソースがありません。"
+
+#: string "This safepoint operation failed due to a corrupted resource."
+msgid "SAFEPOINT_CORRUPTED"
+msgstr "この Safepoint 処理は破損リソースのため失敗しました。"
+
+#: string "Safepoint operation aborted."
+msgid "SAFEPOINT_ABORTED"
+msgstr " Safepoint 処理は中断されました。"
+
+#: string "This safepoint operation was ignored."
+msgid "SAFEPOINT_IGNORE"
+msgstr "この Safepoint 処理は無視されました。"
+
+#: string "This safepoint operation is not allowed."
+msgid "SAFEPOINT_NOTALLOWED"
+msgstr "この Safepoint 処理は許可されていません。"
+
+#: string "Your last safepoint operation timed out."
+msgid "SAFEPOINT_TIMEOUT"
+msgstr "最後の Safepoint 処理がタイムアウトしました。"
+
+
+#: string "A bad request was made."
+msgid "ERROR_BAD_REQUEST"
+msgstr "不正な要求が行われました。"
+
+#: string "You are not authorized to perform this task."
+msgid "ERROR_NOT_AUTHORIZED_TASK"
+msgstr "このタスクを実行する権限がありません。"
+
+
+#: string "The requested service was not found."
+msgid "ERROR_SERVICE_NOT_FOUND"
+msgstr "要求されたサービスが見つかりませんでした。"
+
+
+#: string "Invalid firmware package."
+msgid "ERROR_INVALID_FW_PACKAGE"
+msgstr "無効なファームウェア パッケージ。"
+
+
+#: string "Device does not have enough space for upgrade."
+msgid "ERROR_OUT_OF_SPACE_FOR_UPGRADE"
+msgstr "デバイスには十分な領域がないためアップグレードできません。"
+
+
+#: string "Upgrade unpack failure."
+msgid "ERROR_UPGRADE_UNPACK_FAILED"
+msgstr "アップグレード解凍エラー。"
+
+
+#: string "Upgrade copy failure."
+msgid "ERROR_UPGRADE_COPY_FAILED"
+msgstr "アップグレード コピー エラー。"
+
+
+#: string "Invalid IP address."
+msgid "ERROR_INVALID_IP_ADDRESS"
+msgstr "無効な IP アドレス。"
+
+
+#: string "Invalid gateway value."
+msgid "ERROR_INVALID_GATEWAY"
+msgstr "無効なゲートウェイ値。"
+
+
+#: string "Invalid netmask value."
+msgid "ERROR_INVALID_NETMASK"
+msgstr "無効なネットマスク値。"
+
+
+#: string "Invalid DNS server value."
+msgid "ERROR_INVALID_DNS_SERVER"
+msgstr "無効な DNS サーバー値。"
+
+
+#: string "A minimum of one DNS server is required for Static Network Mode."
+msgid "ERROR_AT_LEAST_ONE_DNS_REQUIRED"
+msgstr "固定ネットワーク モードでは、1 つ以上の DNS サーバーが必要です。"
+
+
+#: string "Invalid config file type. Please select a .conf file."
+msgid "ERROR_INVALID_CONFIG_FILE_SELECTED"
+msgstr "無効な設定ファイル タイプ。 .conf ファイルを選択してください。"
+
+
+#: string "Invalid firmware file type. Please select a .deb file."
+msgid "ERROR_INVALID_FIRMWARE_FILE_SELECTED"
+msgstr "無効なファームウェア ファイル タイプ。 .deb ファイルを選択してください。"
+
+
+#: string "User name already in use. Please enter another user name."
+msgid "ERROR_USERNAME_ALREADY_EXISTS"
+msgstr "ユーザー名は既に使用中です。 別のユーザー名を入力してください。"
+
+
+#: string "The system is currently busy; please try again in a few minutes."
+msgid "ERROR_EXCEPTION_DURING_USER_FIND"
+msgstr "現在システムはビジー状態です。数分たってから再試行してください。"
+
+
+#: string "The system is currently busy; please try again in a few minutes."
+msgid "ERROR_EXCEPTION_DURING_USER_CREATION"
+msgstr "現在システムはビジー状態です。数分たってから再試行してください。"
+
+
+#: string "The device name you are attempting to register is already in use. Please change the device name to successfully complete registration of this device."
+msgid "ERROR_EXCEPTION_DURING_REGISTRATION"
+msgstr "登録しようとしているデバイス名は既に使用中です。 このデバイスの登録を完了するには、デバイス名を変更してください。"
+
+
+#: string "The email entered is already registered to an account."
+msgid "ERROR_EMAIL_ALREADY_REGISTERED"
+msgstr "入力した電子メール アドレスは既にアカウントに登録されています。"
+
+
+#: string "Invalid account."
+msgid "ERROR_INVALID_ACCOUNT"
+msgstr "無効なアカウント。"
+
+
+#: string "Restore file is either incorrect file format or corrupt."
+msgid "ERROR_RESTORE_FILE_IS_NOT_CORRECT_FORMAT"
+msgstr "復元ファイルのファイル形式が正しくないか、破損しています。"
+
+
+#: string "First Name must be between 1 and 20 characters."
+msgid "ERROR_FIRST_NAME_INVALID_SYNTAX"
+msgstr "名前 (名) は 1 ～ 20 文字でなければなりません。"
+
+
+#: string "Your Last Name must be between 1 and 20 characters."
+msgid "ERROR_LAST_NAME_INVALID_SYNTAX"
+msgstr "名前 (姓) は 1 ～ 20 文字でなければなりません。"
+
+
+#: string "Please provide a valid email address."
+msgid "ERROR_PROVIDE_VALID_EMAIL_ADDRESS"
+msgstr "有効な電子メール アドレスを入力してください。"
+
+
+#: string "Your email addresses do not match."
+msgid "ERROR_EMAIL_ADDRESS_DONT_MATCH"
+msgstr "電子メール アドレスが一致しません。"
+
+
+#: string "Registration failed. Please go to register.wdc.com to register your product."
+msgid "ERRORS_REGISTRATION_FAILED"
+msgstr "登録に失敗しました。 register.wdc.com にアクセスし、製品を登録してください。"
+
+
+#: string "Cancel"
+msgid "BUTTON_CANCEL"
+msgstr "キャンセル"
+
+#: string "Continue?"
+msgid "BUTTON_CONTINUE"
+msgstr "続行しますか?"
+
+
+#: string "Save"
+msgid "BUTTON_SAVE"
+msgstr "保存"
+
+
+#: string "Updating..."
+msgid "LABEL_DESCR_LOADER_UPDATING"
+msgstr "更新中..."
+
+
+#: string "Reboot"
+msgid "PAGE_HEADER_REBOOT"
+msgstr "再起動"
+
+
+#: string "Factory Restore successful."
+msgid "LABEL_DESCR_FACTORY_RESTORE_SUCCESS"
+msgstr "初期状態に復元しました。"
+
+
+#: string "Factory restore successful."
+msgid "LABEL_DESCR_PARTIAL_RESTORE_SUCCESS"
+msgstr "初期状態に復元しました。"
+
+
+#: string "Firmware update successful."
+msgid "LABEL_DESCR_FIRMWARE_UPDATE_SUCCESS"
+msgstr "ファームウェア更新に成功しました。"
+
+
+#: string "Full Restore is switching to Quick Restore."
+msgid "LABEL_DESCR_FACTORY_RESTORE_SWITCH_TO_QUICK_RESTORE"
+msgstr "完全復元は簡易復元に切り替わっています。"
+
+
+#: string "Device is rebooting"
+msgid "LABEL_DESCR_DEVICE_REBOOTING"
+msgstr "デバイスが再起動しています。"
+
+
+#: string "Initializing device"
+msgid "LABEL_DESCR_INTIALIZING_DEVICE"
+msgstr "デバイスを初期化中"
+
+
+#: string "iTunes Server:"
+msgid "LABEL_HEADER_ITUNES_SERVER"
+msgstr "iTunes サーバー"
+
+
+#: string "Rescan"
+msgid "BUTTON_RESCAN_MEDIA"
+msgstr "再スキャン"
+
+
+#: string "Version:"
+msgid "LABEL_HEADER_VERSION"
+msgstr "バージョン:"
+
+
+#: string "Music Tracks:"
+msgid "LABEL_HEADER_MUSIC_TRACKS"
+msgstr "音楽トラック:"
+
+
+#: string "Pictures:"
+msgid "LABEL_HEADER_PICTURES"
+msgstr "画像:"
+
+
+#: string "Videos:"
+msgid "LABEL_HEADER_VIDEOS"
+msgstr "動画:"
+
+
+#: string "Rebuild"
+msgid "BUTTON_REBUILD"
+msgstr "復元"
+
+
+#: string "IP Address"
+msgid "LABEL_HEADER_IP_ADDRESS"
+msgstr "IP アドレス"
+
+
+#: string "Network Mode"
+msgid "LABEL_HEADER_NETWORK_MODE"
+msgstr "ネットワーク モード"
+
+
+#: string "Date &amp; Time"
+msgid "PAGE_HEADER_DATE_AND_TIME"
+msgstr "日時"
+
+
+#: string "Time Zone:"
+msgid "LABEL_HEADER_TIME_ZONE"
+msgstr "タイム ゾーン:"
+
+
+#: string "(GMT-11:00) Midway Island, Samoa"
+msgid "GENERIC_TIME_ZONE_MIDWAY_ISLAND"
+msgstr "(GMT-11:00) ミッドウェイ諸島、サモア"
+
+
+#: string "(GMT-10:00) Hawaii"
+msgid "GENERIC_TIME_ZONE_HAWAII"
+msgstr "(GMT-10:00) ハワイ"
+
+
+#: string "(GMT-09:00) Alaska"
+msgid "GENERIC_TIME_ZONE_ALASKA"
+msgstr "(GMT-09:00) アラスカ"
+
+
+#: string "(GMT-08:00) Pacific Time (US & Canada)"
+msgid "GENERIC_TIME_ZONE_PACIFIC_TIME"
+msgstr "(GMT-08:00) 太平洋標準時 (米国およびカナダ)"
+
+
+#: string "(GMT-08:00) Tijuana"
+msgid "GENERIC_TIME_ZONE_TIJUANA"
+msgstr "(GMT-08:00) ティフアナ"
+
+
+#: string "(GMT-07:00) Arizona"
+msgid "GENERIC_TIME_ZONE_ARIZONA"
+msgstr "(GMT-07:00) アリゾナ"
+
+
+#: string "(GMT-07:00) Chihuahua, La Paz, Mazatlan"
+msgid "GENERIC_TIME_ZONE_CHIHUAHUA_LA_PAZ_MAZATLAN"
+msgstr "(GMT-07:00) チワワ、ラパス、マサトラン"
+
+
+#: string "(GMT-07:00) Mountain Time (US & Canada)"
+msgid "GENERIC_TIME_ZONE_MOUNTAIN_TIME"
+msgstr "(GMT-07:00) 山地標準時 (米国およびカナダ)"
+
+
+#: string "(GMT-06:00) Central America (Guatemala)"
+msgid "GENERIC_TIME_ZONE_CENTRAL_AMERICA"
+msgstr "(GMT-06:00) 中央アメリカ (グアテマラ)"
+
+
+#: string "(GMT-06:00) Central Time (US & Canada)"
+msgid "GENERIC_TIME_ZONE_CENTRAL_TIME"
+msgstr "(GMT-06:00) 中部標準時 (米国およびカナダ)"
+
+
+#: string "(GMT-06:00) Guadalajara, Mexico City, Monterrey"
+msgid "GENERIC_TIME_ZONE_GUADALAJARA"
+msgstr "(GMT-06:00) グアダラハラ、メキシコシティ、モントレー"
+
+
+#: string "(GMT-06:00) Saskatchewan"
+msgid "GENERIC_TIME_ZONE_SASKATCHEWAN"
+msgstr "(GMT-06:00) サスカチュワン"
+
+
+#: string "(GMT-05:00) Bogota, Lima, Quito"
+msgid "GENERIC_TIME_ZONE_BOGOTA_LIMA_QUITO"
+msgstr "(GMT-05:00) ボゴタ、リマ、キト"
+
+
+#: string "(GMT-05:00) Eastern Time (US & Canada)"
+msgid "GENERIC_TIME_ZONE_EASTERN_TIME"
+msgstr "(GMT-05:00) 東部標準時 (米国およびカナダ)"
+
+
+#: string "(GMT-05:00) Indiana (East)"
+msgid "GENERIC_TIME_ZONE_INDIANA"
+msgstr "(GMT-05:00) インディアナ東部"
+
+
+#: string "(GMT-04:30) Caracas"
+msgid "GENERIC_TIME_ZONE_CARACAS"
+msgstr "(GMT-04:30) カラカス"
+
+
+#: string "(GMT-04:00) Atlantic Time (Canada)"
+msgid "GENERIC_TIME_ZONE_ATLANTIC_TIME"
+msgstr "(GMT-04:00) 大西洋標準時 (カナダ)"
+
+
+#: string "(GMT-04:00) La Paz"
+msgid "GENERIC_TIME_ZONE_LA_PAZ"
+msgstr "(GMT-04:00) ラパス"
+
+
+#: string "(GMT-04:00) Santiago"
+msgid "GENERIC_TIME_ZONE_SANTIAGO"
+msgstr "(GMT-04:00) サンティアゴ"
+
+
+#: string "(GMT-04:00) Manaus"
+msgid "GENERIC_TIME_ZONE_MANAUS"
+msgstr "(GMT-04:00) マナウス"
+
+
+#: string "(GMT-03:30) Newfoundland"
+msgid "GENERIC_TIME_ZONE_NEWFOUNDLAND"
+msgstr "(GMT-03:30) ニューファンドランド"
+
+
+#: string "(GMT-03:00) Brasilia"
+msgid "GENERIC_TIME_ZONE_BRASILIA"
+msgstr "(GMT-03:00) ブラジリア"
+
+
+#: string "(GMT-03:00) Buenos Aires, Georgetown"
+msgid "GENERIC_TIME_ZONE_BUENOS_AIRES_GEORGETOWN"
+msgstr "(GMT-03:00) ブエノスアイレス、ジョージタウン"
+
+
+#: string "(GMT-03:00) Greenland"
+msgid "GENERIC_TIME_ZONE_GREENLAND"
+msgstr "(GMT-03:00) グリーンランド"
+
+
+#: string "(GMT-03:00) Montevideo"
+msgid "GENERIC_TIME_ZONE_MONTEVIDEO"
+msgstr "(GMT-03:00) モンテビデオ"
+
+
+#: string "(GMT-02:00) Mid-Atlantic (Noronha)"
+msgid "GENERIC_TIME_ZONE_MID_ATLANTIC"
+msgstr "(GMT-02:00) 中央大西洋 (ノローニャ)"
+
+
+#: string "(GMT-01:00) Azores Is."
+msgid "GENERIC_TIME_ZONE_AZORES_IS"
+msgstr "(GMT-01:00) アゾレス諸島"
+
+
+#: string "(GMT-01:00) Cape Verde Is."
+msgid "GENERIC_TIME_ZONE_CAPE_VERDE_IS"
+msgstr "(GMT-01:00) カーボベルデ諸島"
+
+
+#: string "(GMT) Casablanca, Monrovia"
+msgid "GENERIC_TIME_ZONE_CASABLANCA_MONROVIA"
+msgstr "(GMT) カサブランカ、モンロビア"
+
+
+#: string "(GMT) Greenwich Mean Time: Dublin, Edinburgh, Lisbon, London"
+msgid "GENERIC_TIME_ZONE_GREENWICH_MEAN_TIME"
+msgstr "(GMT) グリニッジ標準時: ダブリン、エジンバラ、リスボン、ロンドン"
+
+
+#: string "(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna"
+msgid "GENERIC_TIME_ZONE_AMSTERDAM_BERLIN_BERN_ROME_STOCKHOLM_VIENNA"
+msgstr "(GMT+01:00) アムステルダム、ベルリン、ベルン、ローマ、ストックホルム、ウィーン"
+
+
+#: string "(GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague"
+msgid "GENERIC_TIME_ZONE_BELGRADE_BRATISLAVA_BUDAPEST_LIJUBLIJANA_PARGUE"
+msgstr "(GMT+01:00) ベオグラード、ブラチスラバ、ブダペスト、リュブリャナ、プラハ"
+
+
+#: string "(GMT+01:00) Brussels, Copenhagen, Madrid, Paris"
+msgid "GENERIC_TIME_ZONE_BRUSSELS_COPENHAGEN_MADRID_PARIS"
+msgstr "(GMT+01:00) ブリュッセル、コペンハーゲン、マドリッド、パリ"
+
+
+#: string "(GMT+01:00) Sarajevo, Skopje, Warsaw, Zagreb"
+msgid "GENERIC_TIME_ZONE_SARAJEVO_SKPOJE_WARSAW_ZAGREB"
+msgstr "(GMT+01:00) サラエボ、スコピエ、ワルシャワ、ザグレブ"
+
+
+#: string "(GMT+01:00) West Central Africa"
+msgid "GENERIC_TIME_ZONE_WEST_CENTRAL_AFRICA"
+msgstr "(GMT+01:00) 西中央アフリカ"
+
+
+#: string "(GMT+02:00) Amman"
+msgid "GENERIC_TIME_ZONE_AMMAN"
+msgstr "(GMT+02:00) アンマン"
+
+
+#: string "(GMT+02:00) Beirut"
+msgid "GENERIC_TIME_ZONE_BEIRUT"
+msgstr "(GMT+02:00) ベイルート"
+
+
+#: string "(GMT+03:00) Minsk"
+msgid "GENERIC_TIME_ZONE_MINSK"
+msgstr "(GMT+03:00) ミンスク"
+
+
+#: string "(GMT+02:00) Athens, Bucharest, Istanbul"
+msgid "GENERIC_TIME_ZONE_ATHENS_BUCHAREST_ISTANBUL"
+msgstr "(GMT+02:00) アテネ、ブカレスト、イスタンブール"
+
+
+#: string "(GMT+02:00) Cairo"
+msgid "GENERIC_TIME_ZONE_CAIRO"
+msgstr "(GMT+02:00) カイロ"
+
+
+#: string "(GMT+02:00) Harare, Pretoria"
+msgid "GENERIC_TIME_ZONE_HARARE_PRETORIA"
+msgstr "(GMT+02:00) ハラーレ、プレトリア"
+
+
+#: string "(GMT+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius"
+msgid "GENERIC_TIME_ZONE_HELSINKI_KYIV_RIGA_SOFIA_TALLINN_VILNIUS"
+msgstr "(GMT+02:00) ヘルシンキ、キエフ、リガ、ソフィア、タリン、ビリニュス"
+
+
+#: string "(GMT+02:00) Jerusalem"
+msgid "GENERIC_TIME_ZONE_JERUSALEM"
+msgstr "(GMT+02:00) エルサレム"
+
+
+#: string "(GMT+03:00) Baghdad"
+msgid "GENERIC_TIME_ZONE_BAGHDAD"
+msgstr "(GMT+03:00) バグダッド"
+
+
+#: string "(GMT+03:00) Kuwait, Riyadh"
+msgid "GENERIC_TIME_ZONE_KUWAIT_RIYADH"
+msgstr "(GMT+03:00) クウェート、リヤド"
+
+# edit update 6-10-13
+#: string "(GMT+04:00) Moscow, St. Petersburg, Volgograd"
+msgid "GENERIC_TIME_ZONE_MOSCOW_ST_PETERSBURG_VOLGOGRAD"
+msgstr "(GMT+04:00) モスクワ、サンクトペテルブルグ、ボルゴグラード"
+
+
+#: string "(GMT+03:00) Nairobi"
+msgid "GENERIC_TIME_ZONE_NAIROBI"
+msgstr "(GMT+03:00) ナイロビ"
+
+
+#: string "(GMT+03:30) Tehran"
+msgid "GENERIC_TIME_ZONE_TEHRAN"
+msgstr "(GMT+03:30) テヘラン"
+
+
+#: string "(GMT+04:00) Abu Dhabi, Muscat"
+msgid "GENERIC_TIME_ZONE_ABU_DHABI_MUSCAT"
+msgstr "(GMT+04:00) アブダビ、マスカット"
+
+
+#: string "(GMT+04:00) Baku, Tbilisi, Yerevan"
+msgid "GENERIC_TIME_ZONE_BAKU_TBILISI_YEREVAN"
+msgstr "(GMT+04:00) バクー、トビリシ、エレバン"
+
+
+#: string "(GMT+04:00) Yerevan"
+msgid "GENERIC_TIME_ZONE_YEREVAN"
+msgstr "(GMT+04:00) エレバン"
+
+
+#: string "(GMT+04:30) Kabul"
+msgid "GENERIC_TIME_ZONE_KABUL"
+msgstr "(GMT+04:30) カブール"
+
+# edit update 6-10-13
+#: string "(GMT+06:00) Ekaterinburg"
+msgid "GENERIC_TIME_ZONE_EKATERINBURG"
+msgstr "(GMT+06:00) エカテリンブルグ"
+
+
+#: string "(GMT+05:00) Islamabad, Karachi"
+msgid "GENERIC_TIME_ZONE_ISLAMABAD_KARACHI"
+msgstr "(GMT+05:00) イスラマバード、カラチ"
+
+
+#: string "(GMT+05:00) Tashkent"
+msgid "GENERIC_TIME_ZONE_TASHKENT"
+msgstr "(GMT+05:00) タシケント"
+
+
+#: string "(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi"
+msgid "GENERIC_TIME_ZONE_CHENNAI_KOLKATA_MUMBAI_NEW_DELHI"
+msgstr "(GMT+05:30) チェンマイ、コルカタ、ムンバイ、ニューデリー"
+
+
+#: string "(GMT+05:45) Katmandu"
+msgid "GENERIC_TIME_ZONE_KATMANDU"
+msgstr "(GMT+05:45) カトマンズ"
+
+
+#: string "(GMT+06:00) Almaty, Novosibirsk"
+msgid "GENERIC_TIME_ZONER_ALMATY_NOVOSIBIRSK"
+msgstr "(GMT+06:00) アルマトゥイ、ノボシビルスク"
+
+
+#: string "(GMT+06:00) Astana, Dhaka"
+msgid "GENERIC_TIME_ZONE_ASTANA_DHAKA"
+msgstr "(GMT+06:00) アスタナ、ダッカ"
+
+
+#: string "(GMT+06:30) Rangoon"
+msgid "GENERIC_TIME_ZONE_RANGOON"
+msgstr "(GMT+06:30) ラングーン"
+
+
+#: string "(GMT+07:00) Bangkok, Hanoi, Jakarta"
+msgid "GENERIC_TIME_ZONE_BANGKOK_HANOI_JAKARTA"
+msgstr "(GMT+07:00) バンコク、ハノイ、ジャカルタ"
+
+# Edit update 6-10
+#: string "(GMT+08:00) Krasnoyarsk"
+msgid "GENERIC_TIME_ZONE_KRASNOYARSK"
+msgstr "(GMT+08:00) クラスノヤルスク"
+
+
+
+#: string "(GMT+08:00) Beijing, Chongqing, Hong Kong, Urumqi"
+msgid "GENERIC_TIME_ZONE_BEIJING_CHONGQING_HONG_KONG_URUMQI"
+msgstr "(GMT+08:00) 北京、重慶、香港、ウルムチ"
+
+# edit update 6-10
+#: string "(GMT+09:00) Irkutsk, Ulaan Bataar"
+msgid "GENERIC_TIME_ZONE_IRKUTSK_ULAAN_BATAAR"
+msgstr "(GMT+09:00) イルクーツク、ウランバートル"
+
+
+#: string "(GMT+08:00) Kuala Lumpur, Singapore"
+msgid "GENERIC_TIME_ZONE_KUALA_LUMPUR_SINGAPORE"
+msgstr "(GMT+08:00) クアラルンプール、シンガポール"
+
+
+#: string "(GMT+08:00) Perth"
+msgid "GENERIC_TIME_ZONE_PERTH"
+msgstr "(GMT+08:00) パース"
+
+
+#: string "(GMT+08:00) Taipei"
+msgid "GENERIC_TIME_ZONE_TAIPEI"
+msgstr "(GMT+08:00) 台北"
+
+
+#: string "(GMT+09:00) Osaka, Sapporo, Tokyo"
+msgid "GENERIC_TIME_ZONE_OSAKA_SAPPORO_TOKYO"
+msgstr "(GMT+09:00) 大阪、札幌、東京"
+
+
+#: string "(GMT+09:00) Seoul"
+msgid "GENERIC_TIME_ZONE_SEOUL"
+msgstr "(GMT+09:00) ソウル"
+
+# edit update 6-10
+#: string "(GMT+10:00) Yakutsk"
+msgid "GENERIC_TIME_ZONE_YAKUTSK"
+msgstr "(GMT+10:00) ヤクーツク"
+
+
+#: string "(GMT+09:30) Adelaide"
+msgid "GENERIC_TIME_ZONE_ADELAIDE"
+msgstr "(GMT+09:30) アデレード"
+
+
+#: string "(GMT+09:30) Darwin"
+msgid "GENERIC_TIME_ZONE_DARWIN"
+msgstr "(GMT+09:30) ダーウィン"
+
+
+#: string "(GMT+10:00) Brisbane"
+msgid "GENERIC_TIME_ZONE_BRISBANE"
+msgstr "(GMT+10:00) ブリスベン"
+
+
+#: string "(GMT+10:00) Canberra, Melbourne, Sydney"
+msgid "GENERIC_TIME_ZONE_CANBERRA_MELBOURNE_SYDNEY"
+msgstr "(GMT+10:00) キャンベラ、メルボルン、シドニー"
+
+
+#: string "(GMT+10:00) Guam, Port Moresby"
+msgid "GENERIC_TIME_ZONE_GUAM_PORT_MORESBY"
+msgstr "(GMT+10:00) グアム、ポートモレスビー"
+
+
+#: string "(GMT+10:00) Hobart"
+msgid "GENERIC_TIME_ZONE_HOBART"
+msgstr "(GMT+10:00) ホバート"
+
+# edit update 6-8-13
+#: string "(GMT+11:00) Vladivostok"
+msgid "GENERIC_TIME_ZONE_VLADIVOSTOK"
+msgstr "(GMT+11:00) ウラジオストック"
+
+
+#: string "(GMT+11:00) Magadan, Solomon Is., New Caledonia"
+msgid "GENERIC_TIME_ZONE_MAGADAN_SOLOMON_NEW_CALEDONIA"
+msgstr "(GMT+11:00) マガダン、ソロモン諸島、ニューカレドニア"
+
+
+#: string "(GMT+12:00) Auckland, Wellington"
+msgid "GENERIC_TIME_ZONE_AUCKLAND_WELLINGTON"
+msgstr "(GMT+12:00) オークランド、ウェリントン"
+
+
+#: string "(GMT+12:00) Fiji, Kamchatka, Marshall Is."
+msgid "GENERIC_TIME_ZONE_FIJI_KAMCHATKA_MARSHALL_IS"
+msgstr "(GMT+12:00) フィジー、カムチャッカ、マーシャル諸島"
+
+
+#: string "NTP Service:"
+msgid "LABEL_HEADER_NTP_SERVICE"
+msgstr "NTP サービス:"
+
+
+#: string "January"
+msgid "GENERIC_MONTH_JANUARY"
+msgstr "1 月"
+
+
+#: string "February"
+msgid "GENERIC_MONTH_FEBRUARY"
+msgstr "2 月"
+
+
+#: string "March"
+msgid "GENERIC_MONTH_MARCH"
+msgstr "3 月"
+
+
+#: string "April"
+msgid "GENERIC_MONTH_APRIL"
+msgstr "4 月"
+
+
+#: string "May"
+msgid "GENERIC_MONTH_MAY"
+msgstr "5 月"
+
+
+#: string "June"
+msgid "GENERIC_MONTH_JUNE"
+msgstr "6 月"
+
+
+#: string "July"
+msgid "GENERIC_MONTH_JULY"
+msgstr "7 月"
+
+
+#: string "August"
+msgid "GENERIC_MONTH_AUGUST"
+msgstr "8 月"
+
+
+#: string "September"
+msgid "GENERIC_MONTH_SEPTEMBER"
+msgstr "9 月"
+
+
+#: string "October"
+msgid "GENERIC_MONTH_OCTOBER"
+msgstr "10 月"
+
+
+#: string "November"
+msgid "GENERIC_MONTH_NOVEMBER"
+msgstr "11 月"
+
+
+#: string "December"
+msgid "GENERIC_MONTH_DECEMBER"
+msgstr "12 月"
+
+
+#: string "I accept"
+msgid "GENERIC_LABEL_ACCEPT_EULA"
+msgstr "同意する"
+
+#: string "Click to confirm that you have read and agree to the firmware upgrade information."
+msgid "LABEL_FW_UPGRADE_EULA_ACCEPTANCE"
+msgstr "クリックすると、ファームウェア更新情報を読んで同意したことを確認します。"
+
+
+
+#: string "Print"
+msgid "GENERIC_LABEL_PRINT"
+msgstr "印刷"
+
+#: string "Retrieving..."
+msgid "GENERIC_LABEL_DESCR_RETRIEVE"
+msgstr "取得中..."
+
+
+
+#: string "Time:"
+msgid "LABEL_HEADER_TIME"
+msgstr "時刻:"
+
+
+#: string "AM"
+msgid "LABEL_DESCR_TIME_AM"
+msgstr "AM"
+
+
+#: string "PM"
+msgid "LABEL_DESCR_TIME_PM"
+msgstr "PM"
+
+# edit - removed colon after device name 6-10
+#: string "Device Name"
+msgid "LABEL_HEADER_DEVICE_NAME"
+msgstr "デバイス名"
+
+
+#: string "Description:"
+msgid "LABEL_HEADER_DESCRIPTION"
+msgstr "説明:"
+
+
+#: string "Language:"
+msgid "LABEL_HEADER_LANGUAGE"
+msgstr "言語:"
+
+
+#: string "Serial Number:"
+msgid "LABEL_HEADER_SERIAL_NUMBER"
+msgstr "シリアル番号:"
+
+
+#: string "Register Now"
+msgid "BUTTON_REGISTER_NOW"
+msgstr "すぐに登録"
+
+
+#: string "Update from File"
+msgid "BUTTON_UPDATE_FROM_FILE"
+msgstr "ファイルから更新"
+
+
+#: string "Auto Update:"
+msgid "LABEL_HEADER_AUTO_UPDATE"
+msgstr "自動更新"
+
+
+#: string "Daily"
+msgid "LABEL_DESCR_DAILY"
+msgstr "毎日"
+
+
+#: string "Sunday"
+msgid "LABEL_DESCR_SUNDAY"
+msgstr "日曜日"
+
+
+#: string "Monday"
+msgid "LABEL_DESCR_MONDAY"
+msgstr "月曜日"
+
+
+#: string "Tuesday"
+msgid "LABEL_DESCR_TUESDAY"
+msgstr "火曜日"
+
+
+#: string "Wednesday"
+msgid "LABEL_DESCR_WEDNESDAY"
+msgstr "水曜日"
+
+
+#: string "Thursday"
+msgid "LABEL_DESCR_THURSDAY"
+msgstr "木曜日"
+
+
+#: string "Friday"
+msgid "LABEL_DESCR_FRIDAY"
+msgstr "金曜日"
+
+
+#: string "Saturday"
+msgid "LABEL_DESCR_SATURDAY"
+msgstr "土曜日"
+
+#--- Calender Days of Week header, 3 characters MAX  ---
+
+#: string "Sun"
+msgid "CONTENT_SETTINGS_STRING_SUN"
+msgstr "日"
+
+#: string "Mon"
+msgid "CONTENT_SETTINGS_STRING_MON"
+msgstr "月"
+
+#: string "Tue"
+msgid "CONTENT_SETTINGS_STRING_TUE"
+msgstr "火"
+
+#: string "Wed"
+msgid "CONTENT_SETTINGS_STRING_WED"
+msgstr "水"
+
+#: string "Thu"
+msgid "CONTENT_SETTINGS_STRING_THU"
+msgstr "木"
+
+#: string "Fri"
+msgid "CONTENT_SETTINGS_STRING_FRI"
+msgstr "金"
+
+#: string "Sat"
+msgid "CONTENT_SETTINGS_STRING_SAT"
+msgstr "土"
+
+#: string "Generic Media Receiver"
+msgid "CONTENT_SETTINGS_STRING_GENERIC_MEDIA_RECEIVER"
+msgstr "全般メディア レシーバー"
+
+#: string "Factory restore in progress."
+msgid "CONTENT_SETTINGS_STRING_FACTORY_RESTORE_IN_PROGRESS"
+msgstr "初期状態に復元中です。"
+
+#: string "Media"
+msgid "CONTENT_SETTINGS_STRING_MEDIA"
+msgstr "メディア"
+
+#: string "System Only Factory Restore"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_SYSTEM_ONLY_FACTORY_RESTORE"
+msgstr "システムのみ初期状態に復元"
+
+#: string "Update Firmware"
+msgid "PAGE_HEADER_UPDATE_FIRMWARE"
+msgstr "ファームウェアを更新"
+
+
+#: string "Firmware Update Version found: "
+msgid "LABEL_DESCR_FIRMWARE_UPDATE_FOUND"
+msgstr "ファームウェア更新バージョンが見つかりました:"
+
+
+#: string "Your firmware is up to date."
+msgid "LABEL_DESCR_FIRMWARE_UP_TO_DATE"
+msgstr "ファームウェアは最新です。"
+
+
+#: string "Importing File..."
+msgid "LABEL_DESCR_IMPORTING_FILE"
+msgstr "ファイルをインポート中..."
+
+
+#: string "Process is idle."
+msgid "LABEL_DESCR_UPDATE_PROCESS_IDLE"
+msgstr "プロセスはアイドル状態です。"
+
+
+#: string "Downloading..."
+msgid "LABEL_DESCR_DOWNLOADING"
+msgstr "ダウンロード中..."
+
+
+#: string "Upgrading..."
+msgid "LABEL_DESCR_UPGRADING"
+msgstr "アップグレード中..."
+
+
+#: string "Firmware Update Failed"
+msgid "LABEL_DESCR_UPDATE_PROCESS_FAILED"
+msgstr "ファームウェア更新が失敗しました"
+
+
+#: string "Diagnostic in progress."
+msgid "LABEL_DESCR_DIAGNOSTIC_IN_PROGRESS"
+msgstr "診断を実行中です。"
+
+
+#: string "Quick Factory Restore"
+msgid "LABEL_DESCR_QUICK_FACTORY_RESTORE"
+msgstr "簡易初期状態に復元"
+
+#: string "Quick Factory Restore"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_QUICK_FACTORY_RESTORE"
+msgstr "簡易初期状態に復元"
+
+#: string "Full Factory Restore"
+msgid "LABEL_DESCR_FULL_FACTORY_RESTORE"
+msgstr "完全初期状態に復元"
+
+#: string "Your device configuration will be updated, followed by a reboot. "
+msgid "LABEL_DESCR_CONFIGURATION_UPDATE_REBOOT"
+msgstr "デバイス設定が更新され、その後に再起動します。"
+
+#: string "Self Test passed."
+msgid "LABEL_DESCR_SELF_TEST_PASSED"
+msgstr "自己テストに合格しました。"
+
+
+#: string "Self Test incomplete."
+msgid "LABEL_DESCR_SELF_TEST_DID_NOT_COMPLETE"
+msgstr "自己テストが完了していません。"
+
+
+#: string "Self Test cancelled."
+msgid "LABEL_DESCR_SELF_TEST_CANCELLED"
+msgstr "自己テストがキャンセルされました。"
+
+
+#: string "Import Configuration File"
+msgid "PAGE_HEADER_IMPORT_CONFIGURATION_FILE"
+msgstr "設定ファイルをインポート"
+
+
+#: string "Login"
+msgid "BUTTON_LOGIN"
+msgstr "ログイン"
+
+
+#: string "Western Digital Technologies, Inc.<br />License Agreement"
+msgid "PAGE_HEADER_WESTERN_DIGITAL_TECHNOLOGIES"
+msgstr "Western Digital Technologies, Inc.<br />使用許諾契約"
+
+
+#: string "Please read the license agreement carefully."
+msgid "LABEL_DESCR_PLEASE_READ_LICENSE_AGREEMENT"
+msgstr "使用許諾契約をよくお読みください。"
+
+
+#: string "Problem confirming acceptance of license agreement."
+msgid "LABEL_DESCR_PROBLEM_CONFIRMING_LICENSE_AGREEMENT_ACCEPETANCE"
+msgstr "使用許諾契約への同意を確認できません。"
+
+
+#: string "Please accept the license agreement"
+msgid "LABEL_DESCR_PLEASE_ACCEPT_LICENSE_AGREEMENT"
+msgstr "使用許諾契約に同意してください。"
+
+
+#: string "Device is shutting down. After the LED on the front of the device is off, you can safely unplug your drive. Please close your browser or browser tab."
+msgid "LABEL_DESCR_SHUTTING_DOWN"
+msgstr "デバイスがシャットダウン中です。 デバイスの正面の LED が消灯した後、デバイスを安全に取り外すことができます。 ブラウザまたはブラウザ タブを閉じてください。"
+
+
+#: string "You are about to reboot your network device: any backups, file activity, or file transfers may be interrupted." 
+msgid "LABEL_DESCR_REBOOT_DEVICE"
+msgstr "ネットワーク デバイスを再起動しようとしています。バックアップ、ファイル操作、ファイル転送は中断される可能性があります。"
+
+
+#: string "You are about to shut down your network device: any backups, file activity, or file transfers may be interrupted." 
+msgid "LABEL_DESCR_SHUTDOWN_DEVICE"
+msgstr "ネットワーク デバイスをシャットダウンしようとしています。バックアップ、ファイル操作、ファイル転送は中断される可能性があります。"
+
+
+#: string "You don't have permission to access a resource. Please try again."
+msgid "ERROR_FORBIDDEN"
+msgstr "リソースにアクセスする権限がありません。 再試行してください。"
+
+
+#: string "Invalid Request."
+msgid "ERROR_DAC_INVALID"
+msgstr "無効な要求。"
+
+
+#: string "Please check your network connection; then make sure that your router has the latest firmware installed and that UPnP is enabled.<br><br>For more information on how to enable UPnP, view your router's product documentation."
+msgid "LABEL_REMOTE_CONNECTION_FAILED"
+msgstr "ネットワーク接続を確認してください。次に、ルーターに最新のファームウェアがインストールされ、UPnP が有効になっていることを確認してください。<br><br>UPnP を有効にする詳細な手順については、ルーターの製品マニュアルを参照してください。"
+
+
+#: string "Disabled"
+msgid "LABEL_STATUS_DISABLED"
+msgstr "無効"
+
+
+#: string "Connecting"
+msgid "LABEL_STATUS_CONNECTING"
+msgstr "接続中"
+
+
+#: string "Connected"
+msgid "LABEL_STATUS_PORTFORWARDED"
+msgstr "接続"
+
+
+#: string "Ready"
+msgid "LABEL_STATUS_READY"
+msgstr "準備完了"
+
+
+#: string "Connected (Relay connection established)"
+msgid "LABEL_STATUS_RELAYED"
+msgstr "接続 (リレー接続が確立されました)"
+
+
+#: string "Failed"
+msgid "LABEL_STATUS_FAILED"
+msgstr "失敗"
+
+
+#: string "Your device could not be registered successfully. Please make sure you do not have network connectivity issues and try again."
+msgid "ERROR_DEVICE_REG_FAILED"
+msgstr "デバイスを正常に登録できませんでした。 ネットワーク接続の問題がないことを確認し、再試行してください。"
+
+
+#: string "This action could not be completed because your device is not registered. Please register your device and try again."
+msgid "ERROR_DEVICE_NOT_REGISTERED"
+msgstr "デバイスが登録されていないため、この操作を完了できませんでした。 デバイスを登録して、再試行してください。"
+
+
+#: string "The device status could not be updated due to an communication or internal software error."
+msgid "ERROR_DEVICE_UPDATE_FAILED"
+msgstr "通信エラーまたは内部ソフトウェア エラーのため、デバイスのステータスを更新できませんでした。"
+
+
+#: string "The web access account could not be located on the server. Please retry your last operation."
+msgid "ERROR_WEBACCOUNT_NOT_FOUND"
+msgstr "Web アクセス アカウントがサーバーに見つかりませんでした。 最後の処理を再試行してください。"
+
+
+#: string "The registration email could not be re-sent. Please make sure your device is registered and you do not have any network connectivity issues and try again."
+msgid "ERROR_WEBACCOUNT_RESUBMIT_EMAIL_FAILED"
+msgstr "登録電子メール アドレスを再送信できませんでした。 デバイスが登録され、ネットワーク接続の問題がないことを確認し、再試行してください。"
+
+# Edit - reworded - 5-21 Moravia, please update accordingly; see spreadsheet
+#: string "This email account cannot be deleted. Make sure your device is registered and your network connection is functioning properly, and then try again."
+msgid "ERROR_WEBACCOUNT_DELETE_FAILED"
+msgstr "この電子メール アカウントは削除できません。 デバイスが登録され、ネットワーク接続が正しく動作していることを確認してから、再試行してください。"
+
+
+#: string "Your mobile device could not be located on the server. Please retry your last operation."
+msgid "ERROR_MOBILEACCESS_NOT_FOUND"
+msgstr "モバイル デバイスがサーバーに見つかりませんでした。 最後の処理を再試行してください。"
+
+
+#: string "Failed to generate code for your mobile device. Please make sure you do not have any network connectivity issues and try again."
+msgid "ERROR_MOBILEACCESS_CREATE_FAILED"
+msgstr "モバイル デバイスのコードを生成できませんでした。 ネットワーク接続の問題がないことを確認し、再試行してください。"
+
+
+#: string "Mobile access for this device could not be removed. Please make sure your device is registered and you do not have any network connectivity issues and try again."
+msgid "ERROR_MOBILEACCESS_DELETE_FAILED"
+msgstr "このデバイスのモバイル アクセスを削除できませんでした。 デバイスが登録され、ネットワーク接続の問題がないことを確認し、再試行してください。"
+
+
+#: string "Failed to locate user account. Please make sure your device is registered and you do not have any network connectivity issues and try again."
+msgid "ERROR_USER_NOT_FOUND"
+msgstr "ユーザー アカウントが見つかりませんでした。 デバイスが登録され、ネットワーク接続の問題がないことを確認し、再試行してください。"
+
+
+#: string "Failed to create user account. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_USER_CREATE_FAILED"
+msgstr "ユーザー アカウントを作成できませんでした。 この処理に必要な権限と十分なディスク領域があることを確認し、再試行してください。"
+
+
+#: string "Failed to update user account. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_USER_UPDATE_FAILED"
+msgstr "ユーザー アカウントを更新できませんでした。 この処理に必要な権限と十分なディスク領域があることを確認し、再試行してください。"
+
+
+#: string "Failed to delete user account. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_USER_DELETE_FAILED"
+msgstr "ユーザー アカウントを削除できませんでした。 この処理に必要な権限と十分なディスク領域があることを確認し、再試行してください。"
+
+
+#: string "Unable to modify share access list. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_SHAREACCESS_NOT_FOUND"
+msgstr "共有アクセス リストを修正できません。 この処理に必要な権限と十分なディスク領域があることを確認し、再試行してください。"
+
+
+#: string "Failed to create share access list. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_SHAREACCESS_CREATE_FAILED"
+msgstr "共有アクセス リストを作成できませんでした。 この処理に必要な権限と十分なディスク領域があることを確認し、再試行してください。"
+
+
+#: string "Failed to update share access list. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_SHAREACCESS_UPDATE_FAILED"
+msgstr "共有アクセス リストを更新できませんでした。 この処理に必要な権限と十分なディスク領域があることを確認し、再試行してください。"
+
+
+#: string "Failed to delete share access list. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_SHAREACCESS_DELETE_FAILED"
+msgstr "共有アクセス リストを削除できませんでした。 この処理に必要な権限と十分なディスク領域があることを確認し、再試行してください。"
+
+
+#: string "This operation could not succeed because the share resource no longer exists or is currently inaccessible. Please make sure you have sufficient disk space for this operation and try again."
+msgid "ERROR_SHARE_NOT_FOUND"
+msgstr "共有リソースが存在しないか、現在アクセスできないため、この処理を正常に完了できませんでした。 この処理に十分なディスク領域があることを確認し、再試行してください。"
+
+
+#: string "There was an error while updating a share resource. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_SHARE_UPDATE_FAILED"
+msgstr "共有リソースの更新中にエラーが発生しました。 この処理に必要な権限と十分なディスク領域があることを確認し、再試行してください。"
+
+
+#: string "There was an error while deleting a share resource. Please make sure you have the required privileges and sufficient disk space for this operation and try again."
+msgid "ERROR_SHARE_DELETE_FAILED"
+msgstr "共有リソースの削除中にエラーが発生しました。 この処理に必要な権限と十分なディスク領域があることを確認し、再試行してください。"
+
+
+#: string "Back"
+msgid "BUTTON_BACK"
+msgstr "戻る"
+
+# Edit - changed from sentence case to title case
+#: string "Recovering Content with a Safepoint"
+msgid "HELP_LINK_RECOVERING_SAFEPOINT"
+msgstr "Safepoint を使用してコンテンツを回復中"
+
+
+#: string "Weekly"
+msgid "LABEL_DESCR_WEEKLY"
+msgstr "毎週"
+
+
+#: string "Monthly"
+msgid "LABEL_DESCR_MONTHLY"
+msgstr "毎月"
+
+
+#: string "Name"
+msgid "LABEL_SAFEPOINT_NAME"
+msgstr "名前"
+
+
+#: string "Frequency:"
+msgid "LABEL_HEADER_FREQUENCY"
+msgstr "頻度:"
+
+
+#: string "Safepoint update process terminated. You can update your safepoint anytime using the Auto Update option, or manually by clicking the update icon on your safepoint in the Manage section."
+msgid "LABEL_SAFEPOINT_UPDATE_ABORTED"
+msgstr "Safepoint 更新処理が終了しました。 [自動更新] オプションを使用するか、手動で [管理] セクションの Safepoint の更新アイコンをクリックすると、いつでも Safepoint を更新できます。"
+
+
+#: string "Your data was successfully restored. Your device will automatically restart shortly and can be used in place of your original WD My Cloud."
+msgid "LABEL_SAFEPOINT_RESTORE_COMPLETE"
+msgstr "データは正常に復元されました。 デバイスはまもなく自動的に再起動し、独自の WD My Cloud の代わりに使用できます。"
+
+
+#: string "An error occurred while recovering data from your safepoint. Please try the Recovery option again.<br><br>If the error persists, please contact WD Support."
+msgid "ERROR_SAFEPOINT_RESTORE_FAILED"
+msgstr "Safepoint からのデータの回復中にエラーが発生しました。 [回復] オプションを再試行してください。<br><br>エラーが解決しない場合は、WD サポートに問い合わせてください。"
+
+
+#: string "To be created"
+msgid "LABEL_SAFEPOINT_TO_BE_CREATED"
+msgstr "作成する"
+
+
+#: string "Your safepoint cannot be created due to a failed request. Please try creating your safepoint again."
+msgid "ERROR_SAFEPOINT_CREATE_FAILED"
+msgstr "要求が失敗したため、Safepoint を作成できません。 Safepoint の作成を再試行してください。"
+
+
+#: string "Your safepoint cannot be created due to an invalid request."
+msgid "ERROR_SAFEPOINT_CREATE_INVALID"
+msgstr "無効な要求のため、Safepoint を作成できません。"
+
+
+#: string "Your safepoint cannot be created due to an unauthorized request. Please be sure to enter appropriate credentials for your device and/or shares, and try again."
+msgid "ERROR_SAFEPOINT_CREATE_UNAUTHORIZED"
+msgstr "権限のない要求のため、Safepoint を作成できません。 デバイスまたは共有の正しい認証資格情報を入力し、再試行してください。"
+
+
+#: string "Your safepoint cannot be created due to a missing drive or share resource. Please try creating your safepoint again."
+msgid "ERROR_SAFEPOINT_CREATE_NOT_FOUND"
+msgstr "デバイスまたは共有リソースが見つからないため、Safepoint を作成できません。 Safepoint の作成を再試行してください。"
+
+
+#: string "A safepoint operation is currently in progress. Please wait for the current operation to finish before initiating another."
+msgid "ERROR_SAFEPOINT_BUSY"
+msgstr "現在 Safepoint 処理が実行中です。 別の処理を開始する前に、現在の処理が完了するまで待機してください。"
+
+
+#: string "Your safepoint cannot be created due to insufficient space. Please make sure you have sufficient space on your destination device and/or shares, and then try again."
+msgid "ERROR_SAFEPOINT_CREATE_NOSPACE"
+msgstr "不十分な領域のため、Safepoint を作成できません。 作成先のデバイスまたは共有に十分な領域があることを確認し、再試行してください。"
+
+
+#: string "Your safepoint cannot be updated due to a failed request. Please try again."
+msgid "ERROR_SAFEPOINT_UPDATE_FAILED"
+msgstr "要求が失敗したため、Safepoint を更新できません。 再試行してください。"
+
+
+#: string "Your safepoint cannot be updated due to an invalid request."
+msgid "ERROR_SAFEPOINT_UPDATE_INVALID"
+msgstr "無効な要求のため、Safepoint を更新できません。"
+
+
+#: string "Your safepoint cannot be updated due to an unauthorized request. Please be sure to enter appropriate credentials for your device and/or shares, and and try again."
+msgid "ERROR_SAFEPOINT_UPDATE_UNAUTHORIZED"
+msgstr "権限のない要求のため、Safepoint を更新できません。 デバイスまたは共有の正しい認証資格情報を入力し、再試行してください。"
+
+
+#: string "Your safepoint cannot be updated due to a missing drive or share resource. Make sure the drive or resource is available; then try again."
+msgid "ERROR_SAFEPOINT_CREATE_UPDATE_NOTFOUND"
+msgstr "デバイスまたは共有リソースが見つからないため、Safepoint を更新できませんでした。 ドライブまたはリソースが使用可能であることを確認し、再試行してください。"
+
+
+#: string "Your safepoint cannot be updated due to insufficient space. Please make sure you have sufficient space on your destination device and/or shares, and try again."
+msgid "ERROR_SAFEPOINT_UPDATE_NOSPACE"
+msgstr "不十分な領域のため、Safepoint を更新できません。 作成先のデバイスまたは共有に十分な領域があることを確認し、再試行してください。"
+
+
+#: string "The discovery operation was not successful due to a failed request. Please retry by clicking Discover again."
+msgid "ERROR_NAS_DISCOVER_FAILED"
+msgstr "要求が失敗したため、検索処理が正常に実行されませんでした。 [検索] を再度クリックして、再試行してください。"
+
+
+#: string "This operation could not succeed due to an authentication failure. Please retry the operation to continue."
+msgid "ERROR_NAS_AUTHENTICATION_FAILED"
+msgstr "認証エラーのため、この処理を正常に完了できませんでした。 処理を再試行して続行してください。"
+
+
+#: string "This operation could not succeed due to an invalid authentication request. Please retry the operation to continue."
+msgid "ERROR_NAS_AUTHENTICATION_INVALID"
+msgstr "無効な認証要求のため、この処理を正常に完了できませんでした。 処理を再試行して続行してください。"
+
+
+#: string "Invalid username or password. Please enter your credentials again to continue."
+msgid "ERROR_NAS_AUTHENTICATION_UNAUTHORIZED"
+msgstr "無効なユーザー名またはパスワード。 もう一度認証資格情報を入力して、続行してください。"
+
+
+#: string "Your device could not be found. Please try again to continue."
+msgid "ERROR_NAS_AUTHENTICATION_NOTFOUND"
+msgstr "デバイスが見つかりませんでした。 再試行して続行してください。"
+
+
+#: string "The shares on the selected device could not be located due to a failed request. Please try again to continue."
+msgid "ERROR_SHARE_DISCOVER_FAILED"
+msgstr "要求が失敗したため、選択したデバイスの共有が見つかりませんでした。 再試行して続行してください。"
+
+
+#: string "The shares on the selected device could not be located due to an invalid operation. Please try again to continue."
+msgid "ERROR_SHARE_DISCOVER_INVALID"
+msgstr "無効な処理のため、選択したデバイスの共有が見つかりませんでした。 再試行して続行してください。"
+
+
+#: string "The shares on the selected device could not be located due to an unauthorized request. Please make sure you enter appropriate credentials for your device and/or shares and try again."
+msgid "ERROR_SHARE_DISCOVER_UNAUTHORIZED"
+msgstr "権限のない要求のため、選択したデバイスの共有が見つかりませんでした。 デバイスまたは共有の正しい認証資格情報を入力し、再試行してください。"
+
+
+#: string "Your device could not be found. Please try again to continue."
+msgid "ERROR_SHARE_DISCOVER_NOTFOUND"
+msgstr "デバイスが見つかりませんでした。 再試行して続行してください。"
+
+
+#: string "This operation could not succeed due to an authentication failure. Please retry the operation to continue."
+msgid "ERROR_SHARE_AUTHENTICATION_FAILED"
+msgstr "認証エラーのため、この処理を正常に完了できませんでした。 処理を再試行して続行してください。"
+
+
+#: string "This operation could not succeed due to an invalid request. Please retry the operation to continue."
+msgid "ERROR_SHARE_AUTHENTICATION_INVALID"
+msgstr "無効な要求のため、この処理を正常に完了できませんでした。 処理を再試行して続行してください。"
+
+
+#: string "Invalid username or password. Please enter your credentials again to continue."
+msgid "ERROR_SHARE_AUTHENTICATION_UNAUTHORIZED"
+msgstr "無効なユーザー名またはパスワード。 もう一度認証資格情報を入力して、続行してください。"
+
+
+#: string "Your device or share could not be found. Please try again to continue."
+msgid "ERROR_SHARE_AUTHENTICATION_NOTFOUND"
+msgstr "デバイスまたは共有が見つかりませんでした。 再試行して続行してください。"
+
+
+#: string "Your safepoint(s) could not be found due to a failed request. Please try again to continue."
+msgid "ERROR_SAFEPOINT_DISCOVER_FAILED"
+msgstr "要求が失敗したため、Safepoint が見つかりませんでした。 再試行して続行してください。"
+
+
+#: string "This operation could not succeed due to an invalid request. Please retry the operation to continue."
+msgid "ERROR_SAFEPOINT_DISCOVER_INVALID"
+msgstr "無効な要求のため、この処理を正常に完了できませんでした。 処理を再試行して続行してください。"
+
+
+#: string "Your safepoint could not be found due to an unauthorized request. Please make sure you enter appropriate credentials for your device and/or shares and try again."
+msgid "ERROR_SAFEPOINT_DISCOVER_UNAUTHORIZED"
+msgstr "権限のない要求のため、Safepoint が見つかりませんでした。 デバイスまたは共有の正しい認証資格情報を入力し、再試行してください。"
+
+
+#: string "Your device or share could not be found. Please try again to continue."
+msgid "ERROR_SAFEPOINT_DISCOVER_NOTFOUND"
+msgstr "デバイスまたは共有が見つかりませんでした。 再試行して続行してください。"
+
+
+#: string "Your safepoint(s) could not be found due to a failed request. Please try again to continue."
+msgid "ERROR_SAFEPOINT_GET_LIST_FAILED"
+msgstr "要求が失敗したため、Safepoint が見つかりませんでした。 再試行して続行してください。"
+
+
+#: string "Your safepoint could not be deleted due to a failed request. Please try again."
+msgid "ERROR_SAFEPOINT_DESTROY_FAILED"
+msgstr "要求が失敗したため、Safepoint を削除できませんでした。 再試行してください。"
+
+
+#: string "Your safepoint could not be deleted due to an invalid request. Please try again."
+msgid "ERROR_SAFEPOINT_DESTROY_INVALID"
+msgstr "無効な要求のため、Safepoint を削除できませんでした。 再試行してください。"
+
+
+#: string "Your safepoint could not be found. Please try again to continue."
+msgid "ERROR_SAFEPOINT_DESTROY_NOT_FOUND"
+msgstr "Safepoint が見つかりませんでした。 再試行して続行してください。"
+
+
+#: string "Your safepoint could not be deleted because it is currently unreachable. Please try again after some time."
+msgid "ERROR_SAFEPOINT_DESTROY_UNREACHABLE"
+msgstr "現在 Safepoint に到達できないため、Safepoint を削除できませんでした。 しばらくたってから再試行してください。"
+
+
+#: string "Your data could not be recovered due to an invalid request. Please try again."
+msgid "ERROR_SAFEPOINT_RESTORE_INVALID"
+msgstr "無効な要求のため、データを回復できませんでした。 再試行してください。"
+
+
+#: string "Your safepoint could not be found. Please try again to continue."
+msgid "ERROR_SAFEPOINT_RESTORE_NOTFOUND"
+msgstr "Safepoint が見つかりませんでした。 再試行して続行してください。"
+
+
+#: string "Your data could not be recovered due to insufficient space. Please make sure you have sufficient space on your destination device and/or shares and try again."
+msgid "ERROR_SAFEPOINT_RESTORE_NOSPACE"
+msgstr "不十分な領域ため、データを回復できませんでした。 作成先のデバイスまたは共有に十分な領域があることを確認し、再試行してください。"
+
+
+#: string "Your data could not be recovered because your safepoint is currently unreachable. Please try again after some time."
+msgid "ERROR_SAFEPOINT_RESTORE_UNREACHABLE"
+msgstr "現在 Safepoint に到達できないため、データを回復できませんでした。 しばらくたってから再試行してください。"
+
+
+#: string "The device you are recovering to does not appear to be in factory fresh state. Please navigate to Settings and perform a factory restore. Please note that you will lose all of your existing data on the device if you do so."
+msgid "ERROR_SAFEPOINT_RESTORE_NOT_FACTORY_FRESH"
+msgstr "回復先のデバイスは、初期状態ではない可能性があります。 [設定] に移動し、初期状態に復元してください。 初期状態に復元すると、デバイスの既存のデータはすべて失われます。"
+
+
+#: string "This operation could not succeed due to a failed request. Please try again."
+msgid "ERROR_SAFEPOINT_GET_STATUS_FAILED"
+msgstr "失敗した要求のため、この処理を正常に完了できませんでした。 再試行してください。"
+
+
+#: string "Invalid request. Please try again."
+msgid "ERROR_SAFEPOINT_GET_STATUS_INVALID"
+msgstr "無効な要求。 再試行してください。"
+
+
+#: string "Your device or share could not be found. Please try again to continue."
+msgid "ERROR_SAFEPOINT_GET_STATUS_NOTFOUND"
+msgstr "デバイスまたは共有が見つかりませんでした。 再試行して続行してください。"
+
+
+#: string "This operation could not succeed due to insufficient space. Please make sure you have sufficient space on your device and/or shares and try again."
+msgid "ERROR_SAFEPOINT_GET_STATUS_NOSPACE"
+msgstr "不十分な領域のため、この処理を正常に完了できませんでした。 デバイスまたは共有に十分な領域があることを確認し、再試行してください。"
+
+
+#: string "Your safepoint is currently unreachable. Please try again after some time."
+msgid "ERROR_SAFEPOINT_GET_STATUS_UNREACHABLE"
+msgstr "現在 Safepoint に到達できません。 しばらくたってから再試行してください。"
+
+
+#: string "This operation could not succeed due to a failed request. Please try again."
+msgid "ERROR_SAFEPOINT_SET_INFO_FAILED"
+msgstr "失敗した要求のため、この処理を正常に完了できませんでした。 再試行してください。"
+
+
+#: string "Invalid request. Please try again."
+msgid "ERROR_SAFEPOINT_SET_INFO_INVALID"
+msgstr "無効な要求。 再試行してください。"
+
+
+#: string "There was an error due to an unauthorized request. Please make sure you enter appropriate credentials for your device and/or shares and try again."
+msgid "ERROR_SAFEPOINT_SET_INFO_UNAUTHORIZED"
+msgstr "権限のない要求であるため、エラーが発生しました。 デバイスまたは共有の正しい認証資格情報を入力し、再試行してください。"
+
+
+#: string "Your safepoint could not be found. Please try again to continue."
+msgid "ERROR_SAFEPOINT_SET_INFO_NOTFOUND"
+msgstr "Safepoint が見つかりませんでした。 再試行して続行してください。"
+
+
+#: string "This operation could not succeed due to a failed request. Please try again."
+msgid "ERROR_SAFEPOINT_GET_SCHEDULE_FAILED"
+msgstr "失敗した要求のため、この処理を正常に完了できませんでした。 再試行してください。"
+
+
+#: string "Invalid request. Please try again."
+msgid "ERROR_SAFEPOINT_GET_SCHEDULE_INVALID"
+msgstr "無効な要求。 再試行してください。"
+
+
+#: string "Your safepoint could not be found. Please try again to continue."
+msgid "ERROR_SAFEPOINT_GET_SCHEDULE_NOT_FOUND"
+msgstr "Safepoint が見つかりませんでした。 再試行して続行してください。"
+
+
+#: string "This operation could not succeed due to a failed request. Please try again."
+msgid "ERROR_SAFEPOINT_SET_SCHEDULE_FAILED"
+msgstr "失敗した要求のため、この処理を正常に完了できませんでした。 再試行してください。"
+
+
+#: string "Invalid request. Please try again."
+msgid "ERROR_SAFEPOINT_SET_SCHEDULE_INVALID"
+msgstr "無効な要求。 再試行してください。"
+
+
+#: string "Your safepoint could not be found. Please try again to continue."
+msgid "ERROR_SAFEPOINT_SET_SCHEDULE_NOT_FOUND"
+msgstr "Safepoint が見つかりませんでした。 再試行して続行してください。"
+
+
+#: string "A safepoint with the same name already exists on this share. Please choose a different name for your safepoint and try again."
+msgid "ERROR_SAFEPOINT_CREATE_DUPLICATE"
+msgstr "この共有には、同じ名前の Safepoint が既に存在します。 別の Safepoint 名を選択し、再試行してください。"
+
+
+#: string "This safepoint is corrupt and could not be deleted. Please fix the errors on this safepoint and try again."
+msgid "ERROR_SAFEPOINT_DESTROY_CORRUPTED"
+msgstr "この Safepoint は破損しているため、削除できませんでした。 この Safepoint のエラーを修正し、再試行してください。"
+
+
+#: string "The recovery operation failed due to an invalid safepoint state. Please wait for some time and try again."
+msgid "ERROR_SAFEPOINT_RESTORE_DUPLICATE"
+msgstr "無効な Safepoint 状態であるため、回復処理は失敗しました。 しばらく待機してから、再試行してください。"
+
+
+#: string "The recovery operation could not succeed because this safepoint is currently being updated. Please wait for that operation to finish before attempting to recover your data from this safepoint."
+msgid "ERROR_SAFEPOINT_RESTORE_NOT_USABLE"
+msgstr "現在この Safepoint は更新中であるため、回復処理を正常に完了できませんでした。 この Safepoint からデータの回復を試みる前に、この処理が完了するまで待機してください。"
+
+
+#: string "A safepoint with the same name already exists on this share. Please choose a different name for your safepoint and try again."
+msgid "ERROR_SAFEPOINT_SET_INFO_DUPLICATE"
+msgstr "この共有には、同じ名前の Safepoint が既に存在します。 別の Safepoint 名を選択し、再試行してください。"
+
+
+#: string "A scheduling error occurred with your safepoint. Please set the auto-update schedule for your safepoint again. If your safepoint is yet to be created, please try creating the safepoint again."
+msgid "ERROR_SAFEPOINT_GET_SCHEDULE_CORRUPTED"
+msgstr "Safepoint でスケジュール エラーが発生しました。 もう一度 Safepoint の自動更新スケジュールを設定してください。 Safepoint を作成していない場合は、Safepoint を再作成してください。"
+
+
+#: string "This operation could not succeed due to an scheduling conflict. Please ensure you have not enabled other safepoint operations for this time and try again."
+msgid "ERROR_SAFEPOINT_SET_SCHEDULE_DUPLICATE"
+msgstr "スケジュールの競合のため、この処理を正常に完了できませんでした。 現在他の Safepoint 処理を有効にしていないことを確認し、再試行してください。"
+
+
+#: string "Size:"
+msgid "LABEL_DESCR_SIZE"
+msgstr "サイズ:"
+
+
+#: string "The safepoint cannot be created for a time occurring in the past. Please select a valid time from the drop-down and try again."
+msgid "ERROR_SAFEPOINT_CREATE_BAD_TIME_VALUE"
+msgstr "過去の時間には Safepoint を作成できません。 ドロップダウンから有効な時間を選択して、再試行してください。"
+
+
+#: string "Error updating password. Please try again."
+msgid "ERROR_PASSWORD_UPDATE_FAILED"
+msgstr "パスワード更新エラー。 再試行してください。"
+
+
+#: string "Failed to create the specified share. Please try again."
+msgid "ERROR_SHARE_CREATE_FAILED"
+msgstr "指定した共有を作成できませんでした。 再試行してください。"
+
+
+#: string "The status of your safepoint(s) is currently unavailable. Please try again later."
+msgid "ERROR_SAFEPOINT_GET_STATUS_UNAVAILABLE"
+msgstr "Safepoint のステータスは現在使用できません。 しばらくたってから再試行してください。"
+
+
+#: string "The web access account you requested already exists. Please enter a different email address."
+msgid "ERROR_WEBACCOUNT_DUPLICATE"
+msgstr "要求した Web アクセスアカウントは既に存在します。 別の電子メール アドレスを入力してください。"
+
+
+#: string "Your last operation timed out. Make sure there are no network connectivity issues and try again."
+msgid "ERROR_TIMEOUT"
+msgstr "最後の処理がタイムアウトしました。 ネットワーク接続の問題がないことを確認し、再試行してください。"
+
+
+#: string "Your WD My Cloud IP address has changed; enter the new IP address in your browser."
+msgid "ERROR_TIMEOUT_IPADDRESS_CHANGED"
+msgstr "WD My Cloud IP アドレスが変更されました。ブラウザに新しい IP アドレスを入力してください。"
+
+
+#: string "The safepoint create operation is not allowed at this time."
+msgid "ERROR_SAFEPOINT_CREATE_NOT_ALLOWED"
+msgstr "現在 Safepoint 作成処理はできません。"
+
+
+#: string "The safepoint delete operation is not allowed at this time."
+msgid "ERROR_SAFEPOINT_DESTROY_NOT_ALLOWED"
+msgstr "現在 Safepoint 削除処理はできません。"
+
+
+#: string "The safepoint update operation is not allowed at this time."
+msgid "ERROR_SAFEPOINT_UPDATE_NOT_ALLOWED"
+msgstr "現在 Safepoint ト更新処理はできません。"
+
+
+#: string "This operation is not supported."
+msgid "ERROR_NOT_SUPPORTED"
+msgstr "この処理はサポートされていません。"
+
+
+#: string "A system resource is not available."
+msgid "ERROR_UNAVAILABLE"
+msgstr "システムリソースがありません。"
+
+
+#: string "An error occurred during the abort operation."
+msgid "ERROR_ABORTED"
+msgstr "中断処理中にエラーが発生しました。"
+
+
+#: string "A failed request was received during this operation."
+msgid "ERROR_FAILED"
+msgstr "この処理中に失敗した要求が受信されました。"
+
+
+#: string "Operation failed due to a duplication error."
+msgid "ERROR_DUPLICATE"
+msgstr "重複エラーのため、処理は失敗しました。"
+
+
+#: string "Operation failed due to a corrupt resource."
+msgid "ERROR_CORRUPTED"
+msgstr "破損したリソースのため、処理は失敗しました。"
+
+
+#: string "This operation is not allowed."
+msgid "ERROR_NOT_ALLOWED"
+msgstr "この処理は許可されていません。"
+
+
+#: string "Upgrade was not successful."
+msgid "ERROR_UPGRADE_FAILED"
+msgstr "更新が失敗しました。"
+
+
+#: string "Conversion was not successful."
+msgid "ERROR_CONVERSION_FAILED"
+msgstr "変換が失敗しました。"
+
+
+#: string "Manufacturer:"
+msgid "LABEL_MANUFACTURER"
+msgstr "製造元:"
+
+
+#: string "Self-Assessment Test:"
+msgid "LABEL_SELF_ASSESSMENT_TEST"
+msgstr "自己評価テスト:"
+
+
+#: string "No Internet access. Check your network and try again."
+msgid "ERROR_NO_INTERNET_CONNECTIVITY"
+msgstr "インターネットにアクセスできません。 ネットワークを確認し、再試行してください。"
+
+
+#: string "USB Device Details"
+msgid "LABEL_USB_DEVICE_DETAILS"
+msgstr "USB デバイス詳細"
+
+
+#: string "USB Device Name"
+msgid "LABEL_USB_DEVICE_NAME"
+msgstr "USB デバイス名"
+
+
+#: string "Model:"
+msgid "LABEL_MODEL"
+msgstr "モデル:"
+
+
+#: string "Provide a valid name."
+msgid "ERROR_PROVIDE_VALID_NAME"
+msgstr "有効な名前を入力してください。"
+
+
+#: string "Password hint"
+msgid "LABEL_DESCR_SHOW_PASSWORD_HINT"
+msgstr "パスワードのヒント"
+
+
+#: string "The drive was not found. Please make sure the drive is connected and try again."
+msgid "ERROR_DRIVE_NOT_FOUND"
+msgstr "ドライブが見つかりませんでした。 ドライブが接続されていることを確認し、再試行してください。"
+
+
+#: string "Connection Status:"
+msgid "LABEL_HEADER_CONNECTION_STATUS"
+msgstr "接続ステータス:"
+
+
+#: string "Eject USB Drive?"
+msgid "HEADING_EJECT_USB"
+msgstr "USB ドライブを取り外しますか?"
+
+
+#: string "Unable to retrieve data. Make sure there are no network connectivity issues and try again."
+msgid "ERROR_GET_ERROR"
+msgstr "データを取得できません。 ネットワーク接続の問題がないことを確認し、再試行してください。"
+
+
+#: string "Ejecting this device will remove all associated shares."
+msgid "LABEL_DESCR_CONFIRM_EJECT_USB_1"
+msgstr "このデバイスを取り外すと、関連付けられた共有がすべて切断されます。"
+
+
+#: string "Backup tasks in progress on this device will be interrupted."
+msgid "LABEL_DESCR_CONFIRM_EJECT_USB_2"
+msgstr "このデバイスで実行中のバックアップ タスクは中断されます。"
+
+#: string "If you are logged in remotely, you cannot access the device until it is plugged back in."
+msgid "LABEL_DESCR_CONFIRM_EJECT_USB_3"
+msgstr "リモートでログインしている場合は、デバイスを再接続するまで、デバイスにアクセスできません。"
+
+#: string "Username {0} is reserved. It is a case sensitive, alphanumeric value between 1 and 32 characters, and cannot contain spaces."
+msgid "ERROR_USERNAME_RESERVED"
+msgstr "ユーザー名 {0} は予約されています。 大文字と小文字を区別します。スペースを含まない 1 ～ 32 文字の英数字で入力してください。"
+
+#: string "First name {0} is reserved. It is a case sensitive, alphanumeric value between 1 and 32 characters and cannot contain spaces."
+msgid "ERROR_NAME_RESERVED"
+msgstr "名前 (名) {0} は予約されています。 大文字と小文字を区別します。スペースを含まない 1 ～ 32 文字の英数字で入力してください。"
+
+#: string "First name must be an alphanumeric value between 1 and 32 characters and cannot contain spaces."
+msgid "ERROR_ADD_USER_FIRST_NAME_INCORRECT_SYNTAX"
+msgstr "名前 (名) はスペースを含まない 1 ～ 32 文字の英数字で入力してください。"
+
+#: string "First name is a case-sensitive alphanumeric value up to 256 characters when combined with last name. Spaces and underscores are permitted when combining first and last name."
+msgid "ERROR_EDIT_USER_FIRST_NAME_INCORRECT_SYNTAX"
+msgstr "名前 (名) は大文字と小文字を区別します。名前 (姓) と合わせて 256 文字以下になるように英数字で入力してください。 名前 (名) と名前 (姓) を組み合わせるときには、スペースおよびアンダースコアを入力できます。"
+
+
+#: string "Last name is a case sensitive alphanumeric value that can be up to 256 characters when combined with first name. Spaces and underscores are permitted when combining last and first name."
+msgid "ERROR_LAST_NAME_INCORRECT_SYNTAX"
+msgstr "名前 (姓) は大文字と小文字を区別します。名前 (名) と合わせて 256 文字以下になるように英数字で入力してください。 名前 (姓) と名前 (名) を組み合わせるときには、スペースおよびアンダースコアを入力できます。"
+
+
+
+
+
+
+
+#: string "Failed to send test email. Please ensure you are not facing network connectivity issues and try again."
+msgid "ERROR_TEST_EMAIL_SEND_FAILED"
+msgstr "テスト電子メールの送信が失敗しました。 ネットワーク接続の問題がないことを確認し、再試行してください。"
+
+#: string "Local USB"
+msgid "BUTTON_LOCAL"
+msgstr "ローカル USB"
+
+#: string "Scan Network"
+msgid "BUTTON_NETWORK"
+msgstr "ネットワークのスキャン"
+
+#: string "Not enough disk space available.<br><br>Please delete at least {0} on your drive and try again."
+msgid "ERROR_SPACE_LIMITATION"
+msgstr "十分なディスク領域がありません。<br><br>ドライブで少なくとも {0} を削除し、再試行してください。"
+
+#: string "Upgrade download failure. Please try your upgrade again."
+msgid "ERROR_UPGRADE_DOWNLOAD_FAILED"
+msgstr "アップグレード ダウンロード エラー。 アップグレードを再試行してください。"
+
+#: string "Before updating your firmware, make sure that both drives are installed in your WD My Cloud."
+msgid "ERROR_UPGRADE_ALL_DRIVE_MUST_BE_PRESENT"
+msgstr "ファームウェアを更新する前に、両方のドライブが WD My Cloud にインストールされていることを確認してください。"
+
+#: string "Are you sure you want to eject this USB drive?"
+msgid "LABEL_DESCR_EJECT_USB"
+msgstr "この USB ドライブを取り外しますか?"
+
+#: string "Unknown error. Retry your last operation. If the error persists, contact WD Support for assistance."
+msgid "ERROR_UNKNOWN"
+msgstr "不明なエラー。 最後の処理を再試行してください。 エラーが解決しない場合は、ヘルプのため WD サポートに問い合わせてください。"
+
+#: string "Internal server error. Retry your last operation. If the error persists, contact WD Support for assistance."
+msgid "ERROR_INTERNAL_SERVER_ERROR"
+msgstr "内部サーバーエラー。 最後の処理を再試行してください。 エラーが解決しない場合は、ヘルプのため WD サポートに問い合わせてください。"
+
+#: string "Your safepoint operation could not be canceled due to a failed request. Try again."
+msgid "ERROR_SAFEPOINT_CANCEL_FAILED"
+msgstr "要求が失敗したため、Safepoint 処理をキャンセルできませんでした。 再試行してください。"
+
+#: string "Your safepoint operation could not be canceled due to a missing drive or share resource. Try again."
+msgid "ERROR_SAFEPOINT_CANCEL_NOT_FOUND"
+msgstr "デバイスまたは共有リソースが見つからないため、Safepoint 処理をキャンセルできませんでした。 再試行してください。"
+
+#: string "Your safepoint operation could not be canceled due to an unauthorized request. Enter appropriate credentials for your device and/or shares and try again."
+msgid "ERROR_SAFEPOINT_CANCEL_UNAUTHORIZED"
+msgstr "権限のない要求のため、Safepoint 処理をキャンセルできませんでした。 デバイスまたは共有の正しい認証資格情報を入力し、再試行してください。"
+
+#: string "Your safepoint operation could not be canceled due to an invalid request."
+msgid "ERROR_SAFEPOINT_CANCEL_INVALID"
+msgstr "無効な要求のため、Safepoint 処理をキャンセルできませんでした。"
+
+#: string "Canceling this safepoint operation is not allowed at this time."
+msgid "ERROR_SAFEPOINT_CANCEL_NOT_ALLOWED"
+msgstr "現在この Safepoint 処理はキャンセルできません。"
+
+#: string "Error changing Central Server:"
+msgid "LABEL_CHANGING_CENTRAL_SERVER"
+msgstr "セントラルサーバー変更エラー:"
+
+#: string "Error retrieving Central Server information:"
+msgid "LABEL_GET_CENTRAL_SERVER"
+msgstr "セントラルサーバー情報取得エラー:"
+
+#: string "Error updating firmware:"
+msgid "LABEL_UPDATING_FIRMWARE"
+msgstr "ファームウェア更新エラー:"
+
+#: string "Error auto-updating firmware:"
+msgid "LABEL_AUTO_UPDATING_FIRMWARE"
+msgstr "自動更新ファームウェア エラー:"
+
+#: string "Error retrieving firmware upgrade information:"
+msgid "LABEL_GET_FIRMWARE_UPDATE_PROGRESS"
+msgstr "ファームウェア アップグレード情報取得エラー:"
+
+#: string "Error retrieving usage values:"
+msgid "LABEL_GET_USAGE"
+msgstr "使用値取得エラー:"
+
+#: string "Error configuring network settings:"
+msgid "LABEL_CONFIGURING_NETWORKS"
+msgstr "ネットワーク設定構成エラー:"
+
+
+#: string "Error in Network Connectivity test:"
+msgid "LABEL_NETWORK_CONNECTIVITY_TEST"
+msgstr "ネットワーク接続テスト エラー:"
+
+
+#: string "Error restoring factory defaults:"
+msgid "LABEL_RESTORING_FACTORY_DEFAULT"
+msgstr "初期状態復元エラー:"
+
+
+#: string "Error retrieving factory restore information:"
+msgid "LABEL_GET_FACTORY_RESTORE_PROGRESS"
+msgstr "初期状態復元情報取得エラー:"
+
+
+#: string "Error retrieving diagnostic test information:"
+msgid "LABEL_GET_DIAGNOSTIC_TEST_INFORMATION"
+msgstr "診断テスト情報取得エラー:"
+
+
+#: string "Error starting diagnostic test:"
+msgid "LABEL_STARTING_DIAGNOSTIC_TEST"
+msgstr "診断テスト開始エラー:"
+
+
+#: string "Error canceling diagnostic test:"
+msgid "LABEL_CANCELLING_DIAGNOSTIC_TEST"
+msgstr "診断テスト キャンセル エラー:"
+
+
+#: string "Error retrieving diagnostic test information:"
+msgid "LABEL_GET_SELFTEST_PROGRESS"
+msgstr "診断テスト情報取得エラー:"
+
+
+#: string "Error configuring remote access:"
+msgid "LABEL_CONFIGURATING_REMOTE_ACCESS"
+msgstr "リモート アクセス設定エラー:"
+
+
+#: string "Error updating remote access:"
+msgid "LABEL_UPDATING_REMOTE_ACCESS"
+msgstr "リモート アクセス更新エラー:"
+
+
+#: string "Error adding mobile access:"
+msgid "LABEL_ADDING_REMOTE_DEVICE_ACCESS"
+msgstr "モバイル アクセス追加エラー:"
+
+
+#: string "Error registering web access account:"
+msgid "LABEL_REGISTERING_WEB_ACCESS"
+msgstr "Web アクセス アカウント登録エラー:"
+
+
+#: string "Error retrieving web access account:"
+msgid "LABEL_GET_WEB_ACCESS"
+msgstr "Web アクセス アカウント取得エラー:"
+
+
+#: string "Error resending registration email:"
+msgid "LABEL_RESUBMITTING_REGISTRATION_EMAIL"
+msgstr "登録電子メール アドレス再送信エラー:"
+
+
+#: string "Error deleting web access:"
+msgid "LABEL_DELETING_WEB_ACCESS"
+msgstr "Web アクセス削除エラー:"
+
+
+#: string "Error retrieving mobile devices:"
+msgid "LABEL_RETRIEVING_MOBILE_ACCESS"
+msgstr "モバイル デバイス取得エラー:"
+
+
+#: string "Error generating code for your mobile device:"
+msgid "LABEL_GENERATING_CODE_FOR_MOBILE_ACCESS"
+msgstr "モバイル デバイス コード生成エラー:"
+
+
+#: string "Error removing mobile access:"
+msgid "LABEL_REMOVING_MOBILE_ACCESS"
+msgstr "モバイル アクセス削除エラー:"
+
+
+#: string "Error rebuilding content database:"
+msgid "LABEL_REBUILDING_WD2GO_DATABASE"
+msgstr "コンテンツ データベース復元エラー:"
+
+
+#: string "Error configuring connection options:"
+msgid "LABEL_CONFIGURATING_CONNECTION_OPTION"
+msgstr "接続オプション設定エラー:"
+
+
+#: string "Error blocking media player:"
+msgid "LABEL_BLOCKING_MEDIA_PLAYER"
+msgstr "メディア プレイヤー ブロック エラー:"
+
+
+#: string "Error rescanning media players:"
+msgid "LABEL_RESCANNING_MEDIA_PLAYERS"
+msgstr "メディア プレイヤー再スキャン エラー:"
+
+
+#: string "Error rescanning DLNA server:"
+msgid "LABEL_RESCANNING_DLNA_SERVER"
+msgstr "DLNA サーバー再スキャン エラー:"
+
+
+#: string "Error rebuilding DLNA server database:"
+msgid "LABEL_REBUILDING_DLNA_SERVER_DATABASE"
+msgstr "DLNA サーバー データベース復元エラー:"
+
+
+#: string "Error retrieving progress information from DLNA server:"
+msgid "LABEL_GET_DLNA_RESCAN_PROGRESS"
+msgstr "DLNA サーバーからの進行状況情報取得エラー:"
+
+
+#: string "Error retrieving information from DLNA server:"
+msgid "LABEL_GET_DLNA_INFORMATION"
+msgstr "DLNA サーバーからの情報取得エラー:"
+
+
+#: string "Error enabling DLNA service:"
+msgid "LABEL_ENABLING_DLNA_SERVICE"
+msgstr "DLNA サービス有効化エラー:"
+
+
+#: string "Error enabling iTunes service"
+msgid "LABEL_ENABLING_ITUNES_SERVICE"
+msgstr "iTunes サービス有効化エラー:"
+
+
+#: string "Error rescanning iTunes server:"
+msgid "LABEL_RESCANNING_ITUNES_SERVER"
+msgstr "iTunes サーバー再スキャン エラー:"
+
+
+#: string "Error initiating storage conversion:"
+msgid "LABEL_STARTING_STORAGE_CONVERSION"
+msgstr "ストレージ変換開始エラー:"
+
+
+#: string "Error retrieving progress information for storage conversion:"
+msgid "LABEL_GET_STORAGE_CONVERSION_PROGRESS"
+msgstr "ストレージ変換の進行状況情報取得エラー:"
+
+
+#: string "Error unlocking USB:"
+msgid "LABEL_UNLOCKING_USB"
+msgstr "USB ブロック解除エラー:"
+
+
+#: string "Error retrieving USB information:"
+msgid "LABEL_GET_USB_INFORMATION"
+msgstr "USB 情報取得エラー:"
+
+
+#: string "Error ejecting USB device:"
+msgid "LABEL_EJECT_USB"
+msgstr "USB デバイス取り外しエラー:"
+
+
+#: string "Error updating owner password:"
+msgid "LABEL_UPDATING_OWNER_PASSWORD"
+msgstr "所有者パスワード更新エラー:"
+
+
+#: string "Error updating password:"
+msgid "LABEL_UPDATING_PASSWORD"
+msgstr "パスワード更新エラー:"
+
+
+#: string "Error retrieving user information:"
+msgid "LABEL_GET_USER_INFORMATION"
+msgstr "ユーザー情報取得エラー:"
+
+
+#: string "Error creating user:"
+msgid "LABEL_CREATING_USER"
+msgstr "ユーザー作成エラー:"
+
+
+#: string "Error updating user:"
+msgid "LABEL_UPDATING_USER"
+msgstr "ユーザー更新エラー:"
+
+
+#: string "Error deleting user:"
+msgid "LABEL_DELETING_USER"
+msgstr "ユーザー削除エラー:"
+
+
+#: string "Error updating share access privileges:"
+msgid "LABEL_UPDATING_SHARE_ACCESS"
+msgstr "共有アクセス権限更新エラー:"
+
+
+#: string "Error creating share access privileges:"
+msgid "LABEL_CREATING_SHARE_ACCESS"
+msgstr "共有アクセス権限作成エラー:"
+
+
+#: string "Error deleting share access privileges:"
+msgid "LABEL_DELETING_SHARE_ACCESS"
+msgstr "共有アクセス権限削除エラー:"
+
+
+#: string "Error retrieving share information:"
+msgid "LABEL_GET_SHARE_INFORMATION"
+msgstr "共有情報取得エラー:"
+
+
+#: string "Error creating your share:"
+msgid "LABEL_CREATING_SHARE"
+msgstr "共有作成エラー:"
+
+
+#: string "Error updating your share:"
+msgid "LABEL_UPDATING_SHARE"
+msgstr "共有更新エラー:"
+
+
+#: string "Error deleting your share:"
+msgid "LABEL_DELETING_SHARE"
+msgstr "共有削除エラー:"
+
+
+#: string "Error deleting computer backup:"
+msgid "LABEL_DELETING_BACKUP"
+msgstr "コンピュータ バックアップ削除エラー:"
+
+
+#: string "Error authenticating device on network:"
+msgid "LABEL_AUTHENTICATING_DEVICE_ON_NETWORK"
+msgstr "ネットワーク上のデバイス認証エラー:"
+
+
+#: string "Error discovering shares on selected network device:"
+msgid "LABEL_DISCOVERING_SHARES_ON_NETWORK_DEVICE"
+msgstr "選択したネットワーク デバイスでの共有検索エラー:"
+
+
+#: string "Error authenticating share on selected network device:"
+msgid "LABEL_AUTHENTICATING_SHARE_ON_NETWORK_DEVICE"
+msgstr "選択したネットワーク デバイスでの共有認証エラー:"
+
+
+#: string "Error discovering safepoint(s) on selected network device:"
+msgid "LABEL_DISCOVERING_SAFEPOINT_ON_NETWORK_DEVICE"
+msgstr "選択したネットワーク デバイスでの Safepoint 検索エラー:"
+
+
+#: string "Error retrieving safepoint list on selected network device:"
+msgid "LABEL_RETRIEVING_SAFEPOINT_LIST_ON_NETWORK_DEVICE"
+msgstr "選択したネットワーク デバイスでの Safepoint リスト取得エラー:"
+
+
+#: string "Error retrieving safepoint progress information:"
+msgid "LABEL_GET_SAFEPOINT_PROGRESS"
+msgstr "Safepoint 進行状況情報取得エラー:"
+
+
+#: string "Error retrieving scheduling information from safepoint:"
+msgid "LABEL_GET_SAFEPOINT_SCHEDULE_INFORMATION"
+msgstr "Safepoint からのスケジュール情報取得エラー:"
+
+
+#: string "Error discovering network devices:"
+msgid "LABEL_DISCOVERING_NETWORK_DEVICES"
+msgstr "ネットワーク デバイス検索エラー:"
+
+
+#: string "Error canceling safepoint discovery process:"
+msgid "LABEL_CANCELLING_DISCOVERY"
+msgstr "Safepoint 検索処理キャンセル エラー:"
+
+
+#: string "Error creating your safepoint:"
+msgid "LABEL_CREATING_SAFEPOINT"
+msgstr "Safepoint 作成エラー:"
+
+
+#: string "Error deleting your safepoint:"
+msgid "LABEL_DELETING_SAFEPOINT"
+msgstr "Safepoint 削除エラー:"
+
+
+#: string "Error updating your safepoint:"
+msgid "LABEL_UPDATING_SAFEPOINT"
+msgstr "Safepoint 更新エラー:"
+
+
+#: string "Error recovering from your safepoint:"
+msgid "LABEL_RESTORING_SAFEPOINT"
+msgstr "Safepoint からの回復エラー:"
+
+
+#: string "Error updating safepoint settings:"
+msgid "LABEL_UPDATING_SAFEPOINT_SETTINGS"
+msgstr "Safepoint 設定更新エラー:"
+
+
+#: string "Error updating safepoint schedule:"
+msgid "LABEL_UPDATING_SAFEPOINT_SCHEDULE"
+msgstr "Safepoint スケジュール更新エラー:"
+
+
+#: string "Error canceling safepoint operation:"
+msgid "LABEL_CANCELLING_SAFEPOINT_CREATE_UPDATE"
+msgstr "Safepoint 処理キャンセル エラー:"
+
+
+#: string "Error canceling safepoint recovery:"
+msgid "LABEL_CANCELLING_SAFEPOINT_RESTORE"
+msgstr "Safepoint 回復キャンセル エラー:"
+
+
+#: string "Do not unplug your device during the firmware update installation. After completing the update, your network drive will reboot automatically."
+msgid "LABEL_DESCR_FIRMWARE_UPDATE_PROGRESS"
+msgstr "ファームウェア更新のインストール中にデバイスを切断しないでください。 更新の完了後、ネットワーク ドライブが自動的に再起動します。"
+
+
+#: string "Do not unplug the device during the rebooting process."
+msgid "LABEL_DESCR_DO_NOT_UNPLUG_DEVICE_DURING_REBOOT"
+msgstr "再起動処理中にデバイスを切断しないでください。"
+
+
+#: string "Your firmware will now be updated. Do not unplug your device during the firmware update installation. After completing the firmware update, your network drive will automatically reboot. It is also recommended that you install the latest updates for the operating system on your computer before you proceed.<br><br><b>Important:</b> Ensure you have multiple copies of your data (another backup) before updating your drive."
+msgid "LABEL_DESCR_UPDATE_FROM_FILE_REBOOT"
+msgstr "ファームウェアが更新されました。 ファームウェア更新のインストール中にデバイスを切断しないでください。 ファームウェア更新の完了後、ネットワーク ドライブが自動的に再起動します。 続行する前に、コンピュータのオペレーティングシステムに最新の更新をインストールすることをお勧めします。<br><br><b>重要:</b> ドライブを更新する前に、複数のデータのコピー (別のバックアップ) を作成していることを確認してください。"
+
+
+#: string "The web access account you requested for could not be created. Ensure that you do not have any network connectivity issues and try again."
+msgid "ERROR_WEBACCOUNT_CREATE_FAILED"
+msgstr "要求した Web アクセス アカウントを作成できませんでした。 ネットワーク接続の問題がないことを確認し、再試行してください。"
+
+
+#: string "Navigate to <a id='supportLink' href='#'>Support</a> and create a system report to troubleshoot or obtain automated customer support from WD."
+msgid "ERROR_DIAGNOSTIC_TEST_FAILED_SUPPORT"
+msgstr "<a id='supportLink' href='#'>サポート</a>に移動し、問題解決または WD の自動カスタマー サポートを利用するためのシステム レポートを作成してください。"
+
+
+#: string "This safepoint is no longer available."
+msgid "ERROR_SAFEPOINT_NOT_CREATED"
+msgstr "この Safepoint は使用できません。"
+
+
+#: string "Error updating Time Machine configuration:"
+msgid "LABEL_UPDATING_TIME_MACHINE"
+msgstr "Time Machine 設定更新エラー:"
+
+
+#: string "The operation was aborted while the server was processing the request. The operation may or may not have been completed successfully. Please refresh the page and try again."
+msgid "ERROR_USER_ABORT"
+msgstr "サーバーが要求を処理している間に処理が中断されました。 処理は正常に完了しているか、完了していない場合があります。 ページを更新して、再試行してください。"
+
+
+#: string "Next"
+msgid "BUTTON_NEXT"
+msgstr "次へ"
+
+
+#: string "Finish"
+msgid "BUTTON_FINISH"
+msgstr "完了"
+
+
+
+msgid "HEADING_USER_PROFILE"
+msgstr "ユーザー プロファイル"
+
+
+
+msgid "LABEL_USER_NAME"
+msgstr "ユーザー名"
+
+
+#: string "Password"
+msgid "LABEL_PASSWORD"
+msgstr "パスワード"
+
+
+#: string "Registered email:"
+msgid "LABEL_REGISTERED_EMAIL"
+msgstr "登録電子メール アドレス"
+
+
+#: string "Share Access"
+msgid "HEADING_SHARE_ACCESS"
+msgstr "共有アクセス"
+
+
+#: string "Share details"
+msgid "HEADER_SHARE_PROFILE"
+msgstr "共有プロファイル"
+
+
+#: string "Share Name"
+msgid "LABEL_SHARE_NAME"
+msgstr "共有名"
+
+
+#: string "Share Description"
+msgid "LABEL_SHARE_DESCRIPTION"
+msgstr "共有の説明"
+
+
+#: string "Media Serving"
+msgid "LABEL_MEDIA_SERVING"
+msgstr "メディア サービス"
+
+
+#: string "User Access"
+msgid "HEADER_USER_ACCESS"
+msgstr "ユーザー アクセス"
+
+
+#: string "In the unlikely event your WD My Cloud fails, you can restore all content and configuration settings from a previously created safepoint. To recover data and configuration settings, click Start Recovery."
+msgid "LABEL_DESC_RECOVER_FROM_A_SAFEPOINT"
+msgstr "万が一 WD My Cloud で障害が発生した場合は、以前に作成した Safepoint からすべてのコンテンツと構成設定を復元できます。 データと構成設定を回復するには、[回復の開始] をクリックします。"
+
+
+#: string "Start Recovery"
+msgid "LABEL_START_RECOVERY"
+msgstr "回復の開始"
+
+
+#: string "Device Profile"
+msgid "HEADER_DEVICE_PROFILE"
+msgstr "デバイス プロファイル"
+
+
+#: string "Primary server:"
+msgid "LABEL_PRIMARY_SERVER"
+msgstr "プライマリ サーバー:"
+
+
+#: string "Registered to:"
+msgid "LABEL_REGISTERED_TO"
+msgstr "登録先:"
+
+
+#: string "LCD Brightness:"
+msgid "LABEL_LCD_BRIGHTNESS"
+msgstr "LCD の明るさ:"
+
+
+#: string "View"
+msgid "LABEL_VIEW"
+msgstr "表示"
+
+
+#: string "FTP Access"
+msgid "LABEL_FTP_ACCESS"
+msgstr "FTP アクセス"
+
+
+#: string "Factory restore:"
+msgid "LABEL_FACTORY_RESTORE"
+msgstr "初期状態に復元:"
+
+
+#: string "Quickly erase data and configuration settings."
+msgid "LABEL_DESC_QUICK_RESTORE"
+msgstr "データと構成設定をすばやく消去します。"
+
+
+#: string "Shutdown"
+msgid "LABEL_SHUTDOWN"
+msgstr "シャットダウン"
+
+
+#: string "Reboot"
+msgid "LABEL_REBOOT"
+msgstr "再起動"
+
+
+#: string "Alert emails:"
+msgid "LABEL_ALERT_EMAILS"
+msgstr "アラート メール:"
+
+
+#: string "Event logs:"
+msgid "LABEL_EVENT_LOGS"
+msgstr "イベント ログ:"
+
+
+#: string "Automated support:"
+msgid "LABEL_AUTOMATED_SUPPORT"
+msgstr "自動サポート:"
+
+
+#: string "Request support"
+msgid "LABEL_REQUEST_SUPPORT"
+msgstr "サポートを要求"
+
+
+#: string "Updated On"
+msgid "LABEL_UPDATED_ON"
+msgstr "更新日"
+
+
+#: string "Update Schedule"
+msgid "LABEL_UPDATE_SCHEDULE"
+msgstr "更新スケジュール"
+
+
+#: string "Available Updates"
+msgid "LABEL_AVAILABLE_UPDATES"
+msgstr "利用可能な更新"
+
+
+#: string "Creating a safepoint ensures that all of your data and configuration settings can be recovered in the unlikely event that your WD My Cloud fails."
+msgid "WIZARD_CREATE_SAFEPOINT_1"
+msgstr "Safepoint を作成すると、万が一 WD My Cloud で障害が発生した場合に、すべてのデータと構成設定を回復できます。"
+
+
+#: string "You can create a safepoint on a USB device connected to your WD My Cloud or on a compatible device on your network."
+msgid "WIZARD_CREATE_SAFEPOINT_2"
+msgstr "WD My Cloud に接続した USB デバイスまたはネットワーク上の対応デバイスで、Safepoint を作成できます。"
+
+#: string "You will no longer have remote access from the Internet to your stored content on your drive."
+msgid "CONTENT_CLOUD_ACCESS_DIALOG_STRING_YOU_WILL_NO_LONGER_BE_ABLE_TO_ACCESS_REMOTELY"
+msgstr "インターネットからドライブ上に保存したコンテンツへのリモート アクセスはありません。"
+
+# Edit - from WD2go.com to WDMyCloud.com
+#: string "You will no longer be able to log into WDMyCloud.com."
+msgid "CONTENT_USER_DIALOG_STRING_YOU_WILL_NO_LONGER_BE_ABLE_TO_ACCESS_REMOTELY"
+msgstr "WDMyCloud.com にログインできません。"
+
+
+#: string "Scanning your network for devices...please wait"
+msgid "LABEL_SCANNING_YOUR_NETWORK_FOR_DEVICES"
+msgstr "ネットワークのデバイスをスキャン中... お待ちください"
+
+
+#: string "Select a device"
+msgid "LABEL_SELECT_A_DEVICE"
+msgstr "デバイスを選択"
+
+
+#: string "Safepoint List"
+msgid "LABEL_SAFEPOINT_LIST"
+msgstr "Safepoint リスト"
+
+
+#: string "Getting Started"
+msgid "LABEL_GETTING_STARTED_WIZARD"
+msgstr "使用開始"
+
+
+#: string "Saving...please wait"
+msgid "LABEL_SAVING_PLEASE_WAIT"
+msgstr "保存中... お待ちください"
+
+
+#: string "User added successfully; email with instructions sent."
+msgid "LABEL_DESC_USER_ADDED_SUCCESSFULLY_EMAIL_SENT"
+msgstr "ユーザーが追加されました。手順が記載された電子メールが送信されました"
+
+
+#: string "Update History"
+msgid "LABEL_UPDATE_HISTORY"
+msgstr "更新履歴"
+
+#: string "All"
+msgid "LABEL_DESCR_MEDIA_SERVING_ALL"
+msgstr "すべて"
+
+#: string "Photos"
+msgid "LABEL_DESCR_MEDIA_SERVING_PHOTOS"
+msgstr "画像"
+
+#: string "Music"
+msgid "LABEL_DESCR_MEDIA_SERVING_MUSIC"
+msgstr "音楽"
+
+#: string "Videos"
+msgid "LABEL_DESCR_MEDIA_SERVING_VIDEOS"
+msgstr "動画"
+
+#: string "None"
+msgid "LABEL_DESCR_MEDIA_SERVING_NONE"
+msgstr "なし"
+
+#: string "Select a user from the drop-down list and click Get Code to generate an activation code."
+msgid "LABEL_DESCR_MOBILE_ACCESS_ACTIVATE_CODE_1"
+msgstr "ドロップダウン リストからユーザーを選択し、[コードの取得] をクリックして認証コードを生成します。"
+
+# Edited string: WD 2go changed to WD My Cloud - 2013
+#: string "Install WD Photos and/or WD My Cloud on your tablet or mobile device."
+msgid "LABEL_DESCR_MOBILE_ACCESS_ACTIVATE_CODE_2"
+msgstr "タブレットまたはモバイル デバイスに WD Photos または WD My Cloud (あるいは両方) をインストールします。"
+
+#: string "Launch app and tap Connect Now."
+msgid "LABEL_DESCR_MOBILE_ACCESS_ACTIVATE_CODE_3"
+msgstr "アプリを起動して、[すぐに接続] をタップします。 "
+
+#: string "Select your product."
+msgid "LABEL_DESCR_MOBILE_ACCESS_ACTIVATE_CODE_4"
+msgstr "製品を選択します。"
+
+#: string "Enter Activation Code."
+msgid "LABEL_DESCR_MOBILE_ACCESS_ACTIVATE_CODE_5"
+msgstr "認証コードを入力します。"
+
+#: string "Delete User"
+msgid "PAGE_HEADER_DELETE_USER"
+msgstr "ユーザーの削除"
+
+#: string "Delete Share"
+msgid "PAGE_HEADER_DELETE_SHARE"
+msgstr "共有の削除"
+
+#: string "Get Code"
+msgid "BUTTON_GET_CODE"
+msgstr "コードの取得"
+
+#: string "Port forwarding connection established."
+msgid "LABEL_STATUS_PORTFORWARDED_EXPLANATION"
+msgstr "ポート転送接続が確立されました。"
+
+#: string "MB"
+msgid "GENERIC_MB"
+msgstr "MB"
+
+#: string "GB"
+msgid "GENERIC_GB"
+msgstr "GB"
+
+#: string "TB"
+msgid "GENERIC_TB"
+msgstr "TB"
+
+#: string "Public"
+msgid "CONTENT_GENERIC_STRING_PUBLIC" 
+msgstr "パブリック"
+
+
+#: string "User Access"
+msgid "LABEL_HEADER_USER_ACCESS"
+msgstr "ユーザー アクセス"
+
+#: string "First Name"
+msgid "LABEL_FIRST_NAME"
+msgstr "名前 (名)"
+
+#: string "Last Name"
+msgid "LABEL_LAST_NAME"
+msgstr "名前 (姓)"
+
+#: string "OK"
+msgid "BUTTON_OK"
+msgstr "OK"
+
+# Edit to OK 6-7-13
+#: string "OK"
+msgid "STATUS_HEALTHY"
+msgstr "OK"
+
+#: string "Home"
+msgid "HEADER_NAV_HOME"
+msgstr "ホーム"
+
+#: string "Shares"
+msgid "NAV_PRIMARY_SHARES"
+msgstr "共有"
+
+#: string "Users"
+msgid "LABEL_USERS"
+msgstr "ユーザー"
+
+#: string "General"
+msgid "PAGE_HEADER_GENERAL"
+msgstr "全般"
+
+#: string "Network"
+msgid "NAV_SECOND_NETWORK"
+msgstr "ネットワーク"
+
+#: string "Media"
+msgid "NAV_MEDIA"
+msgstr "メディア"
+
+#: string "Diagnostics"
+msgid "NAV_DIAGNOSTICS"
+msgstr "診断"
+
+#: string "Utilities"
+msgid "NAV_UTILITIES"
+msgstr "ユーティリティ"
+
+#: string "Settings"
+msgid "NAV_PRIMARY_SETTINGS"
+msgstr "設定"
+
+#: string "Safepoints"
+msgid "LEARNING_CENTER_LABEL_HEADER_WD_SAFEPOINT"
+msgstr "Safepoint"
+
+#: string "MAC Address"
+msgid "LABEL_HEADER_MAC_ADDRESS"
+msgstr "MAC アドレス"
+
+#: string "Workgroup Name"
+msgid "LABEL_HEADER_WORKGROUP_NAME"
+msgstr "ワークグループ名"
+
+#: string "Gateway"
+msgid "LABEL_HEADER_GATEWAY"
+msgstr "ゲートウェイ"
+
+#: string "Netmask"
+msgid "LABEL_HEADER_NETMASK"
+msgstr "ネットマスク"
+
+#: string "Required"
+msgid "LABEL_DESCR_REQUIRED"
+msgstr "必須"
+
+#--- Cloud Access ---
+
+#: string "Cloud Access"
+msgid "PRI_NAV_CLOUD_ACCESS"
+msgstr "クラウド アクセス"
+
+#: string "Configure Access"
+msgid "CONTENT_CLOUD_ACCESS_HEAD1_CONFIGURE_DEVICE_ACCESS"
+msgstr "アクセスの設定"
+
+# Edit from WD2go.com to WDMyCloud.com
+#: string "WDMyCloud.com Login for <span class='remote_access_username'></span>"
+msgid "CONTENT_CLOUD_ACCESS_HEAD2_MY_CLOUD_WEB_FOR"
+msgstr "<span class='remote_access_username'></span>の WDMyCloud.com ログイン"
+
+
+#--- About Cloud Access section ---
+
+#: string "About Cloud Access"
+msgid "CONTENT_CLOUD_ACCESS_HEAD2_ABOUT_CLOUD_ACCESS"
+msgstr "クラウド アクセスについて"
+
+#: string "Configure mobile device access to your cloud. Each user needs to download and install the WD mobile apps onto their smartphone or tablet."
+msgid "CONTENT_CLOUD_ACCESS_STRING_ABOUT_CLOUD_ACCESS"
+msgstr "クラウドへのモバイル デバイス アクセスを設定します。 各ユーザーは WD モバイル アプリをスマートフォンまたはタブレットにダウンロードしてインストールする必要があります。"
+
+#--- Cloud Access Profile section ---
+
+#: string "Cloud Access Status"
+msgid "CONTENT_CLOUD_ACCESS_HEAD2_CLOUD_ACCESS_PROFILE"
+msgstr "クラウド アクセス ステータス"
+
+#: string "Connection Status"
+msgid "CONTENT_CLOUD_ACCESS_LABEL_CONNECTION_STATUS"
+msgstr "接続ステータス"
+
+#: string "Cloud Access is disabled."
+msgid "CONTENT_CLOUD_ACCESS_STRING_CLOUD_ACCESS_DISABLED_EXPLANATION"
+msgstr "クラウド アクセスが無効です。"
+
+#: string "To enable Cloud Access, navigate to Settings > General > Cloud Access."
+msgid "CONTENT_CLOUD_ACCESS_STRING_CLOUD_ACCESS_DISABLED_EXPLANATION_2"
+msgstr "クラウド アクセスを有効にするには、[設定] > [全般] > [クラウド アクセス] に移動します。"
+
+
+#--- Cloud Access DAC section ---
+
+#: string "Cloud devices for <span class='remote_access_username'></span>"
+msgid "CONTENT_CLOUD_ACCESS_HEAD2_CLOUD_ACCESS_FOR"
+msgstr "<span class='remote_access_username'></span>のクラウド デバイス"
+
+
+#: string "There is no cloud device access configured for <span class='remote_access_username'></span>."
+msgid "CONTENT_CLOUD_ACCESS_STRING_NO_DAC_CONFIGURED_FOR"
+msgstr "<span class='remote_access_username'></span> に設定されたクラウド デバイス アクセスはありません。"
+
+#: string "Click Get Code to generate an activation code for your cloud devices. Codes are valid for 48 hours and can only be used once."
+msgid "CONTENT_CLOUD_ACCESS_STRING_CLICK_TO_GET_CODE"
+msgstr "[コードの取得] をクリックして、クラウド デバイスの認証コードを取得してください。 コードは 48 時間有効で、1 回だけ使用できます。"
+
+#: string "New Unregistered Device"
+msgid "CONTENT_CLOUD_ACCESS_STRING_NEW_UNREGISTERED_DEVICE"
+msgstr "新しい未登録のデバイス"
+
+#: string "Code:"
+msgid "CONTENT_CLOUD_ACCESS_STRING_CODE"
+msgstr "コード:"
+
+#--- Cloud Access Dialogs ---
+
+#: string "Delete Cloud Access?"
+msgid "CONTENT_CLOUD_ACCESS_DIALOG_TITLE_REMOVE_CLOUD_ACCESS"
+msgstr "クラウド アクセスを削除しますか?"
+
+#: string "Are you sure you want to remove cloud access for"
+msgid "CONTENT_CLOUD_ACCESS_DIALOG_STRING_REMOVE_CLOUD_ACCESS_FOR"
+msgstr "クラウド アクセスを削除しますか?"
+
+#: string "Are you sure you want to remove the device activation code"
+msgid "CONTENT_CLOUD_ACCESS_DIALOG_STRING_REMOVE_DAC"
+msgstr "デバイス認証コードを削除しますか?"
+
+# Edit - changed WD 2go to WD My Cloud - 5/2013
+#: string "Delete WD My Cloud Account?"
+msgid "CONTENT_CLOUD_ACCESS_DIALOG_TITLE_DELETE_WD2GO_ACCOUNT"
+msgstr "WD My Cloud アカウントを削除しますか?"
+
+# Edit - changed WD 2go to WD My Cloud - 5/2013
+#: string "Are you sure you want to delete access to WDMyCloud.com?"
+msgid "CONTENT_CLOUD_ACCESS_DIALOG_STRING_DELETE_WD2GO_ACCOUNT"
+msgstr "WDMyCloud.com へのアクセスを削除しますか?"
+
+
+#: string "Registration Email Sent"
+msgid "CONTENT_CLOUD_ACCESS_DIALOG_TITLE_REGISTRATION_EMAIL_SENT"
+msgstr "登録メールが送信されました"
+
+#: string "A registration email has been sent successfully to the specified user."
+msgid "CONTENT_CLOUD_ACCESS_DIALOG_STRING_REGISTRATION_EMAIL_SENT"
+msgstr "登録メールは指定したユーザーに送信されました。"
+
+#: string "Please allow a few minutes for the user to receive an email with instructions for accessing files remotely on your WD My Cloud."
+msgid "CONTENT_CLOUD_ACCESS_DIALOG_STRING_REGISTRATION_EMAIL_SENT_INSTRUCTION"
+msgstr "WD My Cloud のファイルにリモートでアクセスするための手順が記載された電子メールが送信されるまでには、2、3 分かかります。"
+
+# Edit - changed WD2go.com to WDMyCLoud.com
+#: string "Update WDMyCloud.com Login"
+msgid "CONTENT_DIALOG_CLOUD_ACCESS_TITLE_UPDATE_MY_CLOUD_WEB_ACCOUNT"
+msgstr "WDMyCloud.com ログインの更新"
+
+# Edit - changed WD2go.com to WDMyCLoud.com
+#: string "Change the email address for your WDMyCLoud.com login."
+msgid "CONTENT_USERS_DIALOG_STRING_UPDATE_MY_CLOUD_ACCOUNT_DESC"
+msgstr "WDMyCloud.com ログインの電子メール アドレスを変更します。"
+
+#: string "Old Email"
+msgid "CONTENT_DIALOG_CLOUD_ACCESS_STRING_OLD_EMAIL"
+msgstr "古い電子メール アドレス"
+
+#: string "New Email"
+msgid "CONTENT_DIALOG_CLOUD_ACCESS_STRING_NEW_EMAIL"
+msgstr "新しい電子メール アドレス"
+
+
+
+
+#--- Dashboard's Cloud Access ---
+
+#: string "Add Cloud Access"
+msgid "CONTENT_DASHBOARD_DIALOG_TITLE_ADD_CLOUD_ACCESS"
+msgstr "クラウド アクセスの追加"
+
+#: string "Generate an activation code to get remote access to the content on your drive."
+msgid "CONTENT_DASHBOARD_DIALOG_STRING_ADD_CLOUD_ACCESS_INTRO"
+msgstr "認証コードを生成し、ドライブのコンテンツへのリモート アクセスを取得します。"
+
+#: string "Activation code successfully generated. Enter the code in your app on your mobile device."
+msgid "CONTENT_DASHBOARD_DIALOG_STRING_DAC_CREATE_SUCCESSFUL"
+msgstr "認証コードが生成されました。 モバイル デバイスのアプリでコードを入力してください。"
+
+#: string "Activation Code"
+msgid "CONTENT_DASHBOARD_DIALOG_LABEL_DAC"
+msgstr "認証コード"
+
+#: string "Select a User"
+msgid "CONTENT_DASHBOARD_DIALOG_LABEL_SELECT_A_USER"
+msgstr "ユーザーを選択"
+
+#: string "Expiration"
+msgid "CONTENT_DASHBOARD_DIALOG_LABEL_EXPIRATION"
+msgstr "有効期限"
+
+
+
+#--- Users related Cloud Access ---
+
+
+#: string "Email Address"
+msgid "CONTENT_USERS_DIALOG_LABEL_EMAIL_ADDRESS"
+msgstr "電子メール アドレス"
+
+#--- Settings > General ---
+
+#: string "Configure"
+msgid "CONTENT_SETTINGS_LINK_CONFIGURE"
+msgstr "設定"
+
+#: string "Edit"
+msgid "CONTENT_SETTINGS_LINK_EDIT"
+msgstr "編集"
+
+#--- Settings > General > Device Profile ---
+
+#: string "Device Profile"
+msgid "CONTENT_SETTINGS_HEAD2_DEVICE_PROFILE"
+msgstr "デバイス プロファイル"
+
+# Edit to title case from Device name to Device Name
+#: string "Device Name"
+msgid "CONTENT_SETTINGS_LABEL_DEVICE_NAME"
+msgstr "デバイス名"
+
+#: string "Description"
+msgid "CONTENT_SETTINGS_LABEL_DESCRIPTION"
+msgstr "説明"
+
+# Edit to title case from Serial number to Serial Number 
+#: string "Serial Number"
+msgid "CONTENT_SETTINGS_LABEL_SERIAL_NUMBER"
+msgstr "シリアル番号"
+
+#--- Settings > General > Language & Clock ---
+
+#: string "Language &amp; Clock"
+msgid "CONTENT_SETTINGS_HEAD2_LANGUAGE_AND_CLOCK"
+msgstr "言語と時計"
+
+#: string "Language"
+msgid "CONTENT_SETTINGS_LABEL_LANGUAGE"
+msgstr "言語"
+
+#: string "Time Zone"
+msgid "CONTENT_SETTINGS_LABEL_TIME_ZONE"
+msgstr "タイム ゾーン"
+
+#: string "NTP Service"
+msgid "CONTENT_SETTINGS_LABEL_NTP_SERVICE"
+msgstr "NTP サービス"
+
+# Edit - title case from Primary server to Primary Server 
+#: string "Primary Server"
+msgid "CONTENT_SETTINGS_LABEL_PRIMARY_SERVER"
+msgstr "プライマリ サーバー"
+
+#: string "Date &amp; Time"
+msgid "CONTENT_SETTINGS_LABEL_DATE_AND_TIME"
+msgstr "日時"
+
+#--- Settings > General > Language & Clock > Dialog ---
+
+#: string "NTP Settings"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_NTP_SETTINGS"
+msgstr "NTP 設定"
+
+#: string "The NTP service synchronizes with your network and automatically updates the date and time on your device."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_NTP_SERVICE_INTRO"
+msgstr "NTP サービスはネットワークと同期し、デバイスの日時を自動的に更新します。"
+
+#: string "Current NTP servers"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_CURRENT_NTP_SERVERS"
+msgstr "現在の NTP サーバー"
+
+#: string "Add User NTP"
+msgid "CONTENT_SETTINGS_DIALOG_BUTTON_ADD_USER_NTP"
+msgstr "ユーザー NTP の追加"
+
+#: string "User defined NTP server"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_USER_DEFINED_NTP_SERVER"
+msgstr "ユーザー定義 NTP サーバー"
+
+#: string "Microsoft NTP service"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_MICROSOFT_NTP_SERVICE"
+msgstr "Microsoft NTP サービス"
+
+#: string "NTP pool service"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_NTP_POOL_SERVICE"
+msgstr "NTP プール サービス"
+
+#: string "Date &amp; Time Settings"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_DATE_AND_TIME_SETTINGS"
+msgstr "日時設定"
+
+#: string "Please enter the current date and time."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_DATE_AND_TIME_SETTINGS_INTRO"
+msgstr "現在の日時を入力してください。"
+
+#: string "Date"
+msgid "CONTENT_SETTINGS_DIALOG_LABEL_DATE"
+msgstr "日付"
+
+#: string "Time"
+msgid "CONTENT_SETTINGS_DIALOG_LABEL_TIME"
+msgstr "時刻"
+
+#: string "Calendar"
+msgid "CONTENT_SETTINGS_DIALOG_BUTTON_CALENDAR"
+msgstr "カレンダー"
+
+#--- Settings > General > Cloud Access ---
+
+#: string "Cloud Access"
+msgid "CONTENT_SETTINGS_HEAD2_CLOUD_ACCESS"
+msgstr "クラウド アクセス"
+
+#: string "Remote Access"
+msgid "CONTENT_SETTINGS_LABEL_CLOUD_SERVICE"
+msgstr "リモート アクセス"
+
+#: string "Connection Status"
+msgid "CONTENT_SETTINGS_LABEL_CONNECTION_STATUS"
+msgstr "接続ステータス"
+
+#--- Settings > General > Cloud Access > Dialog ---
+
+#: string "Disable Cloud Service"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_DISABLE_CLOUD_SERVICE"
+msgstr "クラウド サービスを無効にする"
+
+#: string "Are you sure you want to disable cloud access? Remote access to the files on your device will no longer be available, either over the Internet or from your mobile devices."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_DISABLE_CLOUD_ACCESS_CONFIRMATION"
+msgstr "クラウド アクセスを無効にしますか? インターネット上でも、モバイル デバイスからでも、デバイスのファイルへのリモート アクセスは使用できません。"
+
+#: string "Disconnecting"
+msgid "CONTENT_SETTINGS_STRING_DISCONNECTING"
+msgstr "切断中"
+
+#: string "Expired:"
+msgid "CONTENT_CLOUD_ACCESS_STRING_EXPIRED"
+msgstr "有効期限:"
+
+#: string "Expires:"
+msgid "CONTENT_CLOUD_ACCESS_STRING_EXPIRES"
+msgstr "有効期限:"
+
+#: string "Continue?"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_DO_YOU_WANT_TO_CONTINUE"
+msgstr "続行しますか?"
+
+#: string "Port forwarding failed to connect on port"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_MANUAL_RELAYED_EXPLANATION_PART1"
+msgstr "ポート転送はポート間"
+
+#: string "and port"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_MANUAL_RELAYED_EXPLANATION_PART2"
+msgstr "で接続できませんでした"
+
+#: string "Cloud Access Connection Options"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_CLOUD_ACCESS_CONNECTION_OPTIONS"
+msgstr "クラウド アクセス接続オプション"
+
+#: string "Configure connection options for remote access to your device."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_CONFIGURES_CONNECTION_OPTION_FOR_CLOUD_ACCESS"
+msgstr "デバイスへのリモート アクセスの接続オプションを設定します。"
+
+#: string "Connectivity"
+msgid "CONTENT_SETTINGS_DIALOG_LABEL_CONNECTIVITY"
+msgstr "接続"
+
+#: string "Auto"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_AUTO"
+msgstr "自動"
+
+#: string "Manual"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_MANUAL"
+msgstr "手動"
+
+#: string "Win XP"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_WINXP"
+msgstr "Win XP"
+
+#: string "Attempts to establish a direct connection between your device and the router."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_AUTO_EXPLANATION"
+msgstr "デバイスとルーター間で直接接続を確立しようとしています。"
+
+#: string "Manually configure your router to work with your device."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_MANUAL_EXPLANATION"
+msgstr "デバイスと動作するように、ルーターを手動で設定してください。"
+
+#: string "Attempts to establish a direct or relay connection, as appropriate for Windows XP compatibility."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_WINXP_EXPLANATION"
+msgstr "Windows XP 互換のために直接またはリレー接続を確立しようとしています。"
+
+#: string "Learn More"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_LEARN_MORE"
+msgstr "詳細を見る"
+
+#: string "External Port 1 (HTTP)"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_WD2GO_HTTP_PORT"
+msgstr "外部ポート 1 (HTTP)"
+
+#: string "External Port 2 (HTTPS)"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_WD2GO_HTTPS_PORT"
+msgstr "外部ポート 2 (HTTPS)"
+
+#: string "Content Database"
+msgid "CONTENT_SETTINGS_DIALOG_LABEL_WD2GO_DATABASE"
+msgstr "コンテンツ データベース"
+
+#: string "Rebuild"
+msgid "CONTENT_SETTINGS_DIALOG_LABEL_WD2GO_DATABASE_REBUILD"
+msgstr "復元"
+
+#--- Settings > General > Energy Saver ---
+
+#: string "Energy Saver"
+msgid "CONTENT_SETTINGS_HEAD2_ENERGY_SAVER"
+msgstr "省電力"
+
+#: string "Drive Sleep"
+msgid "CONTENT_SETTINGS_LABEL_HDD_SLEEP"
+msgstr "ドライブ スリープ"
+
+#: string "LED"
+msgid "CONTENT_SETTINGS_LABEL_DEVICE_LED"
+msgstr "LED"
+
+#--- Settings > General > Mac Backups ---
+
+#: string "Mac Backups"
+msgid "CONTENT_SETTINGS_HEAD2_MAC_BACKUPS"
+msgstr "Mac バックアップ"
+
+#: string "Time Machine"
+msgid "CONTENT_SETTINGS_LABEL_TIME_MACHINE"
+msgstr "Time Machine"
+
+#--- Settings > General > Mac Backups > Dialog ---
+
+#: string "Time Machine Settings"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_TIME_MACHINE_SETTINGS"
+msgstr "Time Machine 設定"
+
+#: string "Configure settings for your Time Machine backups for your Mac."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_TIME_MACHINE_INTRO"
+msgstr "Mac の Time Machine バックアップ設定を構成します。"
+
+# Edited from sentence case to title case - Select a share is now Select a Share
+#: string "Select a Share"
+msgid "CONTENT_SETTINGS_DIALOG_LABEL_SELECT_A_SHARE"
+msgstr "共有を選択"
+
+#: string "Enabled on share:"
+msgid "CONTENT_SETTINGS_DIALOG_LABEL_ENABLED_ON_SHARE"
+msgstr "共有で有効:"
+
+# Edited from sentence case to title case - Maximum size is now Maximum Size
+#: string "Maximum Size"
+msgid "CONTENT_SETTINGS_DIALOG_LABEL_MAXIMUM_SIZE"
+msgstr "最大サイズ"
+
+# Edit - this string has been reworded, and will require editing in all languages
+#: string "Increasing the maximum backup value after the initial backup has no effect on existing backups. WD recommends leaving this setting at the maximum value for your initial backup. After the first backup is complete, you can change the backup size by dragging the Maximum Size slider."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_MAXIMUM_SIZE_WARNING"
+msgstr "初期バックアップ後に最大バックアップ値を増やしても、既存のバックアップに影響はありません。 WD はこの設定を初期バックアップの最大値のままにすることをお勧めします。 最初のバックアップが完了した後に、[最大サイズ] スライダをドラッグして、バックアップ サイズを変更できます。"
+
+#--- Settings > Media > DMS ---
+
+#: string "DLNA Media Server"
+msgid "CONTENT_SETTINGS_HEAD2_DLNA_MEDIA_SERVER"
+msgstr "DLNA メディア サーバー"
+
+#: string "Media Streaming"
+msgid "CONTENT_SETTINGS_LABEL_MEDIA_STREAMING"
+msgstr "メディア ストリーミング"
+
+#: string "View Media Players"
+msgid "CONTENT_SETTINGS_LINK_VIEW_MEDIA_PLAYERS"
+msgstr "メディア プレイヤーの表示"
+
+#: string "Version"
+msgid "CONTENT_SETTINGS_LABEL_VERSION"
+msgstr "バージョン"
+
+#: string "Last Update"
+msgid "CONTENT_SETTINGS_LABEL_LAST_VERSION"
+msgstr "前回の更新"
+
+#: string "Updating database..."
+msgid "CONTENT_SETTINGS_STRING_UPDATING_DATABASE"
+msgstr "データベースを更新中..."
+
+#: string "DLNA Database"
+msgid "CONTENT_SETTINGS_LABEL_DLNA_DATABASE"
+msgstr "LDNA データベース"
+
+#--- Settings > Media > DMS > Dialog ---
+
+#: string "Media Streaming Options"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_MEDIA_STREAMING_OPTIONS"
+msgstr "メディア ストリーミング オプション"
+
+#: string "Stream music, video, or photos to any compatible device through your home."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_MEDIA_STREAMING_OPTIONS_INTRO"
+msgstr "ホームから対応するデバイスに音楽、動画、画像をストリーミングします。"
+
+#: string "Media players"
+msgid "CONTENT_SETTINGS_STRING_MEDIA_PLAYERS"
+msgstr "メディア プレイヤー"
+
+#--- Settings > Media > iTunes ---
+
+#: string "iTunes"
+msgid "CONTENT_SETTINGS_HEAD2_ITUNES"
+msgstr "iTunes"
+
+#: string "iTunes Server"
+msgid "CONTENT_SETTINGS_LABEL_ITUNES_SERVER"
+msgstr "iTunes サーバー"
+
+#: string "iTunes Database"
+msgid "CONTENT_SETTINGS_LABEL_ITUNES_DATABASE"
+msgstr "iTunes データベース"
+
+#: string "Rescan"
+msgid "CONTENT_SETTINGS_BUTTON_RESCAN"
+msgstr "再スキャン"
+
+#--- Settings > Media > iTunes > Dialog ---
+
+#: string "Rescan iTunes"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_RESCAN_ITUNES"
+msgstr "iTunes の再スキャン"
+
+#: string "iTunes rescan has been initiated."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_ITUNES_RESCAN_STARTED"
+msgstr "iTunes 再スキャンが開始されました。"
+
+#: string "iTunes rescan error."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_ITUNES_RESCAN_ERROR"
+msgstr "iTunes 再スキャン エラー"
+
+#--- Settings > Utilities > Diagnostics ---
+
+#: string "System Diagnostics"
+msgid "CONTENT_SETTINGS_HEAD2_SYSTEM_DIAGNOSTICS"
+msgstr "システム診断"
+
+#: string "System Configuration"
+msgid "CONTENT_SETTINGS_HEAD2_SYSTEM_CONFIGURATION"
+msgstr "システム設定"
+
+#: string "Diagnostics Test"
+msgid "CONTENT_SETTINGS_LABEL_DIAGNOSTICS_TEST"
+msgstr "診断テスト"
+
+#: string "Quick Test"
+msgid "CONTENT_SETTINGS_BUTTON_QUICK_TEST"
+msgstr "簡易テスト"
+
+#: string "Full Test"
+msgid "CONTENT_SETTINGS_BUTTON_FULL_TEST"
+msgstr "完全テスト"
+
+#: string "Test in progress"
+msgid "CONTENT_SETTINGS_LABEL_TEST_IN_PROGRESS"
+msgstr "テストを実行中です。"
+
+#: string "Factory Restore"
+msgid "CONTENT_SETTINGS_LABEL_FACTORY_RESTORE"
+msgstr "初期状態に復元"
+
+#: string "System Only"
+msgid "CONTENT_SETTINGS_BUTTON_SYSTEM_ONLY"
+msgstr "システムのみ"
+
+# edit - removed Restore from string to shorten 6-10
+#: string "Quick"
+msgid "CONTENT_SETTINGS_BUTTON_QUICK_RESTORE"
+msgstr "簡易"
+
+# edit - removed Restore from string to shorten 6-10
+#: string "Full"
+msgid "CONTENT_SETTINGS_BUTTON_FULL_RESTORE"
+msgstr "完全"
+
+#: string "System Config"
+msgid "CONTENT_SETTINGS_LABEL_SYSTEM_CONFIG"
+msgstr "システム設定"
+
+#: string "Save Config File"
+msgid "CONTENT_SETTINGS_BUTTON_SAVE_CONFIG_FILE"
+msgstr "設定ファイルの保存"
+
+#: string "Import File"
+msgid "CONTENT_SETTINGS_BUTTON_IMPORT_FILE"
+msgstr "ファイルのインポート"
+
+# --- Settings > Utilities > Diagnostics > Dialog ---
+
+#: string "Factory Restore"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_FACTORY_RESTORE"
+msgstr "初期状態に復元"
+
+#: string "System Factory Restore"
+msgid "CONTENT_SETTINGS_HEAD2_FACTORY_RESTORE"
+msgstr "システムを初期状態に復元"
+
+#: string "System Only reverts system settings to their default values, but retains user data and shares."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_SYSTEM_ONLY_FACTORY_RESTORE_DESC"
+msgstr "[システムのみ] はシステム設定をデフォルト値に戻しますが、ユーザー データと共有は保持します。"
+
+#: string "Quick Restore reverts all settings to their default values, erases all user data and shares, and retains default shares. Quick Restore creates a new file table on the device, but does not fully overwrite or erase the drive, so data recovery programs can be used to restore user data and shares."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_QUICK_FACTORY_RESTORE_DESC"
+msgstr "[簡易初期状態に復元] はすべての設定をデフォルト値に戻し、すべてのユーザー データと共有を削除し、デフォルト共有を保持します。 [簡易初期状態に復元] はデバイスで新しいファイル テーブルを作成しますが、完全にドライブを上書きまたは消去しません。このため、データ回復プログラムを使用して、ユーザー データと共有を復元できます。"
+
+#: string "Full Restore reverts all settings to their default values, deletes all user data and shares permanently, and retains default shares. Data recovery programs cannot be used to restore data; all user data and shares, with the exception of the default shares, are permanently deleted."
+msgid "CONTENT_SETTINGS_DIALOG_STRING_FULL_FACTORY_RESTORE_DESC"
+msgstr "[完全初期状態に復元] はすべての設定をデフォルト値に戻し、すべてのユーザー データと共有を完全に消去し、デフォルト共有を保持します。 データ回復プログラムを使用してデータを復元できません。デフォルト共有を除き、すべてのユーザー データと共有は完全に削除されます。"
+
+
+#: string "Continue?"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_FACTORY_RESTORE_CONFIRMATION"
+msgstr "続行しますか?"
+
+#: string "Switch to Quick"
+msgid "CONTENT_SETTINGS_DIALOG_BUTTON_SWITCH_TO_QUICK"
+msgstr "簡易に切り替え"
+
+#--- Settings > Utilities > System Support ---
+
+#: string "System Support"
+msgid "CONTENT_SETTINGS_HEAD2_SYSTEM_SUPPORT"
+msgstr "システム サポート"
+
+#: string "Request Support"
+msgid "BUTTON_REQUEST_SUPPORT"
+msgstr "サポートを要求"
+
+#: string "Automated Support"
+msgid "CONTENT_SETTINGS_LABEL_AUTOMATED_SUPPORT"
+msgstr "自動サポート"
+
+#: string "Privacy Policy"
+msgid "CONTENT_SETTINGS_LINK_PRIVACY_POLICY"
+msgstr "プライバシー ポリシー"
+
+#: string "System report"
+msgid "CONTENT_SETTINGS_LABEL_SYSTEM_REPORT"
+msgstr "システム レポート"
+
+#: string "Create and Save"
+msgid "CONTENT_SETTINGS_BUTTON_CREATE_AND_SAVE"
+msgstr "作成して保存"
+
+
+
+#--- Settings > Utilities > Device Maintenance ---
+
+#: string "Device Maintenance"
+msgid "CONTENT_SETTINGS_HEAD2_DEVICE_MAINTENANCE"
+msgstr "デバイス メンテナンス"
+
+#: string "Device Power"
+msgid "CONTENT_SETTINGS_LABEL_DEVICE_POWER"
+msgstr "デバイス電源"
+
+#--- Settings > Utilities > Device Maintenance > Dialog ---
+
+#: string "Shutdown Device"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_SHUTDOWN_DEVICE"
+msgstr "デバイスのシャットダウン"
+
+#: string "Shutting Down"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_SHUTTING_DOWN"
+msgstr "シャットダウン中"
+
+#: string "Reboot"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_REBOOT"
+msgstr "再起動"
+
+#--- Settings > Firmware Update ---
+
+#: string "Auto Update"
+msgid "CONTENT_SETTINGS_HEAD2_AUTO_UPDATE"
+msgstr "自動更新"
+
+#: string "Enable Auto Update"
+msgid "CONTENT_SETTINGS_LABEL_ENABLE_AUTO_UPDATE"
+msgstr "自動更新を有効化"
+
+#: string "New Firmware"
+msgid "CONTENT_SETTINGS_LABEL_NEW_FIRMWARE"
+msgstr "新規ファームウェア"
+
+#: string "Check for Update"
+msgid "CONTENT_SETTINGS_BUTTON_CHECK_FOR_UPDATE"
+msgstr "更新の確認"
+
+#: string "Update Now"
+msgid "CONTENT_SETTINGS_BUTTON_UPDATE_NOW"
+msgstr "すぐに更新"
+
+#: string "Release Notes"
+msgid "CONTENT_SETTINGS_LINK_RELEASE_NOTES"
+msgstr "リリース ノート"
+
+#: string "Current Version"
+msgid "CONTENT_SETTINGS_LABEL_CURRENT_VERSION"
+msgstr "現在のバージョン"
+
+#: string "Last Update"
+msgid "CONTENT_SETTINGS_LABEL_LAST_UPDATE"
+msgstr "前回の更新"
+
+#: string "Manual Update"
+msgid "CONTENT_SETTINGS_HEAD2_MANUAL_UPDATE"
+msgstr "手動更新"
+
+#: string "Firmware Image"
+msgid "CONTENT_SETTINGS_LABEL_FIRMWARE_IMAGE"
+msgstr "イメージ"
+
+#--- Settings > Firmware Update > Dialog ---
+
+#: string "Install and Reboot"
+msgid "CONTENT_SETTINGS_DIALOG_BUTTON_INSTALL_AND_REBOOT"
+msgstr "インストールして再起動"
+
+#: string "New Firmware Available"
+msgid "CONTENT_SETTINGS_DIALOG_STRING_NEW_FIRMWARE_AVAILABLE"
+msgstr "新しいファームウェアが利用可能です"
+
+#--- USB ---
+
+#: string "Unlock USB Device"
+msgid "GLOB_NAV_USB_DIALOG_TITLE_UNLOCK_USB_DRIVE"
+msgstr "USB デバイスのロック解除"
+
+# Edit: removed - There are - and changed to No USB devices found.
+#: string "No USB devices found."
+msgid "GLOB_NAV_USB_STRING_NO_USB_FOUND"
+msgstr "USB デバイスが見つかりません。"
+
+#: string "Enter password to unlock the drive"
+msgid "GLOB_NAV_USB_STRING_UNLOCK_DRIVE_INTRO"
+msgstr "デバイスのロックを解除するためのパスワードを入力"
+
+#: string "Password"
+msgid "GLOB_NAV_USB_LABEL_PASSWORD"
+msgstr "パスワード"
+
+#: string "Save Password"
+msgid "GLOB_NAV_USB_LABEL_SAVE_PASSWORD"
+msgstr "パスワードの保存"
+
+#: string "Manufacturer"
+msgid "GLOB_NAV_USB_LABEL_MANUFACTURER"
+msgstr "製造元"
+
+#: string "Model"
+msgid "GLOB_NAV_USB_LABEL_MODEL"
+msgstr "モデル"
+
+#: string "Serial Number"
+msgid "GLOB_NAV_USB_LABEL_SERIAL_NUMBER"
+msgstr "シリアル番号"
+
+#: string "Firmware Version"
+msgid "GLOB_NAV_USB_LABEL_FIRMWARE_VERSION"
+msgstr "ファームウェア バージョン"
+
+#: string "Size"
+msgid "GLOB_NAV_USB_LABEL_SIZE"
+msgstr "サイズ"
+
+#: string "Free of"
+msgid "GLOB_NAV_USB_STRING_FREE_OF"
+msgstr "なし"
+
+#: string "Device locked."
+msgid "GLOB_NAV_USB_STRING_DRIVE_LOCKED"
+msgstr "デバイスはロックされました。"
+
+#--- Help ---
+
+#: string "Support"
+msgid "CONTENT_DIALOG_HELP_TITLE_SUPPORT"
+msgstr "サポート"
+
+#: string "Request Automated Support"
+msgid "CONTENT_DIALOG_HELP_HEAD2_REQUEST_AUTOMATED_SUPPORT"
+msgstr "自動サポートの要求"
+
+#: string "Selecting Automated Customer Support generates and attaches a comprehensive diagnostic report to your support request, including your device's serial number, MAC address, and other status information. Your request is then routed to a team of experts to assist you as quickly and efficiently as possible."
+msgid "CONTENT_DIALOG_HELP_DESC_REQUEST_AUTOMATED_SUPPORT"
+msgstr "[自動カスタマー サポート] を選択すると、包括的な診断レポートが生成され、サポート要求に添付されます。これには、デバイスのシリアル番号、MAC アドレス、およびその他のステータス情報が含まれています。 サポート要求は専門技術者チームに配信され、できる限り迅速かつ効率的にサポートを実施します。"
+
+#: string "To include your report with your support request, select the Attach My Device Diagnostic Report and Request Support option; then click Request Support."
+msgid "CONTENT_DIALOG_HELP_STRING_CHECK_AND_CLICK_REQUEST_SUPPORT_DESC1"
+msgstr "サポート要求にレポートを添付するには、[デバイスの診断レポートを添付してサポートを要求] オプションを選択し、[サポートの要求] をクリックします。"
+
+#: string "To submit a support request without attaching a device diagnostic report, please submit a request through our standard support page."
+msgid "CONTENT_DIALOG_HELP_STRING_CHECK_AND_CLICK_REQUEST_SUPPORT_DESC2"
+msgstr "デバイス診断レポートを添付せずにサポート要求を送信するには、標準のサポート ページから要求を送信してください。"
+
+#: string "Attach my device's diagnostic report and request support"
+msgid "CONTENT_DIALOG_HELP_STRING_ATTACH_MY_DIAGNOSTIC_REPORT"
+msgstr "デバイスの診断レポートを添付してサポートを要求"
+
+#: string "Create and Save System Report"
+msgid "CONTENT_DIALOG_HELP_HEAD2_CREATE_AND_SAVE_SYSTEM_REPORT"
+msgstr "システム レポートを作成して保存"
+
+#: string "Create and save a comprehensive system report to your drive."
+msgid "CONTENT_DIALOG_HELP_DESC_CREATE_AND_SAVE_SYSTEM_REPORT"
+msgstr "包括的なシステム レポートをドライブに作成して保存します。"
+
+#: string "Support Resources"
+msgid "CONTENT_DIALOG_HELP_HEAD2_SUPPORT_RESOURCES"
+msgstr "サポート リソース"
+
+#: string "Help"
+msgid "GLOB_NAV_HELP_LINK_HELP"
+msgstr "ヘルプ"
+
+#: string "Support"
+msgid "GLOB_NAV_HELP_LINK_SUPPORT"
+msgstr "サポート"
+
+#: string "About"
+msgid "GLOB_NAV_HELP_LINK_ABOUT"
+msgstr "概要"
+
+#: string "Product Documentation"
+msgid "GLOB_NAV_HELP_LINK_PRODUCT_DOCUMENTATION"
+msgstr "製品ドキュメント"
+
+#: string "FAQs"
+msgid "GLOB_NAV_HELP_LINK_FAQS"
+msgstr "FAQ"
+
+#: string "Forum"
+msgid "GLOB_NAV_HELP_LINK_FORUM"
+msgstr "フォーラム"
+
+#: string "Contacts"
+msgid "GLOB_NAV_HELP_LINK_CONTACTS"
+msgstr "お問い合わせ"
+
+#: string "Copyright Info"
+msgid "GLOB_NAV_HELP_LINK_COPYRIGHT_INFO"
+msgstr "著作権情報"
+
+#: string "GNU General Public License"
+msgid "GLOB_NAV_HELP_LINK_GNU_PUBLIC_LICENSE"
+msgstr "GNU 一般公有使用許諾"
+
+#--- Dashboard ---
+
+#: string "Error"
+msgid "CONTENT_HOME_STRING_ERROR"
+msgstr "エラー"
+
+#--- Dashboard > Dialog ---
+
+#: string "Free Space"
+msgid "DASHBOARD_DIALOG_STRING_FREE_SPACE"
+msgstr "空き領域"
+
+#--- Global Navigation & Global Dialogs ---
+
+#: string "Device Initializing"
+msgid "GLOB_NAV_DIALOG_TITLE_DEVICE_INITIALIZING"
+msgstr "デバイス初期化中"
+
+#: string "Error"
+msgid "GLOB_NAV_DIALOG_TITLE_ERROR"
+msgstr "エラー"
+
+#: string "Logout"
+msgid "GLOB_NAV_LINK_LOGOUT"
+msgstr "ログアウト"
+
+#: string "Firmware Version"
+msgid "GLOB_NAV_HELP_STRING_FIRMWARE_VERSION"
+msgstr "ファームウェア バージョン"
+
+#: string "Copyright"
+msgid "GLOB_NAV_HELP_STRING_COPYRIGHT"
+msgstr "著作権"
+
+
+#--- Global > EULA & Login ---
+
+#: string "Choose your language"
+msgid "GLOB_NAV_EULA_LABEL_CHOOSE_YOUR_LANGUAGE"
+msgstr "言語を選択"
+
+#: string "I agree to the"
+msgid "GLOB_NAV_EULA_LABEL_I_AGREE_TO_THE"
+msgstr "同意します"
+
+#: string "WD End User License Agreement"
+msgid "GLOB_NAV_EULA_LABEL_WD_END_USER_LICENSE_AGREEMENT"
+msgstr "WD エンド ユーザー使用許諾契約"
+
+#: string "Continue"
+msgid "GLOB_NAV_EULA_BUTTON_PROCEED"
+msgstr "続行"
+
+#: string "Login"
+msgid "GLOB_NAV_LOGIN_DIALOG_TITLE_LOGIN"
+msgstr "ログイン"
+
+#: string "Please enter your username and password."
+msgid "GLOB_NAV_LOGIN_STRING_LOGIN_INTRO"
+msgstr "ユーザー名とパスワードを入力してください。"
+
+#: string "Username"
+msgid "GLOB_NAV_LOGIN_LABEL_USERNAME"
+msgstr "ユーザー名"
+
+#: string "Password"
+msgid "GLOB_NAV_LOGIN_LABEL_PASSWORD"
+msgstr "パスワード"
+
+#: string "Invalid username or password"
+msgid "GLOB_NAV_LOGIN_STRING_INVALID_USERNAME_PASSWORD"
+msgstr "無効なユーザー名またはパスワード"
+
+#: string "Unauthorized"
+msgid "GLOB_NAV_LOGIN_STRING_UNAUTHORIZED"
+msgstr "権限なし"
+
+#: string "Notifications"
+msgid "NAV_NOTIFICATIONS"
+msgstr "通知"
+
+#: string "ON"
+msgid "CONTENT_GENERIC_TOGGLE_ON"
+msgstr "オン"
+
+#: string "OFF"
+msgid "CONTENT_GENERIC_TOGGLE_OFF"
+msgstr "オフ"
+
+#: string "Firmware Update"
+msgid "NAV_FIRMWARE_UPDATE"
+msgstr "ファームウェア更新"
+
+#: string "Safepoint Restore Progress"
+msgid "CONTENT_SAFEPOINTS_DIALOG_TITLE_RESTORE_PROGRESS"
+msgstr "Safepoint 復元の進行状況"
+
+#: string "Safepoint Update Schedule"
+msgid "CONTENT_SAFEPOINTS_DIALOG_TITLE_UPDATE_SCHEDULE"
+msgstr "Safepoint 更新スケジュール"
+
+#: string "Safepoint Progress"
+msgid "CONTENT_SAFEPOINTS_HEAD2_SAFEPOINT_PROGRESS"
+msgstr "Safepoint の進行状況"
+
+#: string "Currently Copying"
+msgid "CONTENT_SAFEPOINTS_LABEL_CURRENTLY_COPYING"
+msgstr "現在コピー中"
+
+#: string "copied"
+msgid "CONTENT_SAFEPOINTS_LABEL_COPIED"
+msgstr "コピー"
+
+#: string " No default application associated with the .{0} file extension."
+msgid "ERROR_ID_LABEL_NO_DEFAULT_EXTENSION"
+msgstr " .{0} ファイル拡張子に関連付けられたデフォルトアプリケーションはありません。"
+
+#: string "Safepoint Profile"
+msgid "CONTENT_SAFEPOINTS_HEAD2_SAFEPOINT_PROFILE"
+msgstr "Safepoint プロファイル"
+
+#: string "Description"
+msgid "CONTENT_SAFEPOINTS_LABEL_DESCRIPTION"
+msgstr "説明"
+
+#: string "This safepoint is in an invalid state, try updating to fix the problem"
+msgid "CONTENT_SAFEPOINTS_LABEL_INVALID_SAFEPOINT_MESSAGE"
+msgstr "この Safepoint は無効な状態です。問題を解決するには更新してください"
+
+#: string "Update now"
+msgid "CONTENT_SAFEPOINTS_LABEL_UPDATE_NOW"
+msgstr "すぐに更新"
+
+#: string "Update"
+msgid "CONTENT_SAFEPOINTS_BUTTON_UPDATE"
+msgstr "更新"
+
+#: string "Auto Update"
+msgid "CONTENT_SAFEPOINTS_LABEL_AUTO_UPDATE"
+msgstr "自動更新"
+
+#: string "Details"
+msgid "CONTENT_SAFEPOINTS_LINK_DETAILS"
+msgstr "詳細"
+
+#: string "Created On"
+msgid "CONTENT_SAFEPOINTS_LABEL_CREATED_ON"
+msgstr "作成日"
+
+#: string "Size"
+msgid "CONTENT_SAFEPOINTS_LABEL_SIZE"
+msgstr "サイズ"
+
+#: string "No Safepoints"
+msgid "CONTENT_SAFEPOINTS_LABEL_GENERIC_NO_SAFEPOINTS" 
+msgstr "Safepoint なし"
+
+#: string "Waiting for safepoints"
+msgid "CONTENT_SAFEPOINTS_LABEL_LIST_WAIT_FOR_SAFEPOINTS"
+msgstr "Safepoint を待機中"
+
+#: string "About Safepoints"
+msgid "CONTENT_SAFEPOINTS_HEAD1_ABOUT_SAFEPOINTS"
+msgstr "Safepoint について"
+
+#: string "A safepoint is a snapshot of the content on WD My Cloud at a specific point in time and stored on a different network drive or USB device. In the event your WD My Cloud content becomes corrupt or the drive fails, you can restore your content from your safepoint to your WD My Cloud drive."
+msgid "CONTENT_SAFEPOINTS_HEAD2_SAFEPOINT_INFO"
+msgstr "Safepoint は特定の時点における WD My Cloud のスナップショットであり、別のネットワーク ドライブまたは USB デバイスに保存されます。 WD My Cloud コンテンツが破損した場合や、ドライブで障害が発生した場合は、Safepoint から WD My Cloud ドライブへコンテンツを復元できます。"
+
+#: string "Delete Safepoint"
+msgid "CONTENT_SAFEPOINTS_DIALOG_TITLE_DELETE_CONFIRM"
+msgstr "Safepoint の削除"
+
+#: string "Are you sure you want to delete this safepoint?"
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_DELETE_CONFIRM_MESSAGE"
+msgstr "この Safepoint を削除しますか?"
+
+#: string "Day"
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_UPDATE_DAY"
+msgstr "日"
+
+#: string "Daily"
+msgid "CONTENT_SAFEPOINTS_DIALOG_BUTTON_DAILY"
+msgstr "毎日"
+
+#: string "Weekly"
+msgid "CONTENT_SAFEPOINTS_DIALOG_BUTTON_WEEKLY"
+msgstr "毎週"
+
+#: string "Monthly"
+msgid "CONTENT_SAFEPOINTS_DIALOG_BUTTON_MONTHLY"
+msgstr "毎月"
+
+#: string "There were no devices found"
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_NO_DEVICES"
+msgstr "デバイスが見つかりません。"
+
+#: string "Retrieving Shares"
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_GETTING_SHARES"
+msgstr "共有を取得中"
+
+#: string "Please choose a safepoint"
+msgid "CONTENT_SAFEPOINTS_DIALOG_HEAD1_CHOOSE_SAFEPOINT"
+msgstr "Safepoint を選択してください"
+
+#: string "The following safepoints were found on the device/share you selected. Please choose a safepoint from the list below and click Finish to begin your restore."
+msgid "CONTENT_SAFEPOINTS_DIALOG_HEAD2_SAFEPOINTS_FOUND"
+msgstr "選択したドライブまたは共有に次の Safepoint が見つかりました。 次のリストから Safepoint を選択し、[完了] をクリックして復元を開始してください。"
+
+#: string "Retrieving Safepoints"
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_GETTING_SAFEPOINTS"
+msgstr "Safepoint を取得中"
+
+#: string "Safepoint details"
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_SAFEPOINT_DETAILS"
+msgstr "Safepoint 詳細"
+
+#: string "Last updated"
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_LAST_UPDATED"
+msgstr "前回更新日"
+
+#: string "Created for"
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_CREATED_FOR"
+msgstr "作成目的"
+
+#: string "Create now or later"
+msgid "CONTENT_SAFEPOINTS_DIALOG_HEAD1_CREATE_NOW_LATER"
+msgstr "すぐに作成または後で作成"
+
+#: string "Because creating a safepoint can take a while and slightly impact performance, you may choose to create one now or schedule one for later."
+msgid "CONTENT_SAFEPOINTS_DIALOG_HEAD2_CREATE_NOW_LATER_MESSAGE"
+msgstr "Safepoint の作成にはしばらく時間がかかり、多少パフォーマンスに影響する場合があるため、すぐに作成するか、後から作成するようにスケジュールするかを選択できます。"
+
+#: string "Now"
+msgid "CONTENT_SAFEPOINTS_DIALOG_BUTTON_NOW"
+msgstr "すぐに作成"
+
+#: string "Later"
+msgid "CONTENT_SAFEPOINTS_DIALOG_BUTTON_LATER"
+msgstr "後で作成"
+
+#: string "Creates your safepoint immediately"
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_CREATE_IMMEDIATELY"
+msgstr "Safepoint をただちに作成します"
+
+#: string "Create your safepoint"
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_CREATE_SAFEPOINT"
+msgstr "Safepoint を作成"
+
+#: string "Tomorrow"
+msgid "CONTENT_SAFEPOINTS_DIALOG_DROP_LIST_TOMORROW"
+msgstr "明日"
+
+#: string "Today"
+msgid "CONTENT_SAFEPOINTS_DIALOG_DROP_LIST_TODAY"
+msgstr "今日"
+
+#: string "SSH"
+msgid "CONTENT_DIALOG_SETTINGS_SSH_TITLE_SSH_CONFIRMATION"
+msgstr "SSH"
+
+#: string "Static Network Mode"
+msgid "CONTENT_DIALOG_SETTINGS_NETWORK_TITLE_NETWORK_MODE"
+msgstr "固定ネットワーク モード"
+
+#: string "Change Network Mode"
+msgid "CONTENT_DIALOG_SETTINGS_NETWORK_TITLE_NETWORK_MODE_CONFIRMATION"
+msgstr "ネットワーク モードの変更"
+
+#: string "Internet access"
+msgid "CONTENT_SETTINGS_NETWORK_STRING_INTERNET_ACCESS"
+msgstr "インターネット アクセス"
+
+#: string "No Internet access"
+msgid "CONTENT_SETTINGS_NETWORK_STRING_NO_INTERNET_ACCESS"
+msgstr "インターネットにアクセスできません"
+
+#: string "Network Profile"
+msgid "CONTENT_SETTINGS_NETWORK_HEAD1_NETWORK_PROFILE"
+msgstr "ネットワーク プロファイル"
+
+#: string "Status"
+msgid "CONTENT_SETTINGS_NETWORK_LABEL_STATUS"
+msgstr "ステータス"
+
+#: string "Network Services"
+msgid "CONTENT_SETTINGS_NETWORK_HEAD1_NETWORK_SERVICES"
+msgstr "ネットワーク サービス"
+
+#: string "Static"
+msgid "CONTENT_SETTINGS_NETWORK_BUTTON_STATIC"
+msgstr "固定"
+
+#: string "DHCP"
+msgid "CONTENT_SETTINGS_NETWORK_BUTTON_DHCP"
+msgstr "DHCP"
+
+#: string "SSH"
+msgid "CONTENT_SETTINGS_NETWORK_LABEL_SSH"
+msgstr "SSH"
+
+#: string "Network Workgroup"
+msgid "CONTENT_SETTINGS_NETWORK_HEAD1_NETWORK_WORKGROUP"
+msgstr "ネットワーク ワークグループ"
+
+#: string "Invalid email address"
+msgid "CONTENT_DIALOG_SETTINGS_STRING_INVALID_EMAIL"
+msgstr "無効な電子メール アドレス。"
+
+# Edit string please 6-10-13
+#: string "Email limit met. Only five notification email addresses allowed."
+msgid "CONTENT_DIALOG_SETTINGS_STRING_EMAIL_LIMIT"
+msgstr "電子メールの上限に達しました。 指定できる通知用電子メール アドレスは 5 つまでです。"
+
+#: string "DNS Server 1"
+msgid "CONTENT_DIALOG_SETTINGS_STRING_DNS_SERVER_1"
+msgstr "DNS サーバー 1"
+
+#: string "DNS Server 2"
+msgid "CONTENT_DIALOG_SETTINGS_STRING_DNS_SERVER_2"
+msgstr "DNS サーバー 2"
+
+#: string "DNS Server 3"
+msgid "CONTENT_DIALOG_SETTINGS_STRING_DNS_SERVER_3"
+msgstr "DNS サーバー 3"
+
+#: string "Specify network parameters and configure your network manually."
+msgid "CONTENT_DIALOG_SETTINGS_STRING_NETWORK_MODE_MESSAGE"
+msgstr "ネットワーク パラメータを選択し、ネットワークを手動で設定します。"
+
+#: string "Modifying your network settings can make your device unrecognizable on your network. If switching from DHCP to Static Mode, be sure to use a valid, available IP address; if switching from Static Mode to DHCP, you may need to relocate the device on your network."
+msgid "CONTENT_DIALOG_SETTINGS_LABEL_NETWORK_MODE_CONFIRMATION_MESSAGE"
+msgstr "ネットワーク設定を変更すると、デバイスがネットワーク上で認識されなくなる可能性があります。 DHCP から固定モードに切り替える場合は、必ず有効で使用可能な IP アドレスを使用してください。固定モードから DHCP に切り替える場合は、ネットワークのデバイスを再配置しなければならないことがあります。"
+
+#: string "Continue?"
+msgid "CONTENT_DIALOG_SETTINGS_LABEL_NETWORK_MODE_CONTINUE_MESSAGE"
+msgstr "続行しますか?"
+
+# Edit sentence. Removed "in any way," and last part of sentence "...including but not limited to enabling SSH." 
+#: string "Please note that modifying or attempting to modify this device outside the normal operation of the product voids your WD warranty."
+msgid "CONTENT_DIALOG_SETTINGS_LABEL_NETWORK_SSH_MESSAGE"
+msgstr "本製品の通常動作以外でこのデバイスを修正したり、修正を試みたりすると、WD の保証が無効になります。"
+
+#: string "I accept"
+msgid "CONTENT_DIALOG_SETTINGS_LABEL_NETWORK_SSH_I_ACCEPT"
+msgstr "同意する"
+
+#: string "Notifications"
+msgid "GLOB_NAV_NOTIFICATIONS_TITLE_NOTIFICATIONS"
+msgstr "通知"
+
+#: string "Notification"
+msgid "GLOB_NAV_NOTIFICATIONS_TITLE_NOTIFICATION"
+msgstr "通知"
+
+#: string "Notifications Configuration"
+msgid "CONTENT_DIALOG_SETTINGS_NOTIFICATIONS_TITLE_NOTIFICATIONS_CONFIG"
+msgstr "通知設定"
+
+#: string "Notifications Email"
+msgid "CONTENT_SETTINGS_NOTIFICATION_HEAD1_NOTIFICATION_EMAIL"
+msgstr "通知電子メール"
+
+#: string "Alert Emails"
+msgid "CONTENT_SETTINGS_NOTIFICATION_LABEL_NOTIFICATION_EMAILS"
+msgstr "アラート電子メール"
+
+#: string "Details"
+msgid "CONTENT_SETTINGS_NOTIFICATION_LABEL_DETAILS"
+msgstr "詳細"
+
+#: string "Notifications Display"
+msgid "CONTENT_SETTINGS_NOTIFICATION_HEAD1_NOTIFICATION_DISPLAY"
+msgstr "通知表示"
+
+#: string "Show notifications for the following messages"
+msgid "CONTENT_SETTINGS_NOTIFICATION_LABEL_SHOW_NOTIFICATIONS"
+msgstr "次のメッセージの通知を表示"
+
+#: string "Critical Only"
+msgid "CONTENT_SETTINGS_NOTIFICATION_LABEL_CRITICAL_ONLY"
+msgstr "重大のみ"
+
+#: string "Critical and Warning"
+msgid "CONTENT_SETTINGS_NOTIFICATION_LABEL_CRITICAL_AND_WARNING"
+msgstr "重大と警告"
+
+#: string "All"
+msgid "CONTENT_SETTINGS_NOTIFICATION_LABEL_ALL_NOTIFICATIONS"
+msgstr "すべて"
+
+#: string "Set up notifications configuration to receive system notifications through the WD My Cloud interface or through email."
+msgid "CONTENT_DIALOG_SETTINGS_NOTIFICATIONS_HEAD2_SETUP_NOTIFICATIONS"
+msgstr "WD My Cloud インターフェイスまたは電子メール経由でシステム通知を受信するための通知設定を行います。"
+
+#: string "Send email notifications for the following messages:"
+msgid "CONTENT_DIALOG_SETTINGS_NOTIFICATIONS_LABEL_SETUP_NOTIFICATIONS_MESSAGE"
+msgstr "次のメッセージの電子メール通知を送信:"
+
+#: string "New Email"
+msgid "CONTENT_DIALOG_SETTINGS_NOTIFICATIONS_BUTTON_NEW_EMAIL"
+msgstr "新しい電子メール アドレス"
+
+#: string "Send Test Email"
+msgid "CONTENT_DIALOG_SETTINGS_NOTIFICATIONS_BUTTON_SEND_TEST_EMAIL"
+msgstr "テスト電子メールの送信"
+
+#: string "There are no notifications to view"
+msgid "GLOB_NAV_NOTIFICATIONS_STRING_NO_NOTIFICATIONS_FOUND"
+msgstr "表示する通知はありません"
+
+#: string "There are no critical or warning notifications to view"
+msgid "GLOB_NAV_NOTIFICATIONS_STRING_NO_CRIT_WARN_NOTIFICATIONS_FOUND"
+msgstr "表示する重大または警告通知はありません"
+
+#: string "There are no critical notifications to view"
+msgid "GLOB_NAV_NOTIFICATIONS_STRING_NO_CRIT_NOTIFICATIONS_FOUND"
+msgstr "表示する重大通知はありません"
+
+#: string "Info"
+msgid "GLOB_NAV_NOTIFICATIONS_LABEL_INFO"
+msgstr "情報"
+
+#: string "Warning"
+msgid "GLOB_NAV_NOTIFICATIONS_LABEL_WARNING"
+msgstr "警告"
+
+#: string "Critical"
+msgid "GLOB_NAV_NOTIFICATIONS_LABEL_CRITICAL"
+msgstr "重大"
+
+#: string "View All"
+msgid "GLOB_NAV_NOTIFICATIONS_BUTTON_VIEW_ALL"
+msgstr "すべて表示"
+
+#: string "Code"
+msgid "GLOB_NAV_NOTIFICATIONS_LABEL_CODE"
+msgstr "コード"
+
+#: string "Dismiss All"
+msgid "GLOB_NAV_NOTIFICATIONS_BUTTON_DISMISS_ALL"
+msgstr "すべて非表示"
+
+#----Users----
+
+#----User's Bumper----
+
+#: string "About Users"
+msgid "CONTENT_USERS_BUMPER_TITLE_ABOUT_USERS"
+msgstr "ユーザーについて"
+
+#: string "Control who can access your cloud and their type of access."
+msgid "CONTENT_USERS_STRING_ABOUT_USERS_DESC"
+msgstr "クラウドにアクセス可能なユーザーとアクセスのタイプを制御します。"
+
+#----User's Detail----
+#: string "Set Up Users"
+msgid "CONTENT_USERS_HEAD1_SET_UP_USERS"
+msgstr "ユーザーの設定"
+
+#: string "Username"
+msgid "CONTENT_GENERIC_TEXTBOX_LABEL_USERNAME"
+msgstr "ユーザー名"
+
+#----My Cloud Web----
+
+# Edit - changed WD2go.com to WDMyCloud.com
+#: string "<span class='remote_access_username'></span> does not have a WDMyCloud.com login. Enter an email address to sign up for a login."
+msgid "CONTENT_USERS_STRING_NO_ACCOUNTS_MY_CLOUD_WEB"
+msgstr "<span class='remote_access_username'></span> には WDMyCloud.com ログイン資格がありません。 ログイン登録を行うための電子メール アドレスを入力します。"
+
+# Edit - changed WD2go.com to WDMyCloud.com
+#: string "Click Sign Up to get a WDMyCloud.com login."
+msgid "CONTENT_USERS_STRING_CLICK_REGISTER_MY_CLOUD_WEB"
+msgstr "[登録] をクリックして、WDMyCloud.com ログインを取得してください。"
+
+#----Share Access----
+
+#: string "Full Access"
+msgid "CONTENT_GENERIC_STRING_RW_ACCESS"
+msgstr "完全アクセス"
+
+#: string "Read Access"
+msgid "CONTENT_GENERIC_STRING_RO_ACCESS"
+msgstr "読み取りアクセス"
+
+#: string "No Access"
+msgid "CONTENT_GENERIC_STRING_NO_ACCESS"
+msgstr "アクセスなし"
+
+#---- Create User Dialog ----
+
+#: string "Add User"
+msgid "CONTENT_USERS_DIALOG_TITLE_ADD_USER"
+msgstr "ユーザーの追加"
+
+#: string "Email"
+msgid "CONTENT_GENERIC_TEXTBOX_LABEL_EMAIL"
+msgstr "電子メール アドレス"
+
+#: string "Confirm Password"
+msgid "CONTENT_GENERIC_TEXTBOX_LABEL_CONFIRM_PASSWORD"
+msgstr "パスワードの確認"
+
+#: string "Required"
+msgid "CONTENT_GENERIC_STRING_REQUIRED"
+msgstr "必須"
+
+#----Edit Password Dialog ----
+
+#: string "Edit Password"
+msgid "CONTENT_USERS_DIALOG_TITLE_EDIT_PASSWORD"
+msgstr "パスワードの編集"
+
+#: string "You can edit the password for this user by using the fields below:"
+msgid "CONTENT_USERS_DIALOG_STRING_EDIT_PASSWORD_DESC"
+msgstr "次のフィールドを使用して、このユーザーのパスワードを編集できます。"
+
+#: string "New Password"
+msgid "CONTENT_GENERIC_TEXTBOX_LABEL_NEW_PASSWORD"
+msgstr "新しいパスワード"
+
+#----Delete User Dialog ----
+
+#: string "Are you sure you want to delete this user?"
+msgid "CONTENT_USERS_DIALOG_STRING_DELETE_USER_CONFIRM"
+msgstr "このユーザーを削除しますか?"
+
+#---- Register My Cloud Web Dialog ---- 
+
+# Edit - changed WD2go.com to WDMyCloud.com
+#: string "Sign Up for WDMyCloud.com Login"
+msgid "CONTENT_USERS_DIALOG_TITLE_REGISTER_MY_CLOUD"
+msgstr "WDMyCloud.com ログインの登録"
+
+# Edit - changed WD2go.com to WDMyCloud.com
+#: string "Sign up to get a login for WDMyCloud.com."
+msgid "CONTENT_USERS_DIALOG_STRING_REGISTER_MY_CLOUD_DESC"
+msgstr "WDMyCloud.com ログインを取得するために登録"
+
+#: string "Your Name"
+msgid "CONTENT_USERS_DIALOG_TEXTBOX_LABEL_YOUR_NAME"
+msgstr "名前"
+
+#: string "Registration Email Sent"
+msgid "CONTENT_USERS_DIALOG_TITLE_REGISTRATION_EMAIL_SENT"
+msgstr "登録メールが送信されました"
+
+#: string "A registration email has been sent to the specified user."
+msgid "CONTENT_USERS_DIALOG_STRING_REGISTRATION_EMAIL_SENT"
+msgstr "登録メールは指定したユーザーに送信されました。"
+
+# Edit: removed space between In and structions. Should be single word Instructions, not In structions 
+#: string "Please allow some time for the email to arrive in the user's inbox. Instructions for obtaining remote access to the content on your drive are provided."
+msgid "CONTENT_USERS_DIALOG_STRING_REGISTRATION_EMAIL_SENT_INSTRUCTION"
+msgstr "電子メースがユーザーの受信トレイに配信されるまでには少し時間がかかります。 ドライブのコンテンツへのリモート アクセスを取得するための手順が記載されています。"
+
+#---- Delete WD My Cloud Account Dialog ----
+
+#: string "Delete Email Address"
+msgid "CONTENT_USERS_DIALOG_TITLE_DELETE_WD2GO_ACCOUNT"
+msgstr "電子メール アドレスの削除"
+
+#: string "Are you sure you want to delete this email address?"
+msgid "CONTENT_USERS_DIALOG_STRING_DELETE_WD2GO_ACCOUNT_CONFIRM"
+msgstr "この電子メール アドレスを削除しますか?"
+
+
+#----Shares Bumper ----
+
+#: string "About Shares"
+msgid "CONTENT_SHARES_BUMPER_TITLE_ABOUT_SHARES"
+msgstr "共有について"
+
+#: string "About Shares"
+msgid "CONTENT_SHARES_HEAD1_TITLE_ABOUT_SHARES"
+msgstr "共有について"
+
+#: string "A share is an area for storing files (like a folder). You can create multiple shares on a single storage device and control access to each share."
+msgid "CONTENT_SHARES_STRING_ABOUT_SHARES_DESC"
+msgstr "共有はフォルダのようなファイルを保存するための領域です。 1 台のストレージ デバイスで複数の共有を作成し、各共有へのアクセスを制御できます。"
+
+#----Share Detail----
+
+#: string "Managing Shares"
+msgid "CONTENT_SHARES_HEAD1_MANAGE_SHARES"
+msgstr "共有の管理"
+
+#----Add Share Dialog----
+
+#: string "Add Share"
+msgid "CONTENT_SHARES_DIALOG_TITLE_ADD_SHARE"
+msgstr "共有の追加"
+
+#: string "Create Share"
+msgid "CONTENT_SHARES_DIALOG_STRING_CREATE_SHARE"
+msgstr "共有の作成"
+
+#: string "Public Access"
+msgid "CONTENT_SHARES_TOGGLE_LABEL_PUBLIC_ACCESS" 
+msgstr "パブリック アクセス"
+
+
+#----Delete Share Dialog----
+
+#: string "Deleting this share will delete all content and configuration settings within the share."
+msgid "CONTENT_SHARES_DIALOG_STRING_DELETE_SHARE_DESC"
+msgstr "この共有を削除すると、共有内のすべてのコンテンツと構成設定が削除されます。"
+
+#: string "Are you sure you want to delete this share?"
+msgid "CONTENT_SHARES_DIALOG_STRING_DELETE_SHARE_CONFIRM"
+msgstr "この共有を削除しますか?"
+
+
+# ----Dashboard/Home Nav----
+
+#: string "Capacity"
+msgid "CONTENT_HOME_BIG_BOX_TITLE_CAPACITY"
+msgstr "容量"
+
+#: string "Error retrieving capacity."
+msgid "ERROR_STRING_GET_STORAGE_USAGE"
+msgstr "容量取得エラー。"
+
+#: string "Free"
+msgid "CONTENT_HOME_BIG_BOX_STRING_FREE"
+msgstr "空き"
+
+#: string "Device"
+msgid "CONTENT_HOME_BIG_BOX_TITLE_DEVICE"
+msgstr "デバイス"
+
+#: string "Diagnosis"
+msgid "CONTENT_HOME_SMALL_BOX_TITLE_DIAGNOSIS"
+msgstr "診断"
+
+#: string "Normal"
+msgid "CONTENT_HOME_DIALOG_STRING_DIAGNOSIS_NORMAL"
+msgstr "正常"
+
+#: string "Overheated"
+msgid "CONTENT_HOME_DIALOG_STRING_DIAGNOSIS_OVERHEATED"
+msgstr "過負荷"
+
+#: string "Sufficient"
+msgid "CONTENT_HOME_DIALOG_STRING_DIAGNOSIS_SUFFICIENT"
+msgstr "十分"
+
+#: string "Low"
+msgid "CONTENT_HOME_DIALOG_STRING_DIAGNOSIS_LOW_FREE_SPACE"
+msgstr "低"
+
+# PLEASE DELETE THIS STRING 6-10-13
+#: string "Warning"
+msgid "CONTENT_HOME_STRING_SICK"
+msgstr "警告"
+
+#: string "Initializing"
+msgid "CONTENT_HOME_STRING_INITIALIZING"
+msgstr "初期化中"
+
+#: string "Firmware"
+msgid "CONTENT_HOME_SMALL_BOX_TITLE_FIRMWARE"
+msgstr "ファームウェア"
+
+#: string "Cloud Devices"
+msgid "CONTENT_HOME_MEDIUM_BOX_TITLE_CLOUD_DEVICES"
+msgstr "クラウド デバイス"
+
+#: string "Users"
+msgid "CONTENT_HOME_MEDIUM_BOX_TITLE_USERS"
+msgstr "ユーザー"
+
+#: string "Shares"
+msgid "CONTENT_HOME_MEDIUM_BOX_TITLE_SHARES"
+msgstr "共有"
+
+#: string "Content Scan"
+msgid "CONTENT_HOME_MEDIUM_BOX_TITLE_MEDIA_SCAN"
+msgstr "コンテンツ スキャン"
+
+#: string "Error retrieving content scan status."
+msgid "ERROR_STRING_GET_MEDIA_CRAWLER"
+msgstr "コンテンツ スキャン ステータスの取得エラー。"
+
+#: string "Idle"
+msgid "CONTENT_HOME_STRING_IDLE"
+msgstr "アイドル"
+
+#---- Capacity Usage Dialog ----
+
+#: string "Capacity Usage"
+msgid "CONTENT_HOME_DIALOG_TITLE_CAPACITY_USAGE"
+msgstr "容量の使用状況"
+
+#: string "Current usage of your system capacity."
+msgid "CONTENT_HOME_DIALOG_STRING_CAPACITY_USAGE_DESC"
+msgstr "システム容量の現在の使用状況"
+
+#: string "Free Space"
+msgid "CONTENT_HOME_DIALOG_LABEL_FREE_SPACE"
+msgstr "空き領域"
+
+#: string "Music Tracks"
+msgid "CONTENT_HOME_DIALOG_LABEL_MUSIC_TRACKS"
+msgstr "音楽トラック"
+
+#: string "Photos"
+msgid "CONTENT_HOME_DIALOG_LABEL_PHOTOS"
+msgstr "画像"
+
+#: string "Other"
+msgid "CONTENT_HOME_DIALOG_LABEL_OTHER"
+msgstr "その他"
+
+#---- Diagnosis Dialog ----
+
+#: string "Diagnosis"
+msgid "CONTENT_HOME_DIALOG_TITLE_DIAGNOSIS"
+msgstr "診断"
+
+#: string "Display a snapshot of your system components to assess the overall health of your WD My Cloud."
+msgid "CONTENT_HOME_DIALOG_STRING_DIAGNOSIS_DESC"
+msgstr "システム コンポーネントのスナップショットを表示し、WD My Cloud の全体的な正常性を評価します。"
+
+#: string "Good"
+msgid "CONTENT_HOME_DIALOG_STRING_DIAGNOSIS_GOOD"
+msgstr "良好"
+
+#: string "Bad"
+msgid "CONTENT_HOME_DIALOG_STRING_DIAGNOSIS_BAD"
+msgstr "不良"
+
+#: string "Temperature"
+msgid "CONTENT_HOME_DIALOG_LABEL_TEMPERATURE"
+msgstr "温度"
+
+#: string "Drive Status"
+msgid "CONTENT_HOME_DIALOG_LABEL_DRIVE_STATUS"
+msgstr "ドライブ ステータス"
+
+#: string "Content Status"
+msgid "CONTENT_HOME_DIALOG_LABEL_SHARE_STATUS"
+msgstr "コンテンツ ステータス"
+
+#: string "Temperature status"
+msgid "CONTENT_HOME_DIALOG_TOOLTIP_TEMPERATURE"
+msgstr "温度ステータス"
+
+#: string "Drive SMART status"
+msgid "CONTENT_HOME_DIALOG_TOOLTIP_DRIVE_STATUS"
+msgstr "ドライブ SMART ステータス"
+
+#: string "Data volume mounted or not mounted"
+msgid "CONTENT_HOME_DIALOG_TOOLTIP_SHARE_STATUS"
+msgstr "マウントされたデータ ボリュームとマウントされていないデータ ボリューム"
+
+#: string "Amount of free space remaining"
+msgid "CONTENT_HOME_DIALOG_TOOLTIP_FREE_SPACE"
+msgstr "残り空き領域"
+
+#: string "Not Mounted"
+msgid "CONTENT_HOME_DIALOG_STRING_DIAGNOSIS_NOT_MOUNTED"
+msgstr "マウント解除"
+
+#: string "Mounted"
+msgid "CONTENT_HOME_DIALOG_STRING_DIAGNOSIS_MOUNTED"
+msgstr "マウント"
+
+#---- Media Scan Dialog ----
+
+# Edit - changed to Content Scan Status - 5-21
+#: string "Content Scan Status"
+msgid "CONTENT_HOME_DIALOG_TITLE_MEDIA_SCAN"
+msgstr "コンテンツのスキャンステータス"
+
+#: string "Snapshot of your current Media database scan."
+msgid "CONTENT_HOME_DIALOG_STRING_MEDIA_SNAPSHOT_DESC"
+msgstr "現在のメディア データベース スキャンのスナップショット。"
+
+#: string " (scan in progress...)"
+msgid "CONTENT_HOME_DIALOG_STRING_MEDIA_SCAN_IN_PROGRESS"
+msgstr " (スキャンを実行中です...)"
+
+#----Getting Started  ----
+
+#: string "Getting Started"
+msgid "GLOB_NAV_HELP_DIALOG_TITLE_GETTING_STARTED"
+msgstr "使用開始"
+
+#: string "Getting Started"
+msgid "DIALOG_TITLE_GETTING_STARTED"
+msgstr "使用開始"
+
+
+
+# --- NEW Getting Started Keys and strings from KM - START  ---
+
+#: string "WD My Cloud lets you create your personal cloud. Store your photos, videos, music, and files in one place, and access your content anywhere."
+msgid "STRING_INTRO_LEVEL1_GETTING_STARTED"
+msgstr "WD My Cloud では、個人クラウドを作成できます。 画像、動画、音楽、およびファイルを 1 つの場所に保存し、あらゆる場所のコンテンツにアクセスします。"
+
+# Edited from WD2go.com to WDMyCloud.com
+#: string "Access requires a WDMyCloud.com login, and each user needs one."
+msgid "STRING_INTRO_LEVEL2_GETTING_STARTED"
+msgstr "アクセスするには、ユーザーごとに WDMyCloud.com ログインが必要です。"
+
+# Edited from WD2go.com to WDMyCloud.com
+#: string "Sign up for a WDMyCloud.com login"
+msgid "STRING_INTRO_TABLE_HEAD_GETTING STARTED"
+msgstr "WDMyCloud.com ログインの登録"
+
+
+#EDIT 6-10-13
+#: string ""Entering your email address registers your WD My Cloud device and sets you up to receive updates and info. Also, each time you add a user, WD My Cloud automatically creates a new share using the first name of the user.""
+msgid "STRING_INTRO_LEVEL3_GETTING_STARTED"
+msgstr "電子メール アドレスを入力すると、WD My Cloud デバイスが登録され、更新と最新情報を受信するように設定されます。 また、ユーザーを追加するたびに、WD My Cloud はユーザーの名前 (名) を使用して、自動的に新しい共有を作成します。"
+
+#: string "That's it."
+msgid "STRING_INTRO2_LEVEL1_GETTING_STARTED"
+msgstr "以上です。"
+
+# Edited from wd2go.com to WDMyCloud.com
+#: string "You'll receive an email from WDMyCloud.com with your login info."
+msgid "STRING_INTRO2_LEVEL2_GETTING_STARTED"
+msgstr "ログイン情報が記載された電子メールが WDMyCloud.com から送信されます。"
+
+#: string "Click these links for additional software and info:"
+msgid "STRING_INTRO2_LEVEL3_GETTING_STARTED"
+msgstr "追加ソフトウェアおよび情報については、これらのリンクをクリックしてください。"
+
+#: string "Automatically update WD My Cloud when a firmware update is available."
+msgid "STRING_INTRO2_CHECKBOX1_GETTING_STARTED"
+msgstr "ファームウェア更新が利用可能な場合、自動的に WD My Cloud を更新します。"
+
+#: string "*"
+msgid "STRING_INTRO2_CHECKBOX2_GETTING_STARTED"
+msgstr "*"
+
+#: string "*"
+msgid "STRING_INTRO2_LINK1_GETTING_STARTED"
+msgstr "*"
+
+#: string "*"
+msgid "STRING_INTRO2_LINK2_GETTING_STARTED"
+msgstr "*"
+
+#: string "*"
+msgid "STRING_INTRO2_LINK3_GETTING_STARTED"
+msgstr "*"
+
+#: string "*"
+msgid "STRING_INTRO3_LEVEL1_GETTING_STARTED"
+msgstr "*"
+
+#: string "*"
+msgid "STRING_INTRO3_LEVEL2_GETTING_STARTED"
+msgstr "*"
+
+#: string "*"
+msgid "STRING_INTRO3_LEVEL3_GETTING_STARTED"
+msgstr "*"
+
+#: string "*"
+msgid "STRING_INTRO3_CHECKBOX1_GETTING_STARTED"
+msgstr "*"
+
+#: string "*"
+msgid "STRING_INTRO3_CHECKBOX2_GETTING_STARTED"
+msgstr "*"
+
+#: string "*"
+msgid "STRING_INTRO3_LINK1_GETTING_STARTED"
+msgstr "*"
+
+#: string "*"
+msgid "STRING_INTRO3_LINK2_GETTING_STARTED"
+msgstr "*"
+
+#: string "*"
+msgid "STRING_INTRO3_LINK3_GETTING_STARTED"
+msgstr "*"
+
+
+# --- NEW Getting Started Keys and strings from KM - END  ---
+
+
+
+
+
+#--- Old/vintage Gettings Started instructions ---
+
+#: string "Use the getting started instructions to get up and running on your WD My Cloud and maximize your WD experience."
+msgid "GLOB_NAV_HELP_DIALOG_STRING_GETTING_STARTED_DESC"
+msgstr "開始手順を使用して、WD My Cloud を取得して実行し、WD 経験を最大化してください。"
+
+#: string "Add yourself and others to your personal cloud so everyone's connected to their content, all the time."
+msgid "GLOB_NAV_HELP_DIALOG_STRING_GETTING_STARTED_ADD_USERS_DESC"
+msgstr "自分と他のユーザーを個人クラウドに追加することで、全員がいつでもコンテンツに接続できます。"
+
+#: string "Set up your personal cloud"
+msgid "GLOB_NAV_HELP_DIALOG_HEAD2_GETTING_STARTED_SETUP_ADMIN"
+msgstr "個人クラウドを設定"
+
+#: string "Your First Name"
+msgid "CONTENT_GENERIC_TEXTBOX_LABEL_YOUR_FIRST_NAME"
+msgstr "名前 (名)"
+
+#: string "Your Last Name"
+msgid "CONTENT_GENERIC_TEXTBOX_LABEL_YOUR_LAST_NAME"
+msgstr "名前 (姓)"
+
+#: string "Your Email Address"
+msgid "CONTENT_GENERIC_TEXTBOX_LABEL_YOUR_EMAIL_ADDRESS"
+msgstr "電子メール アドレス"
+
+#: string "Invite others to your personal cloud"
+msgid "GLOB_NAV_HELP_DIALOG_HEAD2_GETTING_STARTED_ADD_USERS"
+msgstr "他のユーザーを個人クラウドに招待"
+
+#: string "If you do not wish to add other users now, click Next to continue."
+msgid "GLOB_NAV_HELP_DIALOG_STRING_GETTING_STARTED_BYPASS_ADD_USERS"
+msgstr "他のユーザーを追加しない場合は、[次へ] をクリックして続行します。"
+
+#: string "Email Address"
+msgid "CONTENT_GENERIC_TEXTBOX_LABEL_EMAIL_ADDRESS"
+msgstr "電子メール アドレス"
+
+#: string "Setup Complete"
+msgid "GLOB_NAV_HELP_DIALOG_HEAD2_SETUP_COMPLETE"
+msgstr "設定完了"
+
+#: string "Learn more about what WD My Cloud can do for you."
+msgid "GLOB_NAV_HELP_DIALOG_STRING_GETTING_STARTED_LEARN_MORE"
+msgstr "WD My Cloud の詳細機能を見る"
+
+#: string "Upload Content"
+msgid "GLOB_NAV_HELP_DIALOG_LINK_UPLOAD_CONTENT"
+msgstr "コンテンツのアップロード"
+
+#: string "Backup PC/Mac"
+msgid "GLOB_NAV_HELP_DIALOG_LINK_BACKUP_PC_MAC"
+msgstr "PC/Mac のバックアップ"
+
+#: string "Access Mobile Apps"
+msgid "GLOB_NAV_HELP_DIALOG_LINK_ACCESS_MOBILE_APPS"
+msgstr "モバイル アプリにアクセス"
+
+#: string "Automatically update WD My Cloud when a firmware update is available."
+msgid "GLOB_NAV_HELP_DIALOG_CHECKBOX_AUTO_UPDATE"
+msgstr "ファームウェア更新が利用可能な場合、自動的に WD My Cloud を更新します。"
+
+#: string "Register WD My Cloud to receive product support updates regularly."
+msgid "GLOB_NAV_HELP_DIALOG_CHECKBOX_REGISTER"
+msgstr "WD My Cloud を登録すると、製品サポート最新情報が定期的に配信されます。"
+
+#: string "WiFi Setup"
+msgid "CONTENT_WIFI_DIALOG_TITLE_WIFISETUP"
+msgstr "WiFi 設定"
+
+#: string "SSID"
+msgid "BUTTON_SSID"
+msgstr "SSID"
+
+#: string "Unlock"
+msgid "BUTTON_UNLOCK"
+msgstr "ロック解除"
+
+#: string "WPS Push"
+msgid "BUTTON_WPSPUSH"
+msgstr "WPS プッシュ"
+
+#: string "WPS PIN"
+msgid "BUTTON_WPSPIN"
+msgstr "WPS PIN"
+
+#: string "Generate New PIN"
+msgid "BUTTON_GENERATE_NEW_PIN"
+msgstr "新しい PIN の生成"
+
+#: string "Reset to Default PIN"
+msgid "BUTTON_RESET_TO_DEFAULT_PIN"
+msgstr "デフォルト PIN にリセット"
+
+#: string "Choose this method if your wireless router supports WPS configuration."
+msgid "CONTENT_WIFI_DIALOG_WPSPUSH_LABEL"
+msgstr "ワイヤレス ルーターが WPS 設定をサポートしている場合は、この方式を使用します。"
+
+#: string "Push WPS button on your router to initiate connection."
+msgid "CONTENT_WIFI_DIALOG_WPSPUSH_LABEL1"
+msgstr "ルーターの WPS ボタンを押して、接続を開始します。"
+
+#: string "Push and hold the WPS button on the WD My Cloud WiFi for 3 seconds."
+msgid "CONTENT_WIFI_DIALOG_WPSPUSH_LABEL2"
+msgstr "WD My Cloud WiFi の WPS ボタンを 3 秒間押し続けます。"
+
+#: string "Connection status will be displayed when network setup is done. Blue LED status on WD My Cloud WiFi indicates successful connection."
+msgid "CONTENT_WIFI_DIALOG_WPSPUSH_LABEL3"
+msgstr "ネットワーク設定が完了すると、接続ステータスが表示されます。 WD My Cloud WiFi の青色の LED ステータスは、正常に接続されていることを示します。"
+
+#: string "Enter this 8-digit PIN into your router configuration page."
+msgid "CONTENT_WIFI_DIALOG_WPSPIN_LABEL1"
+msgstr "この 8 桁の PIN をルーター設定ページに入力します。"
+
+#: string "Click the connection button to initiate the network connection."
+msgid "CONTENT_WIFI_DIALOG_WPSPIN_LABEL2"
+msgstr "[接続] ボタンをクリックして、ネットワーク接続を開始します。"
+
+#: string "WiFi Manual Setup"
+msgid "CONTENT_WIFI_DIALOG_TITLE_MANUALSETUP"
+msgstr "WiFi 手動設定"
+
+#: string "Enetr SSID"
+msgid "CONTENT_WIFI_LABEL_SSID"
+msgstr "SSID の入力"
+
+#: string "Enter Password"
+msgid "CONTENT_WIFI_LABEL_PASSWORD"
+msgstr "パスワードの入力"
+
+#: string "Manual Connection"
+msgid "CONTENT_WIFI_LABEL_MANUALCONNECTION"
+msgstr "手動接続"
+
+#: string "Create a Safepoint"
+msgid "CONTENT_SAFEPOINTS_DIALOG_TITLE_CREATE_SAFEPOINT"
+msgstr "Safepoint の作成"
+
+#: string "searching for USB devices"
+msgid "CONTENT_SAFEPOINTS_LABEL_SEARCHING_FOR_USB_DEVICES"
+msgstr "USB デバイスを検索中"
+
+#: string "Recover Content with a Safepoint"
+msgid "CONTENT_SAFEPOINTS_DIALOG_TITLE_RECOVER_SAFEPOINT"
+msgstr "Safepoint を使用してコンテンツを回復"
+
+#: string "Unable to discover available devices on your network."
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_NAS_DISCOVER_ERROR"
+msgstr "ネットワークで使用可能なデバイスを検索できません。"
+
+
+#: string "Device name must be between 2 and 15 characters and can only contain letters, numbers, and dashes."
+msgid "ERROR_ENTER_ALPHANUMERIC_DEVICE_NAME"
+msgstr "デバイス名は 2 ～ 15 文字で、文字、数字、およびダッシュのみを使用できます。"
+
+#: string "Invalid safepoint name. Valid safepoint names are between 1-32 characters, case sensitive and cannot contain special characters except underscores."
+msgid "ERROR_SAFEPOINT_INCORRECT_SYNTAX"
+msgstr "無効な Safepoint 名。 有効な Safepoint 名は 1 ～ 32 文字で大文字と小文字を区別します。アンダースコア以外の特殊文字は使用できません。"
+
+#: string "The device name cannot start or end with a dash (-)."
+msgid "ERROR_ENTER_ALPHANUMERIC_DEVICE_NAME_DASH"
+msgstr "デバイス名の先頭または後尾にはダッシュ（-）を使用できません。"
+
+#: string "The device name cannot start with a number."
+msgid "ERROR_ENTER_ALPHANUMERIC_DEVICE_NAME_NUMBER"
+msgstr "デバイス名の先頭には数字を使用できません。"
+
+#: string "Invalid device name."
+msgid "ERROR_ENTER_ALPHANUMERIC_DEVICE_INVALID"
+msgstr "無効なデバイス名。"
+
+# EDIT - remove duplicate word and reworded to shorten
+#: string "Timeout; waiting for reboot. Verify that the LED on the front of your device is not red; then find the device on the network and reinitialize the web user interface. If the LED is red, reboot your drive manually."
+msgid "ERROR_REBOOT_TIMEOUT"
+msgstr "タイムアウト。再起動を待機中です。 デバイス正面の LED が赤色ではないことを確認します。次に、ネットワークのデバイスを確認して、Web ユーザー インターフェイスを再初期化します。 LED が赤色の場合、ドライブを手動で再起動してください。"
+
+#: string "Error ignoring alerts:"
+msgid "LABEL_IGNORING_ALERTS"
+msgstr "アラート無視エラー:"
+
+#: string "Start Update"
+msgid "CONTENT_DIALOG_ALERTS_STRING_BEGIN_UPDATE"
+msgstr "更新の開始"
+
+#: string "Error registering device:"
+msgid "LABEL_REGISTERING_DEVICE"
+msgstr "デバイス登録エラー:"
+
+#: string "Error rebooting device:"
+msgid "LABEL_REBOOTING_DEVICE"
+msgstr "デバイス再起動エラー:"
+
+#: string "Error shutting down device:"
+msgid "LABEL_SHUTTING_DOWN_DEVICE"
+msgstr "デバイス シャットダウン エラー:"
+
+#: string "Error sending test alert email:"
+msgid "LABEL_SENDING_TEST_ALERT_EMAIL"
+msgstr "テスト アラート メール送信エラー:"
+
+#: string "Error toggling SSH:"
+msgid "LABEL_TOGGLING_SSH"
+msgstr "SSH 切り替えエラー:"
+
+#: string "Error processing your configuration request:"
+msgid "LABEL_CONFIGURING_SETTINGS_GENERAL"
+msgstr "設定要求処理エラー:"
+
+#: string "Device description must start with an alphanumeric value and may contain spaces or underscores without exceeding 42 characters."
+msgid "ERROR_ENTER_ALPHANUMERIC_DEVICE_DESCRIPTION"
+msgstr "デバイスの明の先頭は英数字で、42 文字以内でなければなりません。スペースまたはアンダースコアを使用できます。"
+
+#: string "Authorizations do not match."
+msgid "ERROR_AUTHORIZATION_DO_NOT_MATCH"
+msgstr "認証が一致しません。"
+
+#: string "Workgroup name must start with an alphanumeric value, may contain dashes, exclamation points, at signs, pound signs, dollar signs, percent signs, carets, ampersands, parentheses, underscores, semicolons, colons, apostrophes, commas, periods, and be between 1 and 16 characters."
+msgid "ERROR_ENTER_ALPHANUMERIC_WORKGROUP"
+msgstr "ワークグループ名の先頭は英数字で、1 ～ 16 文字でなければなりません。ダッシュ、エクスクラメーション マーク、アット マーク、ポンド記号、ドル記号、パーセント記号、キャレット、アンパサンド、括弧、アンダースコア、セミコロン、コロン、アポストロフィー、カンマ、ピリオドを使用できます。"
+
+#: string "Empty"
+msgid "ERROR_NETWORK_EMPTY"
+msgstr "空にする"
+
+#: string "The IP addresses 0.0.0.0 and 255.255.255.255 are reserved and cannot be used."
+msgid "ERROR_NETWORK_RESERVED_SPECIAL"
+msgstr "IP アドレスの 0.0.0.0 および 255.255.255.255 は予約されているため、使用できません。"
+
+#: string "IP addresses in the 0.x.x.x format are reserved for self-identification purposes and cannot be used."
+msgid "ERROR_NETWORK_RESERVED_SELF_IDENTIFICATION"
+msgstr "0.x.x.x という形式の IP アドレスは自己特定目的で予約されているため、使用できません。"
+
+#: string "IP addresses in the 127.x.x.x format are reserved for host loopback purposes and cannot be used."
+msgid "ERROR_NETWORK_LOOPBACK"
+msgstr "127.x.x.x という形式の IP アドレスはホスト ループバック目的で予約されているため、使用できません。"
+
+#: string "IP addresses in the 169.254.x.x format are reserved for use as link-local addresses and cannot be used."
+msgid "ERROR_NETWORK_LINKLOCAL"
+msgstr "169.254.x.x という形式の IP アドレスはリンク ローカル アドレスとして使用するために予約されているため、使用できません。"
+
+#: string "IP addresses in the 192.88.99.x format are reserved for 6to4 relay anycasting purposes and cannot be used."
+msgid "ERROR_NETWORK_ANYCAST"
+msgstr "192.88.99.x という形式の IP アドレスは 6-4 リレー エニーキャスト目的で予約されているため、使用できません。"
+
+#: string "IP addresses ranging from 224.0.0.0 through 239.255.255.255 are reserved for multicasting purposes and cannot be used."
+msgid "ERROR_NETWORK_MULTICAST"
+msgstr "224.0.0.0 ～ 239.255.255.255 の範囲の IP アドレスはマルチキャスト目的で予約されているため、使用できません。"
+
+#: string "IP addresses ranging from 240.0.0.0 through 255.255.255.254 are reserved for future use and cannot be used."
+msgid "ERROR_NETWORK_RESERVED"
+msgstr "240.0.0.0 ～ 255.255.255.254 の範囲の IP アドレスは将来に備えて予約されているため、使用できません。"
+
+#: string "The host IP address is invalid."
+msgid "ERROR_INVALID_HOST_IPADDRESS_AND_WITH_NETMASK"
+msgstr "ホスト IP アドレスが無効です。"
+
+#: string "The netmask is not contiguous and cannot be used."
+msgid "ERROR_NETMASK_NOT_CONTIGUOUS"
+msgstr "ネットマスクは連続していないため、使用できません。"
+
+#: string "The gateway is not in the same subnet as the IP address."
+msgid "ERROR_GATEWAY_WRONG_SUBNET"
+msgstr "ゲートウェイが IP アドレスと同じサブネットにありません。"
+
+#: string "DNS Server:"
+msgid "LABEL_HEADER_DNS_SERVER"
+msgstr "DNS サーバー:"
+
+#: string "Primary NTP Server:"
+msgid "LABEL_HEADER_PRIMARY_NTP_SERVER"
+msgstr "プライマリー NTP サーバー:"
+
+#: string "Error retrieving information from storage drive(s):"
+msgid "LABEL_GET_STORAGE_DRIVE_INFORMATION"
+msgstr "ストレージ ドライブからの情報取得エラー:"
+
+#: string "You must enter a password to unlock your USB drive."
+msgid "ERROR_PASSWORD_MISSING"
+msgstr "USB ドライブのロックを解除するには、パスワードを入力する必要があります。"
+
+#: string "The USB drive is not locked."
+msgid "ERROR_USB_DRIVE_NOT_LOCKED"
+msgstr "USB ドライブはロックされていません。"
+
+#: string "Unable to unlock the USB drive. Verify your password and try again."
+msgid "ERROR_USB_DRIVE_UNLOCK_FAILED"
+msgstr "USB ドライブのロックを解除できません。 パスワードを確認し、再試行してください。"
+
+#: string "Unable to unlock the USB drive; you have exceeded your unlock attempts."
+msgid "ERROR_USB_DRIVE_EXCEEDED_ATTEMPTS"
+msgstr "USB ドライブのロックを解除できません。ロック解除試行回数を超えました。"
+
+#: string "User name already in use. Please enter another user name."
+msgid "ERROR_USER_SAME_NAME_EXISTS"
+msgstr "ユーザー名は既に使用中です。 別のユーザー名を入力してください。"
+
+#: string "User has been renamed or deleted."
+msgid "ERROR_USER_RENAMED_DELETED"
+msgstr "ユーザー名が変更されたか、ユーザーが削除されました。"
+
+#: string "Username must be an alphanumeric value between 1 and 32 characters and cannot contain spaces."
+msgid "ERROR_USERNAME_INCORRECT_SYNTAX"
+msgstr "ユーザー名はスペースを含まない 1 ～ 32 文字の英数字で入力してください。"
+
+#: string "Full name is a case-sensitive alphanumeric value and may contain spaces or underscores without exceeding 256 characters."
+msgid "ERROR_FULL_NAME_INCORRECT_SYNTAX"
+msgstr "氏名は 256 文字以内の英数字でなければなりません。大文字と小文字を区別します。スペースまたはアンダースコアを使用できます。"
+
+# Edit - 5.30 changed from 16 characters to 32
+#: string "Password is a case-sensitive, alphanumeric value up to 32 characters, and cannot contain double quotes."
+msgid "ERROR_PASSWORD_INCORRECT_SYNTAX"
+msgstr "パスワードは 32 文字以内の英数字でなければなりません。大文字と小文字を区別します。二重引用符は使用できません。"
+
+#: string "Passwords do not match."
+msgid "ERROR_PASSWORDS_DONT_MATCH"
+msgstr "パスワードが一致しません。"
+
+#: string "Share name already in use. Please enter another share name."
+msgid "ERROR_SHARE_NAME_EXISTS"
+msgstr "共有名は既に使用中です。 別の共有名を入力してください。"
+
+#: string "Share name {0} is reserved. Share names are case sensitive, alphanumeric values between 1 and 32 characters, and cannot contain spaces."
+msgid "ERROR_SHARE_NAME_RESERVED"
+msgstr "共有名 {0} は予約されています。 共有名は大文字と小文字を区別します。スペースを含まない 1 ～ 32 文字の英数字で入力してください。"
+
+#: string "Port number {0} invalid. Enter a valid port number between 1024-65535 or 80."
+msgid "ERROR_HTTP_PORTNUMBER"
+msgstr "ポート番号 {0} が無効です。 1024 ～ 65535 または 80 番の有効なポート番号を入力してください。"
+
+#: string "Port number {0} invalid. Enter a valid port number between 1024-65535 or 443."
+msgid "ERROR_HTTPS_PORTNUMBER"
+msgstr "ポート番号 {0} が無効です。 1024 ～ 65535 または 443 番の有効なポート番号を入力してください。"
+
+#: string "Duplicate port number."
+msgid "ERROR_DUPLICATE_HTTPS_PORTNUMBER"
+msgstr "重複したポート番号。"
+
+
+#: string "Share has been renamed or deleted."
+msgid "ERROR_SHARE_RENAMED_DELETED"
+msgstr "共有名が変更されたか、共有が削除されました。"
+
+#: string "Share names are case sensitive, alphanumeric values between 1 and 32 characters, and cannot contain spaces."
+msgid "ERROR_SHARE_NAME_INCORRECT_SYNTAX"
+msgstr "共有名は大文字と小文字を区別します。スペースを含まない 1 ～ 32 文字の英数字で入力してください。"
+
+#: string "Share description must start with an alphanumeric value and may contain spaces or underscores without exceeding 256 characters."
+msgid "ERROR_SHARE_DESCRIPTION_INCORRECT_SYNTAX"
+msgstr "共有の説明の先頭は英数字で、256 文字以内でなければなりません。スペースまたはアンダースコアを使用できます。"
+
+#: string "Share username cannot be blank. Please enter a valid share username and try again."
+msgid "ERROR_SHARE_USERNAME_INCORRECT_SYNTAX"
+msgstr "共有ユーザー名を空白にできません。 有効な共有ユーザー名を入力して、再試行してください。"
+
+#: string "Device username cannot be blank. Please enter a valid device username and try again."
+msgid "ERROR_DEVICE_USERNAME_INCORRECT_SYNTAX"
+msgstr "デバイス ユーザー名を空白にできません。 有効なデバイス ユーザー名を入力して、再試行してください。"
+
+#: string "Unknown error while retrieving data. Ensure there are no network connectivity issues and try again."
+msgid "ERROR_GET_UNKNOWN_ERROR"
+msgstr "データ取得中の不明なエラー。 ネットワーク接続の問題がないことを確認し、再試行してください。"
+
+#: string "The requested service is not allowed."
+msgid "ERROR_SERVICE_NOT_ALLOWED"
+msgstr "要求されたサービスは許可されていません。"
+
+#: string "Cloud access is now available from your device."
+msgid "LABEL_STATUS_READY_EXPLANATION"
+msgstr "クラウド アクセスはデバイスから使用可能です。"
+
+#: string "For best performance, enable UPnP on your router to establish a direct connection."
+msgid "LABEL_STATUS_RELAYED_EXPLANATION"
+msgstr "最高のパフォーマンスのため、ルーターの UPnP を有効にして、直接接続を確立してください。"
+
+#: string "Cannot establish remote access connection. Make sure you are connected to the Internet."
+msgid "LABEL_STATUS_FAILED_EXPLANATION"
+msgstr "リモート アクセス接続を確立できません。 インターネットに接続していることを確認してください。"
+
+#: string "Trying to establish a remote access connection..."
+msgid "LABEL_STATUS_CONNECTING_EXPLANATION"
+msgstr "リモート アクセス接続の確立を試行中..."
+
+#: string "Retrieving information..."
+msgid "LABEL_STATUS_RETRIEVING_INFORMATION"
+msgstr "情報を取得中..."
+
+#: string "Waiting"
+msgid "LABEL_CODE_WAITING"
+msgstr "待機中"
+
+#: string "The activation code generated has expired. Please click Add Access to generate a new code."
+msgid "TOOLTIP_REMOTE_ACCESS_DAC_EXPIRED"
+msgstr "生成された認証コードの有効期限が切れました。 [アクセスの追加] をクリックして、新しいコードを生成してください。"
+
+#: string "Indicates that an activation code has been generated but has not yet been entered on your mobile or tablet device."
+msgid "TOOLTIP_REMOTE_ACCESS_DAC_WAITING"
+msgstr "認証コードが生成されましたが、モバイル デバイスまたはタブレットで入力されていないことを示します。"
+
+#: string "Connected"
+msgid "LABEL_MOBILE_DEVICE_CONNECTED"
+msgstr "接続"
+
+#: string "Manual"
+msgid "LABEL_MANUAL"
+msgstr "手動"
+
+#: string "Drive"
+msgid "LABEL_DRIVE"
+msgstr "ドライブ"
+
+#: string "Failed diagnostic test."
+msgid "LABEL_FAILED_DIAGNOSTIC_TEST"
+msgstr "診断テストに失敗しました。"
+
+#: string "Invalid NTP server value."
+msgid "ERROR_INVALID_NTP_SERVER"
+msgstr "無効な NTP サーバー値。"
+
+
+#: string "Sign Up"
+msgid "BUTTON_REGISTER"
+msgstr "登録"
+
+#: string "Share Access"
+msgid "PAGE_HEADER_SHARE_ACCESS"
+msgstr "共有アクセス"
+
+#: string "Steps:"
+msgid "LABEL_STEPS"
+msgstr "手順:"
+
+# --- Tooltips Global  ---
+
+#: string "Enable NTP service to sync with your network to automatically update the date and time."
+msgid "CONTENT_SETTINGS_GENERAL_TOOLTIP_NTP"
+msgstr "NTP サービスを有効にしてネットワークと同期し、日時を自動的に更新します。"
+
+#: string "Enables or disables cloud access to your device."
+msgid "CONTENT_SETTINGS_GENERAL_TOOLTIP_ENABLE_CLOUD_ACCESS"
+msgstr "デバイスへのクラウド アクセスを有効または無効にします。"
+
+#: string "Displays the current status of your cloud access connection."
+msgid "CONTENT_SETTINGS_GENERAL_TOOLTIP_CLOUD_CONNECT_STATUS"
+msgstr "クラウド アクセス接続の現在のステータスを表示します。"
+
+#: string "Turn on sleep mode to save energy. "
+msgid "CONTENT_SETTINGS_GENERAL_TOOLTIP_HDD_SLEEP"
+msgstr "スリープ モードを有効にして、電力を節約します。"
+
+#: string "Sets the status of your drive's LED. "
+msgid "CONTENT_SETTINGS_GENERAL_TOOLTIP_LED_LIGHT"
+msgstr "デバイスの LED のステータスを設定します。"
+
+#: string "Enables Time Machine backups to this device."
+msgid "CONTENT_SETTINGS_GENERAL_TOOLTIP_ENABLE_TIME_MACHINE"
+msgstr "このデバイスへの Time Machine バックアップを有効にします。"
+
+#: string "Displays the current status of Internet connectivity."
+msgid "CONTENT_SETTINGS_NETWORK_TOOLTIP_INTERNET_ACCESS"
+msgstr "インターネット接続の現在のステータスを表示します。"
+
+#: string "Select Static to manually enter IP address, netmask, and gateway information. Select DHCP (Dynamic Host Configuration Protocol) to have the network retrieve IP address assignments and other configuration information."
+msgid "CONTENT_SETTINGS_NETWORK_TOOLTIP_NETWORK_MODE"
+msgstr "[固定] を選択し、IP アドレス、ネットマスク、およびゲートウェイ情報を手動で入力します。 [DHCP] (動的ホスト設定プロトコル) を選択し、ネットワークで IP アドレス割り当ておよびその他の設定情報を取得します。"
+
+#: string "Enable SSH"
+msgid "CONTENT_SETTINGS_NETWORK_TOOLTIP_SSH"
+msgstr "SSH の確立"
+
+
+#: string "File Transfer Protocol (FTP) is a standard network protocol used to transfer data from one computer to another over the Internet."
+msgid "CONTENT_SETTINGS_NETWORK_TOOLTIP_FTP"
+msgstr "ファイル転送プロトコル (FTP) は、インターネット上でコンピュータ間のデータを転送するために使用される標準ネットワーク プロトコルです。"
+
+
+#: string "(Windows only) Workgroups let devices in the same workgroup access one another. Each time you add a device to your network, assign it the same workgroup name."
+msgid "CONTENT_SETTINGS_NETWORK_TOOLTIP_WORKGROUP"
+msgstr "(Windows のみ) ワークグループでは、同じワークグループのデバイスが相互にアクセスできます。 デバイスをネットワークに追加するたびに、同じワークグループ名を割り当てます。"
+
+
+#: string "Enable content streaming to various devices." 
+msgid "CONTENT_SETTINGS_MEDIA_TOOLTIP_STREAMING"
+msgstr "さまざまなデバイスへのコンテンツ ストリーミングを有効にします。"
+
+#: string "Rebuilds the media database. Use only for troubleshooting when database corruption is suspected."
+msgid "CONTENT_SETTINGS_MEDIA_TOOLTIP_DLNA_DATABASE"
+msgstr "メディア データベースを復元します。 データベースの破損が疑われる場合にのみ、トラブルシューティング目的で使用します。"
+
+# new string 5-21-13
+#: string "Rebuilds the media database. Use only for troubleshooting when database corruption is suspected."
+msgid "CONTENT_SETTINGS_MEDIA_TOOLTIP_DLNA_RESCAN"
+msgstr "メディア データベースを復元します。 データベースの破損が疑われる場合にのみ、トラブルシューティング目的で使用します。"
+
+
+#: string "Enable the iTunes server to access your media through your iTunes player."
+msgid "CONTENT_SETTINGS_MEDIA_TOOLTIP_ITUNES_SERVER"
+msgstr "iTunes サーバーを有効にし、iTunes プレイヤー経由でメディアにアクセスします。"
+
+#: string "Rescans all your content directories to find new media."
+msgid "CONTENT_SETTINGS_MEDIA_TOOLTIP_ITUNES_DATABASE"
+msgstr "すべてのコンテンツ ディレクトリを再スキャンして、新しいメディアを検索します。"
+
+
+#: string "Quick Test (about 2 minutes) quickly scans and tests areas of your network subject to potential failures. Full Test, which may take several hours, scans your entire device to detect bad sectors."
+msgid "CONTENT_SETTINGS_DIAGNOSTICS_TOOLTIP_DIAGNOSTICS_TEST"
+msgstr "簡易テスト (約 2 分) は迅速にスキャンを実行し、障害の可能性があるネットワーク領域をテストします。 完全テストには数時間かかる場合がありますが、デバイス全体をスキャンして、不良セクターを検出します。"
+
+#: string "Create a backup prior to using any restore option. Use System only to restore system data to the originial factory settings. Quick Restore erases content and system info but can be recovered with recovery software; Full Restore permanently deletes all content and system info, and cannot be recovered. Be sure to create a backup prior to using any restore option."
+msgid "CONTENT_SETTINGS_DIAGNOSTICS_TOOLTIP_FACTORY_RESTORE"
+msgstr "復元オプションを使用する前に、バックアップを作成します。 [システムのみ] を使用して、システム データを初期設定に復元します。 簡易復元ではコンテンツおよびシステム情報が消去されますが、回復ソフトウェアによって回復可能です。完全復元ではすべてのコンテンツとシステム情報が完全に削除され、回復不能です。 復元オプションを使用する前に、必ずバックアップを作成してください。"
+
+#: string "Save current configuration settings or import stored configuration settings."
+msgid "CONTENT_SETTINGS_DIAGNOSTICS_TOOLTIP_SYSTEM_CONFIG"
+msgstr "現在の構成設定を保存するか、保存した構成設定をインポートします。"
+
+
+#: string "Automatically generate a diagnostic system report. Once complete, you will be directed to our customer support form with your diagnostic report automatically attached."
+msgid "CONTENT_SETTINGS_DIAGNOSTICS_TOOLTIP_AUTOMATED_SUPPORT"
+msgstr "診断システム レポートを自動的に生成します。 完了すると、カスタマー サポート ページに移動し、診断レポートが自動的に添付されます。"
+
+
+#: string "Create a system report and save it to your drive to help identify and resolve network problems."
+msgid "CONTENT_SETTINGS_DIAGNOSTICS_TOOLTIP_SYSTEM_REPORT"
+msgstr "システム レポートを作成し、ドライブに保存して、ネットワークの問題を特定して解決します。"
+
+#: string "Shut down or reboot your device."
+msgid "CONTENT_SETTINGS_DIAGNOSTICS_TOOLTIP_REBOOT_SHUTDOWN"
+msgstr "デバイスをシャットダウンまたは再起動します。"
+
+#: string "Send system notifications to up to 5 email addresses."
+msgid "CONTENT_SETTINGS_NOTIFICATION_TOOLTIP_EMAIL"
+msgstr "最大 5 つの電子メール アドレスにシステム通知を送信します。"
+
+#: string "Enable automatic firmware updates."
+msgid "CONTENT_SETTINGS_UPDATE_TOOLTIP_ENABLE_AUTO"
+msgstr "自動ファームウェア更新を有効にします。"
+
+#: string "Check for available firmware updates."
+msgid "CONTENT_SETTINGS_UPDATE_TOOLTIP_CHECK_FOR_UPDATE"
+msgstr "使用可能なファームウェア更新を確認します。"
+
+#: string "Update firmware from a file."
+msgid "CONTENT_SETTINGS_UPDATE_TOOLTIP_UPDATE_FROM_FILE"
+msgstr "ファイルからファームウェアを更新します。"
+
+#: string "Automatic: Establishes a direct connection between your device and the router using uPnP. If the connection cannot open the ports on your router, a relay connection is established.Manual: Establishes a connection through the two selected ports. If either port is unavailable, a relay connection is established. Manual router configuration is required.Windows XP Compatibility: Establishes a connection through ports 80 and 443. If these ports are unavailable, a relay connection is established. Required for Windows XP."
+msgid "CONTENT_SETTINGS_DIALOG_TOOLTIP_CONNECTIVITY"
+msgstr "自動: uPnP を使用して、デバイスとルーター間で直接接続を確立します。 接続がルーターのポートを開けない場合は、リレー接続が確立されます。手動: 選択した 2 つのポート経由で接続を確立します。 ポートが使用できない場合は、リレー接続が確立されます。 手動ルーター設定が必要です。Windows XP 互換: 80 番および 443 番ポートを使用して接続を確立します。 これらのポートが使用できない場合は、リレー接続が確立されます。 Windows XP の場合に必須です。"
+
+#: string "Rebuild your content database. Use only for troubleshooting when database corruption is suspected."
+msgid "CONTENT_SETTINGS_DIALOG_TOOLTIP_WD2GO_DATABASE"
+msgstr "コンテンツ データベースを復元します。 データベースの破損が疑われる場合にのみ、トラブルシューティング目的で使用します。"
+
+
+#: string "The numeric value assigned to each device on your network."
+msgid "CONTENT_DIALOG_SETTINGS_TOOLTIP_NETWORK_MODE_IP"
+msgstr "ネットワークの各デバイスに割り当てられた数値。"
+
+#: string "Screens out (masks) the network portion of an IP address so that only the host portion of the IP address remains."
+msgid "CONTENT_DIALOG_SETTINGS_TOOLTIP_NETWORK_MODE_NETMASK"
+msgstr "IP アドレスのネットワーク部を非表示 (マスク) し、IP アドレスのホスト部のみを表示します。"
+
+#: string "A network point that acts as an entrance to another network."
+msgid "CONTENT_DIALOG_SETTINGS_TOOLTIP_NETWORK_MODE_GATEWAY"
+msgstr "別のネットワークへの入り口として動作するネットワーク ポイント。"
+
+#: string "Enter a domain name."
+msgid "CONTENT_DIALOG_SETTINGS_TOOLTIP_NETWORK_MODE_DNS"
+msgstr "ドメイン名を入力します。"
+
+#: string "Set the schedule for the safepoint update."
+msgid "CONTENT_SAFEPOINTS_TOOLTIP_AUTO_UPDATE"
+msgstr "Safepoint 更新のスケジュールを設定します。"
+
+#: string "Set the schedule for the safepoint update."
+msgid "CONTENT_SAFEPOINTS_DIALOG_TOOLTIP_AUTO_UPDATE"
+msgstr "Safepoint 更新のスケジュールを設定します。"
+
+#: string "Create your safepoint now or later."
+msgid "CONTENT_SAFEPOINTS_DIALOG_TOOLTIP_CREATE_NOW_LATER"
+msgstr "Safepoint をすぐに作成するか、後で作成します。"
+
+#: string "2013 Western Digital Corporation. All Rights Reserved"
+msgid "GLOB_NAV_HELP_STRING_COPYRIGHT_2013_WD_ALL_RIGHT_RESERVED"
+msgstr "2013 Western Digital Corporation. All Rights Reserved"
+
+
+
+# --- Kathleen's new bumpers 4/16 --
+
+#: string "Help"
+msgid "CONTENT_GENERIC_BUMPER_TITLE_HELP_TOPICS"
+msgstr "ヘルプ"
+
+#: string "Do one of the following:"
+msgid "CONTENT_GENERIC_STRING_DO_ONE_OF_THE_FOLLOWING"
+msgstr "次のいずれかを実行します。"
+
+#: string "Shares are content storage areas—like folders. You can create single or multiple shares on your storage device and control access to each of them."
+msgid "CONTENT_SHARES_STRING_ABOUT_SHARES_TEXT"
+msgstr "共有はフォルダのようなコンテンツ保存領域です。 1 台のストレージ デバイスに 1 つ以上の共有を作成し、各共有へのアクセスを制御できます。"
+
+#: string "Select a share from the list on the left"
+msgid "CONTENT_SHARES_STRING_MANAGE_SHARES_1"
+msgstr "左側のリストから共有を選択します。"
+
+#: string "Click the Add Share button below the list"
+msgid "CONTENT_SHARES_STRING_MANAGE_SHARES_2"
+msgstr "リストの下の [共有の追加] ボタンをクリックします。"
+
+# Edit 5/8/13 change to Managing Shares 
+#: string "Managing Shares"
+msgid "CONTENT_SHARES_STRING_ABOUT_SHARES"
+msgstr "共有の管理"
+
+#: string "Creating a Share"
+msgid "CONTENT_SHARES_STRING_CREATING_A_SHARE"
+msgstr "共有の作成"
+
+#: string "Changing Access to a Share"
+msgid "CONTENT_GENERIC_STRING_CHANGING_USER_ACCESS"
+msgstr "共有へのアクセスの変更"
+
+# Edit WD2go.com to WDMyCloud.com
+#: string "Control access to your personal cloud content by setting up user accounts and levels of access. Each user must have a WDMyCloud.com login."
+msgid "CONTENT_USERS_STRING_ABOUT_USERS_TEXT"
+msgstr "ユーザー アカウントおよびアクセス レベルを設定し、個人クラウド コンテンツへのアクセスを制御します。 各ユーザーには WDMyCloud.com ログイン資格が必要です。"
+
+#: string "Select a user from the list on the left"
+msgid "CONTENT_USERS_STRING_MANAGE_USERS_1"
+msgstr "左側のリストからユーザーを選択します。"
+
+#: string "Click the Add User button below the list"
+msgid "CONTENT_USERS_STRING_MANAGE_USERS_2"
+msgstr "リストの下の [ユーザーの追加] ボタンをクリックします。"
+
+# edit 5/7/13 from About Users to Managing Users
+#: string "Managing Users"
+msgid "CONTENT_USERS_STRING_ABOUT_USERS"
+msgstr "ユーザーの管理"
+
+#: string "Adding a User"
+msgid "CONTENT_USERS_STRING_ADDING_A_USER"
+msgstr "ユーザーの追加"
+
+# Edit: from WD2go.com to WDMyCloud.com
+#: string "Set up your cloud for remote access. For every user you want on your cloud, you'll need to get them a WDMyCloud.com login, and they'll need to download the WD mobile apps. Once you've got that covered, you're ready to go!"
+msgid "CONTENT_CLOUD_STRING_ABOUT_CLOUDS_TEXT"
+msgstr "リモート アクセスのクラウドを設定します。 クラウドに参加するすべてのユーザーに対して、 WDMyCloud.com ログインを取得する必要があります。ユーザーは WD モバイル アプリをダウンロードする必要があります。 作業が完了した時点で、クラウドを使用できます。"
+
+#: string "Download the mobile apps"
+msgid "CONTENT_USERS_STRING_MANAGE_CLOUD_ACCESS_1"
+msgstr "モバイル アプリを"
+
+#: string " from the WD Learning Center."
+msgid "CONTENT_USERS_STRING_MANAGE_CLOUD_ACCESS_2"
+msgstr " WD ラーニング センターからダウンロードします。"
+
+# MOravia, please leave this as-is. WD will change to correct address
+#: string "(http://setup.wd2go.com)"
+msgid "CONTENT_USERS_STRING_MANAGE_CLOUD_ACCESS_3"
+msgstr "(http://setup.wd2go.com)"
+
+#: string "Managing Cloud Access"
+msgid "CONTENT_USERS_STRING_ABOUT_CLOUD_ACCESS"
+msgstr "クラウド アクセスの管理"
+
+#: string "Remote Access Basics"
+msgid "CONTENT_USERS_STRING_CLOUD_ACCESS_BASICS"
+msgstr "リモート アクセスの基本"
+
+#: string "Setting Up Remote Access"
+msgid "CONTENT_GENERIC_STRING_SETTING_UP_CLOUD_ACCESS"
+msgstr "クラウド アクセスを設定中"
+
+#: string "A safepoint is a snapshot of the data on your drive at a specific point in time. In the unlikely event your WD My Cloud fails, you can restore your content from a safepoint."
+msgid "CONTENT_SAFEPOINT_STRING_ABOUT_SAFEPOINTS_TEXT"
+msgstr "Safepoint は特定時点でのドライブデータのスナップショットです。 万が一 WD My Cloud で障害が発生した場合は、Safepoint からコンテンツを復元できます。"
+
+#: string "Select a safepoint from the list on the left"
+msgid "CONTENT_USERS_STRING_MANAGE_SAFEPOINTS_1"
+msgstr "左側のリストから Safepoint を選択します。"
+
+# Edit 5/10/13 Changed Add to Create in string 
+#: string "Click the Create Safepoint icon below the list"
+msgid "CONTENT_USERS_STRING_MANAGE_SAFEPOINTS_2"
+msgstr "リストの下の [Safepoint の作成] アイコンをクリックします。"
+
+#: string "Click Start Recovery to recover a previously saved safepoint"
+msgid "CONTENT_USERS_STRING_MANAGE_SAFEPOINTS_3"
+msgstr "[回復の開始] をクリックし、以前に保存した Safepoint を回復します。"
+
+#: string "Managing Safepoints"
+msgid "CONTENT_USERS_STRING_ABOUT_SAFEPOINTS"
+msgstr "Safepoint の管理"
+
+#: string "Creating a Safepoint"
+msgid "CONTENT_USERS_STRING_CREATING_A_SAFEPOINT"
+msgstr "Safepoint の作成"
+
+#: string "Restoring Data with a Safepoint"
+msgid "CONTENT_GENERIC_STRING_RESTORE_WITH_SAFEPOINT"
+msgstr "Safepoint を使用してデータを回復中"
+
+# --- Error Section  ---
+
+
+#: string "Unknown error"
+msgid "ERROR_ID_0"
+msgstr "不明なエラー"
+
+#: string "Device ID not found."
+msgid "ERROR_ID_10"
+msgstr "デバイス ID が見つかりません。"
+
+#: string "Device is not registered."
+msgid "ERROR_ID_11"
+msgstr "デバイスは登録されていません。"
+
+#: string "Failed to register device."
+msgid "ERROR_ID_12"
+msgstr "デバイスを登録できませんでした。"
+
+#: string "Failed to update device."
+msgid "ERROR_ID_13"
+msgstr "デバイスを更新できませんでした。"
+
+#: string "Device user ID missing."
+msgid "ERROR_ID_14"
+msgstr "デバイス ユーザー ID が見つかりません。"
+
+#: string "Device user not found."
+msgid "ERROR_ID_15"
+msgstr "デバイス ユーザーが見つかりません。"
+
+#: string "Device user failed."
+msgid "ERROR_ID_16"
+msgstr "デバイス ユーザーが失敗しました。"
+
+#: string "Failed to create directory."
+msgid "ERROR_ID_17"
+msgstr "ディレクトリを作成できませんでした。"
+
+#: string "Failed to delete directory."
+msgid "ERROR_ID_18"
+msgstr "ディレクトリを削除できませんでした。"
+
+#: string "Directory name missing."
+msgid "ERROR_ID_19"
+msgstr "ディレクトリ名が見つかりません。"
+
+#: string "Directory does not exist."
+msgid "ERROR_ID_20"
+msgstr "ディレクトリが存在しません。"
+
+#: string "Directory already exists."
+msgid "ERROR_ID_21"
+msgstr "ディレクトリは既に存在します。"
+
+#: string "Directory not empty."
+msgid "ERROR_ID_22"
+msgstr "ディレクトリが空ではありません。"
+
+#: string "Error code not found."
+msgid "ERROR_ID_23"
+msgstr "エラー コードが見つかりません。"
+
+#: string "Error name not found."
+msgid "ERROR_ID_24"
+msgstr "エラー名が見つかりません。"
+
+#: string "File already exists."
+msgid "ERROR_ID_25"
+msgstr "ファイルは既に存在します。"
+
+#: string "File not found."
+msgid "ERROR_ID_26"
+msgstr "ファイルが見つかりません。"
+
+#: string "Failed to upload file."
+msgid "ERROR_ID_27"
+msgstr "ファイルをアップロードできませんでした。"
+
+#: string "Failed to get status."
+msgid "ERROR_ID_28"
+msgstr "ステータスを取得できませんでした。"
+
+#: string "Failed to get user."
+msgid "ERROR_ID_29"
+msgstr "ユーザーを取得できませんでした。"
+
+#: string "Invalid device user ID or authorization code."
+msgid "ERROR_ID_30"
+msgstr "無効なデバイス ユーザー ID または認証コード。"
+
+#: string "Invalid login."
+msgid "ERROR_ID_31"
+msgstr "無効なログイン。"
+
+#: string "Invalid username or password."
+msgid "ERROR_ID_32"
+msgstr "無効なユーザー名またはパスワード。"
+
+#: string "Invalid parameter."
+msgid "ERROR_ID_33"
+msgstr "無効なパラメータ。"
+
+#: string "Invalid path"
+msgid "ERROR_ID_34"
+msgstr "無効なパス"
+
+#: string "Failed to move file."
+msgid "ERROR_ID_35"
+msgstr "ファイルを移動できませんでした。"
+
+#: string "Failed to move directory."
+msgid "ERROR_ID_36"
+msgstr "ディレクトリを移動できませんでした。"
+
+#: string "New path already exists."
+msgid "ERROR_ID_37"
+msgstr "新しいパスは既に存在します。"
+
+#: string "New path invalid."
+msgid "ERROR_ID_38"
+msgstr "新しいパスが無効です。"
+
+#: string "New path missing."
+msgid "ERROR_ID_39"
+msgstr "新しいパスが見つかりません。"
+
+#: string "New share is missing."
+msgid "ERROR_ID_40"
+msgstr "新しい共有が見つかりません。"
+
+#: string "Parameter is missing."
+msgid "ERROR_ID_41"
+msgstr "パラメータが見つかりません。"
+
+#: string "Path is not a directory."
+msgid "ERROR_ID_42"
+msgstr "パスがディレクトリではありません。"
+
+#: string "Path is not a file."
+msgid "ERROR_ID_43"
+msgstr "パスがファイルではありません。"
+
+#: string "Path not found."
+msgid "ERROR_ID_44"
+msgstr "パスが見つかりません。"
+
+#: string "Path not valid."
+msgid "ERROR_ID_45"
+msgstr "パスが無効です。"
+
+#: string "Share is inaccessible."
+msgid "ERROR_ID_46"
+msgstr "共有にアクセスできません。"
+
+#: string "Share name is missing."
+msgid "ERROR_ID_47"
+msgstr "共有名が見つかりません。"
+
+#: string "Failed to create user."
+msgid "ERROR_ID_48"
+msgstr "ユーザーを作成できませんでした。"
+
+#: string "Failed to delete user."
+msgid "ERROR_ID_49"
+msgstr "ユーザーを削除できませんでした。"
+
+#: string "Parameter user_id is missing."
+msgid "ERROR_ID_50"
+msgstr "パラメータ user_id が見つかりません。"
+
+#: string "Parameter user_id or username is missing."
+msgid "ERROR_ID_51"
+msgstr "パラメータ user_id またはユーザー名が見つかりません。"
+
+#: string "User ID not found."
+msgid "ERROR_ID_52"
+msgstr "ユーザー ID が見つかりません。"
+
+#: string "Failed to update user."
+msgid "ERROR_ID_53"
+msgstr "ユーザーを更新できませんでした。"
+
+#: string "User name already exists."
+msgid "ERROR_ID_54"
+msgstr "ユーザー名は既に存在します。"
+
+#: string "Parameter username is missing."
+msgid "ERROR_ID_55"
+msgstr "パラメータ username が見つかりません。"
+
+#: string "Username not found."
+msgid "ERROR_ID_56"
+msgstr "ユーザー名が見つかりません。"
+
+#: string "User not authorized."
+msgid "ERROR_ID_57"
+msgstr "ユーザーは認証されていません。"
+
+#: string "User not logged in."
+msgid "ERROR_ID_58"
+msgstr "ユーザーはログインしていません。"
+
+#: string "Failed to verify remote user."
+msgid "ERROR_ID_59"
+msgstr "リモート ユーザーを検証できませんでした。"
+
+#: string "Remote login is not allowed."
+msgid "ERROR_ID_60"
+msgstr "リモート ログインは許可されていません。"
+
+#: string "Failed to get file contents."
+msgid "ERROR_ID_61"
+msgstr "ファイル コンテンツを取得できませんでした。"
+
+#: string "New share not found."
+msgid "ERROR_ID_62"
+msgstr "新しい共有が見つかりません。"
+
+#: string "Start or end out of range."
+msgid "ERROR_ID_63"
+msgstr "開始または終了が範囲外です。"
+
+#: string "Failed to append file."
+msgid "ERROR_ID_64"
+msgstr "ファイルを追加できませんでした。"
+
+#: string "Failed to get album item contents."
+msgid "ERROR_ID_65"
+msgstr "アルバム項目コンテンツを取得できませんでした。"
+
+#: string "Invalid device user ID."
+msgid "ERROR_ID_66"
+msgstr "無効なデバイス ユーザー ID。"
+
+#: string "Album not found."
+msgid "ERROR_ID_67"
+msgstr "アルバムが見つかりません。"
+
+#: string "Failed to update device user."
+msgid "ERROR_ID_68"
+msgstr "デバイス ユーザーを更新できませんでした。"
+
+#: string "No share access."
+msgid "ERROR_ID_69"
+msgstr "共有にアクセスできません。"
+
+#: string "Failed to verify remote user."
+msgid "ERROR_ID_70"
+msgstr "リモート ユーザーを検証できませんでした。"
+
+#: string "Invalid character."
+msgid "ERROR_ID_71"
+msgstr "無効な文字。"
+
+#: string "Failed to create device."
+msgid "ERROR_ID_72"
+msgstr "デバイスを作成できませんでした。"
+
+#: string "Failed to create device user."
+msgid "ERROR_ID_73"
+msgstr "デバイス ユーザーを作成できませんでした。"
+
+#: string "Failed to get metadb info."
+msgid "ERROR_ID_74"
+msgstr "メタデータベース情報を取得できませんでした。"
+
+#: string "Share not found."
+msgid "ERROR_ID_75"
+msgstr "共有が見つかりません。"
+
+#: string "Invalid share."
+msgid "ERROR_ID_76"
+msgstr "無効な共有。"
+
+#: string "Failed to delete file."
+msgid "ERROR_ID_77"
+msgstr "ファイルを削除できませんでした。"
+
+#: string "Failed to get user."
+msgid "ERROR_ID_78"
+msgstr "ユーザーを取得できませんでした。"
+
+#: string "Failed to add user to share access list."
+msgid "ERROR_ID_79"
+msgstr "共有アクセス リストにユーザーを追加できませんでした。"
+
+#: string "Failed to update share access list."
+msgid "ERROR_ID_80"
+msgstr "共有アクセス リストを更新できませんでした。"
+
+#: string "No volumes found."
+msgid "ERROR_ID_81"
+msgstr "ボリュームが見つかりません。"
+
+#: string "Volume not found."
+msgid "ERROR_ID_82"
+msgstr "ボリュームが見つかりません。"
+
+#: string "Failed to create volume."
+msgid "ERROR_ID_83"
+msgstr "ボリュームを作成できませんでした。"
+
+#: string "Volume already exists."
+msgid "ERROR_ID_84"
+msgstr "ボリュームは既に存在します。"
+
+#: string "Volume information missing."
+msgid "ERROR_ID_85"
+msgstr "ボリューム情報が見つかりません。"
+
+#: string "Failed to create volume share."
+msgid "ERROR_ID_86"
+msgstr "ボリューム共有を作成できませんでした。"
+
+#: string "Failed to update volume share."
+msgid "ERROR_ID_87"
+msgstr "ボリューム共有を更新できませんでした。"
+
+#: string "Failed to delete volume share."
+msgid "ERROR_ID_88"
+msgstr "ボリューム共有を削除できませんでした。"
+
+#: string "Parameter is conflicting."
+msgid "ERROR_ID_89"
+msgstr "パラメータが競合しています。"
+
+#: string "User not found."
+msgid "ERROR_ID_90"
+msgstr "ユーザーが見つかりません。"
+
+#: string "Source file missing."
+msgid "ERROR_ID_91"
+msgstr "ソース ファイルが見つかりません。"
+
+#: string "File path missing."
+msgid "ERROR_ID_92"
+msgstr "ファイル パスが見つかりません。"
+
+#: string "Invalid parameter value."
+msgid "ERROR_ID_93"
+msgstr "無効なパラメータ値。"
+
+#: string "Invalid start time."
+msgid "ERROR_ID_94"
+msgstr "無効な開始時刻。"
+
+#: string "Device name missing."
+msgid "ERROR_ID_95"
+msgstr "デバイス名が見つかりません。"
+
+#: string "Invalid modified time."
+msgid "ERROR_ID_96"
+msgstr "無効な修正時刻。"
+
+#: string "Failed to update modified time."
+msgid "ERROR_ID_97"
+msgstr "修正時刻を更新できませんでした。"
+
+#: string "No matching shares were found."
+msgid "ERROR_ID_98"
+msgstr "一致する共有が見つかりませんでした。"
+
+#: string "Share function failed."
+msgid "ERROR_ID_99"
+msgstr "共有機能が失敗しました。"
+
+#: string "Operation is forbidden."
+msgid "ERROR_ID_100"
+msgstr "処理は禁止されています。"
+
+# Edit - error in msgstr - fixed 5-21 - dms
+#: string "Failed to create share; share name already exists."
+msgid "ERROR_ID_101"
+msgstr "共有を作成できませんでした。共有名は既に存在します。"
+
+#: string "Failed to create share."
+msgid "ERROR_ID_102"
+msgstr "共有を作成できませんでした。"
+
+#: string "Failed to update share."
+msgid "ERROR_ID_103"
+msgstr "共有を更新できませんでした。"
+
+#: string "Failed to delete share."
+msgid "ERROR_ID_104"
+msgstr "共有を削除できませんでした。"
+
+#: string "Invalid share name."
+msgid "ERROR_ID_105"
+msgstr "無効な共有名。"
+
+#: string "Share access already exists."
+msgid "ERROR_ID_106"
+msgstr "共有アクセスは既に存在します。"
+
+#: string "Share already exists."
+msgid "ERROR_ID_107"
+msgstr "共有は既に存在します。"
+
+#: string "Share access not found."
+msgid "ERROR_ID_108"
+msgstr "共有アクセスが見つかりません。"
+
+#: string "New directory not found."
+msgid "ERROR_ID_109"
+msgstr "新しいディレクトリが見つかりません。"
+
+#: string "Remote account conflict."
+msgid "ERROR_ID_110"
+msgstr "リモート アカウントの競合。"
+
+#: string "Failed to get SSL certificate from central server."
+msgid "ERROR_ID_111"
+msgstr "セントラル サーバーから SSL 証明書を取得できませんでした。"
+
+#: string "Unauthenticated login."
+msgid "ERROR_ID_112"
+msgstr "認証されていないログイン。"
+
+#: string "Album access not found."
+msgid "ERROR_ID_113"
+msgstr "アルバム アクセスが見つかりません。"
+
+#: string "Album access already exists."
+msgid "ERROR_ID_114"
+msgstr "アルバム アクセスは既に存在します。"
+
+#: string "Failed to delete user share access."
+msgid "ERROR_ID_115"
+msgstr "ユーザー共有を削除できませんでした。"
+
+#: string "Failed to delete device users."
+msgid "ERROR_ID_116"
+msgstr "デバイス ユーザーを削除できませんでした。"
+
+#: string "Failed to delete low-level OS user."
+msgid "ERROR_ID_117"
+msgstr "低レベル OS ユーザーを削除できませんでした。"
+
+#: string "Device name is invalid."
+msgid "ERROR_ID_118"
+msgstr "デバイス名が無効です。"
+
+#: string "Album item not found."
+msgid "ERROR_ID_119"
+msgstr "アルバム項目が見つかりません。"
+
+#: string "No albums found."
+msgid "ERROR_ID_120"
+msgstr "アルバムが見つかりません。"
+
+#: string "No album items found."
+msgid "ERROR_ID_121"
+msgstr "アルバム項目が見つかりません。"
+
+#: string "Album ID is missing."
+msgid "ERROR_ID_122"
+msgstr "アルバム ID が見つかりません。"
+
+#: string "Invalid album name."
+msgid "ERROR_ID_123"
+msgstr "無効なアルバム名。"
+
+#: string "Album already exists."
+msgid "ERROR_ID_124"
+msgstr "アルバムは既に存在します。"
+
+#: string "Image library not installed."
+msgid "ERROR_ID_125"
+msgstr "画像ライブラリがインストールされていません。"
+
+#: string "Database access failed."
+msgid "ERROR_ID_126"
+msgstr "データベース アクセスが失敗しました。"
+
+#: string "Deleting the Public share is forbidden."
+msgid "ERROR_ID_127"
+msgstr "パブリック共有の削除は禁止されています。"
+
+#: string "Renaming the Public share is forbidden."
+msgid "ERROR_ID_128"
+msgstr "パブリック共有名の変更は禁止されています。"
+
+#: string "Failed to copy file."
+msgid "ERROR_ID_129"
+msgstr "ファイルをコピーできませんでした。"
+
+#: string "Failed to copy directory."
+msgid "ERROR_ID_130"
+msgstr "ディレクトリをコピーできませんでした。"
+
+#: string "File list is empty."
+msgid "ERROR_ID_131"
+msgstr "ファイル リストが空です。"
+
+#: string "Both default ports and manual ports true."
+msgid "ERROR_ID_132"
+msgstr "デフォルト ポートと手動ポートの両方が有効です。"
+
+#: string "No results found."
+msgid "ERROR_ID_133"
+msgstr "結果が見つかりません。"
+
+#: string "Album item already exists."
+msgid "ERROR_ID_134"
+msgstr "アルバム項目は既に存在します。"
+
+#: string "Social Network is missing."
+msgid "ERROR_ID_135"
+msgstr "ソーシャル ネットワークが見つかりません。"
+
+#: string "Social Network not found."
+msgid "ERROR_ID_136"
+msgstr "ソーシャル ネットワークが見つかりません。"
+
+#: string "Social Network expired."
+msgid "ERROR_ID_137"
+msgstr "ソーシャル ネットワークの有効期限が切れました。"
+
+#: string "Social Network failed."
+msgid "ERROR_ID_138"
+msgstr "ソーシャル ネットワークが失敗しました。"
+
+#: string "Group not found."
+msgid "ERROR_ID_139"
+msgstr "グループが見つかりません。"
+
+#: string "EULA not accepted."
+msgid "ERROR_ID_140"
+msgstr "EULA に同意していません。"
+
+#: string "EULA bad request."
+msgid "ERROR_ID_141"
+msgstr "EULA 不正要求。"
+
+#: string "EULA internal server error."
+msgid "ERROR_ID_142"
+msgstr "EULA 内部サーバーエラー。"
+
+#: string "Device not registered."
+msgid "ERROR_ID_143"
+msgstr "デバイスは登録されていません。"
+
+#: string "Device registration bad request."
+msgid "ERROR_ID_144"
+msgstr "デバイス登録不正要求。"
+
+#: string "Device internal server error."
+msgid "ERROR_ID_145"
+msgstr "デバイス内部サーバーエラー。"
+
+#: string "System configuration internal server error."
+msgid "ERROR_ID_146"
+msgstr "システム設定内部サーバー エラー。"
+
+#: string "System configuration bad request."
+msgid "ERROR_ID_147"
+msgstr "システム設定不正要求。"
+
+#: string "Device description bad request."
+msgid "ERROR_ID_148"
+msgstr "デバイスの説明不正要求。"
+
+#: string "Device description internal server error."
+msgid "ERROR_ID_149"
+msgstr "デバイスの説明サーバーエラー。"
+
+#: string "Media server configuration internal server error."
+msgid "ERROR_ID_150"
+msgstr "メディア サーバー設定内部サーバー エラー。"
+
+#: string "Media server configuration bad request."
+msgid "ERROR_ID_151"
+msgstr "メディア サーバー設定不正要求。"
+
+#: string "Media server blocked list internal server error."
+msgid "ERROR_ID_152"
+msgstr "メディア サーバー ブロック リスト内部サーバー エラー。"
+
+#: string "Media server blocked list bad request."
+msgid "ERROR_ID_153"
+msgstr "メディア サーバー ブロック リスト不正要求。"
+
+#: string "Disk status internal server error."
+msgid "ERROR_ID_154"
+msgstr "ディスク ステータス内部サーバー エラー。"
+
+#: string "HDD standby time internal server error."
+msgid "ERROR_ID_155"
+msgstr "HDD スタンバイ時間内部サーバー エラー。"
+
+#: string "HDD standby time bad request."
+msgid "ERROR_ID_156"
+msgstr "HDD スタンバイ時間不正要求。"
+
+#: string "Smart test bad request."
+msgid "ERROR_ID_157"
+msgstr "スマート テスト不正要求。"
+
+#: string "Smart test internal server error."
+msgid "ERROR_ID_158"
+msgstr "スマート テスト内部サーバー エラー。"
+
+#: string "Media server connected list internal server error."
+msgid "ERROR_ID_159"
+msgstr "メディア サーバー接続リスト内部サーバー エラー。"
+
+#: string "Media server connected list bad request."
+msgid "ERROR_ID_160"
+msgstr "メディア サーバー接続リスト不正要求。"
+
+#: string "Media server connected list not found."
+msgid "ERROR_ID_161"
+msgstr "メディア サーバー接続リストが見つかりません。"
+
+#: string "Media server database internal server error."
+msgid "ERROR_ID_162"
+msgstr "メディア サーバー データベース内部サーバー エラー。"
+
+#: string "Media server database bad request."
+msgid "ERROR_ID_163"
+msgstr "メディア サーバー データベース不正要求。"
+
+#: string "Copy status internal server error."
+msgid "ERROR_ID_164"
+msgstr "コピー ステータス内部サーバー エラー。"
+
+#: string "Storage usage by share internal server error."
+msgid "ERROR_ID_165"
+msgstr "共有内部サーバー エラーによるストレージ使用状況。"
+
+#: string "Storage usage internal server error."
+msgid "ERROR_ID_166"
+msgstr "ストレージ使用状況内部サーバー エラー。"
+
+#: string "Shutdown bad request."
+msgid "ERROR_ID_167"
+msgstr "シャットダウン不正要求。"
+
+#: string "Shutdown internal server error."
+msgid "ERROR_ID_168"
+msgstr "シャットダウン内部サーバーエラー。"
+
+#: string "System factory restore bad request."
+msgid "ERROR_ID_169"
+msgstr "システム初期状態復元不正要求。"
+
+#: string "System factory restore internal server error."
+msgid "ERROR_ID_170"
+msgstr "システム初期状態復元内部サーバー エラー。"
+
+#: string "System information internal server error."
+msgid "ERROR_ID_171"
+msgstr "システム情報内部サーバー エラー。"
+
+#: string "System state internal server error."
+msgid "ERROR_ID_172"
+msgstr "システム状態内部サーバー エラー。"
+
+#: string "Firmware info internal server error."
+msgid "ERROR_ID_173"
+msgstr "ファームウェア情報内部サーバー エラー。"
+
+#: string "Firmware info bad request."
+msgid "ERROR_ID_174"
+msgstr "ファームウェア情報不正要求。"
+
+#: string "Firmware update configuration bad request."
+msgid "ERROR_ID_175"
+msgstr "ファームウェア更新設定不正要求。"
+
+#: string "Firmware update configuration internal server error."
+msgid "ERROR_ID_176"
+msgstr "ファームウェア更新設定内部サーバー エラー。"
+
+#: string "Firmware update bad request."
+msgid "ERROR_ID_177"
+msgstr "ファームウェア更新不正要求。"
+
+#: string "Firmware update internal server error."
+msgid "ERROR_ID_178"
+msgstr "ファームウェア更新内部サーバー エラー。"
+
+#: string "Network not found. Check your SSID and/or re-scan the networks."
+msgid "ERROR_ID_179"
+msgstr "ネットワークが見つかりません。 SSID を確認し、ネットワークを再スキャンしてください。"
+
+#: string "HW or driver errors."
+msgid "ERROR_ID_180"
+msgstr "HW またはドライバ エラー。"
+
+#: string "User not authorized."
+msgid "ERROR_ID_181"
+msgstr "ユーザーは認証されていません。"
+
+#: string "Not found"
+msgid "ERROR_ID_182"
+msgstr "見つかりません"
+
+#: string "Owner configuration bad request."
+msgid "ERROR_ID_183"
+msgstr "所有者設定不正要求。"
+
+#: string "Owner configuration internal server error."
+msgid "ERROR_ID_184"
+msgstr "所有者設定内部サーバー エラー。"
+
+#: string "Incorrect password."
+msgid "ERROR_ID_185"
+msgstr "正しくないパスワード。"
+
+#: string "WPS-PBC session overlap."
+msgid "ERROR_ID_186"
+msgstr "WPS-PBC セッション重複。"
+
+#: string "Firmware update bad request."
+msgid "ERROR_ID_187"
+msgstr "ファームウェア更新不正要求。"
+
+#: string "Firmware update internal server error."
+msgid "ERROR_ID_188"
+msgstr "ファームウェア更新内部サーバー エラー。"
+
+#: string "Network not found. Check your SSID and/or re-scan the networks."
+msgid "ERROR_ID_189"
+msgstr "ネットワークが見つかりません。 SSID を確認し、ネットワークを再スキャンしてください。"
+
+#: string "Failed getting IP address."
+msgid "ERROR_ID_190"
+msgstr "IP アドレスを取得できませんでした。"
+
+#: string "Drive not found."
+msgid "ERROR_ID_191"
+msgstr "デバイスが見つかりません。"
+
+#: string "Drive handle missing."
+msgid "ERROR_ID_192"
+msgstr "ドライブ ハンドルが見つかりません。"
+
+#: string "Password missing."
+msgid "ERROR_ID_193"
+msgstr "パスワードが見つかりません。"
+
+#: string "Invalid save value."
+msgid "ERROR_ID_194"
+msgstr "無効な保存値。"
+
+#: string "Drive not locked."
+msgid "ERROR_ID_195"
+msgstr "ドライブがロックされています。"
+
+#: string "Unlock failed"
+msgid "ERROR_ID_196"
+msgstr "ロック解除が失敗しました。"
+
+#: string "Unlock failed - unlock attempts exceeded."
+msgid "ERROR_ID_197"
+msgstr "ロック解除失敗 - ロック解除試行回数を超えました。"
+
+#: string "Invalid encoding value."
+msgid "ERROR_ID_198"
+msgstr "無効なエンコード値。"
+
+#: string "Unsupported request."
+msgid "ERROR_ID_199"
+msgstr "サポートされていない要求。"
+
+#: string "Invalid standby timer value."
+msgid "ERROR_ID_200"
+msgstr "無効なスタンバイ タイマー値。"
+
+#: string "Standby timer is unsupported."
+msgid "ERROR_ID_201"
+msgstr "スタンバイ タイマーはサポートされていません。"
+
+#: string "Invalid backup enabled parameter value."
+msgid "ERROR_ID_202"
+msgstr "無効なバックアップ対応パラメータ値。"
+
+#: string "Invalid backup size limit parameter value."
+msgid "ERROR_ID_203"
+msgstr "無効なバックアップ サイズ上限パラメータ値。"
+
+#: string "Unable to create Time Machine directory."
+msgid "ERROR_ID_204"
+msgstr "Time Machine ディレクトリを作成できません。"
+
+#: string "Unable to configure Time Machine directory."
+msgid "ERROR_ID_205"
+msgstr "Time Machine ディレクトリを設定できません。"
+
+#: string "Backup share does not exist."
+msgid "ERROR_ID_206"
+msgstr "バックアップ共有が存在しません。"
+
+#: string "Multiple interfaces on the same network."
+msgid "ERROR_ID_207"
+msgstr "同じネットワーク上の複数のインターフェイス。"
+
+#: string "Internal error"
+msgid "ERROR_ID_208"
+msgstr "内部エラー"
+
+#: string "Crawler is not running"
+msgid "ERROR_ID_209"
+msgstr "クローラーが実行されていません。"
+
+#: string "APC write failure"
+msgid "ERROR_ID_210"
+msgstr "APC 書き込みエラー"
+
+#: string "Failed to get jobs"
+msgid "ERROR_ID_211"
+msgstr "ジョブを取得できませんでした。"
+
+#: string "Failed to create jobs"
+msgid "ERROR_ID_212"
+msgstr "ジョブを作成できませんでした。"
+
+#: string "Failed to delete jobs"
+msgid "ERROR_ID_213"
+msgstr "ジョブを削除できませんでした。"
+
+#: string "Failed to update jobs"
+msgid "ERROR_ID_214"
+msgstr "ジョブを更新できませんでした。"
+
+#: string "Jobs ID missing"
+msgid "ERROR_ID_215"
+msgstr "ジョブ ID が見つかりません"
+
+#: string "Failed to get job ID"
+msgid "ERROR_ID_216"
+msgstr "ジョブ ID を取得できませんでした"
+
+#: string "Failed to create job ID"
+msgid "ERROR_ID_217"
+msgstr "ジョブ ID を作成できませんでした"
+
+#: string "Failed to delete job ID"
+msgid "ERROR_ID_218"
+msgstr "ジョブ ID を削除できませんでした"
+
+#: string "Failed to update job ID"
+msgid "ERROR_ID_219"
+msgstr "ジョブ ID を更新できませんでした"
+
+#: string "Jobs not found"
+msgid "ERROR_ID_220"
+msgstr "ジョブが見つかりません"
+
+#: string "Jobs operation type not found"
+msgid "ERROR_ID_221"
+msgstr "ジョブ処理タイプが見つかりません"
+
+#: string "Transcoding scheduled"
+msgid "ERROR_ID_222"
+msgstr "トランスコードがスケジュールされています"
+
+#: string "Unsupported operation"
+msgid "ERROR_ID_223"
+msgstr "サポートされていない処理"
+
+#: string "Dropbox request parameter error"
+msgid "ERROR_ID_224"
+msgstr "Dropbox 要求パラメータ エラー"
+
+#: string "Dropbox file not found on server"
+msgid "ERROR_ID_225"
+msgstr "Dropbox ファイルがサーバーに見つかりません"
+
+#: string "Dropbox HTTP error response"
+msgid "ERROR_ID_226"
+msgstr "Dropbox HTTP エラー応答"
+
+#: string "Dropbox server connection error"
+msgid "ERROR_ID_227"
+msgstr "Dropbox サーバー接続エラー"
+
+#: string "Destionation path already exists"
+msgid "ERROR_ID_228"
+msgstr "ターゲット パスは既に存在します"
+
+#: string "Invalid wdmc stage"
+msgid "ERROR_ID_229"
+msgstr "無効な wdmc ステージ"
+
+#: string "Media server not running"
+msgid "ERROR_ID_230"
+msgstr "メディア サーバーが実行されていません"
+
+#: string "Invalid wdmc category"
+msgid "ERROR_ID_231"
+msgstr "無効な wdmc カテゴリ"
+
+#: string "Source and destination files are identical."
+msgid "ERROR_ID_232"
+msgstr "ソース ファイルとターゲット ファイルが同じです。"
+
+#: string "Error opening source file handle."
+msgid "ERROR_ID_233"
+msgstr "ソース ファイル ハンドルを開けません。"
+
+#: string "Error opening destination file handle."
+msgid "ERROR_ID_234"
+msgstr "ターゲット ファイル ハンドルを開けません。"
+
+#: string "A Device User with the same email address already exists."
+msgid "ERROR_ID_235"
+msgstr "同じ電子メール アドレスのデバイス ユーザーは既に存在します。"
+
+#: string "Requested resource not found."
+msgid "ERROR_ID_236"
+msgstr "要求されたリソースが見つかりません。"
+
+#: string "Request not supported"
+msgid "ERROR_ID_237"
+msgstr "要求はサポートされていません"
+
+#: string "Bad request"
+msgid "ERROR_ID_238"
+msgstr "不正な要求"
+
+#: string "Error in internal server"
+msgid "ERROR_ID_239"
+msgstr "内部サーバー エラー"
+
+#: string "Not authorized to trigger send alert email."
+msgid "ERROR_ID_240"
+msgstr "アラート メールの送信をトリガーする権限がありません。"
+
+#: string "Error generating system log."
+msgid "ERROR_ID_241"
+msgstr "システム ログ生成エラー。"
+
+#: string "Error in uploading system log."
+msgid "ERROR_ID_242"
+msgstr "システム ログ更新エラー。"
+
+#: string "Error in reading getServiceStartUp.sh"
+msgid "ERROR_ID_243"
+msgstr "getServiceStartUp.sh 読み取りエラー"
+
+#: string "Error in reading getFixedNtpServer.sh"
+msgid "ERROR_ID_244"
+msgstr "getFixedNtpServer.sh 読み取りエラー"
+
+#: string "Error in reading getExtraNtpServer.sh"
+msgid "ERROR_ID_245"
+msgstr "getExtraNtpServer.sh 読み取りエラー"
+
+#: string "Internal error in datetime configuration"
+msgid "ERROR_ID_246"
+msgstr "日時設定内部エラー"
+
+#: string "Bad request in datetime configuration"
+msgid "ERROR_ID_247"
+msgstr "日時設定不正要求"
+
+#: string "Internal Server error for Device User"
+msgid "ERROR_ID_248"
+msgstr "デバイス ユーザーの内部サーバー エラー"
+
+#: string "iTunes configuration internal server error."
+msgid "ERROR_ID_249"
+msgstr "iTunes 設定内部サーバー エラー。"
+
+#: string "Bad request in iTunes configuration."
+msgid "ERROR_ID_250"
+msgstr "iTunes 設定の不正要求。"
+
+#: string "Language configuration not found"
+msgid "ERROR_ID_251"
+msgstr "言語設定が見つかりません"
+
+#: string "Language configuration internal server error."
+msgid "ERROR_ID_252"
+msgstr "言語設定内部サーバー エラー。"
+
+#: string "MicroCrawler status failed."
+msgid "ERROR_ID_253"
+msgstr "MicroCrawler ステータスが失敗しました。"
+
+#: string "Media crawler internal server error."
+msgid "ERROR_ID_254"
+msgstr "メディア クローラー内部サーバー エラー。"
+
+#: string "USB internal server error"
+msgid "ERROR_ID_255"
+msgstr "USB 内部サーバーエラー"
+
+#: string "Error in DB file location"
+msgid "ERROR_ID_256"
+msgstr "DB ファイル場所のエラー"
+
+#: string "Failed album access"
+msgid "ERROR_ID_257"
+msgstr "アルバム アクセスに失敗しました"
+
+#: string "Album is empty set"
+msgid "ERROR_ID_258"
+msgstr "アルバムが空のセットです"
+
+#: string "Album name is missing"
+msgid "ERROR_ID_259"
+msgstr "アルバム名が見つかりません"
+
+#: string "Album name info failed"
+msgid "ERROR_ID_260"
+msgstr "アルバム名情報が失敗しました"
+
+#: string "Album item info failed"
+msgid "ERROR_ID_261"
+msgstr "アルバム項目情報が失敗しました"
+
+#: string "Device already registered"
+msgid "ERROR_ID_262"
+msgstr "デバイスは既に登録されています"
+
+#: string "Device registration pending"
+msgid "ERROR_ID_263"
+msgstr "デバイス登録保留"
+
+#: string "Device registration unsuccessful"
+msgid "ERROR_ID_264"
+msgstr "デバイス登録が成功しました"
+
+#: string "Network Configuration bad request"
+msgid "ERROR_ID_265"
+msgstr "ネットワーク設定不正要求"
+
+#: string "Network Configuration server error"
+msgid "ERROR_ID_266"
+msgstr "ネットワーク設定サーバー エラー"
+
+#: string "Network Service Configuration Bad request"
+msgid "ERROR_ID_267"
+msgstr "ネットワーク サービス設定不正要求"
+
+#: string "Network service configuration server error."
+msgid "ERROR_ID_268"
+msgstr "ネットワーク サービス設定サーバー エラー。"
+
+#: string "Network workgroup bad request."
+msgid "ERROR_ID_269"
+msgstr "ネットワーク ワークグループ不正要求。"
+
+#: string "Network workgroup server error."
+msgid "ERROR_ID_270"
+msgstr "ネットワーク ワークグループ サーバー エラー。"
+
+#: string "SSH configuration bad request."
+msgid "ERROR_ID_271"
+msgstr "SSH 設定不正要求。"
+
+#: string "SSH configuration server error."
+msgid "ERROR_ID_272"
+msgstr "SSH 設定サーバー エラー。"
+
+#: string "Update counter not found."
+msgid "ERROR_ID_273"
+msgstr "更新カウンタが見つかりません。"
+
+#: string "Time Machine parameter value missing."
+msgid "ERROR_ID_274"
+msgstr "Time Machine パラメータ値が見つかりません。"
+
+#: string "Invalid file row offset."
+msgid "ERROR_ID_275"
+msgstr "無効なファイル行オフセット。"
+
+#: string "Invalid dir row offset."
+msgid "ERROR_ID_276"
+msgstr "無効なディレクトリ行オフセット。"
+
+#: string "Invalid file row count."
+msgid "ERROR_ID_277"
+msgstr "無効なファイル行カウント。"
+
+#: string "Invalid dir row count."
+msgid "ERROR_ID_278"
+msgstr "無効なディレクトリ行カウント。"
+
+#: string "Value of parameter http_range cannot be negative."
+msgid "ERROR_ID_279"
+msgstr "パラメータ http_range の値を負数にできません。"
+
+#: string "Network interface does not exist."
+msgid "ERROR_ID_280"
+msgstr "ネットワーク インターフェイスが存在しません。"
+
+#: string "File does not exist."
+msgid "ERROR_ID_281"
+msgstr "ファイルが存在しません。"
+
+#--- new for Sequoia 282 forward 3/20/13 ---
+
+#: string "To copy, the destination directory path cannot be inside the source directory."
+msgid "ERROR_ID_282"
+msgstr "コピーするには、ターゲット ディレクトリ パスをソース ディレクトリ内にできません。"
+
+#: string "Local access point internal server error."
+msgid "ERROR_ID_283"
+msgstr "ローカル アクセス ポイント内部サーバー エラー。"
+
+#: string "LED configuration internal server error."
+msgid "ERROR_ID_284"
+msgstr "LED 設定内部サーバー エラー。"
+
+
+#: string "LED configuration bad request."
+msgid "ERROR_ID_285"
+msgstr "LED 設定不正要求。"
+
+#: string "Language configuration already exists."
+msgid "ERROR_ID_286"
+msgstr "言語設定は既に存在します。"
+
+#: string "Source and destination directory paths are identical."
+msgid "ERROR_ID_287"
+msgstr "ソース ディレクトリ パスとターゲット ディレクトリ パスが同じです。"
+
+#: string "No Alert email has been sent."
+msgid "ERROR_ID_288"
+msgstr "アラート メールが送信されていません。"
+
+#: string "This call should be from localhost only."
+msgid "ERROR_ID_289"
+msgstr "この呼び出しはローカル ホストからのみ実行する必要があります。"
+
+#: string "Value provided for start time is not valid."
+msgid "ERROR_ID_290"
+msgstr "開始時刻に指定された値が無効です。"
+
+#: string "Value provided for modifed date is invalid."
+msgid "ERROR_ID_291"
+msgstr "修正日に指定された値が無効です。"
+
+#: string "Country name is not valid"
+msgid "ERROR_ID_292"
+msgstr "国名が有効ではありません"
+
+#: string "Language is not valid"
+msgid "ERROR_ID_293"
+msgstr "言語が無効です"
+
+#: string "Invalid first name"
+msgid "ERROR_ID_294"
+msgstr "無効な名前 (名)"
+
+#: string "Invalid last name"
+msgid "ERROR_ID_295"
+msgstr "無効な名前 (姓)"
+
+#: string "Invalid email address"
+msgid "ERROR_ID_296"
+msgstr "無効な電子メール アドレス。"
+
+#: string "Invalid option"
+msgid "ERROR_ID_297"
+msgstr "無効なオプション"
+
+#: string "HDD Standby Time Minutes Bad Request"
+msgid "ERROR_ID_298"
+msgstr "HDD スタンバイ時間 (分) 不正要求。"
+
+#: string "Enable HDD Standby Time Bad Request"
+msgid "ERROR_ID_299"
+msgstr "HDD スタンバイ時間有効化不正要求。"
+
+#: string "File does not exist"
+msgid "ERROR_ID_300"
+msgstr "ファイルが存在しません"
+
+#: string "Device Description Bad Request"
+msgid "ERROR_ID_301"
+msgstr "デバイスの説明不正要求"
+
+#: string "Device Description Name Bad Request"
+msgid "ERROR_ID_302"
+msgstr "デバイスの説明名不正要求"
+
+
+#: string "Destination share not accessible"
+msgid "ERROR_ID_303"
+msgstr "ターゲット共有にアクセスできません"
+
+#: string "Either shareall or share_name parameter has to be specified."
+msgid "ERROR_ID_304"
+msgstr "shareall または share_name パラメータを指定する必要があります。"
+
+#: string "WDMC Server reset failed."
+msgid "ERROR_ID_305"
+msgstr "WDMC サーバー リセットが失敗しました。"
+
+# --------- New strings 5/16 (second round Moravia submission) ---------
+
+#: string "Retrieving Partitions"
+msgid "CONTENT_SAFEPOINTS_DIALOG_LABEL_GETTING_PARTITIONS"
+msgstr "パーティションの取得"
+
+#: string "Select a drive"
+msgid "LABEL_SELECT_A_DRIVE"
+msgstr "ドライブを選択"
+
+#: string "KB"
+msgid "GENERIC_KB"
+msgstr "KB"
+
+#: string "Resends the registration email."
+msgid "TOOLTIP_RESEND_EMAIL_ICON"
+msgstr "登録メールを再送信します。"
+
+#: string "Update registration email."
+msgid "TOOLTIP_UPDATE_EMAIL_ICON"
+msgstr "登録メールを更新します。"
+
+#: string "Elapsed time"
+msgid "CONTENT_SETTINGS_STRING_ELAPSED_TIME"
+msgstr "経過時間"
+
+
+# --- NEW strings (for Moravia round 2) submitting 6-11  ---
+
+# New - 5-21-13
+#: string "Username cannot start with a dash (-)."
+msgid "ERROR_USERNAME_INCORRECT_SYNTAX_DASH"
+msgstr "ユーザー名の先頭にはダッシュ（-）を使用できません。"
+
+# New - 5-21-13
+#: string "First name cannot start with a dash (-).
+msgid "ERROR_ADD_USER_FIRST_NAME_INCORRECT_SYNTAX_DASH"
+msgstr "名前の先頭にはダッシュ（-）を使用できません。"
+
+# New - 5-21-13
+#: string "Secure Shell (SSH) is a security protocol that provides an encrypted connection for logging into a remote server to view, transfer files, and execute programs on the server. For this reason, SSH should only be enabled by users with advanced network and Linux knowledge. Failure to use SSH properly can render your network server inoperable. If you enable SSH, do not share the root password with anyone you do not want to have access to your network server."  
+msgid "SETTINGS_NETWORK_SERVICES_TOOLTIP_SSH"
+msgstr "Secure Shell (SSH) セキュリティ プロトコルでは、リモート サーバーにログインして、サーバー上のファイルを表示および転送したり、プログラムを実行したりする際の接続を暗号化します。 このため、ネットワークおよび Linux に関する高度な知識を持つユーザーのみが SSH を有効にすることをお勧めします。 SSH を正しく使用しない場合、ネットワーク サーバーが動作しなくなるおそれがあります。 SSH を有効にする場合、ネットワーク サーバーへのアクセスを許可しないユーザーとは、ルート パスワードを共有しないでください。"
+
+# New - 5-21-13
+#: string "Note: User successfully added."
+msgid "LABEL_DESC_USER_ADDED_SUCCESSFULLY"
+msgstr "注: ユーザーが追加されました。"
+
+
+# New - 5-21-13
+#: string "Accessing WD My Cloud..."
+msgid "CONTENT_SPLASH_STRING_ACCESSING"
+msgstr "WD My Cloud にアクセスしています..."
+
+# New - 5-21-13
+#: string "Reading configuration information..."
+msgid "CONTENT_SPLASH_STRING_CONFIGURATION"
+msgstr "設定情報を読み取っています..."
+
+# New - 5-21-13
+#: string "Attempting to authenticate..."
+msgid "CONTENT_SPLASH_STRING_AUTHENTICATE"
+msgstr "認証を試行しています..."
+
+# New - 5-21-13
+#: string "Scanning"
+msgid "CONTENT_HOME_STRING_SCANNING"
+msgstr "スキャニング"
+
+# New - 5-22-13
+#: string "Scan complete. {0} videos processed."
+msgid "CONTENT_HOME_DIALOG_TOOLTIP_VIDEOS_SCANNED"
+msgstr "スキャンが完了しました。 {0} 動画が処理されました。"
+
+# New - 5-22-13
+#: string "Scan complete. {0} music tracks processed."
+msgid "CONTENT_HOME_DIALOG_TOOLTIP_MUSIC_SCANNED"
+msgstr "スキャンが完了しました。 {0} 音楽トラックが処理されました。"
+
+# New - 5-22-13
+#: string "Scan complete. {0} photos processed."
+msgid "CONTENT_HOME_DIALOG_TOOLTIP_PHOTOS_SCANNED"
+msgstr "スキャンが完了しました。 {0} 写真が処理されました。"
+
+# New - 5-22-13
+#: string "Scan complete. {0} other file types processed."
+msgid "CONTENT_HOME_DIALOG_TOOLTIP_OTHERS_SCANNED"
+msgstr "スキャンが完了しました。 {0} その他のファイル タイプが処理されました。"
+
+# --- New strings added May 30 
+
+# NEW - ITR 76099
+#: string "Delete this cloud access."
+msgid "TOOLTIP_DELETE_DAC_ICON"
+msgstr "このクラウド アクセスを削除します。"
+ 
+# NEW - ITR 76099
+#: string "Delete this alert."
+msgid "TOOLTIP_DELETE_ALERT_ICON"
+msgstr "このアラートを削除します。"
+
+# NEW - ITR 76099
+#: string "Delete email."
+msgid "TOOLTIP_DELETE_EMAIL_ICON"
+msgstr "電子メールを削除します。"
+
+# NEW - ITR 76099
+#: string "Delete user-defined NTP server."
+msgid "TOOLTIP_DELETE_USER_NTP_SERVER_ICON"
+msgstr "ユーザー定義の NTP サーバーを削除します。"
+
+# NEW - ITR 76099
+#: string "Delete this notification email."
+msgid "TOOLTIP_DELETE_NOTIFICATION_EMAIL_ICON"
+msgstr "この通知電子メールを削除します。"
+
+# NEW 5.30.13
+#: string "Please provide a valid email for the admin user."
+msgid "ERROR_PROVIDE_VALID_EMAIL_ADDRESS_ADMIN_USER"
+msgstr "有効な管理者ユーザー用の電子メール アドレスを指定してください。"
+
+# NEW 5.30.13 for ITR 76273
+#: string "Firmware upgrade in progress."
+msgid "CONTENT_SETTINGS_STRING_FIRMWARE_UPGRADE_IN_PROGRESS"
+msgstr "ファームウェア アップグレードが実行中です。"
+
+# NEW 5.30.13 for ITR 76273
+#: string "Timeout; waiting for firmware upgrade. Verify that the LED on the front of your device is not red; then find the device on the network and reinitialize the web user interface. If the LED is red, reboot your drive manually."
+msgid "ERROR_FIRMWARE_UPGRADE_TIMEOUT"
+msgstr "タイムアウト。ファームウェア アップグレードを待機中です。 デバイス正面の LED が赤色ではないことを確認します。次に、ネットワークのデバイスを確認して、Web ユーザー インターフェイスを再初期化します。 LED が赤色の場合、ドライブを手動で再起動してください。"
+
+# NEW 5-31 ---
+
+#: string "Please enable cookies in your browser."
+msgid "LABEL_DESCR_PLEASE_ENABLE_COOKIES"
+msgstr "ブラウザの Cookie を有効にしてください。"
+
+#: string "Please enable JavaScript in your browser."
+msgid "LABEL_DESCR_PLEASE_ENABLE_JAVASCRIPT"
+msgstr "ブラウザの JavaScript を有効にしてください。"
+
+#: string "Internet Explorer 8 and higher is supported; please update your browser."
+msgid "LABEL_DESCR_IE7_NOT_SUPPORTED"
+msgstr "Internet Explorer 8 以上がサポートされています。ブラウザを更新してください。"
+
+# New 6-4 ---
+#: string "Protect Your Stuff"
+msgid "CONTENT_SAFEPOINTS_BUMPER_TITLE_PROTECT_STUFF"
+msgstr "データの保護"
+
+# New 6-6-13 (76506)
+#: string "Give user cloud access by entering their email. Login instructions are sent to the email address provided."
+msgid "CONTENT_USERS_DIALOG_TOOLTIP_EMAIL"
+msgstr "ユーザーの電子メール アドレスを入力して、ユーザーにクラウド アクセスを付与します。 ログインの手順は、提供された電子メール アドレスに送信されます。"
+
+
+# NEW 6-7 ---
+#: string "Previous Password"
+msgid "CONTENT_GENERIC_TEXTBOX_LABEL_OLD_PASSWORD"
+msgstr "古いパスワード"
+
+
+# new 6-10 --
+#: string "Self Test Results"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_SELF_TEST_RESULTS"
+msgstr "自己テスト結果"
+
+# new 6-10 --
+#: string "Invalid Email"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_INVALID_EMAIL"
+msgstr "無効な電子メール アドレス"
+
+# new 6-10 --
+#: string "Alert Email Limit"
+msgid "CONTENT_SETTINGS_DIALOG_TITLE_ALERT_EMAIL_LIMIT_MET"
+msgstr "アラート電子メール上限"
+
+# new 6-10
+#: string "Previous password is a case-sensitive, alphanumeric value up to 32 characters, and cannot contain double quotes."
+msgid "ERROR_OLD_PASSWORD_INCORRECT_SYNTAX"
+msgstr "古いパスワードは 32 文字以内の英数字でなければなりません。大文字と小文字を区別します。二重引用符は使用できません。"
+
+# new 6-10
+#: string "Usage"
+msgid " CONTENT_SHARES_LABEL_USAGE"
+msgstr "使用"
+
+
+# new 6-20 (from Zermatt)
+#: string "Submit"
+msgid "BUTTON_SUBMIT"
+msgstr "送信"
+
+
+# new 6-21
+#: string "Share Login"
+msgid "CONTENT_SAFEPOINTS_LABEL_SHARE_AUTHENTICATION"
+msgstr "ログインを共有"
+ 
+#: string "Device Login"
+msgid "CONTENT_SAFEPOINTS_LABEL_DEVICE_AUTHENTICATION"
+msgstr "デバイスのログイン"
+
+#: string "Rescan searches for changes made to your media libraries."
+msgid "CONTENT_SETTINGS_MEDIA_TOOLTIP_DLNA_DATABASE_RESCAN"
+msgstr "再スキャンはあなたのメディア ライブラリに加えられた変更を検索します。"
+
+
+#new 6-25
+#: string "Click Rebuild to rebuild the media database, but do so only if database corruption is suspected."
+msgid "CONTENT_SETTINGS_MEDIA_TOOLTIP_DLNA_DATABASE_REBUILD"
+msgstr "データベースの破損が疑われる場合、「復元」をクリックして、メディアデータベースを復元してください。"
+

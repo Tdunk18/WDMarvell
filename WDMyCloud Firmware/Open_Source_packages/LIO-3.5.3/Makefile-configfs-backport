@@ -1,0 +1,18 @@
+CWD=$(shell pwd)
+AUTOCONFIG=$(CWD)/autoconfig --write-to-file --current-directory=$(CWD)
+include $(shell $(AUTOCONFIG))
+
+all:
+ifeq ($(CONFIGFS_BACKPORT), 1)
+	make -C kernel/fs/configfs all
+endif
+
+install: all
+ifeq ($(CONFIGFS_BACKPORT), 1)
+	make -C kernel/fs/configfs install
+endif
+
+clean:
+ifeq ($(CONFIGFS_BACKPORT), 1)
+	make -C kernel/fs/configfs clean
+endif

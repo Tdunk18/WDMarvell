@@ -1,0 +1,2 @@
+The include/crypto/cryptodev.h and include/crypto/ocf-compat.h is copied from ocf-linux or the kernel/crypto/ocf
+The crypto/engine/eng_cryptodev.c is the original one in openssl distribution. Every time upgrading the openssl shall copy it from openssl source code again.

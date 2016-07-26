@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><cki><ck fm=\"Správa osobního cloudu\" to=\"Změna stahování FTP\" num=\"52\"/><ck fm=\"Změna stahování HTTP\" to=\"Co je to zálohování v cloudu\" num=\"54\"/><ck fm=\"Co je to úložiště RAID?\" to=\"Co je to úložiště RAID?\" num=\"1\"/></cki>";

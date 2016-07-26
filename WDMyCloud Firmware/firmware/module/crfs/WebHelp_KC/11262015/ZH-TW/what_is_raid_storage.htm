@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="MS-HAID" content="What is RAID Storage?" />
+<meta http-equiv="Content-Language" content="zh-TW" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>什麼是 RAID 儲存裝置？</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("儲存裝置\nRAID 儲存裝置\n什麼是 RAID 儲存裝置？");
+addButton("show",BTN_TEXT,"顯示","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left; background: #fafafa\"> ");
+AddMasterBreadcrumbs("index.htm", "", "&gt;", "Home", "welcome.htm");
+document.write("<a href=\"what_is_raid_storage.htm\">儲存裝置<\/a> &gt; <a href=\"what_is_raid_storage.htm\">RAID 儲存裝置<\/a> &gt; 什麼是 RAID 儲存裝置？<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(0);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1 style="background-color: Transparent;">什麼是 RAID 儲存裝置</h1>
+<p class="Body">RAID (獨立磁碟容錯陣列) <span style="mso-bidi-font-family: Arial;">可讓您將相同的資料儲存至多個硬碟的不同位置，以提供必要的備援、更好的效能以及資料完整性。</span>RAID 
+ 有數個層級，每個層級提供在磁碟機之間共用或分散資料的不同方法。My Cloud™ 設備可讓您選取下列儲存模式：</p>
+<ol style="list-style: square;">
+	<li style="list-style: none; display: inline;"><ul style="list-style: square;">
+		<li class="b1"><b style="mso-bidi-font-weight: normal;">JBOD：</b><span 
+		 style="font-size: 10.0pt; font-family: Arial, sans-serif; mso-fareast-font-family: 'Times New Roman'; 
+		 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">使用一個或多個不是 
+		 RAID 設定的磁碟機，而是以個別邏輯磁碟區來管理。</font></span></li>
+		<li class="b1">跨越：以線性方式結合磁碟機，建立一個大型邏輯磁碟區。</li>
+		<li class="b1"><span style="font-weight: bold;">RAID 0：</span>RAID 
+		 0 模式可在 RAID 磁碟機群組中的所有磁碟機之間提供磁碟等量。 <br />
+		RAID 0 無法提供資料備援，但可提供所有 RAID 層級的最佳效能。RAID 0 會將資料分割成較小的區段，並將資料區段等量分配至磁碟機中的每個磁碟機。</li>
+		<li class="b1"><span style="font-weight: bold;">RAID 1：</span>在 
+		 RAID 1 模式中，RAID 控制器會將磁碟機群組中某個磁碟機的所有資料複製至另一個磁碟機。RAID 1 提供完整的資料備援，佔用一半的必要儲存容量。</li>
+		<li class="b1"><span style="font-weight: bold;">RAID 5：</span>RAID 
+		 5 模式在 3 個或以上磁碟機等量存放資料並將每個磁碟機的四分之一專用於容錯，可提供優越的效能和保護。<span style="font-weight: bold;">該選項僅供 
+		 4 驅位 My Cloud 設備使用。</span></li>
+		<li class="b1"><span style="font-weight: bold;">RAID 10：</span>RAID 
+		 10 模式是指定資料如何在主要磁碟間等量寫入 （且主要磁碟已鏡像至次要磁碟）的 RAID 通訊協定。<span style="font-weight: bold;">該選項僅供 
+		 4 驅位 My Cloud 設備使用。</span></li>
+	</ul></li>
+</ol>
+<br />
+
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt;">© 2015 Western Digital Technologies, Inc. 
+	 All rights reserved.<span class="Apple-converted-space">&#160;</span><span 
+	 style="color: rgb(75, 90, 104); font-size: 10.6666669845581px; line-height: 21.3333339691162px; 
+	 orphans: auto; widows: 1; -webkit-text-stroke-width: 0px; display: inline	 ! important ; 
+	 float: none; background-color: rgb(250, 250, 250);">版權所有。</span></p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>

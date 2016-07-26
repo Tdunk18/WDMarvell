@@ -1,0 +1,249 @@
+<!-- Re-Main Disk / Remain to JBOD Dialog  -->
+<div class="WDLabelDiag" id="Remain_Dsk_Diag">
+<div class="WDLabelHeaderDialogue WDLabelHeaderDialogueHDDIcon" id="Remain_Dsk_Diag_title"><span class="_text" lang="_raid" datafld="desc80"></span></div>
+<div align="center"><div class="hr"><hr></div></div>
+
+	<!-- 1.Remain to JBOD Dialog : physical disk info -->
+	<div id="Remain_Dsk_Diag_Physical_Info" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content" id="remain_icon_loading" style="border:0px solid yellow;">
+						<table border="0" cellSpacing="0" cellPadding="0" style="border-collapse: collapse" bordercolor="#000000" width="550px">
+			            <tr>
+			            	<td height="100" width="95%" align="center">
+			            			<img src="/web/images/SpinnerSun.gif">&nbsp;<span class="_text" lang="_common" datafld="wait">Waiting...</span>
+			            	</td>
+			            </tr>
+			        	</table>
+			</div>	
+			<div class="dialog_content">
+				<table id="remaindsk_hd_info"></table>
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidRemainCancel1_button" class="ButtonLeftPos close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidRemainNext1_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div>
+	
+	<!-- 2.Remain to JBOD Dialog : Summary -->
+	<div id="Remain_Dsk_Diag_Summary" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<span class="_text" lang="_format" datafld="desc11"></span><br><br>
+				<div class="flexigrid" style="width: 650px;">
+				<div class="hDiv">
+					<div class="hDivBox" style="width: 650px;">
+						<table cellspacing="0" cellpadding="0" id="remain_summary_list_title">
+							<thead>
+								<tr>
+									<th align="center" abbr="f_ve" axis="col0"><div style="text-align: center; width: 16px;"></div></th>
+									<th align="center" abbr="f_ve_auto_mount" axis="col1"><div style="text-align: center; width: 16px;"></div></th>
+									<th align="left" abbr="f_vol" axis="col2"><div style="text-align: left; width: 90px;"></div></th>
+									<th align="left" abbr="f_type" axis="col3"><div style="text-align: left; width: 110px;"></div></th>
+									<th align="left" abbr="f_file_system" axis="col4"><div style="text-align: left; width: 72px;"></div></th>
+									<th align="left" abbr="f_free_size" axis="col5"><div style="text-align: left; width: 80px;"></div></th>
+									<th align="left" abbr="f_disk" axis="col6"><div style="text-align: left; width: 178px;"></div></th>
+								</tr>
+							</thead>
+						</table>
+					</div><!-- hDivBox -->
+				</div><!-- hDiv -->
+				<div class="bDiv" style="height: auto;" id="diag_remain_summary_bDiv">
+					<table cellspacing="0" cellpadding="0" border="0">
+						<tbody id="remain_summary_list"></tbody>
+					</table>
+				</div><!-- bDiv -->
+				</div><!-- flexigrid -->
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidRemainBack2_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidRemainCancel2_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidRemainNext2_button" class="ButtonRightPos1"><span class="_text" lang="_raid" datafld="button4"></span></button>
+	</div>
+	
+	<!-- 3.Remain to JBOD Dialog : waiting for disk remount -->
+	<div id="Remain_Dsk_Diag_Wait" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<span class="_text" lang="_format" datafld="desc12"></span><br>
+				<table border="0" cellSpacing="0" cellPadding="0" style="border-collapse: collapse" bordercolor="#000000" width="95%">
+	            <tr>
+	            	<td height="100" width="95%" align="center">
+	            			<img src="/web/images/SpinnerSun.gif" id="icon_loading">&nbsp;<span class="_text" lang="_common" datafld="wait">Waiting...</span>
+	            	</td>
+	            </tr>
+	       		</table>
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidRemainCancel3_button" class="ButtonRightPos1 close"><span class="_text" lang="_button" datafld="close"></span></button>
+	</div>
+	
+	<!-- 4.Remain to JBOD Dialog : Bar -->
+	<div id="Remain_Dsk_Diag_Bar" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<span class="_text" lang="_format" datafld="desc13"></span><br>
+					<div style="margin: 0px auto;text-align:center;line-height:25px;width:80%;" id="remain_state"></div>
+				<div style="margin: 0px auto;width:80%;" id="remain_parogressbar"></div>
+				<div style="margin: 0px auto;text-align:center;line-height:25px;width:80%;" id="remain_desc"></div>
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<!--<button type="button" id="storage_raidRemainCancel4_button" lang="_button" class="ButtonRightPos1 close"><span class="_text" lang="_button" datafld="close"></span></button>-->
+	</div>
+	
+	<!-- 5.Remain to JBOD Dialog : Result List -->
+	<div id="Remain_Dsk_Diag_Res" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<span class="_text" lang="_format" datafld="desc25"></span><br><br>
+				<div id="dskDiag_rebuild_res_div">	
+					<div class="flexigrid" style="width: 600px;">
+					<div class="hDiv">
+						<div class="hDivBox" style="width: 600px;">
+							<table cellspacing="0" cellpadding="0">
+								<thead>
+									<tr>
+										<th align="center" abbr="f_slot" axis="col0"><div style="text-align: left; width: 98px;"></div></th>
+										<th align="left" abbr="f_vendor" axis="col1"><div style="text-align: left; width: 80px;"></div></th>
+										<th align="left" abbr="f_version" axis="col2"><div style="text-align: left; width: 80px;"></div></th>
+										<th align="center" abbr="f_disk" axis="col3"><div style="text-align: left; width: 160px;"></div></th>
+									</tr>
+								</thead>
+							</table>
+						</div><!-- hDivBox -->
+					</div><!-- hDiv -->
+					<div class="bDiv" id="diag_remain_current_res_bDiv">
+						<table cellspacing="0" cellpadding="0" border="0">
+							<tbody id="Remain_Dsk_Diag_res_hdlst"></tbody>
+						</table>
+					</div><!-- bDiv -->
+				</div><!-- flexigrid -->
+				</div>
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidRemainFinish5_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="close"></span></button>
+	</div>
+	
+	<!-- 6.Remain to JBOD Dialog : Volume Encryption List-->
+	<div id="Remain_Dsk_Diag_volume_encrpty_list" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<span class="_text" lang="_raid" datafld="desc71">This section allows you to choose which volumes you want to encrypt</span><br><br>
+				<div class="flexigrid" style="width: 550px;">
+				<div class="hDiv">
+					<div class="hDivBox">
+						<table cellspacing="0" cellpadding="0" border="0">
+							<thead>
+								<tr>
+									<th align="left" abbr="f_vol" axis="col0"><div style="text-align: left; width: 98px;"></div></th>
+									<th align="left" abbr="f_type" axis="col1"><div style="text-align: left; width: 80px;"></div></th>
+									<th align="center" abbr="f_size" axis="col3"><div style="text-align: left; width: 80px;"></div></th>
+									<th align="center" abbr="f_vol_encryption" axis="col4"><div style="text-align: center; width: 242px;"></div></th>
+								</tr>
+							</thead>
+						</table>
+					</div><!-- hDivBox -->
+				</div><!-- hDiv -->
+				<div class="bDiv" style="height: 130px;" id="diag_remain_volume_encrpty_bDiv">
+					<table cellspacing="0" cellpadding="0" border="0">
+						<tbody id="remain_volume_encryption_list"></tbody>
+					</table>
+				</div><!-- bDiv -->
+				</div><!-- flexigrid -->
+			</div>		
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidRemainBack6_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidRemainCancel6_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidRemainNext6_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div>
+	
+	<!-- 7.Remain to JBOD Dialog : 1st Volume Encryption -->
+	<div id="Remain_Dsk_Diag_volume_encrpty_1st" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<span class="_text" lang="_raid" datafld="desc39">This section allows you to set up a password for the selected volume. Select Auto Mount to automatically mount the encrypted volume without re-entering the password at boot up.</span><br><br>
+				<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="550">	        
+					<tr> 
+						<td width="250px" height="55px" colspan="3"><b><span id="span_remain_1st_vol_desc"></span></b></td>
+					</tr>
+					<tr> 
+						<td width="250px" height="55px">&nbsp;<span class="_text" lang="_raid" datafld="desc37">Enter Encryption Password</span></td>
+						<td  colspan="2"><input type="password" name="storage_raidRemainVE1stPWD7_password" id="storage_raidRemainVE1stPWD7_password"></td>
+					</tr>
+					<tr> 
+						<td width="250px" height="55px">&nbsp;<span class="_text" lang="_raid" datafld="desc38">Verify Encryption Password</span></td>
+						<td colspan="2"><input type="password" name="storage_raidRemainVE1stConfirmPWD7_password" id="storage_raidRemainVE1stConfirmPWD7_password"></td>
+					</tr>
+					<tr> 
+						<td width="250px" height="55px">&nbsp;<span class="_text" lang="_raid" datafld="desc36">Auto Mount</span></td>
+						<td>
+							<input id="storage_raidRemainVE1stAutoMount7_switch" name="storage_raidRemainVE1stAutoMount7_switch" class="onoffswitch" type="checkbox" value="true">
+						</td>
+						<td align="left"><!--<div class="TooltipIcon" id="tip_remain_ve_1st_auto_mount"></div>--></td>
+					</tr>
+				</table>
+			</div>	
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidRemainBack7_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidRemainCancel7_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidRemainNext7_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div>
+	
+	<!-- 8.Remain to JBOD Dialog : 2nd Volume Encryption -->
+	<div id="Remain_Dsk_Diag_volume_encrpty_2nd" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<span class="_text" lang="_raid" datafld="desc39">This section allows you to set up a password for the selected volume. Select Auto Mount to automatically mount the encrypted volume without re-entering the password at boot up.</span><br><br>	
+				<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="550">	        
+					<tr> 
+						<td width="250px" height="55px" colspan="3"><b><span id="span_remain_2nd_vol_desc"></span></b></td>
+					</tr>
+					<tr> 
+						<td width="250px" height="55px">&nbsp;<span class="_text" lang="_raid" datafld="desc37">Enter Encryption Password</span></td>
+						<td  colspan="2"><input type="password" name="storage_raidRemainVE2ndPWD8_password" id="storage_raidRemainVE2ndPWD8_password"></td>
+					</tr>
+					<tr> 
+						<td width="250px" height="55px">&nbsp;<span class="_text" lang="_raid" datafld="desc38">Verify Encryption Password</span></td>
+						<td colspan="2"><input type="password" name="storage_raidRemainVE2ndConfirmPWD8_password" id="storage_raidRemainVE2ndConfirmPWD8_password"></td>
+					</tr>
+					<tr> 
+						<td width="250px" height="55px">&nbsp;<span class="_text" lang="_raid" datafld="desc36">Auto Mount</span></td>
+						<td width="90px">
+							<input id="storage_raidRemainVE2ndAutoMount8_switch" name="storage_raidRemainVE2ndAutoMount8_switch" class="onoffswitch" type="checkbox" value="true">
+						</td>
+						<td align="left"><!--<div class="TooltipIcon" id="tip_remain_ve_2nd_auto_mount"></div>--></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidRemainBack8_button" class="ButtonMarginLeft_40px"><span class="_text" lang="_button" datafld="back"></span></button>
+		<button type="button" id="storage_raidRemainCancel8_button" class="ButtonMarginLeft_20px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="storage_raidRemainNext8_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Next"></span></button>
+	</div>
+		
+	<!-- 10.RAID : Shutdown for Remain fail -->
+	<div id="RAID_Remain_Shutdown" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<span id="Storage_RAIDRemainShutdown1_Span" class="_text" lang="_raid" datafld="desc128"></span><br><br>	
+			
+			<div id="Storage_RAIDRemainShutdown1_Div"></div>
+		</div>
+	
+		<div class="hrBottom2"><hr/></div>
+		<button type="button" id="storage_raidRemainShutDown10_button" class="ButtonRightPos1"><span class="_text" lang="_utilities" datafld="shutdown"></span></button>
+	</div>
+</div><!-- end of Remain to JBOD Dialog -->

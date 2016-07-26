@@ -1,0 +1,6 @@
+#!/bin/bash -x
+
+# Define the WD media crawler component locations on which Twonky depends, including the INSTALL_DIR. 
+source /usr/local/twonky/cgi-bin/wdmc-defs.sh
+ulimit -v 300000
+$INSTALL_DIR/bin/avconv "$@"

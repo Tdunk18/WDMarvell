@@ -1,0 +1,39 @@
+#!/bin/sh
+
+start() {
+	echo "Starting AFP services:"
+
+	/usr/sbin/netatalk -F /etc/netatalk/afp.conf
+}
+
+stop() {
+	echo "Shutting down AFP services:"
+		
+	killall -15 netatalk
+}
+
+restart() {
+	stop
+	sleep 1
+	AFP_ENABLE=`xmldbc -g '/system_mgr/afp/enable'`
+	if [ "$AFP_ENABLE" == "1" ]; then
+		start
+	fi
+}
+
+case "$1" in
+    start)
+	start
+	;;
+    stop)
+	stop
+	;;
+    restart)
+	restart
+	;;
+    *)
+	echo $"Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit 0

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="MS-HAID" content="Creating an Amazon S3 Cloud Backup" />
+<meta http-equiv="Content-Language" content="tr-TR" />
+ <meta name="generator" content="Adobe RoboHelp 2015" />
+<title>Amazon S3 Bulut Yedekleme Oluşturma</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Kişisel Bulutunuzu Yedekleme\nBulut Yedeklemeleri\nAmazon S3 Bulut Yedekleme Oluşturma");
+addButton("show",BTN_TEXT,"Göster","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("index.htm", "", ">", "Giriş", "welcome.htm");
+document.write("<a href=\"Creating_a_USB_Backup.htm\">Kişisel Bulutunuzu Yedekleme<\/a> > <a href=\"What_is_a_Cloud_Backup.htm\">Bulut Yedeklemeleri<\/a> > Amazon S3 Bulut Yedekleme Oluşturma<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Amazon S3 Bulut Yedekleme Oluşturma</h1>
+<p class="Body"><span style="font-weight: bold;">Not</span>: Bulut yedeklemenizi 
+ oluşturmadan önce <a href="http://aws.amazon.com/s3" target="_blank">http://aws.amazon.com/s3</a> 
+ adresinden Amazon S3 hizmetinin oturumunu açın.</p>
+<p class="Body">Amazon S3 hesabınız oluşturulduktan sonra aşağıdaki adımları 
+ kullanarak bir bulut yedeklemesi oluşturun.</p>
+<ol style="list-style: square;">
+	<li style="list-style: none; display: inline;"><ol style="list-style: decimal;">
+		<li class="n1"><b>Yedeklemeler</b> butonuna tıklayın.</li>
+		<li class="n1"><span style="font-weight: bold;">Bulut Yedekleme</span> 
+		 butonuna tıklayın.</li>
+		<li class="n1">Ekranın üst kısmındaki <b>Amazon S3</b> butonuna 
+		 tıklayın.<img src="Graphics/image016.png" alt="" width="90" height="18" 
+						 border="0" /></li>
+		<li class="n1"><b>Oluştur</b> butonuna tıklayın.</li>
+		<li class="n1">Bulut yedeklemeniz için bir İş Adı girin.</li>
+		<li class="n1"><b>Sonraki</b> butonuna tıklayın.</li>
+		<li class="n1">Amazon S3 tarafından verilen aşağıdaki bilgileri 
+		 girin:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b>Bölge</b>: Aşağı açılan menüden bulutunuz için 
+		 kullanılacak Bölgeyi seçin.</li>
+		<li class="b1"><b style="font-weight: bold;">Erişim Anahtarı</b>: 
+		 Amazon S3 tarafından size verilen Erişim Anahtarını girin.</li>
+		<li class="b1"><b style="font-weight: bold;">Özel Anahtar</b>: 
+		 Amazon S3 tarafından size verilen Özel Anahtarı girin.</li>
+		<li class="b1"><b style="font-weight: bold;">Uzak Yol</b>: Bulutunuz 
+		 için uzak yol girin. Bu bilgi normalde Demet adınızdır.</li>
+	</ul>
+	<ol start="8" style="list-style: decimal;">
+		<li class="n1"><b>Sonraki</b> butonuna tıklayın.</li>
+		<li class="n1">Tür alanında aşağıdaki seçeneklerden birini belirleyin:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold;">Karşıya Yükle:</b> 
+		 My Cloud Mirror verilerinizi Amazon S3 demetinize yedekler.</li>
+		<li class="b1"><b style="font-weight: bold;">İndir:</b> Amazon 
+		 S3 demetinizi My Cloud Mirror sunucunuza yedekler.</li>
+	</ul>
+	<ol start="10" style="list-style: decimal;">
+		<li class="n1">Yedekleme Türü alanında aşağı açılan menüden gerçekleştirmek 
+		 istediğiniz yedekleme türünü seçin. Şu seçenekler mevcuttur:</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold;">Mevcut dosyaların 
+		 üzerine yaz</b>: Hedef dosyada kaynak dosyanızla aynı ada sahip 
+		 dosyaların üzerine yazar.</li>
+		<li class="b1"><b>Tam Yedekleme</b>: Yedekleme her gerçekleştirildiğinde 
+		 tüm yedekleme verilerini içeren ayrı bir klasör oluşturur.</li>
+		<li class="b1"><b>Artımlı Yedekleme</b>: Kaynak dosyaları hedef 
+		 dosyalardan daha yeni olan dosyaların üzerine yazar.</li>
+	</ul>
+	<ol start="11" style="list-style: decimal;">
+		<li class="n1"><span style="font-weight: bold;">Sonraki</span> 
+		 butonuna tıklayın.</li>
+		<li class="n1">My Cloud Mirror aygıtınızdaki yedeğiniz için Yerel 
+		 Yol alanına bir yol girin.</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">Aygıttaki yedeğiniz için bir konuma göz atmak üzere 
+		 <span style="font-weight: bold;">Gözat</span> butonuna tıklayın.<br />
+		(Örnek: Volume_1/backup)</li>
+	</ul>
+	<ol start="13" style="list-style: decimal;">
+		<li class="n1">Otomatik Güncelleme özelliğini etkinleştirmek için 
+		 <img src="Graphics/toggle_button.png" alt="" width="20" height="15" 
+				 border="0" />&#160;butonuna tıklayın. Bu işlem, yedeklemenizi 
+		 sizin oluşturduğunuz bir planlamaya göre otomatik olarak günceller.</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">Otomatik Güncelleme özelliğini etkinleştirirseniz:</li>
+		<li style="list-style: none; display: inline;"><ul style="list-style: circle;">
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">Otomatik 
+			 Güncelleme planı seçin: Günlük, Haftalık veya Aylık</p></li>
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">Aşağı 
+			 açılan menüden Otomatik Güncelleştirme Saati öğesini seçin 
+			 (Günlük seçeneği).</p></li>
+			<li class="b1"><p class="Normal_BeforeList" style="margin-left: 0px;">Aşağı 
+			 açılan menülerden Otomatik Güncelleştirme Tarih ve Saati öğesini 
+			 seçin (Haftalık veya Aylık seçeneği).</p></li>
+		</ul></li>
+	</ul>
+	<ol start="14" style="list-style: decimal;">
+		<li class="n1"><b>Sonraki</b> butonuna tıklayın.</li>
+		<li class="n1">Ayarlarınızı gözden geçirin ve ardından <b>Son</b> 
+		 butonuna tıklayın. Amazon S3 Bulut yedeklemeniz oluşturulur.</li>
+	</ol></li>
+</ol>
+<p class="Body" style="margin-left: 60px;"><span style="font-weight: bold;">NOT</span>: 
+ Aygıt yedeklemelerinizi görüntülemek için Amazon S3 Bulut yedekleme demetinize 
+ erişin.</p>
+<p class="ListContinue2CxSpLast">&#160;</p>
+<p>
+<a href="javascript:void(0);" onclick="var e; if (parseInt(navigator.appVersion)>=4){e=event;}  if (parseInt(navigator.appVersion) &gt;=2 &amp;&amp; typeof(PickupDialog_Invoke) == 'function') PickupDialog_Invoke(e,'','Bulut Yedekleme Nedir','What_is_a_Cloud_Backup.htm','ElephantDrive Bulut Yedeklemeyi Etkinleştirme','Enabling_an_ElephantDrive_Cloud_Backup.htm');return false;" title="Ayrıca Bkz"><img src="ss_btn_ayrıca_bkz.gif" border="0" height="17" width="58" alt="Ayrıca Bkz" /></a>
+
+ &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</p>
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt;">© 2015 Western Digital Technologies, Inc. 
+	 <span lang="de-DE" xml:lang="de-DE">Tüm hakları saklıdır.</span></p>
+</div>
+<script type="text/javascript" language="JavaScript">//<![CDATA[
+if (parseInt(navigator.appVersion) >= 3 && typeof (WritePopupMenuLayer) == "function")
+  WritePopupMenuLayer();
+//]]></script><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>
+

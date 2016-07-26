@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="fr-FR" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>Activation du réacheminement de port</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addButton("show",BTN_TEXT,"Afficher","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left; background: #fafafa\"> ");
+AddMasterBreadcrumbs("index.htm", "", "&gt;", "Home", "welcome.htm");
+document.write("Activation du réacheminement de port<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(0);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1>Activation du réacheminement de port</h1>
+<p class="Body">Si l'accès distant à votre cloud est activé via une connexion 
+ relais, vous pouvez améliorer les performances réseau en activant le réacheminement 
+ de port.</p>
+<p class="Body"><span style="font-weight: bold;">Remarque&#160;</span>: 
+ pour déterminer si votre connexion d'accès mobile est une connexion relais, 
+ consultez <a href="access_check_status.htm">Vérification de l'état de 
+ l'accès distant</a>.</p>
+<p class="Body"><span style="font-weight: bold;">Important</span>&#160;: 
+ avant de commencer cette procédure, vous devez connaître la plage valide 
+ de numéros de ports que vous pouvez utiliser pour votre routeur et sélectionner 
+ les ports appropriés pour les protocoles HTTP et HTTPS. La plage de numéros 
+ de port est 1024&#160;-&#160;66535. En règle générale, le port 80 est 
+ affecté au protocole HTTP et le port 443 au protocole HTTPS.</p>
+<p class="Body">Suivez ces étapes pour activer le réacheminement de port.</p>
+<ol style="list-style: decimal;">
+	<li style="list-style: none; display: inline;"><ol style="list-style: decimal;">
+		<li class="n1" style="font-weight: normal;">Cliquez sur <span style="font-weight: bold;">Paramètres</span>.</li>
+		<li class="n1">Dans le volet de gauche, cliquez sur <span style="font-weight: bold;">Général</span>.</li>
+		<li class="n1">Dans la section Accès au cloud, cliquez sur <img src="graphics/toggle_button.png" alt="" style="border: none;" width="20" height="12" border="0" /> pour activer l'accès au cloud, 
+		 le cas échéant.</li>
+		<li class="n1">Cliquez sur <span style="font-weight: bold;">Configurer</span>.</li>
+		<li class="n1">Dans le champ Connectivité, cliquez sur <span style="font-weight: bold;">Manuel</span>.</li>
+		<li class="n1">Dans le champ Port externe&#160;1, saisissez le 
+		 numéro du port utilisé pour les sessions&#160;HTTP.</li>
+		<li class="n1">Dans le champ Port externe&#160;2, saisissez le 
+		 numéro du port utilisé pour les sessions&#160;HTTPS.</li>
+		<li class="n1">Cliquez sur <span style="font-weight: bold;">Appliquer</span>.</li>
+		<li class="n1">Configurez votre routeur de façon à utiliser les 
+		 ports indiqués aux étapes&#160;6 et&#160;7.</li>
+	</ol>
+	<p>&#160;</p></li>
+</ol>
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt;">© 2015 Western Digital Technologies, Inc. 
+	 <span style="color: rgb(75, 90, 104); font-size: 10.6666669845581px; 
+			 line-height: 21.3333339691162px; orphans: auto; widows: 1; 
+			 -webkit-text-stroke-width: 0px; display: inline	 ! important ; 
+			 float: none; background-color: rgb(250, 250, 250);">Tous droits 
+	 réservés.</span> </p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>

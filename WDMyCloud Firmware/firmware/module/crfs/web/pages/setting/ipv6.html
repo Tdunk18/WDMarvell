@@ -1,0 +1,123 @@
+<!doctype html>
+<head>	
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="-1">
+
+<!-- jQuery Lib -->
+<script type="text/javascript" src="/web/jquery/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/web/jquery/js/jquery-migrate-1.1.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/web/jquery/css/redmond/jquery-ui-1.10.3.min.css">
+<link rel="stylesheet" type="text/css" href="/web/jquery/css/jquery-ui.custom.css">
+<script type="text/javascript" src="/web/jquery/js/jquery-ui-1.10.3.min.js"></script>
+<script type="text/javascript" src="/web/jquery/js/jquery.tools-1.2.7.min.js"></script>
+<script type="text/javascript" src="/web/jquery/js/jquery.tools.expose-1.2.7.min.js"></script>
+
+<script type="text/javascript" src="/web/jquery/jquery.cookie/jquery.cookie.js"></script>
+<script type="text/javascript" src="/web/jquery/jquery.cookie/jquery.cookie.pack.js"></script>		
+
+<!--jAlert-->
+<link rel="stylesheet" type="text/css" href="/web/jquery/alerts/jquery.alerts.css?v=WDV1.00">
+<script type="text/javascript" src="/web/jquery/alerts/jquery.alerts.js?v=WDV1.00"></script>
+
+<script>
+var sys_time = (new Date()).getTime(); 
+//generic
+document.write("<link rel=\"STYLESHEET\" type=\"text/css\" href=\"/web/css/style.css?id="+  sys_time+"\">");
+document.write("<script language=\"javascript\" src=\"/web/function/ipv6.js?id="+sys_time+"\"><\/script>");
+document.write("<script language=\"javascript\" src=\"/web/function/ipv6Diag.js?id="+sys_time+"\"><\/script>");
+//document.write("<script language=\"javascript\" src=\"/web/function/init.js?id="+sys_time+"\"><\/script>");
+document.write("<script language=\"javascript\" src=\"/web/function/language.js?id="+sys_time+"\"><\/script>");
+document.write("<script language=\"javascript\" src=\"/web/function/wd_ajax.js?id="+sys_time+"\"><\/script>");
+</script>
+
+<style>
+
+._b1
+{
+	margin:0 auto;		
+	border: 0px solid red;
+	background-color:#282828;
+	width:1024px;
+	height:682px;
+	position: relative;
+}
+._b2
+{
+	position: relative;
+	background-color:#1d1d1d;
+	width:100%;
+	height:80px;
+	border-bottom: 1px solid #191919;
+}
+
+</style>
+<script>
+$(document).ready(function(){
+
+	$.cookie('username', "admin", { expires: 365 ,path: '/'});
+	get();
+	
+	ready_language();
+});
+
+var _index=0;
+function get()
+{
+	var new_ip = get_new_ipv6_addr("1");
+	
+	if(new_ip.length < 1 && _index < 5)
+	{
+		_index++;
+		setTimeout(get,3000);
+		return;
+	}
+	else
+	{
+		_del_wto();
+	}
+	
+	function _del_wto()
+	{
+		$.ajax({
+				type:"GET",
+				url:"/cgi-bin/network_mgr.cgi?cmd=cgi_del_wto",
+				cache:false,
+				dataType: "xml",
+				success: function(xml) {
+						jAlert(_T('_wizard','relogin_msg'), "complete","",goto_login_page);
+				}
+		});				
+	}
+	
+	function goto_login_page()
+	{
+		if(new_ip.length>1)
+			location.replace("http://["+ new_ip + "]");	
+		else
+			location.replace("/");
+	}
+}
+
+</script>
+
+</head>
+<body topmargin="0" leftmargin="0" style="overflow-x:hidden;overflow-y:auto">
+<div class="_b1">
+	<div class="_b2">
+		<div class="wd_logo">
+			<div class="wd_dev"></div>
+		</div>
+	</div>
+	<div align="center" style="padding-top:150px;">
+		<table border="0" cellspacing="0" cellpadding="0" height="0">
+			<tr>
+				<td><img border="0" src="/web/images/SpinnerSun.gif" width="42" height="42"></td>
+				<td class="tdfield_padding_left_10"><div class="_text" lang="_common" datafld="wait"></div></td>
+			</tr>
+		</table>
+	</div>
+</div>
+</body>
+</html>

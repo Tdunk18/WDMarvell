@@ -1,0 +1,14 @@
+prefix=/home/ben/wdic-gpl/samba-4.0.9/source3/../../_xinstall/KingsCanyon
+exec_prefix=${prefix}
+libdir=/lib
+includedir=${prefix}/include
+
+Name: Samba libsmbsharemodes
+Description: A library
+Version: 0
+URL: http://www.samba.org/
+#Libs: -L/lib -lsmbsharemodes
+Libs: -lsmbsharemodes
+Libs.private: -lsmbsharemodes -lresolv -lnsl -lssl -lcrypto -lz -ldl -lrt -liconv -lrt -lpthread
+Cflags: -I${prefix}/include
+

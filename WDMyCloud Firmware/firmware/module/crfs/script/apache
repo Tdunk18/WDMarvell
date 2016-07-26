@@ -1,0 +1,166 @@
+#!/bin/sh
+
+check_cabundle() {
+	CK_SERVER_CABUNDLE_FILE="${1}"
+
+	cabundle_info=`cat ${CK_SERVER_CABUNDLE_FILE} 2>/dev/null | grep -e '-BEGIN CERTIFICATE\-' -e '-END CERTIFICATE-' -n | awk '{ print $1 }'`
+	[ -z "${cabundle_info}" ] && return 1
+	for linenum in $cabundle_info ;do
+		if [ -z "$rsnum" ];then
+			[ `echo $linenum | grep "BEGIN" >/dev/null 2>&1;echo $?` ] || return 1
+			rsnum=${linenum%:*}
+		else
+			[ `echo $linenum | grep "END" >/dev/null 2>&1;echo $?` ] || return 1
+			renum=${linenum%:*}
+			sed -n "${rsnum},${renum}p" ${CK_SERVER_CABUNDLE_FILE} | openssl verify 2>&1 | grep "unable to load" >/dev/null 2>&1; [ "$?" -eq "0" ] && return 1
+			rsnum=
+		fi
+	done
+
+	[ -z "${rsnum}" ] && return 0 || return 1
+}
+
+check_if_reset_certificates() {
+	SAVED_SERVER_KEY_FILE=/etc/wdcomp.d/admin-rest-api/saved_settings/var/www/rest-api/config/server.key
+	SAVED_SERVER_CRT_FILE=/etc/wdcomp.d/admin-rest-api/saved_settings/var/www/rest-api/config/server.crt
+	SAVED_SERVER_CABUNDLE_FILE=/etc/wdcomp.d/admin-rest-api/saved_settings/var/www/rest-api/config/server.ca-bundle
+	SERVER_KEY_FILE=/var/www/rest-api/config/server.key
+	SERVER_CRT_FILE=/var/www/rest-api/config/server.crt
+	SERVER_CABUNDLE_FILE=/var/www/rest-api/config/server.ca-bundle
+	num_certs=`(openssl x509 -noout -modulus -in $SERVER_CRT_FILE 2>&1 | openssl md5 ; openssl rsa -noout -modulus -in $SERVER_KEY_FILE 2>&1 | openssl md5 ) | busybox uniq | wc -l`
+
+	if [ "$num_certs" == "1" ]; then
+		check_cabundle "${SERVER_CABUNDLE_FILE}"
+		[ $? -ne 0 ] && num_certs=5
+	fi
+
+	# echo "num_certs=$num_certs"
+
+	if [ "$num_certs" != "1" ]; then
+		echo "Reverting default certificates, restart apache"
+		cp -f $SAVED_SERVER_CRT_FILE $SERVER_CRT_FILE > /dev/null 2>&1
+		cp -f $SAVED_SERVER_KEY_FILE $SERVER_KEY_FILE > /dev/null 2>&1
+		cp -f $SAVED_SERVER_CABUNDLE_FILE $SERVER_CABUNDLE_FILE > /dev/null 2>&1
+		access_mtd "cp -f $SAVED_SERVER_CRT_FILE /usr/local/config/" > /dev/null 2>&1
+		access_mtd "cp -f $SAVED_SERVER_CRT_FILE /usr/local/config/" > /dev/null 2>&1
+		access_mtd "cp -f $SAVED_SERVER_CABUNDLE_FILE /usr/local/config/" > /dev/null 2>&1
+		return 1
+	fi
+	return 0
+}
+
+start_apache() {
+	. /usr/local/sbin/envvars; httpd -f /usr/local/apache2/conf/httpd.conf > /dev/null 2>&1
+	result=$?
+	return $result
+}
+
+restart_apache() {
+	. /usr/local/sbin/envvars; httpd -f /usr/local/apache2/conf/httpd.conf -k graceful > /dev/null 2>&1
+	result=$?
+	return $result
+}
+
+pull_new_cert_and_restart_apache() {
+	# Call run_ssl_cert_job.sh to pull new ssl cert and restart apache
+	# It may cost many seconds to pull the new ssl cert
+	# Put it to background
+	run_ssl_cert_job.sh &
+}
+
+start_web() {
+	if [ ! -e /var/log/apache2 ]; then
+		mkdir -m 777 -p /var/log/apache2
+	fi
+
+	start_apache
+	result=$?
+	if [ "$result" != "0" ]; then
+		check_if_reset_certificates
+		if [ $? -ne 0 ]; then
+			# the cert is wrong and has been replaced with the default one
+			# start the apache in default cert
+			# echo "start apache in default ssl cert"
+			start_apache
+
+			# pull the new cert and restart apache
+			pull_new_cert_and_restart_apache
+		else
+			echo "Failed to start apache, ret = $result"
+			exit $result
+		fi
+	fi
+}
+
+restart_web() {
+	if [ ! -e /var/log/apache2 ]; then
+		mkdir -m 777 -p /var/log/apache2
+	fi
+
+	# Because the certificate files may be crash before restart
+	# check cert file first
+	check_if_reset_certificates
+	pull_new_cert=$?
+
+	restart_apache
+	result=$?
+	if [ "$result" != "0" ]; then
+		echo "Failed to restart apache, ret = $result"
+		exit $result
+	fi
+
+	if [ "$pull_new_cert" != "0" ]; then
+		# pull the new cert and restart apache
+		pull_new_cert_and_restart_apache
+	fi
+
+}
+
+stop_web() {
+	httpd -f /usr/local/apache2/conf/httpd.conf -k graceful-stop > /dev/null 2>&1
+}
+
+case $1 in
+start)
+	umask 0000
+	
+	if [ "$2" == "dav" ]; then
+		httpd -f /usr/local/apache2_dav/conf/httpd.conf > /dev/null 2>&1
+	elif [ "$2" == "web" ]; then
+		start_web
+	else
+    	echo $"Usage: apache {start|stop|restart} {web/dav}"
+		exit 1
+	fi
+	#echo -e "Start apache Daemon...." 
+	;;
+stop)
+	if [ "$2" == "dav" ]; then
+		httpd -f /usr/local/apache2_dav/conf/httpd.conf -k graceful-stop > /dev/null 2>&1
+	elif [ "$2" == "web" ]; then
+		stop_web
+	else
+		echo $"Usage: apache {start|stop|restart} {web/dav}"
+		exit 1	
+	fi
+	#echo -e "Stop apache Daemon...."
+	;;
+restart)
+	umask 0000
+	if [ "$2" == "dav" ]; then
+		httpd -f /usr/local/apache2_dav/conf/httpd.conf -k graceful > /dev/null 2>&1
+	elif [ "$2" == "web" ]; then
+		restart_web
+	else
+		echo $"Usage: apache {start|stop|restart} {web/dav}"
+		exit 1	
+	fi
+
+	;;
+*)
+    echo $"Usage: apache {start|stop|restart} {web/dav}"
+    exit 1
+	;;
+esac
+
+exit 0

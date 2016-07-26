@@ -1,0 +1,223 @@
+#!/bin/sh
+
+Hidden_Reserve()
+{
+   cp $HIDDEN_SYSTEMFILE_PATH/$1 $DEFAULT_TMP/
+}
+
+Remove_USB_Config()
+{
+  echo "Remove USB storage config"
+  for i in `ls /mnt/USB | sort`
+	do
+		if [ -e /mnt/USB/$i/.exports ]; then
+		  rm /mnt/USB/$i/.exports
+		fi
+		
+		if [ -e /mnt/USB/$i/.smb.xml ]; then
+		  rm /mnt/USB/$i/.smb.xml
+		fi
+
+		if [ -e /mnt/USB/$i/.smbm.xml ]; then
+		  rm /mnt/USB/$i/.smbm.xml
+		fi
+	done
+}
+
+source /usr/local/modules/files/project_features
+#echo "PROJECT_FEATURE_CONFIG_FILESYSTEM=$PROJECT_FEATURE_CONFIG_FILESYSTEM"
+
+DSK_INDEX=abcdefghijklmnopqrstuvwxyz
+dsknum=1
+DEFAULT_TMP=/tmp/default_tmp
+IMAGE_CFS_PATH=/usr/local/modules
+CONFIG_DEFAULT_PATH=/usr/local/default
+CONFIG_PATH=/usr/local/config
+CONFIG_DEV=/dev/mtd5
+CONFIG_DEVBLOCK=/dev/mtdblock5
+MINI_MTD1_PATH=/usr/local/mtd1
+MINI_MID2_PATH=/usr/local/mtd2
+MTD1_DEV=/dev/mtdblock1
+MTD2_DEV=/dev/mtdblock2
+RESERVE_FILE=/usr/local/modules/files/reset_default_reserve_file.txt
+cmd=$1
+
+#echo "PROJECT_FEATURE_UART_CMD_AUTO_POWER_RECOVERY=$PROJECT_FEATURE_UART_CMD_AUTO_POWER_RECOVERY"
+
+mtd_type=$PROJECT_FEATURE_CONFIG_FILESYSTEM
+
+#echo "config mtd type is $mtd_type"
+killall -TERM crond
+
+if [ -n "$cmd" ]; then
+	mkdir $DEFAULT_TMP
+	
+	if [ $cmd = "1" ]; then
+		#remove cloud user ,
+		#SKY-4001 Old device_user data not deleted after factory resotre
+		deleteDeviceInfo.sh
+		
+		## copy reserve file ##
+		count=1
+		cat $RESERVE_FILE |
+		while IFS=: read file_name
+		do
+			if [ -n "$file_name" ];then
+				echo "reserve file $file_name"
+				cp -a $CONFIG_PATH/$file_name $DEFAULT_TMP
+			fi
+			count=`expr $count + 1`
+		done
+		
+		rm -rf $CONFIG_PATH/*
+		cp $CONFIG_DEFAULT_PATH/* $CONFIG_PATH
+		cp $CONFIG_DEFAULT_PATH/mail_event_conf.xml /etc/
+		
+		mv $DEFAULT_TMP/* $CONFIG_PATH
+	
+		#for timezone#
+		chk_timezone.sh load_default
+
+		rm -f /etc/blockip
+
+		#clear usershres table of orion.db when reset
+		smbcmd -c
+	
+		#itune -it must stay after samba reset
+        itune_tool --load_default
+
+		# clear Device_user (need not to do this)
+		# sqlite3 /usr/local/nas/orion/orion.db 'delete from DeviceUsers'
+		access_mtd "rm /usr/local/config/CacheVolume/.wd-alert/wd-alert-desc.db"
+
+#		if [ "$PROJECT_FEATURE_UART_CMD_AUTO_POWER_RECOVERY" = "1" ];then
+#				up_send_ctl APRDisable
+#		fi
+	
+		# stop quota and del quota setting
+		quotaoff -a
+		## User Disk partition ##
+		dsknum=1
+		while [ $dsknum -le 26 ]
+		do
+			DISK_PATH=/mnt/HD/HD_`expr substr "$DSK_INDEX" "$dsknum" 1`2
+			DISK_SYSTEMFILE_PATH=$DISK_PATH/.systemfile
+			if [ -d "$DISK_SYSTEMFILE_PATH" ];then
+				#echo "reset default $DISK_SYSTEMFILE_PATH"
+				cp $IMAGE_CFS_PATH/files/.aquota.group $DISK_SYSTEMFILE_PATH/
+				cp $IMAGE_CFS_PATH/files/.aquota.user $DISK_SYSTEMFILE_PATH/
+			fi
+			dsknum=`expr $dsknum + 1`
+		done
+		
+		#*** -->  To do del apkg ****
+	
+		#Del systemfile folder
+		## hidden partiton ##
+		dsknum=1
+		while [ $dsknum -le 26 ]
+		do
+			HIDDEN_PATH=/mnt/HD_`expr substr "$DSK_INDEX" "$dsknum" 1`4
+			HIDDEN_SYSTEMFILE_PATH=$HIDDEN_PATH/.systemfile
+			if [ -d "$HIDDEN_SYSTEMFILE_PATH" ];then
+				# --> To do HD_x4 .systemfile reserve , don't delete file when reset default #
+				#echo "reset default $HIDDEN_SYSTEMFILE_PATH"
+				Hidden_Reserve hd_volume_info.xml
+				Hidden_Reserve .smbm.xml
+				Hidden_Reserve .smb.xml
+				Hidden_Reserve .smb_ads.xml
+				Hidden_Reserve iscsi*.xml
+				
+				rm -rf $HIDDEN_SYSTEMFILE_PATH
+				mkdir $HIDDEN_SYSTEMFILE_PATH
+				chmod 700 $HIDDEN_SYSTEMFILE_PATH
+				if [ -e $HIDDEN_PATH/twonkymedia/twonkyserver.ini ]; then
+				  #rm $HIDDEN_PATH/twonkymedia/twonkyserver.ini
+				  twonky_reset.sh
+				fi
+				mv /tmp/default_tmp/* $HIDDEN_SYSTEMFILE_PATH/
+				cp -f /tmp/default_tmp/.smbm.xml $HIDDEN_SYSTEMFILE_PATH/
+				cp -f /tmp/default_tmp/.smb.xml $HIDDEN_SYSTEMFILE_PATH/
+				cp -f /tmp/default_tmp/.smb_ads.xml $HIDDEN_SYSTEMFILE_PATH/
+			fi
+			dsknum=`expr $dsknum + 1`
+		done
+		
+		#remove usb storage config
+		Remove_USB_Config
+		xmldbc -l ${CONFIG_PATH}/config.xml
+		
+		#Run wd2go.sh script when system restore +20150807.VODKA:Jira-SKY-4083
+		wd2go_file="/etc/nas/wd2go_setting"
+		
+		if [ -e "$wd2go_file" ]; then
+			command=`cat $wd2go_file`
+			echo "Run wd2go.sh `echo $command`" >> /usr/local/config/wd2go_log
+			/usr/local/sbin/wd2go.sh "$command"
+		fi
+		
+		echo 1 > /tmp/reset_default
+		
+	elif [ $cmd = "2" ]; then
+	  #lan setting to default 
+	  count=1
+	  while [ $count -le $PROJECT_FEATURE_LAN_PORT ]
+	  do
+	    lan_interface=lan`expr ${count} - 1`
+	    echo "set $lan_interface"
+  		xmldbc -s "/network_mgr/${lan_interface}/speed" "0"
+  		xmldbc -s "/network_mgr/${lan_interface}/dhcp_enable" "1"
+  		if [ "$lan_interface" = "lan0" ]; then
+  		  xmldbc -s "/network_mgr/${lan_interface}/ip" "192.168.0.32"
+  		elif  [ "$lan_interface" = "lan1" ]; then
+  		  xmldbc -s "/network_mgr/${lan_interface}/ip" "192.168.0.33"
+  		fi
+  		
+  		xmldbc -s "/network_mgr/${lan_interface}/netmask" "255.255.255.0"
+  		xmldbc -s "/network_mgr/${lan_interface}/gateway" "192.168.0.1"
+  		xmldbc -s "/network_mgr/${lan_interface}/jumbo_enable" "0"
+  		xmldbc -s "/network_mgr/${lan_interface}/jumbo_mtu" "1500"
+  		xmldbc -s "/network_mgr/${lan_interface}/vlan_enable" "0"
+  		xmldbc -s "/network_mgr/${lan_interface}/vlan_id" "0"
+  		xmldbc -s "/network_mgr/${lan_interface}/dns_manual" "0"
+  		xmldbc -s "/network_mgr/${lan_interface}/dns1" ""
+  		xmldbc -s "/network_mgr/${lan_interface}/dns2" ""
+  		xmldbc -s "/network_mgr/${lan_interface}/dns3" ""
+  		
+  		xmldbc -s "/network_mgr/${lan_interface}/ipv6/mode" "off"
+  		xmldbc -s "/network_mgr/${lan_interface}/ipv6/local_ipv6address" ""
+  		xmldbc -s "/network_mgr/${lan_interface}/ipv6/local_prefix_length" ""
+  		xmldbc -s "/network_mgr/${lan_interface}/ipv6/dhcp_ipv6address" ""
+  		xmldbc -s "/network_mgr/${lan_interface}/ipv6/dhcp_prefix_length" ""
+  		xmldbc -s "/network_mgr/${lan_interface}/ipv6/gateway" ""
+  		xmldbc -s "/network_mgr/${lan_interface}/ipv6/dns1" ""
+  		xmldbc -s "/network_mgr/${lan_interface}/ipv6/dns2" ""
+  		xmldbc -s "/network_mgr/${lan_interface}/ipv6/count" "0"
+  		xmldbc -s "/network_mgr/${lan_interface}/ipv6/dns_manual" "0"
+  		count=`expr $count + 1`
+		done
+		
+		if [ "$PROJECT_FEATURE_BONDING" = "1" ]; then
+		  xmldbc -s "/network_mgr/bonding/enable" "1"
+		  xmldbc -s "/network_mgr/bonding/mode" "1"
+		fi
+		
+		#Dashboard Cloud Access
+		xmldbc -s "/cloud/enable" "0"
+		
+		xmldbc -D /tmp/config.xml 
+		
+		access_mtd "cp -f /tmp/config.xml /usr/local/config/"
+		
+		# change admin password to default
+		account -m -u admin -p ''
+		access_mtd "cp -f /etc/passwd /usr/local/config/"
+		access_mtd "cp -f /etc/shadow /usr/local/config/"
+		
+		echo 2 > /tmp/reset_default
+	fi
+
+	rm -rf $DEFAULT_TMP
+	cp /tmp/reset_default /usr/local/config/
+	sync
+fi

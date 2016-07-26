@@ -1,0 +1,76 @@
+#!/bin/sh
+
+PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/bin:/usr/local/sbin
+
+WDMCSERVER_INSTALL_DIR=/usr/local/wdmcserver
+INSTALL_DIR=/usr/local/wdmcserver
+DAEMON=$INSTALL_DIR/bin/wdphotodbmerger
+PIDFILE=/var/run/wdphotodbmerger.pid
+WDMC_NOTIFICATION_SOCKET=/tmp/WDMCNotification.socket
+export LC_ALL=en_US.UTF-8
+
+test -x $DAEMON || exit 5
+
+# Use this function to launch the daemon w/ "share" group ownership
+launch_as_newgrp() {
+
+newgrp share <<FOO
+cd $INSTALL_DIR/bin
+$DAEMON >& /dev/null &
+FOO
+
+}
+
+case $1 in
+    start)
+        # Wait for the socket to be ready
+        while [ ! -S $WDMC_NOTIFICATION_SOCKET ]; do
+          sleep 1
+        done
+        echo "Starting wdphotodbmerger"
+        renice 0 -p $$
+        export LD_LIBRARY_PATH=$WDMCSERVER_INSTALL_DIR/lib:$WDMCSERVER_INSTALL_DIR/bin
+        $0 status > /dev/null
+        status=$?
+        if [ $status -ne 0 ]; then
+            launch_as_newgrp
+            status=$?
+            echo "WDPhotodbmerger started "  $status
+        else
+            echo "WDPhotodbmerger already running"
+        fi
+        ;;
+    stop)
+        echo "Stopping wdphotodbmerger"
+        kill -9 `pidof wdphotodbmerger`
+        # Wait a little and remove stale PID file
+        sleep 1
+        ;;
+    reset)
+        $0 stop && sleep 1 && $0 start
+        ;;
+    restart)
+        $0 stop && sleep 5 && $0 start
+        ;;
+    try-restart)
+        if $0 status >/dev/null; then
+            $0 restart
+        else
+            exit 0
+        fi
+        ;;
+    status)
+        pidof wdphotodbmerger >/dev/null
+        status=$?
+        if [ $status -eq 0 ]; then
+            echo "wdphotodbmerger is running."
+        else
+            echo "wdphotodbmerger is not running."
+        fi
+        exit $status
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart|reset|try-restart|status}"
+        exit 2
+        ;;
+esac

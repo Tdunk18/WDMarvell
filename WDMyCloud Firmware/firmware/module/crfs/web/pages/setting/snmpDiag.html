@@ -1,0 +1,222 @@
+<div id="snmpDiag_v3" class="WDLabelDiag" style="display:none">
+	<div class="WDLabelHeaderDialogue WDLabelHeaderDialogueSNMPIcon" id="snmpDiag_title_v3"></div>
+	<div align="center"><div class="hr"><hr/></div></div>
+	
+	<!-- snmpDiag_set_main for v2.0 -->
+	<div id="snmpDiag_set_main" style="display:none">	
+		<div class="WDLabelBodyDialogue">
+			<table id="snmp_tb" border="0" cellspacing="0" cellpadding="0" height="0">
+						<tr>
+							<td class="tdfield">
+								<span class="TD field _text" lang="_wfs" datafld="location"></span>
+							</td>
+							<td class="tdfield_padding">
+								<input type="text" name="settings_networkSnmpSysLocation_text" id="settings_networkSnmpSysLocation_text" maxLength="255" >
+							</td>
+						</tr>
+						<tr>
+							<td class="tdfield">
+								<span class="TD field _text" lang="_snmp" datafld="sys_contact"></span>
+							</td>
+							<td class="tdfield_padding">
+								<input type="text" name="settings_networkSnmpSysContact_text" id="settings_networkSnmpSysContact_text" maxLength="255" >
+							</td>
+						</tr>
+						<tr>
+							<td class="tdfield">
+								<span class="TD field _text" lang="_snmp" datafld="notification"></span>
+							</td>
+							<td class="tdfield_padding">
+								<input id="settings_networkSnmpNote_switch" name="settings_networkSnmpNote_switch" class="onoffswitch" type="checkbox" value="true" style="position: absolute; z-index: -1; visibility: hidden;">
+							</td>
+						</tr>
+						<tr id="snmp_note_comm_tr">
+							<td class="tdfield">
+								<span class="TD field _text" lang="_snmp" datafld="notification_community"></span>
+							</td>
+							<td class="tdfield_padding">
+								<input type="text" name="settings_networkSnmpNoteCommunity_text" id="settings_networkSnmpNoteCommunity_text" maxLength="255" >
+							</td>
+						</tr>
+						<tr id="snmp_note_ip_tr">
+							<td class="tdfield">
+								<span class="TD field _text" lang="_snmp" datafld="notification_ip"></span>
+							</td>
+							<td class="tdfield_padding">
+								<input type="text" name="settings_networkSnmpNoteIP_text" id="settings_networkSnmpNoteIP_text">
+							</td>
+						</tr>
+						<tr id="snmpMainDiag_v2_field" style="display:none">
+							<td class="tdfield">
+								<span class="TD field _text" lang="_snmp" datafld="community_v2"></span>
+							</td>
+							<td class="tdfield_padding">
+								<input type="text" name="settings_networkSnmpCommunity_text" id="settings_networkSnmpCommunity_text" maxLength="255" >
+							</td>
+						</tr>
+						<tr id="snmpMainDiag_v3_field" style="display:none">
+							<td class="tdfield">
+								<span class="TD field _text" lang="_snmp" datafld="title_2"></span>
+							</td>
+							<td class="tdfield_padding">
+								<button type="button" class="ButtonMarginLeft" id="settings_networkSnmpUserManagement_button"><span class="_text" lang="_menu_title" datafld="users"></span></button>
+							</td>
+						</tr>
+			</table>								
+		</div> 
+
+		<button type="button" class="ButtonMarginLeft_40px close" id="settings_networkSnmpMainCancel_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonRightPos2" id="settings_networkSnmpMainApply_button"><span class="_text" lang="_button" datafld="apply"></span></button>
+	</div> <!-- snmpDiag_set_main end -->
+
+	
+	<!-- snmpDiag_set_v3 -->
+	<div id="snmpDiag_set_v3" style="display:none">	
+		<div class="WDLabelBodyDialogue">
+			<div>
+				<table border="0" cellspacing="0" cellpadding="0" height="0">
+					<tr><td>					
+						<button type="button" class="ButtonMarginLeft" id="settings_networkSnmpV3Add_button"><span class="_text" lang="_user" datafld="user_title"></span></button>
+					</td></tr>
+					<tr height="20"><td></td></tr>
+				</table>	
+			</div>			
+			<div class="scrollbar_snmp">
+				<div>
+					<table id="snmp_v3_tb" style="display:"></table>	
+				</div>	
+			</div>
+		</div> 
+		<div class="hrBottom2"><hr/></div>
+		<!-- <button type="button" class="ButtonMarginLeft_20px" id="settings_snmpV3CancelPhase2_button"><span class="_text" lang="_button" datafld="">Cancel</span></button>
+		<button type="button" class="ButtonRightPos2" id="settings_networkSnmpV3Close_button"><span class="_text" lang="_button" datafld="">Apply</span></button> -->
+		<button type="button" class="ButtonRightPos2" id="settings_networkSnmpV3Close_button"><span class="_text" lang="_button" datafld="Ok"></span></button>
+	</div>  <!-- snmpDiag_set_v3 end -->
+
+	
+	<!-- snmpDiag_set_v3 detail -->
+	<div id="snmpDiag_set_v3_detail" style="display:none">	
+		<div class="WDLabelBodyDialogue">
+			<table border="0" cellspacing="0" cellpadding="0" height="0">
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_user" datafld="user_name"></span></td>
+					<td class="tdfield_padding">
+						<input type="text" name="settings_networkSnmpV3DetailUserName_text" id="settings_networkSnmpV3DetailUserName_text" maxLength="31" size="20">
+					</td>
+				</tr>
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_snmp" datafld="scuritylevel"></span></td>
+					<td class="tdfield_padding">
+						<table border="0" cellspacing="0" cellpadding="0" height="0">
+							<tr>
+								<td>
+									<div id="settings_networkSnmpV3DetailSecLevel_select" class="select_menu"></div>
+								</td>
+								<td style="padding-left:10px;">
+									<div class="TooltipIcon" id="tip_snmp_3_level"></div>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr id="auth_tr" style="display:none">
+					<td class="tdfield"><span class="_text" lang="_snmp" datafld="authtype"></span></td>
+					<td class="tdfield_padding">
+						<table border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td>
+									<div id="settings_networkSnmpV3DetailAuth_switch" ><button class="left_button" value="MD5"><span class="_text" lang="_snmp" datafld="md5">MD5</span></button><button class="right_button" value="SHA"><span class="_text" lang="_snmp" datafld="sha">SHA</span></button></div>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr id="auth_pw_tr" style="display:none">
+					<td class="tdfield"><span class="_text" lang="_user" datafld="pw"></span></td>
+					<td class="tdfield_padding">
+						<table border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td>
+									<input type="password" name="settings_networkSnmpV3DetailAuthPwd_text" id="settings_networkSnmpV3DetailAuthPwd_text" maxLength="255" >
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr id="auth_confirm_pw_tr" style="display:none">
+					<td class="tdfield"><span class="_text" lang="_user" datafld="confirm_password"></span></td>
+					<td class="tdfield_padding">
+						<table border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td>
+									<input type="password" name="settings_networkSnmpV3DetailAuthConfirmPwd_text" id="settings_networkSnmpV3DetailAuthConfirmPwd_text" maxLength="255" >
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr id="encry_tr" style="display:none">
+					<td class="tdfield"><span class="_text" lang="_snmp" datafld="encrytype"></span></td>
+					<td class="tdfield_padding">
+						<table border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td>
+									<div id="settings_networkSnmpV3DetailEncry_switch" ><button class="left_button" value="DES"><span class="_text" lang="_snmp" datafld="des">DES</span></button><button class="right_button" value="AES"><span class="_text" lang="_snmp" datafld="aes">AES</span></button></div>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr id="encry_pw_tr" style="display:none">
+					<td class="tdfield"><span class="_text" lang="_user" datafld="pw"></span></td>
+					<td class="tdfield_padding">
+						<table border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td>
+									<input type="password" name="settings_networkSnmpV3DetailEncryPwd_text" id="settings_networkSnmpV3DetailEncryPwd_text" maxLength="255" >
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr id="encry_confirm_pw_tr" style="display:none">
+					<td class="tdfield"><span class="_text" lang="_user" datafld="confirm_password"></span></td>
+					<td class="tdfield_padding">
+						<table border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td>
+									<input type="password" name="settings_networkSnmpV3DetailEncryConfirmPwd_text" id="settings_networkSnmpV3DetailEncryConfirmPwd_text" maxLength="255" >
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_snmp" datafld="view"></span></td>
+					<td class="tdfield_padding">
+						<table border="0" cellspacing="0" cellpadding="0" height="0">
+							<tr>
+								<td>
+									<div id="settings_networkSnmpV3DetailView_select" class="select_menu"></div>
+								</td>
+								<td style="padding-left:10px;">
+									<div class="TooltipIcon" id="tip_snmp_3_view"></div>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>								
+		</div> 
+		<div class="hrBottom2"><hr/></div>
+
+		<button type="button" class="ButtonMarginLeft_40px" id="settings_networkSnmpV3DetailCancel_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" class="ButtonMarginLeft_20px" id="settings_networkSnmpV3DetailDel_button" onclick="snmp_v3_detail_del();"><span class="_text" lang="_common" datafld="del"></span></button>
+		<button type="button" class="ButtonRightPos2" id="settings_networkSnmpV3DetailApply_button"><span class="_text" lang="_button" datafld="apply"></span></button>
+	</div> <!-- snmpDiag_set_v3 end -->
+</div> <!-- snmpDiag end -->
+
+
+<form action="/cgi-bin/snmp_mgr.cgi" method="post" name="form_snmp_download">
+	<input type="hidden" name="cmd" value="cgi_download_MIB">
+</form>	

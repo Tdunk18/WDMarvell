@@ -1,0 +1,235 @@
+#!/bin/sh
+
+create_nfs_needed_files () {
+	mkdir -p /var/lib/nfs/
+	touch /var/lib/nfs/xtab; chmod 644 /var/lib/nfs/xtab
+	touch /var/lib/nfs/etab; chmod 644 /var/lib/nfs/etab
+	touch /var/lib/nfs/rmtab; chmod 644 /var/lib/nfs/rmtab
+	mkdir -p /var/lib/nfs/sm /var/lib/nfs/sm.bak
+	touch /var/lib/nfs/state
+	chmod go-rwx /var/lib/nfs/sm /var/lib/nfs/sm.bak /var/lib/nfs/state
+}
+
+delete_nfs_needed_files () {
+	rm -f /var/lib/nfs/xtab
+   	rm -f /var/lib/nfs/etab
+   	rm -f /var/lib/nfs/rmtab
+   	rm -f /var/lib/nfs/state
+	rm -rf /var/lib/nfs/sm
+	rm -rf /var/lib/nfs/sm.bak
+	rm -rf /var/lib/nfs/
+	
+	if [ -e /etc/exports ];then
+		rm -f /etc/exports
+	fi
+}
+
+start_up_nfs () {
+	/usr/sbin/rpcbind 2>/dev/null
+	mount -t nfsd nfsd /proc/fs/nfsd
+	/usr/sbin/rpc.nfsd 2>/dev/null
+	/usr/sbin/rpc.mountd 2>/dev/null
+	/usr/sbin/rpc.statd 2>/dev/null
+	/usr/sbin/exportfs -r 2>/dev/null 
+}
+
+stop_of_nfs () {
+	kill -9 `pidof rpc.statd` 2>/dev/null
+	kill -9 `pidof nfsd` 2>/dev/null
+	kill -9 `pidof rpc.mountd` 2>/dev/null
+	umount /proc/fs/nfsd 2>/dev/null
+	kill -9 `pidof rpcbind` 2>/dev/null
+	/usr/sbin/exportfs -au 2>/dev/null
+}
+
+case $1 in
+start)
+	NFS=$(xmldbc -g "/system_mgr/nfs/enable")
+
+	if [ "$NFS" == "0" ]; then
+		exit 1	
+	fi
+
+	PID_NFSD=`pidof nfsd`
+	if [ -z "$PID_NFSD" ]; then
+		create_nfs_needed_files
+	
+		if [ ! -e /etc/exports ];then
+			if [ ! -e /tmp/load_module_finished ];then
+				nfs_config
+				nfs_usb p
+		    fi
+		else
+			nfs_config
+			nfs_usb p
+		fi
+		
+		start_up_nfs
+		
+		touch /tmp/NFS_On
+	else
+		nfs_config
+		nfs_usb p
+		exportfs -r
+	fi
+	
+	;;
+
+stop)
+	stop_of_nfs
+
+   	delete_nfs_needed_files
+	
+	if [ -e /etc/exports ];then
+		rm -f /etc/exports
+	fi
+	
+	nfs_config
+	nfs_usb p
+	
+	if [ -e /tmp/NFS_On ];then
+	    rm -f /tmp/NFS_On
+	fi
+	;;
+
+p2p)
+	NFS=$(xmldbc -g "/system_mgr/nfs/enable")
+
+	PID_NFSD=`pidof nfsd`	
+
+	if [ "$NFS" == "1" ]; then
+		if [ -z "$PID_NFSD" ]; then
+			create_nfs_needed_files
+			
+			if [ ! -e /etc/exports ];then
+				if [ ! -e /tmp/load_module_finished ];then
+					nfs_usb bt
+					nfs_config
+					nfs_usb p
+			    fi
+			else
+				nfs_usb bt
+				nfs_config
+				nfs_usb p
+			fi
+		
+			start_up_nfs
+			
+			touch /tmp/NFS_On
+		else
+			nfs_usb bt
+			nfs_config
+			nfs_usb p
+			exportfs -r
+		fi
+	else
+		if [ ! -e /etc/exports ];then
+			if [ ! -e /tmp/load_module_finished ];then
+				nfs_usb bt
+				nfs_config
+				nfs_usb p
+		    fi
+		else
+			nfs_usb bt
+			nfs_config
+			nfs_usb p
+		fi
+	fi
+	;;
+
+amule)
+	NFS=$(xmldbc -g "/system_mgr/nfs/enable")
+	
+	PID_NFSD=`pidof nfsd`	
+	
+	if [ "$NFS" == "1" ]; then
+		if [ -z "$PID_NFSD" ]; then
+			create_nfs_needed_files
+			
+			if [ ! -e /etc/exports ];then
+				if [ ! -e /tmp/load_module_finished ];then
+					nfs_usb am
+					nfs_config
+					nfs_usb p
+			    fi
+			else
+				nfs_usb am
+				nfs_config
+				nfs_usb p
+			fi
+			
+			start_up_nfs
+		
+			touch /tmp/NFS_On
+		else
+			nfs_usb am
+			nfs_config
+			nfs_usb p
+			exportfs -r
+		fi
+	else
+		if [ ! -e /etc/exports ];then
+			if [ ! -e /tmp/load_module_finished ];then
+				nfs_usb am
+				nfs_config
+				nfs_usb p
+		    fi
+		else
+			nfs_usb am
+			nfs_config
+			nfs_usb p
+		fi
+	fi
+	;;
+
+
+restart)
+	#$0 stop
+    #$0 start
+	NFS=$(xmldbc -g "/system_mgr/nfs/enable")
+    if [ "$NFS" == "0" ]; then
+		stop_of_nfs
+		
+		delete_nfs_needed_files
+		
+		nfs_config
+		nfs_usb p
+		
+		if [ -e /tmp/NFS_On ];then
+	    	rm -f /tmp/NFS_On
+		fi
+
+		exit 1	
+	fi
+	
+	PID_NFSD=`pidof nfsd`		
+	if [ -z "$PID_NFSD" ]; then
+		create_nfs_needed_files	
+
+		if [ ! -e /etc/exports ]; then
+			if [ ! -e /tmp/load_module_finished ]; then
+				nfs_config
+				nfs_usb p
+			fi
+		else
+			nfs_config
+			nfs_usb p
+		fi
+		
+		start_up_nfs
+
+		touch /tmp/NFS_On
+	else
+		nfs_config
+		nfs_usb p
+		exportfs -r
+	fi
+
+	;;
+*)
+    echo $"Usage: nfs {start|stop|restart}"
+    exit 1
+	;;
+esac
+
+exit 0

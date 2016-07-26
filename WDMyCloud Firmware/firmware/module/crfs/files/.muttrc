@@ -1,0 +1,12 @@
+set sendmail= "/usr/bin/msmtp -C /etc/.msmtprc --force_timeout 120"
+set from= "nas.alerts@wdc.com"
+set move= no
+set sendmail_wait= 0
+set assumed_charset= "utf-8"
+set charset= "UTF-8"
+set send_charset= "utf-8:big5:gb2312:us-ascii:iso-8859-1"
+set hostname= "wdc.com"
+set edit_headers= yes
+set record="/dev/null"
+my_hdr Auto-Submitted: auto-generated
+my_hdr From: nas.alerts<nas.alerts@wdc.com>

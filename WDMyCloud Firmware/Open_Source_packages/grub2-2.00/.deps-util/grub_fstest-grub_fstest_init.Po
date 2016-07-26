@@ -1,0 +1,16 @@
+grub_fstest-grub_fstest_init.o: grub_fstest_init.c \
+ include/grub/emu/misc.h config.h config-util.h \
+ /usr/lib/gcc/i686-redhat-linux/4.4.5/include/stdarg.h \
+ include/grub/symbol.h include/grub/types.h
+
+include/grub/emu/misc.h:
+
+config.h:
+
+config-util.h:
+
+/usr/lib/gcc/i686-redhat-linux/4.4.5/include/stdarg.h:
+
+include/grub/symbol.h:
+
+include/grub/types.h:

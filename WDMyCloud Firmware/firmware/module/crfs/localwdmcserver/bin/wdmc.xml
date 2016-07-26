@@ -1,0 +1,61 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<wdmc>
+	<PurgeFrequency>259200</PurgeFrequency>
+	<PurgeWindow>2592000</PurgeWindow>
+	<MinCrawlCapacityMB>256000</MinCrawlCapacityMB>
+	<ExternalVolumeEmptyDB>false</ExternalVolumeEmptyDB>
+	<FolderChangeWaitMin>5</FolderChangeWaitMin>
+	<FolderChangeWaitMax>25</FolderChangeWaitMax>
+	<FolderChangeEventsThreshold>5000</FolderChangeEventsThreshold>
+	<MaxThreads>2</MaxThreads>
+	<AnalyticsLogIntervalSecs>604800</AnalyticsLogIntervalSecs>
+	<PathFilters>
+		<ExcludePatterns>
+			<ExcludePattern>/\.</ExcludePattern>
+			<ExcludePattern>/*/found\.[0-9]+</ExcludePattern>
+			<ExcludePattern>/*/\~\$</ExcludePattern>
+			<ExcludePattern>/*/AlbumArt_\{</ExcludePattern>
+			<ExcludePattern>/*/thumbs.db</ExcludePattern>
+			<ExcludePattern>/*/desktop.ini</ExcludePattern>
+			<ExcludePattern>/*/SmartWare$</ExcludePattern>
+			<ExcludePattern>\.sparsebundle</ExcludePattern>
+			<ExcludePattern>/*/Recycled</ExcludePattern>
+			<ExcludePattern>/*/RECYCLER</ExcludePattern>
+			<ExcludePattern>/*/RECYCLED</ExcludePattern>
+			<ExcludePattern>/*/\$RECYCLE\.BIN</ExcludePattern>
+			<ExcludePattern>/*/System Volume Information</ExcludePattern>
+			<ExcludePattern>/*/_WDPROT</ExcludePattern>
+			<ExcludePattern>/Nas_Prog(/.*)?$</ExcludePattern>
+			<ExcludePattern>/lost\+found</ExcludePattern>
+			<ExcludePattern>/AppleDouble(/.*)?$</ExcludePattern>
+			<ExcludePattern>/AppleDB(/.*)?$</ExcludePattern>
+			<ExcludePattern>/AppleDesktop(/.*)?$</ExcludePattern>
+			<ExcludePattern>/TemporaryItems(/.*)?$</ExcludePattern>
+			<ExcludePattern>/\~\.</ExcludePattern>
+			<ExcludePattern>/\~.*\.tmp$</ExcludePattern>
+			<ExcludePattern>/Backups.backupdb(/.*)?$</ExcludePattern>
+			<ExcludePattern>/*/*.mbox/.*/Attachments/</ExcludePattern>
+		</ExcludePatterns>
+		<CoverArtPatterns>
+			<CoverArtPattern>/AlbumArt.*\.jpg</CoverArtPattern>
+			<CoverArtPattern>/Folder\.jpg</CoverArtPattern>
+		</CoverArtPatterns>
+		<BackupPatterns>
+			<BackupPattern>/*/WD SmartWare\.swstor/*</BackupPattern>
+		</BackupPatterns>
+		<SystemPatterns>
+			<SystemPattern>/*/\.wdmc/*</SystemPattern>
+		</SystemPatterns>
+	</PathFilters>
+	<!--
+		AutoTranscodeMap specifies 'priority' and 'size' only.
+		The Profile & Plugin GUIDs are only determined during run-time.
+		This depends on information such as file extension/category/size etc.
+	-->
+	<AutoTranscodeMap>
+		<!-- tn96s1 -->
+		<AutoTranscode Size = "96x" Priority = "1"/>
+		<!-- i1024s1 -->
+		<AutoTranscode Size = "1024x" Priority = "2"/>
+	</AutoTranscodeMap>
+</wdmc>

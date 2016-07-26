@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="PRAGMA" content="no-cache"> 
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+</head>
+
+<script type="text/javascript">
+function page_load()
+{
+	go_sub_page('/web/backups/usb_backup.html', 'usb_backups');
+	
+	if (CLOUD_BACKUPS_FUNCTION == 1) $("#cloud_backups").show();
+	if (CAMERA_BACKUPS_FUNCTION == 1) $("#camera_backups").show();
+	
+	switch(parseInt(MULTI_LANGUAGE, 10))
+	{
+		case 4:
+		case 14:
+		case 15:
+			$(".LightningSubMenu li a").css('font-size','13px');
+		break;
+		
+		case 9:
+			$(".LightningSubMenu li a").css('font-size','11px');
+				var oBrowser = new detectBrowser();
+				if (oBrowser.isGoogle)
+				{						
+					$("#cloud_backups a").css('-webkit-transform','scale(0.9)').css('margin-left','-23px').css('font-size','10px');
+				}
+				else
+				{	
+					$("#cloud_backups a").css('font-size','10px');
+				}							
+		break;
+		case 13:
+				$("#cloud_backups a").css('font-size','13px');
+				break;
+		
+		default:
+			$(".LightningSubMenu li a").css('font-size','15px');
+		break;
+	}
+}
+
+function page_unload()
+{
+}
+</script>
+
+<body>
+<!-- banner 2nd layout -->
+<table cellspacing=0 cellpadding=0 border=0 style="width: 100%;">
+	<tr valign="bottom">
+		<td align="left">
+			<div class="header_1" style="width: auto;"><span class="_text" lang="_backup" datafld="title4"></span></div>
+		</td>
+		<td style="padding-bottom:15px; text-align: right; font-size: 0px;" align="right" id="tab_buttons">
+		</td>
+	</tr>		
+</table>
+<div class="hr_0"><div class="hr_1"></div></div>
+<!-- banner 2nd layout -->
+
+<!-- left menu -->			
+<table cellspacing=0 cellpadding=0 border=0>
+	<tr>
+		<td valign="top">
+			<div id="SubMenuDiv">
+				<div class="LightningSubMenubg">
+					<ul class="LightningSubMenu">
+						<li class="" id="usb_backups"><a id="backups_usb_link" href="javascript:go_sub_page('/web/backups/usb_backup.html', 'usb_backups');"><span class="_text" lang="_menu" datafld="usb_backups"></span></a></li>
+						<li class="" id="remoteBackup"><a id="backups_remote_link" href="javascript:go_sub_page('/web/backups/remoteBackup.html', 'remoteBackup');"><span class="_text" lang="_menu" datafld="remote_backups"></span></a></li>
+						<li class="" id="internal_backup"><a id="backups_internal_link" href="javascript:go_sub_page('/web/backups/internal_backup.html', 'internal_backup');"><span class="_text" lang="_backup" datafld="title1"></span></a></li>
+						<li class="" id="cloud_backups" style="display:none"><a id="backups_cloud_link" href="javascript:go_sub_page('/web/backups/cloud_backups.html', 'cloud_backups');"><span class="_text" lang="_cloud_backup" datafld="title"></span></a></li>
+						<li class="" id="camera_backups" style="display:none"><a id="backups_camera_link" href="javascript:go_sub_page('/web/backups/camera_backups.html', 'camera_backups');"><span class="_text" lang="_media" datafld="title4"></span></a></li>
+					</ul>
+				</div>
+			</div>
+		</td>
+		<td valign="top">	
+			<div class="r_content mainbody" id="mainbody" style="border:0px solid red;"></div>
+		</td>
+	</tr>
+</table>
+</body>
+</html>	

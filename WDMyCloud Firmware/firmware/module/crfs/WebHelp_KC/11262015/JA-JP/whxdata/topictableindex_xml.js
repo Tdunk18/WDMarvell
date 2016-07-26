@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><cki><ck fm=\"ディスク ステータスについて\" to=\"Apple Time Machine によるデータのバックアップ\" num=\"63\"/><ck fm=\"Time Machine によるバックアップをオフにする\" to=\"共有へのアクセスの変更\" num=\"64\"/><ck fm=\"ユーザー パスワードの追加/変更\" to=\"RAID ストレージの概要\" num=\"25\"/></cki>";

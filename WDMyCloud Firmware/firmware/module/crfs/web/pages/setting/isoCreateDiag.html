@@ -1,0 +1,228 @@
+<div id="isoCreateDiag" class="WDLabelDiag"  style="display:none;">
+		
+<div id="isoCD_title" class="WDLabelHeaderDialogue WDLabelHeaderDialogueISOCreateIcon">				<span class="_text" lang="_iso_create" datafld="create_iso"></span></div>
+<div align="center"><div class="hr"><hr/></div></div>
+
+<!-- step 0:-->
+<div id="iso_create_wizard_step0" style="display:none;" >
+		<div class="WDLabelBodyDialogue">
+				<span class="_text" lang="_iso_create" datafld="wizard_desc"></span>							
+		</div>	
+		
+		
+		<div class="hrBottom2"><hr/></div>					
+		
+		<button class="ButtonMarginLeft_40px close"><span class="_text" lang="_button" datafld="Cancel"></span></button>		
+		<button class="ButtonRightPos2" id="iso_next_button_0" ><span class="_text" lang="_button" datafld="Next"></span></button>
+		
+</div>
+
+<!-- step 1:-->
+<div id="iso_create_wizard_step1" style="display:none;" >
+<div class="WDLabelBodyDialogue">
+		
+		<span class="_text" lang="_iso" datafld="step1_desc"></span>		
+		<br><br>
+		<form name="form_iso" id="form_iso">
+		<table width="100%" border="0"  cellspacing="0" cellpadding="0" height="0">
+			<tr>
+					<td width="30%" height=40><span class="_text"  lang="_iso_create" datafld="total_size">Image Size</span></td>
+					<td width="70%">
+						<div class="select_menu" id="id_iso_size_top_main"></div>
+						<!--
+						<select id="f_size" name="f_size">
+							<option value="1">CDROM(650MB/74MIN)</option>
+							<option value="2" selected>DVD5(4.7GB)</option>
+							<option value="3">DVD9(8.5GB)</option>
+						</select>
+						-->
+					</td>
+			</tr>	
+			<tr>
+					<td width="30%" height=40><span class="_text"  lang="_iso_create" datafld="image_path">Image Path</span></td>
+					<td width="70%">
+						
+						<table border="0"  cellspacing="0" cellpadding="0" height="0">
+						<tr>
+							<td>
+								<input type="text" id="settings_utilitiesIsoPath_text" name="settings_utilitiesIsoPath_text" size="20" readonly maxlength="256"> 
+							</td>	
+							<td>
+								&nbsp;&nbsp;								
+							</td>	
+							<td>
+							<button type="button" id="settings_utilitiesIsoPath_button" onclick="iso_create_tree_dialog('form_iso','settings_utilitiesIsoPath_text');"><span class="_text"  lang="_button" datafld="browse">Browser</span></button>							
+							</td>	
+						</tr>	
+					</table>
+						</td>				
+			</tr>			
+			<tr>
+					<td width="30%" height=40><span class="_text"  lang="_iso_create" datafld="image_name">Image Name</span></td>
+					<td width="70%"><input type="text" id="settings_utilitiesIsoName_text" name="settings_utilitiesIsoName_text" maxlength="30" size="20"> </td>
+			</tr>			
+		</table>
+		</form>	
+</div>	
+		
+		
+		<div class="hrBottom2"><hr/></div>					
+	
+		
+	
+		<button class="ButtonMarginLeft_40px close" id="settings_utilitiesIsoCancel1_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>		
+		<button class="ButtonRightPos2" id="settings_utilitiesIsoNext1_button" ><span class="_text" lang="_button" datafld="Next"></span></button>
+		
+</div>
+
+<!-- step 2:-->
+
+<div id="iso_create_wizard_step2" style="display:none;">
+<div class="WDLabelBodyDialogue">
+<form name="form_iso_create" id="form_iso_create">
+		<div class="_text" lang="_iso_create" datafld="wizard_desc1">
+				Please select the content(s) you wish to add to the ISO file from the volume(s).
+		</div>
+<br>
+	
+	<table border="0" cellspacing="0" cellpadding="0" height="0">
+	<tr>
+		<td width=150 height=35>	
+					<span class="_text" lang="_iso_create" datafld="select"></span>
+		</td>			
+		<td>
+					<div id="f_type">		
+						<button id="settings_utilitiesIsoOverwrite_button"  type="button" class="left_button" value="1"><span class="_text"  lang="_iso_create" datafld="overwrite">Overwrite</span></button><button type="button" id="settings_utilitiesIsoSkip_button" class="right_button" value="0"><span class="_text" lang="_button" datafld="Skip">Skip</span></button>	
+					</div>	
+		</td>
+		<td style="padding-left:10px;">
+											<div class="TooltipIcon" id="tip_iso"></div>
+					</td>
+	</tr>	
+	<tr>	
+		<td width=150 height=35><span class="_text"  lang="_iso_create" datafld="total_space">Total</span></td>			
+		<td><span id="settings_utilitiesIsoTotalSpace_value">0</span> </td>
+	</tr>
+	<tr>
+		<td width=150 height=35>
+			<span class="_text"  lang="_iso_create" datafld="used_space">Used</span>
+		</td>	
+		<td>
+			<span id="settings_utilitiesIsoUsedSpace_value">0</span>
+		</td>	
+	</tr>		
+</table>	
+	<!--
+<input type="radio" checked id="f_type1" name="f_type" value="1"><label for="f_type1"><span class="_text"  lang="_iso_create" datafld="overwrite">Overwrite</span></label>  
+<input type="radio" id="f_type2" name="f_type" value="0"><label for="f_type2"><span class="_text" lang="_button" datafld="Skip">Skip</span></label>        
+-->
+
+
+
+			<table width="100%;">
+					<tr>
+						<td valign="top" width="45%">
+							<div class="isoCreate_scroll_pane" style="width:316px;height:250px;border:1px solid #333;-webkit-border-radius: 8px;-moz-border-radius: 8px;border-radius: 8px;">
+									<div id="img_tree_div"></div>
+							</div>
+						</td>	
+						<td width="10%" align="center" valign="middle">
+
+							
+							<div id="id_iso_wait" style="width:125px;display:"><img src="/web/images/SpinnerSun.gif"> </div>							
+						
+							<button  style="width:125px" id="settings_utilitiesIsoAdd_button" name="settings_utilitiesIsoAdd_button" type="button" onclick="iso_add();"><span class="_text" lang="_button" datafld="add"></span>>></button>										
+							<br><br>
+							<button  style="width:125px" id="settings_utilitiesIsoRemove_button"  type="button" onclick="del_folder();"><<<span class="_text" lang="_button" datafld="remove"></span></button>
+							<div style="width:125px"></div>
+						</td>
+						<td valign="top" width="45%">		
+							<div class="isoCreate_scroll_pane_right" style="width:316px;height:200px;border:1px solid #333;-webkit-border-radius: 8px;-moz-border-radius: 8px;border-radius: 8px;">
+									<div id="img_tree_div2"></div>
+							</div>		
+							<div style="padding-top:5px;">																					
+							<span class="_text" lang="_remote_backup" datafld="msg22">Select Path</span>:<br>
+							<input type="hidden" id="text_id" name="text_id">
+							
+							<table border="0"  cellspacing="0" cellpadding="0" height="0">
+							<tr>	
+								<td>
+									<input type="text" id="settings_utilitiesIsoSelectPath_text" name="settings_utilitiesIsoSelectPath_text" readonly> 
+								</td>
+								<td>
+									
+									<!-- <span class="del" onclick="del_folder();"></span>-->
+									<!--
+									<img class=""border=0 style="margin-bottom:-6px;cursor: pointer;" src="/web/images/icon/IconListDropdownNotificationsDeleteUp.png" onclick="del_folder();">
+									-->
+								</td>
+							</tr>			
+							</table>
+							</div>
+					
+						</td>	
+					</tr>	
+				</table>
+			
+</form>				
+</div>	
+	
+	<div class="hrBottom2"><hr/></div>				
+	
+		<button class="ButtonMarginLeft_40px close" id="settings_utilitiesIsoCancel2_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>		
+		<button class="ButtonRightPos2" id="settings_utilitiesIsoNext2_button" ><span class="_text" lang="_button" datafld="Next"></span></button>
+			
+		
+</div>
+
+<!-- step 3:-->
+
+<div id="iso_create_wizard_step3" style="display:none;" >
+
+<div class="WDLabelBodyDialogue">
+<span class="_text" lang="_iso_create" datafld="img_wizard"></span><br>	<br>
+
+			<center><div id="iso_state"><img border=0 src="/web/images/spinner.gif"></div></center><br>			
+			<div id="iso_parogressbar" ></div><br>			
+			<center><div id="settings_utilitiesIsoPercentage_value"></div></center>
+					
+</div>	
+		
+		
+		
+<div class="hrBottom2"><hr/></div>						
+	
+		<button class="ButtonRightPos2 close" id="settings_utilitiesIsoSave_button" style="display:" onclick="clear_iso_create_info();"><span class="_text" lang="_button" datafld="finish"></span></button>
+	
+				
+</div>
+
+</div> <!-- main div end -->
+
+
+
+
+<!-- tree div -->
+
+<div id="isotreeDiag" class="WDLabelDiag" style="display:none">
+<div id="isotreeDiag_title" class="WDLabelHeaderDialogue WDLabelHeaderDialogueISOCreateIcon"><span class="_text" lang="_remote_backup" datafld="msg22">Select Path</span></div>
+<div align="center"><div class="hr"><hr/></div></div>
+
+	<div id="isotree_dialog" class="WDLabelBodyDialogue">
+	<div id="isotree_div"></div>
+	</div>
+	
+	
+	<div class="hrBottom2"><hr/></div>
+			<!--
+			<div class="LightningButton ButtonMarginLeft_40px" id="s_back_button_4" lang="_button" datafld="back"></div>
+			<div class="LightningButton ButtonMarginLeft_20px" id="s_next_button_4" lang="_button" datafld="Next"></div>
+			<div class="LightningButton ButtonMarginLeft_20px close" lang="_button" datafld="Cancel"></div>
+			-->
+			
+		<button class="ButtonMarginLeft_40px close" id="settings_utilitiesIsoPathTreeCancel_button"><span class="_text" lang="_button" datafld="Cancel"></span></button>				
+		<button class="ButtonRightPos2" id="settings_utilitiesIsoPathTreeOk_button" ><span class="_text" lang="_button" datafld="Ok"></span></button>
+	
+			
+</div>
+

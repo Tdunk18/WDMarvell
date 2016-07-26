@@ -1,0 +1,161 @@
+<!-- Diagnostics Dialog  -->
+<div id="Diagnostics_Diag" class="WDLabelDiag">
+<div class="WDLabelHeaderDialogue WDLabelHeaderDialogueScanDiskIcon" id="Diagnostics_Diag_title"><span class="_text" lang="_button" datafld="scan_disk">Scan Disk</span></div>
+<div align="center"><div class="hr"><hr></div></div>
+
+	<!-- 2.Scan Disk Dialog : Result List -->
+	<div id="ScanDskDiag_res" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<span class="_text" lang="_diagnostic" datafld="desc7"></span><br>
+				<div class="flexigrid" style="width: 570px;">
+				<div class="hDiv">
+					<div class="hDivBox">
+						<table cellspacing="0" cellpadding="0">
+							<thead>
+								<tr>
+									<th align="left" abbr="f_vol" axis="col0"><div style="text-align: left; width: 100px;"><span class="_text" lang="_sys_info" datafld="volume_name">Volume Name</span></div></th>
+									<th align="left" abbr="f_res" axis="col1"><div style="text-align: left; width: 450px;"><span class="_text" lang="_smart" datafld="result">Result</span></div></th>
+								</tr>
+							</thead>
+						</table>
+					</div><!-- hDivBox -->
+				</div><!-- hDiv -->
+				<div class="bDiv" style="height: auto;">
+					<table cellspacing="0" cellpadding="0" border="0">
+						<tbody id="scandsk_reslst"></tbody>
+					</table>
+				</div><!-- bDiv -->
+				</div><!-- flexigrid -->
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr></div>
+		<button type="button" id="settings_utilitiesScanDiskFinish_button" class="ButtonRightPos1"><span class="_text" lang="_diagnostic" datafld="button3"></span></button> 
+	</div>
+	
+	<!-- 3.Scan Disk Dialog : waiting for disk remount -->
+	<div id="ScanDskDiag_wait" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<span class="_text" lang="_diagnostic" datafld="desc8"></span><br>
+				
+				<table border="0" cellSpacing="0" cellPadding="0" style="border-collapse: collapse" bordercolor="#000000" width="95%">
+	            <tr>
+	            	<td height="100" width="95%" align="center">
+	            			<img src="/web/images/SpinnerSun.gif" id="icon_loading">&nbsp;<span class="_text" lang="_common" datafld="wait">Waiting...</span>
+	            	</td>
+	            </tr>
+	       		 </table>
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr></div>
+		<button type="button" id="settings_utilitiesScanDiskClose_button" class="ButtonRightPos1 close"><span class="_text" lang="_button" datafld="close"></span></button> 
+	</div>
+	
+	<!-- 4.System Diagnostics Diag: SMART Test/Resule List -->
+	<div id="SMART_Res" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content">
+				<div id="DIV_SMART_RES"></div>
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr></div>
+		<button type="button" id="settings_utilitiesDiskTestClose_button" class="ButtonRightPos1 close"><span class="_text" lang="_button" datafld="close"></span></button> 
+	</div>
+	
+	<!-- 5.Format Disk Dialog : wipe -->
+	<div id="FormatDiag_wipe" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content" style="width:400px">
+				<span class="_text" lang="_diagnostic" datafld="desc12"></span><br>
+				
+				<table border="0" cellSpacing="0" cellPadding="0" style="border-collapse: collapse" bordercolor="#000000" width="95%">
+	           	<tr>
+					<td class="tdfield_padding" style="width:30px"><input type="checkbox" name="settings_utilitiesFormatDiskWipe_chkbox" id="settings_utilitiesFormatDiskWipe_chkbox" value="1"></td>
+					<td class="tdfield_padding"><span class="_text" lang="_diagnostic" datafld="desc11"></span></td>
+				</tr>
+				</table>
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr></div>
+		<button type="button" id="settings_utilitiesFormatDiskCancel_button" class="ButtonLeftPos close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+		<button type="button" id="settings_utilitiesFormatDiskNext5_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="Ok"></span></button>
+	</div>
+	
+	<!-- 6.System Diagnostics Dialog : system test -->
+	<div id="DiagnosticsDiag_systemtest" style="display:none">
+		<div class="WDLabelBodyDialogue">
+			<div class="dialog_content" id="DiagnosticsDiag_systemtest_content">
+				
+				<table border="0" cellSpacing="0" cellPadding="0" style="border-collapse: collapse;" id="DiagnosticsDiag_systemtest_wait">
+				<tr>
+					<td height="100" width="95%" align="center"><img src="/web/images/SpinnerSun.gif">&nbsp;<span class="_text" lang="_common" datafld="wait">Waiting...</span></td>
+				</tr>
+				</table>
+				
+				<div class="flexigrid" style="width: auto;display:none" id="DiagnosticsDiag_systemtest_flexigrid">
+				<div class="bDiv">
+					<table cellspacing="0" cellpadding="0" border="0">
+						<tr id="tr_systest_rtc" style="display:none"><!-- 0. RTC-->
+							<td><div style="text-align: left;width: 390px;"><span class="_text" lang="_diagnostic" datafld="desc14"></span></div></td>
+							<td><div style="text-align: right;" id="DIV_SYSTest_RTC"></div></td>
+						</tr>
+						<tr id="tr_systest_usb1" style="display:none"><!-- 1. USB1-->
+							<td><div style="text-align: left;width: 390px;"><span class="_text" lang="_diagnostic" datafld="desc15"></span></div></td>
+							<td><div style="text-align: right;" id="DIV_SYSTest_USB1"></div></td>
+						</tr>
+						<tr id="tr_systest_usb2" style="display:none"><!-- 2. USB2-->
+							<td><div style="text-align: left;width: 390px;"><span class="_text" lang="_diagnostic" datafld="desc16"></span></div></td>
+							<td><div style="text-align: right;" id="DIV_SYSTest_USB2"></div></td>
+						</tr>
+						<tr id="tr_systest_usb3" style="display:none"><!-- 3. USB2-->
+							<td><div style="text-align: left;width: 390px;"><span class="_text" lang="_diagnostic" datafld="desc25"></span></div></td>
+							<td><div style="text-align: right;" id="DIV_SYSTest_USB3"></div></td>
+						</tr>
+							<tr id="tr_systest_usb4" style="display:none"><!-- 4. USB2-->
+							<td><div style="text-align: left;width: 390px;"><span class="_text" lang="_diagnostic" datafld="desc26"></span></div></td>
+							<td><div style="text-align: right;" id="DIV_SYSTest_USB4"></div></td>
+						</tr>
+						<tr id="tr_systest_drive1" style="display:none"><!-- 3. Drive1 -->
+							<td><div style="text-align: left;width: 390px;"><span class="_text" lang="_diagnostic" datafld="desc17"></span></div></td>
+							<td><div style="text-align: right;" id="DIV_SYSTest_Drive1"></div></td>
+						</tr>
+						<tr id="tr_systest_drive2" style="display:none"><!-- 4. Drive2 -->
+							<td><div style="text-align: left;width: 390px;"><span class="_text" lang="_diagnostic" datafld="desc18"></span></div></td>
+							<td><div style="text-align: right;" id="DIV_SYSTest_Drive2"></div></td>
+						</tr>
+						<tr id="tr_systest_drive3" style="display:none"><!-- 5.  Drive3-->
+							<td><div style="text-align: left;width: 390px;"><span class="_text" lang="_diagnostic" datafld="desc19"></span></div></td>
+							<td><div style="text-align: right;" id="DIV_SYSTest_Drive3"></div></td>
+						</tr>
+						<tr id="tr_systest_drive4" style="display:none"><!-- 6.  Drive4-->
+							<td><div style="text-align: left;width: 390px;"><span class="_text" lang="_diagnostic" datafld="desc20"></span></div></td>
+							<td><div style="text-align: right;" id="DIV_SYSTest_Drive4"></div></td>
+						</tr>
+						<tr><!-- 7.  Memory -->
+							<td><div style="text-align: left;width: 390px;"><span class="_text" lang="_diagnostic" datafld="desc21"></span></div></td>
+							<td><div style="text-align: right;" id="DIV_SYSTest_Memory"></div></td>
+						</tr>
+						<tr><!-- 8. Temperature -->
+							<td><div style="text-align: left;width: 390px;"><span class="_text" lang="_home" datafld="temperature"></span></div></td>
+							<td><div style="text-align: right;" id="DIV_SYSTest_Temperature"></div></td>
+						</tr>
+						<tr id="tr_systest_fan" style="display:none"><!-- 9. Fan -->
+							<td><div style="text-align: left;width: 390px;"><span class="_text" lang="_diagnostic" datafld="desc23"></span></div></td>
+							<td><div style="text-align: right;" id="DIV_SYSTest_Fan"></div></td>
+						</tr>
+					</table>
+				</div><!-- bDiv -->
+				</div><!-- flexigrid -->
+			</div>
+		</div>
+		
+		<div class="hrBottom2"><hr></div>
+		<button type="button" id="settings_utilitiesSystemTestClose_button" class="ButtonRightPos1 close"><span class="_text" lang="_button" datafld="close"></span></button>
+	</div>
+</div><!-- end of Diagnostics Dialog -->
+

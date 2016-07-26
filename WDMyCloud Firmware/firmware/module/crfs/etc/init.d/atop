@@ -1,0 +1,182 @@
+#!/bin/bash
+#
+# atop init script
+
+PATH=/sbin:/usr/sbin:/bin:/usr/bin
+DESC="atop system monitor"
+NAME=atop
+PIDFILE=/var/run/$NAME.pid
+SCRIPTNAME=/etc/init.d/$NAME
+CONF_FILE=/etc/nas/wdlog.ini
+
+# Exit if the package is not installed
+[ -x /usr/bin/atop ] || exit 0
+[ -x /usr/bin/atopacctd ] || exit 0
+
+. /etc/system.conf
+
+# Read configuration variable file if it is present
+if [ -f $CONF_FILE ]; then
+	. $CONF_FILE
+else
+    echo "Config file $CONF_FILE not found"
+	exit 1
+fi
+
+OUTFILE=$LOGPATH/daily.log
+CURDAY=$(date +%Y%m%d)
+DAEMON_ARGS="-a -w $LOGPATH/atop_current $INTERVAL"
+
+
+#
+# Start atopacct
+#
+do_start_atopacct()
+{
+	# Check if process accounting already in use via psacct
+	#
+    ( umask 0022; mkdir -p $PSACCTPATH )
+
+	if ps -e | grep -q atopacctd$
+	then
+		:
+	else
+		# Start atopacctd
+	    echo "Starting atopacctd"
+		rm -rf $PSACCTPATH/pacct_shadow.d 2> /dev/null
+		/usr/bin/atopacctd $PSACCTPATH
+	fi
+}
+
+#
+# Function that starts the daemon/service
+#
+do_start_atop()
+{
+    mkdir -p $LOGPATH
+    ps x | grep "usr/bin/atop " | grep -qv grep
+    if [ $? == 0 ]; then
+        echo "$NAME is already running "
+        return 1
+    fi
+    	
+	echo "Starting $DESC " "$NAME"
+	/usr/bin/atop $DAEMON_ARGS &
+	pid=$!
+	status=$?
+	if [ $status = 0 ]; then
+		echo $pid > $PIDFILE
+		echo "$NAME started"
+	else
+		echo "$NAME failed to start"
+	fi
+
+	
+}
+
+do_start()
+{
+	if [ "$PERF_STATUS" != "enabled" ]; then 
+	    echo "Perf monitoring disabled"
+		exit 0
+	fi
+	renice -n $LOGGING_NICE -p $$
+
+	## ensure netatop module is loaded
+	if [ -f /usr/local/modules/driver/netatop.ko ]; then
+	    if ! lsmod | grep -q netatop; then
+            insmod /usr/local/modules/driver/netatop.ko
+        fi
+    else		
+	    modprobe netatop 2>/dev/null
+	fi
+	
+	do_start_atopacct
+	do_start_atop
+}
+
+do_stop_atopacct()
+{
+        [ ! -f /var/run/atopacctd.pid ] && echo "atopacct not running ..." && return 0
+        PID=`cat /var/run/atopacctd.pid`
+	if ps -e | grep -q $PID
+	then
+        echo "Stopping atopacct"
+		kill $PID
+                rm -f /var/run/atopacctd.pid
+		return 0
+	fi
+}
+
+do_stop_atop()
+{
+        [ ! -f $PIDFILE ] && echo "atop not running ..." && return 0
+        PID=`cat $PIDFILE`
+	if ps -e | grep -q $PID
+	then
+        echo "Stopping $DESC" "$NAME $PID"
+		kill $PID
+                rm /var/run/atop.pid
+	fi
+}
+
+#
+# Function that stops the daemon/service
+#
+do_stop()
+{
+	do_stop_atopacct
+	do_stop_atop
+}
+
+analytics_report()
+{
+    MY_CL_ID=`cat /usr/local/config/mycl_id`
+    atopsar -q "di=$MY_CL_ID" -Q -r $LOGPATH/atop_current -X $PERF_CPU_MIN -B $PERF_DISK_MIN_BYTES -E $PERF_NETWORK_MIN_BYTES
+}
+
+case "$1" in
+  start)
+	do_start
+  ;;
+  stop)
+    do_stop
+	;;
+  status)
+    if ps -e | grep -q "`cat $PIDFILE`"; then
+        echo "$NAME is running"
+    else
+        echo "$NAME is not running"
+        exit 1
+    fi
+    exit 0
+    ;;
+  restart|force-reload)
+    do_stop && sleep 1 && do_start  	
+    ;;
+  
+  rotate)
+    if ! ps -e | grep -q "`cat $PIDFILE`"; then
+	    exit 0
+	fi
+    # generate report
+	do_stop_atop
+	ATOP_CURRENT_SIZE=`ls -l $LOGPATH/atop_current | awk '{print $5}'`
+	analytics_report > $LOGPATH/atop_upload.log.1
+	ATOP_UPLOAD_SIZE=`ls -l $LOGPATH/atop_upload.log.1 | awk '{print $5}'`
+	logger -s "Rotated atop, atop_size=$ATOP_CURRENT_SIZE atop_upload_size=$ATOP_UPLOAD_SIZE"
+	rm $LOGPATH/atop_current
+	do_start_atop
+	/usr/local/sbin/wdLogUploader.sh -f "$LOGPATH/atop_upload.log" -t 1
+	;;
+	
+  report)
+    analytics_report
+    ;;
+  *)
+	echo "Usage: $SCRIPTNAME {start|stop|status|restart|force-reload}" >&2
+	exit 1
+	;;
+esac
+
+exit 0

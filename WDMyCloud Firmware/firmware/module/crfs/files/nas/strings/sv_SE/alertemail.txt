@@ -1,0 +1,8 @@
+0001 = Varningsmeddelande från din %1
+0002 = Följande händelser genererades på din %2 %1
+0003 = Händelsebeskrivning
+0004 = Allvarlighetsgrad
+0005 = Händelsekod
+0006 = Händelsetid
+0007 = Händelserubrik
+0008 = Version av fast programvara

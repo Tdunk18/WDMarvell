@@ -1,0 +1,92 @@
+﻿<!-- tree div -->
+<div id="MediaDiag" class="WDLabelDiag" style="display:none;">
+<div class="WDLabelHeaderDialogue" id="MediaDiag_title"></div>
+<div align="center"><div class="hr"><hr></div></div>
+
+<!--1. DLNA: View Media Players -->
+<div id="MediaDiag_DLNA_View_Players" style="display:none">
+	<div class="WDLabelBodyDialogue" style="border:0px solid red;">		
+		<div class="dialog_content" id="MediaDiag_DLNA_View_Players_Flexgrid">			
+					<span class="_text" lang="_media" datafld="desc14"></span><br><br>
+					<div align="center"><div class="hr_0_content" style="margin:-15px 0px 0px 0px;"></div></div><br>
+					<span class="_text" lang="_media" datafld="desc18"></span><br>
+					
+					<div style="height:250px;" id="Setting_mediaDLNADiagViewPlayersList_div">
+						<table id="DLNA_View_Players_List"></table>
+					</div>
+		</div>	
+	</div>
+	
+	<div class="hrBottom2"><hr></div>
+	<button type="button" id="settings_mediaDLNAViewPlayersClose_button" class="ButtonRightPos1 close"><span class="_text" lang="_button" datafld="close"></span></button>
+</div><!-- end of 1.DLNA: View Media Players -->
+
+<!-- 2. iTuens Server : Advanced Options -->
+<div id="MediaDiag_iTuens_Advanced_Options" style="display:none">
+	<div class="WDLabelBodyDialogue">
+		<div class="dialog_content">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_user" datafld="pw">Password</span></td>
+					<td class="tdfield_padding" colspan="3">
+						<input id="settings_mediaiTunesPWD_switch" name="settings_mediaiTunesPWD_switch" class="onoffswitch" type="checkbox" value="true" style="position: absolute; z-index: -1; visibility: hidden;">
+					</td>
+				</tr>
+				<tr id="tr_itunes_pwd" style="display:none">
+					<td class="tdfield"></td>
+					<td class="tdfield_padding" colspan="3">
+						<input type="password" name="settings_mediaiTunesPWD_password" size="16" value="" id="settings_mediaiTunesPWD_password">
+					</td>
+				</tr>
+				<tr>
+					<td class="tdfield"><span class="_text" lang="_itunes" datafld="auto_refresh">Auto Refresh</span></td>
+					<td class="tdfield_padding" colspan="3">
+						<table>
+							<tr>
+								<td>
+									<div class="select_menu">
+										<ul>
+							        		<li class="option_list">          
+							            		<div id="settings_mediaiTunesAutoRefresh_select" class="wd_select option_selected">
+														<div class="sLeft wd_select_l"></div>
+														<div class="sBody text wd_select_m" id="f_itunes_rescan_interval" rel=""></div>
+														<div class="sRight wd_select_r"></div>	
+												</div>		
+															
+												<ul id="itunes_rescan_interval_li" class="ul_obj" style="border:0px solid yellow;"> 
+													<div class='media_itunes_scroll' style="border:0px solid red;">            														            	
+									                <li id="settings_mediaiTunesAutoRefreshLi1_select" rel="0"><a href="#"><span class="_text" lang="_network_access" datafld="none"></span></a></li>
+									                <li id="settings_mediaiTunesAutoRefreshLi2_select" rel="300"><a href="#"><span class="_text" lang="_itunes" datafld="auto_refresh1"></span></a></li>
+									                <li id="settings_mediaiTunesAutoRefreshLi3_select" rel="900"><a href="#"><span class="_text" lang="_itunes" datafld="auto_refresh2"></span></a></li>
+									                <li id="settings_mediaiTunesAutoRefreshLi4_select" rel="1800"><a href="#"><span class="_text" lang="_itunes" datafld="auto_refresh3"></span></a></li> 
+									                <li id="settings_mediaiTunesAutoRefreshLi5_select" rel="3600"><a href="#"><span class="_text" lang="_itunes" datafld="auto_refresh4"></span></a></li> 
+									                <li id="settings_mediaiTunesAutoRefreshLi6_select" rel="7200"><a href="#"><span class="_text" lang="_itunes" datafld="auto_refresh5"></span></a></li> 
+									                <li id="settings_mediaiTunesAutoRefreshLi7_select" rel="21600"><a href="#"><span class="_text" lang="_itunes" datafld="auto_refresh6"></span></a></li> 
+									                <li id="settings_mediaiTunesAutoRefreshLi8_select" rel="43200"><a href="#"><span class="_text" lang="_itunes" datafld="auto_refresh7"></span></a></li> 
+									                <li id="settings_mediaiTunesAutoRefreshLi9_select" rel="86400"><a href="#"><span class="_text" lang="_itunes" datafld="auto_refresh8"></span></a></li>
+									            	</div>
+									            </ul>
+							     	   		</li>
+							     		 </ul>
+									</div>
+								</td>
+								<td><div class="TooltipIcon" id="tip_itunes_AutoRefresh"></div></td>
+							</tr>
+						</table>
+					</td>		
+				</tr>
+				<tr>
+					<td colspan="4" height="80px">&nbsp;</td>
+				</tr>
+			</table>	
+		</div>	
+	</div>
+	
+	<div class="hrBottom2"><hr></div>
+	<button type="button" id="settings_mediaiTunesCancel_button" class="ButtonLeftPos close"><span class="_text" lang="_button" datafld="Cancel"></span></button>
+	<button type="button" id="settings_mediaiTunesSave_button" class="ButtonRightPos1"><span class="_text" lang="_button" datafld="apply"></span></button>
+</div><!-- end of 2.iTuens Server : Advanced Options -->
+</div>
+
+
+

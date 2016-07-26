@@ -1,0 +1,60 @@
+#! /bin/sh
+
+### BEGIN INIT INFO
+# Provides: restsdk-server
+# Required-Start: $remote_fs $network $syslog $named $time
+# Required-Stop: $remote_fs $network $syslog $named $time
+# Default-Start: 2 3 4 5
+# Default-Stop: 0 1 6
+# Short-Description: restsdk-server
+# Description: restsdk-server
+### END INIT INFO
+
+start() {
+	if [ ! `pidof restsdk-server` ]
+	then
+		cd /usr/local/restsdk && /usr/local/restsdk/restsdk-server -device-kind alpha >/dev/null 2>&1 &
+	fi
+}
+
+stop() {
+	kill `pidof restsdk-server` 2> /dev/null
+	COUNTER=0
+	while [ `pidof restsdk-server` ]
+	do
+		if [ $COUNTER -gt 10 ]
+		then
+			kill -9 `pidof restsdk-server` 2> /dev/null
+		fi
+
+		COUNTER=`expr $COUNTER + 1`
+		sleep 1
+	done
+}
+
+case "$1" in
+	start)
+		start
+		;;
+	stop)
+		stop
+		;;
+	status)
+		if [ `pidof restsdk-server` ]
+		then
+			echo 'restsdk-server is running'
+			exit 0
+		else
+			echo 'restsdk-server is not running'
+			exit 1
+		fi
+		;;
+	restart|force-reload)
+		stop
+		start
+		;;
+	*)
+		echo "Usage: restsdk-server {start|stop|status|restart|force-reload}" >&2
+		exit 2
+		;;
+esac

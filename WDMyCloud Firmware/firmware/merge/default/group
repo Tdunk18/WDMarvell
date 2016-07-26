@@ -1,0 +1,5 @@
+root:x:0:root
+administrators:x:1001:admin
+share:x:1000:admin,nobody
+allaccount:x:501:
+cloudholders:x:2000:admin

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+    <name>Shares</name>
+    <version>2.1</version>
+    <description>Module has classes related to remote sharing of content </description >
+
+    <components>
+
+        <component>
+            <name>shares</name>
+            <module>Shares</module>
+            <controller_class>\Shares\Controller\SharesManagerController</controller_class>
+            <auth_security>
+                <get>USER_AUTH</get>
+                <post>CLOUDHOLDER_AUTH</post>
+                <put>CLOUDHOLDER_AUTH</put>
+                <delete>CLOUDHOLDER_AUTH</delete>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>share_access</name>
+            <module>Shares</module>
+            <controller_class>\Shares\Controller\SharesAccessController</controller_class>
+            <auth_security>
+                <get>USER_AUTH</get>
+                <post>CLOUDHOLDER_AUTH</post>
+                <put>CLOUDHOLDER_AUTH</put>
+                <delete>CLOUDHOLDER_AUTH</delete>
+            </auth_security>
+        </component>
+
+        <component>
+            <name>share_names</name>
+            <module>Shares</module>
+            <controller_class>\Shares\Controller\ShareNames</controller_class>
+            <auth_security>
+                <get>NO_AUTH_LAN_CLOUDHOLDER_AUTH_WAN</get>
+            </auth_security>
+        </component>
+
+    </components>
+
+    <class_factory>
+        <factory>Shares\Model\Share\Listener\ShareListenerInterface</factory>
+        <implementation>
+            <class_name>Shares\Model\Share\Listener\Linux\ShareListener</class_name>
+            <attributes osname="linux" />
+        </implementation>
+        <implementation>
+            <class_name>Shares\Model\Share\Listener\Linux_oem\ShareListener</class_name>
+            <attributes osname="linuxoem" />
+        </implementation>
+        <implementation>
+            <class_name>Shares\Model\Share\Listener\Windows\ShareListener</class_name>
+            <attributes osname="windows" />
+        </implementation>
+    </class_factory>
+    
+</module>

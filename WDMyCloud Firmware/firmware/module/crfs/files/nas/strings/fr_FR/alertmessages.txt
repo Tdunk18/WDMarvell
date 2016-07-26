@@ -1,0 +1,303 @@
+0001 = Température du système trop élevée
+0001D = La température du système dépasse la température de fonctionnement normale. Déplacez le système vers un endroit plus frais. Si aucune mesure n’est prise, le système s’arrêtera dès que la température atteindra la limite critique.
+
+0002 = Température du système insuffisante
+0002D = La température du système est inférieure à la température spécifique minimum. Déplacez le système vers un endroit plus chaud.
+
+0003 = Échec du lecteur SMART
+0003D = Échec de l’autotest du lecteur %1. Contactez l’assistance WD.
+
+0004 = Échec du volume
+0004D = Le volume de données %1 sur le disque n’est pas accessible. Contactez l’assistance WD.
+
+0005 = Arrêt thermique imminent
+0005D = Le système est en surchauffe et s’arrêtera automatiquement dans peu de temps si aucune mesure n’est prise.
+
+0006 = Arrêt thermique immédiat
+0006D = Le niveau de surchauffe de votre dispositif est critique et ce dernier va s’arrêter immédiatement pour prévenir tout dommage.
+
+2020 = Arrêt du système en cours
+2020D = Le système est en train de s’arrêter.
+
+1020 = Arrêt du système en cours
+1020D = Le système est en train de s’arrêter.
+
+0020 = Arrêt du système en cours
+0020D = Le système est en train de s’arrêter.
+
+0029 = Panne du ventilateur
+0029D = Le ventilateur du système ne fonctionne pas. Contactez l’assistance WD.
+
+0031 = Alimentation ASI en marche
+0031D = Le système fonctionne par alimentation ASI. %1% d’alimentation restant(s).
+
+0201 = Échec du lecteur
+0201D = Échec du lecteur de l’emplacement %1. Remplacez le lecteur défaillant. Contactez l’assistance WD.
+
+0207 = Panne de lecteur imminente
+0207D = Le lecteur %1 est sur le point de tomber en panne. Remplacez le lecteur défaillant. Contactez l’assistance WD.
+
+0208 = Volume détérioré
+0208D = Le volume %1 est détérioré. Vérifiez l’état du lecteur en exécutant la fonctionnalité de test de lecteur, accessible dans Paramètres  >> Utilitaires.
+
+0209 = Migration du volume en cours
+0209D = Migration du volume %1 en cours : %2 %
+
+2209 = Migration du volume en cours
+2209D = Migration du volume %1 en cours : %2 %
+
+0210 = Restauration du volume
+0210D = Restauration du volume %1 en cours depuis : %2 minutes
+
+2210 = Restauration du volume
+2210D = Restauration du volume %1 en cours depuis : %2 minutes
+
+0212 = Échec de restauration du volume
+0212D = La restauration du volume %1 a échoué. Vérifiez l’état des lecteurs en exécutant la fonctionnalité de test de lecteur, accessible dans Paramètres >> Utilitaires.
+
+0213 = Échec d’extension du volume
+0213D = L’extension du volume %1 a échoué. Vérifiez l’état des lecteurs en exécutant la fonctionnalité de test de lecteur, accessible dans Paramètres >> Utilitaires.
+
+0216 = Itinérance RAID activée
+0216D = L’itinérance RAID est activée.
+
+2216 = Itinérance RAID activée
+2216D = L’itinérance RAID est activée.
+
+0224 = Remplacer le lecteur dont le voyant rouge
+0224D = Remplacer le lecteur dont le voyant LED rouge.
+
+2041 = Vitesse de connexion du port Ethernet %1 : 10/100 Mbps
+2041D = La vitesse de connexion est limitée à 10/100 Mbps.
+
+0042 = 50 % d’alimentation ASI restants
+0042D = Le système fonctionne par alimentation ASI avec 50 % restants. Connectez votre système à une nouvelle source d’alimentation dès que possible.
+
+0043 = 15 % d’alimentation ASI restants
+0043D = Le système fonctionne par alimentation ASI avec 15 % restants. Connectez immédiatement votre système à une nouvelle source d’alimentation.  Si aucune mesure n’est prise, le système s’arrêtera lorsque l’alimentation ASI sera vide.
+
+0044 = Alimentation ASI vide
+0044D = L’alimentation ASI est vide. Le système va s’arrêter immédiatement pour prévenir les dommages.
+
+1001 = Utilisation du volume supérieure à 95 %
+1001D = Le seuil d’utilisation du volume %1 est presque atteint. Vous risquez de rencontrer des problèmes de performance. Assurez-vous de sauvegarder vos fichiers, puis déplacez-les hors de votre lecteur pour libérer de l’espace. Si la corbeille est activée, essayez de la vider pour libérer de l’espace.
+
+1002 = Panne de liaison réseau
+1002D = La connexion réseau %1 a été interrompue ou est intermittente. Vérifiez la connexion réseau.
+
+1010 = Panne de liaison réseau
+1010D = La liaison réseau %1 est basse ou est devenue discontinue. Vérifiez la connexion réseau.
+
+1003 = Échec de la mise à jour du micrologiciel
+1003D = La mise à jour du micrologiciel a échoué. Veuillez réessayer. Si le problème persiste, contactez l’assistance WD.
+
+1004 = Température du système élevée
+1004D = Votre dispositif est actuellement en surchauffe. Assurez-vous que votre dispositif dispose d’une ventilation adéquate.
+
+1021 = Échec de restauration de la configuration
+1021D = La restauration de la configuration a échoué.
+
+0022 = Panne d’alimentation
+0022D = La source d’alimentation %1 a échoué.
+
+1022 = Panne d’alimentation
+1022D = La source d'alimentation %1 a cessé de fonctionner. Vérifiez la source d’alimentation.
+
+1030 = Stockage en dessous du seuil
+1030D = Le stockage est en dessous du seuil.
+
+1035 = Programme d’amélioration de produit
+1035D = Souhaitez-vous participer à l’amélioration de notre produit ? En savoir plus %1
+
+0036 = Échec de la vérification du système de fichiers
+0036D = La vérification du système de fichiers a détecté des erreurs dans votre configuration. Sauvegardez vos données et configurez à nouveau votre lecteur pour résoudre ces erreurs. Si le problème persiste, contactez l’assistance WD.
+
+1036 = Échec de la vérification du système de fichiers
+1036D = La vérification du système de fichiers a détecté des erreurs dans votre configuration. Sauvegardez vos données et configurez à nouveau votre lecteur pour résoudre ces erreurs. Si le problème persiste, contactez l’assistance WD.
+
+1045 = Erreur du système de fichiers corrigée
+1045D = La vérification du système de fichiers a détecté et corrigé des erreurs dans votre configuration.
+
+1037 = Système occupé
+1037D = Le système est occupé. Veuillez attendre que la LED d’alimentation soit allumée en bleu, en continu, avant d’insérer un nouveau lecteur.
+
+1120 = Dispositif USB non pris en charge
+1120D = Un dispositif USB non pris en charge a été détecté (fournisseur : %1, modèle : %2, numéro de série : %3). Supprimez le dispositif USB.
+
+1121 = Système de fichiers non pris en charge
+1121D = Un système de fichiers non pris en charge a été détecté sur un dispositif USB (fournisseur : %1, modèle : %2, numéro de série : %3, système de fichiers : %4, étiquette : %5). Supprimez le dispositif USB.
+
+1122 = Échec de création de dossier partagé
+1122D = Le dossier partagé n’a pas pu être créé sur un dispositif USB (fournisseur : %1, modèle : %2, numéro de série : %3, système de fichiers : %4, étiquette : %5, nom de partage : %6)
+
+1123 = Suppression non sécurisée du dispositif
+1123D = Un dispositif USB (fournisseur : %1, modèle : %2, numéro de série : %3) a été supprimé sans avoir été éjecté. Les données de %2 peuvent être affectées.
+
+1124 = Impossible d’effectuer le montage du dispositif USB
+1124D = Impossible d’effectuer le montage du dispositif USB (fournisseur : %1, modèle : %2, numéro de série : %3). Veuillez vérifier le dispositif USB.
+
+1127 = Impossible de sauvegarder les fichiers depuis le dispositif USB
+1127D = Impossible de sauvegarder les fichiers depuis le dispositif USB. Vérifiez la connectivité du dispositif.
+
+1130 = Sauvegarde USB en attente
+1130D = Une ancienne tâche de sauvegarde est encore en cours. La sauvegarde USB démarrera automatiquement lorsque la tâche précédente sera terminée.
+
+1400 = Erreur de sauvegarde à distance
+1400D = Une erreur s’est produite lors de la sauvegarde à distance, nom de tâche : %1. Veuillez vérifier les paramètres système.
+
+1401 = Erreur de restauration de sauvegarde à distance
+1401D = Une erreur s’est produite lors de la restauration à distance, nom de tâche : %1. Veuillez vérifier les paramètres système.
+
+2402 = Sauvegarde à distance réussie
+2402D = La sauvegarde à distance, nom de tâche : %1, s’est effectuée correctement sur le dispositif : %2, vers le dossier partagé : %3
+
+1402 = Sauvegarde à distance réussie
+1402D = La sauvegarde à distance, nom de tâche : %1, s’est effectuée correctement sur le dispositif : %2, vers le dossier partagé : %3
+
+2403 = Restauration de sauvegarde à distance réussie
+2403D = La restauration à distance, nom de tâche : %1, s’est effectuée correctement sur le dispositif : %2, vers le dossier partagé : %3
+
+1403 = Restauration de sauvegarde à distance réussie
+1403D = La restauration à distance, nom de tâche : %1, s’est effectuée correctement sur le dispositif : %2, vers le dossier partagé : %3
+
+2001 = Redémarrage du système
+2001D = Le système a redémarré.
+
+1011 = Nouveau micrologiciel disponible
+1011D = Une nouvelle version du micrologiciel est disponible. Mettez votre système à jour.
+
+2002 = Nouveau micrologiciel disponible
+2002D = Une nouvelle version du micrologiciel est disponible. Mettez votre système à jour.
+
+2003 = Température normale
+2003D = La température du système est conforme à la plage de température spécifiée.
+
+2004 = Mise à jour du micrologiciel réussie
+2004D = Le micrologiciel a bien été mis à jour vers %1.
+
+2005 = Rétablissement réussi des paramètres d’usine
+2005D = Les paramètres d’usine du système ont été rétablis.
+
+2006 = Vous avez accès à une nouvelle mise à niveau du logiciel !
+2006D = Accédez au tableau de bord du dispositif WD My Cloud pour plus d’informations.
+
+2024 = Téléchargement de la mise à jour du micrologiciel
+2024D = Téléchargement de la mise à jour du micrologiciel en cours.
+
+2026 = Installation de la mise à jour du micrologiciel
+2026D = Installation de la mise à jour du micrologiciel en cours.
+
+1028 = Réinitialisation requise
+1028D = Réinitialisation requise.
+
+2028 = Réinitialisation requise
+2028D = Réinitialisation requise.
+
+2032 = Le système est en mode veille
+2032D = Le système est en mode veille.
+
+1033 = Réinitialisation du système
+1033D = Système en cours de redémarrage.
+
+2033 = Réinitialisation du système
+2033D = Système en cours de redémarrage.
+
+1038 = Quota de stockage presque atteint
+1038D = Le quota de stockage pour [%1] est presque atteint. Assurez-vous de sauvegarder les fichiers, puis déplacez-les hors du lecteur pour libérer de l’espace.
+
+2038 = Quota de stockage presque atteint
+2038D = Le quota de stockage pour [%1] est presque atteint. Assurez-vous de sauvegarder les fichiers, puis déplacez-les hors du lecteur pour libérer de l’espace.
+
+1039 = Quota de stockage atteint
+1039D = Le quota de stockage pour [%1] est atteint. Assurez-vous de sauvegarder les fichiers, puis déplacez-les hors du lecteur pour libérer de l’espace.
+
+2039 = Quota de stockage atteint
+2039D = Le quota de stockage pour [%1] est atteint. Assurez-vous de sauvegarder les fichiers, puis déplacez-les hors du lecteur pour libérer de l’espace.
+
+2040 = Dispositif USB non pris en charge
+2040D = Dispositif USB non pris en charge
+
+2121 = Dispositif USB verrouillé
+2121D = Un dispositif USB verrouillé a été détecté (fournisseur : %1, modèle : %2, numéro de série : %3).
+
+2126 = Fichiers copiés depuis le dispositif USB
+2126D = Fichiers copiés depuis <%1> vers <%2>.
+
+2128 = Copie des fichiers
+2128D = Copie des fichiers depuis le dispositif USB.
+
+2129 = Fichiers déplacés du dispositif USB
+2129D = Fichiers déplacés depuis <%1> vers <%2>.
+
+2131 = Déplacement des fichiers
+2131D = Déplacement des fichiers depuis le dispositif USB.
+
+1200 = Lecteur non pris en charge
+1200D = Lecteur non pris en charge dans l’emplacement %1. Remplacez le lecteur inséré par un lecteur agréé. Une liste des lecteurs agréés est accessible à l’adresse www.wd.com
+
+2200 = Lecteur non pris en charge
+2200D = Lecteur non pris en charge dans l’emplacement %1. Remplacez le lecteur inséré par un lecteur agréé. Une liste des lecteurs agréés est accessible à l’adresse www.wd.com
+
+2202 = Taille du lecteur insuffisante
+2202D = La taille du lecteur de l’emplacement est insuffisante %1
+
+2203 = Initialisation du lecteur en cours
+2203D = Initialisation du lecteur de l’emplacement en cours %1
+
+2211 = Vérification de l’intégrité du stockage
+2211D = Vérification de l’intégrité du stockage en cours.
+
+2214 = Lecteur inséré
+2214D = Un nouveau lecteur a été inséré dans l’emplacement %1. Pour ajouter ce lecteur à la configuration RAID de votre système, accédez à Stockage >> RAID, puis cliquez sur le bouton Modifier le mode RAID.
+
+0215 = Lecteur supprimé
+0215D = Lecteur supprimé de l’emplacement %1
+
+2215 = Lecteur supprimé
+2215D = Lecteur supprimé de l’emplacement %1. Veuillez vérifier votre système.
+
+2217 = Absence de lecteur installé
+2217D = Aucun lecteur n’est installé. Ajoutez des lecteurs pour commencer à utiliser votre système. Vous pouvez acheter un nouveau lecteur sur le site www.wd.com
+
+2218 = Lecteur de rechange ajouté à la baie RAID
+2218D = Lecteur de rechange ajouté à la baie RAID.
+
+2219 = Migration RAID terminée
+2219D = La migration RAID est terminée.
+
+2220 = Restauration RAID terminée
+2220D = La restauration RAID est terminée.
+
+2221 = Lecteur Red NAS non-WD inséré
+2221D = Un lecteur Red NAS non-WD est inséré. Veuillez prendre en compte que le dispositif WD My Cloud a été conçu pour une utilisation optimale avec des disques durs WD Red NAS.
+
+2222 = Le volume est formaté
+2222D = Le volume %1 est formaté.
+
+2223 = Progression de l’expansion du volume
+2223D = Progression de l’expansion du volume %1 : %2%
+
+2300 = Arrêt de l’analyse multimédia
+2300D = Le dispositif a arrêté d’analyser votre contenu multimédia. Par conséquent, certaines vignettes ne s’afficheront pas lorsque vous y accéderez à distance. Pour reprendre l’analyse, redémarrez votre système WD My Cloud.
+
+1501 = Mise à jour de l’application disponible
+1501D = %1 Une mise à jour de l’application est disponible. Veuillez la mettre à jour.
+
+1502 = Virus détecté
+1502D = Concepts de base de la protection antivirus : L’analyse antivirus est terminée. Aucun virus n’a été détecté. Consultez le rapport d’analyse antivirus pour plus d’informations.
+
+2503 = Analyse antivirus terminée
+2503D = Concepts de base de la protection antivirus : L’analyse antivirus est terminée. Aucun virus n’a été détecté.
+
+2504 = L’analyse antivirus programmée a commencé
+2504D = Concepts de base de la protection antivirus : L’analyse antivirus programmée a commencé.
+
+2505 = Arrêt de l’analyse antivirus programmée
+2505D = Concepts de base de la protection antivirus : L’analyse antivirus programmée a pris fin, car l’heure d’arrêt définie est passée. Analyse inachevée. 
+
+1103 = Une erreur est apparue pendant la récupération des données de votre point de restauration
+1103D = %4 - Une erreur est apparue pendant la récupération des données à partir de votre point de restauration %1 sur le partage %2 sur %3.
+
+2103 = Vos données ont été récupérées avec succès à partir de votre point de restauration
+2103D = Vos données ont été récupérées avec succès à partir de votre point de restauration %1 sur le partage %2 sur %3.
+

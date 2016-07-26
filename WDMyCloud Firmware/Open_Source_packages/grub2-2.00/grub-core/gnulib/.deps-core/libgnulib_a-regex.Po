@@ -1,0 +1,87 @@
+gnulib/libgnulib_a-regex.o: gnulib/regex.c ../config.h \
+ ../grub-core/lib/posix_wrap/limits.h ../include/grub/types.h \
+ ../include/grub/cpu/types.h ../grub-core/gnulib/regex.h \
+ ../grub-core/lib/posix_wrap/sys/types.h ../include/grub/misc.h \
+ /opt_gccarm/x86_64-intel-linux-gnu/lib/gcc/x86_64-intel-linux-gnu/4.8.2/include/stdarg.h \
+ ../include/grub/symbol.h ../include/grub/err.h ../include/grub/i18n.h \
+ gnulib/regex_internal.h ../grub-core/lib/posix_wrap/assert.h \
+ ../grub-core/lib/posix_wrap/ctype.h \
+ /opt_gccarm/x86_64-intel-linux-gnu/lib/gcc/x86_64-intel-linux-gnu/4.8.2/include/stdbool.h \
+ ../grub-core/lib/posix_wrap/stdio.h ../include/grub/file.h \
+ ../include/grub/device.h ../include/grub/fs.h ../include/grub/list.h \
+ ../grub-core/lib/posix_wrap/stdlib.h ../include/grub/mm.h \
+ ../grub-core/lib/posix_wrap/string.h \
+ ../grub-core/lib/posix_wrap/langinfo.h \
+ ../grub-core/lib/posix_wrap/localcharset.h gnulib/localcharset.h \
+ ../grub-core/lib/posix_wrap/wchar.h ../include/grub/charset.h \
+ ../grub-core/lib/posix_wrap/wctype.h \
+ ../grub-core/lib/posix_wrap/stdint.h ../grub-core/gnulib/alloca.h \
+ gnulib/regex_internal.c gnulib/regcomp.c gnulib/regexec.c
+
+../config.h:
+
+../grub-core/lib/posix_wrap/limits.h:
+
+../include/grub/types.h:
+
+../include/grub/cpu/types.h:
+
+../grub-core/gnulib/regex.h:
+
+../grub-core/lib/posix_wrap/sys/types.h:
+
+../include/grub/misc.h:
+
+/opt_gccarm/x86_64-intel-linux-gnu/lib/gcc/x86_64-intel-linux-gnu/4.8.2/include/stdarg.h:
+
+../include/grub/symbol.h:
+
+../include/grub/err.h:
+
+../include/grub/i18n.h:
+
+gnulib/regex_internal.h:
+
+../grub-core/lib/posix_wrap/assert.h:
+
+../grub-core/lib/posix_wrap/ctype.h:
+
+/opt_gccarm/x86_64-intel-linux-gnu/lib/gcc/x86_64-intel-linux-gnu/4.8.2/include/stdbool.h:
+
+../grub-core/lib/posix_wrap/stdio.h:
+
+../include/grub/file.h:
+
+../include/grub/device.h:
+
+../include/grub/fs.h:
+
+../include/grub/list.h:
+
+../grub-core/lib/posix_wrap/stdlib.h:
+
+../include/grub/mm.h:
+
+../grub-core/lib/posix_wrap/string.h:
+
+../grub-core/lib/posix_wrap/langinfo.h:
+
+../grub-core/lib/posix_wrap/localcharset.h:
+
+gnulib/localcharset.h:
+
+../grub-core/lib/posix_wrap/wchar.h:
+
+../include/grub/charset.h:
+
+../grub-core/lib/posix_wrap/wctype.h:
+
+../grub-core/lib/posix_wrap/stdint.h:
+
+../grub-core/gnulib/alloca.h:
+
+gnulib/regex_internal.c:
+
+gnulib/regcomp.c:
+
+gnulib/regexec.c:

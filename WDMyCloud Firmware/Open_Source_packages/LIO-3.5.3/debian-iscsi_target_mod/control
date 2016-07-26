@@ -1,0 +1,19 @@
+Source: iscsi-target-mod
+Section: unknown
+Priority: extra
+Maintainer: Nicholas A. Bellinger (nab) <nab@risingtidesystems.com>
+Build-Depends: debhelper (>= 5), bzip2
+Standards-Version: 3.7.2
+
+Package: iscsi-target-mod-source
+Architecture: all
+Depends: module-assistant, debhelper (>= 5), make, bzip2
+Description: Source for the LIO iSCSI target fabric module.
+ This package provides the source code for the LIO iSCSI target kernel module.
+ The target package is also required in order to make use of this module.
+ Kernel source or headers are required to compile this module.
+
+Package: iscsi-target-mod-module
+Architecture: any
+#Depends: target-utils
+Description: The LIO iSCSI target kernel module package

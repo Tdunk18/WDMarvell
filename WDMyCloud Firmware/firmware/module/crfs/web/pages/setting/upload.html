@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="PRAGMA" content="no-cache"> 
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+</head>
+
+<link rel="stylesheet" type="text/css" href="/web/css/general.css?v=WDV1.01">
+<link rel="stylesheet" type="text/css" href="/web/css/style.css?v=WDV1.01">
+<link rel="stylesheet" type="text/css" href="/web/css/button.css?v=WDV1.01">
+
+<!-- jQuery Lib -->
+<script type="text/javascript" src="/web/jquery/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/web/jquery/js/jquery-migrate-1.1.1.min.js"></script>
+<script type="text/javascript" src="/web/jquery/js/jquery.form.js"></script>
+<!-- custom js-->
+<script type="text/javascript" src="/web/function/button.js"></script>
+<script type="text/javascript">
+var sys_time = (new Date()).getTime(); 
+//generic
+document.write("<script language=\"javascript\" src=\"/web/function/define.js?id="+sys_time+"\"><\/script>");
+
+function run()
+{	
+	parent.wd_ajax({
+		type: "POST",
+		cache: false,
+		url: "/cgi-bin/system_mgr.cgi",
+		async:true,
+		data:{cmd:"cgi_firmware_init_upload"},
+	   	success: function(data){
+   		if (data == "success")
+   		{
+   			chk_volume_status();   	
+			}
+			else if (data == "uploading")
+			{
+					parent.$("#id_msg").hide();
+					var overlayObj=parent.$("#overlay").overlay({expose: '#000',api:true,closeOnClick:false,closeOnEsc:false});
+					overlayObj.close();
+					
+					parent.jAlert(parent._T('_firmware','msg7'), parent._T('_common','error'));										
+					return false;
+			}
+			else if (data == "uP")
+			{
+					parent.upload_uP_ok();
+			}										   				
+	   }
+	});																
+}
+function chk_volume_status()
+{
+		parent.wd_ajax({
+					url: "/xml/check_disk_size_status.xml",
+					type: "GET",
+					async: false,
+					cache: false,
+					dataType: "xml",
+					success: function (xml) {
+									var j = $(xml).find('status').text();
+									if (j == 0)
+										chk_init_upload();
+									else
+									{
+										var overlayObj=parent.$("#overlay").overlay({expose: '#000',api:true,closeOnClick:false,closeOnEsc:false});
+										overlayObj.close();
+										parent.jAlert(parent._T('_p2p','msg23'), parent._T('_common','error'));										
+										return false;
+									}	
+							}, //end of success
+					error:function(){
+							setTimeout(chk_volume_status,1000);
+						}														
+					}); //end of wd_ajax({	
+				
+}
+var loop_init_upload
+function chk_init_upload()
+{
+	parent.clear_percentage();
+	parent.wd_ajax({
+						type: "POST",
+						cache: false,
+						url: "/cgi-bin/system_mgr.cgi",
+						async:true,
+						data:{cmd:"cgi_firmware_init_upload_chk"},
+					   	success: function(data){					   	
+					   		if (data == "success")
+					   		{
+					   			$('form').ajaxForm({				   				
+										    beforeSend: function() {
+										    },
+										    uploadProgress: function(event, position, total, percentComplete) {										    	
+													parent.set_percentage(percentComplete);
+										    },
+										    success: function() {
+										    },
+											complete: function(xhr) {
+												location.replace("/web/setting/firmware_result.html");													
+											}
+					   			}).submit();
+					   		}	
+					   		else
+					   		{
+					   			loop_init_upload = setTimeout(chk_init_upload,1000);
+					   		}		
+					  }});   			
+}   
+function start_upload()
+{	
+		parent.wd_ajax({
+				type:"POST",
+				async:false,
+				cache:false,
+				url:"/cgi-bin/hd_config.cgi",
+				data:{cmd:'cgi_Detect_Dangerous'},
+				dataType: "xml",
+				success: function(xml){										
+					var res = $(xml).find('res').text();							
+					//Device shutdown,restore,restarted or update fimrware is prohibited when disk formatting/disk resize/disk rebuild/disk migrate/firmware uploading is in progress.			
+					if ( parseInt(res) != 0)	
+						parent.jAlert(parent._T('_format','msg17'), parent._T('_common','error'));	//Text:Device shutdown or restarted is prohibited when disk formatting/firmware uploading is in progress.
+					else
+					{					
+						upload();
+					}   
+				}//end of success
+			});	// end of ajax				
+	
+	function upload()
+	{
+		if(parent.$(".LightningStatusPanel").css("display") == "block") return;
+		parent.wd_ajax({
+			type: "POST",
+			cache: false,
+			url: "/cgi-bin/system_mgr.cgi",
+			async:true,
+			data:{cmd:"check_power_sch"},
+		   	success: function(data){
+	   			if (data == "error")
+	   			{				
+	   							//The power off schedule time is close to the system time, it must be larger than 10 minutes.
+				   		parent.jAlert(parent._T('_firmware','msg10'), parent._T('_common','error'));							
+					}
+					else
+					{
+						
+									//parent.jConfirm('M',parent._T('_firmware','msg11'),parent._T('_firmware','title'),"fw",function(r){	//Text: Are you sure want to delete?
+									parent.jConfirm('M',parent._T('_firmware','msg15'),parent._T('_firmware','title'),"fw",function(r){	//Text: Are you sure want to delete?
+						      if(r)
+					        { 								
+										parent.clear_percentage();								
+										parent.startdownload();
+										parent.clear_chk_fw();
+										run();
+							
+						       }//end of if(r)
+									else
+									{
+										//$("#file").val("");										
+									}	
+						});//enf of jConfirm...
+	
+					}
+		   }
+		});
+	}	
+}
+function clear_upload_path()
+{	
+	$("#file").val("");	
+}
+
+function page_load()
+{
+	parent.ready_language();	
+	parent.language_for_iframe();
+	var v = parent._T('_firmware','update_b');	
+	//$("#id_file").text(parent._T('_firmware','update_b'))
+//	$("#id_file").css("width",v.length*8);
+	var j = $("#id_file").width();
+	parent.fw_set_iframe_width(j);		
+	
+	setTimeout(function(){parent.chk_fw_upload();},1000);
+	$("#file").mouseover(function(){		
+		if($("#id_file").hasClass('gray_out')) return;
+		$("#id_file").addClass("upload_hover").removeClass("upload_button").removeClass("upload_active");
+	});
+	
+	$("#file").mouseout(function(){
+		if($("#id_file").hasClass('gray_out')) return;
+		$("#id_file").addClass("upload_button").removeClass("upload_hover").removeClass("upload_active");	
+	});
+	
+	$("#file").click(function(){
+		if($("#id_file").hasClass('gray_out')) return;	
+		$("#id_file").addClass("upload_active").removeClass("upload_button").removeClass("upload_hover");	
+	});
+
+	//$("#id_fw").text(parent._T('_firmware','update_b'))
+	
+//	$("#file").mouseover(function(){		
+//			if($("#id_fw_main").hasClass('gray_out')) return;
+//			$("#id_fw_main").removeClass('up').removeClass('down').addClass('over');
+//			$("#id_fw_main").find('.bLeft').removeClass('LightningLabelButtonLeftUp').addClass('LightningLabelButtonLeftOver').removeClass('LightningLabelButtonLeftDown');
+//			$("#id_fw_main").find('.bBody').removeClass('LightningLabelButtonLeftBody').addClass('LightningLabelButtonBodyOver').removeClass('LightningLabelButtonBodyDown');
+//			$("#id_fw_main").find('.bRight').removeClass('LightningLabelButtonRightUp').addClass('LightningLabelButtonRightOver').removeClass('LightningLabelButtonRightDown');
+//		});
+//		
+//		$("#file").mouseout(function(){
+//			if($("#id_fw_main").hasClass('gray_out')) return;
+//			$("#id_fw_main").removeClass('over').removeClass('down').addClass('up');
+//			$("#id_fw_main").find('.bLeft').addClass('LightningLabelButtonLeftUp').removeClass('LightningLabelButtonLeftOver').removeClass('LightningLabelButtonLeftDown');
+//			$("#id_fw_main").find('.bBody').addClass('LightningLabelButtonLeftBody').removeClass('LightningLabelButtonBodyOver').removeClass('LightningLabelButtonBodyDown');
+//			$("#id_fw_main").find('.bRight').addClass('LightningLabelButtonRightUp').removeClass('LightningLabelButtonRightOver').removeClass('LightningLabelButtonRightDown');	
+//		});
+//		
+//		$("#file").click(function(){
+//			if($("#id_fw_main").hasClass('gray_out')) return;
+//	
+//			$("#id_fw_main").removeClass('over').addClass('down');
+//			$("#id_fw_main").find('.bLeft').removeClass('LightningLabelButtonLeftOver').addClass('LightningLabelButtonLeftDown')
+//			$("#id_fw_main").find('.bBody').removeClass('LightningLabelButtonBodyOver').addClass('LightningLabelButtonBodyDown')
+//			$("#id_fw_main").find('.bRight').removeClass('LightningLabelButtonRightOver').addClass('LightningLabelButtonRightDown')		
+//		});
+}
+
+function page_unload()
+{
+	clearTimeout(loop_init_upload);	
+}
+</script>
+
+<style>
+body {
+	background-color: transparent;
+	background-image: none;
+}
+
+.file_input_textbox
+{
+	float: left;
+	width:5px;		
+}
+
+.file_input_div {		
+    padding: 1px;
+    position: relative;
+    width: 300px;
+    height: 50px;
+  overflow: hidden;  
+}
+
+.file_input_button
+{
+	width: 200px; 
+	position: absolute; 
+	top: 0px;
+	background-color: #33BB00;
+	color: #FFFFFF;
+	border-style: solid;
+}
+
+.file_input_hidden
+{
+  font-size: 80px; 
+  position: absolute; 
+  right: 0px; 
+  top: 0px; 
+  opacity: 0; 
+  filter: alpha(opacity=0); 
+	-ms-filter: "alpha(opacity=0)"; 
+	-khtml-opacity: 0; 
+	-moz-opacity: 0;
+}
+
+</style>
+
+<body onload="page_load();">
+<div id="content" class="b1">
+	<form method="post" enctype="multipart/form-data" action="/cgi-bin/system_mgr.cgi">  
+		<input type="hidden" name="cmd" value="cgi_firmware_upload">									
+		<div class="file_input_div">
+			<!--
+			<div id="id_fw_main" class="LightningLabelButtonSecondary up" >
+				<div class="LightningLabelButtonLeftUp bLeft"></div>
+				<div id="id_fw" class="LightningLabelButtonBodyUp bBody"></div>
+				<div class="LightningLabelButtonRightUp bRight"></div>
+			</div>
+	-->
+			<button type="button" id="id_file">
+				<span class="_text" lang="_firmware" datafld="update_b"></span>				
+			</button>																											
+			
+			<input type="file"  id="file" name="file" class="file_input_hidden" style="cursor:pointer" onclick="clear_upload_path();"  onchange="start_upload();"/>
+		</div>
+	</form>
+</div>
+</body>
+</html>
+	

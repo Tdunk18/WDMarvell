@@ -1,0 +1,36 @@
+set default="0"
+set timeout="1"
+set fallback=1
+
+# Serial console id:
+#set gfxpayload=text
+set scid="serial"
+serial --speed=115200 --word=8 --parity=no --stop=1# ${scid}
+terminal_output --append ${scid}
+terminal_input --append ${scid}
+
+set kver="3.10.38"
+set kname="bzImage-${kver}"
+
+set kcmdline="root=/dev/ram0 rootfstype=ramfs rootwait console=ttyS1,115200n8 net.ifnames=0 acpi_enforce_resources=lax"
+
+
+menuentry "Linux ${kver}" {
+	Alpha_CRC32_Reset
+	search --no-floppy --set=root --label wdnas_kernel
+	Alpha_CRC32_Check /uImage
+	search --no-floppy --set=root --label wdnas_initramfs
+	Alpha_CRC32_Check /uRamdisk
+	search --no-floppy --set=root --label wdnas_kernel
+	linux /uImage ${kcmdline}
+	search --no-floppy --set=root --label wdnas_initramfs
+	initrd /uRamdisk
+}
+
+menuentry "Rescure Mode - Linux ${kver}" {
+	Alpha_CRC32_Reset
+	search --no-floppy --set=root --label wdnas_rescue_fw
+	Alpha_CRC32_Check /uImage /uRamdisk
+	linux /uImage ${kcmdline}
+	initrd /uRamdisk
+}

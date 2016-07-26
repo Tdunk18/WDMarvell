@@ -1,0 +1,16 @@
+#!/bin/sh
+
+PROG=`basename $0`
+
+PIDs=`pidof diskmgr`
+for PID in ${PIDs}; do
+	cat /proc/${PID}/cmdline | grep -q "\-W"
+	if [ $? -eq 0 ] ; then
+		echo "${PROG}: wipe formatting is in progress, ignore sync" > /dev/kmsg
+		get_parent_info.sh $$ > /dev/console
+		exit 1
+	fi
+done
+
+busybox sync
+exit 0

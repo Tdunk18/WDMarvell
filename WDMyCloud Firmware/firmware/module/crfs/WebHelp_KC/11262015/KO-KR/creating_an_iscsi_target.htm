@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="MS-HAID" content="Creating an iSCSI Target" />
+<meta http-equiv="Content-Language" content="ko-KP" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>iSCSI 대상 만들기</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("스토리지\nISCSI\niSCSI 대상 만들기");
+addButton("show",BTN_TEXT,"표시","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left; background: #fafafa\"> ");
+AddMasterBreadcrumbs("index.htm", "", "&gt;", "Home", "welcome.htm");
+document.write("<a href=\"what_is_raid_storage.htm\">스토리지<\/a> &gt; <a href=\"what_is_iscsi_.htm\">ISCSI<\/a> &gt; iSCSI 대상 만들기<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(0);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1 style="background-color: Transparent;">iSCSI 대상 만들기</h1>
+<p class="Body">다음 단계를 사용하여 iSCSI 대상을 만듭니다.</p>
+<ol style="list-style: disc;">
+	<li style="list-style: none; display: inline;"><ol style="list-style: decimal;">
+		<li class="n1"><span style="font-weight: bold;">스토리지</span>를 클릭합니다.</li>
+		<li class="n1"><span style="font-weight: bold;">iSCSI</span>를 클릭합니다.</li>
+		<li class="n1"><img src="graphics/toggle_button.png" alt="" style="border: none;" width="20" height="12" border="0" /> 을(를) 
+		 클릭하여 iSCSI를 활성화합니다</li>
+		<li class="n1">화면 하단에 있는 <span style="font-weight: bold;">iSCSI 
+		 대상 만들기</span>를 클릭합니다.</li>
+		<li class="n1">iSCSI 대상 만들기 화면에서 다음 정보를 입력합니다.</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1"><b style="font-weight: bold;">별칭</b>: 별칭은 대상에 대한 
+		 설명이 포함된 이름이어야 합니다.</li>
+		<li class="b1"><span style="font-weight: bold;">만든 날짜</span>: iSCSI 
+		 대상이 상주할 볼륨을 선택합니다.</li>
+		<li class="b1"><b style="font-weight: bold;"><b>크기</b></b>: 대상의 
+		 크기와 해당 크기에 대한 정보의 단위(예: GB, TB)</li>
+	</ul>
+	<ol start="6" style="list-style: decimal;">
+		<li class="n1"><span style="font-weight: bold;">다음</span>을 클릭합니다.</li>
+	</ol>
+	<ul style="list-style: square;">
+		<li class="b1">대상에 대한 보안을 할당하려는 경우 <span style="font-weight: bold;">CHAP</span>을 
+		 클릭합니다.</li>
+		<li class="b1" :="" ;"="" style="circle: ;">기존 사용자 이름과 암호를 입력합니다.</li>
+	</ul></li>
+	<ol start="7" style="list-style: decimal;">
+		<li class="n1"><span style="font-weight: bold;">적용</span>을 클릭합니다. 
+		 새 iSCSI 대상이 만들어집니다.</li>
+	</ol>
+</ol>
+<p>&#160;</p>
+<?rh-placeholder type="footer" ?>
+<?rh-placeholder type="footer" ?>
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>

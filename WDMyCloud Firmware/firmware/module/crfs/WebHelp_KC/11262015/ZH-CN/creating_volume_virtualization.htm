@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 11" />
+ <title>创建卷虚拟化</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+ <meta http-equiv="Content-Language" content="zh-CN" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("存储\n卷虚拟化\n创建卷虚拟化");
+addButton("show",BTN_TEXT,"显示","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left; background: #fafafa\"> ");
+AddMasterBreadcrumbs("index.htm", "", "&gt;", "Home", "welcome.htm");
+document.write("<a href=\"what_is_raid_storage.htm\">存储<\/a> &gt; <a href=\"creating_volume_virtualization.htm\">卷虚拟化<\/a> &gt; 创建卷虚拟化<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(0);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1 class="Body">创建卷虚拟化</h1>
+<p class="Body">卷虚拟化用于映射其他网络存储设备上的 iSCSI 目标，并在 My Cloud™  设备上使其作为卷出现，从而简化可伸缩性。</p>
+<p class="Body">使用以下步骤在设备上创建卷虚拟化。</p>
+<ol style="list-style: decimal;">
+	<li style="list-style: none; display: inline;"><ol style="list-style: decimal;">
+		<li class="n1">单击<b>存储</b>。</li>
+		<li class="n1">单击<b>卷虚拟化</b>。</li>
+		<li class="n1">在右窗格中，单击<b>创建</b>。</li>
+		<li class="n1">在“设备 IP”字段中，输入 iSCSI 目标所在设备的 IP 地址，然后单击<span style="font-weight: bold;">下一步</span>。</li>
+		<li class="n1">从检索到的列表中选择 iSCSI 目标，然后单击<span style="font-weight: bold;">“下一步”</span>。</li>
+		<li class="n1"><span>若</span>要将身份验证添加到目标，单击<img src="graphics/toggle_button.png" alt="" style="border: none;" width="20" height="15" border="0" />，输入<span 
+		 style="font-weight: bold;">用户名</span>和<span style="font-weight: bold;">密码</span>，然后单击<span style="font-weight: bold;">“下一步”</span>。</li>
+	</ol>
+	<ul>
+		<li class="b1" style="font-weight: normal;">默认禁用身份验证。若要保留默认设置，请确保“身份验证”字段为“关”，然后单击<span style="font-weight: bold;">下一步</span>。</li>
+	</ul></li>
+	<ol start="7" style="list-style: decimal;">
+		<li class="n1">从列表中选择 LUN（逻辑单元号），然后单击<span style="font-weight: bold;">下一步</span>。</li>
+		<li class="n1">输入共享文件夹的名称，然后单击<span 
+		 style="font-weight: bold;">“下一步”</span>。</li>
+		<li class="n1">检查卷虚拟化摘要，确保您的设置正确，然后单击<span style="font-weight: bold;">应用</span>。虚拟卷随即创建。</li>
+	</ol>
+</ol>
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt;">© 2015 Western Digital Technologies, Inc. 
+	 <span style="color: rgb(75, 90, 104); font-size: 10.6666669845581px; 
+			 line-height: 21.3333339691162px; orphans: auto; widows: 1; 
+			 -webkit-text-stroke-width: 0px; display: inline	 ! important ; 
+			 float: none; background-color: rgb(250, 250, 250);">保留所有权利。</span> 
+	 </p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>

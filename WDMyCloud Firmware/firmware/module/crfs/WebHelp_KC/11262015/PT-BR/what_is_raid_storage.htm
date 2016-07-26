@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="MS-HAID" content="What is RAID Storage?" />
+<meta http-equiv="Content-Language" content="pt-BR" />
+ <meta name="generator" content="Adobe RoboHelp 11" />
+<title>O que é um armazenamento de RAID?</title>
+<link rel="StyleSheet" href="default.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Armazenamento\nArmazenamento de RAID\nO que é um armazenamento de RAID?");
+addButton("show",BTN_TEXT,"Mostrar","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:left; background: #fafafa\"> ");
+AddMasterBreadcrumbs("index.htm", "", "&gt;", "Home", "welcome.htm");
+document.write("<a href=\"what_is_raid_storage.htm\">Armazenamento<\/a> &gt; <a href=\"what_is_raid_storage.htm\">Armazenamento de RAID<\/a> &gt; O que é um armazenamento de RAID?<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('index.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(0);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="./ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<h1 style="background-color: Transparent;">O que é um armazenamento de 
+ RAID</h1>
+<p class="Body">RAID (Redundant Array of Independent Disks, ou discos independentes 
+ de matriz redundante)<span style="mso-bidi-font-family: Arial;"> permite 
+ armazenar os mesmos dados em locais diferentes em diversos discos rígidos, 
+ oferecendo a redundância necessária, melhor desempenho e integridade de 
+ dados.</span> Há vários níveis diferentes de RAID, e cada um oferece um 
+ método diferente de compartilhamento ou distribuição de dados entre as 
+ unidades. Seu dispositivo My Cloud™ permite 
+ selecionar a partir dos seguintes modos de armazenamento:</p>
+<ol style="list-style: square;">
+	<li style="list-style: none; display: inline;"><ul style="list-style: square;">
+		<li class="b1"><b style="mso-bidi-font-weight: normal;">JBOD</b>:<span 
+		 style="font-size: 10.0pt; font-family: Arial, sans-serif; mso-fareast-font-family: 'Times New Roman'; 
+		 mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA;"><font size="2" style="font-size:10pt;">&#160;O 
+		 uso de uma ou mais unidades que não deve ser feito em uma configuração 
+		 de RAID; ele deve ser gerenciado como volumes lógicos individuais.</font></span></li>
+		<li class="b1"><b style="mso-bidi-font-weight: normal;">Spanning 
+		 (Transposição)</b>: Combinação de unidades de forma linear para 
+		 criar um grande volume lógico.</li>
+		<li class="b1"><b style="mso-bidi-font-weight: normal;">RAID 0</b>: 
+		 O modo RAID 0 oferece registro em disco por todas as unidades 
+		 no grupo de unidades de RAID. <br />
+		O RAID 0 não oferece redundância de dados, mas oferece o melhor 
+		 desempenho de qualquer nível de RAID. O RAID 0 quebra os dados 
+		 em segmentos menores e registra as faixas dos segmentos de dados 
+		 em cada unidade na unidade.</li>
+		<li class="b1"><b style="mso-bidi-font-weight: normal;">RAID 1</b>: 
+		 No modo de RAID 1, o controlador de RAID duplica todos os dados 
+		 de uma unidade para uma segunda unidade no grupo de unidades. 
+		 O RAID 1 oferece redundância de dados completa, mas corta a capacidade 
+		 de armazenamento necessária pela metade.</li>
+		<li class="b1"><span style="font-weight: bold;">RAID 5</span>: 
+		 O modo RAID 5 oferece desempenho e proteção superior ao dividir 
+		 os dados em 3 ou mais unidades e dedicando um quarto de cada uma 
+		 à tolerância de falha. <span style="font-weight: bold;">Esta opção 
+		 está disponível apenas para dispositivos My Cloud com 4 baías.</span></li>
+		<li class="b1"><span style="font-weight: bold;">RAID 10:</span> 
+		 O modo RAID 10 é um protocolo RAID em que os dados são gravados 
+		 em divisões pelos discos primários que foram espelhados para os 
+		 discos secundários. <span style="font-weight: bold;">Esta opção 
+		 está disponível apenas para dispositivos My Cloud com 4 baías.</span></li>
+	</ul></li>
+</ol>
+<br />
+
+<p>&#160;</p>
+<p>&#160;</p>
+<hr align="center" />
+<div style="width: 100%; position: relative;" id="footer">
+	<p style="font-size: 8pt;">© 2015 Western Digital Technologies, Inc. 
+	 <span style="color: rgb(75, 90, 104); font-size: 10.6666669845581px; 
+			 line-height: 21.3333339691162px; orphans: auto; widows: 1; 
+			 -webkit-text-stroke-width: 0px; display: inline	 ! important ; 
+			 float: none; background-color: rgb(250, 250, 250);">Todos 
+	 os direitos reservados.</span> </p>
+</div>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>
+<!-- ALPHA_CUSTOMIZE, for web timeout -->
+<script type="text/javascript" language="javascript" src="/web/function/web_help.js?r=20131203" charset="utf-8"></script>

@@ -1,0 +1,24 @@
+defaultlevel WARN
+defaultsender wdkernel
+
+when Out of memory: Kill process (\d+) ([^\)]+) score (\d+) or sacrifice child
+log OOM-Kill process:string=$2($1) score:int=$3
+
+when Killed process (\d+), UID (\d+), ([^\)]+) total-vm:([^,]+), anon-rss:([^,]+), file-rss:(.*)
+log OOM-Kill process:string=$3($1) vm:string=$4 anon:string=$5 file:string=$6
+
+when ^([^ ]+).*Internal error: Oops: (\d+)
+level CRITICAL
+log OOPS type:int=$2 timestamp:string=$1
+
+when PC is at ([^\+]+)\+([^ \n\r]+)
+level CRITICAL
+log OOPS function:string=$1 offset:string=$2
+
+when Process ([^ ]+) \(pid: (\d+), stack
+level CRITICAL
+log OOPS process:string=$1 pid:int=$2
+
+when ---\[ end trace ([^ ]+) \]---
+level CRITICAL
+log OOPS key:string=$1
